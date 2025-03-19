@@ -8,12 +8,13 @@
 
 
 /* 상위 메뉴 배경 강조 (현재 적용 안함) */
-/*. md-nav__title { */
-/*    background-color: transparent; */
+.md-nav__title {
+    display: none;
+    /*    background-color: transparent; */
 /*    color: #1E3A8A;  */ /* 진한 파란색 (원하는 색상으로 변경) */
 /*    font-size: 1.1rem; */
 /*    font-weight: light; */         /* 글씨 두껍게 */
-/* } */
+}
 
 
 /* 하위 메뉴 (드롭다운) 배경색 */
