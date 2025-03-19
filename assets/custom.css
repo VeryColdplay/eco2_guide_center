@@ -1,21 +1,20 @@
 /* 로고 설정 */
 .md-header__button.md-logo img {
-    height: 48px;   /* 원하는 높이 설정 (기본 24px → 48px) */
+    height: 60px;   /* 원하는 높이 설정 (기본 24px → 48px) */
     width: auto;    /* 가로 비율 자동 조정 */
 }
 
-/* 전체 네비게이션 트리 배경색 */
 
+/* 전체 네비게이션 트리 배경색 */
 
 /* 상위 메뉴 배경 강조 (현재 적용 안함) */
 .md-nav__title {
     display: none;
     /*    background-color: transparent; */
-/*    color: #1E3A8A;  */ /* 진한 파란색 (원하는 색상으로 변경) */
-/*    font-size: 1.1rem; */
-/*    font-weight: light; */         /* 글씨 두껍게 */
+    /*    color: #1E3A8A;  */ /* 진한 파란색 (원하는 색상으로 변경) */
+    /*    font-size: 1.1rem; */
+    /*    font-weight: light; */         /* 글씨 두껍게 */
 }
-
 
 /* 하위 메뉴 (드롭다운) 배경색 */
 .md-nav__list {
@@ -27,6 +26,7 @@
     background-color: #3B82F6;  /* 파란색 (원하는 색상으로 변경) */
     color: #ffffff;             /* 글자색 (흰색) */
 }
+
 /* 검색창 Pretendard 폰트 적용 */
 .md-search__input {
     font-family: 'Pretendard', sans-serif;
@@ -38,19 +38,35 @@
     font-weight: 600; /* 굵은 글씨 */
 }
 
+/* 본문 너비 확장 */
+.md-content, .md-main__inner {
+    max-width: 1600px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+
 /* 본문 글자 크기 조정 */
 .md-content p {
     font-size: 16px;  /* 원하는 크기로 조정 */
     line-height: 1.6;  /* 줄 간격 (가독성 향상) */
 }
 
-/* 본문 제목 크기 조정 */
+/* 본문 제목 크기 및 구분선 설정 */
 .md-content h1 {
-    font-size: 32px;  /* 최상위 제목 (기본값 32px) */
+    font-size: 30px;     /* 최상위 제목 (기본값 32px) */
+    font-weight: bold;    /* 글자 두껍게 */
+    border-bottom: 2px solid #1E3A8A; /* 파란색 구분선 추가 */
+    padding-bottom: 10px; /* 선과 글자 사이 간격 */
+    margin-bottom: 20px;  /* 구분선과 본문 간격 */
 }
 
+/* 두 번째 수준 제목 (##) - 구분선 제거 */
 .md-content h2 {
-    font-size: 26px;  /* 두 번째 수준 제목 (기본값 28px) */
+    font-size: 26px;     /* 두 번째 수준 제목 (기본값 28px) */
+    font-weight: bold;
+    border-bottom: none;  /* 구분선 제거 */
+    margin-bottom: 16px;
 }
 
 .md-content h3 {
@@ -84,5 +100,3 @@
 .mdx-image.zoom:hover {
     transform: scale(1.1);  /* 호버 시 이미지 확대 */
 }
-
-

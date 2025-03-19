@@ -420,6 +420,79 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+<span class="md-ellipsis">
+      🔹 Introduction
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      🔹 냉방기기 설정 항목 및 계산 로직
+    </span>
+</a>
+<nav aria-label="🔹 냉방기기 설정 항목 및 계산 로직" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+<span class="md-ellipsis">
+      1. [일반데이터]
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
+      2. [신재생 및 열병합 시스템 연결여부]
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      3. [압축식 냉동기]
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+<span class="md-ellipsis">
+      4. [흡수식 냉동기]
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+<span class="md-ellipsis">
+      5. [재냉각기 (냉각탑)]
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-formula">
+<span class="md-ellipsis">
+      🔹 Key Formula
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-calculation">
+<span class="md-ellipsis">
+      🔹 Example Calculation
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -427,6 +500,87 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="_1">냉방 부하 계산</h1>
+<h2 id="introduction">🔹 Introduction</h2>
+<p>냉방 부하 계산은 건물의 열 부하를 평가하고 냉방 시스템의 성능을 최적화하는 과정입니다.<br/>
+이를 통해 적정 용량을 설정하고 에너지 효율을 높일 수 있습니다.</p>
+<p>냉방 부하 계산에는 다양한 접근 방식이 있으며, ECO2에서는 간단하면서도 직관적인 Simple Method를 활용합니다.  </p>
+<hr/>
+<p><center>
+<img alt="Energy Flow Diagram" loading="lazy" src="../../images/%EA%B7%B8%EB%A6%BC1.jpg" width="600"><br/>
+<strong>Figure 1. Energy Flow Diagram</strong>
+</img></center></p>
+<hr/>
+<h2 id="_2">🔹 냉방기기 설정 항목 및 계산 로직</h2>
+<h3 id="1"><strong>1. [일반데이터]</strong></h3>
+<ul>
+<li><strong>냉동기 방식</strong> → 압축식 / 흡수식 선택</li>
+<li><strong>냉동기 총 용량 (kW)</strong> → 냉방 부하 계산 시 필수 값</li>
+<li><strong>정격열성능지수 (COP)</strong> → 냉동기 효율을 평가하는 지표</li>
+</ul>
+<p><strong>🔹 계산식:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">COP</span> <span class="o">=</span> <span class="n">Q_output</span> <span class="o">/</span> <span class="n">W_input</span>
+</code></pre></div></p>
+<hr/>
+<h3 id="2"><strong>2. [신재생 및 열병합 시스템 연결여부]</strong></h3>
+<ul>
+<li><strong>신재생 시스템 연결 여부</strong> → 시스템 연결 여부 선택</li>
+<li><strong>연결된 시스템</strong> → 지열 냉난방, 태양열 시스템 등 선택</li>
+<li><strong>적용된 입력존 수</strong> → 시스템 적용 범위 지정</li>
+</ul>
+<p><strong>🔹 신재생 시스템 반영 시 부하 보정식:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">Q_total</span> <span class="o">=</span> <span class="n">Q_cooling</span> <span class="o">-</span> <span class="n">Q_renewable</span>
+</code></pre></div></p>
+<hr/>
+<h3 id="3"><strong>3. [압축식 냉동기]</strong></h3>
+<ul>
+<li><strong>압축식 냉동기 종류</strong> → 공기 간격식, 수냉식 등 선택</li>
+<li><strong>냉동기 압축방식</strong> → 왕복동식, 스크류 압축기 등 선택</li>
+<li><strong>제어방식</strong> → On/Off 제어, PID 제어 등 선택</li>
+</ul>
+<p><strong>🔹 냉방 부하 계산:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">Q_cooling</span> <span class="o">=</span> <span class="n">Q_sensible</span> <span class="o">+</span> <span class="n">Q_latent</span>
+</code></pre></div>
+- <span class="arithmatex">\( Q_{sensible} \)</span> : 현열 부하 (온도 조절)
+- <span class="arithmatex">\( Q_{latent} \)</span> : 잠열 부하 (습도 조절)</p>
+<hr/>
+<h3 id="4"><strong>4. [흡수식 냉동기]</strong></h3>
+<ul>
+<li><strong>열원과 연결 방식</strong> → 외부 보일러 등 열원 선택</li>
+<li><strong>사용 연료</strong> → 도시가스, 전기, 증기 등 선택</li>
+<li><strong>냉동기 종류</strong> → 단효용, 이중효용 등 효율에 따라 구분</li>
+</ul>
+<p><strong>🔹 흡수식 냉동기 열원 계산:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">Q_absorption</span> <span class="o">=</span> <span class="n">Q_cooling</span> <span class="o">/</span> <span class="n">효율</span>
+</code></pre></div></p>
+<hr/>
+<h3 id="5"><strong>5. [재냉각기 (냉각탑)]</strong></h3>
+<ul>
+<li><strong>종말식 또는 건식냉각기</strong> → 냉각 방식 선택 (없음, 공기냉각 등)</li>
+<li><strong>냉각탑의 보조냉각기 유무</strong> → 부가적으로 설치된 냉각기 여부</li>
+</ul>
+<p><strong>🔹 냉각탑 열 방출 계산:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">Q_tower</span> <span class="o">=</span> <span class="n">m_dot</span> <span class="o">*</span> <span class="n">Cp</span> <span class="o">*</span> <span class="p">(</span><span class="n">T_in</span> <span class="o">-</span> <span class="n">T_out</span><span class="p">)</span>
+</code></pre></div>
+- <span class="arithmatex">\( m_dot \)</span> : 냉각수 유량
+- <span class="arithmatex">\( C_p \)</span> : 물의 비열 (4.18 kJ/kg·K)
+- <span class="arithmatex">\( T_{in}, T_{out} \)</span> : 냉각탑 입/출구 온도</p>
+<hr/>
+<h2 id="key-formula">🔹 Key Formula</h2>
+<p>The core equation for heat energy calculation is:</p>
+<div class="arithmatex">\[
+Q = mc\Delta T
+\]</div>
+<p>Where:<br/>
+- <strong>Q</strong> = Heat energy (Joules)<br/>
+- <strong>m</strong> = Mass (kg)<br/>
+- <strong>c</strong> = Specific heat capacity (J/kg·K)<br/>
+- <strong>ΔT</strong> = Temperature change (K)</p>
+<hr/>
+<h2 id="example-calculation">🔹 Example Calculation</h2>
+<p>Let's calculate the energy required to heat 2 kg of water from 20°C to 80°C. Assuming water's specific heat capacity is <span class="arithmatex">\( 4.18 \ \mathrm{J/g \cdot K} \)</span>.  </p>
+<div class="arithmatex">\[
+Q = (2 \times 1000) \times 4.18 \times (80 - 20) = 502,000 \ \text{J}
+\]</div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -457,5 +611,6 @@
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script>
 <script src="../../assets/mermaid-init.js"></script>
+<script src="../../assets/cache-buster.js"></script>
 </body>
 </html>
