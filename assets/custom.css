@@ -7,13 +7,14 @@
 /* 전체 네비게이션 트리 배경색 */
 
 
-/* 상위 메뉴 배경 강조 */
-.md-nav__title {
-    background-color: transparent;
-    color: #1E3A8A;  /* 진한 파란색 (원하는 색상으로 변경) */
-    font-size: 1.1rem; 
-    font-weight: light;          /* 글씨 두껍게 */
-}
+/* 상위 메뉴 배경 강조 (현재 적용 안함) */
+/*. md-nav__title { */
+/*    background-color: transparent; */
+/*    color: #1E3A8A;  */ /* 진한 파란색 (원하는 색상으로 변경) */
+/*    font-size: 1.1rem; */
+/*    font-weight: light; */         /* 글씨 두껍게 */
+/* } */
+
 
 /* 하위 메뉴 (드롭다운) 배경색 */
 .md-nav__list {
@@ -28,6 +29,12 @@
 /* 검색창 Pretendard 폰트 적용 */
 .md-search__input {
     font-family: 'Pretendard', sans-serif;
+}
+
+.mermaid text {
+    font-family: 'Pretendard', sans-serif !important;
+    fill: #1E3A8A; /* 파란색 적용 */
+    font-weight: 600; /* 굵은 글씨 */
 }
 
 /* 본문 글자 크기 조정 */
@@ -77,8 +84,4 @@
     transform: scale(1.1);  /* 호버 시 이미지 확대 */
 }
 
-.mermaid text {
-    font-family: 'Pretendard', sans-serif !important;
-    fill: #1E3A8A; /* 파란색 적용 */
-    font-weight: 600; /* 굵은 글씨 */
-}
+

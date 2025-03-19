@@ -6,13 +6,14 @@ document.addEventListener('DOMContentLoaded', function () {
             flowchart: { useMaxWidth: true, htmlLabels: true }
         });
 
-        // ✅ KaTex 수식 렌더링 설정 추가 (필수)
+        // ✅ KaTeX 수식 렌더링 설정 추가 (필수)
         renderMathInElement(document.body, {
             delimiters: [
                 {left: "$$", right: "$$", display: true},
-                {left: "\\[", right: "\\]", display: true},
+                {left: "\\[", right: "\\]", display: true},  // 추가: `\\[`...`\\]` 활성화
                 {left: "\\(", right: "\\)", display: false}
-            ]
+            ],
+            throwOnError: false,  // ✅ 'Strict Mode' 비활성화 (오류 회피)
         });
 
         mermaid.run();
@@ -29,9 +30,10 @@ document.addEventListener('DOMContentLoaded', function () {
                             renderMathInElement(htmlElement, {
                                 delimiters: [
                                     {left: "$$", right: "$$", display: true},
-                                    {left: "\\[", right: "\\]", display: true},
+                                    {left: "\\[", right: "\\]", display: true},  // 추가: `\\[`...`\\]` 활성화
                                     {left: "\\(", right: "\\)", display: false}
-                                ]
+                                ],
+                                throwOnError: false,  // ✅ 'Strict Mode' 비활성화 (오류 회피)
                             });
                         } else {
                             console.warn("KaTeX is not loaded properly.");
@@ -46,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     });
                 }
             });
-        }, 100);  // Mermaid.js 렌더링 후 강제 딜레이 추가
+        }, 500);  // Mermaid.js 렌더링 후 강제 딜레이 추가 (여기서 딜레이를 늘림)
     } else {
         console.error('Mermaid.js is not loaded properly.');
     }
