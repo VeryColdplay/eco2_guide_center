@@ -76,3 +76,9 @@
 .mdx-image.zoom:hover {
     transform: scale(1.1);  /* 호버 시 이미지 확대 */
 }
+
+.mermaid text {
+    font-family: 'Pretendard', sans-serif !important;
+    fill: #1E3A8A; /* 파란색 적용 */
+    font-weight: 600; /* 굵은 글씨 */
+}

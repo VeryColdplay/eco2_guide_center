@@ -269,6 +269,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-calculation-with-mathjax">
+<span class="md-ellipsis">
+      🔹 Example Calculation (with MathJax)
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -499,6 +506,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-calculation-with-mathjax">
+<span class="md-ellipsis">
+      🔹 Example Calculation (with MathJax)
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </div>
@@ -534,6 +548,16 @@ Q = (2 \times 1000) \times 4.18 \times (80 - 20) = 502,000 \ \text{J}
 \]</div>
 <hr/>
 <h2 id="mindmap-overview">🔹 Mindmap Overview</h2>
+<pre class="mermaid"><code>graph TD
+    A["Heat Energy Calculation"] --&gt; B["<div>$$Q = mc\Delta T$$</div>"]
+    B --&gt; C["<div>$$Q = (2 \times 1000) \times 4.18 \times (80 - 20)$$</div>"]
+    C --&gt; D["<div>$$Q = 502,000 J$$</div>"]
+</code></pre>
+<pre class="mermaid"><code>graph TD
+    A["Heat Energy Calculation"] --&gt; B["$Q = mc\Delta T$"]
+    B --&gt; C["$Q = (2 \times 1000) \times 4.18 \times (80 - 20)$"]
+    C --&gt; D["$Q = 502,000 J$"]
+</code></pre>
 <pre class="mermaid"><code>graph TD
     A[Start] --&gt; B{Is it working?}
     B --&gt;|Yes| C[Great!]
@@ -587,6 +611,56 @@ Q = (2 \times 1000) \times 4.18 \times (80 - 20) = 502,000 \ \text{J}
     F --&gt;|No| H[Check Mermaid Version]
     H --&gt; I[Update Mermaid Library]
 </code></pre>
+<h2 id="example-calculation-with-mathjax">🔹 Example Calculation (with MathJax)</h2>
+<pre class="mermaid"><code>graph TD
+    A[Heat Energy Calculation] --&gt; B["Q = m × c × ΔT"]
+    B --&gt; C["Q = (2 × 1000) × 4.18 × (80 - 20)"]
+    C --&gt; D["Q = 502,000 J"]
+</code></pre>
+<pre class="mermaid"><code>graph TD
+    A[Start] --&gt; B{Is it working?}
+    B --&gt;|Yes| C["Q = m × c × ΔT"]
+    B --&gt;|No| D["Try Again"]
+</code></pre>
+<pre class="mermaid"><code>graph TD
+    A["Heat Energy Calculation"] --&gt; B["<svg xmlns="http://www.w3.org/2000/svg"><text x="0" y="15">\( Q = mc\Delta T \)</text></svg>"]
+    B --&gt; C["<svg xmlns="http://www.w3.org/2000/svg"><text x="0" y="15">\( Q = (2 \times 1000) \times 4.18 \times (80 - 20) \)</text></svg>"]
+    C --&gt; D["<svg xmlns="http://www.w3.org/2000/svg"><text x="0" y="15">\( Q = 502,000 J \)</text></svg>"]
+</code></pre>
+<pre class="mermaid"><code>graph TD
+    A["Heat Energy Calculation"] --&gt; B["Q = m × c × ΔT"]
+    B --&gt; C["Q = (2 × 1000) × 4.18 × (80 - 20)"]
+    C --&gt; D["Q = 502,000 J"]
+</code></pre>
+<pre class="mermaid"><code>graph TD
+    A["Heat Energy Calculation"] --&gt; B["<div>\[
+        Q = mc\Delta T
+        \]</div>"]
+    B --&gt; C["<div>\[
+        Q = (2 \times 1000) \times 4.18 \times (80 - 20)
+        \]</div>"]
+    C --&gt; D["<div>\[
+        Q = 502,000 \ \text{J}
+        \]</div>"]
+
+    A --&gt; E["<div>\[
+        \frac{a}{b} = c
+        \]</div>"]
+    E --&gt; F["<div>\[
+        \sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+        \]</div>"]
+
+    A --&gt; G["<div>\[
+        E = mc^2
+        \]</div>"]
+    G --&gt; H["<div>\[
+        \alpha + \beta = \gamma
+        \]</div>"]
+
+    A --&gt; I["<div>\[
+        \mathbf{A} = \begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}
+        \]</div>"]
+</code></pre>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -614,7 +688,10 @@ Q = (2 \times 1000) \times 4.18 \times (80 - 20) = 502,000 \ \text{J}
 <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
 <script src="../../../assets/polyfill.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script><script>window.mermaidConfig = {default: {
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script>
+<script src="../../../assets/mermaid-init.js"></script>
+<script>window.mermaidConfig = {default: {
     startOnLoad: false
 }};</script></body>
 </html>
