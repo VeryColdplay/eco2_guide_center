@@ -4,7 +4,6 @@
     width: auto;    /* 가로 비율 자동 조정 */
 }
 
-
 /* 전체 네비게이션 트리 배경색 */
 
 /* 상위 메뉴 배경 강조 (현재 적용 안함) */
@@ -37,14 +36,6 @@
     fill: #1E3A8A; /* 파란색 적용 */
     font-weight: 600; /* 굵은 글씨 */
 }
-
-/* 본문 너비 확장 */
-.md-content, .md-main__inner {
-    max-width: 1600px;
-    width: 95%;
-    margin: 0 auto;
-}
-
 
 /* 본문 글자 크기 조정 */
 .md-content p {
