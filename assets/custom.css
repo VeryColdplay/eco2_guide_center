@@ -91,3 +91,16 @@
 .mdx-image.zoom:hover {
     transform: scale(1.1);  /* 호버 시 이미지 확대 */
 }
+
+/* 수식 링크에 hover 효과 */
+.equation-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.equation-link:hover {
+    cursor: pointer;
+    outline: 2px dashed #1E3A8A;
+    border-radius: 4px;
+    background-color: rgba(30, 58, 138, 0.1);
+}
