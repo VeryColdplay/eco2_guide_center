@@ -532,6 +532,9 @@
 <p><a class="equation-link" href="/1.%20ECO2%20Logic%20Guide/고급%20기능/IFC_모델_연동.html">
 <span>\( Q_{h,b,i} = Q_{sink,i} - \eta_i Q_{source,i} \tag{2-1} \)</span>
 </a></p>
+<div class="arithmatex">\[
+Q_{h,b,i} = Q_{sink,i} - \eta_i Q_{source,i} \tag{2-1}
+\]</div>
 <div class="arithmatex">\[ 
 Q_{h,b.mth} = d_{op} \left( Q_{sink,op} - \eta_{op} Q_{source,op} \right) + d_{we} \left( Q_{sink,we} - \eta_{we} Q_{source,we} \right) \tag{2-6}
 \]</div>
@@ -539,7 +542,46 @@ Q_{h,b.mth} = d_{op} \left( Q_{sink,op} - \eta_{op} Q_{source,op} \right) + d_{w
 Q_{c,b.mth} = d_{op} (1 - \eta_{op}) Q_{source,op} + d_{we} (1 - \eta_{we}) Q_{source,we} \tag{2-7}
 \]</div>
 <div class="arithmatex">\[
+Q_{sink} = Q_T + Q_V + Q_{I,sink} + Q_S \tag{2-11}
+\]</div>
+<div class="arithmatex">\[
 Q_{source} = Q_S + Q_T + Q_V + Q_{I,source} \tag{2-16}
+\]</div>
+<div class="arithmatex">\[
+\gamma = \frac{Q_{source}}{Q_{sink}} \tag{2-21}
+\]</div>
+<div class="arithmatex">\[
+\tau = \frac{C_{wirk}}{H} = \frac{C_{wirk}}{\sum_j H_{T,j} + \sum_k H_{V,k} + H_{V,mech,\vartheta}} \tag{2-22, 129}
+\]</div>
+<div class="arithmatex">\[
+\eta = \frac{1 - \gamma^a}{1 - \gamma^{a+1}}, \quad \gamma \ne 1 \tag{2-23}
+\]</div>
+<div class="arithmatex">\[
+\eta = \frac{a}{a+1}, \quad \gamma = 1 \tag{2-24}
+\]</div>
+<div class="arithmatex">\[
+a = a_0 + \frac{\tau}{\tau_0}, \quad a_0 = 1, \quad \tau_0 = 16h \tag{2-25}
+\]</div>
+<div class="arithmatex">\[
+H_{T,D} = \sum (U_j A_j) + \Delta U_{WB} \sum A_j \tag{2-44}
+\]</div>
+<div class="arithmatex">\[
+H_{T,iu} = \sum (U_j A_j) \tag{2-48}
+\]</div>
+<div class="arithmatex">\[
+H_{T,iz} = \sum (U_j A_j) \tag{2-52}
+\]</div>
+<div class="arithmatex">\[
+H_{V,inf} = n_{inf} \, V \, c_{p,a} \, \rho_a \tag{2-58}
+\]</div>
+<div class="arithmatex">\[
+H_{V,mech} = n_{mech} \, V \, c_{p,a} \, \rho_a \tag{2-83}
+\]</div>
+<div class="arithmatex">\[
+H_{V,ue} = n_{ue} \, V_u \, c_{p,a} \, \rho_a \tag{2-94}
+\]</div>
+<div class="arithmatex">\[
+H_{V,z} = \dot{V}_{z,d} \, c_{p,a} \, \rho_a \tag{2-99}
 \]</div>
 </article>
 </div>
