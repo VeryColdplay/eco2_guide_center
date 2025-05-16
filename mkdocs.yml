@@ -22,6 +22,7 @@ nav:
   - 냉방 에너지 분석:
       - 개요: 1. ECO2 Logic Guide/냉방 에너지 분석/개요.md
       - 냉방 부하 계산:
+          - ECO2 screenshot: 1. ECO2 Logic Guide/냉방 에너지 분석/ECO2_screenshot.md
           - Simple Method: 1. ECO2 Logic Guide/냉방 에너지 분석/Simple_Method.md
       - 냉방 시스템 구성 요소: 1. ECO2 Logic Guide/냉방 에너지 분석/냉방_시스템_구성_요소.md
       - 결과 해석: 1. ECO2 Logic Guide/냉방 에너지 분석/결과_해석.md
