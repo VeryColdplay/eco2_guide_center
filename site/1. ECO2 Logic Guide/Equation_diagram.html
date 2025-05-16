@@ -520,6 +520,31 @@
       Hee-Mind map sample
     </span>
 </a>
+<nav aria-label="Hee-Mind map sample" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tb-ver">
+<span class="md-ellipsis">
+      TB ver.
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lr-ver">
+<span class="md-ellipsis">
+      LR ver.
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tblr-ver">
+<span class="md-ellipsis">
+      TB+LR ver.
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -543,22 +568,25 @@
     G --&gt; H["<div>$$\alpha + \beta = \gamma$$</div>"]
 </code></pre>
 <h2 id="hee-mind-map-sample">Hee-Mind map sample<a class="headerlink" href="#hee-mind-map-sample" title="Permanent link">¶</a></h2>
-<p>graph TB
+<hr/>
+<h3 id="tb-ver">TB ver.<a class="headerlink" href="#tb-ver" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
     %% 노드 정의
-    A[Qₕ.b.mth = d_op(1 - η_op)Q_source.op + d_we(1 - η_we)Q_source.we<br/>(2-7)]
-    B[Qₕ.c = (1 - η)Q_source<br/>(2-1)]
-    C[Q_source = Q_S + Q_T + Q_V + Q_I,source<br/>(2-16)]
-    D[η = (1 - γ) / (1 - γ^(α+1)), γ ≠ 1<br/>(2-23)]
-    E[η = a / (α + 1), γ = 1<br/>(2-24)]
-    F[γ = Q_source / Q_sink<br/>(2-21)]
-    G[Q_sink = Q_T + Q_V + Q_I,sink + Q_S<br/>(2-11)]</p>
-<pre><code>%% 노드 연결
+A["Qₕ.b.mth = d_op(1 - η_op)Q_source.op\\n+ d_we(1 - η_we)Q_source.we\\n(2-7)"]
+B["Qₕ.c = (1 - η)Q_source\\n(2-1)"]
+C["Q_source = Q_S + Q_T\\n+ Q_V + Q_I,source\\n(2-16)"]
+D["η = (1 - γ) / (1 - γ^(α+1))\\nγ ≠ 1\\n(2-23)"]
+E["η = a / (α + 1)\\nγ = 1\\n(2-24)"]
+F["γ = Q_source / Q_sink\\n(2-21)"]
+
+%% 노드 연결
+A --&gt; B
 B --&gt; C
-C --&gt; F
-F --&gt; D
-F --&gt; E
-F --&gt; A
-G --&gt; F
+B --&gt; D
+B --&gt; E
+D --&gt; F
+E --&gt; F
+F --&gt; C
 
 %% 노드 스타일
 style A fill:#FFE0E0,stroke:#FFB6B6,stroke-width:2px
@@ -567,9 +595,74 @@ style C fill:#E2F0CB,stroke:#B6D7A8,stroke-width:2px
 style D fill:#D9E1F2,stroke:#A4C2F4,stroke-width:2px
 style E fill:#D9E1F2,stroke:#A4C2F4,stroke-width:2px
 style F fill:#FCE5CD,stroke:#F6B26B,stroke-width:2px
-style G fill:#D9D2E9,stroke:#B4A7D6,stroke-width:2px
 
 %% 전체 그래프 스타일
+linkStyle default stroke:#999,stroke-width:1.5px
+</code></pre>
+<h3 id="lr-ver">LR ver.<a class="headerlink" href="#lr-ver" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph LR
+
+%% 노드 정의
+A["Qₕ.b.mth = d_op(1 - η_op)Q_source.op\\n+ d_we(1 - η_we)Q_source.we\\n(2-7)"]
+B["Qₕ.c = (1 - η)Q_source\\n(2-1)"]
+C["Q_source = Q_S + Q_T\\n+ Q_V + Q_I,source\\n(2-16)"]
+D["η = (1 - γ) / (1 - γ^(α+1))\\nγ ≠ 1\\n(2-23)"]
+E["η = a / (α + 1)\\nγ = 1\\n(2-24)"]
+F["γ = Q_source / Q_sink\\n(2-21)"]
+
+%% 노드 연결
+A --&gt; B
+B --&gt; C
+B --&gt; D
+B --&gt; E
+D --&gt; F
+E --&gt; F
+F --&gt; C
+
+%% 노드 스타일
+style A fill:#FFE0E0,stroke:#FFB6B6,stroke-width:2px
+style B fill:#FFF4CC,stroke:#FFD966,stroke-width:2px
+style C fill:#E2F0CB,stroke:#B6D7A8,stroke-width:2px
+style D fill:#D9E1F2,stroke:#A4C2F4,stroke-width:2px
+style E fill:#D9E1F2,stroke:#A4C2F4,stroke-width:2px
+style F fill:#FCE5CD,stroke:#F6B26B,stroke-width:2px
+
+%% 전체 그래프 스타일
+linkStyle default stroke:#999,stroke-width:1.5px
+</code></pre>
+<h3 id="tblr-ver">TB+LR ver.<a class="headerlink" href="#tblr-ver" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+
+%% 상단 주요 흐름 (세로)
+A["Qₕ.b.mth = d_op(1 - η_op)Q_source.op\\n+ d_we(1 - η_we)Q_source.we\\n(2-7)"]
+B["Qₕ.c = (1 - η)Q_source\\n(2-1)"]
+C["Q_source = Q_S + Q_T\\n+ Q_V + Q_I,source\\n(2-16)"]
+F["γ = Q_source / Q_sink\\n(2-21)"]
+
+A --&gt; B
+B --&gt; C
+F --&gt; C
+
+%% η 관련 수식 (가로 subgraph로 묶기)
+subgraph ETA["η 정의"]
+  direction LR
+  D["η = (1 - γ) / (1 - γ^(α+1))\\nγ ≠ 1\\n(2-23)"]
+  E["η = a / (α + 1)\\nγ = 1\\n(2-24)"]
+end
+
+B --&gt; D
+B --&gt; E
+D --&gt; F
+E --&gt; F
+
+%% 노드 스타일
+style A fill:#FFE0E0,stroke:#FFB6B6,stroke-width:2px
+style B fill:#FFF4CC,stroke:#FFD966,stroke-width:2px
+style C fill:#E2F0CB,stroke:#B6D7A8,stroke-width:2px
+style D fill:#D9E1F2,stroke:#A4C2F4,stroke-width:2px
+style E fill:#D9E1F2,stroke:#A4C2F4,stroke-width:2px
+style F fill:#FCE5CD,stroke:#F6B26B,stroke-width:2px
+
 linkStyle default stroke:#999,stroke-width:1.5px
 </code></pre>
 </article>
