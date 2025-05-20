@@ -423,6 +423,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ver-1">
+<span class="md-ellipsis">
+      ver 1. 통합
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -581,6 +588,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ver-1">
+<span class="md-ellipsis">
+      ver 1. 통합
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </div>
@@ -590,6 +604,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="_1">최종보고서<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <h2 id="322-1-">🔹 &lt;표 3.2.2-1&gt; 용도 프로필 - 개인사무실<a class="headerlink" href="#322-1-" title="Permanent link">¶</a></h2>
+<h2 id="ver-1">ver 1. 통합<a class="headerlink" href="#ver-1" title="Permanent link">¶</a></h2>
 <hr/>
 <!DOCTYPE html>
 
@@ -627,154 +642,358 @@
   </style>
 </head>
 <body>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; font-family: 'Malgun Gothic', sans-serif; font-size: 14px; text-align: center; width: 100%;">
+<!-- Title Row -->
+<tr>
+<td colspan="8" style="text-align: left;">개인사무실</td>
+<td>1</td>
+</tr>
+<!-- 이용시간 -->
+<tr>
+<td rowspan="6" style="text-align: left;">이용시간</td>
+<td style="background-color: #ccc; text-align: left;">항목</td>
+<td style="background-color: #ccc;">단위</td>
+<td style="background-color: #ccc;">부터</td>
+<td style="background-color: #ccc;">까지</td>
+<td colspan="4" rowspan="6"></td>
+</tr>
+<tr>
+<td style="text-align: left;">일일 이용시간</td>
+<td>h</td>
+<td>9:00</td>
+<td>18:00</td>
+</tr>
+<tr>
+<td style="text-align: left;">연간 이용일수 <br/><i>d<sub>nutz,a</sub></i></td>
+<td>d/a</td>
+<td colspan="2">250</td>
+</tr>
+<tr>
+<td style="text-align: left;">공조/냉방 일일 가동 시간</td>
+<td>h</td>
+<td>7:00</td>
+<td>18:00</td>
+</tr>
+<tr>
+<td style="text-align: left;">공조/냉방/난방 연간 가동 일 <br/><i>d<sub>op</sub></i></td>
+<td>d/a</td>
+<td colspan="2">250</td>
+</tr>
+<tr>
+<td style="text-align: left;">난방 일일 가동시간</td>
+<td>h</td>
+<td>7:00</td>
+<td>18:00</td>
+</tr>
+<!-- 실내 환경 -->
+<tr>
+<td rowspan="7" style="text-align: left;">실내 환경(상태)</td>
+<td style="background-color: #ccc; text-align: left;">항목</td>
+<td style="background-color: #ccc;">단위</td>
+<td colspan="1" style="background-color: #ccc;">부터</td>
+<td colspan="5" rowspan="7"></td>
+</tr>
+<tr><td style="text-align: left;">난방 요구온도 <br/><i>v<sub>i,h,set</sub></i></td><td>℃</td><td colspan="2">20</td></tr>
+<tr><td style="text-align: left;">냉방 요구온도 <br/><i>v<sub>i,c,set</sub></i></td><td>℃</td><td colspan="2">26</td></tr>
+<tr><td style="text-align: left;">해석 난방 최소온도 <br/><i>v<sub>i,h,min</sub></i></td><td>℃</td><td colspan="2">19</td></tr>
+<tr><td style="text-align: left;">해석 냉방 최대온도 <br/><i>v<sub>i,c,max</sub></i></td><td>℃</td><td colspan="2">27</td></tr>
+<tr><td style="text-align: left;">감소가능 시 온도저하 <br/><i>Δv<sub>i,NA</sub></i></td><td>K</td><td colspan="2">4</td></tr>
+<tr><td style="text-align: left;">습도요구</td><td>–</td><td colspan="2" style="font-size: 11px;">편차 허용</td></tr>
+
+<!-- 최소 외기 풍량 -->
+<tr>
+<td rowspan="6" style="text-align: left;">최소 외기 풍량 <br/><i>V<sub>A</sub></i></td>
+<td style="background-color: #ccc; text-align: left;">항목</td>
+<td style="background-color: #ccc;">단위</td>
+<td style="background-color: #ccc;">부터</td>
+<td style="background-color: #ccc;">까지</td>
+<td colspan="4" rowspan="6"></td>
+</tr>
+<tr><td style="text-align: left;">사람 기준</td><td>m³/h·인</td><td>–</td><td>36</td></tr>
+<tr><td style="text-align: left;">면적 기준</td><td>m³/h·㎡</td><td>–</td><td>4</td></tr>
+<tr><td colspan="4" style="text-align: left; background-color: #ccc;">기계식 외기 풍량(Practice)</td></tr>
+<tr><td style="text-align: left;">환기횟수</td><td>h⁻¹</td><td>2</td><td>3</td></tr>
+<tr><td style="text-align: left;">공기에 대한 환기횟수</td><td>h⁻¹</td><td>4</td><td>8</td></tr>
+<!-- 조명 -->
+<tr>
+<td rowspan="7" style="text-align: left;">조명</td>
+<td style="background-color: #ccc; text-align: left;">항목</td>
+<td style="background-color: #ccc;">단위</td>
+<td colspan="1" style="background-color: #ccc;">부터</td>
+<td colspan="5" rowspan="7"></td>
+</tr>
+<tr><td style="text-align: left;">요구 조도 <i>E<sub>m</sub></i></td><td>lx</td><td colspan="2">500</td></tr>
+<tr><td style="text-align: left;">작업면 높이 <i>h<sub>Ne</sub></i></td><td>m</td><td colspan="2">0.8</td></tr>
+<tr><td style="text-align: left;">감소계수 <i>k<sub>A</sub></i></td><td>–</td><td colspan="2">0.92</td></tr>
+<tr><td style="text-align: left;">상대적 부재율 <i>C<sub>A</sub></i></td><td>–</td><td colspan="2">0.3</td></tr>
+<tr><td style="text-align: left;">실(공간) 인덱스 <i>k</i></td><td>–</td><td colspan="2">0.9</td></tr>
+<tr><td style="text-align: left;">건물가동시간에 대한 감소계수 <i>F<sub>t,n</sub></i></td><td>–</td><td colspan="2">0.7</td></tr>
+<!-- 사람 조밀도 -->
+<tr>
+<td colspan="2" rowspan="3" style="text-align: left;">사람 조밀도</td>
+<td colspan="3" style="background-color: #ccc;">최대 조밀도 (m²/인)</td>
+<td colspan="4" rowspan="2"></td>
+</tr>
+<tr>
+<td>낮음</td>
+<td>중간</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>10</td>
+<td>7.5</td>
+<td>5</td>
+<td colspan="4"></td>
+</tr>
+<!-- 내부 열원 -->
+<tr>
+<td colspan="1" rowspan="5" style="text-align: left;">내부 열원</td>
+<td rowspan="2" style="text-align: left; background-color: #ccc;">구분</td>
+<td rowspan="2" style="background-color: #ccc;">최대 이용시간<br/>(h/d)</td>
+<td colspan="3" style="background-color: #ccc;">면적당 성능 (W/㎡)</td>
+<td colspan="3" rowspan="5"></td>
+</tr>
+<tr>
+<td>낮음</td><td>중간</td><td>높음</td>
+</tr>
+<tr><td style="text-align: left;">사람 (70 W/인)</td><td>6</td><td>7</td><td>9.3</td><td>10</td></tr>
+<tr><td style="text-align: left;">작업 보조기기<sup>ᵃ</sup></td><td>6</td><td>16</td><td>21</td><td>32</td></tr>
+<tr>
+<td colspan="2" style="text-align: left;">일일 열 유입 (<i>q<sub>I,p</sub> + q<sub>I,fac</sub></i>)<br/><span style="font-size: 12px;">[Wh/㎡·d]</span></td>
+<td>138</td><td>181</td><td>252</td>
+</tr>
+</table>
+<!-- 주석 -->
+<p style="font-family: 'Malgun Gothic', sans-serif; font-size: 14px;">
+<sup>ᵃ</sup> 낮음/중간/높음 등은 작업 보조기기에 대해 1인 당 50/100/150 W와 같음
+ </p>
+
+
+
+
+
+## ver 2. 각각의 표
+---
+
+
+
 <table>
 <tr>
 <td class="left" colspan="8">개인사무실</td>
 <td class="center">1</td>
 </tr>
 <!-- 이용시간 -->
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; font-family: 'Malgun Gothic', sans-serif; font-size: 14px; text-align: center;">
 <tr>
-<td class="left" colspan="2" rowspan="6">이용시간</td>
-<td colspan="2"></td>
-<td class="gray center">부터</td>
-<td class="gray center">까지</td>
-<td colspan="1"></td>
+<td rowspan="6" style="text-align: left;">이용시간</td>
+<td style="text-align: left; background-color: #ccc;">항목</td>
+<td style="background-color: #ccc;">단위</td>
+<td style="background-color: #ccc;">부터</td>
+<td style="background-color: #ccc;">까지</td>
 </tr>
 <tr>
-<td class="left">일일 이용시간</td>
-<td class="center">h</td>
-<td class="center">9:00</td>
-<td class="center">18:00</td>
-<td colspan="2"></td>
+<td style="text-align: left;">일일 이용시간</td>
+<td>h</td>
+<td>9:00</td>
+<td>18:00</td>
 </tr>
 <tr>
-<td class="left">연간 이용일수<br/><span style="font-style: italic;">d<sub>utz,a</sub></span></td>
-<td class="center">d/a</td>
-<td class="center" colspan="4">250</td>
+<td style="text-align: left;">연간 이용일수<br/><span style="font-style: italic;">d<sub>nutz,a</sub></span></td>
+<td>d/a</td>
+<td colspan="2">250</td>
 </tr>
 <tr>
-<td class="left">공조/냉방 일일 가동 시간</td>
-<td class="center">h</td>
-<td class="center">7:00</td>
-<td class="center">18:00</td>
-<td colspan="2"></td>
+<td style="text-align: left;">공조/냉방 일일 가동 시간</td>
+<td>h</td>
+<td>7:00</td>
+<td>18:00</td>
 </tr>
 <tr>
-<td class="left">공조/냉방/난방 연간 가동 일<br/><span style="font-style: italic;">d<sub>op</sub></span></td>
-<td class="center">d/a</td>
-<td class="center" colspan="4">250</td>
+<td style="text-align: left;">공조/냉방/난방 연간 가동 일<br/><span style="font-style: italic;">d<sub>op</sub></span></td>
+<td>d/a</td>
+<td colspan="2">250</td>
 </tr>
 <tr>
-<td class="left">난방 일일 가동시간</td>
-<td class="center">h</td>
-<td class="center">7:00</td>
-<td class="center">18:00</td>
-<td colspan="2"></td>
-</tr>
-<!-- 실내 환경(상태) -->
-<tr>
-<td class="left" rowspan="6">실내 환경(상태)</td>
-<td class="left">난방 요구온도 <span style="font-style: italic;">v<sub>i,h,set</sub></span></td>
-<td class="center">℃</td>
-<td class="center" colspan="2">20</td>
-<td colspan="2"></td>
-</tr>
-<tr>
-<td class="left">냉방 요구온도 <span style="font-style: italic;">v<sub>i,c,set</sub></span></td>
-<td class="center">℃</td>
-<td class="center" colspan="2">26</td>
-<td colspan="2"></td>
-</tr>
-<tr>
-<td class="left">해석 난방 최소온도 <span style="font-style: italic;">v<sub>i,h,min</sub></span></td>
-<td class="center">℃</td>
-<td class="center" colspan="2">19</td>
-<td colspan="2"></td>
-</tr>
-<tr>
-<td class="left">해석 냉방 최대온도 <span style="font-style: italic;">v<sub>i,c,max</sub></span></td>
-<td class="center">℃</td>
-<td class="center" colspan="2">27</td>
-<td colspan="2"></td>
-</tr>
-<tr>
-<td class="left">감소가능 시 온도저하 <span style="font-style: italic;">Δv<sub>i,NA</sub></span></td>
-<td class="center">K</td>
-<td class="center" colspan="2">4</td>
-<td colspan="2"></td>
-</tr>
-<tr>
-<td class="left">습도요구</td>
-<td class="center">–</td>
-<td class="center" colspan="2">편차 허용</td>
-<td colspan="2"></td>
-</tr>
-<!-- 최소 외기 풍량 -->
-<tr>
-<td class="left" rowspan="5">최소 외기 풍량 <span style="font-style: italic;">V<sub>A</sub></span></td>
-<td class="left">사람 기준</td>
-<td class="center">m³/h·인</td>
-<td class="center" colspan="6">36</td>
-</tr>
-<tr>
-<td class="left">면적 기준</td>
-<td class="center">m³/h·㎡</td>
-<td class="center" colspan="6">4</td>
-</tr>
-<tr>
-<td class="left" rowspan="3">기계식 외기 풍량(Practice)</td>
-<td colspan="2"></td>
-<td class="gray center" colspan="2">부터</td>
-<td class="gray center" colspan="2">까지</td>
-</tr>
-<tr>
-<td class="left">환기횟수</td>
-<td class="center">h⁻¹</td>
-<td class="center" colspan="2">2</td>
-<td class="center" colspan="2">3</td>
-</tr>
-<tr>
-<td class="left">공기에 대한 환기횟수</td>
-<td class="center">h⁻¹</td>
-<td class="center" colspan="2">4</td>
-<td class="center" colspan="2">8</td>
-</tr>
-<!-- 조명 -->
-<tr>
-<td class="left" rowspan="6">조명</td>
-<td class="left">요구 조도 <span style="font-style: italic;">E<sub>m</sub></span></td>
-<td class="center">lx</td>
-<td class="center" colspan="6">500</td>
-</tr>
-<tr>
-<td class="left">작업면 높이 <span style="font-style: italic;">h<sub>Ne</sub></span></td>
-<td class="center">m</td>
-<td class="center" colspan="6">0.8</td>
-</tr>
-<tr>
-<td class="left">감소계수 <span style="font-style: italic;">k<sub>4</sub></span></td>
-<td class="center">–</td>
-<td class="center" colspan="6">0.92</td>
-</tr>
-<tr>
-<td class="left">상대적 조도율 <span style="font-style: italic;">C<sub>4</sub></span></td>
-<td class="center">–</td>
-<td class="center" colspan="6">0.93</td>
-</tr>
-<tr>
-<td class="left">실(공간) 인덱스 <span style="font-style: italic;">k</span></td>
-<td class="center">–</td>
-<td class="center" colspan="6">0.9</td>
-</tr>
-<tr>
-<td class="left">건물가동시간에 대한 감소계수 <span style="font-style: italic;">F<sub>t,n</sub></span></td>
-<td class="center">–</td>
-<td class="center" colspan="6">0.7</td>
+<td style="text-align: left;">난방 일일 가동시간</td>
+<td>h</td>
+<td>7:00</td>
+<td>18:00</td>
 </tr>
 </table>
-</body>
-</html>
-</article>
+<!-- 실내환경(상태) -->
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; font-family: 'Malgun Gothic', sans-serif; font-size: 14px; text-align: center;">
+<tr>
+<td rowspan="7" style="text-align: left;">실내 환경(상태)</td>
+<td style="text-align: left; background-color: #ccc;">항목</td>
+<td style="background-color: #ccc;">단위</td>
+<td style="background-color: #ccc;">부터</td>
+</tr>
+<tr>
+<td style="text-align: left;">난방 요구온도<br/><span style="font-style: italic;">v<sub>i,h,set</sub></span></td>
+<td>℃</td>
+<td>20</td>
+</tr>
+<tr>
+<td style="text-align: left;">냉방 요구온도<br/><span style="font-style: italic;">v<sub>i,c,set</sub></span></td>
+<td>℃</td>
+<td>26</td>
+</tr>
+<tr>
+<td style="text-align: left;">해석 난방 최소온도<br/><span style="font-style: italic;">v<sub>i,h,min</sub></span></td>
+<td>℃</td>
+<td>19</td>
+</tr>
+<tr>
+<td style="text-align: left;">해석 냉방 최대온도<br/><span style="font-style: italic;">v<sub>i,c,max</sub></span></td>
+<td>℃</td>
+<td>27</td>
+</tr>
+<tr>
+<td style="text-align: left;">감소가능 시 온도저하<br/><span style="font-style: italic;">Δv<sub>i,NA</sub></span></td>
+<td>K</td>
+<td>4</td>
+</tr>
+<tr>
+<td style="text-align: left;">습도요구</td>
+<td>–</td>
+<td>편차 허용</td>
+</tr>
+</table>
+<!-- 최소외기풍량 -->
+<br/>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; font-family: 'Malgun Gothic', sans-serif; font-size: 14px; text-align: center;">
+<tr>
+<td rowspan="7" style="text-align: left;">최소 외기 풍량<br/><span style="font-style: italic;">V<sub>A</sub></span></td>
+<td style="text-align: left; background-color: #ccc;">항목</td>
+<td style="background-color: #ccc;">단위</td>
+<td style="background-color: #ccc;">부터</td>
+<td style="background-color: #ccc;">까지</td>
+</tr>
+<tr>
+<td style="text-align: left;">사람 기준</td>
+<td>m³/h·인</td>
+<td>–</td>
+<td>36</td>
+</tr>
+<tr>
+<td style="text-align: left;">면적 기준</td>
+<td>m³/h·㎡</td>
+<td>–</td>
+<td>4</td>
+</tr>
+<tr>
+<tr>
+<td colspan="5" style="text-align: left; background-color: #ccc;">기계식 외기 풍량(Practice)</td>
+</tr>
+<tr>
+<td style="text-align: left;">환기횟수</td>
+<td>h⁻¹</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td style="text-align: left;">공기에 대한 환기횟수</td>
+<td>h⁻¹</td>
+<td>4</td>
+<td>8</td>
+</tr>
+</tr></table>
+<!-- 조명 -->
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; font-family: 'Malgun Gothic', sans-serif; font-size: 14px; text-align: center;">
+<tr>
+<td rowspan="7" style="text-align: left;">조명</td>
+<td style="text-align: left; background-color: #ccc;">항목</td>
+<td style="background-color: #ccc;">단위</td>
+<td style="background-color: #ccc;">부터</td>
+</tr>
+<tr>
+<td style="text-align: left;">요구 조도 <span style="font-style: italic;">E<sub>m</sub></span></td>
+<td>lx</td>
+<td>500</td>
+</tr>
+<tr>
+<td style="text-align: left;">작업면 높이 <span style="font-style: italic;">h<sub>Ne</sub></span></td>
+<td>m</td>
+<td>0.8</td>
+</tr>
+<tr>
+<td style="text-align: left;">감소계수 <span style="font-style: italic;">k<sub>A</sub></span></td>
+<td>–</td>
+<td>0.92</td>
+</tr>
+<tr>
+<td style="text-align: left;">상대적 부재율 <span style="font-style: italic;">C<sub>A</sub></span></td>
+<td>–</td>
+<td>0.3</td>
+</tr>
+<tr>
+<td style="text-align: left;">실(공간) 인덱스 <span style="font-style: italic;">k</span></td>
+<td>–</td>
+<td>0.9</td>
+</tr>
+<tr>
+<td style="text-align: left;">건물가동시간에 대한 감소계수 <span style="font-style: italic;">F<sub>t,n</sub></span></td>
+<td>–</td>
+<td>0.7</td>
+</tr>
+</table>
+<!-- 사람 조밀도 -->
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; font-family: 'Malgun Gothic', sans-serif; font-size: 14px; text-align: center;">
+<tr>
+<td colspan="2" rowspan="2" style="text-align: left;">사람 조밀도</td>
+<td colspan="3" style="background-color: #ccc;">최대 조밀도 (m²/인)</td>
+</tr>
+<tr>
+<td style="background-color: #ccc;">낮음</td>
+<td style="background-color: #ccc;">중간</td>
+<td style="background-color: #ccc;">높음</td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td>10</td>
+<td>7.5</td>
+<td>5</td>
+</tr>
+</table>
+<!-- 내부 열원 -->
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; font-family: 'Malgun Gothic', sans-serif; font-size: 14px; text-align: center;">
+<tr>
+<td colspan="1" rowspan="5" style="text-align: left;">내부 열원</td>
+<td rowspan="2" style="text-align: left; background-color: #ccc;">구분</td>
+<td rowspan="2" style="background-color: #ccc;">최대이용시간<br/>(h/d)</td>
+<td colspan="3" style="background-color: #ccc;">면적당 성능 (W/㎡)</td>
+</tr>
+<tr>
+<td style="background-color: #ccc;">낮음</td>
+<td style="background-color: #ccc;">중간</td>
+<td style="background-color: #ccc;">높음</td>
+</tr>
+<tr>
+<td style="text-align: left;">사람(70 W/인)</td>
+<td>6</td>
+<td>7</td>
+<td>9.3</td>
+<td>10</td>
+</tr>
+<tr>
+<td style="text-align: left;">작업 보조기기<sup>ᵃ</sup></td>
+<td>6</td>
+<td>16</td>
+<td>21</td>
+<td>32</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align: left;">일일 열 유입 (<span style="font-style: italic;">q<sub>I,p</sub> + q<sub>I,fac</sub></span>)<br/><span style="font-size: 12px;">[Wh/㎡·d]</span></td>
+<td>138</td>
+<td>181</td>
+<td>252</td>
+</tr>
+</table>
+<!-- 주석 -->
+<p style="font-family: 'Malgun Gothic', sans-serif; font-size: 14px;">
+<sup>ᵃ</sup> 낮음/중간/높음 등은 작업 보조기기에 대해 1인 당 50/100/150 W와 같음
+</p>
+</table></body></html></article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
 </div>
