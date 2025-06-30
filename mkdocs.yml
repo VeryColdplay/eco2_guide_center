@@ -3,16 +3,16 @@ site_url: https://verycoldplay.github.io/eco2_guide_center
 use_directory_urls: false
 
 nav:
-- Welcome to ECO2 Guide Center: index.md
+- Welcome to ECO2 Guide Center(SY): index.md
 - 1. ECO2 Logic Guide:
   - 개요:
     - Logic Overview: 1. ECO2 Logic Guide/a/index.md
-    - 월별 분석방식(예은ing): 1. ECO2 Logic Guide/a/Monthly_method.md
-    - 건물 조닝(승연ing): 1. ECO2 Logic Guide/a/Zoning.md
+    - 월별 분석방식(YE): 1. ECO2 Logic Guide/a/Monthly_method.md
+    - 건물 조닝(SY): 1. ECO2 Logic Guide/a/Zoning.md
   - 1. 건물 모델링:
     - 1.1. 열획득과 열손실: 1. ECO2 Logic Guide/b/Heat_gain_loss.md
     - 1.2. 냉방 및 난방 에너지요구량: 1. ECO2 Logic Guide/b/Cooling_heating_energy_demand.md
-    - 1.3. 개별 값 설정: 1. ECO2 Logic Guide/b/Value.md
+    - 1.3. 개별 값 설정(YE): 1. ECO2 Logic Guide/b/Value.md
   #- 2. 공조처리 에너지 모델링:
   #  - 2.1. 가열,냉각,가습,제습 에너지요구량: 1. ECO2 Logic Guide/c/V_Cooling_heating_energy_demand.md
   #  - 2.2. 공조처리 에너지요구량: 1. ECO2 Logic Guide/c/Ventilating.md
