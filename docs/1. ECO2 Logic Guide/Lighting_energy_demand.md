@@ -79,7 +79,7 @@ graph TB
   <div style="
     text-align: left;
     line-height: 2;
-    padding: 16px 24px;
+    padding: 0px 24px;
     border-radius: 0px;
   ">
     <!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
@@ -116,7 +116,7 @@ graph TB
     display: inline-block;
     background-color: #F1F5F9;
     border-radius: 10px;
-    padding: 16px 48px;
+    padding: 0px 48px;
     line-height: 1.8;
     margin-top: 1em;
     margin-bottom: 2em;
@@ -136,7 +136,7 @@ graph TB
   <div style="
     text-align: left;
     line-height: 2;
-    padding: 16px 24px;
+    padding: 16px 0px;
     border-radius: 0px;
   ">
     <!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
