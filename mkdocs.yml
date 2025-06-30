@@ -26,6 +26,7 @@ nav:
   - 공조처리 에너지 모델링:
     - 가열,냉각,가습,제습 에너지요구량: 1. ECO2 Logic Guide/b/V_Cooling_heating_energy_demand.md
     - 공조처리 에너지요구량: 1. ECO2 Logic Guide/b/Ventilating.md
+  - 조명 에너지요구량: 1. ECO2 Logic Guide/Lighting_energy_demand.md  
   - 급탕 에너지요구량: 1. ECO2 Logic Guide/Hot_water.md
   - 신재생에너지 시스템 분석:
       - 시뮬레이션 오류 해결 방법: 1. ECO2 Logic Guide/신재생에너지 시스템 분석/시뮬레이션_오류_해결_방법.md
