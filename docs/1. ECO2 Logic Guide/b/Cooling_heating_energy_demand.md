@@ -4,7 +4,7 @@
 그러나 설정 범위를 벗어난다면, 다음과 같이 **냉방** 또는 **난방 에너지요구량**이 발생하게 됩니다.  
 <br>
 ```mermaid
-graph TD
+graph LR
     classDef pretendard font-family:'Pretendard';
 
     A{현재 온도는 설정 범위 안에 있는가}
