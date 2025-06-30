@@ -28,10 +28,19 @@ nav:
     - 공조처리 에너지요구량: 1. ECO2 Logic Guide/b/Ventilating.md
   - 조명 에너지요구량: 1. ECO2 Logic Guide/Lighting_energy_demand.md  
   - 급탕 에너지요구량: 1. ECO2 Logic Guide/Hot_water.md
-  - 신재생에너지 시스템 분석:
-      - 시뮬레이션 오류 해결 방법: 1. ECO2 Logic Guide/신재생에너지 시스템 분석/시뮬레이션_오류_해결_방법.md
-      - 입력 데이터 오류 수정: 1. ECO2 Logic Guide/신재생에너지 시스템 분석/입력_데이터_오류_수정.md
-      - 결과값 해석 관련 오류: 1. ECO2 Logic Guide/신재생에너지 시스템 분석/결과값_해석_관련_오류.md
+  - 시스템 에너지 모델링:
+    - 공조시스템 에너지 모델링: 1. ECO2 Logic Guide/c/V_system.md
+    - 냉방시스템 에너지 모델링: 1. ECO2 Logic Guide/c/Hot_water_system.md
+    - 난방시스템 에너지 모델링: 1. ECO2 Logic Guide/c/Heating_system.md
+    - 급탕시스템 에너지 모델링: 1. ECO2 Logic Guide/c/Cooling_system.md
+    - 조명시스템 에너지 모델링: 1. ECO2 Logic Guide/c/Lighting_system.md
+  - 신재생에너지 평가 로직:
+    - 태양열: 1. ECO2 Logic Guide/d/PV.md
+    - 태양광: 1. ECO2 Logic Guide/d/S_thermal.md
+    - 지열: 1. ECO2 Logic Guide/d/G_thermal.md
+    - 열병합: 1. ECO2 Logic Guide/d/CHP.md
+    - 풍력: 1. ECO2 Logic Guide/d/Wind.md
+    - 수열: 1. ECO2 Logic Guide/d/H_thermal.md
   - 오류 및 경고 메시지: 1. ECO2 Logic Guide/오류_및_경고_메시지.md
   - 자주 묻는 질문 (FAQ): 1. ECO2 Logic Guide/자주_묻는_질문.md
   - 고급 기능:
