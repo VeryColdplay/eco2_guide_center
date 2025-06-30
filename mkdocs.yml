@@ -7,8 +7,8 @@ nav:
 - 1. ECO2 Logic Guide:
   - 0. 개요:
     - 0.1. Logic Overview: 1. ECO2 Logic Guide/a/index.md
-    - 0.1. 월별 분석방식: 1. ECO2 Logic Guide/a/Monthly_method.md
-    - 0.2. 건물의 조닝(승연 작업중): 1. ECO2 Logic Guide/a/Zoning.md
+    - 0.1. 월별 분석방식(예은ing): 1. ECO2 Logic Guide/a/Monthly_method.md
+    - 0.2. 건물의 조닝(승연ing): 1. ECO2 Logic Guide/a/Zoning.md
   - 1. 건물 모델링:
     - 1.1. 열획득과 열손실: 1. ECO2 Logic Guide/b/Heat_gain_loss.md
     - 1.2. 냉방 및 난방 에너지요구량: 1. ECO2 Logic Guide/b/Cooling_heating_energy_demand.md
@@ -36,7 +36,7 @@ nav:
   - 고급 기능:
       - 외피전개도 프로그램 연동: 1. ECO2 Logic Guide/Advanced_Function/외피전개도_프로그램_연동.md
       - IFC 모델 연동: '1. ECO2 Logic Guide/Advanced_Function/IFC_Model_Linking.md'
-- 2. ECO2 User Guide(준비중):
+- 2. ECO2 User Guide (TBA):
   - Overview: '2. ECO2 User Guide/index.md'
   - Program Overview: '2. ECO2 User Guide/00_main_page.md'
   - Building Info: '2. ECO2 User Guide/01_building_info.md'
@@ -51,9 +51,9 @@ nav:
   - 신재생 및 열병합: '2. ECO2 User Guide/10_renewable_chp.md'
   - 열관류율: '2. ECO2 User Guide/11_thermal_transmittance.md'
   - 월별 에너지 사용량: '2. ECO2 User Guide/12_montly_energy_use.md'
-- 3. ECO2 Assessment Guide(준비중):
+- 3. ECO2 Assessment Guide (TBA):
   - Overview: '3. ECO2 Assessment Guide/index.md'
-- 4. Reference:
+- 4. Reference (TEST):
   - Logic Equations (수식 모음): '4. Reference/Logic_Equations.md'
 #- 프로그램 평가 프로세스(md v3): 1. ECO2 Logic Guide/ECO2_diagram.md
 #- 기상데이터: 1. ECO2 Logic Guide/weather.html
