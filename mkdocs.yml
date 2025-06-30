@@ -3,7 +3,7 @@ site_url: https://verycoldplay.github.io/eco2_guide_center
 use_directory_urls: false
 
 nav:
-- Welcome to ECO2 Guide Center(SY): index.md
+- Welcome (SY): index.md
 - 1. ECO2 Logic Guide:
   - 개요:
     - Logic Overview: 1. ECO2 Logic Guide/a/index.md
