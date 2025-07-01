@@ -19,7 +19,9 @@ ECO2 가이드센터는 다음에 대한 세부 가이드를 제공합니다:
 - **의무 대상 (공공기관 발주 건축물)**
   > 공동주택 → **2등급 이상**  
   > 업무용 건축물 → **1등급 이상** 
-
+<center>
+  <img src="_images/main_3.png" style="max-width: 45%;" alt="main_3.png">
+</center>
 
 >> 희야 이 부분도 그림으로 표현이 되면 너무 좋을 듯!
 
@@ -29,11 +31,8 @@ ECO2 가이드센터는 다음에 대한 세부 가이드를 제공합니다:
 난방, 냉방, 급탕, 조명, 환기에 대한 에너지소요량을 전반적으로 계산하고 이를 바닥면적으로 나눈 값, 즉 **단위면적당 1차에너지소요량(Primary Energy Use per m²)** 기준, 에너지 성능에 따라 **10개 등급(1+++ ~ 7)**으로 평가합니다. 평가를 위한 분석 툴은 **ECO2 프로그램**을 사용합니다.
 
 <center>
-  <img src="../../_images/table_2.1.1_1" style="max-width: 80%;" alt="table_2.1.1_1.png">
-  <div><strong>Figure. 건축물 에너지 효율 등급 인증기준 </strong></div>
+  <img src="_images/table_2.1.1_1.png" style="max-width: 60%;" alt="table_2.1.1_1.png">
 </center>
-
->> 희야 예은언닌데, 여기 그림이 깨지는데, 혹시 이게 어떤 그림을 원하는건지 알겠어?! 이 부분을 승연언니가 작업해줬었는데 혹시 희도 이게 어떤 그림 의미하는지 모른다면 승연언니한테 한번 확인하구 링크 다시 걸어주시면 감사하겠슴당!
 
 > ※ 냉방설비가 없는 주거용 건축물(단독주택 및 기숙사를 제외한 공동주택)의 경우 냉방 평가 항목 제외  
 > ※ 단위면적당 1차에너지소요량 = 단위면적당 에너지소요량 $\times$ 1차에너지환산계수  
@@ -89,10 +88,133 @@ ECO2는 건축물의 에너지 효율등급 인증을 위한 시뮬레이션 도
 
 ### ECO2 주요 개정 이력
 
->> 희님 여기 발표자료 4페이지 표, 2페이지 그림 둘다 넣어주세요!
+<center>
+  <div style="display: flex; justify-content: center; gap: 12px;">
+    <img src="_images/main_1.png" style="max-width: 70%;" alt="main_1.png">
+  </div>
+  <div style="margin-top: 10px; text-align: center;">
+    <strong>건축물에너지 평가 프로그램 연혁</strong>
+  </div>
+</center>
 
 
->> 희님 여기 발표자료 3페이지 그림 넣어주세요 ㅎ
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>ECO2 프로그램 주요 개정 이력</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%; /* 중앙 정렬 시 너무 꽉 차지 않도록 */
+      font-family: "Malgun Gothic", sans-serif;
+      font-size: 14px;
+      margin: 0 auto; /* 핵심: 중앙 정렬! */
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 10px;
+      vertical-align: top;
+    }
+    th {
+      background-color: #007acc;
+      color: white;
+      text-align: center;
+    }
+    ul {
+      margin: 0;
+      padding-left: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div style="text-align: center;">
+    <table>
+      <tr>
+        <th>시행연도</th>
+        <th>버전명</th>
+        <th>주요개정내용</th>
+      </tr>
+      <tr>
+        <td>2010</td>
+        <td>ECO2</td>
+        <td>
+          <ul>
+            <li>업무시설 대상 에너지 평가 기법 도출</li>
+            <li>ISO13790, DIN V 18599 등 국제 규격 기반 개발</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>2013</td>
+        <td>ECO2_2013</td>
+        <td>
+          <ul>
+            <li>평가 대상을 주거·비주거 건물로 확대</li>
+            <li>용도 프로필 11종 → 20종 확대</li>
+            <li>용도별 가중치 신설</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>2016</td>
+        <td>ECO2_2016</td>
+        <td>
+          <ul>
+            <li>에너지자립률 산정 기능 도입</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>2020</td>
+        <td>ECO2_2020</td>
+        <td>
+          <ul>
+            <li>전국 66개 지역 기상데이터 적용</li>
+            <li>전산식 보정계수 기능 추가</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>2022</td>
+        <td>ECO2_2020V2</td>
+        <td>
+          <ul>
+            <li>용도 추가 (초·중·고, 체육시설, 주방 등)</li>
+            <li>수열(하천수, 광역원수), 소형풍력 평가 반영</li>
+            <li>공기식태양열시스템 평가반영</li>
+            <li>외피전개도 불러오기 기능 추가</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>2025</td>
+        <td>ECO2_2020V2</td>
+        <td>
+          <ul>
+            <li>주거부문 냉방기기 표준 용량, 효율 디폴트값 제공</li>
+            <li>공동주택 단지내 주거-비주거 연료전지 연동 모듈</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
+
+
+
+
+<center>
+  <div style="display: flex; justify-content: center; gap: 12px;">
+    <img src="_images/main_2.png" style="width: 80%;" alt="main_2.png">
+  </div>
+  <div style="margin-top: 10px; text-align: center;">
+    <strong>건축물에너지 평가 프로그램(ECO2)</strong>
+  </div>
+</center>
+
+
 
 ### 주요 기능 및 계산 항목
 
