@@ -4,11 +4,12 @@
 ECO2 가이드센터는 다음에 대한 세부 가이드를 제공합니다:   
 
 - [ECO2 Logic Guide](1. ECO2 Logic Guide/index.html)
-- [ECO2 User Guide](2. ECO2 User Guide/index.html)
-- [ECO2 Assessment Guide](3. ECO2 Assessment Guide/index.html)
+- [ECO2 User Guide (Later)](2. ECO2 User Guide/index.html)
+- [ECO2 Assessment Guide (Later)](3. ECO2 Assessment Guide/index.html)
+- [Reference (In progress)](4. Reference/Logic_Equations.html)
 
 <br>
----
+
 본 페이지에서는 건축물 에너지효율등급 인증제도와 함께, 에너지효율등급을 평가하는 ECO2를 간략히 소개합니다. 
 
 ## 건축물 에너지효율등급 인증제도
