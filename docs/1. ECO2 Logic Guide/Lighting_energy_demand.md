@@ -4,7 +4,9 @@
 
 아래 그림은 존의 전기적 조명 부하를 바탕으로 조명 에너지요구량을 산정하는 프로세스를 도식화한 것입니다.
 
-**박스 안에 글씨와 수식을 깔끔하게 함께 표현하는 방법이 좀 어렵네요. 가능하다면 희가 ppt로 작업해주면 좋을 것 같습니다!**
+<center>
+  <img src="./../_images/lighting_energy_demand.png" width="1200" alt="lighting_energy_demand">
+</center>
 
 <br>
 

@@ -29,7 +29,7 @@ ECO2 가이드센터는 다음에 대한 세부 가이드를 제공합니다:
 난방, 냉방, 급탕, 조명, 환기에 대한 에너지소요량을 전반적으로 계산하고 이를 바닥면적으로 나눈 값, 즉 **단위면적당 1차에너지소요량(Primary Energy Use per m²)** 기준, 에너지 성능에 따라 **10개 등급(1+++ ~ 7)**으로 평가합니다. 평가를 위한 분석 툴은 **ECO2 프로그램**을 사용합니다.
 
 <center>
-  <img src="/docs/_images/table_2.1.1_1.png" style="max-width: 80%;" alt="table_2.1.1_1.png">
+  <img src="../../_images/table_2.1.1_1" style="max-width: 80%;" alt="table_2.1.1_1.png">
   <div><strong>Figure. 건축물 에너지 효율 등급 인증기준 </strong></div>
 </center>
 

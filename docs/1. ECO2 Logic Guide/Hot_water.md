@@ -9,6 +9,18 @@
 ![Domestic hot water consumption](https://www.researchgate.net/publication/267435585/figure/fig4/AS:667861970337800@1536242110522/Amount-of-domestic-hot-water-consumption-in-an-apartment-by-month.png)
 >> 희야, 이 그림 온라인에서 직접 불러오도록 해봤는데, 이거 (1) 중앙정렬 가능한지 그리고 (2) 추가적으로 캡션이랑 캡션에 원본소스 링크 달 수 있는지 스터디 부탁해!
 
+<div style="text-align: center;">
+  <img src="https://www.researchgate.net/publication/267435585/figure/fig4/AS:667861970337800@1536242110522/Amount-of-domestic-hot-water-consumption-in-an-apartment-by-month.png" 
+       alt="Domestic hot water consumption" 
+       style="max-width: 80%; height: auto;" />
+
+  <div style="font-size: 14px; margin-top: 8px;">
+    (출처: <a href="https://www.researchgate.net/publication/267435585" target="_blank">ResearchGate 원문 링크</a>)
+  </div>
+</div>
+
+
+
 
 <br>
 <br>

@@ -181,10 +181,10 @@
     <strong>열손실</strong> {{ include_equations("2", 13, 13) }}
     <strong>열획득</strong> {{ include_equations("2", 19, 19) }}
 
-     <center>
+  <center>
       <img src="../../_images/heat_gain_fig2.jpg" alt="Heat Gain2" style="max-width: 80%;">
       <div><strong>Heat Gain Figure 2</strong></div>
-     </center>
+  </center>
 
   </div>
 
@@ -283,9 +283,13 @@
 
     <strong>내부 열손실</strong> {{ include_equations("2", 15, 15) }}
     <strong>내부 발열 획득</strong> {{ include_equations("2", 20, 20) }}
+  <center>
+    <img src="../../_images/heat_gain_fig3.png" alt="Heat Gain" style="max-width: 80%;">
+    <div><strong>Heat Gain Figure 3</strong></div>
+   </center>
 
-    <strong> To. 희, 적절한 다이어그램 추가 필요해요!! </strong>
-     
+  <!-- 참고 이미지:  -->
+  </div>
 
   </div>
 
@@ -348,7 +352,13 @@
     <strong>태양열에 의한 열획득</strong> {{ include_equations("2", 17, 17) }}
 
     <strong> To. 희, 적절한 다이어그램 추가 필요해요!! </strong>
-     
+  <center>
+    <img src="../../_images/heat_gain_fig4.png" alt="Heat Gain" style="max-width: 80%;">
+    <div><strong>Heat Gain Figure 4</strong></div>
+  </center>
+
+  <!-- 참고 이미지:  -->
+  </div>  
 
   </div>
 
