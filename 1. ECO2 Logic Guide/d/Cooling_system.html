@@ -9,9 +9,9 @@
 <link href="Hot_water_system.html" rel="prev"/>
 <link href="Lighting_system.html" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.6.15" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
 <title>2.3. 급탕 에너지소요량 - ECO2 Guide Center</title>
-<link href="../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
@@ -207,6 +207,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="V_system.html">
+<span class="md-ellipsis">
+    1.3. 공조 에너지소요량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../b/Value.html">
 <span class="md-ellipsis">
     1.3. 개별 값 설정(YE)
@@ -314,52 +322,6 @@
     </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1">
-<span class="md-ellipsis">
-      (1) 간접 가열식
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2">
-<span class="md-ellipsis">
-      (2) 간접 가열식, 태양열 복합
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3">
-<span class="md-ellipsis">
-      (3) 전기 가열식
-    </span>
-</a>
-<nav aria-label="(3) 전기 가열식" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1-1000l">
-<span class="md-ellipsis">
-      1) 축열조 용량 ≤ 1,000ℓ
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2-1000l">
-<span class="md-ellipsis">
-      2) 축열조 용량 &gt; 1,000ℓ
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#4">
-<span class="md-ellipsis">
-      (4) 가스 가열식
-    </span>
-</a>
-</li>
 </ul>
 </nav>
 </li>
@@ -375,9 +337,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="V_system.html">
+<a class="md-nav__link" href="Ventilation_Humidification_system.html">
 <span class="md-ellipsis">
-    2.5. 공조 에너지소요량
+    2.5. 환기/가습 에너지소요량
     
   </span>
 </a>
@@ -679,52 +641,6 @@
     </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1">
-<span class="md-ellipsis">
-      (1) 간접 가열식
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2">
-<span class="md-ellipsis">
-      (2) 간접 가열식, 태양열 복합
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3">
-<span class="md-ellipsis">
-      (3) 전기 가열식
-    </span>
-</a>
-<nav aria-label="(3) 전기 가열식" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1-1000l">
-<span class="md-ellipsis">
-      1) 축열조 용량 ≤ 1,000ℓ
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2-1000l">
-<span class="md-ellipsis">
-      2) 축열조 용량 &gt; 1,000ℓ
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#4">
-<span class="md-ellipsis">
-      (4) 가스 가열식
-    </span>
-</a>
-</li>
 </ul>
 </nav>
 </li>
@@ -738,27 +654,27 @@
 <div style="text-align: right; font-size: 0.9em; color: #666; margin-bottom: -1em;">
 </div>
 <h1 id="23">2.3. 급탕 에너지소요량<a class="headerlink" href="#23" title="Permanent link">¶</a></h1>
-<p>급탕 에너지소요량 <span class="arithmatex">\(Q_{w,f}\)</span>는 급탕 열 생산기기의 열 공급량(<span class="arithmatex">\(Q_{w,outg}\)</span>), 생산과정에서 발생하는 (월별) 열손실(<span class="arithmatex">\(Q_{w,g}\)</span>) 및 재생열에너지(태양열 및 주변 열)에 의해 다음과 같이 계산됩니다:</p>
+<p>급탕 에너지소요량 Q_w,f는 급탕 열 생산기기의 열 공급량(Q_w,outg), 생산과정에서 발생하는 (월별) 열손실(Q_w,g) 및 재생열에너지(태양열 및 주변 열)에 의해 다음과 같이 계산됩니다:</p>
 <div class="arithmatex">\[
 Q_{w,f} = Q_{w,outg} - Q_{w,g} - Q_{w,reg} \tag{3.2.9-5}
 \]</div>
 <p>where,<br/>
-<span class="arithmatex">\(Q_{w,outg}\)</span>: 급탕 열 생산기기의 열 공급량<br/>
-<span class="arithmatex">\(Q_{w,g}\)</span>: 생산과정에서 발생하는 (월별) 열손실<br/>
-<span class="arithmatex">\(Q_{w,reg}\)</span>: 재생열에너지(태양열 및 주변 열)  </p>
+Q_w,outg: 급탕 열 생산기기의 열 공급량<br/>
+Q_w,g: 생산과정에서 발생하는 (월별) 열손실<br/>
+Q_w,reg: 재생열에너지(태양열 및 주변 열)  </p>
 <hr/>
 <h2 id="231">2.3.1. 급탕 열 생산기기의 열 공급량<a class="headerlink" href="#231" title="Permanent link">¶</a></h2>
 <div class="arithmatex">\[
 Q_{w,outg} = Q_{w,b} + Q_{w,ce} + Q_{w,d} + Q_{w,s} \tag{3.2.9-4}
 \]</div>
 <p>where<br/>
-<span class="arithmatex">\(Q_{w,b}\)</span>: 급탕에너지요구량<br/>
-<span class="arithmatex">\(Q_{w,ce}\)</span>: 전달 열손실<br/>
-<span class="arithmatex">\(Q_{w,d}\)</span>: 분배 열손실<br/>
-<span class="arithmatex">\(Q_{w,s}\)</span>: 저장 열손실  </p>
+Q_w,b: 급탕에너지요구량<br/>
+Q_w,ce: 전달 열손실<br/>
+Q_w,d: 분배 열손실<br/>
+Q_w,s: 저장 열손실  </p>
 <hr/>
 <h3 id="2311">2.3.1.1. 전달 열손실<a class="headerlink" href="#2311" title="Permanent link">¶</a></h3>
-<p>전달 열손실 <span class="arithmatex">\(Q_{w,ce}\)</span>는 이미 존의 급탕 에너지요구량 <span class="arithmatex">\(Q_{w,b}\)</span>에 포함되어 있으므로 0으로 계산합니다. 이에 따라 전달 열손실에 필요한 보조에너지 <span class="arithmatex">\(Q_{w,ce,aux}\)</span> 또한 0이 됩니다.</p>
+<p>전달 열손실 Q_w,ce는 이미 존의 급탕 에너지요구량 Q_w,b에 포함되어 있으므로 0으로 계산합니다. 이에 따라 전달 열손실에 필요한 보조에너지 Q_w,ce,aux 또한 0이 됩니다.</p>
 <hr/>
 <h3 id="2312">2.3.1.2 분배 열손실<a class="headerlink" href="#2312" title="Permanent link">¶</a></h3>
 <p>급탕배관망을 따라 분배되는 중앙 공급식 급탕의 경우, 전체 배관망의 열손실은 다음과 같이 계산됩니다:</p>
@@ -766,18 +682,18 @@ Q_{w,outg} = Q_{w,b} + Q_{w,ce} + Q_{w,d} + Q_{w,s} \tag{3.2.9-4}
 Q_{w,d} = \sum_i Q_{w,d,i} \tag{3.2.9-12}
 \]</div>
 <p>where<br/>
-<span class="arithmatex">\(Q_{w,d,i}\)</span>: 급탕배관망 구간 i의 열손실  </p>
-<p>한편 구간 i의 열손실 <span class="arithmatex">\(Q_{w,d,i}\)</span>:</p>
+Q_w,d,i: 급탕배관망 구간 i의 열손실  </p>
+<p>한편 구간 i의 열손실 Q_w,d,i:</p>
 <div class="arithmatex">\[
 Q_{w,d,i} = 1/1000 \cdot U_i \cdot L_i \cdot (v_{w,m} - v_i) \cdot d_{Nutz,mth} \cdot t_{Nutz,T} \tag{3.2.9-11}
 \]</div>
 <p>where<br/>
-<span class="arithmatex">\(U_{i}\)</span>: 구간 i 배관 열관류율<br/>
-<span class="arithmatex">\(L_{i}\)</span>: 구간 i 배관 길이<br/>
-<span class="arithmatex">\(v_{w,m}\)</span>: 급탕배관망 온도 (보고서에서는 복수의 의미로 사용)<br/>
-<span class="arithmatex">\(v_{i}\)</span>: 주변온도 (보고서에서는 복수의 의미로 사용)<br/>
-<span class="arithmatex">\(d_{Nutz,mth}\)</span>: 월간 이용일수<br/>
-<span class="arithmatex">\(t_{Nutz,T}\)</span>: 일일 이용시간  </p>
+U_i: 구간 i 배관 열관류율<br/>
+L_i: 구간 i 배관 길이<br/>
+v_w,m: 급탕배관망 온도 (보고서에서는 복수의 의미로 사용)<br/>
+v_i: 주변온도 (보고서에서는 복수의 의미로 사용)<br/>
+d_Nutz,mth: 월간 이용일수<br/>
+t_Nutz,T: 일일 이용시간  </p>
 <hr/>
 <p>배관망은 다음 그림과 같이 크게 V, S, SL의 3가지로 분류합니다.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../_images/3.2.9_2.png"><img alt="그림 3.2.9-2" src="../../_images/3.2.9_2.png"/></a><br/>
@@ -788,7 +704,7 @@ Q_{w,d,i} = 1/1000 \cdot U_i \cdot L_i \cdot (v_{w,m} - v_i) \cdot d_{Nutz,mth} 
 <li><strong>SL</strong>: 취수구까지의 차단 가능한 말단 배관  </li>
 </ul>
 <hr/>
-<p>배관의 열관류율 <span class="arithmatex">\(U_{i}\)</span>는 사양에 근거하여 계산되며, 사양을 모르는 경우 다음 표에 따라 적용합니다.</p>
+<p>배관의 열관류율 <td class="left">U<sub>i</sub>는 사양에 근거하여 계산되며, 사양을 모르는 경우 다음 표에 따라 적용합니다.</td></p>
 <!DOCTYPE html>
 
 <html lang="ko">
@@ -862,8 +778,8 @@ Q_{w,d,i} = 1/1000 \cdot U_i \cdot L_i \cdot (v_{w,m} - v_i) \cdot d_{Nutz,mth} 
 document$.subscribe(() => { lightbox.reload() });
 </script></body>
 </html>
-<p>구간 <span class="arithmatex">\(i\)</span> 배관 길이 <span class="arithmatex">\(L_{i}\)</span>는 세부 도면을 바탕으로 산정합니다.  </p>
-<p>주변온도 <span class="arithmatex">\(v_{i}\)</span>는 용도프로필에서 설정된 값이 적용되며, 만일 주어진 값이 없다면 다음 표를 참고하여 채택합니다.</p>
+<p>구간 i 배관 길이 L_i는 세부 도면을 바탕으로 산정합니다.  </p>
+<p>주변온도 <td class="left">v<sub>i</sub>는 용도프로필에서 설정된 값이 적용되며, 만일 주어진 값이 없다면 다음 표를 참고하여 채택합니다.</td></p>
 <!DOCTYPE html>
 
 <html lang="ko">
@@ -931,238 +847,52 @@ document$.subscribe(() => { lightbox.reload() });
 </html>
 <hr/>
 <p>한편 순환배관이 있지만 순환이 정지되었다면 위 식에서의  </p>
-<p>일일 이용시간 <span class="arithmatex">\(t_{Nutz,T}\)</span>:</p>
+<p>일일 이용시간 t_Nutz,T:</p>
 <div class="arithmatex">\[
 t_{Nutz,T} = 24\,\text{h} - t_{Nutz} \tag*{}
 \]</div>
-<p>급탕배관망 온도 <span class="arithmatex">\(v_{w,m}\)</span>:</p>
+<p>급탕배관망 온도 v_w,m:</p>
 <div class="arithmatex">\[
 v_{w,m} = 23 \cdot U^{-0.2} \tag*{}
 \]</div>
 <hr/>
 <p>만일 순환배관과 연결배관이 없다면 위 식에서의  </p>
-<p>일일 이용시간 <span class="arithmatex">\(t_{Nutz,T}\)</span>:</p>
+<p>일일 이용시간 t_Nutz,T:</p>
 <div class="arithmatex">\[
 t_{Nutz,T} = 24\,\text{h} \tag*{}
 \]</div>
-<p>급탕배관망 온도 <span class="arithmatex">\(v_{w,m}\)</span>:</p>
+<p>급탕배관망 온도 v_w,m:</p>
 <div class="arithmatex">\[
 v_{w,m} = 23 \cdot U^{-0.2} \tag*{}
 \]</div>
 <hr/>
 <h3 id="2313">2.3.1.3 저장 열손실<a class="headerlink" href="#2313" title="Permanent link">¶</a></h3>
-<p>저장 열손실 <span class="arithmatex">\(Q_{w,s}\)</span>는 축열조의 가열 방식, 즉:<br>
+<p>저장 열손실 Q_w,s는 축열조의 가열 방식, 즉:<br>
 (1) 간접 가열식<br>
 (2) 간접 가열식, 태양열 복합<br/>
 (3) 전기 가열식<br/>
 (4) 가스 가열식<br/>
 에 따라 다음의 4가지 방식으로 계산됩니다:</br></br></p>
+<hr/>
 <p><strong>(1) 간접 가열식</strong></p>
 <div class="arithmatex">\[
 Q_{w,s} = U \cdot A \cdot (v_{w} - v_{amb}) \cdot d_{Nutz,mth} \cdot 24 \tag{3.2.9-16}
 \]</div>
+<hr/>
 <p><strong>(2) 간접 가열식, 태양열 복합</strong></p>
 <div class="arithmatex">\[
 Q_{w,s} = Q_{sol} + Q_{indirect} - Q_{loss} \tag{3.2.9-25}
 \]</div>
+<hr/>
 <p><strong>(3) 전기 가열식</strong></p>
 <div class="arithmatex">\[
 Q_{w,s} = E_{input} - Q_{loss} \tag{3.2.9-29}
 \]</div>
+<hr/>
 <p><strong>(4) 가스 가열식</strong></p>
 <div class="arithmatex">\[
 Q_{w,s} = \eta_{g} \cdot Q_{input} - Q_{loss} \tag{3.2.9-37}
 \]</div>
-<hr/>
-<h3 id="1">(1) 간접 가열식<a class="headerlink" href="#1" title="Permanent link">¶</a></h3>
-<p>간접 가열식 축열조의 저장 열손실:<br/>
-(식 추가 요청, 보고서 254p 식 3.2.9-16)<br/>
-where<br/>
-<span class="arithmatex">\(f_{verbindung}\)</span>: 연결배관에서 발생하는 열손실 계수, 1.2<br/>
-<span class="arithmatex">\(v_{i}\)</span>: 주변온도 (보고서에서는 복수의 의미로 사용)<br/>
-<span class="arithmatex">\(d_{Nutz,mth}\)</span>: 월간 이용일수<br/>
-<span class="arithmatex">\(q_{B,S}\)</span>: 책정-열손실  </p>
-<p>만일 책정-열손실이 주어지지 않았다면 축열조의 용량을 기준으로 다음과 같이 계산합니다:</p>
-<table>
-<thead>
-<tr>
-<th>축열조 생산연도</th>
-<th>축열조 용량</th>
-<th>책정-열손실</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1995-</td>
-<td>1,000ℓ 이상</td>
-<td>식 추가 요청, 보고서 255p 식 3.2.9-19</td>
-</tr>
-<tr>
-<td></td>
-<td>1,000ℓ 이하</td>
-<td>식 추가 요청, 보고서 255p 식 3.2.9-18</td>
-</tr>
-<tr>
-<td>1987-1994</td>
-<td></td>
-<td>식 추가 요청, 보고서 255p 식 3.2.9-22</td>
-</tr>
-<tr>
-<td>1978-1986</td>
-<td></td>
-<td>식 추가 요청, 보고서 255p 식 3.2.9-21</td>
-</tr>
-<tr>
-<td>-1977</td>
-<td></td>
-<td>식 추가 요청, 보고서 255p 식 3.2.9-20</td>
-</tr>
-</tbody>
-</table>
-<p><strong>where V: 축열조 용량</strong></p>
-<p>축열조 용량은 제품사양서에 주어지지만, 용량을 모르는 경우 다음 식에 따라 계산합니다:<br/>
-(식 추가 요청, 보고서 255p 식 3.2.9-23)<br/>
-where<br/>
-<span class="arithmatex">\(Q_{w,b,d}\)</span>: 일간 급탕에너지요구량<br/>
-<span class="arithmatex">\(f_{N}\)</span>: 보고서에 명시되지 않음<br/>
-<span class="arithmatex">\(v_{w,m}\)</span>: 급탕 배관망 온도 (보고서에서는 복수의 의미로 사용)<br/>
-<span class="arithmatex">\(v_{K}\)</span>: 보고서에 정확히 명시되지 않음 (<span class="arithmatex">\(v_{K}\)</span>: 냉수 공급온도)<br/>
-<span class="arithmatex">\(n_{S}\)</span>: 축열조 효율 (입식=0.95, 좌식=0.9)  </p>
-<p>한편 <span class="arithmatex">\(f_{N}\)</span>은 다음과 같이 계산합니다:<br/>
-(식 추가 요청, 보고서 255p 식 3.2.9-24)<br/>
-where<br/>
-<span class="arithmatex">\(t_{Nutz,T}\)</span>: 일일 이용시간<br/>
-<span class="arithmatex">\(n_{S}_{p}\)</span>: 일일 순간최대취수량 발생횟수</p>
-<hr/>
-<h3 id="2">(2) 간접 가열식, 태양열 복합<a class="headerlink" href="#2" title="Permanent link">¶</a></h3>
-<p>간접 가열식, 태양열 복합 축열조의 저장 열손실:<br/>
-(식 추가 요청, 보고서 256p 식 3.2.9-25)<br/>
-where<br/>
-<span class="arithmatex">\(f_{verbindung}\)</span>: 연결배관에서 발생하는 열손실 계수, 1.2<br/>
-<span class="arithmatex">\({UA}_{sb,s,a}\)</span>: 측정된 책정-열손실 [W/K]<br/>
-<span class="arithmatex">\(Δv_{i}\)</span>: 보고서에 명시되어 있지 않으나 온도차로 추정됨<br/>
-<span class="arithmatex">\(d_{Nutz,mth}\)</span>: 월간 이용일수<br/>
-<span class="arithmatex">\(V_{s,aux}\)</span>: 축열조 상부(태양열 부분을 뺀) 용량 [ℓ]<br/>
-<span class="arithmatex">\(V_{s,scl}\)</span>: 축열조 하부(태양열 저장부분)의 용량 [ℓ]</p>
-<p>만일 축열조 책정-열손실 <span class="arithmatex">\({UA}_{sb,s,a}\)</span>를 모르는 경우 축열조 용량에 따라 다음과 같이 계산합니다:</p>
-<p><strong>1) 축열조 용량 ≤ 1,000ℓ:</strong><br/>
-  (식 추가 요청, 보고서 256p 식 3.2.9-26)  </p>
-<p><strong>2) 축열조 용량 &gt; 1,000ℓ:</strong><br/>
-  1,000ℓ를 초과하는 축열조는 여러 대의 분리된 축열조로 가정하여 계산합니다.<br/>
-  (각 축열조당 최대 1,000ℓ 적용)</p>
-<hr/>
-<h3 id="3">(3) 전기 가열식<a class="headerlink" href="#3" title="Permanent link">¶</a></h3>
-<p>전기 가열식 축열조의 저장 열손실:<br/>
-(식 추가 요청, 보고서 256p 식 3.2.9-29)<br/>
-where<br/>
-<span class="arithmatex">\(v_{i}\)</span>: 주변온도 (보고서에서는 복수의 의미로 사용)<br/>
-<span class="arithmatex">\(d_{Nutz,mth}\)</span>: 월간 이용일수<br/>
-<span class="arithmatex">\(q_{B,S}\)</span>: 책정-열손실  </p>
-<p>책정-열손실 <span class="arithmatex">\(q_{B,S}\)</span>은 저장온수와 설치공간과의 평균 온도차가 45K일 때 측정된 것으로, 측정값이 없는 경우 다음과 같이 계산합니다:</p>
-<table>
-<thead>
-<tr>
-<th>축열조 생산연도</th>
-<th>책정-열손실</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1995-</td>
-<td>식 추가 요청, 보고서 257p 식 3.2.9-30</td>
-</tr>
-<tr>
-<td>1989-1994</td>
-<td>식 추가 요청, 보고서 257p 식 3.2.9-32</td>
-</tr>
-<tr>
-<td>-1988</td>
-<td>식 추가 요청, 보고서 257p 식 3.2.9-31</td>
-</tr>
-</tbody>
-</table>
-<p><strong>where V: 축열조 용량</strong></p>
-<p>축열조 용량은 제품사양서에 주어지지만, 용량을 모르는 경우 다음 식에 따라 계산합니다:  </p>
-<h4 id="1-1000l">1) 축열조 용량 ≤ 1,000ℓ<a class="headerlink" href="#1-1000l" title="Permanent link">¶</a></h4>
-<table>
-<thead>
-<tr>
-<th>구분</th>
-<th>설명</th>
-<th>축열조 용량</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>심야</td>
-<td>주로 심야에 가동</td>
-<td>식 추가 요청, 보고서 257p 식 3.2.9-33</td>
-</tr>
-<tr>
-<td>주간</td>
-<td>지속적 재충전 가능</td>
-<td>식 추가 요청, 보고서 257p 식 3.2.9-34</td>
-</tr>
-</tbody>
-</table>
-<p>where<br/>
-<span class="arithmatex">\(Q_{w,b,d}\)</span>: 일간 급탕에너지요구량<br/>
-<span class="arithmatex">\(f_{N}\)</span>: 보고서에 명시되지 않음<br/>
-<span class="arithmatex">\(v_{w,m}\)</span>: 급탕 배관망 온도 (보고서에서는 복수의 의미로 사용)<br/>
-<span class="arithmatex">\(v_{K}\)</span>: 보고서에 정확히 명시되지 않음 (<span class="arithmatex">\(v_{K}\)</span>: 냉수 공급온도)<br/>
-<span class="arithmatex">\(n_{S}\)</span>: 축열조 효율 (입식=0.95, 좌식=0.9)  </p>
-<p>한편 <span class="arithmatex">\(f_{N}\)</span>은 다음과 같이 계산합니다:<br/>
-(식 추가 요청, 보고서 255p 식 3.2.9-24)<br/>
-where<br/>
-<span class="arithmatex">\(t_{Nutz,T}\)</span>: 일일 이용시간<br/>
-<span class="arithmatex">\(n_{S}_{p}\)</span>: 일일 순간최대취수량 발생횟수</p>
-<h4 id="2-1000l">2) 축열조 용량 &gt; 1,000ℓ<a class="headerlink" href="#2-1000l" title="Permanent link">¶</a></h4>
-<p>1,000ℓ를 초과하는 축열조는 여러 대의 분리된 축열조로 가정하여 계산합니다.<br/>
-(각 축열조당 최대 1,000ℓ 적용)</p>
-<hr/>
-<h3 id="4">(4) 가스 가열식<a class="headerlink" href="#4" title="Permanent link">¶</a></h3>
-<p>가스 가열식 축열조의 저장 열손실:<br/>
-(식 추가 요청, 보고서 258p 식 3.2.9-37)<br/>
-where<br/>
-<span class="arithmatex">\(v_{i}\)</span>: 주변온도 (보고서에서는 복수의 의미로 사용)<br/>
-<span class="arithmatex">\(d_{Nutz,mth}\)</span>: 월간 이용일수<br/>
-<span class="arithmatex">\(q_{B,S}\)</span>: 책정-열손실  </p>
-<p>책정-열손실 <span class="arithmatex">\(q_{B,S}\)</span>은 저장온수와 설치공간과의 평균 온도차가 50K일 때 측정된 것으로, 측정값이 없는 경우 다음과 같이 계산합니다:</p>
-<table>
-<thead>
-<tr>
-<th>축열조 생산연도</th>
-<th>책정-열손실</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1995-</td>
-<td>식 추가 요청, 보고서 258p 식 3.2.9-38</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>축열조 생산연도</th>
-<th>책정-열손실</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1985-1994</td>
-<td>식 추가 요청, 보고서 258p 식 3.2.9-40</td>
-</tr>
-<tr>
-<td>-1984</td>
-<td>식 추가 요청, 보고서 258p 식 3.2.9-39</td>
-</tr>
-</tbody>
-</table>
-<p>where V: 축열조 용량</p>
-<p>단 위 식에서의 축열조 용량은 최대 500ℓ까지 적용되며, 500ℓ를 초과하는 용량은 여러 대의 최대 500ℓ 축열조로 구성된 것으로 간주하여 각 축열조의 열손실을 합산하여 계산합니다.</p>
-<hr/>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="마지막 업데이트">
@@ -1194,8 +924,8 @@ where<br/>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.tabs.sticky", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
-<script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.tabs.sticky", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}}</script>
+<script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
 <script src="../../assets/polyfill.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
