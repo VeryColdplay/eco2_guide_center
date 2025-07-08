@@ -1,6 +1,6 @@
-# 2.3. 급탕 에너지소요량
+# 2.3. 급탕 에너지요구량
 
-급탕 에너지소요량 \(Q_{w,f}\)는 급탕 열 생산기기의 열 공급량(\(Q_{w,outg}\)), 생산과정에서 발생하는 (월별) 열손실(\(Q_{w,g}\)) 및 재생열에너지(태양열 및 주변 열)에 의해 다음과 같이 계산됩니다:
+급탕 에너지요소요량 \(Q_{w,f}\)는 급탕 열 생산기기의 열 공급량(\(Q_{w,outg}\)), 생산과정에서 발생하는 (월별) 열손실(\(Q_{w,g}\)) 및 재생열에너지(태양열 및 주변 열)에 의해 다음과 같이 계산됩니다:
 
 $$
 Q_{w,f} = Q_{w,outg} - Q_{w,g} - Q_{w,reg} \tag{3.2.9-5}
@@ -332,7 +332,7 @@ where
 (식 추가 요청, 보고서 255p 식 3.2.9-24)  
 where  
 \(t_{Nutz,T}\): 일일 이용시간  
-\(n_{S}_{p}\): 일일 순간최대취수량 발생횟수
+\(n_{Sp}\): 일일 순간최대취수량 발생횟수
 
 ---
 
@@ -432,7 +432,7 @@ where
 (식 추가 요청, 보고서 255p 식 3.2.9-24)  
 where  
 \(t_{Nutz,T}\): 일일 이용시간  
-\(n_{S}_{p}\): 일일 순간최대취수량 발생횟수
+\(n_{Sp}\): 일일 순간최대취수량 발생횟수
 
 #### 2) 축열조 용량 > 1,000ℓ
 
@@ -450,7 +450,7 @@ where
 \(d_{Nutz,mth}\): 월간 이용일수  
 \(q_{B,S}\): 책정-열손실  
 
-책정-열손실 \(q_{B,S}\)은 저장온수와 설치공간과의 평균 온도차가 50K일 때 측정된 것으로, 측정값이 없는 경우 다음과 같이 계산합니다:
+책정-열손실 \(q_{B,S}\)은 저장온수와 설치공간과의 평균 온도차가 50K일 때 측정된 것으로, 측정값이 없는 경우 다음과 같이 계산합니다:-
 
 <table>
   <thead>
@@ -460,21 +460,10 @@ where
     </tr>
   </thead>
   <tbody>
-    <tr>
+      <tr>
       <td>1995-</td>
       <td>식 추가 요청, 보고서 258p 식 3.2.9-38</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th>축열조 생산연도</th>
-      <th>책정-열손실</th>
-    </tr>
-  </thead>
-  <tbody>
     <tr>
       <td>1985-1994</td>
       <td>식 추가 요청, 보고서 258p 식 3.2.9-40</td>
@@ -491,3 +480,345 @@ where V: 축열조 용량
 단 위 식에서의 축열조 용량은 최대 500ℓ까지 적용되며, 500ℓ를 초과하는 용량은 여러 대의 최대 500ℓ 축열조로 구성된 것으로 간주하여 각 축열조의 열손실을 합산하여 계산합니다.
 
 ---
+
+## 2.3.2. 생산과정에서 발생하는 (월별) 열손실
+
+생산손실 \(Q_{w,g}\)는 급탕 방식, 즉:  
+- (1) 연료장전식 급탕보일러  
+- (2) 직접 가열식 축열조(가스)  
+- (3) 지역난방  
+에 따라 다음의 3가지 방식으로 계산됩니다:
+
+---
+- (1) 연료장전식 급탕보일러  
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( Q_{w,g} = Q_{w,g,100\%} \cdot d_{Nutz,mth} + Q_{B,w} \cdot \left( d_{Nutz,mth} - d_{h,r,B} \right) \) {{ auto_eq_number }}
+</a>
+
+- (2) 직접 가열식 축열조(가스)  
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( Q_{w,g} = Q_{w,g,100\%} \cdot d_{Nutz,mth} \quad [\text{kWh}] \) {{ auto_eq_number }}
+</a>
+
+- (3) 지역난방  
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( Q_{w,g} = H_{DS} \cdot (v_{DS} - v_i) \) {{ auto_eq_number }}
+</a>
+
+---
+
+**(1) 연료장전식 급탕보일러**
+
+연료장전식 급탕보일러의 생산손실:  
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( Q_{w,g} = Q_{w,g,100\%} \cdot d_{Nutz,mth} + Q_{B,w} \cdot \left( d_{Nutz,mth} - d_{h,r,B} \right) \) {{ auto_eq_number }}
+</a>
+
+where  
+\(Q_{w,g,100%}\): 최대부하(정격성능)에서의 열손실  
+\(d_{Nuts,mth}\): 월별 이용일수  
+\(Q_{B,w}\): 대기모드(machine down-time)에서의 열손실 Q_B (Q_B,w와 정확히 매칭되는 설명은 부재)  
+\(d_{h,r,B}\): 분석-운전일수 (난방 에너지소요량의 월별 계산 운전일 참조)  
+
+---
+
+\(Q_{w,g,100%}\)는 다음과 같이 계산됩니다:  
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( Q_{w,g,100\%} = \left( f_{H_s/H} - \eta_{k,100\%} \right) / \eta_{k,100\%} \cdot Q_{w,outg} / d_{Nutz,mth} \) {{ auto_eq_number }}
+</a>
+
+where  
+\(f_{Hs/Hi}\): 연료원에 따른 고위발열/저위발열의 비  
+\(\eta_{k,100\%}\): 찾는중 (maybe 정격성능효율)  
+\(Q_{w,outg}\): 급탕시스템 열 생산기기의 열 공급량  
+\(d_{Nutz,mth}\): 월별 이용일수  
+
+정격성능 효율 \(η_{k,100%}\)은 테스트 온도 70℃에서의 보일러의 정격성능과 관련된 효율로, 다음 식을 따라 계산합니다.  
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( \eta_{k,100\%} = (A + B \cdot \log(\dot{Q}_N)) / 100 \) {{ auto_eq_number }}
+</a>
+ 
+where  
+A, B: 효율계수  
+\(\dot{Q}_N\): 정격성능  
+
+> 이 식은 정격성능이 400kW인 경우까지 유효하며, 정격성능 \(\dot{Q}_N\)이 400kW를 초과할 경우 \(\dot{Q}_N\)=400kW로 적용합니다.  
+
+효율계수 A, B는 다음 표와 같습니다.  
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>보일러 계수표</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 85%;
+      font-family: "Malgun Gothic", sans-serif;
+      font-size: 14px;
+      text-align: center;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 6px 10px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th colspan="2">보일러 형식</th>
+    <th>연식</th>
+    <th>계수 A</th>
+    <th>계수 B</th>
+  </tr>
+  <tr>
+   <td rowspan="7">표준형 보일러</td>
+    <td rowspan="3">가스보일러</td>
+    <td>1978 이전</td>
+    <td>79.5</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>1978 ~ 1994</td>
+    <td>82.5</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>1994 이후</td>
+    <td>85</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td rowspan="4">연료분사식 보일러<br>(가스/기름)</td>
+    <td>1978 이전</td>
+    <td>80</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>1978 ~ 1986</td>
+    <td>82</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>1987 ~ 1994</td>
+    <td>84</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>1994 이후</td>
+    <td>85</td>
+    <td>2</td>
+  </tr>
+  <tr>
+  <td rowspan="5">저온 보일러</td>
+    <td rowspan="2">가스보일러</td>
+    <td>1978 ~ 1994</td>
+    <td>85.5</td>
+    <td>1.5</td>
+  </tr>
+  <tr>
+    <td>1994 이후</td>
+    <td>88.5</td>
+    <td>1.5</td>
+  </tr>
+  <tr>
+    <td rowspan="3">연료분사식 보일러<br>(가스/기름)</td>
+    <td>1987 이전</td>
+    <td>84</td>
+    <td>1.5</td>
+  </tr>
+  <tr>
+    <td>1987 ~ 1994</td>
+    <td>86</td>
+    <td>1.5</td>
+  </tr>
+  <tr>
+    <td>1994 이후</td>
+    <td>88.5</td>
+    <td>1.5</td>
+  </tr>
+  <tr>
+    <td rowspan="4">콘덴싱 보일러<br>(가스/기름)</td>
+    <td rowspan="3">일반</td>
+    <td>1987 이전</td>
+    <td>89</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1987 ~ 1994</td>
+    <td>91</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1994 이후</td>
+    <td>92</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>고효율</td>
+    <td>1999 이후</td>
+    <td>94</td>
+    <td>1</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+
+정격성능 \(\dot{Q}_N\)은 동시에 가동되는 모든 보일러성능의 합이거나 순차가동에서 최대 보일러성능 중 큰 값으로 정합니다. 즉:  
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( \dot{Q}_N = \max\left( \sum \dot{Q}_{N,gleichzeitig},\ \dot{Q}_{vorrangig} \right) \) {{ auto_eq_number }}
+</a>
+
+
+> 만일 제품사양이 없는 경우 콤비보일러 여부에 따라 다음과 같은 표준치를 적용합니다:  
+> \(\dot{Q}_N\)=0.42(\(Q_{w,b,d}\)/0.036)^0.7  
+> 콤비보일러인 경우, <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( \dot{Q}_N = 24\ \text{kW} \) {{ auto_eq_number }}
+</a>
+
+
+---
+
+또한 \(Q_{B,w}\)는 다음과 같이 계산됩니다:  
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( Q_{B,w} = q_{B,w} \cdot \dot{Q}_N / \eta_{k,100\%} \cdot (t_{Nutz,T} - t_{w,100\%}) \cdot f_{Hö/Ht} \) {{ auto_eq_number }}
+</a>
+
+where  
+\(q_{B,v}\)  
+\(\dot{Q}_N\): 정격성능  
+\(η_{k,100%}\): 찾는중 (maybe 정격성능효율)  
+\(t_{Nutz,T}\): 일일 이용시간  
+\(t_{w,100%}\): 정격성능에서의 급탕용 보일러의 일일 가동시간  
+\(f_{Hs/Hi}\): 연료원에 따른 고위발열/저위발열의 비  
+
+\(q_{B,v}\)는 다음과 같이 계산됩니다:  
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( q_{B,w} = q_{B,70} \cdot (v_{g,m} - v_i) / (70 - 20) \) {{ auto_eq_number }}
+</a>
+
+where  
+\(q_{B,70}\): 책정 열손실  
+\(v_{g,m}\): 대기모드 상태에서의 평균 보일러 온도(순환: 50℃, 비순환: 40℃)  
+\(v_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)
+
+---
+
+정격성능 \(\dot{Q}_N\)에서의 급탕용 보일러의 일일 가동시간 \(t_{w,100%}\)는 다음 계산식을 따릅니다:  
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( t_{w,100\%} = Q_{w,outg} / (\dot{Q}_N \cdot d_{Nutz,mth}) \) {{ auto_eq_number }}
+</a>
+
+where  
+\(Q_{w,outg}\): 급탕시스템 열 생산기기의 열 공급량  
+\(\dot{Q}_N\): 정격성능  
+\(d_{Nutz,mth}\): 월별 이용일수
+
+보일러의 책정열손실 \(q_{B,70}\)은 다음 식에 따라 계산됩니다:  
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( q_{B,70} = (E \cdot (Q_N)^F)/100 \) {{ auto_eq_number }}
+</a>
+
+where  
+\(\dot{Q}_N\) (식에는 닷이 없지만 원래 있어야 하는듯!): 정격성능  
+E, F: 책정열손실 계수  
+
+책정열손실 계수 E, F는 다음 표와 같습니다.  
+(표 추가 요청, 보고서 264p 표 3.2.9-11)
+
+> 한편 d_h,r,B > \(d_{Nuts,mth}\)인 경우 \(d_{h,r,B}\) - \(d_{Nuts,mth}\) = 0으로 가정합니다.
+
+---
+
+**(2) 직접 가열식 축열조(가스)**
+
+직접 가열식 축열조(가스)의 생산손실:  
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( Q_{w,g} = Q_{w,g,100\%} \cdot d_{Nutz,mth} \quad [\text{kWh}] \) {{ auto_eq_number }}
+</a>
+
+where  
+\(Q_{w,g,100%}\): 최대부하(정격성능)에서의 열손실  
+\(d_{Nuts,mth}\): 월별 이용일수  
+
+> 가스에 의해 직접 가열되는 축열조의 경우 고려되는 생산손실은 난방보일러의 경우와 동일합니다.  
+> 다만 대기모드에서의 열손실 \(Q_{B}\)(또는 \(Q_{B,w}\))은 가스 가열식 급탕용 축열조의 저장 열손실 \(Q_{w,s}\)에서 이미 고려한 바 있습니다.
+
+최대부하(정격성능)에서의 열손실 \(Q_{w,g,100%}\)은 다음에 의해 계산됩니다:  
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( Q_{w,g,100\%} = \left( \frac{f_{H3/H} \cdot \eta_{100\%}}{\eta_{100\%}} \right) \cdot Q_{w,outg} / d_{Nutz,mth} \quad [\mathrm{kWh}] \) {{ auto_eq_number }}
+</a>
+
+where  
+\(f_{Hs/Hi}\): 연료원에 따른 고위발열/저위발열의 비  
+\(η_{100%}\): 찾는중 (maybe 정격성능효율, 82%)  
+\(Q_{w,outg}\): 급탕시스템 열 생산기기의 열 공급량  
+\(d_{Nutz,mth}\): 월별 이용일수
+
+---
+
+**(3) 지역난방**
+
+지역난방의 생산손실:  
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( Q_{w,g} = H_{DS} \cdot (v_{DS} - v_i) \) {{ auto_eq_number }}
+</a>
+
+where  
+\(H_{DS}\): 찾는중  
+\(v_{DS}\): 찾는중  
+\(v_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)
+
+한편 \(H_{DS}\)는:  
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( H_{DS} = B_{DS} \cdot \dot{V}_{DS}^{1/3} \) {{ auto_eq_number }}
+</a>
+
+where  
+\(B_{DS}\): 찾는중  
+\(Φ_{DS}\): 지역난방기계실 성능
+
+\(B_{DS}\)의 값은 다음 표를 참조합니다.  
+(표 추가 요청, 보고서 267p 표 3.2.9-13)
+
+\(v_{DS}\)는 다음을 따라 계산됩니다:  
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( \nu_{DS} = D_{DS} \cdot \nu_{prim,DS} + (1 - D_{DS}) \cdot \nu_{sek,DS} \) {{ auto_eq_number }}
+</a>
+
+where  
+\(D_{DS}\)  
+\(v_{prim,DS}\)  
+\(v_{sek,DS}\)
+
+- \(v_{prim,DS}\)는 지역난방 1차 온도를 의미합니다. (보고서에는 명시되어 있지 않음)  
+- \(v_{sek,DS}\)는 지역난방 2차 온도로 40℃ 또는 50℃ 값을 활용합니다.
+
+\(D_{DS}\)의 값은 \(v_{prim,DS}\)에 따라 다음 표를 참조합니다.  
+(표 추가 요청, 보고서 266p 표 3.2.9-12)
+
+---
+
+## 2.3.3. 재생열에너지(태양열 및 주변 열)
+
+급탕 에너지소요량 식:  
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( Q_{w,f} = Q_{w,outg} + Q_{w,g} - Q_{w,reg} \) {{ auto_eq_number }}
+</a>
+
+에서, 
+태양열 및 주변 열 등의 재생열에너지 \(Q_{w,reg}\)는 다음과 같이 계산됩니다:
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( Q_{w,reg} = Q_{w,sol} + Q_{w,in} \) {{ auto_eq_number }}
+</a>
+
+where  
+\(Q_{w,sol}\): 급탕에 공급된 태양열시스템 공급 열량  
+\(Q_{w,in}\): 찾는중  
+
+> 급탕에 공급된 태양열시스템 공급 열량은 3.1. 태양열에서 다룹니다.
