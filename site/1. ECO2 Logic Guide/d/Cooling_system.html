@@ -9,9 +9,9 @@
 <link href="Hot_water_system.html" rel="prev"/>
 <link href="Lighting_system.html" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.15" name="generator"/>
 <title>2.3. 급탕 에너지소요량 - ECO2 Guide Center</title>
-<link href="../../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
@@ -775,18 +775,18 @@
 </div>
 <h1 id="23">2.3. 급탕 에너지요구량<a class="headerlink" href="#23" title="Permanent link">¶</a></h1>
 <p>급탕 에너지요소요량 <span class="arithmatex">\(Q_{w,f}\)</span>는 급탕 열 생산기기의 열 공급량(<span class="arithmatex">\(Q_{w,outg}\)</span>), 생산과정에서 발생하는 (월별) 열손실(<span class="arithmatex">\(Q_{w,g}\)</span>) 및 재생열에너지(태양열 및 주변 열)에 의해 다음과 같이 계산됩니다:</p>
-<div class="arithmatex">\[
-Q_{w,f} = Q_{w,outg} - Q_{w,g} - Q_{w,reg} \tag{3.2.9-5}
-\]</div>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{w,f} = Q_{w,outg} + Q_{w,g} - Q_{w,reg} \)</span> {{ auto_eq_number }}
+</a></p>
 <p>where,<br/>
 <span class="arithmatex">\(Q_{w,outg}\)</span>: 급탕 열 생산기기의 열 공급량<br/>
 <span class="arithmatex">\(Q_{w,g}\)</span>: 생산과정에서 발생하는 (월별) 열손실<br/>
 <span class="arithmatex">\(Q_{w,reg}\)</span>: 재생열에너지(태양열 및 주변 열)  </p>
 <hr/>
 <h2 id="231">2.3.1. 급탕 열 생산기기의 열 공급량<a class="headerlink" href="#231" title="Permanent link">¶</a></h2>
-<div class="arithmatex">\[
-Q_{w,outg} = Q_{w,b} + Q_{w,ce} + Q_{w,d} + Q_{w,s} \tag{3.2.9-4}
-\]</div>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{w,outg} = Q_{w,b} + Q_{w,ce} + Q_{w,d} + Q_{w,s} \)</span> {{ auto_eq_number }}
+</a></p>
 <p>where<br/>
 <span class="arithmatex">\(Q_{w,b}\)</span>: 급탕에너지요구량<br/>
 <span class="arithmatex">\(Q_{w,ce}\)</span>: 전달 열손실<br/>
@@ -798,15 +798,15 @@ Q_{w,outg} = Q_{w,b} + Q_{w,ce} + Q_{w,d} + Q_{w,s} \tag{3.2.9-4}
 <hr/>
 <h3 id="2312">2.3.1.2 분배 열손실<a class="headerlink" href="#2312" title="Permanent link">¶</a></h3>
 <p>급탕배관망을 따라 분배되는 중앙 공급식 급탕의 경우, 전체 배관망의 열손실은 다음과 같이 계산됩니다:</p>
-<div class="arithmatex">\[
-Q_{w,d} = \sum_i Q_{w,d,i} \tag{3.2.9-12}
-\]</div>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{w,d} = \sum Q_{w.d.i} \)</span> {{ auto_eq_number }}
+</a></p>
 <p>where<br/>
 <span class="arithmatex">\(Q_{w,d,i}\)</span>: 급탕배관망 구간 i의 열손실  </p>
 <p>한편 구간 i의 열손실 <span class="arithmatex">\(Q_{w,d,i}\)</span>:</p>
-<div class="arithmatex">\[
-Q_{w,d,i} = 1/1000 \cdot U_i \cdot L_i \cdot (v_{w,m} - v_i) \cdot d_{Nutz,mth} \cdot t_{Nutz,T} \tag{3.2.9-11}
-\]</div>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{w,d,i} = \frac{1}{1000} \cdot U_i \cdot L_i \cdot (v_{w,m} - v_i) \cdot d_{Nutz,mth} \cdot t_{Nutz,T} \)</span> {{ auto_eq_number }}
+</a></p>
 <p>where<br/>
 <span class="arithmatex">\(U_{i}\)</span>: 구간 i 배관 열관류율<br/>
 <span class="arithmatex">\(L_{i}\)</span>: 구간 i 배관 길이<br/>
@@ -994,26 +994,28 @@ v_{w,m} = 23 \cdot U^{-0.2} \tag*{}
 (4) 가스 가열식<br/>
 에 따라 다음의 4가지 방식으로 계산됩니다:</br></br></p>
 <p><strong>(1) 간접 가열식</strong></p>
-<div class="arithmatex">\[
-Q_{w,s} = U \cdot A \cdot (v_{w} - v_{amb}) \cdot d_{Nutz,mth} \cdot 24 \tag{3.2.9-16}
-\]</div>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{w,s} = f_{\text{verbindung}} \cdot \frac{(50 - v_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \)</span> {{ auto_eq_number }}
+</a></p>
 <p><strong>(2) 간접 가열식, 태양열 복합</strong></p>
-<div class="arithmatex">\[
-Q_{w,s} = Q_{sol} + Q_{indirect} - Q_{loss} \tag{3.2.9-25}
-\]</div>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{w,s} = f_{\text{verbindung}} \cdot (UA)_{sb,s,a} \cdot \Delta v_i \cdot 24 \cdot 3600 \cdot d_{Nutz,mth} \cdot \frac{V_{s,aux}}{V_{s,aux} + V_{s,sol}} \)</span> {{ auto_eq_number }}
+</a></p>
 <p><strong>(3) 전기 가열식</strong></p>
-<div class="arithmatex">\[
-Q_{w,s} = E_{input} - Q_{loss} \tag{3.2.9-29}
-\]</div>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{w,s} = \frac{(55 - v_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \)</span> {{ auto_eq_number }}
+</a></p>
 <p><strong>(4) 가스 가열식</strong></p>
-<div class="arithmatex">\[
-Q_{w,s} = \eta_{g} \cdot Q_{input} - Q_{loss} \tag{3.2.9-37}
-\]</div>
+<p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{w,s} = \frac{(55 - v_i)}{50} \cdot d_{Nutz,mth} \cdot q_{B,S} \)</span> {{ auto_eq_number }}
+</a></p>
 <hr/>
 <h3 id="1">(1) 간접 가열식<a class="headerlink" href="#1" title="Permanent link">¶</a></h3>
 <p>간접 가열식 축열조의 저장 열손실:<br/>
-(식 추가 요청, 보고서 254p 식 3.2.9-16)<br/>
-where<br/>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{w,s} = f_{\text{verbindung}} \cdot \frac{(50 - v_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \)</span> {{ auto_eq_number }}
+</a></p>
+<p>where<br/>
 <span class="arithmatex">\(f_{verbindung}\)</span>: 연결배관에서 발생하는 열손실 계수, 1.2<br/>
 <span class="arithmatex">\(v_{i}\)</span>: 주변온도 (보고서에서는 복수의 의미로 사용)<br/>
 <span class="arithmatex">\(d_{Nutz,mth}\)</span>: 월간 이용일수<br/>
@@ -1031,49 +1033,70 @@ where<br/>
 <tr>
 <td>1995-</td>
 <td>1,000ℓ 이상</td>
-<td>식 추가 요청, 보고서 255p 식 3.2.9-19</td>
+<td><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( q_{B,S} = 0.39 \cdot V^{0.35} + 0.5 \) {{ auto_eq_number }}
+</a>
+</td>
 </tr>
 <tr>
 <td></td>
 <td>1,000ℓ 이하</td>
-<td>식 추가 요청, 보고서 255p 식 3.2.9-18</td>
+<td><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( q_{B,S} = 0.8 + 0.02 \cdot V^{0.77} \) {{ auto_eq_number }}
+</a>
+</td>
 </tr>
 <tr>
 <td>1987-1994</td>
 <td></td>
-<td>식 추가 요청, 보고서 255p 식 3.2.9-22</td>
+<td><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( q_{B,S} = 0.4 + 0.21 \cdot V^{0.4} \) {{ auto_eq_number }}
+</a>
+</td>
 </tr>
 <tr>
 <td>1978-1986</td>
 <td></td>
-<td>식 추가 요청, 보고서 255p 식 3.2.9-21</td>
+<td><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( q_{B,S} = 0.4 + 0.23 \cdot V^{0.4} \) {{ auto_eq_number }}
+</a>
+</td>
 </tr>
 <tr>
 <td>-1977</td>
 <td></td>
-<td>식 추가 요청, 보고서 255p 식 3.2.9-20</td>
+<td><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( q_{B,S} = 0.4 + 0.27 \cdot V^{0.5} \) {{ auto_eq_number }}
+</a>
+</td>
 </tr>
 </tbody>
 </table>
 <p><strong>where V: 축열조 용량</strong></p>
 <p>축열조 용량은 제품사양서에 주어지지만, 용량을 모르는 경우 다음 식에 따라 계산합니다:<br/>
-(식 추가 요청, 보고서 255p 식 3.2.9-23)<br/>
-where<br/>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( V_s = \frac{Q_{w,b,d} \cdot f_N \cdot 860}{(v_{w,m} - v_k) \cdot \eta_s} \)</span> {{ auto_eq_number }}
+</a></p>
+<p>where<br/>
 <span class="arithmatex">\(Q_{w,b,d}\)</span>: 일간 급탕에너지요구량<br/>
 <span class="arithmatex">\(f_{N}\)</span>: 보고서에 명시되지 않음<br/>
 <span class="arithmatex">\(v_{w,m}\)</span>: 급탕 배관망 온도 (보고서에서는 복수의 의미로 사용)<br/>
 <span class="arithmatex">\(v_{K}\)</span>: 보고서에 정확히 명시되지 않음 (<span class="arithmatex">\(v_{K}\)</span>: 냉수 공급온도)<br/>
 <span class="arithmatex">\(n_{S}\)</span>: 축열조 효율 (입식=0.95, 좌식=0.9)  </p>
 <p>한편 <span class="arithmatex">\(f_{N}\)</span>은 다음과 같이 계산합니다:<br/>
-(식 추가 요청, 보고서 255p 식 3.2.9-24)<br/>
-where<br/>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( f_N = \frac{1}{t_{Nutz,T} \cdot n_{Sp}} \)</span> {{ auto_eq_number }}
+</a></p>
+<p>where<br/>
 <span class="arithmatex">\(t_{Nutz,T}\)</span>: 일일 이용시간<br/>
 <span class="arithmatex">\(n_{Sp}\)</span>: 일일 순간최대취수량 발생횟수</p>
 <hr/>
 <h3 id="2">(2) 간접 가열식, 태양열 복합<a class="headerlink" href="#2" title="Permanent link">¶</a></h3>
 <p>간접 가열식, 태양열 복합 축열조의 저장 열손실:<br/>
-(식 추가 요청, 보고서 256p 식 3.2.9-25)<br/>
-where<br/>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{w,s} = f_{\text{verbindung}} \cdot (UA)_{sb,s,a} \cdot \Delta v_i \cdot 24 \cdot 3600 \cdot d_{Nutz,mth} \cdot \frac{V_{s,aux}}{V_{s,aux} + V_{s,sol}} \)</span> {{ auto_eq_number }}
+</a></p>
+<p>where<br/>
 <span class="arithmatex">\(f_{verbindung}\)</span>: 연결배관에서 발생하는 열손실 계수, 1.2<br/>
 <span class="arithmatex">\({UA}_{sb,s,a}\)</span>: 측정된 책정-열손실 [W/K]<br/>
 <span class="arithmatex">\(Δv_{i}\)</span>: 보고서에 명시되어 있지 않으나 온도차로 추정됨<br/>
@@ -1082,15 +1105,19 @@ where<br/>
 <span class="arithmatex">\(V_{s,scl}\)</span>: 축열조 하부(태양열 저장부분)의 용량 [ℓ]</p>
 <p>만일 축열조 책정-열손실 <span class="arithmatex">\({UA}_{sb,s,a}\)</span>를 모르는 경우 축열조 용량에 따라 다음과 같이 계산합니다:</p>
 <p><strong>1) 축열조 용량 ≤ 1,000ℓ:</strong><br/>
-  (식 추가 요청, 보고서 256p 식 3.2.9-26)  </p>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( q_{B,S} = \left( 0.4 + 0.2 \cdot (V_{s,aux} + V_{s,sol})^{0.4} \right) \cdot \frac{V_{s,aux}}{V_{s,aux} + V_{s,sol}} \)</span> {{ auto_eq_number }}
+</a></p>
 <p><strong>2) 축열조 용량 &gt; 1,000ℓ:</strong><br/>
   1,000ℓ를 초과하는 축열조는 여러 대의 분리된 축열조로 가정하여 계산합니다.<br/>
   (각 축열조당 최대 1,000ℓ 적용)</p>
 <hr/>
 <h3 id="3">(3) 전기 가열식<a class="headerlink" href="#3" title="Permanent link">¶</a></h3>
 <p>전기 가열식 축열조의 저장 열손실:<br/>
-(식 추가 요청, 보고서 256p 식 3.2.9-29)<br/>
-where<br/>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{w,s} = \frac{(55 - v_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \)</span> {{ auto_eq_number }}
+</a></p>
+<p>where<br/>
 <span class="arithmatex">\(v_{i}\)</span>: 주변온도 (보고서에서는 복수의 의미로 사용)<br/>
 <span class="arithmatex">\(d_{Nutz,mth}\)</span>: 월간 이용일수<br/>
 <span class="arithmatex">\(q_{B,S}\)</span>: 책정-열손실  </p>
@@ -1105,15 +1132,24 @@ where<br/>
 <tbody>
 <tr>
 <td>1995-</td>
-<td>식 추가 요청, 보고서 257p 식 3.2.9-30</td>
+<td><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( q_{B,S} = 0.29 + 0.019 \cdot V^{0.8} \) {{ auto_eq_number }}
+</a>
+</td>
 </tr>
 <tr>
 <td>1989-1994</td>
-<td>식 추가 요청, 보고서 257p 식 3.2.9-32</td>
+<td><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( q_{B,S} = 1.25 \cdot (0.29 + 0.019 \cdot V^{0.8}) \) {{ auto_eq_number }}
+</a>
+</td>
 </tr>
 <tr>
 <td>-1988</td>
-<td>식 추가 요청, 보고서 257p 식 3.2.9-31</td>
+<td><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( q_{B,S} = 1.4 \cdot (0.29 + 0.019 \cdot V^{0.8}) \) {{ auto_eq_number }}
+</a>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1132,12 +1168,18 @@ where<br/>
 <tr>
 <td>심야</td>
 <td>주로 심야에 가동</td>
-<td>식 추가 요청, 보고서 257p 식 3.2.9-33</td>
+<td><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( V_s = \frac{1.42 \cdot Q_{w,b,d} \cdot f_N \cdot 860}{(v_{w,m} - v_k) \cdot \eta_s} \) {{ auto_eq_number }}
+</a>
+</td>
 </tr>
 <tr>
 <td>주간</td>
 <td>지속적 재충전 가능</td>
-<td>식 추가 요청, 보고서 257p 식 3.2.9-34</td>
+<td><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( V_s = \frac{0.67 \cdot Q_{w,b,d} \cdot f_N \cdot 860}{(v_{w,m} - v_k) \cdot \eta_s} \) {{ auto_eq_number }}
+</a>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1148,8 +1190,10 @@ where<br/>
 <span class="arithmatex">\(v_{K}\)</span>: 보고서에 정확히 명시되지 않음 (<span class="arithmatex">\(v_{K}\)</span>: 냉수 공급온도)<br/>
 <span class="arithmatex">\(n_{S}\)</span>: 축열조 효율 (입식=0.95, 좌식=0.9)  </p>
 <p>한편 <span class="arithmatex">\(f_{N}\)</span>은 다음과 같이 계산합니다:<br/>
-(식 추가 요청, 보고서 255p 식 3.2.9-24)<br/>
-where<br/>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( f_N = \frac{1}{t_{Nutz,T} \cdot n_{Sp}} \)</span> {{ auto_eq_number }}
+</a></p>
+<p>where<br/>
 <span class="arithmatex">\(t_{Nutz,T}\)</span>: 일일 이용시간<br/>
 <span class="arithmatex">\(n_{Sp}\)</span>: 일일 순간최대취수량 발생횟수</p>
 <h4 id="2-1000l">2) 축열조 용량 &gt; 1,000ℓ<a class="headerlink" href="#2-1000l" title="Permanent link">¶</a></h4>
@@ -1158,8 +1202,10 @@ where<br/>
 <hr/>
 <h3 id="4">(4) 가스 가열식<a class="headerlink" href="#4" title="Permanent link">¶</a></h3>
 <p>가스 가열식 축열조의 저장 열손실:<br/>
-(식 추가 요청, 보고서 258p 식 3.2.9-37)<br/>
-where<br/>
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+<span class="arithmatex">\( Q_{w,s} = \frac{(55 - v_i)}{50} \cdot d_{Nutz,mth} \cdot q_{B,S} \)</span> {{ auto_eq_number }}
+</a></p>
+<p>where<br/>
 <span class="arithmatex">\(v_{i}\)</span>: 주변온도 (보고서에서는 복수의 의미로 사용)<br/>
 <span class="arithmatex">\(d_{Nutz,mth}\)</span>: 월간 이용일수<br/>
 <span class="arithmatex">\(q_{B,S}\)</span>: 책정-열손실  </p>
@@ -1174,15 +1220,24 @@ where<br/>
 <tbody>
 <tr>
 <td>1995-</td>
-<td>식 추가 요청, 보고서 258p 식 3.2.9-38</td>
+<td><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( q_{B,S} = 2.0 + 0.033 \cdot V^{1.1} \) {{ auto_eq_number }}
+</a>
+</td>
 </tr>
 <tr>
 <td>1985-1994</td>
-<td>식 추가 요청, 보고서 258p 식 3.2.9-40</td>
+<td><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( q_{B,S} = 2.0 + 0.033 \cdot V^{1.1} \) {{ auto_eq_number }}
+</a>
+</td>
 </tr>
 <tr>
 <td>-1984</td>
-<td>식 추가 요청, 보고서 258p 식 3.2.9-39</td>
+<td><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
+  \( q_{B,S} = 1.4 \cdot (2.0 + 0.033 \cdot V^{1.1}) \) {{ auto_eq_number }}
+</a>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1223,12 +1278,12 @@ where<br/>
 <span class="arithmatex">\( Q_{w,g} = Q_{w,g,100\%} \cdot d_{Nutz,mth} + Q_{B,w} \cdot \left( d_{Nutz,mth} - d_{h,r,B} \right) \)</span> {{ auto_eq_number }}
 </a></p>
 <p>where<br/>
-<span class="arithmatex">\(Q_{w,g,100%}\)</span>: 최대부하(정격성능)에서의 열손실<br/>
+<span class="arithmatex">\( Q_{w,g,100\%} \)</span>: 최대부하(정격성능)에서의 열손실<br/>
 <span class="arithmatex">\(d_{Nuts,mth}\)</span>: 월별 이용일수<br/>
 <span class="arithmatex">\(Q_{B,w}\)</span>: 대기모드(machine down-time)에서의 열손실 Q_B (Q_B,w와 정확히 매칭되는 설명은 부재)<br/>
 <span class="arithmatex">\(d_{h,r,B}\)</span>: 분석-운전일수 (난방 에너지소요량의 월별 계산 운전일 참조)  </p>
 <hr/>
-<p><span class="arithmatex">\(Q_{w,g,100%}\)</span>는 다음과 같이 계산됩니다:<br/>
+<p><span class="arithmatex">\( Q_{w,g,100\%} \)</span>는 다음과 같이 계산됩니다:<br/>
 <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
 <span class="arithmatex">\( Q_{w,g,100\%} = \left( f_{H_s/H} - \eta_{k,100\%} \right) / \eta_{k,100\%} \cdot Q_{w,outg} / d_{Nutz,mth} \)</span> {{ auto_eq_number }}
 </a></p>
@@ -1237,7 +1292,7 @@ where<br/>
 <span class="arithmatex">\(\eta_{k,100\%}\)</span>: 찾는중 (maybe 정격성능효율)<br/>
 <span class="arithmatex">\(Q_{w,outg}\)</span>: 급탕시스템 열 생산기기의 열 공급량<br/>
 <span class="arithmatex">\(d_{Nutz,mth}\)</span>: 월별 이용일수  </p>
-<p>정격성능 효율 <span class="arithmatex">\(η_{k,100%}\)</span>은 테스트 온도 70℃에서의 보일러의 정격성능과 관련된 효율로, 다음 식을 따라 계산합니다.<br/>
+<p>정격성능 효율 <span class="arithmatex">\( \eta_{k,100\%} \)</span>은 테스트 온도 70℃에서의 보일러의 정격성능과 관련된 효율로, 다음 식을 따라 계산합니다.<br/>
 <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
 <span class="arithmatex">\( \eta_{k,100\%} = (A + B \cdot \log(\dot{Q}_N)) / 100 \)</span> {{ auto_eq_number }}
 </a></p>
@@ -1399,9 +1454,9 @@ document$.subscribe(() => { lightbox.reload() });
 <p>where<br/>
 <span class="arithmatex">\(q_{B,v}\)</span><br/>
 <span class="arithmatex">\(\dot{Q}_N\)</span>: 정격성능<br/>
-<span class="arithmatex">\(η_{k,100%}\)</span>: 찾는중 (maybe 정격성능효율)<br/>
+<span class="arithmatex">\( \eta_{k,100\%} \)</span>: 찾는중 (maybe 정격성능효율)<br/>
 <span class="arithmatex">\(t_{Nutz,T}\)</span>: 일일 이용시간<br/>
-<span class="arithmatex">\(t_{w,100%}\)</span>: 정격성능에서의 급탕용 보일러의 일일 가동시간<br/>
+<span class="arithmatex">\( t_{w,100\%} \)</span>: 정격성능에서의 급탕용 보일러의 일일 가동시간<br/>
 <span class="arithmatex">\(f_{Hs/Hi}\)</span>: 연료원에 따른 고위발열/저위발열의 비  </p>
 <p><span class="arithmatex">\(q_{B,v}\)</span>는 다음과 같이 계산됩니다:<br/>
 <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
@@ -1412,7 +1467,7 @@ document$.subscribe(() => { lightbox.reload() });
 <span class="arithmatex">\(v_{g,m}\)</span>: 대기모드 상태에서의 평균 보일러 온도(순환: 50℃, 비순환: 40℃)<br/>
 <span class="arithmatex">\(v_{i}\)</span>: 주변온도 (보고서에서는 복수의 의미로 사용)</p>
 <hr/>
-<p>정격성능 <span class="arithmatex">\(\dot{Q}_N\)</span>에서의 급탕용 보일러의 일일 가동시간 <span class="arithmatex">\(t_{w,100%}\)</span>는 다음 계산식을 따릅니다:<br/>
+<p>정격성능 <span class="arithmatex">\(\dot{Q}_N\)</span>에서의 급탕용 보일러의 일일 가동시간 \( t_{w,100\%} )는 다음 계산식을 따릅니다:<br/>
 <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
 <span class="arithmatex">\( t_{w,100\%} = Q_{w,outg} / (\dot{Q}_N \cdot d_{Nutz,mth}) \)</span> {{ auto_eq_number }}
 </a></p>
@@ -1425,7 +1480,7 @@ document$.subscribe(() => { lightbox.reload() });
 <span class="arithmatex">\( q_{B,70} = (E \cdot (Q_N)^F)/100 \)</span> {{ auto_eq_number }}
 </a></p>
 <p>where<br/>
-<span class="arithmatex">\(\dot{Q}_N\)</span> (식에는 닷이 없지만 원래 있어야 하는듯!): 정격성능<br/>
+<span class="arithmatex">\(\dot{Q}_N\)</span>: 정격성능<br/>
 E, F: 책정열손실 계수  </p>
 <p>책정열손실 계수 E, F는 다음 표와 같습니다.  </p>
 <!DOCTYPE html>
@@ -1509,8 +1564,8 @@ E, F: 책정열손실 계수  </p>
 <tr>
 <td rowspan="2">연료분사식 보일러 (기름/가스)</td>
 <td>1994 이전</td><td>7.0</td><td>−0.37</td>
-<td>1994 이후</td><td>4.25</td><td>−0.4</td>
 <tr>
+<tr><td>1994 이후</td><td>4.25</td><td>−0.4</td><tr>
 <tr>
 <td rowspan="2">콘덴싱 보일러 (기름/가스)</td>
 <td>1994 이전</td><td>7.0</td><td>−0.37</td>
@@ -1524,7 +1579,7 @@ E, F: 책정열손실 계수  </p>
 <td rowspan="1">콤비보일러 (11kW, 18kW 및 24kW)</td>
 <td>1994 이후</td><td colspan="2">\( q_{B,70^\circ C} = 0.012 \)</td>
 </tr>
-</tr></tr></tr></tr></tr></tr></table>
+</tr></tr></tr></tr></tr></tr></tr></tr></table>
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(() => { lightbox.reload() });
 </script></body>
@@ -1539,19 +1594,19 @@ document$.subscribe(() => { lightbox.reload() });
 <span class="arithmatex">\( Q_{w,g} = Q_{w,g,100\%} \cdot d_{Nutz,mth} \quad [\text{kWh}] \)</span> {{ auto_eq_number }}
 </a></p>
 <p>where<br/>
-<span class="arithmatex">\(Q_{w,g,100%}\)</span>: 최대부하(정격성능)에서의 열손실<br/>
+<span class="arithmatex">\( Q_{w,g,100\%} \)</span>: 최대부하(정격성능)에서의 열손실<br/>
 <span class="arithmatex">\(d_{Nuts,mth}\)</span>: 월별 이용일수  </p>
 <blockquote>
 <p>가스에 의해 직접 가열되는 축열조의 경우 고려되는 생산손실은 난방보일러의 경우와 동일합니다.<br/>
 다만 대기모드에서의 열손실 <span class="arithmatex">\(Q_{B}\)</span>(또는 <span class="arithmatex">\(Q_{B,w}\)</span>)은 가스 가열식 급탕용 축열조의 저장 열손실 <span class="arithmatex">\(Q_{w,s}\)</span>에서 이미 고려한 바 있습니다.</p>
 </blockquote>
-<p>최대부하(정격성능)에서의 열손실 <span class="arithmatex">\(Q_{w,g,100%}\)</span>은 다음에 의해 계산됩니다:<br/>
+<p>최대부하(정격성능)에서의 열손실 <span class="arithmatex">\( Q_{w,g,100\%} \)</span>은 다음에 의해 계산됩니다:<br/>
 <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
 <span class="arithmatex">\( Q_{w,g,100\%} = \left( \frac{f_{H3/H} \cdot \eta_{100\%}}{\eta_{100\%}} \right) \cdot Q_{w,outg} / d_{Nutz,mth} \quad [\mathrm{kWh}] \)</span> {{ auto_eq_number }}
 </a></p>
 <p>where<br/>
 <span class="arithmatex">\(f_{Hs/Hi}\)</span>: 연료원에 따른 고위발열/저위발열의 비<br/>
-<span class="arithmatex">\(η_{100%}\)</span>: 찾는중 (maybe 정격성능효율, 82%)<br/>
+<span class="arithmatex">\( \eta_{100\%} \)</span>: 찾는중 (maybe 정격성능효율, 82%)<br/>
 <span class="arithmatex">\(Q_{w,outg}\)</span>: 급탕시스템 열 생산기기의 열 공급량<br/>
 <span class="arithmatex">\(d_{Nutz,mth}\)</span>: 월별 이용일수</p>
 <hr/>
@@ -1571,36 +1626,133 @@ document$.subscribe(() => { lightbox.reload() });
 <p>where<br/>
 <span class="arithmatex">\(B_{DS}\)</span>: 찾는중<br/>
 <span class="arithmatex">\(Φ_{DS}\)</span>: 지역난방기계실 성능</p>
-<p><span class="arithmatex">\(B_{DS}\)</span>의 값은 다음 표를 참조합니다.<br/>
-(표 추가 요청, 보고서 267p 표 3.2.9-13)</p>
-<p><span class="arithmatex">\(v_{DS}\)</span>는 다음을 따라 계산됩니다:<br/>
+<p><span class="arithmatex">\(B_{DS}\)</span>의 값은 다음 표를 참조합니다.  </p>
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<title>지역난방기계실 단열등급 표</title>
+<style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      font-family: "Malgun Gothic", sans-serif;
+      font-size: 14px;
+      text-align: center;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 6px 10px;
+      vertical-align: middle;
+    }
+    td.left {
+      text-align: left;
+    }
+  </style>
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body>
+<table>
+<tr>
+<th rowspan="3">지역난방<br/>기계실</th>
+<th>구분</th>
+<th colspan="1">지역난방기계실 단열등급</th>
+</tr>
+<tr>
+<td>2차에서의 단열<br/>1차에서의 단열</td>
+<td> 4    3    2    1<br/> 5    4    3    2</td>
+</tr>
+<tr>
+<td>온수, 저온<br/>온수, 저온</td>
+<td>3.5  4.0  4.4  4.9<br/>3.1  3.5  3.9  4.3</td>
+</tr>
+</table>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
+<p><span class="arithmatex">\(v_{DS}\)</span>는 다음을 따라 계산됩니다:<br>
 <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
 <span class="arithmatex">\( \nu_{DS} = D_{DS} \cdot \nu_{prim,DS} + (1 - D_{DS}) \cdot \nu_{sek,DS} \)</span> {{ auto_eq_number }}
-</a></p>
-<p>where<br/>
-<span class="arithmatex">\(D_{DS}\)</span><br/>
-<span class="arithmatex">\(v_{prim,DS}\)</span><br/>
-<span class="arithmatex">\(v_{sek,DS}\)</span></p>
+</a></br></p>
+<p>where<br>
+<span class="arithmatex">\(D_{DS}\)</span><br>
+<span class="arithmatex">\(v_{prim,DS}\)</span><br>
+<span class="arithmatex">\(v_{sek,DS}\)</span></br></br></br></p>
 <ul>
 <li><span class="arithmatex">\(v_{prim,DS}\)</span>는 지역난방 1차 온도를 의미합니다. (보고서에는 명시되어 있지 않음)  </li>
 <li><span class="arithmatex">\(v_{sek,DS}\)</span>는 지역난방 2차 온도로 40℃ 또는 50℃ 값을 활용합니다.</li>
 </ul>
-<p><span class="arithmatex">\(D_{DS}\)</span>의 값은 <span class="arithmatex">\(v_{prim,DS}\)</span>에 따라 다음 표를 참조합니다.<br/>
-(표 추가 요청, 보고서 266p 표 3.2.9-12)</p>
+<p><span class="arithmatex">\(D_{DS}\)</span>의 값은 <span class="arithmatex">\(v_{prim,DS}\)</span>에 따라 다음 표를 참조합니다.  </p>
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<title>지역난방기계실 해석 온도</title>
+<style>
+    table {
+      border-collapse: collapse;
+      width: 70%;
+      font-family: "Malgun Gothic", sans-serif;
+      font-size: 14px;
+      text-align: center;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 6px 10px;
+    }
+  </style>
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body>
+<table>
+<tr>
+<th rowspan="1">지역난방기계실 종류</th>
+<th colspan="1">1차 온도 (해석)<br/><i>v<sub>P,DS</sub> (℃)</i></th>
+<th rowspan="1"><i>D<sub>DS</sub></i></th>
+</tr>
+<tr>
+<td>중온수<br/>고온수</td>
+<td>105<br/>150</td>
+<td>0.6<br/>0.4</td>
+</tr>
+</table>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
 <hr/>
 <h2 id="233">2.3.3. 재생열에너지(태양열 및 주변 열)<a class="headerlink" href="#233" title="Permanent link">¶</a></h2>
-<p>급탕 에너지소요량 식:<br/>
+<p>급탕 에너지소요량 식:<br>
 <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
 <span class="arithmatex">\( Q_{w,f} = Q_{w,outg} + Q_{w,g} - Q_{w,reg} \)</span> {{ auto_eq_number }}
-</a></p>
+</a></br></p>
 <p>에서, 
 태양열 및 주변 열 등의 재생열에너지 <span class="arithmatex">\(Q_{w,reg}\)</span>는 다음과 같이 계산됩니다:
 <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
 <span class="arithmatex">\( Q_{w,reg} = Q_{w,sol} + Q_{w,in} \)</span> {{ auto_eq_number }}
 </a></p>
-<p>where<br/>
-<span class="arithmatex">\(Q_{w,sol}\)</span>: 급탕에 공급된 태양열시스템 공급 열량<br/>
-<span class="arithmatex">\(Q_{w,in}\)</span>: 찾는중  </p>
+<p>where<br>
+<span class="arithmatex">\(Q_{w,sol}\)</span>: 급탕에 공급된 태양열시스템 공급 열량<br>
+<span class="arithmatex">\(Q_{w,in}\)</span>: 찾는중  </br></br></p>
 <blockquote>
 <p>급탕에 공급된 태양열시스템 공급 열량은 3.1. 태양열에서 다룹니다.</p>
 </blockquote>
@@ -1609,7 +1761,7 @@ document$.subscribe(() => { lightbox.reload() });
 <span class="md-icon" title="마지막 업데이트">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 7월 9일 01:09:29 UTC">2025년 7월 9일</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 7월 9일 11:38:02 UTC">2025년 7월 9일</span>
 </span>
 </aside>
 </article>
@@ -1635,8 +1787,8 @@ document$.subscribe(() => { lightbox.reload() });
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.tabs.sticky", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}}</script>
-<script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.tabs.sticky", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
 <script src="../../assets/polyfill.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
