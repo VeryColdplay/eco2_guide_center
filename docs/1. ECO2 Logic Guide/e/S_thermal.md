@@ -17,7 +17,7 @@
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
   \( Q_{w,sol} = Q_{K,sol} \cdot f_{K,w} \)
 </a>
-, <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
   \( Q_{h,sol} = Q_{K,sol} \cdot (1.0 - f_{K,w}) \)
 </a>
 
@@ -33,7 +33,7 @@
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
   \( \eta_{Ag} = F_R \cdot (\tau \alpha)_{en} - F_R \cdot U_L \left( \frac{t_i - t_a}{I_T} \right)_a \quad : \text{전면적 기준} \)
 </a>
-, <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
   \( \eta_{Aa} = F_R \cdot (\tau \alpha)_{en} - F_R \cdot U_L \left( \frac{t_i - t_a}{I_T} \right) \quad : \text{투과면적 기준} \)
 </a>
 
@@ -43,7 +43,7 @@
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
   \( (\tau \alpha)_e = K_\Theta \cdot (\tau \alpha)_{en} \)
 </a>
-, <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
   \( K_\Theta = 1 - 0.1564 \cdot \left( \frac{1}{\cos \Theta} - 1 \right) \)
 </a>
 
@@ -76,11 +76,15 @@
   \( Q_{K,sol} = f_M \cdot Q_{K,sol,a} \)
 </a>**
 
-- 표 3.2.12-2
+<center>
+     <img src="../../_tables/3.2.12_2.png" style="max-width: 80%;" alt="연간 수득량의 월 분배비율">
+     <div><strong>연간 수득량의 월 분배비율</strong></div>
+</center>
+
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
   \( Q_{K,sol,a} = Q_{sys} \cdot f_{NA} \cdot f_{s/r} \cdot f_s \cdot f_{s,loss} \cdot f_{h,T} \)
 </a>
-S
+
 
 - 집열장치의 연간 시스템-에너지 수득량 (\(Q_{sys}\)) 산정  
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
@@ -89,23 +93,35 @@ S
 
 
 - 집열기의 경사각 및 방위각에 대한 수정계수 (\(f_{NA}\))
-표 3.2.12-3
+<center>
+     <img src="../../_tables/3.2.12_3.png" style="max-width: 80%;" alt="집열면 기울기 및 방향에 대한 수정계수">
+</center>
 
 - 집열시스템의 부하율에 대한 수정계수 (\(f_{s/r}\))
-표 3.2.12-4
+<center>
+     <img src="../../_tables/3.2.12_4.png" style="max-width: 80%;" alt="태양열집열시스템의 부하율에 대한 수정계수">
+</center>
 
 - 저장조의 열손실율에 대한 수정계수 (\(f_{s,loss}\))
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
   \( R_{s,loss} = \frac{(UA)^*_s}{\frac{0.0447 \cdot \sqrt{Q_{w,outg}} + 0.14 \cdot \sqrt{V_{sol,ref}}}{0.10187 \cdot Q_{w,outg} + V_{sol,ref}}} \)
 </a>
-표 3.2.12-5
+
+<center>
+     <img src="../../_tables/3.2.12_5.png" style="max-width: 80%;" alt="저장기의 열손실율에 대한 수정계수">
+</center>
+
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
   \( f_{s,loss} = 1.07 - 0.07 \cdot R_{s,loss} \)
 </a>
 
 
 - 실내난방에서 난방순환온도에 대한 수정계수 (\(f_{h,T}\))
-표 3..2.12-6
+<center>
+     <img src="../../_tables/3.2.12_6.png" style="max-width: 80%;" alt="실내난방에서 난방순환온도에 대한 수정계수">
+</center>
 
 - 급탕에 사용된 태야열 집열시스템의 에너지 비율 (\(f_{K,w}\))
-표 3.2.12-7
+<center>
+     <img src="../../_tables/3.2.12_7.png" style="max-width: 80%;" alt="급탕에 사용된 태양열집열시스템의 에너지 비율">
+</center>
