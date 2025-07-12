@@ -72,9 +72,10 @@
 
 태양열집열시스템의 연간 에너지수득량(\(Q_{K,sol,a}\))은 아래 표의 월 분배비율(\(f_M\))에 따라 아래 계산식에 따라 월별로 분배되어 월별 에너지수득량(\(Q_{K,sol}\))으로 환산됩니다.
 
-- **<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{K,sol} = f_M \cdot Q_{K,sol,a} \)
-</a>**
+<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
+  \( \boldsymbol{Q_{K,sol}} = \boldsymbol{f_M} \cdot \boldsymbol{Q_{K,sol,a}} \)
+</a>
+
 
 <center>
      <img src="../../_tables/3.2.12_2.png" style="max-width: 80%;" alt="연간 수득량의 월 분배비율">
