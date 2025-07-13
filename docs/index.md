@@ -23,8 +23,6 @@ ECO2 가이드센터는 다음에 대한 세부 가이드를 제공합니다:
   <img src="_images/main_3.png" style="max-width: 45%;" alt="main_3.png">
 </center>
 
->> 희야 이 부분도 그림으로 표현이 되면 너무 좋을 듯!
-
 
 ### 인증 방식
 

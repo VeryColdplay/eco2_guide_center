@@ -287,11 +287,8 @@
     <img src="../../_images/heat_gain_fig3.png" alt="Heat Gain" style="max-width: 80%;">
     <div><strong>Heat Gain Figure 3</strong></div>
    </center>
-
+  </div> <!-- ✅ 왼쪽 열 div 닫힘 -->
   <!-- 참고 이미지:  -->
-  </div>
-
-  </div>
 
   <!-- 오른쪽 열 -->
   <div style="

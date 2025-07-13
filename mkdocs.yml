@@ -3,7 +3,7 @@ site_url: https://verycoldplay.github.io/eco2_guide_center
 use_directory_urls: false
 
 nav:
-- Welcome(SY): index.md
+- Welcome: index.md
 - ECO2 Logic Guide:
   - 개요:
     - 계산 절차: 1. ECO2 Logic Guide/a/index.md

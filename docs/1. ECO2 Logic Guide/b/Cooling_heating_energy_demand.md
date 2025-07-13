@@ -226,8 +226,8 @@ graph LR
 <span style="font-size: 0.8em; font-style: italic;">[&nbsp;&nbsp;&nbsp;&nbsp;🔍 건물의 조닝(zoning)에 대한 로직 바로가기](../a/Zoning.md)</span>
 - **월간** 난방 에너지요구량은 **일간** 난방 에너지요구량의 한달치 계산이 됩니다.
 - 연중 월간 열획득 및 이용률 값이 모두 다르므로, 월별 난방 에너지요구량 값은 모두 상이합니다. 
-<span style="font-size: 0.8em; font-style: italic;">[&nbsp;&nbsp;&nbsp;&nbsp;🔍 열획득과 열손실에 대한 로직 바로가기](../a/Heat_gain_loss.md)</span>
-<span style="font-size: 0.8em; font-style: italic;">[&nbsp;&nbsp;&nbsp;&nbsp;🔍 (이용률 등) 개별 값 설정에 대한 로직 바로가기](../a/Value.md)</span>
+<span style="font-size: 0.8em; font-style: italic;">[&nbsp;&nbsp;&nbsp;&nbsp;🔍 열획득과 열손실에 대한 로직 바로가기](../b/Heat_gain_loss.md)</span>
+<span style="font-size: 0.8em; font-style: italic;">[&nbsp;&nbsp;&nbsp;&nbsp;🔍 (이용률 등) 개별 값 설정에 대한 로직 바로가기](../b/Value.md)</span>
 
 
 &nbsp;<br>
