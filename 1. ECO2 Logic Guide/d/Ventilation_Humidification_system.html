@@ -9,9 +9,9 @@
 <link href="Lighting_system.html" rel="prev"/>
 <link href="CHP.html" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.6.15" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
 <title>2.5. 환기/가습 에너지소요량 - ECO2 Guide Center</title>
-<link href="../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
@@ -33,7 +33,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#25">
+<a class="md-skip" href="#25-energy-use-for-ventilation-humidification-system">
           콘텐츠로 이동
         </a>
 </div>
@@ -207,14 +207,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="V_system.html">
-<span class="md-ellipsis">
-    1.3. 공조 에너지소요량
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../b/Value.html">
 <span class="md-ellipsis">
     1.3. 개별 값 설정(YE)
@@ -265,7 +257,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Hot_water_system.html">
+<a class="md-nav__link" href="Cooling_system.html">
 <span class="md-ellipsis">
     2.2. 냉방 에너지소요량
     
@@ -273,7 +265,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Cooling_system.html">
+<a class="md-nav__link" href="Hot_water_system.html">
 <span class="md-ellipsis">
     2.3. 급탕 에너지소요량
     
@@ -427,6 +419,32 @@
 <a class="md-nav__link" href="../e/Wind.html">
 <span class="md-ellipsis">
     3.5. 풍력
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+<span class="md-ellipsis">
+    4. 합산
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_5">
+<span class="md-nav__icon md-icon"></span>
+            4. 합산
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../f/Use.html">
+<span class="md-ellipsis">
+    4.1.에너지소요량
     
   </span>
 </a>
@@ -695,7 +713,7 @@
 <article class="md-content__inner md-typeset">
 <div style="text-align: right; font-size: 0.9em; color: #666; margin-bottom: -1em;">
 </div>
-<h1 id="25">2.5. 환기/가습 에너지소요량<a class="headerlink" href="#25" title="Permanent link">¶</a></h1>
+<h1 id="25-energy-use-for-ventilation-humidification-system">2.5. 환기/가습 에너지소요량 (Energy use for ventilation &amp; humidification system)<a class="headerlink" href="#25-energy-use-for-ventilation-humidification-system" title="Permanent link">¶</a></h1>
 <p>환기/가습 에너지소요량 파트에서는 공조에 필요한 에너지소요량 중 환기(팬)와 가습에 대한 내용만을 포함하고 있습니다. (보고서 8.3.6, 8.4.2, 8.5.2) 보다 구체적으로는 다음의 5가지 항목을 다룹니다:
  (1) 실내냉방 팬
  (2) 열회수기 펌프 및 전동장치
@@ -706,9 +724,9 @@
 <h2 id="251">2.5.1. 실내냉방 팬<a class="headerlink" href="#251" title="Permanent link">¶</a></h2>
 <p>실내냉방 팬에 대한 보조에너지 Q_c,ce,aux는 다음을 따라 계산됩니다:
 <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-<span class="arithmatex">\( Q_{c,ce,aux} = f_{c,ce,aux} \cdot Q_{c,outg} \cdot t_{c,op} / 1000h \)</span> {{ auto_eq_number }}
+<span class="arithmatex">\( Q_{c,ce,aux} = f_{c,ce,aux} \cdot Q_{c,outg} \cdot t_{c,op} / 1000h \)</span>
 </a></p>
-<p>where
+<p>Where,
 <span class="arithmatex">\(f_{c,ce,aux}\)</span>:찾는 중
 <span class="arithmatex">\(Q_{c,outg}\)</span>: 찾는 중
 <span class="arithmatex">\(t_{C,op}\)</span>: 찾는 중</p>
@@ -794,9 +812,9 @@ document$.subscribe(() => { lightbox.reload() });
 <h3 id="2521">2.5.2.1. 순환배관망 연동시스템 펌프<a class="headerlink" href="#2521" title="Permanent link">¶</a></h3>
 <p>열회수에 대한 연간 보조에너지 <span class="arithmatex">\(Q_{hr,f,aux,a}\)</span>는 다음에 의해 계산됩니다:
 <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-<span class="arithmatex">\( Q_{hr,f,aux,a} = P_{el,av,KVS} \cdot t_{WRG} \)</span> {{ auto_eq_number }}
+<span class="arithmatex">\( Q_{hr,f,aux,a} = P_{el,av,KVS} \cdot t_{WRG} \)</span>
 </a></p>
-<p>where 
+<p>Where,
 <span class="arithmatex">\(P_{el,av,KVS}\)</span> = 순환배관망 연동시스템 펌프의 전기적 성능 [W] (보고서에 명시되지 않음)
 <span class="arithmatex">\(t_{WRG}\)</span>=열회수기 펌프의 운전시간</p>
 <p><span class="arithmatex">\(P_{el,av,KVS}\)</span>는 펌프의 제어 방식에 따라 두 가지로 계산됩니다:</p>
@@ -852,14 +870,14 @@ document$.subscribe(() => { lightbox.reload() });
 document$.subscribe(() => { lightbox.reload() });
 </script></body>
 </html>
-<p>where <span class="arithmatex">\(V_{e}\)</span>: 열회수기의 설계-외기유량</p>
+<p>Where, <span class="arithmatex">\(V_{e}\)</span>: 열회수기의 설계-외기유량</p>
 <hr/>
 <h3 id="2522">2.5.2.2. 회전자 구동<a class="headerlink" href="#2522" title="Permanent link">¶</a></h3>
 <p>회전식 열교환기 구동에 대한 연간 보조에너지 <span class="arithmatex">\(Q_{hr,f,aux,a}\)</span>는 다음에 의해 계산됩니다:
 <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-<span class="arithmatex">\( Q_{hr,f,aux,a} = P_{el,av,rot} \cdot t_{WRG} \)</span> {{ auto_eq_number }}
+<span class="arithmatex">\( Q_{hr,f,aux,a} = P_{el,av,rot} \cdot t_{WRG} \)</span>
 </a></p>
-<p>where
+<p>Where,
 <span class="arithmatex">\(P_{el,av,rot}\)</span> = 회전자 구동의 전기적 성능 [W]
 <span class="arithmatex">\(t_{WRG}\)</span>=열회수기 펌프의 운전시간 </p>
 <p>회전자 구동의 전기적 성능은 열회수의 설계-외기유량에 따라 다음 표와 같이 결정합니다.</p>
@@ -923,9 +941,9 @@ document$.subscribe(() => { lightbox.reload() });
 <h2 id="253">2.5.3. 가습기 펌프<a class="headerlink" href="#253" title="Permanent link">¶</a></h2>
 <p>가슴기 펌프에 대한 연간 보조에너지 <span class="arithmatex">\(Q_{mh,f,aux}\)</span>는 공조기기의 운전시간에 대한 표준값을 바탕으로 다음과 같이 계산됩니다:</p>
 <p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-<span class="arithmatex">\( Q_{hr,f,aux,a} = V_e \cdot P_{el,mth} \cdot t_{VB} \cdot f_{mh} \)</span> {{ auto_eq_number }}
+<span class="arithmatex">\( Q_{hr,f,aux,a} = V_e \cdot P_{el,mth} \cdot t_{VB} \cdot f_{mh} \)</span>
 </a></p>
-<p>where
+<p>Where,
 <span class="arithmatex">\(V_{e}\)</span>: 가습의 설계-외기유량
 <span class="arithmatex">\(P_{el,mh}\)</span>: 가습기 펌프의 공기유량 m^3/h 당 성능
 <span class="arithmatex">\(t_{VB}\)</span>: 가습 운전시간
@@ -1020,9 +1038,9 @@ document$.subscribe(() => { lightbox.reload() });
 <h2 id="254-2">2.5.4. 증기공급을 위한 2차에너지<a class="headerlink" href="#254-2" title="Permanent link">¶</a></h2>
 <p>증기공급에 대한 2차에너지 <span class="arithmatex">\(Q_{m*,f}\)</span>는 다음을 따라 계산됩니다:
 <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-<span class="arithmatex">\( Q_{m^*,f} = Q_{m^*,outg} \cdot f_{m^*,f} \)</span> {{ auto_eq_number }}
+<span class="arithmatex">\( Q_{m^*,f} = Q_{m^*,outg} \cdot f_{m^*,f} \)</span>
 </a></p>
-<p>where 
+<p>Where, 
 <span class="arithmatex">\(Q_{m*,outg}\)</span>: 증기생산을 위한 열생산기의 열공급량
 <span class="arithmatex">\(f_{m*,f}\)</span>: 증기생산에 대한 2차에너지 계수</p>
 <p>증기생산에 대한 2차에너지 계수 <span class="arithmatex">\(f_{m*,f}\)</span>는 다음 표의 값을 활용합니다.</p>
@@ -1093,14 +1111,14 @@ document$.subscribe(() => { lightbox.reload() });
 <h2 id="255">2.5.5. 가습에 대한 증기 생산기<a class="headerlink" href="#255" title="Permanent link">¶</a></h2>
 <p>가습에 대한 증기 생산기에 대한 2차에너지 <span class="arithmatex">\(Q_{m*f}\)</span>는 실내 냉방 팬에 대한 보조에너지를 참조하여 다음과 같이 계산됩니다:
 <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-<span class="arithmatex">\( Q_{m^*,f,j(Dampf)} = \sum Q_{m^*,f} \)</span> {{ auto_eq_number }}
+<span class="arithmatex">\( Q_{m^*,f,j(Dampf)} = \sum Q_{m^*,f} \)</span>
 </a></p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="마지막 업데이트">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 7월 7일 07:09:20 UTC">2025년 7월 7일</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 7월 13일 11:25:40 UTC">2025년 7월 13일</span>
 </span>
 </aside>
 </article>
@@ -1126,8 +1144,8 @@ document$.subscribe(() => { lightbox.reload() });
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.tabs.sticky", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
-<script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.tabs.sticky", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}}</script>
+<script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
 <script src="../../assets/polyfill.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
