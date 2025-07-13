@@ -348,16 +348,14 @@
     <strong>복사 열손실</strong> {{ include_equations("2", 111, 111) }}
     <strong>태양열에 의한 열획득</strong> {{ include_equations("2", 17, 17) }}
 
-    <strong> To. 희, 적절한 다이어그램 추가 필요해요!! </strong>
   <center>
     <img src="../../_images/heat_gain_fig4.png" alt="Heat Gain" style="max-width: 80%;">
     <div><strong>Heat Gain Figure 4</strong></div>
   </center>
+  </div>
 
   <!-- 참고 이미지:  -->
-  </div>  
 
-  </div>
 
   <!-- 오른쪽 열 -->
   <div style="
