@@ -5,6 +5,6 @@
     0.1 & \text{외단열 (external insulation)} \\
     0.15 & \text{내단열 (internal insulation)}
   \end{cases}
-  \quad \text{(참조: 식 2-24)}
+  \quad
   \]
 </a>

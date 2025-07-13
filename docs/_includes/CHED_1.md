@@ -5,5 +5,5 @@
      'width=800,height=600,scrollbars=yes,resizable=yes'
    ); return false;"
    class="equation-link">
-  \( \eta = f\left( \frac{Q_{source}}{Q_{sink}}, \tau \right) \quad \tau\text{: 냉각(열손실) 시간상수} \) {{ auto_eq_number }}
+  \( \eta = f\left( \frac{Q_{source}}{Q_{sink}}, \tau \right) \quad \tau\text{: 냉각(열손실) 시간상수} \) 
 </a>

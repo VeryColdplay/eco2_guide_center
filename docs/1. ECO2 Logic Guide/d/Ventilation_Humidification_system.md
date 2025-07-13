@@ -1,4 +1,4 @@
-# 2.5. 환기/가습 에너지소요량
+# 2.5. 환기/가습 에너지소요량 (Energy use for ventilation & humidification system)
 
 환기/가습 에너지소요량 파트에서는 공조에 필요한 에너지소요량 중 환기(팬)와 가습에 대한 내용만을 포함하고 있습니다. (보고서 8.3.6, 8.4.2, 8.5.2) 보다 구체적으로는 다음의 5가지 항목을 다룹니다:
  (1) 실내냉방 팬
@@ -13,10 +13,10 @@
 
 실내냉방 팬에 대한 보조에너지 Q_c,ce,aux는 다음을 따라 계산됩니다:
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{c,ce,aux} = f_{c,ce,aux} \cdot Q_{c,outg} \cdot t_{c,op} / 1000h \) {{ auto_eq_number }}
+  \( Q_{c,ce,aux} = f_{c,ce,aux} \cdot Q_{c,outg} \cdot t_{c,op} / 1000h \) 
 </a>
 
-where
+Where,
 \(f_{c,ce,aux}\):찾는 중
 \(Q_{c,outg}\): 찾는 중
 \(t_{C,op}\): 찾는 중
@@ -98,11 +98,11 @@ where
 
 열회수에 대한 연간 보조에너지 \(Q_{hr,f,aux,a}\)는 다음에 의해 계산됩니다:
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{hr,f,aux,a} = P_{el,av,KVS} \cdot t_{WRG} \) {{ auto_eq_number }}
+  \( Q_{hr,f,aux,a} = P_{el,av,KVS} \cdot t_{WRG} \)
 </a>
 
 
-where 
+Where,
 \(P_{el,av,KVS}\) = 순환배관망 연동시스템 펌프의 전기적 성능 [W] (보고서에 명시되지 않음)
 \(t_{WRG}\)=열회수기 펌프의 운전시간
 
@@ -148,17 +148,17 @@ where
 </body>
 
 </html>
-where \(V_{e}\): 열회수기의 설계-외기유량
+Where, \(V_{e}\): 열회수기의 설계-외기유량
 
 ---
 
 ### 2.5.2.2. 회전자 구동
 회전식 열교환기 구동에 대한 연간 보조에너지 \(Q_{hr,f,aux,a}\)는 다음에 의해 계산됩니다:
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{hr,f,aux,a} = P_{el,av,rot} \cdot t_{WRG} \) {{ auto_eq_number }}
+  \( Q_{hr,f,aux,a} = P_{el,av,rot} \cdot t_{WRG} \)
 </a>
 
-where
+Where,
 \(P_{el,av,rot}\) = 회전자 구동의 전기적 성능 [W]
 \(t_{WRG}\)=열회수기 펌프의 운전시간 
 
@@ -215,10 +215,10 @@ where
 가슴기 펌프에 대한 연간 보조에너지 \(Q_{mh,f,aux}\)는 공조기기의 운전시간에 대한 표준값을 바탕으로 다음과 같이 계산됩니다:
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{hr,f,aux,a} = V_e \cdot P_{el,mth} \cdot t_{VB} \cdot f_{mh} \) {{ auto_eq_number }}
+  \( Q_{hr,f,aux,a} = V_e \cdot P_{el,mth} \cdot t_{VB} \cdot f_{mh} \) 
 </a>
 
-where
+Where,
 \(V_{e}\): 가습의 설계-외기유량
 \(P_{el,mh}\): 가습기 펌프의 공기유량 m^3/h 당 성능
 \(t_{VB}\): 가습 운전시간
@@ -306,10 +306,10 @@ where
 
 증기공급에 대한 2차에너지 \(Q_{m*,f}\)는 다음을 따라 계산됩니다:
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{m^*,f} = Q_{m^*,outg} \cdot f_{m^*,f} \) {{ auto_eq_number }}
+  \( Q_{m^*,f} = Q_{m^*,outg} \cdot f_{m^*,f} \)
 </a>
 
-where 
+Where, 
 \(Q_{m*,outg}\): 증기생산을 위한 열생산기의 열공급량
 \(f_{m*,f}\): 증기생산에 대한 2차에너지 계수
 
@@ -373,5 +373,5 @@ where
 
 가습에 대한 증기 생산기에 대한 2차에너지 \(Q_{m*f}\)는 실내 냉방 팬에 대한 보조에너지를 참조하여 다음과 같이 계산됩니다:
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{m^*,f,j(Dampf)} = \sum Q_{m^*,f} \) {{ auto_eq_number }}
+  \( Q_{m^*,f,j(Dampf)} = \sum Q_{m^*,f} \) 
 </a>

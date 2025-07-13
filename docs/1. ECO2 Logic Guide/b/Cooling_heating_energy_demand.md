@@ -1,4 +1,4 @@
-# 1.2. 냉방 및 난방 에너지요구량
+# 1.2. 냉방 및 난방 에너지요구량 (Energy need for cooling and heating)
 
 어떤 존의 온도가 **설정 범위 내**에 있다면 추가적으로 냉방 또는 난방을 할 필요가 없을 것입니다.   
 그러나 설정 범위를 벗어난다면, 다음과 같이 **냉방** 또는 **난방 에너지요구량**이 발생하게 됩니다.  
@@ -22,7 +22,7 @@ graph LR
 <br>
 
 
-## 1.2.1. 냉방 에너지요구량  \(Q_{c,b}\) (Cooling energy demand) 
+## 1.2.1. 냉방 에너지요구량  \(Q_{c,b}\)  
 
 ### 🔹 건축물의 냉방 에너지요구량 계산
 
@@ -41,7 +41,7 @@ graph LR
     margin-top: 1em;
     margin-bottom: 2em;
   ">
- \( Q_{c,b} = (1-\eta) Q_{source} \quad \text{(2–1)} \)
+ \( Q_{c,b} = (1-\eta) Q_{source} \quad \)
   </div>
 </div>
 
@@ -82,8 +82,8 @@ graph LR
 <span style="font-size: 0.8em; font-style: italic;">[&nbsp;&nbsp;&nbsp;&nbsp;🔍 건물의 조닝(zoning)에 대한 로직 바로가기](../a/Zoning.md)</span>
 - **월간** 냉방 에너지요구량은 **일간** 냉방 에너지요구량의 한달치 계산이 됩니다.
 - 연중 월간 열획득 및 이용률 값이 모두 다르므로, 월별 냉방 에너지요구량 값은 모두 상이합니다. 
-<span style="font-size: 0.8em; font-style: italic;">[&nbsp;&nbsp;&nbsp;&nbsp;🔍 열획득과 열손실에 대한 로직 바로가기](../a/Heat_gain_loss.md)</span>
-<span style="font-size: 0.8em; font-style: italic;">[&nbsp;&nbsp;&nbsp;&nbsp;🔍 (이용률 등) 개별 값 설정에 대한 로직 바로가기](../a/Value.md)</span>
+<span style="font-size: 0.8em; font-style: italic;">[&nbsp;&nbsp;&nbsp;&nbsp;🔍 열획득과 열손실에 대한 로직 바로가기](../b/Heat_gain_loss.md)</span>
+<span style="font-size: 0.8em; font-style: italic;">[&nbsp;&nbsp;&nbsp;&nbsp;🔍 (이용률 등) 개별 값 설정에 대한 로직 바로가기](../b/Value.md)</span>
 
 &nbsp;<br>
 

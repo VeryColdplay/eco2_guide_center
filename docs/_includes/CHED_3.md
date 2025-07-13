@@ -5,5 +5,5 @@
      'width=800,height=600,scrollbars=yes,resizable=yes'
    ); return false;"
    class="equation-link">
-  \( Q_{c,b} = (1 - \eta) \cdot Q_{source} \) {{ auto_eq_number }}
+  \( Q_{c,b} = (1 - \eta) \cdot Q_{source} \)
 </a>

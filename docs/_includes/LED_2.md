@@ -5,5 +5,5 @@
      'width=800,height=600,scrollbars=yes,resizable=yes'
    ); return false;"
    class="equation-link">
-  \( p_e = \frac{E}{U \cdot M \cdot n_e} \) {{ auto_eq_number }}
+  \( p_e = \frac{E}{U \cdot M \cdot n_e} \)
 </a>

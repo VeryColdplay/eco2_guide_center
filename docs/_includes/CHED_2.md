@@ -5,5 +5,5 @@
      'width=800,height=600,scrollbars=yes,resizable=yes'
    ); return false;"
    class="equation-link">
-  \( Q_{h,b} = Q_{sink} - \eta \cdot Q_{source} \) {{ auto_eq_number }}
+  \( Q_{h,b} = Q_{sink} - \eta \cdot Q_{source} \) 
 </a>

@@ -1,1071 +1,510 @@
-# 2.3. 급탕 에너지요구량
-
-급탕 에너지요소요량 \(Q_{w,f}\)는 급탕 열 생산기기의 열 공급량(\(Q_{w,outg}\)), 생산과정에서 발생하는 (월별) 열손실(\(Q_{w,g}\)) 및 재생열에너지(태양열 및 주변 열)에 의해 다음과 같이 계산됩니다:
-
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,f} = Q_{w,outg} + Q_{w,g} - Q_{w,reg} \)
-</a>
+# 2.2. 냉방 에너지소요량 (Energy use for cooling system)
 
 
-Where,  
-\(Q_{w,outg}\): 급탕 열 생산기기의 열 공급량  
-\(Q_{w,g}\): 생산과정에서 발생하는 (월별) 열손실  
-\(Q_{w,reg}\): 재생열에너지(태양열 및 주변 열)  
+## 2.2.1. 개요
+본 절은 냉방 시스템의 각 단계(전달, 분배, 저장, 생산)에서 산출된 손실, 소요량, 보조에너지를 종합하여, **최종적으로 냉열 생산기기(히트펌프 등)가 공급해야 하는 총에너지 소요량을 산정**하는 방법을 기술한다.
+
+산정 방식은 건물의 공조기기 냉열 에너지 요구량(\(Q_{c*,b}\))과  실내 냉방 에너지 요구량(\(Q_{c,b}\))
+
+---
+
+## 2.2.2. 공조 냉방 개요 
+공조 요구량에서 산정한 공조 요구량 중 냉방 요구량만 분리하여 공조 냉방 시스템의 에너지 소요량을 산정한다. 공조기기의 냉각유닛에 대한 생산기기 냉열공급량과 실내냉방시스템에 대한 생산기기 냉열공급량은 사용기기별로 분리되어 최종적으로 합산되고, 개별 생산기기와 분배시스템의 소요량은 총 소요량 산정 과정에서 통합된다.
+
+### 2.2.1.1. 공조기기 냉열 에너지 요구량(\(Q_{c*,b}\))
+공조기기 냉각 유닛의 에너지 요구량은 2.2에서 산정한 냉방 에너지 요구량\(Q_{vc,b}\)과 전달 및 분배 과정의 손실을 합하여 산정한다.
+<div align="center">$$
+Q_{c^*,b} = Q_{vc,b} + Q_{vc,ce} + Q_{vc,d}
+$$</div>
+
+
+**- 전달 손실(\(Q_{vc,ce}\))**: 대다수의 시스템에서 전달 손실 기준은 없으며, 전달 과정 효율 (\(η_{vc,ce}\))은 1을 적용한다.
+<div align="center">$$
+Q_{vc,ce} = \left(1 - \eta_{vc,ce}\right) \cdot Q_{vc,b}
+$$</div>
+
+
+**- 분배 손실(\(Q_{vc,d}\))**: 급기 온도가 실내 목표 온도보다 크게 낮지 않으면 (-10 K  이내) 분배 과정에서 발생하는 열손실은 상수값을 적용한다. 건물 외부에서 분배할 경우 외부 배관의 열손실을 고려해야 한다. 이 때 배관 단열재의 열전도율은 최소 0.04 W/mK, 두께는 50 mm 로 가정한다.
+<div align="center">$$
+Q_{vc,d} = 0 \quad \text{(분배가 건물 내부에서 이루어질 때)}
+$$</div>
+
+<div align="center">$$
+Q_{vc,d} = f_{vc,d} \cdot A_{K,A} \cdot t_{C^*,op,mth} \quad \text{(분배가 건물 외부에서 이루어질 때)}
+$$</div>
+
+<div align="center">$$
+f_{vc,d} = 9\ \mathrm{W/m^2}
+$$</div>
+
+
+**- 누기 손실**: 급기 온도가 실내 목표 온도보다 크게 낮지 않으면 (-10 K 이내) 덕트 누기는 고려하지 않는다. 중앙 공조 장치의 설계 풍량은 누기를 무시하고 각 존의 요구 풍량을 합산하여 산정한다.
+
+### 2.2.1.2. 공조기기 냉각 유닛의 가동시간
+공조기기 냉각 유닛의 월별 가동시간은 연간 가동시간으로부터 산정된다. 
+<div align="center">$$
+t_{C^*,op,mth} = t_{C,r} \cdot \frac{b_{VC^*,mth}}{b_{VC^*,a}}
+$$</div>
+
+<div align="center">$$
+b_{VC^*,mth} = \frac{Q_{vc^*,b}}{\dot{Q}_{C^*,max}}
+$$</div>
+
+<div align="center">$$
+b_{VC^*,a} = \sum_{m=1}^{12} b_{VC^*,mth}
+$$</div>
+
+- \( t_{C,r} \): 냉각 유닛 연간 가동시간 (#.#.# 실내 냉방 요구량 파트에서 가져옴)  
+- \( b_{VC^*} \): 냉방공조 전체 가동시간 (월별, 연간)
 
 
 ---
 
-## 2.3.1. 급탕 열 생산기기의 열 공급량
+## 2.2.3. 냉열 생산기기의 제어, 전달, 분배, 저장:
+### 2.2.3.1. 개요
+공조기기의 냉각유닛과 실내냉방 시스템의 냉열 공급량은 각각 분리되어 산정되고 (2.2.2, 2.2.3), 합산하여 냉열 생산기기와 분배 시스템의 소요량을 계산한다.
 
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,outg} = Q_{w,b} + Q_{w,ce} + Q_{w,d} + Q_{w,s} \)
-</a>
-
-
-Where  
-\(Q_{w,b}\): 급탕에너지요구량  
-\(Q_{w,ce}\): 전달 열손실  
-\(Q_{w,d}\): 분배 열손실  
-\(Q_{w,s}\): 저장 열손실  
-
----
-
-### 2.3.1.1. 전달 열손실
-
-전달 열손실 \(Q_{w,ce}\)는 이미 존의 급탕 에너지요구량 \(Q_{w,b}\)에 포함되어 있으므로 0으로 계산합니다. 이에 따라 전달 열손실에 필요한 보조에너지 \(Q_{w,ce,aux}\) 또한 0이 됩니다.
-
----
-
-### 2.3.1.2 분배 열손실
-
-급탕배관망을 따라 분배되는 중앙 공급식 급탕의 경우, 전체 배관망의 열손실은 다음과 같이 계산됩니다:
-
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,d} = \sum Q_{w.d.i} \)
-</a>
+### 2.2.3.2. 공조기기 냉열 공급량(\(Q_{c*,outg}\)) 
+2.2.2의 공조 냉각 유닛의 냉열 요구량(\(Q_{c*,b}\))과 생산기기로부터 전달, 분배 및 저장 과정의 손실을 합산하여 산정한다.
+<div align="center">$$
+Q_{c^*,outg} = Q_{c^*,b} + Q_{c^*,ce} + Q_{c^*,d} + Q_{c^*,s}
+$$</div>
 
 
-Where  
-\(Q_{w,d,i}\): 급탕배관망 구간 i의 열손실  
+**- 전달 손실(\(Q_{c*,ce}\))**:
+<div align="center">$$
+Q_{c^*,ce} = \left[\left(1 - \eta_{c^*,ce}\right) + \left(1 - \eta_{c^*,ce,sens}\right)\right] \cdot Q_{c^*,b}
+$$</div>
 
-한편 구간 i의 열손실 \(Q_{w,d,i}\):
-
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,d,i} = \frac{1}{1000} \cdot U_i \cdot L_i \cdot (v_{w,m} - v_i) \cdot d_{Nutz,mth} \cdot t_{Nutz,T} \)
-</a>
-
-
-Where  
-\(U_{i}\): 구간 i 배관 열관류율  
-\(L_{i}\): 구간 i 배관 길이  
-\(v_{w,m}\): 급탕배관망 온도 (보고서에서는 복수의 의미로 사용)  
-\(v_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)  
-\(d_{Nutz,mth}\): 월간 이용일수  
-\(t_{Nutz,T}\): 일일 이용시간  
-
----
-
-배관망은 다음 그림과 같이 크게 V, S, SL의 3가지로 분류합니다.
-
-![그림 3.2.9-2](../../_images/3.2.9_2.png)  
-**그림 3.2.9-2. 배관망 분류**
-
-- **V**: 생산기기에서 주관까지의 수평분배범위  
-- **S**: 지관  
-- **SL**: 취수구까지의 차단 가능한 말단 배관  
-
----
-
-배관의 열관류율 \(U_{i}\)는 사양에 근거하여 계산되며, 사양을 모르는 경우 다음 표에 따라 적용합니다.
-
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>배관의 열관류율 U_i</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      font-family: "Malgun Gothic", sans-serif;
-      font-size: 14px;
-      text-align: center;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 6px;
-    }
-  </style>
-</head>
-<body>
-  <table>
-    <tr>
-      <th rowspan="2">건물 준공연도</th>
-      <th rowspan="1">분배</th>
-      <th colspan="2">외부에 설치된 수직배관</th>
-      <th colspan="2">내부에 설치된 수직배관</th>
-    </tr>
-    <tr>
-      <th>V</th>
-      <th>S</th>
-      <th>SL</th>
-      <th>S</th>
-      <th>SL</th>
-    </tr>
-    <tr>
-      <td>1995 이후</td>
-      <td>0.200</td>
-      <td>0.255</td>
-      <td>0.255</td>
-      <td>0.255</td>
-      <td>0.255</td>
-    </tr>
-    <tr>
-      <td>1980 ~ 1995</td>
-      <td>0.200</td>
-      <td>0.400</td>
-      <td>0.400</td>
-      <td>0.300</td>
-      <td>0.400</td>
-    </tr>
-    <tr>
-      <td>1980 이전</td>
-      <td>0.400</td>
-      <td>0.400</td>
-      <td>0.400</td>
-      <td>0.400</td>
-      <td>0.400</td>
-    </tr>
-  </table>
-</body>
-</html>
-
-구간 \(i\) 배관 길이 \(L_{i}\)는 세부 도면을 바탕으로 산정합니다.  
-
-주변온도 \(v_{i}\)는 용도프로필에서 설정된 값이 적용되며, 만일 주어진 값이 없다면 다음 표를 참고하여 채택합니다.
-
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>주변온도 표</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      font-family: "Malgun Gothic", sans-serif;
-      font-size: 14px;
-      text-align: center;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 6px;
-    }
-    td.left {
-      text-align: left;
-    }
-  </style>
-</head>
-<body>
-  <table>
-    <tr>
-      <th>표준치</th>
-      <th>표기</th>
-      <th>단위</th>
-      <th>V</th>
-      <th>S</th>
-      <th>SL</th>
-    </tr>
-    <tr>
-      <td>주변온도</td>
-      <td><i>v<sub>i</sub></i></td>
-      <td>℃</td>
-      <td colspan="3">제3장2절4항 참조</td>
-    </tr>
-    <tr>
-      <td class="left">난방주기가 아닐 경우<br>평균 주변온도</td>
-      <td><i>v<sub>i</sub></i></td>
-      <td>℃</td>
-      <td colspan="3">22℃</td>
-    </tr>
-    <tr>
-      <td>평균 주변온도</td>
-      <td><i>v<sub>i</sub></i></td>
-      <td>℃</td>
-      <td colspan="3">비 난방 존 13℃<br>난방 존 20℃</td>
-    </tr>
-  </table>
-</body>
-</html>
+- \( \eta_{c^*,ce} \): 공조기기의 냉열전달효율
+- \( \eta_{c^*,ce,sens} \): 공조기기의 냉열 중 현열전달효율. 의도하지 않은 제습을 포함하며, #.#.#의 공조처리에너지요구량의 값에는 이 영향이 포함되지 않는다.
 
 
----
-
-한편 순환배관이 있지만 순환이 정지되었다면 위 식에서의  
-
-일일 이용시간 \(t_{Nutz,T}\):
-
-$$
-t_{Nutz,T} = 24\,\text{h} - t_{Nutz} \tag*{}
-$$
-
-급탕배관망 온도 \(v_{w,m}\):
-
-$$
-v_{w,m} = 23 \cdot U^{-0.2} \tag*{}
-$$
-
----
-
-만일 순환배관과 연결배관이 없다면 위 식에서의  
-
-일일 이용시간 \(t_{Nutz,T}\):
-
-$$
-t_{Nutz,T} = 24\,\text{h} \tag*{}
-$$
-
-급탕배관망 온도 \(v_{w,m}\):
-
-$$
-v_{w,m} = 23 \cdot U^{-0.2} \tag*{}
-$$
-
----
-
-### 2.3.1.3 저장 열손실
-
-저장 열손실 \(Q_{w,s}\)는 축열조의 가열 방식, 즉:  
-(1) 간접 가열식  
-(2) 간접 가열식, 태양열 복합  
-(3) 전기 가열식  
-(4) 가스 가열식  
-에 따라 다음의 4가지 방식으로 계산됩니다:
-
-**(1) 간접 가열식**
-
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = f_{\text{verbindung}} \cdot \frac{(50 - v_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \)
-</a>
+**- 분배 손실(\(Q_{c*,d}\))**:
+<div align="center">$$
+Q_{c^*,d} = \left(1 - \eta_{c^*,d}\right) \cdot Q_{c^*,b}
+$$</div>
 
 
-**(2) 간접 가열식, 태양열 복합**
-
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = f_{\text{verbindung}} \cdot (UA)_{sb,s,a} \cdot \Delta v_i \cdot 24 \cdot 3600 \cdot d_{Nutz,mth} \cdot \frac{V_{s,aux}}{V_{s,aux} + V_{s,sol}} \)
-</a>
-
+**- 저장 손실(\(Q_{c*,s}\))**:
+<div align="center">$$
+Q_{c,s} = 0
+$$</div>
 
 
-**(3) 전기 가열식**
+- 냉방과 제습이 통합된 공조기기나 제습 기능이 있는 냉수 시스템 또는 실내기를 사용한 실내냉방 시스템에서 더 불리한 계수인 현열전달효율(\(η_{c*,ce,sens}\))은 외기 냉각을 위해 한 번 적용되어야 한다. 실내냉방에서 현열전달효율(\(η_{c*,ce,sens}\))은 1을 적용해야 한다.
 
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = \frac{(55 - v_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \)
-</a>
+### 2.2.3.2. 실내냉방 시스템 에너지 공급량(\(Q_{c,outg}\)) 
+실내냉방 시스템의 에너지 공급량은 3.2.4절의 냉방 요구량(\(Q_{c,b}\))과 전달, 분배 및 저장 과정의 손실을 합하여 계산한다.
+<div align="center">$$
+Q_{c,outg} = Q_{c,b} + Q_{c,ce} + Q_{c,d} + Q_{c,s}
+$$</div>
 
 
+**- 전달 손실(\(Q_{c,ce}\))**:
+<div align="center">$$
+Q_{c,ce} = \left[\left(1 - \eta_{c,ce}\right) + \left(1 - \eta_{c,ce,sens}\right)\right] \cdot Q_{c,b}
+$$</div>
 
-**(4) 가스 가열식**
 
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = \frac{(55 - v_i)}{50} \cdot d_{Nutz,mth} \cdot q_{B,S} \)
-</a>
+**- 분배 손실(\(Q_{c,d}\))**:
+<div align="center">$$
+Q_{c,d} = \left(1 - \eta_{c,d}\right) \cdot Q_{c,b}
+$$</div>
 
+
+**- 저장 손실(\(Q_{c,s}\))**:
+<div align="center">$$
+Q_{c,s} = 0
+$$</div>
+
+<div align="center">$$
+\eta_{c,ce,sens} = 1 \quad \text{(실내냉방 시)}
+$$</div>
+
+
+### 2.2.3.3. 실내 냉방을 위한 보조에너지 소요량
+**- 팬 보조에너지 소요량(\(Q_{c,ce,aux}\))**: 실내 냉방 시스템의 팬 구동에 필요한 전력 소요량
+<div align="center">$$
+Q_{c,ce,aux} = \frac{f_{c,ce,aux} \cdot Q_{c,outg} \cdot t_{c,op}}{1000\ \mathrm{h}}
+$$</div>
+
+- \( f_{c,ce,aux} \): 팬의 에너지 소요량 계수
+
+
+### 2.2.3.4. 분배 과정 전기에너지 소요량
+**- 연간 전기에너지 소요량(\(Q_{Z,aux,d,a}\))**: 설정된 각 시간 주기 l(월 또는 년)에 대한 에너지 소요량의 합으로 계산한다.
+<div align="center">$$
+Q_{Z,aux,d,a} = \sum_{l=1}^{n} Q_{Z,aux,d,l}
+$$</div>
+
+
+**- 주기별 전기에너지 소요량(\(Q_{Z,aux,d,l}\))**: 해당 주기의 수력학적 에너지 요구량(W_d,hydr,l)과 분배 과정에서의 소비지수(e_d,l)의 곱으로 계산한다.
+<div align="center">$$
+Q_{Z,aux,d,l} = W_{d,\mathrm{hydr},l} \cdot e_{d,l}
+$$</div>
+
+
+**- 수력학적 에너지 요구량(\(W_{d,hydr,l}\))**: 펌프의 설계 조건에서의 수동력(\(P_{d,hydr}\)), 펌프 운전시간(\(t_{d,l}\)), 운전시간 동안의 평균 부하율(\(β_{d,l}\))로 산정한다. 
+<div align="center">$$
+W_{d,\mathrm{hydr},l} = \left( \frac{P_{d,\mathrm{hydr}}}{1000} \right) \cdot t_{d,l} \cdot \beta_{d,l} \cdot f_{\mathrm{Abgl}}
+$$</div>
+
+- \(f_{Abgl}\) = 수력학적 보정계수
+
+<div align="center">$$
+P_{d,\mathrm{hydr}} = 1000 \cdot \Delta p_Z \cdot \left( \frac{\dot{V}_Z}{3600} \right)
+$$</div>
+
+- \(Δp_{Z}\) = 설계 조건에서 실내 전달 과정의 압력 손실
+
+
+**- 설계 유량(\(\dot{V}_Z\))**: 설계 유량은 설계 조건에서의 냉각 용량(\(\dot{Q}_Z\))과 공급-환수 간 온도차(\(Δθ_{Z,cl}\)) 및 냉매 물성치로 산정한다.
+<div align="center">$$
+\dot{V}_Z = \frac{3600 \cdot \dot{Q}_Z}{\Delta \theta_{Z,\mathrm{cl}} \cdot C_{\mathrm{cl}} \cdot \rho_{\mathrm{cl}}}
+$$</div>
+
+- \(c_{cl}\) = 냉매 비열
+- \(ρ_{cl}\) = 냉매 밀도
+
+수냉식 냉동기의 경우, 재냉각 용량은
+<div>$$
+\dot{Q}_z = \dot{Q}_{R,\mathrm{outz}}
+$$</div>로 가정하고 아래 식으로 계산한다.
+
+<div align="center">$$
+\dot{Q}_{c,\mathrm{outg}} + \left(1 + \frac{1}{\mathrm{EER}}\right)
+$$</div>
+
+흡수식 냉동기의 경우 EER 대신 정격 열 비율(ζ)를 사용한다.
+재냉각 순환에서 열 에너지는 아래 식으로 계산한다.
+
+<div align="center">$$
+Q_Z = Q_{C,\mathrm{outg}} \cdot \left(1 + \frac{1}{\mathrm{SEER}}\right)
+$$</div>
+	
+SEER = 증기압축 기반 냉동기기의 연간 냉각 에너지 효율
+흡수식 냉동기의 경우 SEER 대신 정격 열 비율(\(ζ_{av}\))을 사용한다.
+
+
+#### 2.2.3.4.1. 압력 손실
+**- 설계 조건에서 압력 손실(\(Δp_{Z}\))**: 설계 조건에서 압력손실은 배관망의 저항(개별 저항들 포함)과 추가적 저항의 함수로 정해진다. 압력 손실은 가장 불리한 공급 배관이나 배관망에 연결된 소비기기 중 가장 불리한 기기에 의해 정해진다. 시스템의 매개변수가 주어진 경우, 배관망은 자세한 계산 방법을 적용한다. 대안으로, 근사법에서는 개별 저항의 현실적 추정값을 사용한다.
+<div align="center">$$
+\Delta p_Z = R \cdot L_{\mathrm{max}} \cdot (1 + z) + \Delta p_{\mathrm{WUE}} + \Delta p_{\mathrm{RV}} + \Delta p_{\mathrm{WUV}}
+$$</div>
+
+- \(R\) = 배관 압력손실
+- \(L_{max}\) = 분배망 중 최대 길이
+- \(z\) = 배관 마찰 손실에서 개별 저항의 비율
+- \(Δp_{WUE}\) = 생산기기에서 열교환기의 압력 손실
+- \(Δp_{RV}\) = 제어밸브의 압력 손실
+- \(Δp_{WUV}\) = 말단유닛 열교환기의 압력 손실
+
+**- 냉수 분배 배관망 최대 길이(\(L_{max}\))**: 냉수 배관의 냉각 배관망, 1차 배관망, 분배 배관망에서 최대 길이는 냉각기 또는 열교환기 같은 냉열 생산기기와 냉열 소비 측의 방열기기 간 길이의 2 배의 함수로 정해진다. 사각 형태 건물의 경우, 냉수 분배망의 최대 배관 길이는 외부 치수를 사용해서 대략적으로 아래와 같이 산정할 수 있다.
+<div align="center">$$
+L_{\mathrm{max}} = 2 \cdot \left( L + \frac{B}{2} + h_G \cdot n_G + 10 \right)
+$$</div>
+
+- \(L\) = 건물 길이
+- \(B\) = 건물 폭
+- \(h_{G}\) = 평균 층 높이
+- \(n_{G}\) = 층 개수
+
+**- 연속감압밸브의 압력손실(\(Δp_{RV,stetig}\))**: 밸브 authority(\(a\))와 말단 유닛 열교환기의 압력손실(\(Δp_{WUV}\))을 이용하여 계산한다. 
+<div align="center">$$
+\Delta p_{\mathrm{RV,stetig}} = \left( \frac{1 - a}{a} \right) \cdot \Delta p_{\mathrm{WUV}}
+$$</div>
+
+표에서 가정된 압력 손실 값들은 물 온도 10 °C 및 동점성계수 <div>$$
+\nu \approx 1{,}5\ \mathrm{mm^2/s}$$</div>에서 유효하다. 만약 동점성계수 > 4 ㎟/s인 냉매나 ice slurry를 사용하면, 배관망과 열교환기의 압력 손실은 분리해서 산정해야 한다. 배관 균형을 위한 제어 밸브의 압력 손실 계산은 상세  설계 과정에서만 가능하다.
+
+
+#### 2.2.3.4.2. 펌프 운전시간
+**- 펌프 운전시간(\(t_{d,l}\))**: 공조기기에서 공기 냉각에 필요한 운전시간과 냉열 생산기기와 같이 운전되는 펌프의 운전 시간은 각 사용기기/존에 대해 월별 값으로 정해진다. 냉방 존에서 펌프의 운전 시간은 시스템 설계 컨셉에 따라 정해지며, 산정된 존의 냉방 요구 시간을 초과할 수 있다. 여러 사용기기/존이 하나의 분배 배관망을 공유할 경우, 펌프의 운전 시간은 최대 운전 시간을 갖는 존을 기준으로 정해진다.
+
+#### 2.2.3.4.3. 평균 부하율
+**- 분배 과정의 평균 부하율(\(β_{d,l}\))**: 분배 과정의 평균 부하율은 설계 조건의 냉각 용량(\( \dot{Q}_Z \)), 존의 냉방 에너지 요구량(\(Q_{Z,outg,l}\)) 및 각 기간 내의 작동 시간(\(t_{d,l}\))을 기반으로 시스템의 모든 펌프 분배망 또는 존에 대해 계산된다.
+<div align="center">$$
+\beta_{d,l} = \frac{Q_{Z,\mathrm{outg},l}}{\dot{Q}_Z \cdot t_{d,l}}
+$$</div>
+
+**- 초과 유량 장치 보정**: 분배 배관망에 초과 유량 장치(밸브, 배관 등)가 설치된 경우, 평균 수력학적 요구량에 미치는 영향은 아래 식으로 산정된다.
+<div align="center">$$
+\beta_{d,l} = \beta'_{d,l} + \left(1 - \beta'_{d,l}\right) \cdot \left( \frac{\dot{V}_{Z,\mathrm{min}}}{\dot{V}_Z} \right)
+$$</div>
+
+- \(β'_{d,l}\)은 평균 부하에 의해 결정된다.
+- \(V_{dot_Z,min}\) = 분배망에서 최소 유량
+
+최소 유량은 냉방 존 또는 소비기기의 배관망에 있는 과압 방출 밸브의 요구 사항을 기반으로 산정해야 한다.
+1차 배관망의 수력학적 분리 또는 소비기기에서 전환 밸브를 사용할 경우, 관련된 공급 펌프에서
+<div align="center">$$
+\beta_{d,l} = 1
+$$</div>을 적용할 수 있다.  
+
+**- 수력학적 평형 보정계수(\(f_{Abgl}\))**:
+**수력학적 평형을 이룬 배관망**: \(f_{Abgl}\) = 1.0
+**수력학적 평형을 이루지 않은 배관망**: \(f_{Abgl}\) = 1.25
+
+
+#### 2.2.3.5.4 소비지수
+**- 소비지수(\(e_{d,l}\))**: 시스템에 설치된 펌프의 운전은 주어진 기간 동안 냉수 분배를 위한 소비지수를 사용하여 평가한다.
+<div align="center">$$
+e_{d,l} = f_e \cdot \left( c_{p1} + c_{p2} \cdot \beta_{d,l}^{-1} \right)
+$$</div>
+
+\(f_{e}\) = 펌프 효율계수
+\(c_{p1}\), \(c_{p2}\) = 펌프 운전방식에 따른 상수
+
+**- 펌프 효율계수(\(f_{e}\))**: 펌프의 총 효율(펌프의 수력학적 효율과 모터 효율의 곱)이다.
+**설계 조건에서 펌프의 전력 성능이 있는 경우**:
+<div align="center">$$
+f_e = \frac{P_{\mathrm{pumpe}}}{P_{\mathrm{hydr}}}
+$$</div>
+
+**데이터가 없는 경우(근사식)**:
+<div align="center">$$
+f_e = \left(1.25 + \sqrt{ \frac{200}{P_{d,\mathrm{hydr}}} } \right) \cdot f_{\mathrm{Adap}} \cdot b
+$$</div>
+
+- \(f_{Adap}\) = 펌프 운전점에 대한 적응 보정계수
+- \(b\) = 건물 범주에 따른 평가계수(기존 건물 = 1.2, 신축 = 1.0)
+근사치는 아래 상황에서 유효하다.
+
+방사형 원심 펌프(펌프 정격 설계점에서 효율 등급 1의 모터를 사용하는 경우. 정격 설계점에서 운전하지 않거나 수력학적 부분과 모터가 일치하지 않으면 \(f_{e}\) 값은 상승한다.)
+
+최대 압력차가 아래와 같을 때
+Δp ≤ 0.6 bar (\(P_{hydr}\) < 0.2 kW)
+Δp ≤ 1.5 bar (0.2 < \(P_{hydr}\) < 0.5 kW)
+Δp ≤ 4.0 bar (\(P_{hydr}\) > 0.5 kW)
+
+- 물 온도 20 °C
+
+**고점성 냉매 사용 시 보정**: 동점성계수(\(ν_{cl}\))가 4 ㎟/s를 초과하는 냉매를 사용하는 경우, 위의 근사식(\(f’_{e}\))을 아래 식으로 보정한다.
+<div align="center">$$
+f_e = f'_e \cdot \left( 1 + \left( \frac{\nu_{\mathrm{cl}}^2}{16 \cdot P_{d,\mathrm{hydr}}} \right)^{0.4} \right)
+$$</div>
+
+
+**- 적응 보정계수(\(f_{Adap}\))**: 펌프가 설계점과 비교해서 운전점에서 얼마나 최적의 성능을 내는지를 보정하는 계수이다.
+
+**성능이 알려진/최적으로 조정된 펌프**: \(f_{Adap}\) = 1.0
+
+**성능을 모르는 경우**:
+- 표준 펌프: \(f_{Adap}\) = 1.2
+- 속도 제어 펌프: \(f_{Adap}\) = 1.05
+
+**- 운전 상태에서 펌프 동력 조절**: 펌프의 제어 방식(비제어/제어)에 따라 소비지수 계산에 사용되는 상수(\(c_{p1}\), \(c_{p2}\))가 결정된다.
+
+**- 병렬 펌프에서 펌프 전환**: 변유량 공조 시스템에서 병렬 연결 펌프 중 개별 펌프를 on/off 전환 운전할 경우, 에너지 소비를 상당히 절감할 수 있다. 부하율(\(β_{d}\))이 0.7 이하인 경우, 병렬 펌프 전환에 의한 유량 적응 운전에 대한 소비지수는 표 #.의 값을 사용하여 산정할 수 있다.
 
 ---
 
-### (1) 간접 가열식
+## 2.2.4. 냉열 생산에 대한 2차 에너지 요구량
+냉열 생산의 2차 에너지 요구량은 냉동기의 종류, 사용 냉매, 제어 방식, 운전 온도 및 건물 용도 등 다양한 기술적 특성치에 근거하여 산정된다. 본 절에서는 냉열 생산 시스템의 2차 에너지 요구량을 산정하는 것을 목표로 한다. 냉열 생산 시스템의 종류는 <표 3.2.8-15>를 참고한다.
 
-간접 가열식 축열조의 저장 열손실:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = f_{\text{verbindung}} \cdot \frac{(50 - v_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \)
-</a>
+**- 냉동기의 냉열 공급량**: 하나의 냉동기와 연결된 존들을 하나의 냉열 공급영역으로 볼 수 있으며, 한 냉열 공급영역 내에 다양한 용도프로필을 가진 존들이 포함될 수 있다. 또한 한 건물의 존 내에서 공조 시스템 또는 실내냉방 시스템으로 구분할 수 있다. 조닝 판단의 기준을 위해 <표 3.2.8-16>을 참고한다. 
 
-Where  
-\(f_{verbindung}\): 연결배관에서 발생하는 열손실 계수, 1.2  
-\(v_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)  
-\(d_{Nutz,mth}\): 월간 이용일수  
-\(q_{B,S}\): 책정-열손실  
-
-만일 책정-열손실이 주어지지 않았다면 축열조의 용량을 기준으로 다음과 같이 계산합니다:
-
-<table>
-  <thead>
-    <tr>
-      <th>축열조 생산연도</th>
-      <th>축열조 용량</th>
-      <th>책정-열손실</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1995-</td>
-      <td>1,000ℓ 이상</td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 0.39 \cdot V^{0.35} + 0.5 \)
-</a>
-</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>1,000ℓ 이하</td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 0.8 + 0.02 \cdot V^{0.77} \)
-</a>
-</td>
-    </tr>
-    <tr>
-      <td>1987-1994</td>
-      <td></td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 0.4 + 0.21 \cdot V^{0.4} \)
-</a>
-</td>
-    </tr>
-    <tr>
-      <td>1978-1986</td>
-      <td></td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 0.4 + 0.23 \cdot V^{0.4} \)
-</a>
-</td>
-    </tr>
-    <tr>
-      <td>-1977</td>
-      <td></td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 0.4 + 0.27 \cdot V^{0.5} \)
-</a>
-</td>
-    </tr>
-  </tbody>
-</table>
+한 냉동기가 각 시스템의 냉각 유닛에 공급하는 연간 냉열 공급량은 각 용도 종류 (n) (3.2.2 절참고)로 나누어 계산한다. 공조 시스템과 실내냉방 시스템에 공급된 월별 냉열 공급량을 연간으로 합산하여 냉동기의 연간 총 냉열 공급량을 산정한다.
+<div align="center">$$
+Q_{C,\mathrm{outg},a,n} = Q_{c,\mathrm{outg},a,n} + Q_{c^*,\mathrm{outg},a,n} = 
+\sum_{j=1}^{n} \left( \sum_{m=1}^{12} Q_{c,\mathrm{outg},mth,j} + \sum_{m=1}^{12} Q_{c^*,\mathrm{outg},mth,j} \right)
+$$</div>
 
 
-Where V: 축열조 용량
+**- 냉동기 총 연간 냉열 공급량(\(Q_{C,outg,a}\))**: 해당 냉동기가 담당하는 모든 용도(n)의 연간 냉열 공급량을 합산한다.
+<div align="center">$$
+Q_{C,\mathrm{outg},a} = \sum_{n} Q_{C,\mathrm{outg},a,n}
+$$</div>
 
-축열조 용량은 제품사양서에 주어지지만, 용량을 모르는 경우 다음 식에 따라 계산합니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( V_s = \frac{Q_{w,b,d} \cdot f_N \cdot 860}{(v_{w,m} - v_k) \cdot \eta_s} \)
-</a>
 
-Where  
-\(Q_{w,b,d}\): 일간 급탕에너지요구량  
-\(f_{N}\): 보고서에 명시되지 않음  
-\(v_{w,m}\): 급탕 배관망 온도 (보고서에서는 복수의 의미로 사용)  
-\(v_{K}\): 보고서에 정확히 명시되지 않음 (\(v_{K}\): 냉수 공급온도)  
-\(n_{S}\): 축열조 효율 (입식=0.95, 좌식=0.9)  
+**- 압축식 냉동기의 2차 에너지**
+**연간 에너지성능지수 (SEER)**:
+<div align="center">$$
+\mathrm{EER} \cdot \mathrm{PLV}_{\mathrm{av}} = \mathrm{SEER} = \frac{Q_{C,\mathrm{outg},a}}{Q_{C,f,\mathrm{elektr}}}
+$$</div>
 
-한편 \(f_{N}\)은 다음과 같이 계산합니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( f_N = \frac{1}{t_{Nutz,T} \cdot n_{Sp}} \)
-</a>
+- EER = 에너지 성능지수 (Energy efficiency ratio)
+- \(PLV_{av}\) = 평균 부분부하율
+- \(Q_{C,f,elektr}\) = 압축식 냉동기의 2차 에너지 요구량
 
-Where  
-\(t_{Nutz,T}\): 일일 이용시간  
-\(n_{Sp}\): 일일 순간최대취수량 발생횟수
+**2차 에너지 요구량(\(Q_{C,f,elektr}\))**: 냉동기의 연간 냉열 공급량을 SEER로 나누어 계산한다.
+<div align="center">$$
+Q_{C,f,\mathrm{elektr}} = \frac{Q_{C,\mathrm{outg},a}}{\mathrm{SEER}} = \frac{Q_{C,\mathrm{outg},a}}{\mathrm{EER} \cdot \mathrm{PLV}_{\mathrm{av}}}
+$$</div>
+
+**에너지성능지수(EER)**: 정격 냉각 성능(\( \dot{Q}_{C,\text{outg}} \))을 전기적 정격 동력(\(P_{C,elektr}\))으로 나눈 값이다.
+<div align="center">$$
+\mathrm{EER} = \frac{\dot{Q}_{C,\mathrm{outg}}}{P_{C,\mathrm{elektr}}}
+$$</div>
+
+**평균 부분부하율(PLV_av)**: 냉동기의 성능은 부분부하에 따라 변하며, 어떤 한 용도 내에서 오직 실내냉방 시스템 또는 공조 시스템만드로 냉열이 공급되는 경우, 부분부하율 PLV_av를 에너지 평가에 사용할 수 있다.
+<div align="center">$$
+\mathrm{PLV}_{\mathrm{av},n} = \frac{Q_{c,\mathrm{outg},a,n} \cdot \mathrm{PLV}_{\mathrm{av}} + Q_{c^*,\mathrm{outg},a,n} \cdot \mathrm{PLV}_{\mathrm{av}}}{Q_{C,\mathrm{outg},a,n}}
+$$</div>
+
+냉열 공급영역에 여러 용도가 있을 경우, 각 용도별 냉열 공급량에 따라 평균하여 전체 시스템의 평균 부분부하율을 산정한다.
+<div align="center">$$
+\mathrm{PLV}_{\mathrm{av}} = \frac{ \sum_{n=1}^{N} \left( Q_{C,\mathrm{outg},a,n} \cdot \mathrm{PLV}_{\mathrm{av},n} \right) }{ Q_{C,\mathrm{outg},a} }
+$$</div>
+
+
+
+### 2.2.4.1. 수냉식 증기압축 냉동기(Water-cooled chiller)
+**- 제어 방식**: 특성치-방법에서는 <표 3.2.8-17>에서 제시된 압축기 형식 및 제어 방식을 고려한다.
+
+**- 에너지성능계수(EER) 표준값**: 수냉식 압축 냉동기의 EER은 <표 3.2.8-18>에 제시된 표준값을 사용한다.
+주어진 EER 값은 오염 계수 0.044 m²K/kW를 전제 조건으로 한다.
+EER 값은 사용된 **냉매** 종류(R134a, R407C 등)에 따라 선택해야 하며, 정보가 없을 경우 R134a를 적용한다.
+
+**냉각수 온도**는 재냉각 방식에 맞추어 선택한다 (건식 냉각기: 40/45℃, 증발식 재냉각기: 27/32℃).
+
+**사용 온도 수위**는 냉동기의 용도(간접/직접 시스템)에 따라 냉수 출구 온도 또는 평균 증발 온도를 기준으로 결정한다.
+
+**- 평균 연간 부분부하율(\(PLV_{av}\))**: 건물 용도, 냉열 이용 종류(실내냉방/공조), 그리고 냉각수 제어 방식(불변/가변)에 따라 결정된다.
+여러 용도가 혼합된 경우, 가중 평균을 계산한다.
+실내 냉방과 공조 시스템이 병행될 경우, 각 시스템의 공급량 비율을 고려한다.
+
+
+### 2.2.4.2. 공랭식 증기압축 냉동기(Air-cooled chiller)
+**- 제어 방식**: 특성치-방법에서는 <표 3.2.8-19>에서 제시된 압축기 형식 및 제어 방식을 고려한다.
+
+**- 에너지성능계수(EER) 표준값**: 공랭식 압축 냉동기의 EER은 압축기 방식에 따라 <표 3.2.8-20>의 표준값을 선택한다.
+주어진 EER 값은 외기 온도 32℃(습구 온도 21℃)를 기준으로 유효하다.
+공랭식 냉동기의 EER 값에는 재냉각 팬의 전기에너지와 같은 보조에너지가 이미 포함되어 있다.
+
+**- 평균 연간 부분부하율(\(PLV_{av}\))**: 건물 용도와 냉열 이용 종류를 고려하여 평균 부분부하율 계산 식에 따라 결정된다.
+
+
+### 2.2.4.3. 공랭식 실내냉방시스템(Air-cooled room air conditioning system)
+**- 제어 방식**: 특성치-방법에서는 <표 3.2.8-21>에서 제시된 부분 부하 제어 방식을 고려한다.
+
+**- 에너지성능계수(EER) 표준값**: 시스템의 종류에 따라 <표 3.2.8-22>와 <표 3.2.8-23>에 제시된 표준값(에너지효율등급 D에 해당)을 사용해야 하며, 제품 사양 값의 사용은 허용되지 않는다. 이는 에너지 표시를 하지 않는 냉동기 시스템과의 비교를 위해서이다.
+주어진 값은 외기 온도 32℃(습구 온도 21℃)와 실내 온도 26℃(습구 온도 19℃) 조건에서 유효하다.
+평균 연간 부분부하율(\(PLV_{av}\)): 건물 용도에 따라 선택되며, 여러 용도가 혼합된 경우 가중 평균을 계산한다.
 
 ---
 
-### (2) 간접 가열식, 태양열 복합
+## 2.2.5. 흡수식 냉동기에 공급되는 열에너지
+**개요**: 흡수식 냉동기 작동에 요구되는 열 생산기기의 열 공급량을 계산한다. 흡수식 냉동기의 에너지 평가는 정격 열성능비(ζ)와 평균 부분부하율(\(PLV_{av}\))을 기반으로 하며, 1중 효용 H2O/LiBr 흡수식 냉동기에 한하여 다룬다.
 
-간접 가열식, 태양열 복합 축열조의 저장 열손실:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = f_{\text{verbindung}} \cdot (UA)_{sb,s,a} \cdot \Delta v_i \cdot 24 \cdot 3600 \cdot d_{Nutz,mth} \cdot \frac{V_{s,aux}}{V_{s,aux} + V_{s,sol}} \)
-</a>
-
-Where  
-\(f_{verbindung}\): 연결배관에서 발생하는 열손실 계수, 1.2  
-\({UA}_{sb,s,a}\): 측정된 책정-열손실 [W/K]  
-\(Δv_{i}\): 보고서에 명시되어 있지 않으나 온도차로 추정됨  
-\(d_{Nutz,mth}\): 월간 이용일수  
-\(V_{s,aux}\): 축열조 상부(태양열 부분을 뺀) 용량 [ℓ]  
-\(V_{s,scl}\): 축열조 하부(태양열 저장부분)의 용량 [ℓ]
-
-만일 축열조 책정-열손실 \({UA}_{sb,s,a}\)를 모르는 경우 축열조 용량에 따라 다음과 같이 계산합니다:
-
-  **1) 축열조 용량 ≤ 1,000ℓ:**  
- <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = \left( 0.4 + 0.2 \cdot (V_{s,aux} + V_{s,sol})^{0.4} \right) \cdot \frac{V_{s,aux}}{V_{s,aux} + V_{s,sol}} \)
-</a>
+**- 연간 평균 열성능비(\(ζ_{av}\))**: 정격 열성능비(ζ)와 평균 부분부하율(\(PLV_{av}\))의 곱으로 계산된다.
+<div align="center">$$
+\zeta_{\mathrm{av}} = \zeta \cdot \mathrm{PLV}_{\mathrm{av}} = \frac{Q_{C,\mathrm{outg},a}}{Q_{C,\mathrm{outg},\mathrm{therm}}}
+$$</div>
 
 
-  **2) 축열조 용량 > 1,000ℓ:**  
-  1,000ℓ를 초과하는 축열조는 여러 대의 분리된 축열조로 가정하여 계산합니다.  
-  (각 축열조당 최대 1,000ℓ 적용)
-
----
-
-### (3) 전기 가열식
-
-전기 가열식 축열조의 저장 열손실:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = \frac{(55 - v_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \)
-</a>
-
-Where  
-\(v_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)  
-\(d_{Nutz,mth}\): 월간 이용일수  
-\(q_{B,S}\): 책정-열손실  
-
-책정-열손실 \(q_{B,S}\)은 저장온수와 설치공간과의 평균 온도차가 45K일 때 측정된 것으로, 측정값이 없는 경우 다음과 같이 계산합니다:
-
-<table>
-  <thead>
-    <tr>
-      <th>축열조 생산연도</th>
-      <th>책정-열손실</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1995-</td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 0.29 + 0.019 \cdot V^{0.8} \)
-</a>
-</td>
-    </tr>
-    <tr>
-      <td>1989-1994</td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 1.25 \cdot (0.29 + 0.019 \cdot V^{0.8}) \)
-</a>
-</td>
-    </tr>
-    <tr>
-      <td>-1988</td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 1.4 \cdot (0.29 + 0.019 \cdot V^{0.8}) \)
-</a>
-</td>
-    </tr>
-  </tbody>
-</table>
-
-Where V: 축열조 용량
-
-축열조 용량은 제품사양서에 주어지지만, 용량을 모르는 경우 다음 식에 따라 계산합니다:  
-
-#### 1) 축열조 용량 ≤ 1,000ℓ
-
-<table>
-  <thead>
-    <tr>
-      <th>구분</th>
-      <th>설명</th>
-      <th>축열조 용량</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>심야</td>
-      <td>주로 심야에 가동</td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( V_s = \frac{1.42 \cdot Q_{w,b,d} \cdot f_N \cdot 860}{(v_{w,m} - v_k) \cdot \eta_s} \)
-</a>
-</td>
-    </tr>
-    <tr>
-      <td>주간</td>
-      <td>지속적 재충전 가능</td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( V_s = \frac{0.67 \cdot Q_{w,b,d} \cdot f_N \cdot 860}{(v_{w,m} - v_k) \cdot \eta_s} \)
-</a>
-</td>
-    </tr>
-  </tbody>
-</table>
-
-Where  
-\(Q_{w,b,d}\): 일간 급탕에너지요구량  
-\(f_{N}\): 보고서에 명시되지 않음  
-\(v_{w,m}\): 급탕 배관망 온도 (보고서에서는 복수의 의미로 사용)  
-\(v_{K}\): 보고서에 정확히 명시되지 않음 (\(v_{K}\): 냉수 공급온도)  
-\(n_{S}\): 축열조 효율 (입식=0.95, 좌식=0.9)  
-
-한편 \(f_{N}\)은 다음과 같이 계산합니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( f_N = \frac{1}{t_{Nutz,T} \cdot n_{Sp}} \)
-</a>
-
-Where  
-\(t_{Nutz,T}\): 일일 이용시간  
-\(n_{Sp}\): 일일 순간최대취수량 발생횟수
-
-#### 2) 축열조 용량 > 1,000ℓ
-
-1,000ℓ를 초과하는 축열조는 여러 대의 분리된 축열조로 가정하여 계산합니다.  
-(각 축열조당 최대 1,000ℓ 적용)
-
----
-
-### (4) 가스 가열식
-
-가스 가열식 축열조의 저장 열손실:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = \frac{(55 - v_i)}{50} \cdot d_{Nutz,mth} \cdot q_{B,S} \)
-</a>
-
-Where  
-\(v_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)  
-\(d_{Nutz,mth}\): 월간 이용일수  
-\(q_{B,S}\): 책정-열손실  
-
-책정-열손실 \(q_{B,S}\)은 저장온수와 설치공간과의 평균 온도차가 50K일 때 측정된 것으로, 측정값이 없는 경우 다음과 같이 계산합니다:-
-
-<table>
-  <thead>
-    <tr>
-      <th>축열조 생산연도</th>
-      <th>책정-열손실</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-      <td>1995-</td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 2.0 + 0.033 \cdot V^{1.1} \)
-</a>
-</td>
-    </tr>
-    <tr>
-      <td>1985-1994</td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 2.0 + 0.033 \cdot V^{1.1} \)
-</a>
-</td>
-    </tr>
-    <tr>
-      <td>-1984</td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 1.4 \cdot (2.0 + 0.033 \cdot V^{1.1}) \)
-</a>
-</td>
-    </tr>
-  </tbody>
-</table>
-
-Where V: 축열조 용량
-
-단 위 식에서의 축열조 용량은 최대 500ℓ까지 적용되며, 500ℓ를 초과하는 용량은 여러 대의 최대 500ℓ 축열조로 구성된 것으로 간주하여 각 축열조의 열손실을 합산하여 계산합니다.
-
----
-
-## 2.3.2. 생산과정에서 발생하는 (월별) 열손실
-
-생산손실 \(Q_{w,g}\)는 급탕 방식, 즉:  
-- (1) 연료장전식 급탕보일러  
-- (2) 직접 가열식 축열조(가스)  
-- (3) 지역난방  
-에 따라 다음의 3가지 방식으로 계산됩니다:
-
----
-- (1) 연료장전식 급탕보일러  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,g} = Q_{w,g,100\%} \cdot d_{Nutz,mth} + Q_{B,w} \cdot \left( d_{Nutz,mth} - d_{h,r,B} \right) \)
-</a>
-
-- (2) 직접 가열식 축열조(가스)  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,g} = Q_{w,g,100\%} \cdot d_{Nutz,mth} \quad [\text{kWh}] \)
-</a>
-
-- (3) 지역난방  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,g} = H_{DS} \cdot (v_{DS} - v_i) \)
-</a>
-
----
-
-**(1) 연료장전식 급탕보일러**
-
-연료장전식 급탕보일러의 생산손실:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,g} = Q_{w,g,100\%} \cdot d_{Nutz,mth} + Q_{B,w} \cdot \left( d_{Nutz,mth} - d_{h,r,B} \right) \)
-</a>
-
-Where  
-\( Q_{w,g,100\%} \): 최대부하(정격성능)에서의 열손실  
-\(d_{Nuts,mth}\): 월별 이용일수  
-\(Q_{B,w}\): 대기모드(machine down-time)에서의 열손실 Q_B (Q_B,w와 정확히 매칭되는 설명은 부재)  
-\(d_{h,r,B}\): 분석-운전일수 (난방 에너지소요량의 월별 계산 운전일 참조)  
-
----
-
-\( Q_{w,g,100\%} \)는 다음과 같이 계산됩니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,g,100\%} = \left( f_{H_s/H} - \eta_{k,100\%} \right) / \eta_{k,100\%} \cdot Q_{w,outg} / d_{Nutz,mth} \)
-</a>
-
-Where  
-\(f_{Hs/Hi}\): 연료원에 따른 고위발열/저위발열의 비  
-\(\eta_{k,100\%}\): 찾는중 (maybe 정격성능효율)  
-\(Q_{w,outg}\): 급탕시스템 열 생산기기의 열 공급량  
-\(d_{Nutz,mth}\): 월별 이용일수  
-
-정격성능 효율 \( \eta_{k,100\%} \)은 테스트 온도 70℃에서의 보일러의 정격성능과 관련된 효율로, 다음 식을 따라 계산합니다.  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( \eta_{k,100\%} = (A + B \cdot \log(\dot{Q}_N)) / 100 \)
-</a>
- 
-Where  
-A, B: 효율계수  
-\(\dot{Q}_N\): 정격성능  
-
-> 이 식은 정격성능이 400kW인 경우까지 유효하며, 정격성능 \(\dot{Q}_N\)이 400kW를 초과할 경우 \(\dot{Q}_N\)=400kW로 적용합니다.  
-
-효율계수 A, B는 다음 표와 같습니다.  
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>보일러 계수표</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 85%;
-      font-family: "Malgun Gothic", sans-serif;
-      font-size: 14px;
-      text-align: center;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 6px 10px;
-      vertical-align: middle;
-    }
-  </style>
-</head>
-<body>
-
-<table>
-  <tr>
-    <th colspan="2">보일러 형식</th>
-    <th>연식</th>
-    <th>계수 A</th>
-    <th>계수 B</th>
-  </tr>
-  <tr>
-   <td rowspan="7">표준형 보일러</td>
-    <td rowspan="3">가스보일러</td>
-    <td>1978 이전</td>
-    <td>79.5</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>1978 ~ 1994</td>
-    <td>82.5</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>1994 이후</td>
-    <td>85</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td rowspan="4">연료분사식 보일러<br>(가스/기름)</td>
-    <td>1978 이전</td>
-    <td>80</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>1978 ~ 1986</td>
-    <td>82</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>1987 ~ 1994</td>
-    <td>84</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>1994 이후</td>
-    <td>85</td>
-    <td>2</td>
-  </tr>
-  <tr>
-  <td rowspan="5">저온 보일러</td>
-    <td rowspan="2">가스보일러</td>
-    <td>1978 ~ 1994</td>
-    <td>85.5</td>
-    <td>1.5</td>
-  </tr>
-  <tr>
-    <td>1994 이후</td>
-    <td>88.5</td>
-    <td>1.5</td>
-  </tr>
-  <tr>
-    <td rowspan="3">연료분사식 보일러<br>(가스/기름)</td>
-    <td>1987 이전</td>
-    <td>84</td>
-    <td>1.5</td>
-  </tr>
-  <tr>
-    <td>1987 ~ 1994</td>
-    <td>86</td>
-    <td>1.5</td>
-  </tr>
-  <tr>
-    <td>1994 이후</td>
-    <td>88.5</td>
-    <td>1.5</td>
-  </tr>
-  <tr>
-    <td rowspan="4">콘덴싱 보일러<br>(가스/기름)</td>
-    <td rowspan="3">일반</td>
-    <td>1987 이전</td>
-    <td>89</td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td>1987 ~ 1994</td>
-    <td>91</td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td>1994 이후</td>
-    <td>92</td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td>고효율</td>
-    <td>1999 이후</td>
-    <td>94</td>
-    <td>1</td>
-  </tr>
-</table>
-
-</body>
-</html>
+**- 열 생산기기 열에너지 공급량(\(Q_{C,outg,therm}\))**: 냉동기의 연간 냉열 공급량(\(Q_{C,outg,a}\))을 연간 평균 열성능비(\(ζ_{av}\))로 나누어 계산한다.
+<div align="center">$$
+Q_{C,\mathrm{outg},\mathrm{therm}} = \frac{Q_{C,\mathrm{outg},a}}{\zeta \cdot \mathrm{PLV}_{\mathrm{av}}}
+$$</div>
 
 
-정격성능 \(\dot{Q}_N\)은 동시에 가동되는 모든 보일러성능의 합이거나 순차가동에서 최대 보일러성능 중 큰 값으로 정합니다. 즉:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( \dot{Q}_N = \max\left( \sum \dot{Q}_{N,gleichzeitig},\ \dot{Q}_{vorrangig} \right) \)
-</a>
+**- 정격 열성능비(ζ)**: 정격 냉열 성능(\( \dot{Q}_{C,\text{outg}} \))을 정격 가열 성능(\( \dot{Q}_{C,\text{therm}} \))으로 나눈다.
+<div align="center">$$
+\zeta = \frac{\dot{Q}_{C,\mathrm{outg}}}{\dot{Q}_{C,\mathrm{therm}}}
+$$</div>
 
 
-> 만일 제품사양이 없는 경우 콤비보일러 여부에 따라 다음과 같은 표준치를 적용합니다:  
-> \(\dot{Q}_N\)=0.42(\(Q_{w,b,d}\)/0.036)^0.7  
-> 콤비보일러인 경우, <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( \dot{Q}_N = 24\ \text{kW} \)
-</a>
+**- 평균 연간 부분부하율(\(PLV_{av}\))의 결정**:
+건물 용도 프로필, 냉열 이용 종류(실내냉방/공조), 그리고 냉각수 제어 방식(불변/가변)을 고려하여 결정한다.
+여러 용도가 혼합된 경우, 각 용도별 냉열 공급량의 비중을 고려하여 가중 평균을 계산한다.
+실내 냉방과 공조 시스템이 병행될 경우, 에 따라 각 시스템의 공급량 비중을 고려한다.
+
+**- 연계 변수(Interfacing Variables)**:
+**월별 열 공급량(\(Q_{C,outg,therm,mth}\))**: 연간으로 계산된 총 열 공급량(\(Q_{C,outg,therm,a}\))은 월별 냉열 공급량의 비율에 따라 배분되어 난방 시스템 모듈(제 7장)로 전달된다 (최종보고서.pdf, p. 236).
+<div align="center">$$
+Q_{C,\mathrm{outg},\mathrm{therm},\mathrm{mth}} = Q_{C,\mathrm{outg},\mathrm{therm},a} \cdot \left( \frac{Q_{C,\mathrm{outg},\mathrm{mth}}}{Q_{C,\mathrm{outg},a}} \right) \tag{58}
+$$</div>
+
+**정격 가열 성능(\( \dot{Q}_{C,\text{therm}} \))**: 흡수식 냉동기를 구동하는 열원 기기(보일러 등)의 용량을 산정하기 위해 난방 시스템 모듈로 전달된다.
+<div align="center">$$
+\dot{Q}_{C,\mathrm{therm}} = \frac{\dot{Q}_{C,\mathrm{outg}}}{\zeta}
+$$</div>
 
 
 ---
 
-또한 \(Q_{B,w}\)는 다음과 같이 계산됩니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{B,w} = q_{B,w} \cdot \dot{Q}_N / \eta_{k,100\%} \cdot (t_{Nutz,T} - t_{w,100\%}) \cdot f_{Hö/Ht} \)
-</a>
+## 2.2.6. 재냉각에 대한 2차 에너지 소요량
+**개요**: 재냉각의 에너지 평가는 재냉각기의 기기 구성 특징에 바탕을 둔 전기에너지 요구량(\(q_{R,elektr}\))과 평균 이용률(\(f_{R,av}\))을 기반으로 한다.
 
-Where  
-\(q_{B,v}\)  
-\(\dot{Q}_N\): 정격성능  
-\( \eta_{k,100\%} \): 찾는중 (maybe 정격성능효율)  
-\(t_{Nutz,T}\): 일일 이용시간  
-\( t_{w,100\%} \): 정격성능에서의 급탕용 보일러의 일일 가동시간  
-\(f_{Hs/Hi}\): 연료원에 따른 고위발열/저위발열의 비  
+**- 재냉각의 2차 에너지 소요량(\(Q_{C,f,R,elektr}\))**:
+<div align="center">$$
+Q_{C,f,R,\mathrm{elektr}} = \dot{Q}_{R,\mathrm{outg}} \cdot q_{R,\mathrm{elektr}} \cdot f_{R,\mathrm{av}} \cdot t_{R,\mathrm{op}}
+$$</div>
+<p align="center">Q̇<sub>R,outg</sub>: 정격 재냉각 성능 [kW]</p>
 
-\(q_{B,v}\)는 다음과 같이 계산됩니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,w} = q_{B,70} \cdot (v_{g,m} - v_i) / (70 - 20) \)
-</a>
+<div align="center">$$
+\dot{Q}_{R,\mathrm{outg}} = \dot{Q}_{c,\mathrm{outg}} \cdot \left(1 + \frac{1}{\mathrm{EER}} \right)
+$$</div>
+<p align="center">압축식 냉동기</p>
 
-Where  
-\(q_{B,70}\): 책정 열손실  
-\(v_{g,m}\): 대기모드 상태에서의 평균 보일러 온도(순환: 50℃, 비순환: 40℃)  
-\(v_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)
-
----
-
-정격성능 \(\dot{Q}_N\)에서의 급탕용 보일러의 일일 가동시간 \( t_{w,100\%} \)는 다음 계산식을 따릅니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( t_{w,100\%} = Q_{w,outg} / (\dot{Q}_N \cdot d_{Nutz,mth}) \)
-</a>
-
-Where  
-\(Q_{w,outg}\): 급탕시스템 열 생산기기의 열 공급량  
-\(\dot{Q}_N\): 정격성능  
-\(d_{Nutz,mth}\): 월별 이용일수
-
-보일러의 책정열손실 \(q_{B,70}\)은 다음 식에 따라 계산됩니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,70} = (E \cdot (Q_N)^F)/100 \)
-</a>
-
-Where  
-\(\dot{Q}_N\): 정격성능  
-E, F: 책정열손실 계수  
-
-책정열손실 계수 E, F는 다음 표와 같습니다.  
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>보일러 계수 E, F</title>
-  <script type="text/javascript" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 95%;
-      font-family: "Malgun Gothic", sans-serif;
-      font-size: 14px;
-      text-align: center;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 6px;
-      vertical-align: middle;
-    }
-    td.left {
-      text-align: left;
-    }
-  </style>
-</head>
-<body>
-
-<table>
-  <tr>
-    <th>보일러형식</th>
-    <th>연식</th>
-    <th>계수 E</th>
-    <th>계수 F</th>
-  </tr>
-
-  <!-- 표준난방보일러 -->
-  <tr>
-    <td colspan="4">표준난방보일러</td>
-  <tr>
-  <tr>
-    <td rowspan="3">가스보일러</td>
-    <td>1978 이전</td><td>8.0</td><td>−0.27</td>
-  </tr>
-  <tr><td>1978 ~ 1994</td><td>7.0</td><td>−0.3</td></tr>
-  <tr><td>1994 이후</td><td>8.5</td><td>−0.4</td></tr>
-  <tr>
-    <td rowspan="3">연료분사식 보일러 (기름/가스)</td>
-    <td>1978 이전</td><td>9.0</td><td>−0.28</td>
-  </tr>
-  <tr><td>1978 ~ 1994</td><td>7.5</td><td>−0.31</td></tr>
-  <tr><td>1994 이후</td><td>8.5</td><td>−0.4</td></tr>
-
-  <!-- 저온보일러 -->
-  <tr>
-    <td colspan="4">저온보일러</td>
-  <tr>
-  <tr>
-    <td rowspan="2">가스보일러</td>
-    <td>1994 이전</td><td>6.0</td><td>−0.32</td>
-  </tr>
-  <tr><td>1994 이후</td><td>4.5</td><td>−0.4</td></tr>
-  <tr>
-    <td rowspan="1">콤비보일러</td>
-    <td>1994 이후</td>
-    <td colspan="2">\( q_{B,70^\circ C} = 0.022 \)</td>
-  </tr>
-    <tr>
-    <td rowspan="1">콤비보일러</td>
-    <td>1994 이후</td>
-    <td colspan="2">\( q_{B,70^\circ C} = 0.012 \)</td>
-  </tr>
-
-  <tr>
-    <td rowspan="2">연료분사식 보일러 (기름/가스)</td>
-    <td>1994 이전</td><td>7.0</td><td>−0.37</td>
-  <tr>
-  <tr><td>1994 이후</td><td>4.25</td><td>−0.4</td><tr>
-
-  <tr>
-    <td rowspan="2">콘덴싱 보일러 (기름/가스)</td>
-    <td>1994 이전</td><td>7.0</td><td>−0.37</td>
-  </tr>
-  <tr><td>1994 이후</td><td>4.0</td><td>−0.4</td></tr>
-
-  <tr>
-    <td rowspan="1">콤비보일러 (11kW, 18kW 및 24kW)</td>
-    <td>1994 이전</td><td colspan="2">\( q_{B,70^\circ C} = 0.022 \)</td>
-  </tr>
-  <tr>
-    <td rowspan="1">콤비보일러 (11kW, 18kW 및 24kW)</td>
-    <td>1994 이후</td><td colspan="2">\( q_{B,70^\circ C} = 0.012 \)</td>
-  </tr>
-
-</table>
-
-</body>
-</html>
+<div align="center">$$
+\dot{Q}_{R,\mathrm{outg}} = \dot{Q}_{c,\mathrm{outg}} \cdot \left(1 + \frac{1}{\zeta} \right)
+$$</div>
+<p align="center">흡수식 냉동기</p>
 
 
-> 한편 d_h,r,B > \(d_{Nuts,mth}\)인 경우 \(d_{h,r,B}\) - \(d_{Nuts,mth}\) = 0으로 가정합니다.
+\(q_{R,electr}\): 재냉각기의 고유 전기에너지 요구량 [kW/kW] <표3.2.8-26>
+\(f_{R,av}\): 재냉각의 평균 사용 계수
+\(t_{R,op}\): 재냉각 가동 시간 [h]
+
+**- 재냉각의 평균 이용률(\(f_{R,av}\))**: 증발식 재냉각기(\(f_{R,vk}\))와 건조식 재냉각기(\(f_{R,TK}\))는 건물 용도(용도프로필 참고)에 따라 다른 값을 가지며, 냉동기의 PLV 값 및 냉각수 제어 방식과 연계하여 선택한다.
+<div align="center">$$
+f_{R,\mathrm{av},n} = \frac{Q_{c,\mathrm{outg},a,n} \cdot f_{R,\mathrm{av}} + Q_{c^*,\mathrm{outg},a,n} \cdot f_{R,\mathrm{av}}}{Q_{C,\mathrm{outg},a}}
+$$</div>
+
+여러 용도가 혼합된 경우, 각 용도별 연간 냉열 공급량의 비중을 고려하여 평균 이용률을 계산한다.
+<div align="center">$$
+f_{R,\mathrm{av}} = \sum_{n=1}^{N} \left( \frac{Q_{C,\mathrm{outg},a,n} \cdot f_{R,\mathrm{av},n}}{Q_{C,\mathrm{outg},a}} \right)
+$$</div>
+
+
+**- 재냉각 가동시간(\(t_{R,op}\))**: 용도에 따른 공조 냉각 유닛과 실내냉방 시스템의 월간 요구시간의 연간 합 중 최대값을 선택한다.
+<div align="center">$$
+t_{R,\mathrm{op},n} = \max \left( \sum_{m=1}^{12} t_{c^*,\mathrm{op},mth},\ \sum_{m=1}^{12} t_{c,\mathrm{op},mth,n} \right)
+$$</div>
+
+여러 용도가 혼합된 경우, 각 용도에 대한 \(t_{R,op,n}\) 값들 중 최대값을 요구시간으로 정한다.
+<div align="center">$$
+t_{R,\mathrm{op}} = \max \left( t_{R,\mathrm{op},n} \right)
+$$</div>
+
+
+**- 전체 냉방 시스템 에너지 평가**:
+전체 냉방 시스템의 에너지 평가를 위해서는 생산, 분배, 전달 과정에서 발생하는 모든 요구량을 고려해야 한다. 시스템의 종류(간접/직접)에 따라 고려해야 할 항목이 다르며, 이는 <표 3.2.8-27>과 <표 3.2.8-28>을 참고한다.
 
 ---
 
-**(2) 직접 가열식 축열조(가스)**
+## 2.2.7. 에너지 소요량
+### 2.2.7.1. 냉열생산기 (냉동기)
+**- 압축식 냉동기에 대한 전력**: 압축식 냉동기에 대한 연간 전력량은 8.4.1절에 따라 모든 냉열 공급 단위의 합으로 계산된다.
+<div align="center">$$
+Q_{c,f,j,\mathrm{elektr}} = \sum Q_{c,f}
+$$</div>
 
-직접 가열식 축열조(가스)의 생산손실:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,g} = Q_{w,g,100\%} \cdot d_{Nutz,mth} \quad [\text{kWh}] \)
-</a>
+특성치-방법에서는 생산 손실을 특성치에 포함하므로
+<div>$$
+Q_{c,g} = Q_{c^*,g} = 0
+$$</div>이다.
 
-Where  
-\( Q_{w,g,100\%} \): 최대부하(정격성능)에서의 열손실  
-\(d_{Nuts,mth}\): 월별 이용일수  
-
-> 가스에 의해 직접 가열되는 축열조의 경우 고려되는 생산손실은 난방보일러의 경우와 동일합니다.  
-> 다만 대기모드에서의 열손실 \(Q_{B}\)(또는 \(Q_{B,w}\))은 가스 가열식 급탕용 축열조의 저장 열손실 \(Q_{w,s}\)에서 이미 고려한 바 있습니다.
-
-최대부하(정격성능)에서의 열손실 \( Q_{w,g,100\%} \)은 다음에 의해 계산됩니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,g,100\%} = \left( \frac{f_{H3/H} \cdot \eta_{100\%}}{\eta_{100\%}} \right) \cdot Q_{w,outg} / d_{Nutz,mth} \quad [\mathrm{kWh}] \)
-</a>
-
-Where  
-\(f_{Hs/Hi}\): 연료원에 따른 고위발열/저위발열의 비  
-\( \eta_{100\%} \): 찾는중 (maybe 정격성능효율, 82%)  
-\(Q_{w,outg}\): 급탕시스템 열 생산기기의 열 공급량  
-\(d_{Nutz,mth}\): 월별 이용일수
-
----
-
-**(3) 지역난방**
-
-지역난방의 생산손실:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,g} = H_{DS} \cdot (v_{DS} - v_i) \)
-</a>
-
-Where  
-\(H_{DS}\): 찾는중  
-\(v_{DS}\): 찾는중  
-\(v_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)
-
-한편 \(H_{DS}\)는:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( H_{DS} = B_{DS} \cdot \dot{V}_{DS}^{1/3} \)
-</a>
-
-Where  
-\(B_{DS}\): 찾는중  
-\(Φ_{DS}\): 지역난방기계실 성능
-
-\(B_{DS}\)의 값은 다음 표를 참조합니다.  
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>지역난방기계실 단열등급 표</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 80%;
-      font-family: "Malgun Gothic", sans-serif;
-      font-size: 14px;
-      text-align: center;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 6px 10px;
-      vertical-align: middle;
-    }
-    td.left {
-      text-align: left;
-    }
-  </style>
-</head>
-<body>
-
-<table>
-  <tr>
-    <th rowspan="3">지역난방<br>기계실</th>
-    <th>구분</th>
-    <th colspan="1">지역난방기계실 단열등급</th>
-  </tr>
-  <tr>
-    <td>2차에서의 단열<br>1차에서의 단열</td>
-    <td> 4    3    2    1<br> 5    4    3    2</td>
-  </tr>
-  <tr>
-    <td>온수, 저온<br>온수, 저온</td>
-    <td>3.5  4.0  4.4  4.9<br>3.1  3.5  3.9  4.3</td>
-  </tr>
-</table>
-
-</body>
-</html>
+냉열 생산에 적용된 재생 가능한 에너지 비율은 아래와 같이 계산된다.
+<div align="center">$$
+Q_{c,\mathrm{reg}} = Q_{c,\mathrm{outg}} - Q_{c,f}
+$$</div>
 
 
-\(v_{DS}\)는 다음을 따라 계산됩니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( \nu_{DS} = D_{DS} \cdot \nu_{prim,DS} + (1 - D_{DS}) \cdot \nu_{sek,DS} \)
-</a>
+**- 흡수식 냉동기에 대한 증기**:
+110℃ 이하 온도에서 필요한 열에너지는 #.에 따라 계산된다.
+<div align="center">$$
+Q_{c,f,j,\mathrm{therm}} = Q_{c,f}
+$$</div>
 
-Where  
-\(D_{DS}\)  
-\(v_{prim,DS}\)  
-\(v_{sek,DS}\)
+이때 사용되는 증기는 1차 에너지 측면에서 지역난방열과 동일하게 취급된다.
 
-- \(v_{prim,DS}\)는 지역난방 1차 온도를 의미합니다. (보고서에는 명시되어 있지 않음)  
-- \(v_{sek,DS}\)는 지역난방 2차 온도로 40℃ 또는 50℃ 값을 활용합니다.
-
-\(D_{DS}\)의 값은 \(v_{prim,DS}\)에 따라 다음 표를 참조합니다.  
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>지역난방기계실 해석 온도</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 70%;
-      font-family: "Malgun Gothic", sans-serif;
-      font-size: 14px;
-      text-align: center;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 6px 10px;
-    }
-  </style>
-</head>
-<body>
-
-<table>
-  <tr>
-    <th rowspan="1">지역난방기계실 종류</th>
-    <th colspan="1">1차 온도 (해석)<br><i>v<sub>P,DS</sub> (℃)</i></th>
-    <th rowspan="1"><i>D<sub>DS</sub></i></th>
-  </tr>
-  <tr>
-    <td>중온수<br>고온수</td>
-    <td>105<br>150</td>
-    <td>0.6<br>0.4</td>
-  </tr>
-</table>
-
-</body>
-</html>
-
-
----
-
-## 2.3.3. 재생열에너지(태양열 및 주변 열)
-
-급탕 에너지소요량 식:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,f} = Q_{w,outg} + Q_{w,g} - Q_{w,reg} \)
-</a>
-
-에서, 
-태양열 및 주변 열 등의 재생열에너지 \(Q_{w,reg}\)는 다음과 같이 계산됩니다:
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,reg} = Q_{w,sol} + Q_{w,in} \)
-</a>
-
-Where  
-\(Q_{w,sol}\): 급탕에 공급된 태양열시스템 공급 열량  
-\(Q_{w,in}\): 찾는중  
-
-> 급탕에 공급된 태양열시스템 공급 열량은 3.1. 태양열에서 다룹니다.
+### 2.2.7.2. 냉방시설과 냉동기에 대한 보조에너지
+냉방 시설 및 냉동기 가동에 필요한 연간 총 보조에너지는 실내 냉방 시스템과 공조 시스템을 위한 모든 설비의 보조에너지 합으로 계산된다.
+<div align="center">$$
+Q_{C,\mathrm{max}} = \sum Q_{c^*,\mathrm{aux},a} + \sum Q_{c,\mathrm{aux},a} = 
+\sum Q_{c,\mathrm{ce},\mathrm{aux},a} + \sum Q_{Z,\mathrm{aux},d,a} + \sum Q_{\mathrm{hr},f,\mathrm{aux},a} + \sum Q_{\mathrm{mh},f,\mathrm{aux},a} + \sum Q_{C,f,R,\mathrm{elektrisch}}
+$$</div>

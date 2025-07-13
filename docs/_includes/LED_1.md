@@ -5,5 +5,5 @@
      'width=800,height=600,scrollbars=yes,resizable=yes'
    ); return false;"
    class="equation-link">
-  \( k = \frac{a_R \cdot b_R}{h_R \cdot (a_R + b_R)} \) {{ auto_eq_number }}
+  \( k = \frac{a_R \cdot b_R}{h_R \cdot (a_R + b_R)} \)
 </a>
