@@ -194,7 +194,7 @@ $$
 
 > 혼합기(mixer)가 설치된 정온 보일러의 경우, 전달과 분배 과정에서 초과 온도 값 적용, 혼합기가 없는 정온 보일러의 평균 온도 = 70℃ 적용
 
-- 건물을 리모델링 하는 경우, 설계 온도는 맞춰질 수 있다. 새로운 자세한 설계가 수립되지 않은 경우, 아래 표의 설계 온도를 사용하도록 한다. 중간 값일 경우, 한 단계 높은 온도 쌍을 선택하도록 한다.
+- 건물이 리모델링 되었을 경우, 설계 온도는 조정할 수 있다. 새로운 자세한 설계가 수립되지 않은 경우, 아래 표의 설계 온도를 사용하도록 한다. 중간 값일 경우, 한 단계 높은 온도 쌍을 선택하도록 한다.
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -202,12 +202,16 @@ $$
   <meta charset="UTF-8">
   <title>설계 온도</title>
   <style>
+    body {
+      text-align: center; /* 전체 가운데 정렬 */
+    }
     table {
       border-collapse: collapse;
       width: 80%;
       font-family: "Malgun Gothic", sans-serif;
       font-size: 14px;
       text-align: center;
+      margin: 0 auto; /* 표를 가운데 배치 */
     }
     th, td {
       border: 1px solid black;
@@ -216,6 +220,8 @@ $$
   </style>
 </head>
 <body>
+
+<p><strong>&lt;설계온도&gt;</strong></p>
 
 <table>
   <tr>
@@ -249,6 +255,7 @@ $$
 
 </body>
 </html>
+
 
 - 축열조가 없는 열 생산기기의 경우 평균 공급/환수 온도는 <div>
 $$
@@ -415,3 +422,1249 @@ $$</div>
 Q_{h,ce,a} = \sum Q_{h,ce}
 $$</div>
 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>라디에이터 이용 효율</title>
+  <style>
+    body {
+      text-align: center; /* 페이지 전체 가운데 정렬 */
+    }
+    table {
+      border-collapse: collapse;
+      font-family: "Malgun Gothic", sans-serif;
+      font-size: 14px;
+      margin: 0 auto; /* 표 자체 가운데 정렬 */
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 6px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<p>&lt;표. 라디에이터의 부분 이용 효율 (실 높이 ≤ 4m)&gt;</p>
+
+<table>
+  <tr>
+    <th rowspan="2" colspan="2">매개변수</th>
+    <th colspan="4">이용 효율</th>
+  </tr>
+  <tr>
+    <th colspan="2"><i>&eta;<sub>L</sub></i></th>
+    <th><i>&eta;<sub>C</sub></i></th>
+    <th><i>&eta;<sub>B</sub></i></th>
+  </tr>
+  <tr>
+    <td rowspan="2">실내온도제어</td>
+    <td>제어 없음, 중앙에서 공급온도 제어</td>
+    <td colspan="2"></td>
+    <td>0.8</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>P-제어기 (2 K)</td>
+    <td colspan="2"></td>
+    <td>0.93</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="2">초과온도 (θ<sub>i</sub> = 20℃)</td>
+    <td rowspan="2">42.5 K (예로 70/55)</td>
+    <td>&eta;<sub>L1</sub></td>
+    <td>&eta;<sub>L2</sub></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>0.93</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="1">외부 벽체를 통한 열손실<br>(GF = 유리면)</td>
+    <td></td>
+    <td></td>
+    <td>0.95</td>
+    <td></td>
+    <td>1</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+
+- 초과 온도와 외부 벽체를 통한 열손실이 복합적으로 영향을 미치는 경우, 평균 효율을 사용한다.
+
+- 예시) 외벽 측에 위치한 라디에이터, 초과 온도 42.5 K, P-제어기 (2 K)일 때
+
+<div align="center">
+$$
+\eta_L = \frac{\eta_{L1} + \eta_{L2}}{2} = \frac{0.93 + 0.95}{2} = 0.94
+$$</div>
+
+<div align="center">
+$$
+\eta_C = 0.93
+$$</div>
+
+<div align="center">
+$$
+\eta_B = 1
+$$</div>
+
+<div align="center">
+$$
+\eta_{h,\text{ce}} = \frac{1}{4 - (\eta_L + \eta_C + \eta_B)} = \frac{1}{4 - (0.94 + 0.93 + 1)} = \frac{1}{1.13} = 0.88
+$$</div>
+
+- 간헐 운전 계수: \(f_{int}\) = 0.97 (지속 운전의 경우, \(f_{int}\) = 1)
+
+- 복사 영향 계수: \(f_{Radiant}\) = 1.0 
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>물 기반 난방 시스템의 효율</title>
+  <style>
+    body {
+      text-align: center; /* 페이지 전체 가운데 정렬 */
+    }
+    table {
+      border-collapse: collapse;
+      font-family: "Malgun Gothic", sans-serif;
+      font-size: 14px;
+      margin: 0 auto; /* 표 자체 가운데 정렬 */
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 6px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<p>&lt;표. 물 기반 난방 시스템의 효율 (실 높이 ≤ 4m)&gt;</p>
+
+<table>
+  <tr>
+    <th rowspan="2" colspan="2">매개변수</th>
+    <th colspan="4">부분이용 효율</th>
+  </tr>
+  <tr>
+    <th><i>&eta;<sub>L</sub></i></th>
+    <th><i>&eta;<sub>C</sub></i></th>
+    <th colspan="2"><i>&eta;<sub>B</sub></i></th>
+  </tr>
+  <tr>
+    <td rowspan="3">실내온도제어</td>
+    <td>열 매체: 물<br>제어 없음 (중앙 공급온도 제어)</td>
+    <td></td>
+    <td>0.78</td>
+    <td colspan="2"></td>
+  </tr>
+  <tr>
+    <td>PI-제어기</td>
+    <td></td>
+    <td>0.95</td>
+    <td colspan="2"></td>
+  </tr>
+  <tr>
+    <td>전기 난방<br>PI 제어기</td>
+    <td></td>
+    <td>0.93</td>
+    <td colspan="2"></td>
+  </tr>
+  <tr>
+    <td rowspan="4">시스템</td>
+    <td>바닥난방</td>
+    <td></td>
+    <td></td>
+    <td>&eta;<sub>B1</sub></td>
+    <td>&eta;<sub>B2</sub></td>
+  </tr>
+  <tr>
+    <td>습식</td>
+    <td>1</td>
+    <td></td>
+    <td>0.93</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>건식</td>
+    <td>1</td>
+    <td></td>
+    <td>0.96</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>건식 + 얇은 층</td>
+    <td>1</td>
+    <td></td>
+    <td>0.98</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="1">설치 면을 통한 열 손실</td>
+    <td>최소 단열된 바닥 난방</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>0.95</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+
+- 시스템과 설치 면을 통한 열 손실이 영향을 미치는 경우, 평균을 사용한다.
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>공기 난방에 대한 이용 효율</title>
+  <style>
+    body {
+      text-align: center; /* 페이지 전체 가운데 정렬 */
+    }
+    table {
+      border-collapse: collapse;
+      font-family: "Malgun Gothic", sans-serif;
+      font-size: 14px;
+      margin: 0 auto; /* 표 자체 가운데 정렬 */
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 6px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<p>&lt;표. 공기 난방에 대한 이용 효율 (공조 장치) (실 높이 ≤ 4m)&gt;</p>
+
+<table>
+  <tr>
+    <th rowspan="2">시스템 구성</th>
+    <th rowspan="2">제어 매개변수</th>
+    <th colspan="2"><i>&eta;<sub>h,ce</sub></i></th>
+  </tr>
+  <tr>
+    <th>낮은 등급 제어<br>(On/Off)</th>
+    <th>높은 등급 제어<br>(P 제어)</th>
+  </tr>
+  <tr>
+    <td rowspan="3">급기 가열 백업<br>(추가 가열 유닛)</td>
+    <td>실내온도</td>
+    <td>0.82</td>
+    <td>0.87</td>
+  </tr>
+    <tr>
+    <td>실내온도<br>(급기 온도 다단 제어)</td>
+    <td>0.88</td>
+    <td>0.90</td>
+  </tr>
+  </tr>
+    <tr>
+    <td>배기 온도</td>
+    <td>0.81</td>
+    <td>0.85</td>
+  </tr>
+  <tr>
+    <td rowspan="1">순환 공기 가열<br>(인덕션 유닛, 팬코일 유닛)</td>
+    <td>실내온도</td>
+    <td>0.89</td>
+    <td>0.93</td>
+  </tr>
+  
+</table>
+
+</body>
+</html>
+
+
+- 실 높이 4m 이상 공간에 대한 이용 효율 (대형 홀 건물): 아래 표
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>4m ≤ 실 높이 ≤ 10m 공간에 대한 이용 효율</title>
+  <style>
+    body {
+      text-align: center; /* 페이지 전체 가운데 정렬 */
+    }
+    table {
+      border-collapse: collapse;
+      font-family: "Malgun Gothic", sans-serif;
+      font-size: 14px;
+      margin: 0 auto; /* 표 자체 가운데 정렬 */
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 6px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<p>&lt;표. 4m ≤ 실 높이 ≤ 10m 공간에 대한 이용 효율&gt;</p>
+
+<table>
+  <tr>
+    <th rowspan="3" colspan="4">매개변수</th>
+    <th colspan="6">부분이용 효율</th>
+  </tr>
+  <tr>
+    <th colspan="4"><i>&eta;<sub>L</sub></i></th>
+    <th rowspan="2"><i>&eta;<sub>C</sub></i></th>
+    <th rowspan="2"><i>&eta;<sub>B</sub></i></th>
+  </tr>
+    <tr>
+    <th>4m</th>
+    <th>6m</th>
+    <th>8m</th>
+    <th>10m</th>
+  </tr>
+  <tr>
+    <td rowspan="2">실내온도제어</td>
+    <td colspan="3">제어 없음</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>0.8</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">PI-제어기</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>0.97</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="8">난방 시스템</td>
+    <td rowspan="4">온풍 난방</td>
+    <td rowspan="2">일반 유도 비율 분배</td>
+    <td>측면 취출</td>
+    <td>0.98</td>
+    <td>0.94</td>
+    <td>0.88</td>
+    <td>0.83</td>
+    <td></td>
+    <td>1</td>
+  <tr>
+  <tr>
+    <td>상부 취출</td>
+    <td>0.99</td>
+    <td>0.96</td>
+    <td>0.91</td>
+    <td>0.87</td>
+    <td></td>
+    <td>1</td>
+  <tr>
+  <tr>
+    <td rowspan="2">추가적으로 수직적<br>재순환 제어가 되는 분배<br>(상부 고임열 재순환)</td>
+    <td>측면 취출</td>
+    <td>0.99</td>
+    <td>0.97</td>
+    <td>0.94</td>
+    <td>0.91</td>
+    <td></td>
+    <td>1</td>
+  <tr>
+  <tr>
+    <td>상부 취출</td>
+    <td>0.99</td>
+    <td>0.98</td>
+    <td>0.96</td>
+    <td>0.93</td>
+    <td></td>
+    <td>1</td>
+  <tr>
+  <tr>
+    <td colspan="3">복사 난방<br>(천정 복사 방열관, 복사열 파이프, 복사열 히터)</td>
+    <td>1</td>
+    <td>0.99</td>
+    <td>0.97</td>
+    <td>0.96</td>
+    <td></td>
+    <td>1</td>
+  <tr>
+  <tr>
+    <td rowspan="3">바닥 난방<br>(높은 단열 수준)</td>
+    <td></td>
+    <td>1</td>
+    <td>0.99</td>
+    <td>0.97</td>
+    <td>0.96</td>
+    <td></td>
+    <td></td>
+  <tr>
+  <tr>
+    <td>구조 일체형</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>0.95</td>
+  <tr>
+  <tr>
+    <td>열적 분리됨</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>1</td>
+  <tr>
+</table>
+
+</body>
+</html>
+
+
+
+### 2.1.4.2. 열 전달 보조에너지
+
+- 존으로 열을 전달하는 과정에서 제어기기, 팬, 펌프 등의 전력 소비를 보조에너지로 정의하며 보조에너지 소요량(\(Q_{h,ce,aux}\))은 아래와 같이 계산한다. 
+
+<div align="center">$$
+Q_{h,ce,aux} = Q_C + Q_{V,P}
+$$</div>
+
+\( Q_C \) = 제어기기의 보조에너지  
+\( Q_{V,P} \) = 팬, 펌프 등의 보조에너지  
+
+<div align="center">$$
+Q_C = P_C \cdot d_{mth} \cdot \frac{24}{1000}
+$$</div>
+
+\( P_C \) = 제어기기의 정격 전력  
+
+<div align="center">$$
+Q_{V,P} = (P_V \cdot n_V + P_P \cdot n_P) \cdot \frac{t_{h,rL}}{1000}
+$$</div>
+
+\( n_V \) = 팬 개수  
+\( n_P \) = 펌프 개수  
+\( P_V \) = 팬 정격 전력 소비  
+\( P_P \) = 펌프의 정격 전력 소비  
+
+펌프의 정격 전력 소비 데이터가 없는 경우:
+
+<div align="center">$$
+P_P = 50 \cdot \dot{Q}_{LH}^{0.08}
+$$</div>
+
+\( \dot{Q}_{LH} \) = 공기가열 유닛(Heating coil)의 정격 전력 소비  
+
+
+- 제어기기, 팬, 펌프의 정격 전력 소비는 제품 사양을 참조하거나 아래 표의 값을 사용한다. 
+
+- 팬/펌프의 운전 시간은 난방 시스템과 같다고 가정한다.
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>제어기기의 보조에너지 표준 값</title>
+  <style>
+    body {
+      text-align: center; /* 페이지 전체 가운데 정렬 */
+    }
+    table {
+      border-collapse: collapse;
+      font-family: "Malgun Gothic", sans-serif;
+      font-size: 14px;
+      margin: 0 auto; /* 표 자체 가운데 정렬 */
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 6px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<p>&lt;표. 제어기기의 보조에너지 표준 값&gt;</p>
+
+<table>
+  <tr>
+    <th colspan="2">매개변수</th>
+    <th>전력 (W) (구동 시)</th>
+  </tr>
+  <tr>
+    <td rowspan="3">P<sub>C</sub></td>
+    <td>전기모터 구동식 전기적 제어</td>
+    <td>0.1</td>
+  </tr>
+  <tr>
+    <td>전기열 구동식 전기적 제어</td>
+    <td>0.1</td>
+  </tr>
+  <tr>
+    <td>전자기 구동식 전기적 제어</td>
+    <td>0.1</td>
+  </tr>
+
+</table>
+
+</body>
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>급기 팬의 보조 에너지 표준 값</title>
+  <style>
+    body {
+      text-align: center; /* 페이지 전체 가운데 정렬 */
+    }
+    table {
+      border-collapse: collapse;
+      font-family: "Malgun Gothic", sans-serif;
+      font-size: 14px;
+      margin: 0 auto; /* 표 자체 가운데 정렬 */
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 6px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<p>&lt;표. 급기 팬의 보조 에너지 표준 값 (실 높이 ≤ 4m)&gt;</p>
+
+<table>
+  <tr>
+    <th colspan="2">매개변수</th>
+    <th>전력</th>
+  </tr>
+  <tr>
+    <td rowspan="4">P<sub>V</sub></td>
+    <td>팬 코일 유닛</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>전기 가열식 팬 코일 유닛</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>동적 방열식 축열 난방</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td>지속 및 동적 방열식 축열 난방</td>
+    <td>12</td>
+  </tr>
+
+
+</table>
+
+</body>
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>표. 팬 코일 유닛의 용량에 따른 성능 실례</title>
+  <style>
+    body {
+      text-align: center; /* 페이지 전체 가운데 정렬 */
+    }
+    table {
+      border-collapse: collapse;
+      font-family: "Malgun Gothic", sans-serif;
+      font-size: 14px;
+      margin: 0 auto; /* 표 자체 가운데 정렬 */
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 6px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<p>&lt;표. 팬 코일 유닛의 용량에 따른 성능 실례&gt;</p>
+
+<table>
+  <tr>
+    <th>구분</th>
+    <th>FC-200</th>
+    <th>FC-300</th>
+    <th>FC-400</th>
+    <th>FC-600</th>
+    <th>FC-800</th>
+  </tr>
+  <tr>
+    <td>P<sub>V</sub> (W)</td>
+    <td>25</td>
+    <td>35</td>
+    <td>45</td>
+    <td>65</td>
+    <td>90</td>
+  </tr>
+
+
+</table>
+
+</body>
+
+
+
+### 2.1.4.3. 중앙 온수 난방 분배 배관망의 열 손실
+
+- 중앙 온수 난방 시스템의 분배 과정에서 **배관망의 열 손실(\(Q_{h,d}\))**은 열 생산기기에서 생산된 온수가 각 존까지 배관망을 따라 이동하는 동안 주변으로의 열 손실이다.
+
+<div align="center">
+$$
+Q_{h,d} = \sum \left[ U_i \cdot (\theta_{HK,m} - \theta_i) \cdot L_i \cdot t_{h,rL,i} \right]
+$$</div>
+
+\(U_{i}\) = 열관류율
+
+공조난방 시스템에서 가열 유닛이 가열되는 경우, 평균 열매체 온도(\(θ_{h*}\))와 공조 시스템 운전시간(\(t_{h*,op}\))를 사용한다.
+
+평균 열매체 온도(\(θ_{r,Nutz}\))와 시스템 운전시간(\(t_{c,op}\))를 사용한다. 
+
+
+- **비제어적 열획득(Q_I,h,d)**: 배관망이 존을 통과할 경우, 통과한 구간 i의 배관망에서 발생하는 열 손실은 존의 에너지 요구량 분석에서 비제어적 열 획득에 포함된다.
+\(Q_{I,h,d,i}\) = \(Q_{h,d,i}\)
+
+- **배관 길이(L) 산정**: 배관 길이는 기본적으로 배관 도면을 바탕으로 산정한다. 배관망 주변 온도는 2.1.2.4에서 설정한 값을 적용하며, 없을 경우 아래 표에서 채택한다. 배관망은 V, S, A,의 3가지 범위로 구분해 구성한다. V는 생산기기로부터 주관까지의 수평 분배, S는 지관, A는 실내 방열기까지의 차단 가능한 말단 배관을 의미한다. \(L_{G}\), \(B_{G}\), \(h_{G}\), \(n_{G}\)는 각각 건물의 가장 긴 세로 길이, 넓이, 층 수, 층 높이이다.
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>배관망 표준값</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+    body {
+      font-family: "Malgun Gothic", sans-serif;
+      text-align: center;
+    }
+    table {
+      border-collapse: collapse;
+      margin: auto;
+      width: 90%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 6px 10px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    th {
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+
+<h3>&lt;표. 배관망에 대한 표준 값&gt;</h3>
+
+<table>
+  <tr>
+    <th rowspan="1">매개변수</th>
+    <th rowspan="1">표기</th>
+    <th rowspan="1">단위</th>
+    <th>범위 V</th>
+    <th>범위 S</th>
+    <th>범위 A</th>
+  </tr>
+  <tr>
+    <td>주변 온도</td>
+    <td>\( \theta_i \)</td>
+    <td>℃</td>
+    <td colspan="3">2.1 에서 설정된 값</td>
+  </tr>
+  <tr>
+    <td>난방 주기가 아닐 때 주변 온도</td>
+    <td>\( \theta_i \)</td>
+    <td>℃</td>
+    <td colspan="3">22 ℃</td>
+  </tr>
+  <tr>
+    <td>난방 주기일 때 주변 온도</td>
+    <td>\( \theta_i \)</td>
+    <td>℃</td>
+    <td colspan="3">비 난방 범위 13 ℃<br>난방 범위 20 ℃</td>
+  </tr>
+  <tr>
+    <th colspan="6">이중배관 난방</th>
+  </tr>
+  <tr>
+    <td>외부에 놓인 지관의 경우 배관 길이</td>
+    <td>\( L \)</td>
+    <td>m</td>
+    <td>\( 2 \cdot L_G + 0.01625 \cdot G^2 \)</td>
+    <td>\( 0.025 \cdot L_G \cdot B_G \cdot h_G \cdot n_G \)</td>
+    <td>\( 0.55 \cdot L_G \cdot B_G \cdot n_G \)</td>
+  </tr>
+  <tr>
+    <td>내부에 놓인 지관의 경우 배관 길이</td>
+    <td>\( L \)</td>
+    <td>m</td>
+    <td>\( 2 \cdot L_G + 0.0325 \cdot B_G + 6 \)</td>
+    <td>\( 0.025 \cdot L_G \cdot B_G \cdot h_G \cdot n_G \)</td>
+    <td>\( 0.55 \cdot L_G \cdot B_G \cdot n_G \)</td>
+  </tr>
+
+  <tr>
+    <th colspan="6">단일배관 난방</th>
+  </tr>
+  <tr>
+    <td>내부의 놓인 지관의 경우 배관 길이</td>
+    <td>\( L \)</td>
+    <td>m</td>
+    <td>\( 2 \cdot L_G + 0.0325 \cdot B_G + 6 \)</td>
+    <td>\( 0.025 \cdot L_G \cdot B_G \cdot h_G \cdot n_G \)</td>
+    <td>\( 0.1 \cdot L_G \cdot B_G \cdot (L_G + B_G) \cdot n_G \)</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+
+
+- **배관 열관류율(U)**: 배관의 단열재 사양에 따라 결정되며, 정보가 없는 경우 건물의 준공 연도와 배관 위치를 기준으로 아래 표의 표준값을 사용한다.
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>배관의 열관류율 표</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+    body {
+      font-family: "Malgun Gothic", sans-serif;
+      text-align: center;
+    }
+    table {
+      border-collapse: collapse;
+      margin: auto;
+      width: 90%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 6px 10px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    th {
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+
+<h3>&lt;표. 배관의 열관류율 \( U_i \) 표준값&gt;</h3>
+
+<table>
+  <tr>
+    <th rowspan="2">건물 준공연도</th>
+    <th rowspan="1">분배</th>
+    <th colspan="2">외부 설치된 수직배관</th>
+    <th colspan="2">내부 설치된 수직 배관</th>
+  </tr>
+  <tr>
+    <td>V</td><td>S</td><td>A</td><td>S</td><td>A</td>
+  </tr>
+  <tr>
+    <td>1995 이후</td>
+    <td>0.2</td><td>0.255</td><td>0.255</td><td>0.255</td><td>0.255</td>
+  </tr>
+  <tr>
+    <td>1980~1995</td>
+    <td>0.2</td><td>0.4</td><td>0.4</td><td>0.3</td><td>0.4</td>
+  </tr>
+  <tr>
+    <td>1980 이전</td>
+    <td>0.4</td><td>0.4</td><td>0.4</td><td>0.4</td><td>0.4</td>
+  </tr>
+
+  <tr><th colspan="6">비단열 배관</th></tr>
+
+  <tr>
+    <td>\( A_{NGF} \leq 200 \, \text{m}^2 \)</td>
+    <td>1</td><td>1</td><td>1</td><td>1</td><td>1</td>
+  </tr>
+  <tr>
+    <td>\( 200 \, \text{m}^2 \lt A_{NGF} \leq 500 \, \text{m}^2 \)</td>
+    <td>2</td><td>2</td><td>2</td><td>2</td><td>2</td>
+  </tr>
+  <tr>
+    <td>\( A_{NGF} > 500 \, \text{m}^2 \)</td>
+    <td>3</td><td>3</td><td>3</td><td>3</td><td>3</td>
+  </tr>
+  <tr>
+    <td>외벽 내 설치</td>
+    <td></td><td></td>
+    <td>전체 열공급 / <br>실내 이용 가능한 열공급</td>
+    <td></td><td></td>
+  </tr>
+   <tr>
+    <td>외벽 비단열</td>
+    <td></td><td></td>
+    <td>1.35/0.8</td>
+    <td></td><td></td>
+  </tr>
+   <tr>
+    <td>외벽</td>
+    <td></td><td></td>
+    <td>1/0.9</td>
+    <td></td><td></td>
+  </tr>
+   <tr>
+    <td>외부단열</td>
+    <td></td><td></td>
+    <td></td>
+    <td></td><td></td>
+  </tr>
+  <tr>
+    <td>\( \text{외벽 } U = 0.4 \, \text{W/m}^2\cdot \text{K} \)</td>
+    <td></td><td></td>
+    <td>0.785/0.55</td>
+    <td></td><td></td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+
+---
+
+### 2.1.4.4. 배관망 순환펌프 보조에너지
+
+- **분배 배관망 보조에너지(\(Q_{h,d,aux}\)) 산정**: 순환 펌프의 에너지 소비량은 분배 배관망의 필요 수력학적 에너지 요구량과 히트펌프 운전에 대한 소비지수를 근거로 산정한다.
+
+<div align="center">$$
+Q_{h,d,aux} = W_{h,d,hydr} \cdot e_{h,d,aux}
+$$</div>
+
+\( W_{h,d,hydr} \) = 수력학적 에너지 요구량  
+\( = \frac{P_{\text{pump}}}{1000} \cdot \beta_{h,d} \cdot t_h \)
+
+\( e_{h,d,aux} \) = 히트펌프 운전에 대한 소비지수  
+\( = C_{P1} + C_{P2} \cdot \beta_{h,d}^{-1} \)
+
+
+
+- 펌프의 정격 성능은 제품 사양 정보로부터 계산할 수 있다.
+
+<div align="center">$$
+Q_{h,d,aux} = \frac{P_{\text{pump}}}{1000} \cdot \beta_{h,d} \cdot t_h \cdot \left( C_{P1} + C_{P2} \cdot \beta_{h,d}^{-1} \right)
+$$</div>
+
+\(C_{P1}\), \(C_{P2}\) = 보조에너지 계산을 위한 상수
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>펌프 제어 계수 표</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async 
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+    body {
+      font-family: "Malgun Gothic", sans-serif;
+      text-align: center;
+    }
+    table {
+      border-collapse: collapse;
+      margin: auto;
+      width: 70%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 6px 10px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    th {
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+
+<h3>&lt;표. 펌프 제어에 따른 \( C_{P1}, C_{P2} \)&gt;</h3>
+
+<table>
+  <tr>
+    <th>펌프 제어</th>
+    <th>\( C_{P1} \)</th>
+    <th>\( C_{P2} \)</th>
+  </tr>
+  <tr>
+    <td>제어 안함</td>
+    <td>0.25</td>
+    <td>0.75</td>
+  </tr>
+  <tr>
+    <td>\( \Delta p_{\text{const}} \)</td>
+    <td>0.75</td>
+    <td>0.25</td>
+  </tr>
+  <tr>
+    <td>\( \Delta p_{\text{variable}} \)</td>
+    <td>0.9</td>
+    <td>0.1</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+
+- **간헐적 운전 시 펌프 보조에너지**: 시스템이 야간/주말에 감소/정지 같은 간헐적 운전할 경우 펌프 에너지 소비량 또한 시간 비율을 반영해야 한다.
+
+<div align="center">
+$$
+Q_{h,d,aux} = W_{h,d,aux} \cdot e_{h,d,aux} \cdot \frac{1.03 \cdot t_{h,rL} + f_{P,A} \cdot (t_h - t_{h,rL})}{t_h}
+$$</div>
+
+\( f_{P,A} \) = 펌프 감소/정지 운전 보정 계수 
+
+감소 가동: \( 0 \leq f_{P,A} \leq 1 \), 표준값 0.6  
+
+정지 가동: \( f_{P,A} = 0 \)
+
+
+
+### 2.1.4.5. 저장 과정 열손실
+
+- **저장 열손실 (\( Q_{h,s} \))**: 저장 탱크의 열 손실은 아래와 같이 정의한다.
+
+<div align="center">
+$$
+Q_{h,s} = f_{\text{verbindung}} \cdot \left( \frac{\theta_{h,s} - \theta_i}{45} \right) \cdot d_{h,\text{mth}} \cdot q_{B,S}
+$$</div>
+
+\( f_{\text{verbindung}} \) (열 생산기기 - 저장탱크 연결 배관 열 손실)  
+
+열 생산기기와 저장 탱크 위치가 동일할 때: \( f_{\text{verbindung}} = 1.2 \) 
+
+열 생산기기와 저장 탱크 위치가 다를 때: #.4.4의 배관손실처럼 계산  
+
+
+\( q_{B,S} \) = 일일 열 손실 (탱크 내부 물 - 설치 공간 간 평균 온도차 45 K 기준)  
+
+\( q_{B,S} = 0.4 + 0.14 \cdot V^{0.45} \)
+
+- **비제어적 열획득**: 축열조가 난방 중인 존 내에 설치된 경우, 이 손실은 해당 존의 비제어적 열획득으로 고려된다.  
+
+<div align="center">$$
+Q_{I,h,s} = Q_{h,s}
+$$</div>
+
+
+- **저장 탱크용 펌프 보조에너지 (\( Q_{h,s,aux} \))**: 축열조 운전을 위한 별도의 펌프가 있는 경우, 펌프의 보조에너지 소비량은 아래와 같다.
+
+<div align="center">$$
+Q_{h,s,aux} = \left( \frac{P_{\text{Pumpe}}}{1000} \right) \cdot t_P
+$$</div>
+
+\( P_{\text{Pumpe}} \) = 펌프의 정격 전력 소비  
+\( t_P = \beta_{h,s} \cdot 24 \cdot d_{h,\text{mth}} \) (열 생산기기와 동시 가동될 경우)
+
+---
+
+### 2.1.4.6. 열 생산기기(보일러)의 에너지 공급량(Heat output)  
+
+- 난방 시스템에 태양열 시스템이나 공조 시설 등으로부터 열이 공급되면, 난방 시스템에서 요구하는 추가 열량을 보일러와 같은 열 생산기기로 공급해야 한다.  
+이를 **생산기기 잔여 열 공급량** (\( Q^*_h \)) 이라고 정의하고 아래와 같이 계산한다.
+
+<div align="center">$$
+Q^*_h = Q_{h,\text{outg}} - Q_{h,\text{sol}} - Q_{rv,h,\text{outg}}
+$$</div>
+
+- 보일러가 여러 대 적용된 경우, 공급되는 열량은 차례대로 계산한다.  
+난방과 급탕이 하나의 보일러로 공급될 경우, 난방 운전시간에서 급탕을 위한 가동시간을 차감한다.  
+난방/급탕/공조를 위해 요구되는 보일러의 최대 성능은 동시 가동할 경우 모든 보일러 성능의 합 또는 순차 가동의 최대 보일러 성능으로부터 정한다.
+
+<div align="center">$$
+\dot{Q}_N = \max \left( \sum \dot{Q}_{N,\text{gleichzeitig}}, \dot{Q}_{\text{Vorrang}} \right)
+$$</div>
+
+
+---
+
+#### 2.1.4.6.1. 난방 보일러
+
+
+난방 열 생산 과정의 열손실 (\( Q_{h,g} \))은 보일러 종류에 따라 계산된다.  
+보일러의 정격 성능은 난방 배관망으로의 평균 열 공급성능 (\( \dot{Q}_{d,in} \))에 의해 결정된다.  
+단일/동시/순차 가동 시 보일러의 부하율은 아래와 같다.
+
+단일 보일러 부하율 (\( \beta_h \)):  
+<div align="center">
+$$
+\beta_h = \frac{ \dot{Q}_{d,in} }{ \dot{Q}_N }
+$$</div>
+
+다수 보일러 동시 가동 시 부하율 (\( \beta_{h,i} \)):  
+<div align="center">
+$$
+\beta_{h,i} = \frac{ \dot{Q}_{d,in} }{ \sum \dot{Q}_{N,j} }
+$$</div>
+
+다수 보일러 순차 가동 시 부하율 (\( \beta_{h,n} \)):  
+<div align="center">
+$$
+\beta_{h,n} = \frac{ \dot{Q}_{d,in} - \sum \dot{Q}_{N,n-1} }{ \dot{Q}_{N,n} } \quad (\dot{Q}_{d,in} < \sum \dot{Q}_{N,n} \text{일 경우})
+$$</div>
+
+---
+
+- **연료장전식 난방 보일러의 열 생산과정에서 손실 (\( Q_{h,g} \)) 및 보조에너지 (\( Q_{h,g,aux} \))**:  
+보일러의 열 생산과정에서 발생하는 열 손실 (\( Q_{h,g} \))과 보조에너지 (\( Q_{h,g,aux} \))는  
+보일러의 정격 생산 성능 (\( \dot{Q}_N \)), 정격 운전일 때 효율 (\( \eta_{K,100\%} \)),  
+부분 부하 효율 (\( \eta_{K,30\%} \)), 측정 손실 (\( q_{B,70} \)), 전기적 성능 (\( P_{aux} \)) 등으로부터 계산된다.
+
+**일일 열 생산손실 (\( Q_{h,g} \)):**  
+<div align="center">$$
+Q_{h,g} = \sum Q_{h,g,v,i} \cdot d_{h,rB}
+$$</div>
+
+조건별 계산:  
+- \( 0 < \beta_{h,i} \leq \beta_{K,pl} \) 일 경우:  
+  <div align="center">$$
+  Q_{h,g,v,i} = \left( \left( \frac{ \beta_{h,i} }{ \beta_{K,pl} } \cdot \dot{Q}_{v,g,pl} - \dot{Q}_{B,h} \right) + \dot{Q}_{B,h} \right) \cdot (t_{h,rL} - t_{w,100\%})
+  $$</div>
+
+- \( \beta_{K,pl} < \beta_{h,i} < 1.0 \) 일 경우:  
+  <div align="center">$$
+  Q_{h,g,v,i} = \frac{ \beta_{h,i} - \beta_{K,pl} }{ 1 - \beta_{K,pl} } \cdot (\dot{Q}_{V,g,100\%} - \dot{Q}_{V,g,pl}) \cdot (t_{h,rL} - t_{w,100\%})
+  $$</div>
+
+- \( \beta_{K,pl} = 0.3 \) (기름 & 가스 보일러), \( \beta_{K,100\%} = 1.0 \)  
+- \( t_{w,100\%} = \frac{Q_{w,outg}}{ \dot{Q}_N \cdot d_{\text{Nutz,mth}} } \) (참조: #.#.#)
+
+---
+
+**평균 열 공급성능 (\( \dot{Q}_{d,in} \)):**  
+- 난방 또는 난방/급탕 시:  
+  <div align="center">$$
+  \dot{Q}_{d,in} = \frac{ Q_{h,outg} }{ d_{h,rB} \cdot (t_{h,r,L,T} - t_{w,100\%}) }
+  $$</div>
+
+- 난방/급탕/공조 시:  
+  <div align="center">$$
+  \dot{Q}_{d,in} = \sum \left( \frac{ Q_{h,outg} }{ t_{\text{Betrieb,K}} - t_{w,100\%} } \cdot d_{\text{Nutz,mth}} \right)
+  $$</div>
+
+---
+
+**보일러 손실성능:**  
+- 대기 손실 성능 (\( \dot{Q}_{B,h} \)):  
+  <div align="center">$$
+  \dot{Q}_{B,h} = q_{B,v} \cdot \left( \frac{ \dot{Q}_N }{ \eta_{K,100\%} } \right) \cdot f_{Hs/Hi}
+  $$</div>
+
+- \( q_{B,v} = q_{B,70} \cdot \frac{ \theta_{HK,m} - \theta_i }{ 70 - 20 } \)
+
+- 전부하 손실 성능:  
+  <div align="center">$$
+  \dot{Q}_{V,g,100\%} = \frac{ f_{Hs/Hi} - \eta_{K,100\%,Betrieb} }{ \eta_{K,100\%,Betrieb} } \cdot \dot{Q}_N
+  $$</div>
+
+- 부분 부하 손실 성능:  
+  <div align="center">$$
+  \dot{Q}_{V,g,pl} = \frac{ f_{Hs/Hi} - \eta_{K,pl\%,Betrieb} }{ \eta_{K,pl\%,Betrieb} } \cdot \beta_{K,pl} \cdot \dot{Q}_N
+  $$</div>
+
+- 효율 보정식:  
+  \( \eta_{K,100\%,Betrieb} = \eta_{K,100\%} + G \cdot (\theta_{g,\text{test,100}} - \theta_{HK,m}) \)  
+  \( \eta_{K,pl\%,Betrieb} = \eta_{K,pl\%} + H \cdot (\theta_{g,\text{test,pl}} - \theta_{HK,m}) \)
+
+---
+
+**비제어적 열 유입 (\( Q_{I,h,g} \)):**  
+<div align="center">$$
+Q_{I,h,g} = q_{s,v} \cdot \frac{ \dot{Q}_N }{ \eta_{K,100\%} } \cdot (t_{h,RL,T} - t_{w,100\%}) \cdot d_{h,rB}
+$$</div>
+
+- \( q_{s,v} = 0.5 \cdot q_{B,v} \) (가스보일러)  
+- \( q_{s,v} = 0.75 \cdot q_{B,v} \) (그 외 모든 보일러)
+
+---
+
+**보조에너지 (\( Q_{h,g,aux} \)):**  
+<div align="center">$$
+Q_{h,g,aux} = \sum \left( P_{h,g,aux,i} \cdot \left( t_{h,RL} - t_{w,100\%} \cdot \frac{ d_{\text{mth}} \cdot d_{\text{Nutz,a}} }{365} \right) + P_{aux,SB} \cdot (24 \cdot d_{\text{mth}} - t_{h,RL}) \right)
+$$</div>
+
+조건별 보조 전력 소비:
+- \( 0 < \beta_{h,i} \leq \beta_{K,pl} \):  
+  <div align="center">$$
+  P_{h,g,aux,i} = \frac{ \beta_{h,i} }{ \beta_{K,pl} } \cdot (P_{aux,pl,i} - P_{aux,SB}) + P_{aux,SB}
+  $$</div>
+
+- \( \beta_{K,pl} < \beta_{h,i} < 1.0 \):  
+  <div align="center">$$
+  P_{h,g,aux,i} = \frac{ \beta_{h,i} - \beta_{K,pl} }{ 1 - \beta_{K,pl} } \cdot (P_{aux,100} - P_{aux,pl}) + P_{aux,pl}
+  $$</div>
+
+---
+
+**P_aux 계산식:**  
+- 표준-난방 보일러  
+  - 가스 보일러:  
+    \( P_{aux,100} = P_{aux,p} = \frac{0.148 \cdot \dot{Q}_N + 40}{1000} \)
+
+  - 분무식 보일러 (가스/기름):  
+    \( P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48} \),  
+    \( P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48} \)
+
+- 저온 보일러  
+  - 가스 보일러:  
+    \( P_{aux,100} = P_{aux,pl} = \frac{0.148 \cdot \dot{Q}_N + 40}{1000} \)
+
+  - 분무식 보일러 (가스/기름):  
+    동일
+
+- 콘덴싱 보일러:  
+  \( P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48} \)  
+  \( P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48} \)
+
+
+---
+
+### 2.1.4.7. 개별 열 생산기기
+
+#### 2.1.4.7.1. 실내 가스히터  
+굴뚝 연계식 (1985년 이전):  
+<div align="center">$$
+Q_{h,f} = 1.4 \cdot Q_{h,b}
+$$</div>  
+월간 (1985년 이전)  
+
+<div align="center">$$
+Q_{h,f} = 1.34 \cdot Q_{h,b}
+$$</div>  
+월간 (1985년 이후)  
+
+외벽-기기  
+<div align="center">$$
+Q_{h,f} = 1.47 \cdot Q_{h,b}
+$$</div>  
+월간 (1985년 이전)  
+
+<div align="center">$$
+Q_{h,f} = 1.40 \cdot Q_{h,b}
+$$</div>  
+월간 (1985년 이후)
+
+---
+
+#### 2.1.4.7.2. 증발버너 기름연소난로  
+<div align="center">$$
+Q_{h,f} = 1.4 \cdot Q_{h,b}
+$$</div>  
+월간 (1985년 이전)  
+
+<div align="center">$$
+Q_{h,f} = 1.34 \cdot Q_{h,b}
+$$</div>  
+월간 (1985년 이후)
+
+---
+
+#### 2.1.4.7.3. 홀 난방기  
+복사열 파이프, 개별 온풍기:  
+<div align="center">$$
+Q_{h,f} = (1 - f) \cdot Q_h
+$$</div>
+
+복사열 히터 열손실 (\( Q_{h,g} \)):  
+<div align="center">$$
+Q_{h,g} = V_{\text{abluft,spez}} \cdot C_{p,\text{Abluft}} \cdot (\theta_{\text{Abluft}} - \theta_{\text{Außen}}) \cdot t_{h,rL}
+$$</div>
+
+복사열 히터의 보조에너지 (\( Q_{h,g,aux} \)): 벽 또는 천정에 설치된 팬의 전력 소비량  
+<div align="center">$$
+Q_{h,g,aux} = 0.0006 \cdot Q_{h,b}
+$$</div>
+
+---
+
+#### 2.1.4.7.4. 전기 보일러  
+**분리 생산식 저장:**  
+<div align="center">$$
+Q_{h,s} + Q_{h,g} = 0.11 \cdot Q_{h,\text{outg}}
+$$</div>  
+월간
+
+**내부 생산식 저장:**  
+<div align="center">$$
+Q_{h,s} + Q_{h,g} = 0.09 \cdot Q_{h,\text{outg}}
+$$</div>  
+월간
+
+---
+
+#### 2.1.4.7.5. 원/근거리 지역난방  
+열 손실 (\( Q_{h,g} \)):  
+<div align="center">$$
+Q_{h,g} = H_{DS} \cdot (\theta_{DS} - \theta_i)
+$$</div>
+
+<div align="center">$$
+H_{DS} = B_{DS} \cdot \Phi_{DS}^{1/3}
+$$</div>
+
+<div align="center">$$
+\theta_{DS} = D_{DS} \cdot \theta_{\text{prim,DS}} + (1 - D_{DS}) \cdot \theta_{\text{sek,DS}}
+$$</div>
+
+- \( D_{DS} \) = 급수 온도에 따른 계수  
+- \( \theta_{\text{prim,DS}} \): 기계실 1차 급수 온도  
+- \( B_{DS} \) = 기계실 단열 등급에 따른 계수  
+
+**보조에너지 (\( Q_{h,g,aux} \)):**  
+지역난방 열이 건물로 중계되는 과정의 보조에너지는 무시하며,  
+난방 시스템의 공급온도제어가 기계실에서 이루어질 시, 이에 대한 보조에너지로 **월간 10 kWh**를 적용한다.
