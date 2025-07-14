@@ -373,6 +373,24 @@
       3.5.1. 풍력발전기의 연간 발전량 산출 공식
     </span>
 </a>
+<nav aria-label="3.5.1. 풍력발전기의 연간 발전량 산출 공식" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3533">
+<span class="md-ellipsis">
+      3.5.3.3. 보일러 정격 출력 산정
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3534">
+<span class="md-ellipsis">
+      3.5.3.4. 시스템 운전 시간 산정
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -611,6 +629,24 @@
       3.5.1. 풍력발전기의 연간 발전량 산출 공식
     </span>
 </a>
+<nav aria-label="3.5.1. 풍력발전기의 연간 발전량 산출 공식" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3533">
+<span class="md-ellipsis">
+      3.5.3.3. 보일러 정격 출력 산정
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3534">
+<span class="md-ellipsis">
+      3.5.3.4. 시스템 운전 시간 산정
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -660,12 +696,101 @@
 <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
 <span class="arithmatex">\( A_{VAWT} = \frac{\pi \cdot D_e^2}{4} \)</span>
 </a></p>
+<h3 id="3533">3.5.3.3. 보일러 정격 출력 산정<a class="headerlink" href="#3533" title="Permanent link">¶</a></h3>
+<p><strong>보일러 정격출력 (<span class="arithmatex">\( Q_{N,h} \)</span>)</strong>:<br/>
+보일러의 정격 출력은 보일러가 부분 부하 상태에서 운전될 때의 효율을 계산하는 기준이 된다.<br/>
+건물의 난방 부하보다 과도한 용량의 보일러는 효율이 저하되므로, 적절한 용량 산정이 중요하다.<br/>
+본 절에서는 ECO2 프로그램에서 보일러의 정격출력을 결정하는 방법을 서술한다.</p>
+<p><strong>보일러 정격 출력 (<span class="arithmatex">\( Q_{N,h} \)</span>):</strong></p>
+<ul>
+<li>
+<p>1994년 이후 설치:<br/>
+<br/>
+<div align="center">$$
+  Q_{N,h} = 1.3 \cdot Q_{h,\text{max}}
+  $$</div>
+</p>
+</li>
+<li>
+<p>1994년 이전 설치:<br/>
+<br/>
+<div align="center">$$
+  Q_{N,h} = 2.5 \cdot Q_{h,\text{max}}
+  $$</div>
+</p>
+</li>
+</ul>
+<p>이미 열 생산기기가 설치된 기존 건물의 경우, 정격 출력은 설치된 기기의 값을 이용한다.</p>
+<p><strong>동시 열 부하(난방, 급탕, 공조 등) 발생 시:</strong><br/>
+동시에 여러 가지의 열 부하가 발생할 경우, 보일러의 정격출력은 동시에 발생하는 부하들의 합으로,<br/>
+우선순위에 의한 순차적 가동 시스템에서는 개별 부하 중 가장 큰 값으로 결정된다.</p>
+<div align="center">$$
+Q_N = \max\left( \sum Q_{N,\text{gleichzeitig}}, Q_{\text{vorrang}} \right)
+$$</div>
+<hr/>
+<h3 id="3534">3.5.3.4. 시스템 운전 시간 산정<a class="headerlink" href="#3534" title="Permanent link">¶</a></h3>
+<p><strong>보일러 운전 시간:</strong><br/>
+건물 부하 계산(#.#.# 절)에서 야간감소/정지 또는 주말감소/정지가 고려되었다면,<br/>
+보일러 운전에서도 동일하게 고려해야 한다.  </p>
+<p><strong>일일 계산 운전시간:</strong><br/>
+배관망 및 열 생산 과정의 열 손실 계산을 위해 야간이나 주말의 운전 감소/정지,<br/>
+온도 저하, 지속 운전 방식의 효과를 반영한 '일일 계산 운전 시간'과 '월별 계산 운전일수'를 계산한다.</p>
+<p><strong>일일 계산 운전 시간 (<span class="arithmatex">\( t_{h,rL,T} \)</span>):</strong> </p>
+<div align="center">$$
+t_{h,rL,T} = 24 - f_{L,NA} \cdot (24 - t_{h,\text{op}})
+$$</div>
+<ul>
+<li><span class="arithmatex">\( f_{L,NA} \)</span> = 야간감소/정지에 대한 운전시간계수  </li>
+<li><span class="arithmatex">\( t_{h,\text{op}} \)</span> = 일일 난방 시간  </li>
+<li>지속 운전: <span class="arithmatex">\( f_{L,NA} = 0 \)</span> </li>
+<li>야간 정지: <span class="arithmatex">\( f_{L,NA} = 1 \)</span> </li>
+<li>
+<p>야간 감소:<br/>
+<br/>
+<div align="center">$$
+  f_{L,NA} = 1 - \frac{ \theta_{NA,\text{Grenz}} - \theta_e }{ \theta_{NA,\text{Grenz}} - \theta_{e,\text{min}} }
+  $$</div>
+</p>
+</li>
+<li>
+<p><span class="arithmatex">\( \theta_{NA,\text{Grenz}} \)</span> = 야간 감소 한계 온도 = 10 ℃  </p>
+</li>
+<li><span class="arithmatex">\( \theta_e \)</span> = 월 평균 외기 온도 (℃)  </li>
+<li><span class="arithmatex">\( \theta_{e,\text{min}} \)</span> = 일평균 설계 온도 (℃)</li>
+</ul>
+<hr/>
+<p><strong>월별 계산 운전일 (<span class="arithmatex">\( d_{h,rB} \)</span>):</strong><br/>
+주말 감소/정지 운전 방식을 고려하는 계수</p>
+<div align="center">$$
+d_{h,rB} = \frac{ d_{\text{mth}} \cdot (365 - f_{L,WA} \cdot (365 - d_{\text{Nutz,a}})) }{365} \cdot \frac{ t_h }{ d_{\text{mth}} \cdot 24 }
+$$</div>
+<ul>
+<li><span class="arithmatex">\( d_{\text{mth}} \)</span> = 월별 일 수  </li>
+<li><span class="arithmatex">\( d_{\text{Nutz,a}} \)</span> = 연간 이용기간  </li>
+<li><span class="arithmatex">\( f_{L,WA} \)</span> = 주말 운전 감소/정지 운전시간 계수  </li>
+<li>지속 운전: <span class="arithmatex">\( f_{L,WA} = 0 \)</span> </li>
+<li>주말 정지: <span class="arithmatex">\( f_{L,WA} = 1 \)</span> </li>
+<li>
+<p>주말 감소:<br/>
+<div align="center">$$
+    f_{L,WA} = 1 - \frac{ \theta_{WA,\text{Grenz}} - \theta_e }{ \theta_{WA,\text{Grenz}} - \theta_{e,\text{min}} }
+    $$</div></p>
+</li>
+<li>
+<p><span class="arithmatex">\( \theta_{WA,\text{Grenz}} \)</span> = 주말 감소 한계 온도 = 15 ℃</p>
+</li>
+</ul>
+<hr/>
+<p><strong>월별 최종 계산 운전 시간 (<span class="arithmatex">\( t_{h,RL} \)</span>):</strong> </p>
+<div align="center">$$
+t_{h,RL} = t_{h,rL,T} \cdot d_{h,RB}
+$$</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="마지막 업데이트">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 7월 13일 11:25:40 UTC">2025년 7월 13일</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 7월 14일 11:14:16 UTC">2025년 7월 14일</span>
 </span>
 </aside>
 </article>
