@@ -504,7 +504,8 @@ $$</div>
 
 ### 2.2.7.2. 냉방시설과 냉동기에 대한 보조에너지
 냉방 시설 및 냉동기 가동에 필요한 연간 총 보조에너지는 실내 냉방 시스템과 공조 시스템을 위한 모든 설비의 보조에너지 합으로 계산된다.
-<div align="center">$$
+<div align="center">
+$$
 Q_{C,\mathrm{max}} = \sum Q_{c^*,\mathrm{aux},a} + \sum Q_{c,\mathrm{aux},a} = 
 \sum Q_{c,\mathrm{ce},\mathrm{aux},a} + \sum Q_{Z,\mathrm{aux},d,a} + \sum Q_{\mathrm{hr},f,\mathrm{aux},a} + \sum Q_{\mathrm{mh},f,\mathrm{aux},a} + \sum Q_{C,f,R,\mathrm{elektrisch}}
 $$</div>
