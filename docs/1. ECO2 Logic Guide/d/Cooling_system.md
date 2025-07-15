@@ -5,17 +5,17 @@
 본 절은 냉방 시스템의 각 단계(전달, 분배, 저장, 생산)에서 산출된 손실, 소요량, 보조에너지를 종합하여, **최종적으로 냉열 생산기기(히트펌프 등)가 공급해야 하는 총에너지 소요량을 산정**하는 방법을 기술합니다.
 
 <center>
-     <img src="../../_images/image_2.1_1.png" style="max-width: 50%;" alt="제 2.2장에서 다루는 범위">
+     <img src="../../_images/image_2.2_1.png" style="max-width: 50%;" alt="제 2.2장에서 다루는 범위">
      <div><strong>제 2.2장에서 다루는 범위</strong></div>
 </center>
 
 <center>
-     <img src="../../_images/image_2.1_2.png" style="max-width: 50%;" alt="HVAC 시스템 냉각 유닛 계산 과정">
+     <img src="../../_images/image_2.2_2.png" style="max-width: 50%;" alt="HVAC 시스템 냉각 유닛 계산 과정">
      <div><strong>HVAC 시스템 냉각 유닛 계산 과정</strong></div>
 </center>
 
 <center>
-     <img src="../../_images/image_2.1_3.png" style="max-width: 50%;" alt="실내냉방 시스템 계산 과정">
+     <img src="../../_images/image_2.2_3.png" style="max-width: 50%;" alt="실내냉방 시스템 계산 과정">
      <div><strong>실내냉방 시스템 계산 과정</strong></div>
 </center>
 
