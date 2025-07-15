@@ -1,4 +1,4 @@
-# 1.1. 열손실 및 열획득 (Heat Loss and Heat Gain)
+# 1.1. 열손실 및 열획득 (Heat loss and heat gain)
 아래 그림은 열손실원과 열획득원을 바탕으로 난방 및 냉방 에너지 요구량을 계산하는 열에너지 흐름 관계를 도식화한 것입니다.
 
 <center>
