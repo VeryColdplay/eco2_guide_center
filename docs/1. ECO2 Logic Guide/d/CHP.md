@@ -1,6 +1,6 @@
-# 2.6. 열병합 에너지소요량
+# 2.6. 열병합 에너지소요량 (Energy use for combined heat and power system)
 
-열병합(CHP, combined heat and power) 발전시스템은 전기와 열을 생산합니다. 생산된 에너지는 전기설비 또는 열원기기를 포함한 건물의 전체 시스템에 적용됩니다.
+열병합 발전시스템은 전기와 열을 생산합니다. 생산된 에너지는 전기설비 또는 열원기기를 포함한 건물의 전체 시스템에 적용됩니다.
 이에 따라 CHP의 계산은 다음과 같이 3가지로 구성됩니다:
 
 - CHP에 의한 전력생산량
@@ -79,10 +79,6 @@ Where, \(η_{HN}\): 난방망의 이용효율로, 다음 표를 따라 결정합
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
   <style>
-    body {
-      font-family: "Malgun Gothic", sans-serif;
-      text-align: center;
-    }
     table {
       border-collapse: collapse;
       margin: auto;
@@ -98,7 +94,6 @@ Where, \(η_{HN}\): 난방망의 이용효율로, 다음 표를 따라 결정합
     }
   </style>
 </head>
-<body>
 
 <h3>&lt;표 #. 난방망 연결 유형에 따른 \( n_{HN} \)&gt;</h3>
 
@@ -117,7 +112,6 @@ Where, \(η_{HN}\): 난방망의 이용효율로, 다음 표를 따라 결정합
   </tr>
 </table>
 
-</body>
 </html>
 
 

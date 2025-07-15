@@ -615,6 +615,7 @@ A, B: 효율계수
 이 식은 정격성능이 400kW인 경우까지 유효하며, 정격성능 \(\dot{Q}_N\)이 400kW를 초과할 경우 \(\dot{Q}_N\)=400kW로 적용합니다.  
 
 효율계수 A, B는 다음 표와 같습니다.  
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -799,104 +800,11 @@ Where,
 E, F: 책정열손실 계수  
 
 책정열손실 계수 E, F는 다음 표와 같습니다.  
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>보일러 계수 E, F</title>
-  <script type="text/javascript" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 95%;
-      font-family: "Malgun Gothic", sans-serif;
-      font-size: 14px;
-      text-align: center;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 6px;
-      vertical-align: middle;
-    }
-    td.left {
-      text-align: left;
-    }
-  </style>
-</head>
-<body>
 
-<table>
-  <tr>
-    <th>보일러형식</th>
-    <th>연식</th>
-    <th>계수 E</th>
-    <th>계수 F</th>
-  </tr>
-
-  <!-- 표준난방보일러 -->
-  <tr>
-    <td colspan="4">표준난방보일러</td>
-  <tr>
-  <tr>
-    <td rowspan="3">가스보일러</td>
-    <td>1978 이전</td><td>8.0</td><td>−0.27</td>
-  </tr>
-  <tr><td>1978 ~ 1994</td><td>7.0</td><td>−0.3</td></tr>
-  <tr><td>1994 이후</td><td>8.5</td><td>−0.4</td></tr>
-  <tr>
-    <td rowspan="3">연료분사식 보일러 (기름/가스)</td>
-    <td>1978 이전</td><td>9.0</td><td>−0.28</td>
-  </tr>
-  <tr><td>1978 ~ 1994</td><td>7.5</td><td>−0.31</td></tr>
-  <tr><td>1994 이후</td><td>8.5</td><td>−0.4</td></tr>
-
-  <!-- 저온보일러 -->
-  <tr>
-    <td colspan="4">저온보일러</td>
-  <tr>
-  <tr>
-    <td rowspan="2">가스보일러</td>
-    <td>1994 이전</td><td>6.0</td><td>−0.32</td>
-  </tr>
-  <tr><td>1994 이후</td><td>4.5</td><td>−0.4</td></tr>
-  <tr>
-    <td rowspan="1">콤비보일러</td>
-    <td>1994 이후</td>
-    <td colspan="2">\( q_{B,70^\circ C} = 0.022 \)</td>
-  </tr>
-    <tr>
-    <td rowspan="1">콤비보일러</td>
-    <td>1994 이후</td>
-    <td colspan="2">\( q_{B,70^\circ C} = 0.012 \)</td>
-  </tr>
-
-  <tr>
-    <td rowspan="2">연료분사식 보일러 (기름/가스)</td>
-    <td>1994 이전</td><td>7.0</td><td>−0.37</td>
-  <tr>
-  <tr><td>1994 이후</td><td>4.25</td><td>−0.4</td><tr>
-
-  <tr>
-    <td rowspan="2">콘덴싱 보일러 (기름/가스)</td>
-    <td>1994 이전</td><td>7.0</td><td>−0.37</td>
-  </tr>
-  <tr><td>1994 이후</td><td>4.0</td><td>−0.4</td></tr>
-
-  <tr>
-    <td rowspan="1">콤비보일러 (11kW, 18kW 및 24kW)</td>
-    <td>1994 이전</td><td colspan="2">\( q_{B,70^\circ C} = 0.022 \)</td>
-  </tr>
-  <tr>
-    <td rowspan="1">콤비보일러 (11kW, 18kW 및 24kW)</td>
-    <td>1994 이후</td><td colspan="2">\( q_{B,70^\circ C} = 0.012 \)</td>
-  </tr>
-
-</table>
-
-</body>
-</html>
+<center>
+     <div><strong>책정열손실 계수</strong></div>
+     <img src="../../_tables/3.2.15_1.png" style="max-width: 80%;" alt="책정열손실 계수">
+</center>
 
 
 한편 d_h,r,B > \(d_{Nuts,mth}\)인 경우 \(d_{h,r,B}\) - \(d_{Nuts,mth}\) = 0으로 가정합니다.
