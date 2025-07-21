@@ -16,7 +16,6 @@
   \( Q_{h,sol} = Q_{K,sol} \cdot (1.0 - f_{K,w}) \)   
 </a>
 
-
 ### 집열기 효율
 
 태양열 집열기는 태양에너지를 수집하여 열매체에 저장하는 기능을 수행하며, 집열기 내의 열매체와 주변 공기 사이의 온도 차이가 클수록 큰 열손실량이 발생합니다.   
@@ -30,7 +29,6 @@
   \( \eta_{Aa} = F_R \cdot (\tau \alpha)_{en} - F_R \cdot U_L \left( \frac{t_i - t_a}{I_T} \right) \quad : \text{투과면적 기준} \)   
 </a>
 
-
 태양열 집열기는 직달일사가 수직으로 입사할 때 효율이 가장 높으며, 이를 위해 경사각과 방위각 조절이 필요합니다. 효율 시험은 입사각이 20° 이하일 때 수행되며, 실제 설치 시 입사각이 다르면 입사각 수정계수 (\(K_\theta\))를 적용해 효율을 보정해야 합니다.   
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
@@ -43,6 +41,8 @@
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
   \( \dot{Q} = A \cdot G \left( \eta_0 - a_1 \cdot \frac{(t_m - t_a)}{G} - a_2 \cdot \frac{(t_m - t_a)}{G} \right) \)   
 </a>
+
+
 
 
 - 설계 지표   
@@ -61,11 +61,13 @@
 
 ## 3.1.2. 태양열 집열시스템에 대한 계산 방식
 
-태양열집열시스템의 연간 에너지수득량(\(Q_{K,sol,a}\))은 아래 표의 월 분배비율(\(f_M\))에 따라 아래 계산식에 따라 월별로 분배되어 월별 에너지수득량(\(Q_{K,sol}\))으로 환산됩니다.
+태양열집열시스템의 연간 에너지수득량(\(Q_{K,sol,a}\))은 아래 표의 월 분배비율(\(f_M\))에 따라 아래 계산식에 따라 월별로 분배되어 월별 에너지수득량(\(Q_{K,sol}\))으로 환산됩니다.   
+
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( \boldsymbol{Q_{K,sol}} = \boldsymbol{f_M} \cdot \boldsymbol{Q_{K,sol,a}} \)   
+  \( Q_{K,sol} = f_M \cdot Q_{K,sol,a} \)
 </a>
+
 
 
 <center>
@@ -92,6 +94,7 @@
 <center>
      <img src="../../_tables/3.2.12_4.png" style="max-width: 80%;" alt="태양열집열시스템의 부하율에 대한 수정계수">
 </center>
+
 
 - 저장조의 열손실율에 대한 수정계수 (\(f_{s,loss}\))   
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
