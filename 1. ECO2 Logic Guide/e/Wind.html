@@ -9,9 +9,9 @@
 <link href="Cell.html" rel="prev"/>
 <link href="../f/Use.html" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.15" name="generator"/>
 <title>3.5. 풍력 - ECO2 Guide Center</title>
-<link href="../../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
@@ -300,6 +300,14 @@
 <a class="md-nav__link" href="../d/Primary_energy_demand.html">
 <span class="md-ellipsis">
     2.7. 1차에너지소요량 계산
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../d/Annex_A_Table.html">
+<span class="md-ellipsis">
+    Annex A Table
     
   </span>
 </a>
@@ -668,18 +676,18 @@
 <h1 id="35-wind-turbine">3.5 풍력 (Wind turbine)<a class="headerlink" href="#35-wind-turbine" title="Permanent link">¶</a></h1>
 <p>풍력발전은 바람의 운동에너지를 회전체를 통해 전기에너지로 변환하는 시스템입니다. 풍력발전기는 날개(blade)와 허브(hub)로 구성된 회전자와 회전을 증속하여 발전기를 구동시키는 종속장치, 제어 장치, 유압 브레이크 장치 등으로 구성됩니다. 풍력발전기에서 연간 발전되는 전력량<span class="arithmatex">\(Q_{WT}\)</span>을 산출하는 방법은 평균 전력 밀도법을 바탕으로 합니다. 시간별 데이터를 사용하여 1년 동안에 대한 바람의 평균 전력 밀도를 추정하고 발전기의 변환효율을 적용하여 전력량을 구합니다.</p>
 <p>평균 전력 밀도법을 이용하여 연간 발전량을 산출하기 위해서는 다음 4가지 데이터가 요구됩니다:</p>
-<p><strong>1. 지형</strong>: 풍력 발전기가 설치되는 지형에 따른 지형 계수를 적용합니다.<br/>
+<p><strong>1. 지형</strong>: 풍력 발전기가 설치되는 지형에 따른 지형 계수를 적용합니다.  </p>
 <center>
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../_tables/3.2.15_1.png"><img alt="지형 계수" src="../../_tables/3.2.15_1.png" style="max-width: 80%;"/></a>
 <div><strong>지형 계수</strong></div>
-</center></p>
+</center>
 <p><strong>2. 직경 (m)</strong>: 풍력발전기 날개의 직경을 지정합니다.</p>
 <p><strong>3. 허브 높이 (m)</strong>: 풍력발전기의 허브 높이를 지정합니다.</p>
-<p><strong>4. 정격출력 (kW)</strong>: 풍력발전기의 정격 풍속에서의 전력은 풍력발전기에 대한 변환효율을 지정하는데 사용됩니다.<br/>
+<p><strong>4. 정격출력 (kW)</strong>: 풍력발전기의 정격 풍속에서의 전력은 풍력발전기에 대한 변환효율을 지정하는데 사용됩니다.  </p>
 <center>
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../_tables/3.2.15_2.png"><img alt="풍력발전기 효율" src="../../_tables/3.2.15_2.png" style="max-width: 80%;"/></a>
 <div><strong>풍력발전기 효율</strong></div>
-</center></p>
+</center>
 <hr/>
 <h2 id="351">3.5.1. 풍력발전기의 연간 발전량 산출 공식<a class="headerlink" href="#351" title="Permanent link">¶</a></h2>
 <p><a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
@@ -824,8 +832,8 @@ $$</div>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.tabs.sticky", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}}</script>
-<script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.tabs.sticky", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
 <script src="../../assets/polyfill.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
