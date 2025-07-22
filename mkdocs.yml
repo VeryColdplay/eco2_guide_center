@@ -25,6 +25,7 @@ nav:
     - 2.4. 조명 에너지소요량: 1. ECO2 Logic Guide/d/Lighting_system.md
     - 2.5. 환기/가습 에너지소요량: 1. ECO2 Logic Guide/d/Ventilation_Humidification_system.md
     - 2.6. 열병합 에너지소요량: 1. ECO2 Logic Guide/d/CHP.md
+    - 2.7. 1차에너지소요량 계산: 1. ECO2 Logic Guide/d/Primary_energy_demand.md
   - 3. 신재생에너지:
     - 3.1. 태양열: 1. ECO2 Logic Guide/e/S_thermal.md
     - 3.2. 태양광: 1. ECO2 Logic Guide/e/PV.md
