@@ -5,10 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://verycoldplay.github.io/eco2_guide_center/1.%20ECO2%20Logic%20Guide/c/Ventilating.html" rel="canonical"/>
+<link href="https://verycoldplay.github.io/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Energy_demand/Cooling_heating_energy_demand.html" rel="canonical"/>
+<link href="Heat_gain_loss.html" rel="prev"/>
+<link href="Value.html" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.13" name="generator"/>
-<title>공조처리를 반영한 냉방 및 난방 에너지요구량 - ECO2 Guide Center</title>
+<title>1.2. 냉방 및 난방 에너지요구량 - ECO2 Guide Center</title>
 <link href="../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -31,7 +33,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
+<a class="md-skip" href="#12-energy-need-for-cooling-and-heating">
           콘텐츠로 이동
         </a>
 </div>
@@ -55,7 +57,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              공조처리를 반영한 냉방 및 난방 에너지요구량
+              1.2. 냉방 및 난방 에너지요구량
             
           </span>
 </div>
@@ -116,8 +118,8 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
 <span class="md-ellipsis">
     ECO2 Logic Guide
@@ -125,7 +127,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
             ECO2 Logic Guide
@@ -173,8 +175,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
 <span class="md-ellipsis">
     1. 에너지요구량
@@ -182,30 +184,154 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
             1. 에너지요구량
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../b/Heat_gain_loss.html">
+<a class="md-nav__link" href="Heat_gain_loss.html">
 <span class="md-ellipsis">
     1.1. 열획득과 열손실
     
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../b/Cooling_heating_energy_demand.html">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    1.2. 냉방 및 난방 에너지요구량
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="Cooling_heating_energy_demand.html">
 <span class="md-ellipsis">
     1.2. 냉방 및 난방 에너지요구량
     
   </span>
 </a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#121-q_cb">
+<span class="md-ellipsis">
+      1.2.1. 냉방 에너지요구량 \(Q_{c,b}\)
+    </span>
+</a>
+<nav aria-label="1.2.1. 냉방 에너지요구량 \(Q_{c,b}\)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      🔹 건축물의 냉방 에너지요구량 계산
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../b/Value.html">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      🔹 건축물의 연간 냉방 에너지요구량: 🗓️ 월별 요구량의 합
+    </span>
+</a>
+<nav aria-label="🔹 건축물의 연간 냉방 에너지요구량: 🗓️ 월별 요구량의 합" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q_cb-sum">
+<span class="md-ellipsis">
+      🔘 연간 냉방 에너지요구량 \(Q_{c,b}\) = \( \sum \) 월간 냉방 에너지요구량
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q_cb">
+<span class="md-ellipsis">
+      🔹 월간 냉방에너지요구량 \(Q_{c,b}\)
+    </span>
+</a>
+<nav aria-label="🔹 월간 냉방에너지요구량 \(Q_{c,b}\)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q_cb-mth-sum">
+<span class="md-ellipsis">
+      🔘 월간 냉방 에너지요구량 \(Q_{c,b, mth}\) = \( \sum \) 일간 냉방 에너지요구량
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#122-q_hb-heating-energy-demand">
+<span class="md-ellipsis">
+      1.2.2. 난방 에너지요구량 \(Q_{h,b}\) (Heating energy demand)
+    </span>
+</a>
+<nav aria-label="1.2.2. 난방 에너지요구량 \(Q_{h,b}\) (Heating energy demand)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
+      🔹 건축물의 난방 에너지요구량 계산
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      🔹 건축물의 연간 난방 에너지요구량: 🗓️ 월별 요구량의 합
+    </span>
+</a>
+<nav aria-label="🔹 건축물의 연간 난방 에너지요구량: 🗓️ 월별 요구량의 합" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q_hb-sum">
+<span class="md-ellipsis">
+      🔘 연간 난방 에너지요구량 \(Q_{h,b}\) = \( \sum \) 월간 난방 에너지요구량
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q_hb">
+<span class="md-ellipsis">
+      🔹 월간 난방에너지요구량 \(Q_(h,b)\)
+    </span>
+</a>
+<nav aria-label="🔹 월간 난방에너지요구량 \(Q_(h,b)\)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q_hb-mth-sum">
+<span class="md-ellipsis">
+      🔘 월간 난방 에너지요구량 \(Q_{h,b, mth}\) = \( \sum \) 일간 난방 에너지요구량
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="Value.html">
 <span class="md-ellipsis">
     1.3. 개별 값 설정(YE)
     
@@ -213,7 +339,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Lighting_energy_demand.html">
+<a class="md-nav__link" href="Lighting_energy_demand.html">
 <span class="md-ellipsis">
     1.4. 조명 에너지요구량
     
@@ -221,7 +347,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Hot_water.html">
+<a class="md-nav__link" href="Hot_water.html">
 <span class="md-ellipsis">
     1.5. 급탕 에너지요구량
     
@@ -232,7 +358,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../d/Ventilation_Humidification_system.html">
+<a class="md-nav__link" href="../HVAC/HVAC.html">
 <span class="md-ellipsis">
     2. 공조처리
     
@@ -255,7 +381,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../d/Heating_system.html">
+<a class="md-nav__link" href="../Energy_use/Heating_system.html">
 <span class="md-ellipsis">
     3.1. 난방 에너지소요량
     
@@ -263,7 +389,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../d/Cooling_system.html">
+<a class="md-nav__link" href="../Energy_use/Cooling_system.html">
 <span class="md-ellipsis">
     3.2. 냉방 에너지소요량
     
@@ -271,7 +397,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../d/Hot_water_system.html">
+<a class="md-nav__link" href="../Energy_use/Hot_water_system.html">
 <span class="md-ellipsis">
     3.3. 급탕 에너지소요량
     
@@ -279,7 +405,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../d/Lighting_system.html">
+<a class="md-nav__link" href="../Energy_use/Lighting_system.html">
 <span class="md-ellipsis">
     3.4. 조명 에너지소요량
     
@@ -287,23 +413,31 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../d/CHP.html">
+<a class="md-nav__link" href="../Energy_use/Ventilation_Humidification_system.html">
 <span class="md-ellipsis">
-    3.5. 열병합 에너지소요량
+    3.5. 환기 &amp; 가습 에너지소요량
     
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../d/Primary_energy_demand.html">
+<a class="md-nav__link" href="../Energy_use/CHP.html">
 <span class="md-ellipsis">
-    3.5. 1차에너지소요량 계산
+    3.6. 열병합 에너지소요량
     
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../d/Annex_A_Table.html">
+<a class="md-nav__link" href="../Energy_use/Primary_energy_demand.html">
+<span class="md-ellipsis">
+    3.7. 1차에너지소요량 계산
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Energy_use/Annex_A_Table.html">
 <span class="md-ellipsis">
     Annex A Table
     
@@ -329,7 +463,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../e/S_thermal.html">
+<a class="md-nav__link" href="../Renewable_energy_generation/S_thermal.html">
 <span class="md-ellipsis">
     4.1. 태양열 에너지생산량
     
@@ -337,7 +471,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../e/PV.html">
+<a class="md-nav__link" href="../Renewable_energy_generation/PV.html">
 <span class="md-ellipsis">
     4.2. 태양광 에너지생산량
     
@@ -345,7 +479,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../e/GH_thermal.html">
+<a class="md-nav__link" href="../Renewable_energy_generation/GH_thermal.html">
 <span class="md-ellipsis">
     4.3. 지열 및 수열 에너지생산량
     
@@ -353,17 +487,17 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../e/Cell.html">
+<a class="md-nav__link" href="../Renewable_energy_generation/Wind.html">
 <span class="md-ellipsis">
-    4.4. 연료전지
+    4.4. 풍력 에너지생산량
     
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../e/Wind.html">
+<a class="md-nav__link" href="../Renewable_energy_generation/Cell.html">
 <span class="md-ellipsis">
-    4.5. 풍력 에너지생산량
+    4.5. 연료전지
     
   </span>
 </a>
@@ -571,47 +705,109 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#121-q_cb">
+<span class="md-ellipsis">
+      1.2.1. 냉방 에너지요구량 \(Q_{c,b}\)
+    </span>
+</a>
+<nav aria-label="1.2.1. 냉방 에너지요구량 \(Q_{c,b}\)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      🔹 건축물의 냉방 에너지요구량 계산
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
-      공조처리에 필요한 에너지요구량
+      🔹 건축물의 연간 냉방 에너지요구량: 🗓️ 월별 요구량의 합
+    </span>
+</a>
+<nav aria-label="🔹 건축물의 연간 냉방 에너지요구량: 🗓️ 월별 요구량의 합" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q_cb-sum">
+<span class="md-ellipsis">
+      🔘 연간 냉방 에너지요구량 \(Q_{c,b}\) = \( \sum \) 월간 냉방 에너지요구량
     </span>
 </a>
 </li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#q_im">
+<a class="md-nav__link" href="#q_cb">
 <span class="md-ellipsis">
-      q_i,m
+      🔹 월간 냉방에너지요구량 \(Q_{c,b}\)
+    </span>
+</a>
+<nav aria-label="🔹 월간 냉방에너지요구량 \(Q_{c,b}\)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q_cb-mth-sum">
+<span class="md-ellipsis">
+      🔘 월간 냉방 에너지요구량 \(Q_{c,b, mth}\) = \( \sum \) 일간 냉방 에너지요구량
     </span>
 </a>
 </li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#v_mechm">
+<a class="md-nav__link" href="#122-q_hb-heating-energy-demand">
 <span class="md-ellipsis">
-      V_mech,m
+      1.2.2. 난방 에너지요구량 \(Q_{h,b}\) (Heating energy demand)
     </span>
 </a>
-<nav aria-label="V_mech,m" class="md-nav">
+<nav aria-label="1.2.2. 난방 에너지요구량 \(Q_{h,b}\) (Heating energy demand)" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
-      정풍량
+      🔹 건축물의 난방 에너지요구량 계산
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
-      변풍량 (시간/용도에 따라 조절)
+      🔹 건축물의 연간 난방 에너지요구량: 🗓️ 월별 요구량의 합
+    </span>
+</a>
+<nav aria-label="🔹 건축물의 연간 난방 에너지요구량: 🗓️ 월별 요구량의 합" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q_hb-sum">
+<span class="md-ellipsis">
+      🔘 연간 난방 에너지요구량 \(Q_{h,b}\) = \( \sum \) 월간 난방 에너지요구량
     </span>
 </a>
 </li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
+<a class="md-nav__link" href="#q_hb">
 <span class="md-ellipsis">
-      변풍량 (실내 냉방부하에 따름)
+      🔹 월간 난방에너지요구량 \(Q_(h,b)\)
     </span>
 </a>
+<nav aria-label="🔹 월간 난방에너지요구량 \(Q_(h,b)\)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#q_hb-mth-sum">
+<span class="md-ellipsis">
+      🔘 월간 난방 에너지요구량 \(Q_{h,b, mth}\) = \( \sum \) 일간 난방 에너지요구량
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -625,9 +821,96 @@
 <article class="md-content__inner md-typeset">
 <div style="text-align: right; font-size: 0.9em; color: #666; margin-bottom: -1em;">
 </div>
-<h1 id="_1">공조처리를 반영한 냉방 및 난방 에너지요구량<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<h2 id="_2">공조처리에 필요한 에너지요구량<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<p>공조처리에 필요한 에너지요구량은 다음과 같이 계산됩니다:</p>
+<h1 id="12-energy-need-for-cooling-and-heating">1.2. 냉방 및 난방 에너지요구량 (Energy need for cooling and heating)<a class="headerlink" href="#12-energy-need-for-cooling-and-heating" title="Permanent link">¶</a></h1>
+<p>어떤 존의 온도가 <strong>설정 범위 내</strong>에 있다면 추가적으로 냉방 또는 난방을 할 필요가 없을 것입니다. <br/>
+그러나 설정 범위를 벗어난다면, 다음과 같이 <strong>냉방</strong> 또는 <strong>난방 에너지요구량</strong>이 발생하게 됩니다.<br/>
+<br/>
+<pre class="mermaid"><code>graph LR
+    classDef pretendard font-family:'Pretendard';
+
+    A{현재 온도는 설정 범위 안에 있는가}
+    A -- 예 --&gt; B[냉난방 필요 없음]
+    A -- 아니오 --&gt; C{현재 온도가 높은가}
+    C -- 예 --&gt; D[냉방 에너지요구량 발생]
+    C -- 아니오 --&gt; E[난방 에너지요구량 발생]
+
+    class A pretendard
+    class B pretendard
+    class C pretendard
+    class D pretendard
+    class E pretendard
+</code></pre>
+<br/></p>
+<h2 id="121-q_cb">1.2.1. 냉방 에너지요구량  <span class="arithmatex">\(Q_{c,b}\)</span><a class="headerlink" href="#121-q_cb" title="Permanent link">¶</a></h2>
+<h3 id="_1">🔹 건축물의 냉방 에너지요구량 계산<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<p>설정 범위보다 온도가 <strong>높을 때</strong> 냉방 에너지요구량이 발생합니다. <br>
+즉 어떤 존의 냉방 에너지요구량, <span class="arithmatex">\(Q_{c,b}\)</span>은 시스템에 의해 <strong>제거되어야 할 유효 열량</strong>을 계산함으로써 구해집니다.<br>
+<br/>
+<span class="arithmatex">\(Q_{c,b}\)</span> 는 다음과 같이 계산됩니다:  </br></br></p>
+<div style="text-align: center; margin-top: 24px; margin-bottom: 8px;">
+<div style="
+    display: inline-block;
+    background-color: #F1F5F9;
+    border-radius: 10px;
+    padding: 16px 48px;
+    line-height: 1.8;
+    margin-top: 1em;
+    margin-bottom: 2em;
+  ">
+ \( Q_{c,b} = (1-\eta) Q_{source} \quad \)
+  </div>
+</div>
+<!-- ✅ Where 이하: 완전히 별도의 블록으로 분리 -->
+<div style="
+  display: flex;
+  justify-content: center;
+  font-family: Pretendard, sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+">
+<div style="
+    text-align: left;
+    line-height: 2;
+    padding: 16px 24px;
+    border-radius: 0px;
+  ">
+<!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
+<div style="
+      font-style: italic;
+      font-weight: bold;
+      font-family: 'Times New Roman', 'Cambria Math', serif;
+      margin-bottom: 24px;
+    ">
+      Where,
+    </div>
+<!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
+<span style="display: block;">\( Q_{c,b} \) : \(Zone\ i\)의 냉방 에너지요구량 </span>
+<span style="display: block;">\( \eta_i \) : 열획득 이용률</span>
+<span style="display: block;">\( Q_{source,i} \) : \(Zone\ i\)의 열획득</span>
+</div>
+</div>
+<p><br/></p>
+<ul>
+<li>어떤 존(zone) <span class="arithmatex">\(i\)</span>의 <strong>연간</strong> 냉방에너지요구량을 구하기 위해, 월별로 <strong>월간</strong>🗓️ 냉방 에너지요구량을 구하고 이를 합산합니다. 
+<span style="font-size: 0.8em; font-style: italic;"><a href="../a/Zoning.html">    🔍 건물의 조닝(zoning)에 대한 로직 바로가기</a></span></li>
+<li><strong>월간</strong> 냉방 에너지요구량은 <strong>일간</strong> 냉방 에너지요구량의 한달치 계산이 됩니다.</li>
+<li>연중 월간 열획득 및 이용률 값이 모두 다르므로, 월별 냉방 에너지요구량 값은 모두 상이합니다. 
+<span style="font-size: 0.8em; font-style: italic;"><a href="../b/Heat_gain_loss.md">    🔍 열획득과 열손실에 대한 로직 바로가기</a></span>
+<span style="font-size: 0.8em; font-style: italic;"><a href="../b/Value.md">    🔍 (이용률 등) 개별 값 설정에 대한 로직 바로가기</a></span></li>
+</ul>
+<p> <br/></p>
+<hr/>
+<h3 id="_2">🔹 건축물의 <strong>연간</strong> 냉방 에너지요구량: 🗓️ 월별 요구량의 합<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<h4 id="q_cb-sum">🔘 연간 냉방 에너지요구량 <span class="arithmatex">\(Q_{c,b}\)</span> = <span class="arithmatex">\( \sum \)</span> 월간 냉방 에너지요구량</h4><a class="headerlink" href="#q_cb-sum" title="Permanent link">¶</a>
+<figure style="text-align: center;">
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../_figs/adjusted_left_box_width_c.png"><img alt="Annual &amp; monthly cooling energy demand" src="../../_figs/adjusted_left_box_width_c.png" style="max-width: 60%;"/></a>
+<figcaption><strong>Annual cooling energy demand</strong></figcaption>
+</figure>
+<p> <br/></p>
+<hr/>
+<h3 id="q_cb">🔹 <strong>월간</strong> 냉방에너지요구량 <span class="arithmatex">\(Q_{c,b}\)</span><a class="headerlink" href="#q_cb" title="Permanent link">¶</a></h3>
+<h4 id="q_cb-mth-sum">🔘 월간 냉방 에너지요구량 <span class="arithmatex">\(Q_{c,b, mth}\)</span> = <span class="arithmatex">\( \sum \)</span> 일간 냉방 에너지요구량</h4><a class="headerlink" href="#q_cb-mth-sum" title="Permanent link">¶</a>
+<p><span class="arithmatex">\(Q_{c,b, mth}\)</span>는 다음과 같이 계산됩니다:      </p>
 <div style="text-align: center; margin-top: 24px; margin-bottom: 8px;">
 <div style="
     display: inline-block;
@@ -638,8 +921,9 @@
     margin-top: 1em;
     margin-bottom: 0px;
   ">
-<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-  \( Q_{V,i,m} = q_{i,m} \cdot \dot{V}_{mech,m} = Q_{vi,b} \quad \text{[Wh]} \) 
+<!--Open in current window ver. -->
+<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html">
+  \(Q_{c,b.mth} = d_{op} (1 - \eta_{op}) Q_{source,op} + d_{we} (1 - \eta_{we}) Q_{source,we} \) 
 </a>
 </div>
 </div>
@@ -654,7 +938,7 @@
 <div style="
     text-align: left;
     line-height: 2;
-    padding: 1px 24px;
+    padding: 16px 24px;
     border-radius: 0px;
   ">
 <!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
@@ -662,31 +946,34 @@
       font-style: italic;
       font-weight: bold;
       font-family: 'Times New Roman', 'Cambria Math', serif;
-      margin-bottom: 1px;
+      margin-bottom: 24px;
     ">
       Where,
     </div>
 <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-<span style="display: block;">\( q_{i,m} \) : 월별 풍량 당 공조에너지요구량 / 가동시간과 급기온도가 수정된 월별 단위풍량 당 공조에너지(i=H, C, St) 제시값</span>
-<span style="display: block;">\( V_{mech,m} \) : 월별 평균 급기풍량
-  </span></div>
+<span style="display: block;">\( Q_{c,b,mth} \) : 월간 냉방 에너지요구량</span>
+<span style="display: block;">\( d_{op} \) : 주중 일수</span>
+<span style="display: block;">\( \eta_op \) : 주중 열획득 이용률</span>
+<span style="display: block;">\( Q_{source,op} \) : 주중 열획득</span>
+<span style="display: block;">\( d_{we} \) : 주말 일수</span>
+<span style="display: block;">\( \eta_we \) : 주말 열획득 이용률</span>
+<span style="display: block;">\( Q_{source,we} \) : 주말 열획득</span>
 </div>
-<h2 id="q_im">q_i,m<a class="headerlink" href="#q_im" title="Permanent link">¶</a></h2>
-<p>월별 풍량 당 공조에너지요구량 / 가동시간과 급기온도가 수정된 월별 단위풍량 당 공조에너지(i=H, C, St) 제시값은 계산식 3.2.5-28, 3.2.5-29, 3.2.5-30, 3.2.5-35에 따라서 환산됩니다.</p>
-<blockquote>
-<p>해당 내용 보고서에 없음</p>
-</blockquote>
-<p>월별 풍량 당 공조에너지요구량 / 가동시간과 급기온도가 수정된 월별 단위풍량 당 공조에너지(i=H, C, St) 제시값은 다음과 같다:
-3-28 식 불러오기
-where
-q_i,12h,m: 일일 12시간 가동조건에서의 월별 단위풍량 당 공조에너지((i=H, C, St)) 제시값
-t_V,mech,m: 월별 일일 공조기기 가동시간
-f_h,i:
-d_V,mech,m: 월간 공조기기 가동 일수
-d_max,m:</p>
-<h2 id="v_mechm">V_mech,m<a class="headerlink" href="#v_mechm" title="Permanent link">¶</a></h2>
-<p>월별 평균 급기풍량은 정풍량 또는 정풍량 방식인지에 따라 여러 방식으로 계산됩니다.
-이에 따른 월별 평균 급기풍량은 다음과 같습니다:</p>
+</div>
+<p><br/></p>
+<ul>
+<li>1개월은 <strong>주중</strong> 및 <strong>주말</strong>로 구성됩니다.   </li>
+<li>주중 및 주말 여부에 따라 운영스케줄이 다르기 때문에 <strong>일간</strong> 냉방 에너지요구량 또한 달라집니다. </li>
+</ul>
+<figure style="text-align: center;">
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../_figs/Monthly cooling energy demand.PNG"><img alt="Monthly &amp; daily cooling energy demand" src="../../_figs/Monthly cooling energy demand.PNG" style="max-width: 70%;"/></a>
+<figcaption><strong>Monthly cooling energy demand</strong></figcaption>
+</figure>
+<h2 id="122-q_hb-heating-energy-demand">1.2.2. 난방 에너지요구량  <span class="arithmatex">\(Q_{h,b}\)</span> (Heating energy demand)<a class="headerlink" href="#122-q_hb-heating-energy-demand" title="Permanent link">¶</a></h2>
+<h3 id="_3">🔹 건축물의 난방 에너지요구량 계산<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<p>설정 범위보다 온도가 <strong>낮을 때</strong> 난방 에너지요구량이 발생합니다. 즉 어떤 존의 난방 에너지요구량, <span class="arithmatex">\(Q_{h,b}\)</span>은 시스템에 의해 <strong>보충되어야 할 유효 열량</strong>을 계산함으로써 구해집니다.<br>
+<br/>
+<span class="arithmatex">\(Q_{h,b}\)</span> 는 다음과 같이 계산됩니다:  </br></p>
 <div style="text-align: center; margin-top: 24px; margin-bottom: 8px;">
 <div style="
     display: inline-block;
@@ -697,50 +984,67 @@ d_max,m:</p>
     margin-top: 1em;
     margin-bottom: 0px;
   ">
-<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-  \( \dot{V}_{mech,b,m} = \dot{V}_{mech,m} = \dot{V}^* \)  <span>(정풍량)</span>
-</a>
-<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-  \( \dot{V}_{mech,m} = \frac{\sum_j V_j \cdot t_{V,mech,j,m}}{t_{V,mech,m} \cdot d_{V,mech,m}} \)  <span>(시간, 용도)</span>
-</a>
-<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-  \( \dot{V}_{mech,m} = \dot{V}_{mech,b,m} + \frac{1000 \cdot Q_{c,b}}{t_{V,mech,m} \cdot d_{V,mech,m} \cdot c_{p,L} \rho_L (\vartheta_{i,c,m} - \vartheta_{V,mech,m})} \) 
-</a>
-<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-  \( \sum_m \dot{V} = t_{V,mech,m} \cdot d_{V,mech,m} \cdot \dot{V}_{mech,b,m} + \frac{1000 \cdot Q_{c,b}}{c_{p,L} \rho_L (\vartheta_{i,c,m} - \vartheta_{V,mech,m})} \) 
+<!--Open in a New Window ver. & Equation No. Automation with span + macro -->
+<a class="equation-link" href="#" onclick="window.open(
+     '/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Equation_diagram.html',
+     'popupWindow',
+     'width=800,height=600,scrollbars=yes,resizable=yes'
+   ); return false;">
+  \( Q_{h,b,i} = Q_{sink,i} - \eta_i Q_{source,i} \) 
 </a>
 </div>
 </div>
-<p>where (3-1)
-V_mech,b,m
-V*</p>
-<p>where (3-2)
-V_mech,b,m: .2.4의 월별 분석-풍량 (3.2.4는 보고서에 없음)
-sigma V_j
-t_V,mech,j,m
-t_V,mech,m: 월별 일일 공조기기 가동시간
-d_V,mech,m: 월간 공조기기 가동일수</p>
-<p>where (3-4)
-V_mech,b,m: 3.2.4의 월별 분석-풍량 (3.2.4는 보고서에 없음)
-Q_c,b: 냉방 에너지요구량
-t_V,mech,m: 월별 일일 공조기기 가동시간
-dd_V,mech,m: 월간 공조기기 가동일수
-c_p,L: 공기의 열수용율
-rho_L: 공기 밀도
-theta_i,c,m
-theta_V,mech,m</p>
-<p>where (3-5) &lt;&lt; 뭔가 3-4의 연간 버전 같음. (보고서 139p에서는 월별 송풍된 급기풍량이라고 함)
-sigma V
-V_mech,b,m
-Q_c,b: 냉방 에너지요구량
-t_V,mech,m: 월별 일일 공조기기 가동시간
-dV,mech,m
-c_p,L: 공기의 열수용율
-rho_L: 공기 밀도
-theta_i,c,m
-theta_V,mech,m</p>
-<h3 id="_3">정풍량<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
-<p>3-1 불러오기</p>
+<!-- ✅ Where 이하: 완전히 별도의 블록으로 분리 -->
+<div style="
+  display: flex;
+  justify-content: center;
+  font-family: Pretendard, sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+">
+<div style="
+    text-align: left;
+    line-height: 2;
+    padding: 16px 24px;
+    border-radius: 0px;
+  ">
+<!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
+<div style="
+      font-style: italic;
+      font-weight: bold;
+      font-family: 'Times New Roman', 'Cambria Math', serif;
+      margin-bottom: 24px;
+    ">
+      Where,
+    </div>
+<!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
+<span style="display: block;">\( Q_{h,b,i} \) : \(Zone\ i\)의 난방 에너지요구량</span>
+<span style="display: block;">\( Q_{sink,i} \) : \(Zone\ i\)의 열손실</span>
+<span style="display: block;">\( \eta_i \) : 열획득 이용률</span>
+<span style="display: block;">\( Q_{source,i} \) : \(Zone\ i\)의 열획득</span>
+</div>
+</div>
+<ul>
+<li>어떤 존(zone) <span class="arithmatex">\(i\)</span>의 <strong>연간</strong> 난방에너지요구량을 구하기 위해, 월별로 <strong>월간</strong>🗓️ 난방 에너지요구량을 구하고 이를 합산합니다. 
+<span style="font-size: 0.8em; font-style: italic;"><a href="../a/Zoning.html">    🔍 건물의 조닝(zoning)에 대한 로직 바로가기</a></span></li>
+<li><strong>월간</strong> 난방 에너지요구량은 <strong>일간</strong> 난방 에너지요구량의 한달치 계산이 됩니다.</li>
+<li>연중 월간 열획득 및 이용률 값이 모두 다르므로, 월별 난방 에너지요구량 값은 모두 상이합니다. 
+<span style="font-size: 0.8em; font-style: italic;"><a href="../b/Heat_gain_loss.md">    🔍 열획득과 열손실에 대한 로직 바로가기</a></span>
+<span style="font-size: 0.8em; font-style: italic;"><a href="../b/Value.md">    🔍 (이용률 등) 개별 값 설정에 대한 로직 바로가기</a></span></li>
+</ul>
+<p> <br/></p>
+<hr/>
+<h3 id="_4">🔹 건축물의 <strong>연간</strong> 난방 에너지요구량: 🗓️ 월별 요구량의 합<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<h4 id="q_hb-sum">🔘 연간 난방 에너지요구량 <span class="arithmatex">\(Q_{h,b}\)</span> = <span class="arithmatex">\( \sum \)</span> 월간 난방 에너지요구량</h4><a class="headerlink" href="#q_hb-sum" title="Permanent link">¶</a>
+<figure style="text-align: center;">
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../_figs/adjusted_left_box_width_c.png"><img alt="Annual &amp; monthly cooling energy demand" src="../../_figs/adjusted_left_box_width_c.png" style="max-width: 60%;"/></a>
+<figcaption><strong>Annual cooling energy demand</strong></figcaption>
+</figure>
+<p> <br/></p>
+<hr/>
+<h3 id="q_hb">🔹 <strong>월간</strong> 난방에너지요구량 <span class="arithmatex">\(Q_(h,b)\)</span><a class="headerlink" href="#q_hb" title="Permanent link">¶</a></h3>
+<h4 id="q_hb-mth-sum">🔘 월간 난방 에너지요구량 <span class="arithmatex">\(Q_{h,b, mth}\)</span> = <span class="arithmatex">\( \sum \)</span> 일간 난방 에너지요구량</h4><a class="headerlink" href="#q_hb-mth-sum" title="Permanent link">¶</a>
+<p><span class="arithmatex">\(Q_{h,b, mth}\)</span>는 다음과 같이 계산됩니다:      </p>
 <div style="text-align: center; margin-top: 24px; margin-bottom: 8px;">
 <div style="
     display: inline-block;
@@ -751,54 +1055,60 @@ theta_V,mech,m</p>
     margin-top: 1em;
     margin-bottom: 0px;
   ">
+<!--Open in a New Tab ver. & Equation No. (manually)-->
 <a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-  \( \dot{V}_{mech,b,m} = \dot{V}_{mech,m} = \dot{V}^* \)  <span>(정풍량)</span>
+  \(Q_{h,b.mth} = d_{op} \left( Q_{sink,op} - \eta_{op} Q_{source,op} \right) + d_{we} \left( Q_{sink,we} - \eta_{we} Q_{source,we} \right) \) 
 </a>
 </div>
 </div>
-<h3 id="_4">변풍량 (시간/용도에 따라 조절)<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
-<p>3-2 식 불러오기</p>
-<div style="text-align: center; margin-top: 24px; margin-bottom: 8px;">
+<!-- ✅ Where 이하: 완전히 별도의 블록으로 분리 -->
 <div style="
-    display: inline-block;
-    background-color: #F1F5F9;
-    border-radius: 10px;
-    padding: 16px 48px;
-    line-height: 1.8;
-    margin-top: 1em;
-    margin-bottom: 0px;
-  ">
-<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-  \( \dot{V}_{mech,m} = \frac{\sum_j V_j \cdot t_{V,mech,j,m}}{t_{V,mech,m} \cdot d_{V,mech,m}} \)  <span>(시간, 용도)</span>
-</a>
-</div>
-</div>
-<h3 id="_5">변풍량 (실내 냉방부하에 따름)<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
-<p>근데 유기형박사님이 환기에너지요구량은 없다고 하셨는데 지금 내가 적고 있는 이 공조에너지요구량은 대체 그럼 뭐인거지...?</p>
-<div style="text-align: center; margin-top: 24px; margin-bottom: 8px;">
+  display: flex;
+  justify-content: center;
+  font-family: Pretendard, sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+">
 <div style="
-    display: inline-block;
-    background-color: #F1F5F9;
-    border-radius: 10px;
-    padding: 16px 48px;
-    line-height: 1.8;
-    margin-top: 1em;
-    margin-bottom: 0px;
+    text-align: left;
+    line-height: 2;
+    padding: 16px 24px;
+    border-radius: 0px;
   ">
-<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-  \( \dot{V}_{mech,m} = \dot{V}_{mech,b,m} + \frac{1000 \cdot Q_{c,b}}{t_{V,mech,m} \cdot d_{V,mech,m} \cdot c_{p,L} \rho_L (\vartheta_{i,c,m} - \vartheta_{V,mech,m})} \) 
-</a>
-<a class="equation-link" href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" rel="noopener noreferrer" target="_blank">
-  \( \sum_m \dot{V} = t_{V,mech,m} \cdot d_{V,mech,m} \cdot \dot{V}_{mech,b,m} + \frac{1000 \cdot Q_{c,b}}{c_{p,L} \rho_L (\vartheta_{i,c,m} - \vartheta_{V,mech,m})} \) 
-</a>
+<!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
+<div style="
+      font-style: italic;
+      font-weight: bold;
+      font-family: 'Times New Roman', 'Cambria Math', serif;
+      margin-bottom: 24px;
+    ">
+      Where,
+    </div>
+<!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
+<span style="display: block;">\( Q_{h,b,mth} \) : 월간 난방 에너지요구량</span>
+<span style="display: block;">\( d_{op} \) : 주중 일수</span>
+<span style="display: block;">\( \eta_op \) : 주중 열획득 이용률</span>
+<span style="display: block;">\( Q_{source,op} \) : 주중 열획득</span>
+<span style="display: block;">\( d_{we} \) : 주말 일수</span>
+<span style="display: block;">\( \eta_we \) : 주말 열획득 이용률</span>
+<span style="display: block;">\( Q_{source,we} \) : 주말 열획득</span>
 </div>
 </div>
+<p><br/></p>
+<ul>
+<li>1개월은 <strong>주중</strong> 및 <strong>주말</strong>로 구성됩니다.   </li>
+<li>주중 및 주말 여부에 따라 운영스케줄이 다르기 때문에 <strong>일간</strong> 난방 에너지요구량 또한 달라집니다. </li>
+</ul>
+<figure style="text-align: center;">
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../_figs/Monthly cooling energy demand.PNG"><img alt="Monthly &amp; daily cooling energy demand" src="../../_figs/Monthly cooling energy demand.PNG" style="max-width: 70%;"/></a>
+<figcaption><strong>Monthly cooling energy demand</strong></figcaption>
+</figure>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="마지막 업데이트">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 6월 30일 03:29:31 UTC">2025년 6월 30일</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 8월 11일 06:09:35 UTC">2025년 8월 11일</span>
 </span>
 </aside>
 </article>
@@ -839,7 +1149,14 @@ theta_V,mech,m</p>
 <script src="../../assets/breadcrumb.js"></script>
 <script src="../../assets/scroll-to-top.js"></script>
 <script src="../../assets/footer-feedback.js"></script>
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+<script>window.mermaidConfig = {default: {
+    theme: "base",
+    themeVariables: {
+        fontFamily: "'Pretendard', Pretendard",
+        fontSize: "160px"
+    },
+    startOnLoad: false
+}};</script><script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(() => { lightbox.reload() });
 </script></body>
 </html>
