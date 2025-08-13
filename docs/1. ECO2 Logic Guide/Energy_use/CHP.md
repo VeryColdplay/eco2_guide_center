@@ -1,4 +1,4 @@
-# 2.6. 열병합 에너지소요량 (Energy use for combined heat and power system)
+# 3.6. 열병합 에너지소요량 (Energy use for combined heat and power system)
 
 열병합 발전시스템은 전기와 열을 생산합니다. 생산된 에너지는 전기설비 또는 열원기기를 포함한 건물의 전체 시스템에 적용됩니다.
 이에 따라 CHP의 계산은 다음과 같이 3가지로 구성됩니다:
@@ -10,7 +10,7 @@
 생산된 열은 열원기기에 의해 열에너지를 공급하게 됩니다. 
 따라서 해당 열에너지만큼을 시스템에 공급하기 위한 에너지소요량이 요구됩니다.
 
-## 2.6.1. CHP에 의한 전력생산량
+## 3.6.1. CHP에 의한 전력생산량
 전력생산량은 다음 값으로 환산될 수 있습니다:
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
@@ -29,7 +29,7 @@ Where,
 C: 전기 지수 (특별한 제시사항이 없는 경우 0.75 적용)
 \(Q_{h,outg,CHP,a}\): CHP가 시스템(열원기기)에 공급하는 열량
 
-### 2.6.1.1. CHP가 시스템(열원기기)에 공급하는 열량
+### 3.6.1.1. CHP가 시스템(열원기기)에 공급하는 열량
 CHP가 열원기기에  공급하는 열량은 다음과 같이 계산됩니다:
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
@@ -49,7 +49,7 @@ beta: 전체 열 생산에 대한 CHP의 열 생산비율 (특별한 제시사�
 
 
 
-## 2.6.2. CHP에 의한 열원기기의 에너지소요량
+## 3.6.2. CHP에 의한 열원기기의 에너지소요량
 열원기기의 에너지소요량은 다음에 의해 계산되어 난방 또는 급탕시스템에 합산됩니다:
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
@@ -59,7 +59,7 @@ beta: 전체 열 생산에 대한 CHP의 열 생산비율 (특별한 제시사�
 
 만일 에너지소요량이 음수가 될 경우 0으로 간주합니다.
 
-## 2.6.3. 에너지소요량으로부터 기인된 전력생산량
+## 3.6.3. 에너지소요량으로부터 기인된 전력생산량
 열원기기의 에너지소요량으로부터 기인된 전력생산량은 전기에 대한 1차에너지환산계수와 사용된 에너지매체를 고려하여 계산됩니다:
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">

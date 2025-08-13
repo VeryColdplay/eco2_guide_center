@@ -105,6 +105,8 @@ $$</div>
     <span style="display: block;">\( \vartheta_{V,\mathrm{mech},m} \) : 대표 월에서 공조기기의 평균 급기온도</span>
   </div>
 </div>   
+
+
 - \(\vartheta_{i,c}\):   
 <div align="center">$$
 \vartheta_{i,c} = \vartheta_{i,c,soil} - 2

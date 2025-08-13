@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://verycoldplay.github.io/eco2_guide_center/1.%20ECO2%20Logic%20Guide/HVAC/HVAC.html" rel="canonical"/>
+<link href="https://verycoldplay.github.io/eco2_guide_center/1.%20ECO2%20Logic%20Guide/HVAC/Integration.html" rel="canonical"/>
 <link href="../Energy_demand/Hot_water.html" rel="prev"/>
-<link href="../Energy_use/Heating_system.html" rel="next"/>
+<link href="Fan.html" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.13" name="generator"/>
-<title>2. 공조처리 - ECO2 Guide Center</title>
+<title>2.1. 분석치의 연계 - ECO2 Guide Center</title>
 <link href="../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -33,7 +33,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#31-hvac">
+<a class="md-skip" href="#21">
           콘텐츠로 이동
         </a>
 </div>
@@ -57,7 +57,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              2. 공조처리
+              2.1. 분석치의 연계
             
           </span>
 </div>
@@ -233,14 +233,98 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="HVAC.html">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
 <span class="md-ellipsis">
     2. 공조처리
     
   </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            2. 공조처리
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    2.1. 분석치의 연계
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="Integration.html">
+<span class="md-ellipsis">
+    2.1. 분석치의 연계
+    
+  </span>
 </a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#211">
+<span class="md-ellipsis">
+      2.1.1. 일반사항
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#212-cav">
+<span class="md-ellipsis">
+      2.1.2. 정풍량방식(CAV) 공조기의 급기풍량
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#213-vav">
+<span class="md-ellipsis">
+      2.1.3. 시간 및 용도 기반 변풍량방식(VAV) 공조기의 급기풍량
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#214-vav">
+<span class="md-ellipsis">
+      2.1.4. 실내 냉방부하 기반 변풍량방식(VAV) 공조기의 급기풍량
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#215">
+<span class="md-ellipsis">
+      2.1.5. 월별 평균 급기온도
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="Fan.html">
+<span class="md-ellipsis">
+    2.2. 송풍
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="HCHD.html">
+<span class="md-ellipsis">
+    2.3. 가열, 냉각, 가습, 제습
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_4" type="checkbox"/>
@@ -576,6 +660,47 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#211">
+<span class="md-ellipsis">
+      2.1.1. 일반사항
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#212-cav">
+<span class="md-ellipsis">
+      2.1.2. 정풍량방식(CAV) 공조기의 급기풍량
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#213-vav">
+<span class="md-ellipsis">
+      2.1.3. 시간 및 용도 기반 변풍량방식(VAV) 공조기의 급기풍량
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#214-vav">
+<span class="md-ellipsis">
+      2.1.4. 실내 냉방부하 기반 변풍량방식(VAV) 공조기의 급기풍량
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#215">
+<span class="md-ellipsis">
+      2.1.5. 월별 평균 급기온도
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -584,30 +709,134 @@
 <article class="md-content__inner md-typeset">
 <div style="text-align: right; font-size: 0.9em; color: #666; margin-bottom: -1em;">
 </div>
-<h1 id="31-hvac">3.1. 공조처리 (HVAC)<a class="headerlink" href="#31-hvac" title="Permanent link">¶</a></h1>
-<h1 id="311">3.1.1. 분석치의 연계<a class="headerlink" href="#311" title="Permanent link">¶</a></h1>
-<h1 id="3111">3.1.1.1. 일반사항<a class="headerlink" href="#3111" title="Permanent link">¶</a></h1>
-<p>존의 난방 및 냉방에너지 요구량을 분석하기 위해서는 다음의 값들이 사전에 결정되어야 한다.</p>
-<p>불릿삽입   </p>
-<p>공조처리(가열, 냉각, 가습, 제습)에 필요한 에너지요구량을 계산하기 위해서는 월별 평균 급기풍량(변수삽입)이 주어져야 한다.   </p>
-<h1 id="3112-cav">3.1.1.2. 정풍량방식(CAV) 공조기의 급기풍량<a class="headerlink" href="#3112-cav" title="Permanent link">¶</a></h1>
-<p>급기풍량은 실내 열 부하가 아닌 실내 공기질 요구 조건에 의해 결정된다. 따라서 풍량은 계산 기간 동안 일정하다.   </p>
-<p>불릿삽입   </p>
-<h1 id="3113-vav">3.1.1.3. 시간 및 용도 기반 변풍량방식(VAV) 공조기의 급기풍량<a class="headerlink" href="#3113-vav" title="Permanent link">¶</a></h1>
-<p>실내공기질 유지, 스케줄, 실험실 배기 등 시간이나 용도에 따라 풍량이 변하는 경우, 월별 평균 급기풍량은 부분부하 비율 및 부분부하 운전 시간에 따라 산정된다.    아래에서 j는 부분부하 운전 (시간별 풍량이 다른)을 나타내며, 월별 공조기의 운전시간에 따른 부분부하일 경우, 월별 운전시간의 비율에 의해 급기풍량이 정해진다.   </p>
-<p>수식삽입</p>
-<h1 id="3114-vav">3.1.1.4. 실내 냉방부하 기반 변풍량방식(VAV) 공조기의 급기풍량<a class="headerlink" href="#3114-vav" title="Permanent link">¶</a></h1>
-<p>실내 냉방 부하에 따라 풍량이 변하는 변풍량 공조기의 경우, 월별 평균 급기풍량은 실내 공기질 유지를 위한 최소 급기풍량과 냉방 부하를 처리하기 위한 추가 풍량을 더하여 산정한다.   </p>
-<p>불릿삽입   </p>
-<h1 id="3115">3.1.1.5. 월별 평균 급기온도<a class="headerlink" href="#3115" title="Permanent link">¶</a></h1>
-<p>월별 평균 급기온도(변수삽입)는 건물 또는 존의 냉방 또는 난방에너지요구량을 분석하는데 필요한 입력 값이다.   </p>
-<p>불릿삽입   </p>
+<h1 id="21">2.1. 분석치의 연계<a class="headerlink" href="#21" title="Permanent link">¶</a></h1>
+<h2 id="211">2.1.1. 일반사항<a class="headerlink" href="#211" title="Permanent link">¶</a></h2>
+<p>존의 난방 및 냉방에너지 요구량을 분석하기 위해서는 다음의 값들이 사전에 결정되어야 합니다.</p>
+<ul>
+<li>분석-급기풍량 (<span class="arithmatex">\( \dot{V}_{mech,b,m}\)</span>): 실내 냉난방 부하와 무관하게 결정되는 기준 풍량</li>
+<li>분석-급기온도 (<span class="arithmatex">\(\vartheta_{mech,m}\)</span>): 월별 평균 급기 온도</li>
+<li>월간 공조기기 가동시간: 일일 가동시간 (<span class="arithmatex">\(t_{V,mech,m}\)</span>)과 월간 가동일수 (<span class="arithmatex">\(d_{V,mech,m}\)</span>)를 통해 산정<ul>
+<li>주중의 경우, <span class="arithmatex">\(d_{V,mech,m}\)</span> = <span class="arithmatex">\(d_{op}\)</span></li>
+<li>주말, 휴일의 경우, <span class="arithmatex">\(d_{V,mech,m}\)</span> = <span class="arithmatex">\(d_{we}\)</span></li>
+</ul>
+</li>
+</ul>
+<p>공조처리(가열, 냉각, 가습, 제습)에 필요한 에너지 요구량을 계산하기 위해서는 월별 평균 급기풍량 (<span class="arithmatex">\( \dot{V}_{mech,m}\)</span>)이 주어져야 합니다.   </p>
+<h2 id="212-cav">2.1.2. 정풍량방식(CAV) 공조기의 급기풍량<a class="headerlink" href="#212-cav" title="Permanent link">¶</a></h2>
+<p>급기풍량은 실내 열 부하가 아닌 실내 공기질 요구 조건에 의해 결정됩니다. 따라서 풍량은 계산 기간 동안 일정합니다.   </p>
+<ul>
+<li>월별 평균 급기풍량 (<span class="arithmatex">\( \dot{V}_{mech,m}\)</span>): 정풍량 방식에서는 분석-급기풍량과 동일하며, 설계 풍량 (<span class="arithmatex">\( \dot{V}^*\)</span>) 값을 따릅니다.   </li>
+</ul>
+<div align="center">$$
+\dot{V}_{mech,b,m} = \dot{V}_{mech,m} = \dot{V}^*
+$$</div>
+<h2 id="213-vav">2.1.3. 시간 및 용도 기반 변풍량방식(VAV) 공조기의 급기풍량<a class="headerlink" href="#213-vav" title="Permanent link">¶</a></h2>
+<p>실내공기질 유지, 스케줄, 실험실 배기 등 시간이나 용도에 따라 풍량이 변하는 경우, 월별 평균 급기풍량은 부분부하 비율 및 부분부하 운전 시간에 따라 산정됩니다.    아래에서 <span class="arithmatex">\(j\)</span>는 부분부하 운전(시간별 풍량이 다른)을 나타내며, 월별 공조기의 운전시간에 따른 부분부하일 경우, 월별 운전시간의 비율에 의해 급기풍량이 정해집니다.   </p>
+<div align="center">$$
+\dot{V}_{mech,b,m}=\dot{V}_{mech,m}=\frac{\sum_{j} \left( \dot{V}_{j} \cdot t_{V,\mathrm{mech},j,m} \right)}{t_{V,\mathrm{mech},m} \cdot d_{V,\mathrm{mech},m}}
+$$</div>
+<div style="
+  display: flex;
+  justify-content: center;
+  font-family: Pretendard, sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+">
+<div style="
+    text-align: left;
+    line-height: 1;
+    padding: 4px 8px;
+    border-radius: 0px;
+  ">
+<!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
+<div style="
+      font-style: italic;
+      font-weight: bold;
+      font-family: 'Times New Roman', 'Cambria Math', serif;
+      margin-bottom: 24px;
+    ">
+      Where,
+    </div>
+<!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
+<span style="display: block;">\( Q_{c,b,mth} \) : 부분부하 운전 \(j\)에서의 급기풍량</span>
+<span style="display: block;">\( t_{V,\mathrm{mech},j,m} \) : 부분부하 운전 \(j\)에서의 월별 운전시간</span>
+<span style="display: block;">\( t_{V,\mathrm{mech},m} \) : 일일 운전시간 </span>
+<span style="display: block;">\( d_{V,\mathrm{mech},m} \) : 월별 시스템 운전 일수</span>
+</div>
+</div>
+<h2 id="214-vav">2.1.4. 실내 냉방부하 기반 변풍량방식(VAV) 공조기의 급기풍량<a class="headerlink" href="#214-vav" title="Permanent link">¶</a></h2>
+<p>실내 냉방 부하에 따라 풍량이 변하는 변풍량 공조기의 경우, 월별 평균 급기풍량은 실내 공기질 유지를 위한 최소 급기풍량과 냉방 부하를 처리하기 위한 추가 풍량을 더하여 산정합니다.   </p>
+<ul>
+<li>월별 평균 급기풍량 (<span class="arithmatex">\(\dot{V}_{\mathrm{mech},m}\)</span>):   </li>
+</ul>
+<div align="center">$$
+\dot{V}_{mech,m}=\dot{V}_{mech,b,m} + Q_{c,b}=\frac{\sum_{j} \left( \dot{V}_{j} \cdot t_{V,\mathrm{mech},j,m} \right)}{t_{V,\mathrm{mech},m} \cdot d_{V,\mathrm{mech},m}}
+$$</div>
+<p>또는   </p>
+<ul>
+<li>월별 송풍된 급기풍량 <span class="arithmatex">\( \sum_{m} \dot{V}\)</span>:   </li>
+</ul>
+<div align="center">$$
+\sum_{m} \dot{V} = t_{V,\mathrm{mech},m} \cdot d_{V,\mathrm{mech},m} \cdot \dot{V}_{\mathrm{mech},b,m} + \frac{Q_{c,b}}{c_{p,L} \cdot \rho_{L} \cdot\left( \vartheta_{i,c,m} - \vartheta_{V,\mathrm{mech},m} \right)}
+$$</div>
+<ul>
+<li>최대급기풍량 (<span class="arithmatex">\(\dot{V}_{\mathrm{mech},\max,m}\)</span>): 월별 최대 냉방 부하(<span class="arithmatex">\(\dot{Q}_{c,max,m}\)</span>)를 처리하기 위해 필요한 풍량으로, 송풍 에너지 계산에 사용됩니다.   </li>
+</ul>
+<div align="center">$$
+\dot{V}_{\mathrm{mech},\max,m} = \frac{\dot{Q}_{c,\max,m}}{c_{p,L} \cdot \rho_{L} \cdot (\vartheta_{i,c,m} - \vartheta_{V,\mathrm{mech},m})}
+$$</div>
+<div style="
+  display: flex;
+  justify-content: center;
+  font-family: Pretendard, sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+">
+<div style="
+    text-align: left;
+    line-height: 1;
+    padding: 4px 8px;
+    border-radius: 0px;
+  ">
+<!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
+<div style="
+      font-style: italic;
+      font-weight: bold;
+      font-family: 'Times New Roman', 'Cambria Math', serif;
+      margin-bottom: 24px;
+    ">
+      Where,
+    </div>
+<!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
+<span style="display: block;">\( \vartheta_{i,c,m} \) : 냉방에너지 요구량 분석 - 실내온도</span>
+<span style="display: block;">\( \vartheta_{V,\mathrm{mech},m} \) : 대표 월에서 공조기기의 평균 급기온도</span>
+</div>
+</div>
+<p>- <span class="arithmatex">\(\vartheta_{i,c}\)</span>:   </p>
+<div align="center">$$
+\vartheta_{i,c} = \vartheta_{i,c,soil} - 2
+$$</div>
+<h2 id="215">2.1.5. 월별 평균 급기온도<a class="headerlink" href="#215" title="Permanent link">¶</a></h2>
+<p>월별 평균 급기온도 (<span class="arithmatex">\(\vartheta_{V,\mathrm{mech},m}\)</span>)는 건물 또는 존의 냉방 또는 난방에너지요구량을 분석하는데 필요한 입력 값입니다.   </p>
+<ul>
+<li>가열 및 냉각 기능이 있는 공조기: 급기 요구 온도와 월별 평균 급기 온도가 일치하며, 존의 에너지요구량 분석에서 산정된 설계 표준값을 적용합니다.   </li>
+<li>냉각 기능이 없는 공조기: 팬이나 열회수 시스템의 영향으로 급기 온도가 변하며, &lt;표 3.2.5-3&gt;을 참조합니다.   </li>
+<li>가열 및 냉각 기능이 없는 공조기: &lt;표 3.2.5-4&gt;를 참조합니다.   </li>
+<li>가동시간이 12h/d 와 24h/d 사이일 경우 선형 보간하여 급기온도를 산정하고 <span class="arithmatex">\(12h/d\)</span> 이하일 경우 <span class="arithmatex">\(12h/d\)</span>에 해당하는 값을 적용합니다.   </li>
+</ul>
+<center>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../_tables/3.2.5-3.png"><img alt="냉각기능이 없는 공조기기의 월별 평균 급기온도" src="../../_tables/3.2.5-3.png" style="max-width: 50%;"/></a>
+</center>
+<!-- 캡션 삽입하고 싶으면 <div><strong>냉각기능이 없는 공조기기의 월별 평균 급기온도</strong></div>를 그림 위나 아래에 삽입한다-->
+<center>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../_tables/3.2.5-4.png"><img alt="가열 및 냉각기능이 없는 공조기기의 월별 평균 급기온도" src="../../_tables/3.2.5-4.png" style="max-width: 50%;"/></a>
+</center>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="마지막 업데이트">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 8월 11일 06:09:35 UTC">2025년 8월 11일</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 8월 13일 03:07:04 UTC">2025년 8월 13일</span>
 </span>
 </aside>
 </article>
