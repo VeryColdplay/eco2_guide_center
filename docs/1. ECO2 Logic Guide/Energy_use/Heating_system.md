@@ -45,7 +45,7 @@ $$
 
 ---    
 
-### 3.1.2.2. 최종 난방 에너지 소요량
+### 3.1.2.1. 최종 난방 에너지 소요량
 
 - 건물이 실제로 요구하는 최종 난방 에너지 소요량(\(Q_{h,f}\))은 생산기기의 열에너지 공급량(\(Q_{h,outg}\))과 공급 과정의 열 손실량(\(Q_{h,g}\))을 더한 값에서, 태양열 등 신재생에너지로 공급된 열량(\(Q_{h,reg}\))을 차감하여 계산됩니다.   
 
@@ -89,7 +89,7 @@ $$
 
 ---    
 
-### 3.1.2.3. 보조에너지
+### 3.1.2.2. 보조에너지
 
 - 난방 시스템에서 보조에너지(\(Q_{h,aux}\))는 열 전달, 분배, 저장, 생산의 각 단계에서 소요되는 모든 보조에너지의 합으로 산출되며 최종 에너지 소요량에 포함됩니다.   
 
@@ -101,7 +101,7 @@ $$
 
 ---    
 
-### 3.1.2.4. 비제어적 열획득(Heat gain)
+### 3.1.2.3. 비제어적 열획득(Heat gain)
 
 - 난방 시스템의 전달, 분배, 저장, 생산 과정에서 열 에너지의 일부는 제어되지 않고 난방 중인 실내 공간으로 유입되어 열획득으로 작용할 수 있다. 이 비제어적 열획득(\(Q_{I,h}\))은 열에너지 소요량을 계산할 때 고려되어야 합니다.   
 
@@ -128,15 +128,16 @@ $$
 
 <div align="center">
 $$
-\beta_{h,ce} = Q_{h,b} / ( \dot{Q}_{dot\,h,max} \cdot t_h )
+\beta_{h,ce} = \frac{Q_{h,b}}{\dot{Q}_{h,\max} \cdot t_h}
 $$
 </div>
+
 
 - **열 분배 부하율 \( \beta_{h,d} \)**
 
 <div align="center">
 $$
-\beta_{h,d} = ( Q_{h,b} + Q_{h,ce} ) / ( \dot{Q}_{dot\,h,max} \cdot t_h )
+\beta_{h,d} = \frac{Q_{h,b} + Q_{h,ce}}{\dot{Q}_{dot\,h,max} \cdot t_h}
 $$
 </div>
 
@@ -144,7 +145,7 @@ $$
 
 <div align="center">
 $$
-\beta_{h,s} = ( Q_{h,b} + Q_{h,ce} + Q_{h,d} ) / ( \dot{Q}_{dot\,h,max} \cdot t_h )
+\beta_{h,s} = \frac{Q_{h,b} + Q_{h,ce} + Q_{h,d}}{\dot{Q}_{dot\,h,max} \cdot t_h}
 $$
 </div>
 
@@ -152,7 +153,7 @@ $$
 
 <div align="center">
 $$
-\beta_{h,g} = ( Q_{h,b} + Q_{h,ce} + Q_{h,d} + Q_{h,s} ) / ( \dot{Q}_{dot\,h,max} \cdot t_h )
+\beta_{h,g} = \frac{Q_{h,b} + Q_{h,ce} + Q_{h,d} + Q_{h,s}}{\dot{Q}_{dot\,h,max} \cdot t_h}
 $$
 </div>
 
@@ -227,15 +228,6 @@ $$
 $$
 </div>
 
-(단,   
-- \( \beta_i \) : 2.1.3.1에서 계산된 각 프로세스의 평균 부하율   
-- \( \theta_{VA} \) : 난방 시스템의 설계 조건 공급 온도 (℃)   
-- \( \theta_{RA} \) : 난방 시스템의 설계 조건 환수 온도 (℃)   
-- \( n \) : 방열지수 (라디에이터 = 1.33, 바닥 난방 = 1.1)   
-- \( \theta_{i,h,\text{soll}} \) : 난방 시스템 가동 시간 동안의 실내 온도 (℃)
-)
-
->> where로 대치
 <div style="
   display: flex;
   justify-content: center;
@@ -278,7 +270,7 @@ $$
 $$
 </div>
 
-> 혼합기(mixer)가 설치된 정온 보일러의 경우, 전달과 분배 과정에서 초과 온도 값 적용, 혼합기가 없는 정온 보일러의 평균 온도 = 70℃ 적용
+혼합기(mixer)가 설치된 정온 보일러의 경우, 전달과 분배 과정에서 초과 온도 값 적용, 혼합기가 없는 정온 보일러의 평균 온도 = 70℃ 적용
 
 - 건물이 리모델링 되었을 경우, 설계 온도는 조정할 수 있습니다. 새로운 자세한 설계가 수립되지 않은 경우, 아래 표의 설계 온도를 사용하도록 합니다. 중간 값일 경우, 한 단계 높은 온도 쌍을 선택하도록 합니다.   
 
@@ -356,7 +348,7 @@ $$
 
 - **보일러 정격출력(\( \dot{Q}_{N,h} \))**: 보일러의 정격 출력을 산정하기 위해 첫 번째로 모든 연결된 열 소비기기의 최대 출력이 결정되어야 합니다. 동시 발생하는 수요에 따라 보일러의 정격 출력은 가장 큰 단일 수요 또는 동시 발생하는 수요의 합 중에서 결정됩니다.      
 
-- **난방 시스템의 보일러 정격 출력(\(Q_{N,h}\))**:
+- **난방 시스템의 보일러 정격 출력(\(Q_{N,h}\))**:   
 
 <div align="center">
 $$
@@ -364,7 +356,7 @@ $$
 $$
 </div>
 
-- 이미 열 생산기기가 설치된 기존 건물의 경우, 정격 출력은 설치된 기기의 값을 이용합니다.    설치된 기기 값을 알 수 없는 경우, 아래 식을 사용합니다.   
+이미 열 생산기기가 설치된 기존 건물의 경우, 정격 출력은 설치된 기기의 값을 이용합니다.    설치된 기기 값을 알 수 없는 경우, 아래 식을 사용합니다.   
 
 <div align="center">
 $$
@@ -400,9 +392,8 @@ $$
   </div>
 </div> 
 
-- **동시 열 부하(난방, 급탕, 공조 등) 발생 시**:
-
-- 동시에 여러 가지의 열 부하가 발생할   경우, 보일러의 정격출력은 **동시에 발생하는 부하들의 합**으로 또는 **우선순위가 높은 부하 중 가장 큰 값**으로 결정됩니다.   
+- **동시 열 부하(난방, 급탕, 공조 등) 발생 시**:   
+동시에 여러 가지의 열 부하가 발생할 경우, 보일러의 정격출력은 **동시에 발생하는 부하들의 합**으로 또는 **우선순위가 높은 부하 중 가장 큰 값**으로 결정됩니다.   
 
 <div align="center">
 $$
@@ -656,7 +647,7 @@ $$</div>
  
 - \( \eta_{h,\text{ce}} \): 실내 열전달 총 효율   
 <div align="center"> $$
-\eta_{h,\text{ce}} = \dfrac{1}{4 - (\eta_L + \eta_C + \eta_B)} \)
+\eta_{h,\text{ce}} = \dfrac{1}{4 - (\eta_L + \eta_C + \eta_B)}
 $$</div>
 
 <div style="
@@ -1300,7 +1291,9 @@ $$</div>
       table {
          border-collapse: collapse;
          margin: auto;
-         width: 90%;
+         width: auto; /* 고정 너비 대신 내용에 맞게 자동 조정 */
+         max-width: 90%; /* 너무 커지면 최대 90% 너비 제한 */
+         table-layout: auto; /* 내용에 따라 칼럼 너비 자동 조절 */
       }
       th, td {
          border: 1px solid black;
@@ -1314,7 +1307,7 @@ $$</div>
    </style>
 </head>
 
-<h3>&lt;표. 배관망에 대한 표준 값&gt;</h3>
+<h5>&lt;표. 배관망에 대한 표준 값&gt;</h5>
 
 <table>
    <tr>
@@ -1406,7 +1399,7 @@ $$</div>
    </style>
 </head>
 
-<h3>&lt;표. 배관의 열관류율 \( U_i \) 표준값&gt;</h3>
+<h5>&lt;표. 배관의 열관류율 \( U_i \) 표준값&gt;</h5>
 
 <table>
    <tr>
@@ -1585,7 +1578,7 @@ $$</div>
    </style>
 </head>
 
-<h3>&lt;표. 펌프 제어에 따른 \( C_{P1}, C_{P2} \)&gt;</h3>
+<h5>&lt;표. 펌프 제어에 따른 \( C_{P1}, C_{P2} \)&gt;</h5>
 
 <table>
    <tr>
@@ -1690,11 +1683,12 @@ $$</div>
   </div>
 </div> 
 
-열 생산기기 - 저장탱크 연결 배관 열 손실
+열 생산기기 - 저장탱크 연결 배관 열 손실   
+
 - 열 생산기기와 저장 탱크 위치가 동일할 때: \( f_{\text{verbindung}} = 1.2 \)   
 - 열 생산기기와 저장 탱크 위치가 다를 때: #.4.4의 배관손실처럼 계산   
 
-일일 열 손실
+일일 열 손실   
 \( q_{B,S} = 0.4 + 0.14 \cdot V^{0.45} \)
 
 - **비제어적 열획득**: 축열조가 난방 중인 존 내에 설치된 경우, 이 손실은 해당 존의 비제어적 열획득으로 고려됩니다.      
@@ -1813,8 +1807,34 @@ $$</div>
 Q_{h,g,v,i} = \frac{ \beta_{h,i} - \beta_{K,pl} }{ 1 - \beta_{K,pl} } \cdot (\dot{Q}_{V,g,100\%} - \dot{Q}_{V,g,pl}) \cdot (t_{h,rL} - t_{w,100\%})
 $$</div>
 
-- \( \beta_{K,pl} = 0.3 \) (기름 & 가스 보일러), \( \beta_{K,100\%} = 1.0 \)   
-- \( t_{w,100\%} = \frac{Q_{w,outg}}{ \dot{Q}_N \cdot d_{\text{Nutz,mth}} } \) (참조: #.#.#)
+<div style="
+  display: flex;
+  justify-content: center;
+  font-family: Pretendard, sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+">
+  <div style="
+    text-align: left;
+    line-height: 1;
+    padding: 4px 8px;
+    border-radius: 0px;
+  ">
+    <!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
+    <div style="
+      font-style: italic;
+      font-weight: bold;
+      font-family: 'Times New Roman', 'Cambria Math', serif;
+      margin-bottom: 24px;
+    ">
+      Where,
+    </div>
+
+    <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
+    <span style="display: block;">\( \beta_{K,pl} = 0.3 \) (기름 & 가스 보일러), \( \beta_{K,100\%} = 1.0 \)</span>
+    <span style="display: block;">\( t_{w,100\%} = \frac{Q_{w,outg}}{ \dot{Q}_N \cdot d_{\text{Nutz,mth}} } \) (참조: 3.3.2)</span>
+  </div>
+</div> 
 
 ---    
 
@@ -1873,13 +1893,13 @@ $$
   </div>
 </div>  
 
-- **전부하 손실 성능 (dot{Q}_{V,g,100%})**: 보일러가 100% 부하로 운전될 때의 손실 성능
+- **전부하 손실 성능 (\(dot{Q}_{V,g,100%}\))**: 보일러가 100% 부하로 운전될 때의 손실 성능
 
 <div align="center">$$
 \dot{Q}_{V,g,100\%} = \frac{ f_{Hs/Hi} - \eta_{K,100\%,Betrieb} }{ \eta_{K,100\%,Betrieb} } \cdot \dot{Q}_N
 $$</div>
 
-**부분 부하 손실 성능 (dot{Q}_{v,g,pl%})**: 보일러가 부분 부하 운전할 떄의 손실 성능  
+- **부분 부하 손실 성능 (\(dot{Q}_{v,g,pl%}\))**: 보일러가 부분 부하 운전할 떄의 손실 성능  
 <div align="center">$$
 \dot{Q}_{V,g,pl} = \frac{ f_{Hs/Hi} - \eta_{K,pl\%,Betrieb} }{ \eta_{K,pl\%,Betrieb} } \cdot \beta_{K,pl} \cdot \dot{Q}_N
 $$</div>
@@ -1920,7 +1940,7 @@ $$</div>
   </style>
 </head>
 
-<h3>&lt;표. 보일러 온도&gt;</h3>
+<h5>&lt;표. 보일러 온도&gt;</h5>
 
 <table>
   <tr>
@@ -1971,7 +1991,7 @@ $$</div>
     }
   </style>
 </head>
-<h3>&lt;표. 온도 보정계수&gt;</h3>
+<h5>&lt;표. 온도 보정계수&gt;</h5>
 
 <table>
   <tr>
@@ -2067,7 +2087,7 @@ $$</div>
     </div>
 
     <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-    <span style="display: block;">\( P_{\text{aux,SB}} \) = 대기모드 보조 동력</span>
+    <span style="display: block;">\( P_{\text{aux,SB}} \): 대기모드 보조 동력</span>
   </div>
 </div> 
 
@@ -2101,7 +2121,7 @@ $$</div>
     </div>
 
     <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-    <span style="display: block;">\( P_{\text{aux,pl}} \) = 부분 부하 시 보조 동력</span>
+    <span style="display: block;">\( P_{\text{aux,pl}} \): 부분 부하 시 보조 동력</span>
   </div>
 </div> 
 
@@ -2112,37 +2132,37 @@ $$</div>
 
 
 
-**\(P_{aux,100}\), \(P_{aux,pl}\) 계산식**:   
+**\(P_{aux,100}\), \(P_{aux,pl}\)**:   
+
 - 표준-난방 보일러   
    - 가스 보일러:   
 <div align="center">$$
-P_{aux,100} = P_{aux,p} = \frac{0.148 \cdot \dot{Q}_N + 40}{1000}
-$$</div>
+P_{aux,100} = P_{aux,p} = \frac{0.148 \cdot \dot{Q}_N + 40}{1000}$$</div>
 
    - 분무식 보일러 (가스/기름):   
 <div align="center">$$
-P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48}
-$$</div>
+P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48}$$</div>
 
 <div align="center">$$
-P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}
-$$</div>
+P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}$$</div>
 
 - 저온 보일러   
+
    - 가스 보일러:   
 <div align="center">$$
-P_{aux,100} = P_{aux,pl} = \frac{0.148 \cdot \dot{Q}_N + 40}{1000}
-$$</div>
+P_{aux,100} = P_{aux,pl} = \frac{0.148 \cdot \dot{Q}_N + 40}{1000}$$</div>
 
    - 분무식 보일러 (가스/기름):   
-      동일
+<div align="center">$$
+P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48}$$</div>
+
+<div align="center">$$
+P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}$$</div>
 
 - 콘덴싱 보일러:   
-<div align="center">$$P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48}
-$$</div>  
+<div align="center">$$P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48}$$</div>  
 
-<div align="center">$$P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}
-$$</div>
+<div align="center">$$P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}$$</div>
 
 
 ---    
@@ -2254,7 +2274,7 @@ $$</div>
     </div>
 
     <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-    <span style="display: block;">\( \Phi_{DS} \) = 정격 출력(= \(dot{Q}_{N}\))</span>   
+    <span style="display: block;">\( \Phi_{DS} \): 정격 출력(= \(dot{Q}_{N}\))</span>   
   </div>
 </div> 
 
@@ -2286,9 +2306,9 @@ $$</div>
     </div>
 
     <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-    <span style="display: block;">\( D_{DS} \) = 급수 온도에 따른 계수 </span>   
+    <span style="display: block;">\( D_{DS} \): 급수 온도에 따른 계수 </span>   
     <span style="display: block;">\( \theta_{\text{prim,DS}} \): 기계실 1차 급수 온도</span>   
-    <span style="display: block;">\( B_{DS} \) = 기계실 단열 등급에 따른 계수</span>   
+    <span style="display: block;">\( B_{DS} \): 기계실 단열 등급에 따른 계수</span>   
   </div>
 </div> 
 
