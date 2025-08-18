@@ -1750,7 +1750,7 @@ $$</div>
 <span style="display: block;">\( \eta_B \) : 외피 열손실에 대한 효율</span>
 </div>
 </div>
-<p>일반적인 상황에서 <span class="arithmatex">\(f_{Radiant}\)</span>(h &gt; 4m인 대형 홀 공간에서 중요)와 <span class="arithmatex">\(f_{int}\)</span>(실내 온도감소 고려)는 1로 설정합니다.   </p>
+<p>일반적인 상황에서 <span class="arithmatex">\(f_{Radiant}\)</span>(<span class="arithmatex">\(h &gt; 4m\)</span>인 대형 홀 공간에서 중요)와 <span class="arithmatex">\(f_{int}\)</span>(실내 온도감소 고려)는 1로 설정합니다.   </p>
 <ul>
 <li>연간 열 손실(<span class="arithmatex">\(Q_{h,ce,a}\)</span>)은 월별 계산한 열 손실의 합과 같습니다.   </li>
 </ul>
@@ -2790,8 +2790,6 @@ $$</div>
 <span style="display: block;">\( t_P = \beta_{h,s} \cdot 24 \cdot d_{h,\text{mth}} \) (열 생산기기와 동시 가동될 경우)</span>
 </div>
 </div>
-<pre><code>
-</code></pre>
 <h3 id="3146-heat-output">3.1.4.6. 열 생산기기(보일러)의 에너지 공급량(Heat output)<a class="headerlink" href="#3146-heat-output" title="Permanent link">¶</a></h3>
 <ul>
 <li>난방 시스템에 태양열 시스템이나 공조 시설 등으로부터 열이 공급되면, 난방 시스템에서 요구하는 추가 열량을 보일러와 같은 열 생산기기로 공급해야 합니다. 이를 <strong>생산기기 잔여 열 공급량</strong> (<span class="arithmatex">\( Q^*_h \)</span>) 이라고 정의하고 아래와 같이 계산합니다.      </li>
@@ -2937,13 +2935,13 @@ $$
 </div>
 </div>
 <ul>
-<li><strong>전부하 손실 성능 (<span class="arithmatex">\(dot{Q}_{V,g,100%}\)</span>)</strong>: 보일러가 100% 부하로 운전될 때의 손실 성능</li>
+<li><strong>전부하 손실 성능 (<span class="arithmatex">\(dot{Q}_{V,g,100\%}\)</span>)</strong>: 보일러가 100% 부하로 운전될 때의 손실 성능</li>
 </ul>
 <div align="center">$$
 \dot{Q}_{V,g,100\%} = \frac{ f_{Hs/Hi} - \eta_{K,100\%,Betrieb} }{ \eta_{K,100\%,Betrieb} } \cdot \dot{Q}_N
 $$</div>
 <ul>
-<li><strong>부분 부하 손실 성능 (<span class="arithmatex">\(dot{Q}_{v,g,pl%}\)</span>)</strong>: 보일러가 부분 부하 운전할 떄의 손실 성능  </li>
+<li><strong>부분 부하 손실 성능 (<span class="arithmatex">\(dot{Q}_{V,g,pl\%}\)</span>)</strong>: 보일러가 부분 부하 운전할 때의 손실 성능  </li>
 </ul>
 <div align="center">$$
 \dot{Q}_{V,g,pl} = \frac{ f_{Hs/Hi} - \eta_{K,pl\%,Betrieb} }{ \eta_{K,pl\%,Betrieb} } \cdot \beta_{K,pl} \cdot \dot{Q}_N
@@ -3452,7 +3450,7 @@ $$</div>
 <span class="md-icon" title="마지막 업데이트">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 8월 13일 05:57:41 UTC">2025년 8월 13일</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 8월 18일 05:17:04 UTC">2025년 8월 18일</span>
 </span>
 </aside>
 </article>
@@ -3492,7 +3490,6 @@ $$</div>
 <script src="../../assets/cache-buster.js"></script>
 <script src="../../assets/breadcrumb.js"></script>
 <script src="../../assets/scroll-to-top.js"></script>
-<script src="../../assets/footer-feedback.js"></script>
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(() => { lightbox.reload() });
 </script></body>
