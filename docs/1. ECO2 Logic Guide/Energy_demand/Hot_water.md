@@ -1,29 +1,17 @@
 # 1.5. 급탕 에너지요구량 (Energy need for hot water)
 
 **급탕 에너지요구량**은 **한 존**을 기준으로, **월 단위**로 계산됩니다.
-**월간** 급탕 에너지요구량은 **일간** 급탕 에너지요구량을 계산한뒤 특정 달의 사용일수를 곱하여 계산합니다. 
-<br>
-아래 그림과 같이 한 존의 월간 급탕 에너지요구량이 결정되면, 이를 월별로 모두 합하여 한 존의 최종 급탕 에너지요구량이 됩니다.
+**월간** 급탕 에너지요구량은 **일간** 급탕 에너지요구량을 계산한뒤 특정 달의 사용일수를 곱하여 계산합니다. 그림과 같이 한 존의 월간 급탕 에너지요구량이 결정되면, 이를 월별로 모두 합하여 한 존의 최종 급탕 에너지요구량이 됩니다.
 
 <div style="text-align: center;">
   <img src="https://www.researchgate.net/publication/267435585/figure/fig4/AS:667861970337800@1536242110522/Amount-of-domestic-hot-water-consumption-in-an-apartment-by-month.png" 
        alt="Domestic hot water consumption" 
        style="max-width: 80%; height: auto;" />
-
-  <div style="font-size: 14px; margin-top: 8px;">
-    (출처: <a href="https://www.researchgate.net/publication/267435585" target="_blank">ResearchGate 원문 링크</a>)
-  </div>
 </div>
-
-
-<br>
-<br>
 
 ## 1.5.1. 월간 급탕 에너지요구량 \(Q_{w,b}\)
 
-**급탕** **에너지요구량**은 기호로 **\(Q_{w,b,d}\)**로 표시하며, 존에 따라 결정됩니다.   
-ECO2에서는 한 존에서의 **급탕에 필요한 월간 에너지요구량**을 다음과 같이 계산합니다:
-
+**급탕** **에너지요구량**은 기호로 **\(Q_{w,b,d}\)**로 표시하며, 존에 따라 결정됩니다. ECO2에서는 한 존에서의 **급탕에 필요한 월간 에너지요구량**을 다음과 같이 계산합니다:
 
 <div style="text-align: center; margin-top: 24px; margin-bottom: 8px;">
   <div style="
@@ -64,14 +52,9 @@ ECO2에서는 한 존에서의 **급탕에 필요한 월간 에너지요구량**
     </div>
     <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
     <span style="display: block;">\( Q_{w,b,d} \) : 일일 급탕 에너지요구량 (\( W/m^2 \))</span>
-    <span style="display: block;">\( d_{Nutz,mth} \) : 건물 공간의 용도에 따른 연간 이용일수(예: 개인사무실 250일) (식에서는 mth인데 where에서는 a로 되어 있음)</span>
+    <span style="display: block;">\( d_{Nutz,mth} \) : 건물 공간의 용도에 따른 연간 이용일수(예: 개인사무실 250일)</span>
   </div>
 </div>
-
-
-<br>
-<br>
-<br>
 
 ## 1.5.2. 일간 급탕 에너지요구량 \(Q_{w,b,d}\)
 한편 일간 급탕 에너지요구량은 존별로 상이하며, 다음과 같이 **용도프로필** 내 면적 또는 인원으로 환산된 **\(q_w,b,d\)**의 값을 단위에 맞게 환산하여 사용합니다.   
@@ -133,11 +116,6 @@ ECO2에서는 용도프로필 내 일간 급탕 열 요구량\(q_w,b,d\)의 값�
 | 병실 | 82 | 
 | 객실 | 82 | 
 | 열람실 | 30 | 
-
-
-<br>
-<br>
-
 
 ## 1.5.3. 월별 이용일수 \(d_{Nutz,mth}\)
 급탕 에너지요구량 계산에 필요한 월별 이용일수\((d_{Nutz,mth)}\)는 다음과 같이 계산됩니다:

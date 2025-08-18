@@ -1,12 +1,12 @@
 # 1.4. 조명 에너지요구량  \(Q_{l}\) (Energy need for lighting) 
 ## 1.4.1. 조명 에너지요구량 계산
 
-아래 그림은 존의 전기적 조명 부하를 바탕으로 조명 에너지요구량을 산정하는 프로세스를 도식화한 것입니다.
+아래 그림은 존의 전기적 조명 부하를 바탕으로 조명 에너지요구량을 산정하는 프로세스를 도식화한 것입니다.   
 
 <center>
-  <img src="./../_images/lighting_energy_demand.png" alt="lighting energy demand calculation process" style="max-width: 100%;">
+  <img src="../../_images/lighting_energy_demand.png" alt="lighting energy demand calculation process" style="max-width: 100%;">
 </center>
-
+   
 각 존 \(j\)의 조명에 사용되는 에너지요구량을 산정하기 위해서는 해당 존에 대한 **전기에너지 성능 (\(p_j\))**을 산출하여야 하며, 이를 위해 각 존의 **실내 요구 조도값 (\(E\)), 실지수 (\(k\)), 조명률 (\(U\)), 보수율 (\(M\)), 조명기기 효율 (\(\eta_e\))**이 파악되어야 합니다. 산출된 **전기에너지 성능**에 **바닥면적 (\(A_j\))**과 **전등의 가동시간 (\(t\))**을 곱하여 존 \(j\)에 대한 에너지요구량을 산정합니다. 
 
 <br>
@@ -183,59 +183,10 @@
 
 조명률이란 광원에서 나온 총 빛에 대한 작업면에 도달하는 빛의 비율을 나타내며 일반적으로 1보다 작은 값으로 표시됩니다. 조명률 산출은 아래 표에 해당하는 값을 적용합니다 (단, 실내 마감재의 반사율을 바닥 0.2, 벽 0.5, 천정 0.7로 설정한 경우에 해당). 
 
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>조명기기 방식 별 실지수 k</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 90%;
-      font-family: "Malgun Gothic", sans-serif;
-      font-size: 14px;
-      text-align: center;
-      margin: 0 auto;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 6px;
-    }
-    th[colspan] {
-      background-color: #f8f8f8;
-    }
-    td.left {
-      text-align: left;
-    }
-  </style>
-</head>
-<body>
-  <table>
-    <caption style="caption-side: top; text-align: left; font-size: 16px; font-weight: bold; margin-bottom: 12px;">
-      표 3.2.6-1. 조명기기 방식별 실지수(k)
-    </caption>
-    <tr>
-      <th rowspan="2">조명기기 방식</th>
-      <th colspan="11">실지수 <i>k</i></th>
-    </tr>
-    <tr>
-      <th>0.6</th><th>0.8</th><th>1</th><th>1.25</th><th>1.5</th><th>2</th><th>2.5</th><th>3</th><th>4</th><th>5</th>
-    </tr>
-    <tr>
-      <td class="left">직접(백열등)</td>
-      <td>0.48</td><td>0.53</td><td>0.56</td><td>0.59</td><td>0.62</td><td>0.65</td><td>0.67</td><td>0.69</td><td>0.71</td><td>0.72</td>
-    </tr>
-    <tr>
-      <td class="left">직접(형광등)</td>
-      <td>0.3</td><td>0.37</td><td>0.42</td><td>0.46</td><td>0.49</td><td>0.54</td><td>0.57</td><td>0.59</td><td>0.61</td><td>0.63</td>
-    </tr>
-    <tr>
-      <td class="left">간접/반간접</td>
-      <td>0.15</td><td>0.19</td><td>0.22</td><td>0.26</td><td>0.28</td><td>0.32</td><td>0.35</td><td>0.37</td><td>0.4</td><td>0.42</td>
-    </tr>
-  </table>
-</body>
-</html>
+<center>
+    <div><strong>Table 3.2.6-1. 조명기기 방식 별 실지수 k</strong></div>
+    <img src="../../_tables/3.2.6-1.png" style="max-width: 100%;" alt="배관망에 대한 표준값">
+</center>
 
 ### 1.4.2.3. 보수율 \(M\)
 
@@ -289,60 +240,7 @@
 
 조명기기 효율 (\(\eta_e\))는 단위에너지 당 발생되는 광속을 의미하며 광원의 종류 및 제품에 따라 성능에 차이가 있습니다. 제품의 성능 성적서가 주어지는 경우 제시된 값을 사용하도록 하고, 성적서가 없는 경우 다음 표에 주어진 표준값을 사용합니다. 
 
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>램프종류별 조명기기효율</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 95%;
-      font-family: "Malgun Gothic", sans-serif;
-      font-size: 14px;
-      text-align: center;
-      margin: 0 auto;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 6px;
-    }
-    .slanted {
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      font-size: 12px;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-  <table>
-    <caption style="caption-side: top; text-align: left; font-size: 16px; font-weight: bold; margin-bottom: 12px;">
-      표 3.2.6-2. 램프 종류 별 조명기기 효율
-    </caption>
-    <tr>
-      <th rowspan="2">기기효율</th>
-      <th colspan="7">램프종류</th>
-    </tr>
-    <tr>
-      <th>백열등<br>100 W</th>
-      <th>할로겐등<br>500 W</th>
-      <th>형광등<br>40 W</th>
-      <th>형광등<br>100 W</th>
-      <th>고압수은등<br>400 W</th>
-      <th>메탈할라이드등<br>400 W</th>
-      <th>고압나트륨등<br>400 W</th>
-    </tr>
-    <tr>
-      <td>조명기기효율<br>(안정기손실 포함)<br>lm/W</td>
-      <td>15</td>
-      <td>21</td>
-      <td>65</td>
-      <td>79</td>
-      <td>52</td>
-      <td>72</td>
-      <td>108</td>
-    </tr>
-  </table>
-</body>
-</html>
+<center>
+    <div><strong>Table 3.2.6-2. 램프 종류별 조명기기 효율</strong></div>
+    <img src="../../_tables/3.2.6-2.png" style="max-width: 100%;" alt="배관망에 대한 표준값">
+</center>
