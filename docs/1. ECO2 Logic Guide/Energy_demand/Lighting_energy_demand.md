@@ -4,9 +4,8 @@
 아래 그림은 존의 전기적 조명 부하를 바탕으로 조명 에너지요구량을 산정하는 프로세스를 도식화한 것입니다.
 
 <center>
-  <img src="./../_images/lighting_energy_demand.png" width="1200" alt="lighting_energy_demand">
+  <img src="./../_images/lighting_energy_demand.png" alt="lighting energy demand calculation process" style="max-width: 100%;">
 </center>
-
 
 각 존 \(j\)의 조명에 사용되는 에너지요구량을 산정하기 위해서는 해당 존에 대한 **전기에너지 성능 (\(p_j\))**을 산출하여야 하며, 이를 위해 각 존의 **실내 요구 조도값 (\(E\)), 실지수 (\(k\)), 조명률 (\(U\)), 보수율 (\(M\)), 조명기기 효율 (\(\eta_e\))**이 파악되어야 합니다. 산출된 **전기에너지 성능**에 **바닥면적 (\(A_j\))**과 **전등의 가동시간 (\(t\))**을 곱하여 존 \(j\)에 대한 에너지요구량을 산정합니다. 
 

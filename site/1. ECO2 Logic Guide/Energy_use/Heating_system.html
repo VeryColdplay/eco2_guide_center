@@ -327,23 +327,23 @@
 <nav aria-label="3.1.2. 생산기기 열 에너지 공급량(heat output)" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#3121">
+<span class="md-ellipsis">
+      3.1.2.1. 최종 난방 에너지 소요량
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#3122">
 <span class="md-ellipsis">
-      3.1.2.2. 최종 난방 에너지 소요량
+      3.1.2.2. 보조에너지
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3123">
+<a class="md-nav__link" href="#3123-heat-gain">
 <span class="md-ellipsis">
-      3.1.2.3. 보조에너지
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3124-heat-gain">
-<span class="md-ellipsis">
-      3.1.2.4. 비제어적 열획득(Heat gain)
+      3.1.2.3. 비제어적 열획득(Heat gain)
     </span>
 </a>
 </li>
@@ -880,23 +880,23 @@
 <nav aria-label="3.1.2. 생산기기 열 에너지 공급량(heat output)" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#3121">
+<span class="md-ellipsis">
+      3.1.2.1. 최종 난방 에너지 소요량
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#3122">
 <span class="md-ellipsis">
-      3.1.2.2. 최종 난방 에너지 소요량
+      3.1.2.2. 보조에너지
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3123">
+<a class="md-nav__link" href="#3123-heat-gain">
 <span class="md-ellipsis">
-      3.1.2.3. 보조에너지
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3124-heat-gain">
-<span class="md-ellipsis">
-      3.1.2.4. 비제어적 열획득(Heat gain)
+      3.1.2.3. 비제어적 열획득(Heat gain)
     </span>
 </a>
 </li>
@@ -1146,7 +1146,7 @@ $$
 <li>열 생산기기로부터 열이 공급되는 과정이 다수인 경우, 각각의 과정의 <span class="arithmatex">\(Q_{h,outg}\)</span>를 합산합니다.   </li>
 </ul>
 <hr/>
-<h3 id="3122">3.1.2.2. 최종 난방 에너지 소요량<a class="headerlink" href="#3122" title="Permanent link">¶</a></h3>
+<h3 id="3121">3.1.2.1. 최종 난방 에너지 소요량<a class="headerlink" href="#3121" title="Permanent link">¶</a></h3>
 <ul>
 <li>건물이 실제로 요구하는 최종 난방 에너지 소요량(<span class="arithmatex">\(Q_{h,f}\)</span>)은 생산기기의 열에너지 공급량(<span class="arithmatex">\(Q_{h,outg}\)</span>)과 공급 과정의 열 손실량(<span class="arithmatex">\(Q_{h,g}\)</span>)을 더한 값에서, 태양열 등 신재생에너지로 공급된 열량(<span class="arithmatex">\(Q_{h,reg}\)</span>)을 차감하여 계산됩니다.   </li>
 </ul>
@@ -1186,7 +1186,7 @@ $$
 </div>
 </div>
 <hr/>
-<h3 id="3123">3.1.2.3. 보조에너지<a class="headerlink" href="#3123" title="Permanent link">¶</a></h3>
+<h3 id="3122">3.1.2.2. 보조에너지<a class="headerlink" href="#3122" title="Permanent link">¶</a></h3>
 <ul>
 <li>난방 시스템에서 보조에너지(<span class="arithmatex">\(Q_{h,aux}\)</span>)는 열 전달, 분배, 저장, 생산의 각 단계에서 소요되는 모든 보조에너지의 합으로 산출되며 최종 에너지 소요량에 포함됩니다.   </li>
 </ul>
@@ -1196,7 +1196,7 @@ Q_{h,aux} = Q_{h,ce,aux} + Q_{h,d,aux} + Q_{h,s,aux} + Q_{h,g,aux}
 $$
 </div>
 <hr/>
-<h3 id="3124-heat-gain">3.1.2.4. 비제어적 열획득(Heat gain)<a class="headerlink" href="#3124-heat-gain" title="Permanent link">¶</a></h3>
+<h3 id="3123-heat-gain">3.1.2.3. 비제어적 열획득(Heat gain)<a class="headerlink" href="#3123-heat-gain" title="Permanent link">¶</a></h3>
 <ul>
 <li>난방 시스템의 전달, 분배, 저장, 생산 과정에서 열 에너지의 일부는 제어되지 않고 난방 중인 실내 공간으로 유입되어 열획득으로 작용할 수 있다. 이 비제어적 열획득(<span class="arithmatex">\(Q_{I,h}\)</span>)은 열에너지 소요량을 계산할 때 고려되어야 합니다.   </li>
 </ul>
@@ -1217,7 +1217,7 @@ $$
 </ul>
 <div align="center">
 $$
-\beta_{h,ce} = Q_{h,b} / ( \dot{Q}_{dot\,h,max} \cdot t_h )
+\beta_{h,ce} = \frac{Q_{h,b}}{\dot{Q}_{h,\max} \cdot t_h}
 $$
 </div>
 <ul>
@@ -1225,7 +1225,7 @@ $$
 </ul>
 <div align="center">
 $$
-\beta_{h,d} = ( Q_{h,b} + Q_{h,ce} ) / ( \dot{Q}_{dot\,h,max} \cdot t_h )
+\beta_{h,d} = \frac{Q_{h,b} + Q_{h,ce}}{\dot{Q}_{dot\,h,max} \cdot t_h}
 $$
 </div>
 <ul>
@@ -1233,7 +1233,7 @@ $$
 </ul>
 <div align="center">
 $$
-\beta_{h,s} = ( Q_{h,b} + Q_{h,ce} + Q_{h,d} ) / ( \dot{Q}_{dot\,h,max} \cdot t_h )
+\beta_{h,s} = \frac{Q_{h,b} + Q_{h,ce} + Q_{h,d}}{\dot{Q}_{dot\,h,max} \cdot t_h}
 $$
 </div>
 <ul>
@@ -1241,7 +1241,7 @@ $$
 </ul>
 <div align="center">
 $$
-\beta_{h,g} = ( Q_{h,b} + Q_{h,ce} + Q_{h,d} + Q_{h,s} ) / ( \dot{Q}_{dot\,h,max} \cdot t_h )
+\beta_{h,g} = \frac{Q_{h,b} + Q_{h,ce} + Q_{h,d} + Q_{h,s}}{\dot{Q}_{dot\,h,max} \cdot t_h}
 $$
 </div>
 <div style="
@@ -1307,18 +1307,6 @@ $$
 \theta_{RL,m(\beta_i)} = ( \theta_{RA} - \theta_{i,h,soll} ) \cdot \beta_j^{(1/n)} + \theta_{i,h,soll}
 $$
 </div>
-<p>(단, <br/>
-- <span class="arithmatex">\( \beta_i \)</span> : 2.1.3.1에서 계산된 각 프로세스의 평균 부하율 <br/>
-- <span class="arithmatex">\( \theta_{VA} \)</span> : 난방 시스템의 설계 조건 공급 온도 (℃) <br/>
-- <span class="arithmatex">\( \theta_{RA} \)</span> : 난방 시스템의 설계 조건 환수 온도 (℃) <br/>
-- <span class="arithmatex">\( n \)</span> : 방열지수 (라디에이터 = 1.33, 바닥 난방 = 1.1) <br/>
-- <span class="arithmatex">\( \theta_{i,h,\text{soll}} \)</span> : 난방 시스템 가동 시간 동안의 실내 온도 (℃)
-)</p>
-<blockquote>
-<blockquote>
-<p>where로 대치</p>
-</blockquote>
-</blockquote>
 <div style="
   display: flex;
   justify-content: center;
@@ -1358,9 +1346,7 @@ $$
 \Delta \theta_A = ( \theta_{VA} + \theta_{RA} ) / 2 - \theta_{i,h,soll}
 $$
 </div>
-<blockquote>
 <p>혼합기(mixer)가 설치된 정온 보일러의 경우, 전달과 분배 과정에서 초과 온도 값 적용, 혼합기가 없는 정온 보일러의 평균 온도 = 70℃ 적용</p>
-</blockquote>
 <ul>
 <li>건물이 리모델링 되었을 경우, 설계 온도는 조정할 수 있습니다. 새로운 자세한 설계가 수립되지 않은 경우, 아래 표의 설계 온도를 사용하도록 합니다. 중간 값일 경우, 한 단계 높은 온도 쌍을 선택하도록 합니다.   </li>
 </ul>
@@ -1445,7 +1431,7 @@ $$
 <p><strong>보일러 정격출력(<span class="arithmatex">\( \dot{Q}_{N,h} \)</span>)</strong>: 보일러의 정격 출력을 산정하기 위해 첫 번째로 모든 연결된 열 소비기기의 최대 출력이 결정되어야 합니다. 동시 발생하는 수요에 따라 보일러의 정격 출력은 가장 큰 단일 수요 또는 동시 발생하는 수요의 합 중에서 결정됩니다.      </p>
 </li>
 <li>
-<p><strong>난방 시스템의 보일러 정격 출력(<span class="arithmatex">\(Q_{N,h}\)</span>)</strong>:</p>
+<p><strong>난방 시스템의 보일러 정격 출력(<span class="arithmatex">\(Q_{N,h}\)</span>)</strong>:   </p>
 </li>
 </ul>
 <div align="center">
@@ -1453,9 +1439,7 @@ $$
 \dot{Q}_{dot\,N,h} = 1.3 \cdot \dot{Q}_{dot\,h,max}
 $$
 </div>
-<ul>
-<li>이미 열 생산기기가 설치된 기존 건물의 경우, 정격 출력은 설치된 기기의 값을 이용합니다.    설치된 기기 값을 알 수 없는 경우, 아래 식을 사용합니다.   </li>
-</ul>
+<p>이미 열 생산기기가 설치된 기존 건물의 경우, 정격 출력은 설치된 기기의 값을 이용합니다.    설치된 기기 값을 알 수 없는 경우, 아래 식을 사용합니다.   </p>
 <div align="center">
 $$
 \dot{Q}_{N,h} = 2.5 \cdot \dot{Q}_{h,\text{max}}
@@ -1488,12 +1472,8 @@ $$
 </div>
 </div>
 <ul>
-<li>
-<p><strong>동시 열 부하(난방, 급탕, 공조 등) 발생 시</strong>:</p>
-</li>
-<li>
-<p>동시에 여러 가지의 열 부하가 발생할   경우, 보일러의 정격출력은 <strong>동시에 발생하는 부하들의 합</strong>으로 또는 <strong>우선순위가 높은 부하 중 가장 큰 값</strong>으로 결정됩니다.   </p>
-</li>
+<li><strong>동시 열 부하(난방, 급탕, 공조 등) 발생 시</strong>: <br/>
+동시에 여러 가지의 열 부하가 발생할 경우, 보일러의 정격출력은 <strong>동시에 발생하는 부하들의 합</strong>으로 또는 <strong>우선순위가 높은 부하 중 가장 큰 값</strong>으로 결정됩니다.   </li>
 </ul>
 <div align="center">
 $$
@@ -1740,7 +1720,7 @@ $$</div>
 <li><span class="arithmatex">\( \eta_{h,\text{ce}} \)</span>: 실내 열전달 총 효율   </li>
 </ul>
 <div align="center"> $$
-\eta_{h,\text{ce}} = \dfrac{1}{4 - (\eta_L + \eta_C + \eta_B)} \)
+\eta_{h,\text{ce}} = \dfrac{1}{4 - (\eta_L + \eta_C + \eta_B)}
 $$</div>
 <div style="
   display: flex;
@@ -2379,7 +2359,9 @@ $$</div>
       table {
          border-collapse: collapse;
          margin: auto;
-         width: 90%;
+         width: auto; /* 고정 너비 대신 내용에 맞게 자동 조정 */
+         max-width: 90%; /* 너무 커지면 최대 90% 너비 제한 */
+         table-layout: auto; /* 내용에 따라 칼럼 너비 자동 조절 */
       }
       th, td {
          border: 1px solid black;
@@ -2401,7 +2383,7 @@ $$</div>
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
     body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
-<h3>&lt;표. 배관망에 대한 표준 값&gt;</h3>
+<h5>&lt;표. 배관망에 대한 표준 값&gt;</h5>
 <table>
 <tr>
 <th rowspan="1">매개변수</th>
@@ -2496,7 +2478,7 @@ $$</div>
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
     body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
-<h3>&lt;표. 배관의 열관류율 \( U_i \) 표준값&gt;</h3>
+<h5>&lt;표. 배관의 열관류율 \( U_i \) 표준값&gt;</h5>
 <table>
 <tr>
 <th rowspan="2">건물 준공연도</th>
@@ -2668,7 +2650,7 @@ $$</div>
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
     body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
-<h3>&lt;표. 펌프 제어에 따른 \( C_{P1}, C_{P2} \)&gt;</h3>
+<h5>&lt;표. 펌프 제어에 따른 \( C_{P1}, C_{P2} \)&gt;</h5>
 <table>
 <tr>
 <th>펌프 제어</th>
@@ -2762,11 +2744,13 @@ $$</div>
 <span style="display: block;">\( q_{B,S} \) = 일일 열 손실 (탱크 내부 물 - 설치 공간 간 평균 온도차 45 K 기준) </span>
 </div>
 </div>
-<p>열 생산기기 - 저장탱크 연결 배관 열 손실
-- 열 생산기기와 저장 탱크 위치가 동일할 때: <span class="arithmatex">\( f_{\text{verbindung}} = 1.2 \)</span> <br>
-- 열 생산기기와 저장 탱크 위치가 다를 때: #.4.4의 배관손실처럼 계산   </br></p>
-<p>일일 열 손실
-<span class="arithmatex">\( q_{B,S} = 0.4 + 0.14 \cdot V^{0.45} \)</span></p>
+<p>열 생산기기 - 저장탱크 연결 배관 열 손실   </p>
+<ul>
+<li>열 생산기기와 저장 탱크 위치가 동일할 때: <span class="arithmatex">\( f_{\text{verbindung}} = 1.2 \)</span> </li>
+<li>열 생산기기와 저장 탱크 위치가 다를 때: #.4.4의 배관손실처럼 계산   </li>
+</ul>
+<p>일일 열 손실 <br>
+<span class="arithmatex">\( q_{B,S} = 0.4 + 0.14 \cdot V^{0.45} \)</span></br></p>
 <ul>
 <li><strong>비제어적 열획득</strong>: 축열조가 난방 중인 존 내에 설치된 경우, 이 손실은 해당 존의 비제어적 열획득으로 고려됩니다.      </li>
 </ul>
@@ -2871,10 +2855,33 @@ $$</div>
 <div align="center">$$
 Q_{h,g,v,i} = \frac{ \beta_{h,i} - \beta_{K,pl} }{ 1 - \beta_{K,pl} } \cdot (\dot{Q}_{V,g,100\%} - \dot{Q}_{V,g,pl}) \cdot (t_{h,rL} - t_{w,100\%})
 $$</div>
-<ul>
-<li><span class="arithmatex">\( \beta_{K,pl} = 0.3 \)</span> (기름 &amp; 가스 보일러), <span class="arithmatex">\( \beta_{K,100\%} = 1.0 \)</span> </li>
-<li><span class="arithmatex">\( t_{w,100\%} = \frac{Q_{w,outg}}{ \dot{Q}_N \cdot d_{\text{Nutz,mth}} } \)</span> (참조: #.#.#)</li>
-</ul>
+<div style="
+  display: flex;
+  justify-content: center;
+  font-family: Pretendard, sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+">
+<div style="
+    text-align: left;
+    line-height: 1;
+    padding: 4px 8px;
+    border-radius: 0px;
+  ">
+<!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
+<div style="
+      font-style: italic;
+      font-weight: bold;
+      font-family: 'Times New Roman', 'Cambria Math', serif;
+      margin-bottom: 24px;
+    ">
+      Where,
+    </div>
+<!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
+<span style="display: block;">\( \beta_{K,pl} = 0.3 \) (기름 &amp; 가스 보일러), \( \beta_{K,100\%} = 1.0 \)</span>
+<span style="display: block;">\( t_{w,100\%} = \frac{Q_{w,outg}}{ \dot{Q}_N \cdot d_{\text{Nutz,mth}} } \) (참조: 3.3.2)</span>
+</div>
+</div>
 <hr/>
 <p><strong>평균 열 출력 (<span class="arithmatex">\( \dot{Q}_{d,in} \)</span>)</strong>: 평균 열 공급성능(<span class="arithmatex">\( dot{Q}_{d,in} \)</span>)은 난방, 난방/급탕, 난방/급탕/공조 3가지로 구분되며 아래와 같이 계산한다.
 - 난방 또는 난방/급탕 시:   </p>
@@ -2930,12 +2937,14 @@ $$
 </div>
 </div>
 <ul>
-<li><strong>전부하 손실 성능 (dot{Q}_{V,g,100%})</strong>: 보일러가 100% 부하로 운전될 때의 손실 성능</li>
+<li><strong>전부하 손실 성능 (<span class="arithmatex">\(dot{Q}_{V,g,100%}\)</span>)</strong>: 보일러가 100% 부하로 운전될 때의 손실 성능</li>
 </ul>
 <div align="center">$$
 \dot{Q}_{V,g,100\%} = \frac{ f_{Hs/Hi} - \eta_{K,100\%,Betrieb} }{ \eta_{K,100\%,Betrieb} } \cdot \dot{Q}_N
 $$</div>
-<p><strong>부분 부하 손실 성능 (dot{Q}_{v,g,pl%})</strong>: 보일러가 부분 부하 운전할 떄의 손실 성능  </p>
+<ul>
+<li><strong>부분 부하 손실 성능 (<span class="arithmatex">\(dot{Q}_{v,g,pl%}\)</span>)</strong>: 보일러가 부분 부하 운전할 떄의 손실 성능  </li>
+</ul>
 <div align="center">$$
 \dot{Q}_{V,g,pl} = \frac{ f_{Hs/Hi} - \eta_{K,pl\%,Betrieb} }{ \eta_{K,pl\%,Betrieb} } \cdot \beta_{K,pl} \cdot \dot{Q}_N
 $$</div>
@@ -2984,7 +2993,7 @@ $$</div>
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
     body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
-<h3>&lt;표. 보일러 온도&gt;</h3>
+<h5>&lt;표. 보일러 온도&gt;</h5>
 <table>
 <tr>
 <th rowspan="1">보일러 유형</th>
@@ -3042,7 +3051,7 @@ $$</div>
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
     body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
-<h3>&lt;표. 온도 보정계수&gt;</h3>
+<h5>&lt;표. 온도 보정계수&gt;</h5>
 <table>
 <tr>
 <th rowspan="1">보일러 유형</th>
@@ -3133,7 +3142,7 @@ $$</div>
       Where,
     </div>
 <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-<span style="display: block;">\( P_{\text{aux,SB}} \) = 대기모드 보조 동력</span>
+<span style="display: block;">\( P_{\text{aux,SB}} \): 대기모드 보조 동력</span>
 </div>
 </div>
 <p><span class="arithmatex">\( P_{h,g,\text{aux},i} \)</span>: <br>
@@ -3164,7 +3173,7 @@ $$</div>
       Where,
     </div>
 <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-<span style="display: block;">\( P_{\text{aux,pl}} \) = 부분 부하 시 보조 동력</span>
+<span style="display: block;">\( P_{\text{aux,pl}} \): 부분 부하 시 보조 동력</span>
 </div>
 </div>
 <ul>
@@ -3173,41 +3182,42 @@ $$</div>
 <div align="center">$$
 P_{h,g,\text{aux},i} = \frac{ \beta_{h,i} - \beta_{K,pl} }{ 1 - \beta_{K,pl} } \cdot (P_{\text{aux,100}} - P_{\text{aux,pl}}) + P_{\text{aux,pl}}
 $$</div>
-<p><strong><span class="arithmatex">\(P_{aux,100}\)</span>, <span class="arithmatex">\(P_{aux,pl}\)</span> 계산식</strong>: <br>
-- 표준-난방 보일러 <br>
-   - 가스 보일러:   </br></br></p>
+<p><strong><span class="arithmatex">\(P_{aux,100}\)</span>, <span class="arithmatex">\(P_{aux,pl}\)</span></strong>:   </p>
+<ul>
+<li>표준-난방 보일러   </li>
+<li>가스 보일러:   </li>
+</ul>
 <div align="center">$$
-P_{aux,100} = P_{aux,p} = \frac{0.148 \cdot \dot{Q}_N + 40}{1000}
-$$</div>
+P_{aux,100} = P_{aux,p} = \frac{0.148 \cdot \dot{Q}_N + 40}{1000}$$</div>
 <ul>
 <li>분무식 보일러 (가스/기름):   </li>
 </ul>
 <div align="center">$$
-P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48}
-$$</div>
+P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48}$$</div>
 <div align="center">$$
-P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}
-$$</div>
-<ul>
-<li>저온 보일러   </li>
-<li>가스 보일러:   </li>
-</ul>
-<div align="center">$$
-P_{aux,100} = P_{aux,pl} = \frac{0.148 \cdot \dot{Q}_N + 40}{1000}
-$$</div>
+P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}$$</div>
 <ul>
 <li>
-<p>분무식 보일러 (가스/기름): <br/>
-      동일</p>
+<p>저온 보일러   </p>
 </li>
 <li>
-<p>콘덴싱 보일러:   </p>
+<p>가스 보일러:   </p>
 </li>
 </ul>
-<div align="center">$$P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48}
-$$</div>
-<div align="center">$$P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}
-$$</div>
+<div align="center">$$
+P_{aux,100} = P_{aux,pl} = \frac{0.148 \cdot \dot{Q}_N + 40}{1000}$$</div>
+<ul>
+<li>분무식 보일러 (가스/기름):   </li>
+</ul>
+<div align="center">$$
+P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48}$$</div>
+<div align="center">$$
+P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}$$</div>
+<ul>
+<li>콘덴싱 보일러:   </li>
+</ul>
+<div align="center">$$P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48}$$</div>
+<div align="center">$$P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}$$</div>
 <hr/>
 <h3 id="3147">3.1.4.7. 개별 열 생산기기<a class="headerlink" href="#3147" title="Permanent link">¶</a></h3>
 <h4 id="31471">3.1.4.7.1. 실내 가스히터<a class="headerlink" href="#31471" title="Permanent link">¶</a></h4>
@@ -3303,7 +3313,7 @@ $$</div>
       Where,
     </div>
 <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-<span style="display: block;">\( \Phi_{DS} \) = 정격 출력(= \(dot{Q}_{N}\))</span>
+<span style="display: block;">\( \Phi_{DS} \): 정격 출력(= \(dot{Q}_{N}\))</span>
 </div>
 </div>
 <div align="center">$$
@@ -3332,9 +3342,9 @@ $$</div>
       Where,
     </div>
 <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-<span style="display: block;">\( D_{DS} \) = 급수 온도에 따른 계수 </span>
+<span style="display: block;">\( D_{DS} \): 급수 온도에 따른 계수 </span>
 <span style="display: block;">\( \theta_{\text{prim,DS}} \): 기계실 1차 급수 온도</span>
-<span style="display: block;">\( B_{DS} \) = 기계실 단열 등급에 따른 계수</span>
+<span style="display: block;">\( B_{DS} \): 기계실 단열 등급에 따른 계수</span>
 </div>
 </div>
 <center>
@@ -3345,8 +3355,8 @@ $$</div>
 <div><strong>\(B_{DS}\)</strong></div>
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../_tables/2.1_4.png"><img alt="\(B_{DS}\)" src="../../_tables/2.1_4.png" style="max-width: 80%;"/></a>
 </center>
-<p><strong>보조에너지 (<span class="arithmatex">\( Q_{h,g,aux} \)</span>):</strong> <br/>
-지역난방 열이 건물로 중계되는 과정의 보조에너지는 무시하며, 난방 시스템의 공급온도제어가 기계실에서 이루어질 시, 이에 대한 보조에너지로 월간 10 kWh를 적용합니다.   </p>
+<p><strong>보조에너지 (<span class="arithmatex">\( Q_{h,g,aux} \)</span>):</strong> <br>
+지역난방 열이 건물로 중계되는 과정의 보조에너지는 무시하며, 난방 시스템의 공급온도제어가 기계실에서 이루어질 시, 이에 대한 보조에너지로 월간 10 kWh를 적용합니다.   </br></p>
 <h2 id="315-hvac-heating-coil-energy-need">3.1.5. HVAC 가열 유닛(Heating coil) 에너지 요구량 (Energy need)<a class="headerlink" href="#315-hvac-heating-coil-energy-need" title="Permanent link">¶</a></h2>
 <p>공조시스템의 가열유닛에 필요한 에너지 요구량 (<span class="arithmatex">\( Q_h^*,b \)</span>)은 #절에서 계산된 공조 가열 에너지 요구량 (<span class="arithmatex">\( Q_{vh,b} \)</span>)에 전달 및 분배 과정에서 발생하는 손실을 더하여 산정됩니다.</p>
 <div align="center">$$
@@ -3364,8 +3374,8 @@ $$</div>
 <div align="center">$$
 Q_{vh,d} = 0
 $$</div>
-<p><strong>건물 외부 배관</strong>: 외부에 설치된 배관의 표면적 (<span class="arithmatex">\( A_{K,A} \)</span>)과<br/>
-가동 시간 (<span class="arithmatex">\( t_{h^*,\text{op,mth}} \)</span>)을 기준으로 열손실을 계산합니다.</p>
+<p><strong>건물 외부 배관</strong>: 외부에 설치된 배관의 표면적 (<span class="arithmatex">\( A_{K,A} \)</span>)과<br>
+가동 시간 (<span class="arithmatex">\( t_{h^*,\text{op,mth}} \)</span>)을 기준으로 열손실을 계산합니다.</br></p>
 <div align="center">$$
 Q_{vh,d} = f_{vh,d} \cdot A_{K,A} \cdot \frac{t_{h^*,\text{op,mth}}}{1000}
 $$</div>
@@ -3442,7 +3452,7 @@ $$</div>
 <span class="md-icon" title="마지막 업데이트">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 8월 13일 05:22:27 UTC">2025년 8월 13일</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 8월 13일 05:57:41 UTC">2025년 8월 13일</span>
 </span>
 </aside>
 </article>
