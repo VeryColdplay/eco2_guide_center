@@ -1,4 +1,4 @@
-# 1.1. 열손실 및 열획득 (Heat loss and heat gain)
+# 1. 열손실 및 열획득 (Heat loss and heat gain)
 
 아래 그림은 열손실원과 열획득원을 바탕으로 난방 및 냉방 에너지 요구량을 계산하는 열에너지 흐름 관계를 도식화한 것입니다.
 
@@ -18,27 +18,27 @@
 
 ---
 
-## 1.1.1. 열손실 \(Q_{sink}\)과 열획득 \(Q_{source}\)
+## 1.1. 열손실 \(Q_{sink}\)과 열획득 \(Q_{source}\)
 
 전도와 자연환기에 의한 열 획득 및 손실, 기계환기에 의한 냉열유입, 존 내부의 냉열원, 태양열입사, 그리고 복사손실에 의한 존의 전체 열손실 및 열획득이 결정됩니다.
 
 <center>
   <img src="../../_images/Heat_gain_or_loss.png" alt="Heat Gain or Loss" style="max-width: 80%;">
-  <div><strong>Figure 1.1-2. Heat Gain or Loss Diagram</strong></div>
+  <div><strong>Figure 1.1-1. Heat Gain or Loss Diagram</strong></div>
 </center>
 
 열손실 \(Q_{sink}\) 과 열획득 \(Q_{source}\) 계산식은 다음과 같습니다:
 
 <div style="text-align: center; margin-top: 24px; margin-bottom: 8px;">
   <div style="display: inline-block; background-color: #F1F5F9; border-radius: 10px; padding: 16px 48px; line-height: 1.8; margin-top: 1em; margin-bottom: 2em;">
-    {{ include_equations("2", 11, 11) }}
-    {{ include_equations("2", 16, 16) }}
+    {{ include_equations("1.1", 2, 2) }}
+    {{ include_equations("1.1", 3, 3) }}
   </div>
 </div>
 
 ---
 
-### 1.1.1.1. 전도에 의한 열손실 및 열획득 \(Q_{T}\)
+### 1.1.1. 전도에 의한 열손실 및 열획득 \(Q_{T}\)
 
 #### 전도 열손실/열획득
 
@@ -46,32 +46,32 @@
 
 아래 수식은 전체 전도 손실 및 획득을 계산하는 식입니다:   
 
-- **열손실**: {{ include_equations("2", 12, 12) }}
-- **열획득**: {{ include_equations("2", 18, 18) }}
+- **열손실**: {{ include_equations("1.1.1", 1, 1) }}
+- **열획득**: {{ include_equations("1.1.1", 2, 2) }}
 
 <center>
   <img src="../../_images/heat_gain_fig1.png" alt="Heat Gain" style="max-width: 80%;">
-  <div><strong>Heat Gain Figure 1</strong></div>
+  <div><strong>Figure 1.1.1-3. Heat Gain Figure 1</strong></div>
 </center>
 
 #### 외기에 의한 벽체를 통한 전도
-- 열손실: {{ include_equations("2", 42, 42) }}
-- 열획득: {{ include_equations("2", 43, 43) }}
-- 열관류율 합산: {{ include_equations("2", 44, 44) }}
+- 열손실: {{ include_equations("1.1.1", 4, 4) }}
+- 열획득: {{ include_equations("1.1.1", 5, 5) }}
+- 열관류율 합산: {{ include_equations("1.1.1", 6, 6) }}
 
 #### 비난방존의 벽체를 통한 전도
-- 열손실: {{ include_equations("2", 46, 46) }}
-- 열획득: {{ include_equations("2", 47, 47) }}
-- 열관류율 합산: {{ include_equations("2", 48, 48) }}
+- 열손실: {{ include_equations("1.1.1", 7, 7) }}
+- 열획득: {{ include_equations("1.1.1", 8, 8) }}
+- 열관류율 합산: {{ include_equations("1.1.1", 9, 9) }}
 
 #### 이웃 난방/냉방 존의 벽체를 통한 전도
-- 열손실: {{ include_equations("2", 50, 50) }}
-- 열획득: {{ include_equations("2", 51, 51) }}
-- 열관류율 합산: {{ include_equations("2", 52, 52) }}
+- 열손실: {{ include_equations("1.1.1", 10, 10) }}
+- 열획득: {{ include_equations("1.1.1", 11, 11) }}
+- 열관류율 합산: {{ include_equations("1.1.1", 12, 12) }}
 
 #### 땅으로의 전도
-- 열손실: {{ include_equations("2", 53, 53) }}
-- 열획득: {{ include_equations("2", 54, 54) }}
+- 열손실: {{ include_equations("1.1.1", 13, 13) }}
+- 열획득: {{ include_equations("1.1.1", 14, 14) }}
 - 열관류율 (지면): 
   $$
   H_{T,s}: \text{DIN EN ISO 13370 에 따라 산정}
@@ -79,7 +79,7 @@
 
 ---
 
-### 1.1.1.2. 환기에 의한 열손실 및 열획득 \(Q_{V}\)
+### 1.1.2. 환기에 의한 열손실 및 열획득 \(Q_{V}\)
 
 #### 환기 열손실/열획득
 
@@ -87,55 +87,55 @@
 
 아래 수식은 전체 환기 손실 및 획득을 계산하는 식입니다:   
 
-- **열손실**: {{ include_equations("2", 13, 13) }}
-- **열획득**: {{ include_equations("2", 19, 19) }}
+- **열손실**: {{ include_equations("1.1.2", 1, 1) }}
+- **열획득**: {{ include_equations("1.1.2", 2, 2) }}
 
 <center>
   <img src="../../_images/heat_gain_fig2.jpg" alt="Heat Gain2" style="max-width: 80%;">
-  <div><strong>Heat Gain Figure 2</strong></div>
+  <div><strong>Figure 1.1.2-3. Heat Gain Figure 2</strong></div>
 </center>
 
 #### 외기 침기
 
-- 열손실: {{ include_equations("2", 56, 56) }}
-- 열획득: {{ include_equations("2", 57, 57) }}
+- 열손실: {{ include_equations("1.1.2", 4, 4) }}
+- 열획득: {{ include_equations("1.1.2", 5, 5) }}
 - 상세:  
-  {{ include_equations("2", 58, 58) }}
+  {{ include_equations("1.1.2", 6, 6) }}
   실내온도 설정 식:
   $$
   \vartheta_i = \vartheta_{i,h} \ \text{oder} \ \vartheta_{i,c} \quad \text{(난방 또는 냉방 분석 – 실내온도)}
   $$
   야간감소 및 주말감소 (난방 시):  
-  {{ include_equations("2", 26, 26) }}  
-  {{ include_equations("2", 30, 30) }}  
+  {{ include_equations("1.1.2", 7, 7) }}  
+  {{ include_equations("1.1.2", 8, 8) }}  
   공간적 제한 및 시각적 제한:  
-  {{ include_equations("2", 33, 33) }}  
-  {{ include_equations("2", 35, 35) }}  
+  {{ include_equations("1.1.2", 9, 9) }}  
+  {{ include_equations("1.1.2", 10, 10) }}  
   냉방 시 실내온도:  
-  {{ include_equations("2", 36, 36) }}
+  {{ include_equations("1.1.2", 11, 11) }}
 
 #### 창문환기
 
-- 열손실: {{ include_equations("2", 64, 64) }}
-- 열획득: {{ include_equations("2", 65, 65) }}
+- 열손실: {{ include_equations("1.1.2", 12, 12) }}
+- 열획득: {{ include_equations("1.1.2", 13, 13) }}
 
 #### 기계환기
 
-- 열손실: {{ include_equations("2", 81, 81) }}
-- 열획득: {{ include_equations("2", 82, 82) }}
+- 열손실: {{ include_equations("1.1.2", 14, 14) }}
+- 열획득: {{ include_equations("1.1.2", 15, 15) }}
 - 기계환기 조건:
-  {{ include_equations("2", 90, 90) }}
-  {{ include_equations("2", 91, 91) }}
-  {{ include_equations("2", 92, 92) }}
+  {{ include_equations("1.1.2", 16, 16) }}
+  {{ include_equations("1.1.2", 17, 17) }}
+  {{ include_equations("1.1.2", 18, 18) }}
 
 #### 다른 존으로부터 유입된 공기
 
-- 열손실: {{ include_equations("2", 97, 97) }}
-- 열획득: {{ include_equations("2", 98, 98) }}
+- 열손실: {{ include_equations("1.1.2", 19, 19) }}
+- 열획득: {{ include_equations("1.1.2", 20, 20) }}
 
 ---
 
-### 1.1.1.3. 내부 열손실 \(Q_{I, sink}\) 및 내부 발열 획득 \(Q_{I, source}\)
+### 1.1.3. 내부 열손실 \(Q_{I, sink}\) 및 내부 발열 획득 \(Q_{I, source}\)
 
 #### 내부 열손실/내부 발열 획득
 
@@ -150,43 +150,43 @@
 
 <center>
   <img src="../../_images/heat_gain_fig3.png" alt="Heat Gain" style="max-width: 80%;">
-  <div><strong>Heat Gain Figure 3</strong></div>
+  <div><strong>Figure 1.1.3-3. Heat Gain Figure 3</strong></div>
 </center>
 
 #### 내부 열손실 상세 항목  
 - 난방, 냉방, 급탕 및 공조시스템에 의한 비제어적 열손실원:   
 
-  {{ include_equations("2", 125, 125) }}
+  {{ include_equations("1.1.3", 4, 4) }}
 
 - 기기에 의한 열손실원:   
 
-  {{ include_equations("2", 120, 120) }}   
+  {{ include_equations("1.1.3", 5, 5) }}   
 
 - 물품이나 재료반입에 의한 열손실원:   
 
-  {{ include_equations("2", 122, 122) }}
+  {{ include_equations("1.1.3", 6, 6) }}
 
 #### 내부 발열 획득 상세 항목  
 
 - 인체에 의한 열획득원:   
 
-  {{ include_equations("2", 118, 118) }}
+  {{ include_equations("1.1.3", 7, 7) }}
 
 - 기기에 의한 열획득원:   
 
-  {{ include_equations("2", 119, 119) }}
+  {{ include_equations("1.1.3", 8, 8) }}
 
 - 인공조명에 의한 열획득원:   
 
-  {{ include_equations("2", 123, 123) }}
+  {{ include_equations("1.1.3", 9, 9) }}
 
 - 난방, 냉방, 급탕 및 공조시스템에 의한 비제어적 열획득원:   
 
-  {{ include_equations("2", 124, 124) }}
+  {{ include_equations("1.1.3", 10, 10) }}
 
 ---
 
-### 1.1.1.4. 복사 열손실 및 태양열에 의한 열획득 \(Q_{S}\)
+### 1.1.4. 복사 열손실 및 태양열에 의한 열획득 \(Q_{S}\)
 
 #### 복사 열손실/태양열에 의한 열획득
 
@@ -196,17 +196,17 @@
 
 아래 수식은 복사 열손실 및 태양열에 의한 열획득을 계산하는 식입니다:   
 
-- **복사 열손실**: {{ include_equations("2", 111, 111) }}
-- **태양열에 의한 열획득**: {{ include_equations("2", 17, 17) }}
+- **복사 열손실**: {{ include_equations("1.1.4", 1, 1) }}
+- **태양열에 의한 열획득**: {{ include_equations("1.1.4", 2, 2) }}
 
 <center>
   <img src="../../_images/heat_gain_fig4.png" alt="Heat Gain" style="max-width: 70%;">
-  <div><strong>Heat Gain Figure 4</strong></div>
+  <div><strong>Figure 1.1.4-3. Heat Gain Figure 4</strong></div>
 </center>
 
 #### 불투명 구조체를 통한 태양열 유입
-{{ include_equations("2", 111, 111) }}
-{{ include_equations("2", 112, 112) }}
+{{ include_equations("1.1.4", 1, 1) }}
+{{ include_equations("1.1.4", 4, 4) }}
 
 ##### 표면 흡수율 \(\alpha\)
 
@@ -214,7 +214,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>표면 흡수율</title>
+  <title>Table 1.1.4-5. 표면 흡수율</title>
   <style>
     table {
       border-collapse: collapse;
@@ -263,13 +263,12 @@
 </html>
 
 #### 투명체를 통한 태양입사광에 의한 열획득
-{{ include_equations("2", 105, 105) }}
+{{ include_equations("1.1.4", 6, 6) }}
 
 차양 및 음영을 고려한 총에너지 투과율  
-{{ include_equations("2", 106, 106) }}  
-{{ include_equations("2", 107, 107) }}  
-{{ include_equations("2", 108, 108) }}  
-{{ include_equations("2", 109, 109) }}   
+{{ include_equations("1.1.4", 7, 7) }}  
+{{ include_equations("1.1.4", 8, 8) }}  
+{{ include_equations("1.1.4", 9, 9) }}   
 
 <br><br><br>
 
@@ -279,7 +278,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>창유리 형식별 차양장치 영향</title>
+  <title>Table 1.1.4-10. 창유리 형식별 차양장치 영향</title>
   <style>
     table {
       border-collapse: collapse;
@@ -301,5 +300,6 @@
 </html>
 
 <center>
+     <div><strong>Table 1.1.4-11. 창유리 및 차양장치에 대한 표준값</strong></div>
      <img src="../../_tables/3.2.4_5.png" style="max-width: 100%;" alt="창유리 및 차양장치에 대한 표준값">
 </center>

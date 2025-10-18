@@ -9,7 +9,7 @@
 <link href="Value.html" rel="prev"/>
 <link href="Hot_water.html" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.6.13" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.15" name="generator"/>
 <title>1.4. 조명 에너지요구량 - ECO2 Guide Center</title>
 <link href="../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -733,9 +733,9 @@
 </div>
 <h1 id="14-q_l-energy-need-for-lighting">1.4. 조명 에너지요구량  <span class="arithmatex">\(Q_{l}\)</span> (Energy need for lighting)<a class="headerlink" href="#14-q_l-energy-need-for-lighting" title="Permanent link">¶</a></h1>
 <h2 id="141">1.4.1. 조명 에너지요구량 계산<a class="headerlink" href="#141" title="Permanent link">¶</a></h2>
-<p>아래 그림은 존의 전기적 조명 부하를 바탕으로 조명 에너지요구량을 산정하는 프로세스를 도식화한 것입니다.</p>
+<p>아래 그림은 존의 전기적 조명 부하를 바탕으로 조명 에너지요구량을 산정하는 프로세스를 도식화한 것입니다.   </p>
 <center>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="./../_images/lighting_energy_demand.png"><img alt="lighting energy demand calculation process" src="./../_images/lighting_energy_demand.png" style="max-width: 100%;"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../_images/lighting_energy_demand.png"><img alt="lighting energy demand calculation process" src="../../_images/lighting_energy_demand.png" style="max-width: 100%;"/></a>
 </center>
 <p>각 존 <span class="arithmatex">\(j\)</span>의 조명에 사용되는 에너지요구량을 산정하기 위해서는 해당 존에 대한 <strong>전기에너지 성능 (<span class="arithmatex">\(p_j\)</span>)</strong>을 산출하여야 하며, 이를 위해 각 존의 <strong>실내 요구 조도값 (<span class="arithmatex">\(E\)</span>), 실지수 (<span class="arithmatex">\(k\)</span>), 조명률 (<span class="arithmatex">\(U\)</span>), 보수율 (<span class="arithmatex">\(M\)</span>), 조명기기 효율 (<span class="arithmatex">\(\eta_e\)</span>)</strong>이 파악되어야 합니다. 산출된 <strong>전기에너지 성능</strong>에 <strong>바닥면적 (<span class="arithmatex">\(A_j\)</span>)</strong>과 <strong>전등의 가동시간 (<span class="arithmatex">\(t\)</span>)</strong>을 곱하여 존 <span class="arithmatex">\(j\)</span>에 대한 에너지요구량을 산정합니다. </p>
 <p><br/>
@@ -917,71 +917,10 @@
 </div>
 <h3 id="1422-u">1.4.2.2. 조명률 <span class="arithmatex">\(U\)</span><a class="headerlink" href="#1422-u" title="Permanent link">¶</a></h3>
 <p>조명률이란 광원에서 나온 총 빛에 대한 작업면에 도달하는 빛의 비율을 나타내며 일반적으로 1보다 작은 값으로 표시됩니다. 조명률 산출은 아래 표에 해당하는 값을 적용합니다 (단, 실내 마감재의 반사율을 바닥 0.2, 벽 0.5, 천정 0.7로 설정한 경우에 해당). </p>
-<!DOCTYPE html>
-
-<html lang="ko">
-<head>
-<meta charset="utf-8"/>
-<title>조명기기 방식 별 실지수 k</title>
-<style>
-    table {
-      border-collapse: collapse;
-      width: 90%;
-      font-family: "Malgun Gothic", sans-serif;
-      font-size: 14px;
-      text-align: center;
-      margin: 0 auto;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 6px;
-    }
-    th[colspan] {
-      background-color: #f8f8f8;
-    }
-    td.left {
-      text-align: left;
-    }
-  </style>
- <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
-<body>
-<table>
-<caption style="caption-side: top; text-align: left; font-size: 16px; font-weight: bold; margin-bottom: 12px;">
-      표 3.2.6-1. 조명기기 방식별 실지수(k)
-    </caption>
-<tr>
-<th rowspan="2">조명기기 방식</th>
-<th colspan="11">실지수 <i>k</i></th>
-</tr>
-<tr>
-<th>0.6</th><th>0.8</th><th>1</th><th>1.25</th><th>1.5</th><th>2</th><th>2.5</th><th>3</th><th>4</th><th>5</th>
-</tr>
-<tr>
-<td class="left">직접(백열등)</td>
-<td>0.48</td><td>0.53</td><td>0.56</td><td>0.59</td><td>0.62</td><td>0.65</td><td>0.67</td><td>0.69</td><td>0.71</td><td>0.72</td>
-</tr>
-<tr>
-<td class="left">직접(형광등)</td>
-<td>0.3</td><td>0.37</td><td>0.42</td><td>0.46</td><td>0.49</td><td>0.54</td><td>0.57</td><td>0.59</td><td>0.61</td><td>0.63</td>
-</tr>
-<tr>
-<td class="left">간접/반간접</td>
-<td>0.15</td><td>0.19</td><td>0.22</td><td>0.26</td><td>0.28</td><td>0.32</td><td>0.35</td><td>0.37</td><td>0.4</td><td>0.42</td>
-</tr>
-</table>
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
-</html>
+<center>
+<div><strong>Table 3.2.6-1. 조명기기 방식 별 실지수 k</strong></div>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../_tables/3.2.6-1.png"><img alt="배관망에 대한 표준값" src="../../_tables/3.2.6-1.png" style="max-width: 100%;"/></a>
+</center>
 <h3 id="1423-m">1.4.2.3. 보수율 <span class="arithmatex">\(M\)</span><a class="headerlink" href="#1423-m" title="Permanent link">¶</a></h3>
 <p>보수율 (<span class="arithmatex">\(M\)</span>)이란 조명시설을 일정한 기간 사용한 후의 작업면 상의 평균 조도와 초기 조도와의 비를 의미합니다. 설비의 사용시간이 경과하면서 조명효율이 감소하기 때문에 이와 같은 조도 저하를 보완하기 위해 조도를 계산하는 과정에서 보정계수 (보수율)를 설정합니다. 보수율은 일반적으로 0.85~0.65의 값을 채택하게 됩니다. <span class="arithmatex">\(M\)</span> 은 다음과 같이 계산됩니다:</p>
 <div style="text-align: center; margin-top: 24px; margin-bottom: 8px;">
@@ -1027,81 +966,16 @@ document$.subscribe(() => { lightbox.reload() });
 </div>
 <h3 id="1424-eta_e">1.4.2.4. 조명기기 효율 <span class="arithmatex">\(\eta_e\)</span><a class="headerlink" href="#1424-eta_e" title="Permanent link">¶</a></h3>
 <p>조명기기 효율 (<span class="arithmatex">\(\eta_e\)</span>)는 단위에너지 당 발생되는 광속을 의미하며 광원의 종류 및 제품에 따라 성능에 차이가 있습니다. 제품의 성능 성적서가 주어지는 경우 제시된 값을 사용하도록 하고, 성적서가 없는 경우 다음 표에 주어진 표준값을 사용합니다. </p>
-<!DOCTYPE html>
-
-<html lang="ko">
-<head>
-<meta charset="utf-8"/>
-<title>램프종류별 조명기기효율</title>
-<style>
-    table {
-      border-collapse: collapse;
-      width: 95%;
-      font-family: "Malgun Gothic", sans-serif;
-      font-size: 14px;
-      text-align: center;
-      margin: 0 auto;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 6px;
-    }
-    .slanted {
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      font-size: 12px;
-      font-weight: bold;
-    }
-  </style>
- <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
-<body>
-<table>
-<caption style="caption-side: top; text-align: left; font-size: 16px; font-weight: bold; margin-bottom: 12px;">
-      표 3.2.6-2. 램프 종류 별 조명기기 효율
-    </caption>
-<tr>
-<th rowspan="2">기기효율</th>
-<th colspan="7">램프종류</th>
-</tr>
-<tr>
-<th>백열등<br/>100 W</th>
-<th>할로겐등<br/>500 W</th>
-<th>형광등<br/>40 W</th>
-<th>형광등<br/>100 W</th>
-<th>고압수은등<br/>400 W</th>
-<th>메탈할라이드등<br/>400 W</th>
-<th>고압나트륨등<br/>400 W</th>
-</tr>
-<tr>
-<td>조명기기효율<br/>(안정기손실 포함)<br/>lm/W</td>
-<td>15</td>
-<td>21</td>
-<td>65</td>
-<td>79</td>
-<td>52</td>
-<td>72</td>
-<td>108</td>
-</tr>
-</table>
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
-</html>
+<center>
+<div><strong>Table 3.2.6-2. 램프 종류별 조명기기 효율</strong></div>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../_tables/3.2.6-2.png"><img alt="배관망에 대한 표준값" src="../../_tables/3.2.6-2.png" style="max-width: 100%;"/></a>
+</center>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="마지막 업데이트">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 8월 18일 05:17:04 UTC">2025년 8월 18일</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 8월 18일 06:39:16 UTC">2025년 8월 18일</span>
 </span>
 </aside>
 </article>
@@ -1128,7 +1002,7 @@ document$.subscribe(() => { lightbox.reload() });
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.tabs.sticky", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
-<script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+<script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
 <script src="../../assets/polyfill.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
@@ -1141,5 +1015,7 @@ document$.subscribe(() => { lightbox.reload() });
 <script src="../../assets/cache-buster.js"></script>
 <script src="../../assets/breadcrumb.js"></script>
 <script src="../../assets/scroll-to-top.js"></script>
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

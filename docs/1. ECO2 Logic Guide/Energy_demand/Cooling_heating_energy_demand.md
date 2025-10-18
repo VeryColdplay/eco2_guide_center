@@ -93,7 +93,7 @@ graph LR
 #### 🔘 연간 냉방 에너지요구량 \(Q_{c,b}\) = \( \sum \) 월간 냉방 에너지요구량</h4>
 <figure style="text-align: center;">
   <img src="../../_figs/adjusted_left_box_width_c.png" style="max-width: 60%;" alt="Annual & monthly cooling energy demand">
-  <figcaption><strong>Annual cooling energy demand</strong></figcaption>
+  <figcaption><strong>Figure 2.1-1.Annual cooling energy demand</strong></figcaption>
 </figure>
 
 
@@ -162,7 +162,7 @@ graph LR
 
 <figure style="text-align: center;">
   <img src="../../_figs/Monthly cooling energy demand.PNG" style="max-width: 70%;" alt="Monthly & daily cooling energy demand">
-  <figcaption><strong>Monthly cooling energy demand</strong></figcaption>
+  <figcaption><strong>Figure 2.1-2. Monthly cooling energy demand</strong></figcaption>
 </figure>
 
 
@@ -238,7 +238,7 @@ graph LR
 #### 🔘 연간 난방 에너지요구량 \(Q_{h,b}\) = \( \sum \) 월간 난방 에너지요구량</h4>
 <figure style="text-align: center;">
   <img src="../../_figs/adjusted_left_box_width_c.png" style="max-width: 60%;" alt="Annual & monthly cooling energy demand">
-  <figcaption><strong>Annual cooling energy demand</strong></figcaption>
+  <figcaption><strong>Figure 2.1-1. Annual cooling energy demand</strong></figcaption>
 </figure>
 
 
@@ -307,5 +307,5 @@ graph LR
 
 <figure style="text-align: center;">
   <img src="../../_figs/Monthly cooling energy demand.PNG" style="max-width: 70%;" alt="Monthly & daily cooling energy demand">
-  <figcaption><strong>Monthly cooling energy demand</strong></figcaption>
+  <figcaption><strong>Figure 2.1-2. Monthly cooling energy demand</strong></figcaption>
 </figure>
