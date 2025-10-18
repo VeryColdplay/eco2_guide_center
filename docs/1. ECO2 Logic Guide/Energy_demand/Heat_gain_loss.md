@@ -102,36 +102,34 @@
 - 상세:  
   {{ include_equations("1.1.2", 6, 6) }}
   실내온도 설정 식:
-  $$
-  \vartheta_i = \vartheta_{i,h} \ \text{oder} \ \vartheta_{i,c} \quad \text{(난방 또는 냉방 분석 – 실내온도)}
-  $$
-  야간감소 및 주말감소 (난방 시):  
   {{ include_equations("1.1.2", 7, 7) }}  
+  야간감소 및 주말감소 (난방 시):  
   {{ include_equations("1.1.2", 8, 8) }}  
-  공간적 제한 및 시각적 제한:  
   {{ include_equations("1.1.2", 9, 9) }}  
+  공간적 제한 및 시각적 제한:  
   {{ include_equations("1.1.2", 10, 10) }}  
+  {{ include_equations("1.1.2", 11, 11) }}  
   냉방 시 실내온도:  
-  {{ include_equations("1.1.2", 11, 11) }}
+  {{ include_equations("1.1.2", 12, 12) }}
 
 #### 창문환기
 
-- 열손실: {{ include_equations("1.1.2", 12, 12) }}
-- 열획득: {{ include_equations("1.1.2", 13, 13) }}
+- 열손실: {{ include_equations("1.1.2", 13, 13) }}
+- 열획득: {{ include_equations("1.1.2", 14, 14) }}
 
 #### 기계환기
 
-- 열손실: {{ include_equations("1.1.2", 14, 14) }}
-- 열획득: {{ include_equations("1.1.2", 15, 15) }}
+- 열손실: {{ include_equations("1.1.2", 15, 15) }}
+- 열획득: {{ include_equations("1.1.2", 16, 16) }}
 - 기계환기 조건:
-  {{ include_equations("1.1.2", 16, 16) }}
   {{ include_equations("1.1.2", 17, 17) }}
   {{ include_equations("1.1.2", 18, 18) }}
+  {{ include_equations("1.1.2", 19, 19) }}
 
 #### 다른 존으로부터 유입된 공기
 
-- 열손실: {{ include_equations("1.1.2", 19, 19) }}
-- 열획득: {{ include_equations("1.1.2", 20, 20) }}
+- 열손실: {{ include_equations("1.1.2", 20, 20) }}
+- 열획득: {{ include_equations("1.1.2", 21, 21) }}
 
 ---
 
@@ -145,8 +143,8 @@
 
 아래 수식은 내부 열손실 및 내부 발열 획득을 계산하는 식입니다:   
 
-- **내부 열손실**: {{ include_equations("2", 15, 15) }}
-- **내부 발열 획득**: {{ include_equations("2", 20, 20) }}
+- **내부 열손실**: {{ include_equations("1.1.3", 1, 1) }}
+- **내부 발열 획득**: {{ include_equations("1.1.3", 2, 2) }}
 
 <center>
   <img src="../../_images/heat_gain_fig3.png" alt="Heat Gain" style="max-width: 80%;">
@@ -208,7 +206,7 @@
 {{ include_equations("1.1.4", 1, 1) }}
 {{ include_equations("1.1.4", 4, 4) }}
 
-##### 표면 흡수율 \(\alpha\)
+##### Table 1.1.4-5. 표면 흡수율 \(\alpha\)
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -272,34 +270,7 @@
 
 <br><br><br>
 
-##### 창유리 및 자양장치에 대한 표준값
-
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>Table 1.1.4-10. 창유리 형식별 차양장치 영향</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      font-size: 13px;
-      font-family: "Malgun Gothic", sans-serif;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 4px;
-      text-align: center;
-    }
-    th {
-      background-color: #f8f8f8;
-    }
-  </style>
-</head>
-<br><br><br>
-</html>
-
 <center>
-     <div><strong>Table 1.1.4-11. 창유리 및 차양장치에 대한 표준값</strong></div>
+     <div><strong>Table 1.1.4-10. 창유리 및 차양장치에 대한 표준값</strong></div>
      <img src="../../_tables/3.2.4_5.png" style="max-width: 100%;" alt="창유리 및 차양장치에 대한 표준값">
 </center>
