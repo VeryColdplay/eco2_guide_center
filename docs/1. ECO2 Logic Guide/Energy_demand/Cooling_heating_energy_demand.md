@@ -1,4 +1,4 @@
-# 1.2. 냉방 및 난방 에너지요구량 (Energy need for cooling and heating)
+# 2. 냉방 및 난방 에너지요구량 (Energy need for cooling and heating)
 
 어떤 존의 온도가 **설정 범위 내**에 있다면 추가적으로 냉방 또는 난방을 할 필요가 없을 것입니다.   
 그러나 설정 범위를 벗어난다면, 다음과 같이 **냉방** 또는 **난방 에너지요구량**이 발생하게 됩니다.  
@@ -22,7 +22,7 @@ graph LR
 <br>
 
 
-## 1.2.1. 냉방 에너지요구량  \(Q_{c,b}\)  
+## 2.1. 냉방 에너지요구량  \(Q_{c,b}\)  
 
 ### 🔹 건축물의 냉방 에너지요구량 계산
 
@@ -116,7 +116,7 @@ graph LR
     margin-top: 1em;
     margin-bottom: 0px;
   ">
-    {{ include_equations("2", 7, 7) }}
+    {{ include_equations("2.1", 2, 2) }}
   </div>
 </div>
 
@@ -162,14 +162,14 @@ graph LR
 
 <figure style="text-align: center;">
   <img src="../../_figs/Monthly cooling energy demand.PNG" style="max-width: 70%;" alt="Monthly & daily cooling energy demand">
-  <figcaption><strong>Figure 2.1-2. Monthly cooling energy demand</strong></figcaption>
+  <figcaption><strong>Figure 2.1-3. Monthly cooling energy demand</strong></figcaption>
 </figure>
 
 
 
 
 
-## 1.2.2. 난방 에너지요구량  \(Q_{h,b}\) (Heating energy demand) 
+## 2.2. 난방 에너지요구량  \(Q_{h,b}\) (Heating energy demand) 
 ### 🔹 건축물의 난방 에너지요구량 계산
 
 설정 범위보다 온도가 **낮을 때** 난방 에너지요구량이 발생합니다. 즉 어떤 존의 난방 에너지요구량, \(Q_{h,b}\)은 시스템에 의해 **보충되어야 할 유효 열량**을 계산함으로써 구해집니다.  
@@ -186,7 +186,7 @@ graph LR
     margin-top: 1em;
     margin-bottom: 0px;
   ">
-    {{ include_equations("2", 1, 1) }}
+    {{ include_equations("2.2", 1, 1) }}
   </div>
 </div>
 
