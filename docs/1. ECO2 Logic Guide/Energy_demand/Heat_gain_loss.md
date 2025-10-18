@@ -4,7 +4,7 @@
 
 <center>
   <img src="../../_images/Cooling_heating_energy_demand.png" style="max-width: 40%;" alt="Cooling and Heating Energy Demand">
-  <div><strong>Figure. Cooling & Heating Energy Demand</strong></div>
+  <div><strong>Figure 1-1. Cooling & Heating Energy Demand</strong></div>
 </center>
 
 존의 열손실/열획득은 서로 대차 대조된 후, 난방부하 또는 냉방부하가 계산됩니다. 다음과 같은 열손실 및 열획득이 부하 분석 시 고려됩니다:
@@ -24,7 +24,7 @@
 
 <center>
   <img src="../../_images/Heat_gain_or_loss.png" alt="Heat Gain or Loss" style="max-width: 80%;">
-  <div><strong>Heat Gain or Loss Diagram</strong></div>
+  <div><strong>Figure 1.1-2. Heat Gain or Loss Diagram</strong></div>
 </center>
 
 열손실 \(Q_{sink}\) 과 열획득 \(Q_{source}\) 계산식은 다음과 같습니다:
