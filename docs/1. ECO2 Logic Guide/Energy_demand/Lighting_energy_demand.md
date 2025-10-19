@@ -1,11 +1,13 @@
-# 1.4. 조명 에너지요구량  \(Q_{l}\) (Energy need for lighting) 
-## 1.4.1. 조명 에너지요구량 계산
+# 4. 조명 에너지요구량  \(Q_{l}\) (Energy need for lighting) 
+## 4.1. 조명 에너지요구량 계산
 
-아래 그림은 존의 전기적 조명 부하를 바탕으로 조명 에너지요구량을 산정하는 프로세스를 도식화한 것입니다.   
+아래 그림 4.1-1은 존의 전기적 조명 부하를 바탕으로 조명 에너지요구량을 산정하는 프로세스를 도식화한 것입니다.   
 
 <center>
-  <img src="../../_images/lighting_energy_demand.png" alt="lighting energy demand calculation process" style="max-width: 100%;">
+  <img src="../../_images/4.1_1.png" alt="lighting energy demand calculation process" style="max-width: 100%;">
+  <div><strong>Figure 4.1-1. 구조체의 온도보정계수</strong></div>
 </center>
+
    
 각 존 \(j\)의 조명에 사용되는 에너지요구량을 산정하기 위해서는 해당 존에 대한 **전기에너지 성능 (\(p_j\))**을 산출하여야 하며, 이를 위해 각 존의 **실내 요구 조도값 (\(E\)), 실지수 (\(k\)), 조명률 (\(U\)), 보수율 (\(M\)), 조명기기 효율 (\(\eta_e\))**이 파악되어야 합니다. 산출된 **전기에너지 성능**에 **바닥면적 (\(A_j\))**과 **전등의 가동시간 (\(t\))**을 곱하여 존 \(j\)에 대한 에너지요구량을 산정합니다. 
 
@@ -22,7 +24,7 @@
     margin-top: 1em;
     margin-bottom: 2em;
   ">
- \( Q_{l,j} = p_j \cdot A_j \cdot t / 1000 \)
+ \( Q_{l,j} = p_j \cdot A_j \cdot t / 1000 \) <span class="eq-number">(4.1-2)</span>
   </div>
 </div>
 
@@ -64,7 +66,7 @@
 
 ---
 
-## 1.4.2. 전기에너지 성능 계산
+## 4.2. 전기에너지 성능 계산
 
 조명의 전기에너지 성능 (\(p_j\))은 실내 요구 조도, 조명률, 보수율, 조명기기 효율 등에서 구할 수 있습니다. 여기서, 실내 요구 조도는 용도별 프로필에서 해당 용도에 맞는 요구 조도를 사용하도록 합니다. 
 \(p_j\) 는 다음과 같이 계산됩니다:  
@@ -79,7 +81,7 @@
     margin-top: 1em;
     margin-bottom: 2em;
   ">
- \( p_j = \frac{E}{U \cdot M \cdot \eta_e } \)
+ \( p_j = \frac{E}{U \cdot M \cdot \eta_e } \) <span class="eq-number">(4.2-1)</span>
   </div>
 </div>
 
@@ -130,7 +132,7 @@
 
 ---
 
-### 1.4.2.1. 실지수 \(k\)
+### 4.2.1. 실지수 \(k\)
 
 실지수는 실의 형상을 나타내는 지수로, 실 형상에 따라 광원에서 작업면에 직접 도달하는 빛과 천장, 벽, 바닥에서 반사되어 오는 빛이 달라집니다. 따라서 가로, 세로, 광원읜 높이의 관계를 고려하는 값이 실지수 \(k\) 입니다. \(k\) 는 다음과 같이 계산됩니다:  
 
@@ -144,7 +146,7 @@
     margin-top: 1em;
     margin-bottom: 2em;
   ">
- \( k = \frac{a_R \cdot b_R}{h_R \cdot (a_R + b_R)} \)
+ \( k = \frac{a_R \cdot b_R}{h_R \cdot (a_R + b_R)} \) <span class="eq-number">(4.2.1-1)</span>
   </div>
 </div>
 
@@ -179,16 +181,16 @@
   </div>
 </div>
 
-### 1.4.2.2. 조명률 \(U\)
+### 4.2.2. 조명률 \(U\)
 
 조명률이란 광원에서 나온 총 빛에 대한 작업면에 도달하는 빛의 비율을 나타내며 일반적으로 1보다 작은 값으로 표시됩니다. 조명률 산출은 아래 표에 해당하는 값을 적용합니다 (단, 실내 마감재의 반사율을 바닥 0.2, 벽 0.5, 천정 0.7로 설정한 경우에 해당). 
 
 <center>
-    <div><strong>Table 3.2.6-1. 조명기기 방식 별 실지수 k</strong></div>
-    <img src="../../_tables/3.2.6-1.png" style="max-width: 100%;" alt="배관망에 대한 표준값">
+    <div><strong>Table 4.2.2-1. 조명기기 방식 별 실지수 k</strong></div>
+    <img src="../../_tables/4.2.2_1.png" style="max-width: 100%;" alt="배관망에 대한 표준값">
 </center>
 
-### 1.4.2.3. 보수율 \(M\)
+### 4.2.3. 보수율 \(M\)
 
 보수율 (\(M\))이란 조명시설을 일정한 기간 사용한 후의 작업면 상의 평균 조도와 초기 조도와의 비를 의미합니다. 설비의 사용시간이 경과하면서 조명효율이 감소하기 때문에 이와 같은 조도 저하를 보완하기 위해 조도를 계산하는 과정에서 보정계수 (보수율)를 설정합니다. 보수율은 일반적으로 0.85~0.65의 값을 채택하게 됩니다. \(M\) 은 다음과 같이 계산됩니다:
 
@@ -202,7 +204,7 @@
     margin-top: 1em;
     margin-bottom: 2em;
   ">
- \( M = \frac{E_t}{E_i} \)
+ \( M = \frac{E_t}{E_i} \) <span class="eq-number">(4.2.3-1)</span>
   </div>
 </div>
 
@@ -236,11 +238,11 @@
   </div>
 </div>
 
-### 1.4.2.4. 조명기기 효율 \(\eta_e\)
+### 4.2.4. 조명기기 효율 \(\eta_e\)
 
 조명기기 효율 (\(\eta_e\))는 단위에너지 당 발생되는 광속을 의미하며 광원의 종류 및 제품에 따라 성능에 차이가 있습니다. 제품의 성능 성적서가 주어지는 경우 제시된 값을 사용하도록 하고, 성적서가 없는 경우 다음 표에 주어진 표준값을 사용합니다. 
 
 <center>
-    <div><strong>Table 3.2.6-2. 램프 종류별 조명기기 효율</strong></div>
-    <img src="../../_tables/3.2.6-2.png" style="max-width: 100%;" alt="배관망에 대한 표준값">
+    <div><strong>Table 4.2.4-1. 램프 종류별 조명기기 효율</strong></div>
+    <img src="../../_tables/4.2.4_1.png" style="max-width: 100%;" alt="배관망에 대한 표준값">
 </center>

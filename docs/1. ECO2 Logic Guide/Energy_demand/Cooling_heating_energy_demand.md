@@ -31,6 +31,7 @@ graph LR
 <br>
 \(Q_{c,b}\) 는 다음과 같이 계산됩니다:  
 
+</div>
 <div style="text-align: center; margin-top: 24px; margin-bottom: 8px;">
   <div style="
     display: inline-block;
@@ -39,9 +40,9 @@ graph LR
     padding: 16px 48px;
     line-height: 1.8;
     margin-top: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 0px;
   ">
- \( Q_{c,b} = (1-\eta) Q_{source} \quad \)
+    {{ include_equations("2.1", 1, 1) }}
   </div>
 </div>
 
@@ -92,8 +93,8 @@ graph LR
 ### 🔹 건축물의 **연간** 냉방 에너지요구량: 🗓️ 월별 요구량의 합
 #### 🔘 연간 냉방 에너지요구량 \(Q_{c,b}\) = \( \sum \) 월간 냉방 에너지요구량</h4>
 <figure style="text-align: center;">
-  <img src="../../_figs/adjusted_left_box_width_c.png" style="max-width: 60%;" alt="Annual & monthly cooling energy demand">
-  <figcaption><strong>Figure 2.1-1.Annual cooling energy demand</strong></figcaption>
+  <img src="../../_figs/2.1_2.png" style="max-width: 60%;" alt="Annual & monthly cooling energy demand">
+  <figcaption><strong>Figure 2.1-2.Annual cooling energy demand</strong></figcaption>
 </figure>
 
 
@@ -116,7 +117,7 @@ graph LR
     margin-top: 1em;
     margin-bottom: 0px;
   ">
-    {{ include_equations("2.1", 2, 2) }}
+    {{ include_equations("2.1", 3, 3) }}
   </div>
 </div>
 
@@ -161,8 +162,8 @@ graph LR
 - 주중 및 주말 여부에 따라 운영스케줄이 다르기 때문에 **일간** 냉방 에너지요구량 또한 달라집니다. 
 
 <figure style="text-align: center;">
-  <img src="../../_figs/Monthly cooling energy demand.PNG" style="max-width: 70%;" alt="Monthly & daily cooling energy demand">
-  <figcaption><strong>Figure 2.1-3. Monthly cooling energy demand</strong></figcaption>
+  <img src="../../_figs/2.1_4.PNG" style="max-width: 70%;" alt="Monthly & daily cooling energy demand">
+  <figcaption><strong>Figure 2.1-4. Monthly cooling energy demand</strong></figcaption>
 </figure>
 
 
@@ -237,8 +238,8 @@ graph LR
 ### 🔹 건축물의 **연간** 난방 에너지요구량: 🗓️ 월별 요구량의 합
 #### 🔘 연간 난방 에너지요구량 \(Q_{h,b}\) = \( \sum \) 월간 난방 에너지요구량</h4>
 <figure style="text-align: center;">
-  <img src="../../_figs/adjusted_left_box_width_c.png" style="max-width: 60%;" alt="Annual & monthly cooling energy demand">
-  <figcaption><strong>Figure 2.1-1. Annual cooling energy demand</strong></figcaption>
+  <img src="../../_figs/2.1_2.png" style="max-width: 60%;" alt="Annual & monthly cooling energy demand">
+  <figcaption><strong>Figure 2.1-2. Annual cooling energy demand</strong></figcaption>
 </figure>
 
 
@@ -261,7 +262,7 @@ graph LR
     margin-top: 1em;
     margin-bottom: 0px;
   ">
-    {{ include_equations("2", 6, 6) }}
+    {{ include_equations("2.2", 2, 2) }}
   </div>
 </div>
 
@@ -306,6 +307,6 @@ graph LR
 - 주중 및 주말 여부에 따라 운영스케줄이 다르기 때문에 **일간** 난방 에너지요구량 또한 달라집니다. 
 
 <figure style="text-align: center;">
-  <img src="../../_figs/Monthly cooling energy demand.PNG" style="max-width: 70%;" alt="Monthly & daily cooling energy demand">
-  <figcaption><strong>Figure 2.1-2. Monthly cooling energy demand</strong></figcaption>
+  <img src="../../_figs/2.1_4.PNG" style="max-width: 70%;" alt="Monthly & daily cooling energy demand">
+  <figcaption><strong>Figure 2.1-4. Monthly cooling energy demand</strong></figcaption>
 </figure>
