@@ -1,4 +1,4 @@
-# 3.5. 환기/가습 에너지소요량 (Energy use for ventilation & humidification system)
+# 5. 환기/가습 에너지소요량 (Energy use for ventilation & humidification system)
 
 환기/가습 에너지소요량 파트에서는 공조에 필요한 에너지소요량 중 환기(팬)와 가습에 대한 내용만을 포함하고 있습니다. 보다 구체적으로는 다음의 5가지 항목을 다룹니다:   
  (1) 실내냉방 팬   
@@ -9,11 +9,11 @@
 
 ---
 
-## 3.5.1. 실내냉방 팬
+## 5.1. 실내냉방 팬
 
-실내냉방 팬에 대한 보조에너지 Q_c,ce,aux는 다음을 따라 계산됩니다:
+실내냉방 팬에 대한 보조에너지 \(Q_c,ce,aux\)는 다음을 따라 계산됩니다:
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{c,ce,aux} = f_{c,ce,aux} \cdot Q_{c,outg} \cdot t_{c,op} / 1000h \) 
+  \( Q_{c,ce,aux} = f_{c,ce,aux} \cdot Q_{c,outg} \cdot t_{c,op} / 1000h \)  <span class="eq-number">(5.1-1)</span>
 </a>
 
 Where,
@@ -46,6 +46,7 @@ Where,
 </head>
 <body>
   <table>
+    <caption>Table 5.1-2. \(f_{c,ce,aux}\)</caption>
     <tr>
     <th rowspan="1"></th>
       <th class="left">정격성능<br>kW/kW</th>
@@ -88,17 +89,17 @@ Where,
 
 ---
 
-## 3.5.2. 열회수기 펌프 및 전동장치
+## 5.2. 열회수기 펌프 및 전동장치
 
 열회수기 펌프 및 전동장치에 소요되는 에너지는 순환배관망 연동시스템 펌프와 회전자 구동에 필요한 전기 에너지요구량, 즉 보조에너지에 해당됩니다. 
 
 ---
 
-### 3.5.2.1. 순환배관망 연동시스템 펌프
+### 5.2.1. 순환배관망 연동시스템 펌프
 
 열회수에 대한 연간 보조에너지 \(Q_{hr,f,aux,a}\)는 다음에 의해 계산됩니다:
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{hr,f,aux,a} = P_{el,av,KVS} \cdot t_{WRG} \)
+  \( Q_{hr,f,aux,a} = P_{el,av,KVS} \cdot t_{WRG} \) <span class="eq-number">(5.2.1-1)</span>
 </a>
 
 
@@ -128,6 +129,7 @@ Where,
 </head>
 <body>
   <table>
+  <caption>Table 5.2.1-2. \(P_{el,av,KVS}\)</caption>
     <tr>
       <th>펌프 제어 방식</th>
       <th>계산식</th>
@@ -152,10 +154,10 @@ Where, \(V_{e}\): 열회수기의 설계-외기유량
 
 ---
 
-### 3.5.2.2. 회전자 구동
+### 5.2.2. 회전자 구동
 회전식 열교환기 구동에 대한 연간 보조에너지 \(Q_{hr,f,aux,a}\)는 다음에 의해 계산됩니다:
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{hr,f,aux,a} = P_{el,av,rot} \cdot t_{WRG} \)
+  \( Q_{hr,f,aux,a} = P_{el,av,rot} \cdot t_{WRG} \) <span class="eq-number">(5.2.2-1)</span>
 </a>
 
 Where,
@@ -184,6 +186,7 @@ Where,
 </head>
 <body>
   <table>
+  <caption>Table 5.2.2-2. 열회수의 설계-외기유량에 따른 회전자 구동의 전기적 성능</caption>
     <tr>
       <th>열회수의 설계-외기 유량 V<sub>e</sub><br>[m³/h]</th>
       <th>회전자 구동의 전기적 성능<br>P<sub>el,av,rot</sub> [W]</th>
@@ -210,12 +213,12 @@ Where,
 
 
 ---
-## 3.5.3. 가습기 펌프
+## 5.3. 가습기 펌프
 
 가슴기 펌프에 대한 연간 보조에너지 \(Q_{mh,f,aux}\)는 공조기기의 운전시간에 대한 표준값을 바탕으로 다음과 같이 계산됩니다:
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{hr,f,aux,a} = V_e \cdot P_{el,mth} \cdot t_{VB} \cdot f_{mh} \) 
+  \( Q_{hr,f,aux,a} = V_e \cdot P_{el,mth} \cdot t_{VB} \cdot f_{mh} \)  <span class="eq-number">(5.3-1)</span>
 </a>
 
 Where,
@@ -249,6 +252,7 @@ Where,
 </head>
 <body>
   <table>
+  <caption>Table 5.3-2. 가습기 펌프의 공기유량 \(m^3/h\)당 성능</caption>
     <tr>
       <th rowspan="1"> </th>
       <th rowspan="1">제어</th>
@@ -302,11 +306,11 @@ Where,
 
 ---
 
-## 3.5.4. 증기공급을 위한 2차에너지 
+## 5.4. 증기공급을 위한 2차에너지 
 
 증기공급에 대한 2차에너지 \(Q_{m*,f}\)는 다음을 따라 계산됩니다:
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{m^*,f} = Q_{m^*,outg} \cdot f_{m^*,f} \)
+  \( Q_{m^*,f} = Q_{m^*,outg} \cdot f_{m^*,f} \) <span class="eq-number">(5.4-1)</span>
 </a>
 
 Where, 
@@ -338,6 +342,7 @@ Where,
 </head>
 <body>
   <table>
+  <caption>Table 5.4-2. 증기생산에 대한 2차에너지 계수 \(f_{m*,f}\)</caption>
     <tr>
       <th>증기가습 종류</th>
       <th>에너지계수<br><i>f<sub>m*,f</sub></i></th>
@@ -369,9 +374,9 @@ Where,
 
 ---
 
-## 3.5.5. 가습에 대한 증기 생산기
+## 5.5. 가습에 대한 증기 생산기
 
 가습에 대한 증기 생산기에 대한 2차에너지 \(Q_{m*f}\)는 실내 냉방 팬에 대한 보조에너지를 참조하여 다음과 같이 계산됩니다:
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{m^*,f,j(Dampf)} = \sum Q_{m^*,f} \) 
+  \( Q_{m^*,f,j(Dampf)} = \sum Q_{m^*,f} \)  <span class="eq-number">(5.5-1)</span>
 </a>

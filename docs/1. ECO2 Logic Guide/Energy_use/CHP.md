@@ -1,4 +1,4 @@
-# 3.6. 열병합 에너지소요량 (Energy use for combined heat and power system)
+# 6. 열병합 에너지소요량 (Energy use for combined heat and power system)
 
 열병합 발전시스템은 전기와 열을 생산합니다. 생산된 에너지는 전기설비 또는 열원기기를 포함한 건물의 전체 시스템에 적용됩니다.
 이에 따라 CHP의 계산은 다음과 같이 3가지로 구성됩니다:
@@ -10,18 +10,18 @@
 생산된 열은 열원기기에 의해 열에너지를 공급하게 됩니다. 
 따라서 해당 열에너지만큼을 시스템에 공급하기 위한 에너지소요량이 요구됩니다.
 
-## 3.6.1. CHP에 의한 전력생산량
+## 6.1. CHP에 의한 전력생산량
 전력생산량은 다음 값으로 환산될 수 있습니다:
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{f,Bonus,a} = -E_{CHP,a} \)
+  \( Q_{f,Bonus,a} = -E_{CHP,a} \) <span class="eq-number">(6.1-1)</span>
 </a>
 
 
 한편 CHP로부터 생산된 전기에너지 \(E_{CHP,a}\)는:
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( E_{CHP,a} = C \cdot Q_{h,outg,CHP,a} \)
+  \( E_{CHP,a} = C \cdot Q_{h,outg,CHP,a} \) <span class="eq-number">(6.1-2)</span>
 </a>
 
 
@@ -29,11 +29,11 @@ Where,
 C: 전기 지수 (특별한 제시사항이 없는 경우 0.75 적용)
 \(Q_{h,outg,CHP,a}\): CHP가 시스템(열원기기)에 공급하는 열량
 
-### 3.6.1.1. CHP가 시스템(열원기기)에 공급하는 열량
+### 6.1.1. CHP가 시스템(열원기기)에 공급하는 열량
 CHP가 열원기기에  공급하는 열량은 다음과 같이 계산됩니다:
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{h,outg,CHP,a} = \beta \cdot Q_{h,outg,a} \)
+  \( Q_{h,outg,CHP,a} = \beta \cdot Q_{h,outg,a} \) <span class="eq-number">(6.1.1-1)</span>
 </a>
 
 
@@ -44,26 +44,26 @@ beta: 전체 열 생산에 대한 CHP의 열 생산비율 (특별한 제시사�
 이에 따라 열원기기가 연간 시스템에 공급하는 열량 \(Q_{h,outg,HP,a}\)은:
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{h,outg,HP,a} = (1 - \beta) \cdot Q_{h,outg,a} \)
+  \( Q_{h,outg,HP,a} = (1 - \beta) \cdot Q_{h,outg,a} \) <span class="eq-number">(6.1.1-2)</span>
 </a>
 
 
 
-## 3.6.2. CHP에 의한 열원기기의 에너지소요량
+## 6.2. CHP에 의한 열원기기의 에너지소요량
 열원기기의 에너지소요량은 다음에 의해 계산되어 난방 또는 급탕시스템에 합산됩니다:
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{h,f,a} = \left[ \frac{1 - \beta}{\eta_{HP}} + \frac{(1 + C) \cdot \beta}{\eta_{CHP}} \right] \cdot \frac{Q_{h,outg,a}}{\eta_{HN}} \)
+  \( Q_{h,f,a} = \left[ \frac{1 - \beta}{\eta_{HP}} + \frac{(1 + C) \cdot \beta}{\eta_{CHP}} \right] \cdot \frac{Q_{h,outg,a}}{\eta_{HN}} \) <span class="eq-number">(6.2-1)</span>
 </a>
 
 
 만일 에너지소요량이 음수가 될 경우 0으로 간주합니다.
 
-## 3.6.3. 에너지소요량으로부터 기인된 전력생산량
+## 6.3. 에너지소요량으로부터 기인된 전력생산량
 열원기기의 에너지소요량으로부터 기인된 전력생산량은 전기에 대한 1차에너지환산계수와 사용된 에너지매체를 고려하여 계산됩니다:
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{h,f,a} = \left[ \frac{1 - \beta}{\eta_{HP}} + \frac{(1 + C) \cdot \beta}{\eta_{CHP}} - \frac{f_{p,Strom}}{f_p} \cdot C \cdot \beta \right] \cdot \frac{Q_{h,outg,a}}{\eta_{HN}} \)
+  \( Q_{h,f,a} = \left[ \frac{1 - \beta}{\eta_{HP}} + \frac{(1 + C) \cdot \beta}{\eta_{CHP}} - \frac{f_{p,Strom}}{f_p} \cdot C \cdot \beta \right] \cdot \frac{Q_{h,outg,a}}{\eta_{HN}} \) <span class="eq-number">(6.3-1)</span>
 </a>
 
 
@@ -94,10 +94,8 @@ Where, \(η_{HN}\): 난방망의 이용효율로, 다음 표를 따라 결정합
     }
   </style>
 </head>
-
-<h3>&lt;표 #. 난방망 연결 유형에 따른 \( n_{HN} \)&gt;</h3>
-
 <table>
+<caption>Table 6.3-2. \(η_{HN}\)</caption>
   <tr>
     <th>구분</th>
     <th>\( n_{HN} \)</th>
