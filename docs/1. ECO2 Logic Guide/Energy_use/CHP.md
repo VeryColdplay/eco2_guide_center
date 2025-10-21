@@ -10,6 +10,8 @@
 생산된 열은 열원기기에 의해 열에너지를 공급하게 됩니다. 
 따라서 해당 열에너지만큼을 시스템에 공급하기 위한 에너지소요량이 요구됩니다.
 
+
+
 ## 6.1. CHP에 의한 전력생산량
 전력생산량은 다음 값으로 환산될 수 있습니다:
 
@@ -36,7 +38,6 @@ CHP가 열원기기에  공급하는 열량은 다음과 같이 계산됩니다:
   \( Q_{h,outg,CHP,a} = \beta \cdot Q_{h,outg,a} \) <span class="eq-number">(6.1.1-1)</span>
 </a>
 
-
 Where,
 beta: 전체 열 생산에 대한 CHP의 열 생산비율 (특별한 제시사항이 없는 경우 0.5 적용)
 \(Q_{h,outg,a}\): 난방시스템에 대한 열원기기의 연간 열 공급량 (kWh/year)
@@ -56,8 +57,9 @@ beta: 전체 열 생산에 대한 CHP의 열 생산비율 (특별한 제시사�
   \( Q_{h,f,a} = \left[ \frac{1 - \beta}{\eta_{HP}} + \frac{(1 + C) \cdot \beta}{\eta_{CHP}} \right] \cdot \frac{Q_{h,outg,a}}{\eta_{HN}} \) <span class="eq-number">(6.2-1)</span>
 </a>
 
-
 만일 에너지소요량이 음수가 될 경우 0으로 간주합니다.
+
+
 
 ## 6.3. 에너지소요량으로부터 기인된 전력생산량
 열원기기의 에너지소요량으로부터 기인된 전력생산량은 전기에 대한 1차에너지환산계수와 사용된 에너지매체를 고려하여 계산됩니다:
@@ -66,8 +68,8 @@ beta: 전체 열 생산에 대한 CHP의 열 생산비율 (특별한 제시사�
   \( Q_{h,f,a} = \left[ \frac{1 - \beta}{\eta_{HP}} + \frac{(1 + C) \cdot \beta}{\eta_{CHP}} - \frac{f_{p,Strom}}{f_p} \cdot C \cdot \beta \right] \cdot \frac{Q_{h,outg,a}}{\eta_{HN}} \) <span class="eq-number">(6.3-1)</span>
 </a>
 
-
 Where, \(η_{HN}\): 난방망의 이용효율로, 다음 표를 따라 결정합니다.
+
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -111,6 +113,5 @@ Where, \(η_{HN}\): 난방망의 이용효율로, 다음 표를 따라 결정합
 </table>
 
 </html>
-
 
 DIN 18599-1에 따른 합산 시 사용된 에너지매체의 1차에너지 환산계수 또는 이산화탄소 배출계수가 이용됩니다. 

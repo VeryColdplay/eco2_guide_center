@@ -26,7 +26,7 @@
 </a>
 
 <center>
-     <figcaption><strong>Table 2.1-4. 태양광 모듈에 따른 \(K_{pk}\)</strong></figcaption>
+     <figcaption><strong>Table 2.1-4. 최대 출력 계수</strong></figcaption>
      <img src="../../_tables/4_2.1_4.png" style="max-width: 80%;" alt="최대 출력 계수">
 </center>
 
@@ -36,7 +36,7 @@
 
 태양전지모듈의 온도는 발전량에 영향을 미치기 때문에, 태양광발전시스템의 실제 성능을 도출함에 있어서 직류를 교류로 변환하는 시스템, 태양전지모듈의 실제 작동 온도, 건물 적용 방식과 같은 영향들을 고려하기 위해 성능 계수 \(f_{perf}\)를 적용합니다. 태양전지모듈은 배면의 환기 여부 및 방식에 따라 구분됩니다.  
 <center>
-     <figcaption><strong>Table 2.1-5. 태양전지모듈의 건물 적용 타입에 따른 \(f_{perf}\)</strong></figcaption>
+     <figcaption><strong>Table 2.1-5. 시스템 성능 계수</strong></figcaption>
      <img src="../../_tables/2.1_5.png" style="max-width: 80%;" alt="시스템 성능 계수">
 </center>
 
