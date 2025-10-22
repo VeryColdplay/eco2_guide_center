@@ -1,12 +1,12 @@
-# 3.1. 난방 에너지소요량 (Energy use for heating system)
+# 1. 난방 에너지소요량 (Energy use for heating system)
 
-## 3.1.1. 개요
+## 1.1. 개요
 
 본 절은 난방 시스템의 각 단계(전달, 분배, 저장, 생산)에서 산출된 손실 (loss), 소요량 (energy use), 보조에너지 (auxiliary energy)를 종합하여, **최종적으로 열 생산기기(보일러, 히트펌프 등)가 공급해야 하는 에너지 소요량**을 산정하는 방법을 기술합니다.   
 
    <center>
-         <img src="../../_images/heating_system.png" style="max-width: 50%;" alt="제 2.1장에서 다루는 범위">
-         <div><strong>제 2.1장에서 다루는 범위</strong></div>
+         <img src="../../_images/1.1_1.png" style="max-width: 50%;" alt="제 2.1장에서 다루는 범위">
+         <div><strong>Figure 1.1-1. 공조처리의 제 1장에서 다루는 범위</strong></div>
    </center>
 
 
@@ -15,14 +15,14 @@
 
 ---    
 
-## 3.1.2. 생산기기 열 에너지 공급량(heat output)
+## 1.2. 생산기기 열 에너지 공급량(heat output)
 
 - 열 생산기기가 공급해야 하는 총 열 공급량(\(Q_{h,outg}\))은 최종적으로 실내에 공급되어야 하는 순수 난방에너지 요구량(Energy need)(\(Q_{h,b}\))과 열이 사용자에게 도달하기까지의 과정, 즉 전달(\(Q_{h,ce}\)), 분배(\(Q_{h,d}\)), 저장(\(Q_{h,s}\)) 단계에서 발생하는 모든 열손실의 합으로 계산됩니다.   
 
 <div align="center">   
 $$
 Q_{h,outg} = Q_{h,b} + Q_{h,ce} + Q_{h,d} + Q_{h,s}
-$$
+$$<span class="eq-number">(1.2-1)</span>
 </div>
 
 - 열 생산기기가 공조시스템의 가열유닛(Heating coil)에 열을 공급하는 경우, \(Q_{h,b}\) 대신 공조기 가열에 필요한 열량 \(Q_{h*,b}\)를 사용합니다.   
@@ -30,7 +30,7 @@ $$
 <div align="center">   
 $$
 Q_{h,outg} = Q_{h*,b} + Q_{h,ce} + Q_{h,d} + Q_{h,s}
-$$
+$$<span class="eq-number">(1.2-2)</span>
 </div>
 
 - 열 생산기기가 흡수식 냉동기에 열을 공급하는 경우, 냉동기 구동에 필요한 열량 \(Q_{c,f}\)를 사용합니다.   
@@ -38,14 +38,14 @@ $$
 <div align="center">   
 $$
 Q_{h,outg} = Q_{c,f} + Q_{h,d} + Q_{h,s}
-$$
+$$ <span class="eq-number">(1.2-3)</span>
 </div>
 
 - 열 생산기기로부터 열이 공급되는 과정이 다수인 경우, 각각의 과정의 \(Q_{h,outg}\)를 합산합니다.   
 
 ---    
 
-### 3.1.2.1. 최종 난방 에너지 소요량
+### 1.2.1. 최종 난방 에너지 소요량
 
 - 건물이 실제로 요구하는 최종 난방 에너지 소요량(\(Q_{h,f}\))은 생산기기의 열에너지 공급량(\(Q_{h,outg}\))과 공급 과정의 열 손실량(\(Q_{h,g}\))을 더한 값에서, 태양열 등 신재생에너지로 공급된 열량(\(Q_{h,reg}\))을 차감하여 계산됩니다.   
 
@@ -56,6 +56,7 @@ $$
 $$
 Q_{h,reg} = Q_{h,sol} + Q_{h,in}
 $$
+<span class="eq-number">(1.2.1-1)</span>
 </div>
 
 <div style="
@@ -89,38 +90,38 @@ $$
 
 ---    
 
-### 3.1.2.2. 보조에너지
+### 1.2.2. 보조에너지
 
 - 난방 시스템에서 보조에너지(\(Q_{h,aux}\))는 열 전달, 분배, 저장, 생산의 각 단계에서 소요되는 모든 보조에너지의 합으로 산출되며 최종 에너지 소요량에 포함됩니다.   
 
 <div align="center">   
 $$
 Q_{h,aux} = Q_{h,ce,aux} + Q_{h,d,aux} + Q_{h,s,aux} + Q_{h,g,aux}
-$$
+$$ <span class="eq-number">(1.2.2-1)</span>
 </div>
 
 ---    
 
-### 3.1.2.3. 비제어적 열획득(Heat gain)
+### 1.2.3. 비제어적 열획득(Heat gain)
 
 - 난방 시스템의 전달, 분배, 저장, 생산 과정에서 열 에너지의 일부는 제어되지 않고 난방 중인 실내 공간으로 유입되어 열획득으로 작용할 수 있다. 이 비제어적 열획득(\(Q_{I,h}\))은 열에너지 소요량을 계산할 때 고려되어야 합니다.   
 
 <div align="center">   
 $$
 Q_{l,h} = Q_{l,h,s} + Q_{l,h,g}
-$$
+$$ <span class="eq-number">(1.2.3-1)</span>
 </div>
 
 ---    
 
-## 3.1.3. 각 프로세스의 기준 조건 설정
+## 1.3. 각 프로세스의 기준 조건 설정
 
 기본적으로 일일 난방이용시간 \( t_{h,Nutz} = 0 \)이면, 부하율 \( \beta_j = 0 \)입니다.      
 만약 #장의 공조난방 시스템에서 요구사항이 있을 경우, #장에서 산정된 \( t_{h,Nutz} \)를 따르도록 합니다.   
 
 ---    
 
-### 3.1.3.1. 평균 부하율(Part load level)
+### 1.3.1. 평균 부하율(Part load level)
 
 평균 부하율(\( \beta_{i} \))은 시스템의 최대 공급 능력 대비 실제 평균 부하가 어느 정도인지를 나타내는 무차원 변수입니다.    각 단계(전달, 분배, 저장, 생산)마다 열손실이 존재하므로, 각 단계의 부하율을 개별적으로 계산합니다.   
 
@@ -129,7 +130,7 @@ $$
 <div align="center">
 $$
 \beta_{h,ce} = \frac{Q_{h,b}}{\dot{Q}_{h,\max} \cdot t_h}
-$$
+$$ <span class="eq-number">(1.3.1-1)</span>
 </div>
 
 
@@ -138,7 +139,7 @@ $$
 <div align="center">
 $$
 \beta_{h,d} = \frac{Q_{h,b} + Q_{h,ce}}{\dot{Q}_{dot\,h,max} \cdot t_h}
-$$
+$$ <span class="eq-number">(1.3.1-2)</span>
 </div>
 
 - **열 저장 부하율 \( \beta_{h,s} \)**
@@ -146,7 +147,7 @@ $$
 <div align="center">
 $$
 \beta_{h,s} = \frac{Q_{h,b} + Q_{h,ce} + Q_{h,d}}{\dot{Q}_{dot\,h,max} \cdot t_h}
-$$
+$$ <span class="eq-number">(1.3.1-3)</span>
 </div>
 
 - **열 생산 부하율 \( \beta_{h,g} \)**
@@ -154,7 +155,7 @@ $$
 <div align="center">
 $$
 \beta_{h,g} = \frac{Q_{h,b} + Q_{h,ce} + Q_{h,d} + Q_{h,s}}{\dot{Q}_{dot\,h,max} \cdot t_h}
-$$
+$$ <span class="eq-number">(1.3.1-4)</span>
 </div>
 
 <div style="
@@ -189,7 +190,7 @@ $$
 
 ---    
 
-### 3.1.3.2. 온도 기반 제어
+### 1.3.2. 온도 기반 제어
 
 온도에 따라 자동 조절되는 난방 시스템에서, 개별 프로세스(전달, 분배, 저장, 생산)의 온도는 시스템의 설계 조건에서 평균 부하율과 평균 온도차에 의해 정해진다.
 
@@ -200,7 +201,7 @@ $$
 <div align="center">
 $$
 \theta_{HK,m(\beta_j)} = 0.5 \cdot ( \theta_{VL,m(\beta_j)} + \theta_{RL,m(\beta_j)} )
-$$
+$$ <span class="eq-number">(1.3.2-1)</span>
 </div>
 
 - **평균 온도차(\( \Delta \theta_{HK,m}(\beta_i) \))**
@@ -208,7 +209,8 @@ $$
 <div align="center">
 $$
 \Delta \theta_{HK,m}(\beta_i) = \theta_{VL,m}(\beta_i) - \theta_{RL,m}(\beta_i)
-$$</div>
+$$ <span class="eq-number">(1.3.2-2)</span>
+</div>
 
 
 - **평균 공급 온도(\(\theta_{VL,m}\))**
@@ -216,7 +218,7 @@ $$</div>
 <div align="center">
 $$
 \theta_{VL,m}(\beta_i) = (\theta_{VA} - \theta_{i,h,\text{soll}}) \cdot \beta_i^{\frac{1}{n}} + \theta_{i,h,\text{soll}}
-$$
+$$ <span class="eq-number">(1.3.2-3)</span>
 </div>
 
 
@@ -225,7 +227,7 @@ $$
 <div align="center">
 $$
 \theta_{RL,m(\beta_i)} = ( \theta_{RA} - \theta_{i,h,soll} ) \cdot \beta_j^{(1/n)} + \theta_{i,h,soll}
-$$
+$$ <span class="eq-number">(1.3.2-4)</span>
 </div>
 
 <div style="
@@ -267,7 +269,7 @@ $$
 <div align="center">
 $$
 \Delta \theta_A = ( \theta_{VA} + \theta_{RA} ) / 2 - \theta_{i,h,soll}
-$$
+$$ <span class="eq-number">(1.3.2-5)</span>
 </div>
 
 혼합기(mixer)가 설치된 정온 보일러의 경우, 전달과 분배 과정에서 초과 온도 값 적용, 혼합기가 없는 정온 보일러의 평균 온도 = 70℃ 적용
@@ -294,7 +296,7 @@ $$
    </style>
 </head>
 
-<p><strong>&lt;설계온도&gt;</strong></p>
+<p><strong>&lt;Table 1.3.2-6. 설계온도&gt;</strong></p>
 
 <table>
    <tr>
@@ -332,7 +334,7 @@ $$
 - 축열조가 없는 열 생산기기의 경우 평균 공급/환수 온도는   
 <div align="center"> $$
 \theta_{HK,m}(\beta_i) = 0.5 \cdot \left( \theta_{VL,m}(\beta_i) + \theta_{RL,m}(\beta_i) \right)
-$$
+$$ <span class="eq-number">(1.3.2-7)</span>
 </div>
 식으로 구합니다.   
 
@@ -344,7 +346,7 @@ $$
 
 ---    
 
-### 3.1.3.3. 보일러 정격 출력(Rated output) 산정
+### 1.3.3. 보일러 정격 출력(Rated output) 산정
 
 - **보일러 정격출력(\( \dot{Q}_{N,h} \))**: 보일러의 정격 출력을 산정하기 위해 첫 번째로 모든 연결된 열 소비기기의 최대 출력이 결정되어야 합니다. 동시 발생하는 수요에 따라 보일러의 정격 출력은 가장 큰 단일 수요 또는 동시 발생하는 수요의 합 중에서 결정됩니다.      
 
@@ -353,7 +355,7 @@ $$
 <div align="center">
 $$
 \dot{Q}_{dot\,N,h} = 1.3 \cdot \dot{Q}_{dot\,h,max}
-$$
+$$ <span class="eq-number">(1.3.3-1)</span>
 </div>
 
 이미 열 생산기기가 설치된 기존 건물의 경우, 정격 출력은 설치된 기기의 값을 이용합니다.    설치된 기기 값을 알 수 없는 경우, 아래 식을 사용합니다.   
@@ -361,7 +363,7 @@ $$
 <div align="center">
 $$
 \dot{Q}_{N,h} = 2.5 \cdot \dot{Q}_{h,\text{max}}
-$$
+$$ <span class="eq-number">(1.3.3-2)</span>
 </div>
 
 <div style="
@@ -398,12 +400,12 @@ $$
 <div align="center">
 $$
 \dot{Q}_N = \max\left( \sum \dot{Q}_{N,\text{gleichzeitig}} , \dot{Q}_{\text{vorrang}} \right)
-$$
+$$ <span class="eq-number">(1.3.3-3)</span>
 </div>
 
 ---    
 
-### 3.1.3.4. 운전 시간
+### 1.3.4. 운전 시간
 
 건물 난방/급탕 요구량(# 절)에서 야간감소/정지 또는 주말감소/정지가 고려되었다면, 보일러 운전에서도 동일하게 고려해야 합니다.   
 
@@ -413,7 +415,7 @@ $$
 <div align="center">   
    $$
    t_{h,rL,T} = 24 - f_{L,NA} \cdot (24 - t_{h,op})
-   $$
+   $$ <span class="eq-number">(1.3.4-1)</span>
 </div>
 
 <div style="
@@ -453,7 +455,7 @@ $$
 <div align="center"> 
    $$
    f_{L,NA} = 1 - \frac{\theta_{NA,Grenz} - \theta_e}{\theta_{NA,Grenz} - \theta_{e,min}}
-   $$
+   $$ <span class="eq-number">(1.3.4-2)</span>
 </div>
 
 <div style="
@@ -492,7 +494,7 @@ $$
 <div align="center"> 
    $$
    d_{h,rB} = d_{mth} \cdot \left( \frac{365 - f_{L,WA} \cdot (365 - d_{Nutz,A})}{365} \right)
-   $$
+   $$ <span class="eq-number">(1.3.4-3)</span>
 </div> 
 
 <div style="
@@ -531,7 +533,7 @@ $$
 <div align="center"> 
 $$
 f_{L,WA} = 1 - \frac{\theta_{WA,Grenz} - \theta_e}{\theta_{WA,Grenz} - \theta_{e,min}}
-$$
+$$ <span class="eq-number">(1.3.4-4)</span>
 </div> 
 
 <div style="
@@ -569,14 +571,16 @@ $$
 <div align="center">
 $$
 t_{h,rL} = t_{h,rL,T} \cdot d_{h,rB}
-$$</div>
+$$ <span class="eq-number">(1.3.4-5)</span>
+</div>
 
 - 상이한 난방 배관망 운전 또는 난방 시스템 이외의 열 생산기기가 존재하거나 배관망에 다른 열 수요를 갖는 에너지원(냉동기, 공조장치, 온수 등)이 연결되어 있는 경우, 가장 오랜 시간 수요가 발생하는 에너지원의 운전시간을 적용합니다.   
 
 <div align="center">
 $$
 t_{h,rL} = t_{h,rL,T} \cdot d_{h,rB}
-$$</div>
+$$ <span class="eq-number">(1.3.4-6)</span>
+</div>
 
 
 ---    
@@ -585,13 +589,15 @@ $$</div>
 <div align="center">
 $$
 d_{h,mth} = \frac{t_{h,rL,T}^*}{24}
-$$</div>
+$$ <span class="eq-number">(1.3.4-7)</span>
+</div>
 
 - **월별 이용일수 \( d_{Nutz,mth} \)**:   
 <div align="center">
 $$
 d_{Nutz,mth} = \frac{d_{Nutz,A}}{365} \cdot d_{mth}
-$$</div>
+$$ <span class="eq-number">(1.3.4-8)</span>
+</div>
 
 - **일년 단위 산정치의 월별 분배**: 
 
@@ -600,18 +606,20 @@ $$</div>
 <div align="center">
 $$
 W_{h,d,e,M} = W_{h,d,e,a} \cdot \frac{ \beta_{h,d,M} \cdot t_{\text{Nutz,mth}} }{ \beta_{h,d,a} \cdot t_{h,op} \cdot d_{\text{Nutz,a}} }
-$$</div>
+$$ <span class="eq-number">(1.3.4-9)</span>
+</div>
 
 ---    
 
-## 3.1.4. 열 손실 및 보조에너지 계산
+## 1.4. 열 손실 및 보조에너지 계산
 
-### 3.1.4.1. 전달 과정의 열 손실
+### 1.4.1. 전달 과정의 열 손실
 
 - 실내 난방 에너지 전달 과정의 열 손실(Q_h,ce)과 열 전달 총 이용효율 (η_h,ce)은 아래와 같이 정의합니다.   
 <div align="center"> $$
-Q_{h,ce} = \left( \frac{f_{Radiant} \cdot f_{int} \cdot f_{hwdr}}{\eta_{h,ce}} - 1 \right) \cdot Q_{h,b}
-$$</div>
+Q_{h,ce} = \left( \frac{f_{Radiant} \cdot f_{int} \cdot f_{hwdr}}{\eta_{h,ce}} - 1 \right) \cdot Q_{h,b} $$
+<span class="eq-number">(1.4.1-1)</span>
+</div>
 
 <div style="
   display: flex;
@@ -648,7 +656,8 @@ $$</div>
 - \( \eta_{h,\text{ce}} \): 실내 열전달 총 효율   
 <div align="center"> $$
 \eta_{h,\text{ce}} = \dfrac{1}{4 - (\eta_L + \eta_C + \eta_B)}
-$$</div>
+$$ <span class="eq-number">(1.4.1-2)</span>
+</div>
 
 <div style="
   display: flex;
@@ -687,7 +696,8 @@ $$</div>
 <div align="center">
 $$
 Q_{h,ce,a} = \sum Q_{h,ce}
-$$</div>
+$$ <span class="eq-number">(1.4.1-3)</span>
+</div>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -708,7 +718,7 @@ $$</div>
    </style>
 </head>
 
-<p>&lt;표. 라디에이터의 부분 이용 효율 (실 높이 ≤ 4m)&gt;</p>
+<p>&lt;Table 1.4.1-4. 라디에이터의 부분 이용 효율 (실 높이 ≤ 4m)&gt;</p>
 
 <table>
    <tr>
@@ -766,22 +776,26 @@ $$</div>
 <div align="center">
 $$
 \eta_L = \frac{\eta_{L1} + \eta_{L2}}{2} = \frac{0.93 + 0.95}{2} = 0.94
-$$</div>
+$$ <span class="eq-number">(1.4.1-5)</span>
+</div>
 
 <div align="center">
 $$
 \eta_C = 0.93
-$$</div>
+$$ <span class="eq-number">(1.4.1-6)</span>
+</div>
 
 <div align="center">
 $$
 \eta_B = 1
-$$</div>
+$$ <span class="eq-number">(1.4.1-7)</span>
+</div>
 
 <div align="center">
 $$
 \eta_{h,\text{ce}} = \frac{1}{4 - (\eta_L + \eta_C + \eta_B)} = \frac{1}{4 - (0.94 + 0.93 + 1)} = \frac{1}{1.13} = 0.88
-$$</div>
+$$ <span class="eq-number">(1.4.1-8)</span>
+</div>
 
 - 간헐 운전 계수: \(f_{int}\) = 0.97 (지속 운전의 경우, \(f_{int}\) = 1)   
 - 복사 영향 계수: \(f_{Radiant}\) = 1.0   
@@ -806,7 +820,7 @@ $$</div>
    </style>
 </head>
 
-<p>&lt;표. 물 기반 난방 시스템의 효율 (실 높이 ≤ 4m)&gt;</p>
+<p>&lt;Table 1.4.1-9. 물 기반 난방 시스템의 효율 (실 높이 ≤ 4m)&gt;</p>
 
 <table>
    <tr>
@@ -900,7 +914,7 @@ $$</div>
    </style>
 </head>
 
-<p>&lt;표. 공기 난방에 대한 이용 효율 (공조 장치) (실 높이 ≤ 4m)&gt;</p>
+<p>&lt;Table 1.4.1-10. 공기 난방에 대한 이용 효율 (공조 장치) (실 높이 ≤ 4m)&gt;</p>
 
 <table>
    <tr>
@@ -943,18 +957,19 @@ $$</div>
 - 실 높이 4m 이상 공간에 대한 이용 효율 (대형 홀 건물): 아래 표
 
 <center>
-     <div><strong>4m ≤ 실 높이 ≤ 10m 공간에 대한 이용 효율</strong></div>
-     <img src="../../_tables/2.1_table.png" style="max-width: 80%;" alt="4m ≤ 실 높이 ≤ 10m 공간에 대한 이용 효율">
+     <div><strong>Table 1.4.1-11. 4m ≤ 실 높이 ≤ 10m 공간에 대한 이용 효율</strong></div>
+     <img src="../../_tables/1.4.1_11.png" style="max-width: 80%;" alt="4m ≤ 실 높이 ≤ 10m 공간에 대한 이용 효율">
 </center>
 
 
-### 3.1.4.2. 열 전달 보조에너지
+### 1.4.2. 열 전달 보조에너지
 
 - 존으로 열을 전달하는 과정에서 제어기기, 팬, 펌프 등의 전력 소비를 보조에너지로 정의하며 보조에너지 소요량(\(Q_{h,ce,aux}\))은 아래와 같이 계산합니다.    
 
 <div align="center">$$
 Q_{h,ce,aux} = Q_C + Q_{V,P}
-$$</div>
+$$ <span class="eq-number">(1.4.2-1)</span>
+</div>
 
 <div style="
   display: flex;
@@ -987,8 +1002,9 @@ $$</div>
 
 
 <div align="center">$$
-Q_C = P_C \cdot d_{mth} \cdot \frac{24}{1000}
-$$</div>   
+Q_C = P_C \cdot d_{mth} \cdot \frac{24}{1000}$$
+<span class="eq-number">(1.4.2-2)</span>
+</div>   
 
 <div style="
   display: flex;
@@ -1019,8 +1035,9 @@ $$</div>
 </div> 
 
 <div align="center">$$
-Q_{V,P} = (P_V \cdot n_V + P_P \cdot n_P) \cdot \frac{t_{h,rL}}{1000}
-$$</div>
+Q_{V,P} = (P_V \cdot n_V + P_P \cdot n_P) \cdot \frac{t_{h,rL}}{1000} $$
+<span class="eq-number">(1.4.2-3)</span>
+</div>
 
 <div style="
   display: flex;
@@ -1057,8 +1074,9 @@ $$</div>
 펌프의 정격 전력 소비 데이터가 없는 경우:
 
 <div align="center">$$
-P_P = 50 \cdot \dot{Q}_{LH}^{0.08}
-$$</div>
+P_P = 50 \cdot \dot{Q}_{LH}^{0.08} $$
+<span class="eq-number">(1.4.2-4)</span>
+</div>
 
 <div style="
   display: flex;
@@ -1112,7 +1130,7 @@ $$</div>
    </style>
 </head>
 
-<p>&lt;표. 제어기기의 보조에너지 표준 값&gt;</p>
+<p>&lt;Table 1.4.2-5. 제어기기의 보조에너지 표준 값&gt;</p>
 
 <table>
    <tr>
@@ -1153,7 +1171,7 @@ $$</div>
    </style>
 </head>
 
-<p>&lt;표. 급기 팬의 보조 에너지 표준 값 (실 높이 ≤ 4m)&gt;</p>
+<p>&lt;Table 1.4.2-6. 급기 팬의 보조 에너지 표준 값 (실 높이 ≤ 4m)&gt;</p>
 
 <table>
    <tr>
@@ -1185,7 +1203,7 @@ $$</div>
 
 <head>
    <meta charset="UTF-8">
-   <title>표. 팬 코일 유닛의 용량에 따른 성능 실례</title>
+   <title>Table 1.4.2-7. 팬 코일 유닛의 용량에 따른 성능 실례</title>
    <style>
       table {
          border-collapse: collapse;
@@ -1200,7 +1218,7 @@ $$</div>
    </style>
 </head>
 
-<p>&lt;표. 팬 코일 유닛의 용량에 따른 성능 실례&gt;</p>
+<p>&lt;Table 1.4.2-7. 팬 코일 유닛의 용량에 따른 성능 실례&gt;</p>
 
 <table>
    <tr>
@@ -1227,14 +1245,15 @@ $$</div>
 
 
     
-### 3.1.4.3. 중앙 온수 난방 분배 배관망의 열 손실
+### 1.4.3. 중앙 온수 난방 분배 배관망의 열 손실
 
 - 중앙 온수 난방 시스템의 분배 과정에서 **배관망의 열 손실(\(Q_{h,d}\))**은 열 생산기기에서 생산된 온수가 각 존까지 배관망을 따라 이동하는 동안 주변으로의 열 손실입니다.   
 
 <div align="center">
 $$
 Q_{h,d} = \sum \left[ U_i \cdot (\theta_{HK,m} - \theta_i) \cdot L_i \cdot t_{h,rL,i} \right]
-$$</div>
+$$ <span class="eq-number">(1.4.3-1)</span>
+</div>
 
 <div style="
   display: flex;
@@ -1271,8 +1290,9 @@ $$</div>
 
 - **비제어적 열획득(Q_I,h,d)**: 배관망이 존을 통과할 경우, 통과한 구간 i의 배관망에서 발생하는 열 손실은 존의 에너지 요구량 분석에서 비제어적 열 획득에 포함됩니다.   
 <div align="center">$$
-Q_{I,h,d,i} = Q_{h,d,i}
-$$</div>
+Q_{I,h,d,i} = Q_{h,d,i} $$
+<span class="eq-number">(1.4.3-2)</span>
+</div>
 
 - **배관 길이(L) 산정**: 배관 길이는 기본적으로 배관 도면을 바탕으로 산정합니다.   
 - 배관망 주변 온도는 2.1.2.4에서 설정한 값을 적용하며, 없을 경우 아래 표에서 채택합니다.   
@@ -1282,8 +1302,8 @@ $$</div>
 
 
 <center>
-    <div><strong>Table 3.2.7-14. 배관망에 대한 표준값</strong></div>
-    <img src="../../_tables/3.2.7-14.png" style="max-width: 100%;" alt="배관망에 대한 표준값">
+    <div><strong>Table 1.4.3-3. 배관망에 대한 표준값</strong></div>
+    <img src="../../_tables/1.4.3_3.png" style="max-width: 100%;" alt="배관망에 대한 표준값">
 </center>
 
 - **배관 열관류율(U)**: 배관의 단열재 사양에 따라 결정되며, 정보가 없는 경우 건물의 준공 연도와 배관 위치를 기준으로 아래 표의 표준값을 사용합니다.   
@@ -1312,7 +1332,7 @@ $$</div>
    </style>
 </head>
 
-<h5>&lt;표. 배관의 열관류율 \( U_i \) 표준값&gt;</h5>
+<h5>&lt;Table 1.4.3-4. 배관의 열관류율 \( U_i \) 표준값&gt;</h5>
 
 <table>
    <tr>
@@ -1388,13 +1408,14 @@ $$</div>
 
     
 
-### 3.1.4.4. 배관망 순환펌프 보조에너지
+### 1.4.4. 배관망 순환펌프 보조에너지
 
 - **분배 배관망 보조에너지(\(Q_{h,d,aux}\)) 산정**: 순환 펌프의 에너지 소비량은 분배 배관망의 필요 수력학적 에너지 요구량과 히트펌프 운전에 대한 소비지수를 근거로 산정합니다.   
 
 <div align="center">$$
-Q_{h,d,aux} = W_{h,d,hydr} \cdot e_{h,d,aux}
-$$</div>
+Q_{h,d,aux} = W_{h,d,hydr} \cdot e_{h,d,aux} $$
+<span class="eq-number">(1.4.4-1)</span>
+</div>
 
 <div style="
   display: flex;
@@ -1426,18 +1447,21 @@ $$</div>
 </div> 
 
 <div align="center">$$
-W_{h,d,hydr} = \frac{P_{\text{pump}}}{1000} \cdot \beta_{h,d} \cdot t_h
-$$</div>
+W_{h,d,hydr} = \frac{P_{\text{pump}}}{1000} \cdot \beta_{h,d} \cdot t_h $$
+<span class="eq-number">(1.4.4-2)</span>
+</div>
 
 <div align="center">$$
-e_{h,d,aux} = C_{P1} + C_{P2} \cdot \beta_{h,d}^{-1}
-$$</div>
+e_{h,d,aux} = C_{P1} + C_{P2} \cdot \beta_{h,d}^{-1} $$
+<span class="eq-number">(1.4.4-3)</span>
+</div>
 
 - 펌프의 정격 성능은 제품 사양 정보로부터 계산할 수 있다.
 
 <div align="center">$$
-Q_{h,d,aux} = \frac{P_{\text{pump}}}{1000} \cdot \beta_{h,d} \cdot t_h \cdot \left( C_{P1} + C_{P2} \cdot \beta_{h,d}^{-1} \right)
-$$</div>
+Q_{h,d,aux} = \frac{P_{\text{pump}}}{1000} \cdot \beta_{h,d} \cdot t_h \cdot \left( C_{P1} + C_{P2} \cdot \beta_{h,d}^{-1} \right) $$
+<span class="eq-number">(1.4.4-4)</span>
+</div>
 
 <div style="
   display: flex;
@@ -1491,7 +1515,7 @@ $$</div>
    </style>
 </head>
 
-<h5>&lt;표. 펌프 제어에 따른 \( C_{P1}, C_{P2} \)&gt;</h5>
+<h5>&lt;Table 1.4.4-5. 펌프 제어에 따른 \( C_{P1}, C_{P2} \)&gt;</h5>
 
 <table>
    <tr>
@@ -1523,7 +1547,8 @@ $$</div>
 <div align="center">
 $$
 Q_{h,d,aux} = W_{h,d,aux} \cdot e_{h,d,aux} \cdot \frac{1.03 \cdot t_{h,rL} + f_{P,A} \cdot (t_h - t_{h,rL})}{t_h}
-$$</div> 
+$$ <span class="eq-number">(1.4.4-6)</span>
+</div> 
 
 <div style="
   display: flex;
@@ -1558,14 +1583,15 @@ $$</div>
 
 
     
-### 3.1.4.5. 저장 과정 열손실
+### 1.4.5. 저장 과정 열손실
 
 - **저장 열손실 (\( Q_{h,s} \))**: 저장 탱크의 열 손실은 아래와 같이 정의합니다.   
 
 <div align="center">
 $$
 Q_{h,s} = f_{\text{verbindung}} \cdot \left( \frac{\theta_{h,s} - \theta_i}{45} \right) \cdot d_{h,\text{mth}} \cdot q_{B,S}
-$$</div>
+$$ <span class="eq-number">(1.4.5-1)</span>
+</div>
 
 <div style="
   display: flex;
@@ -1607,15 +1633,17 @@ $$</div>
 - **비제어적 열획득**: 축열조가 난방 중인 존 내에 설치된 경우, 이 손실은 해당 존의 비제어적 열획득으로 고려됩니다.      
 
 <div align="center">$$
-Q_{I,h,s} = Q_{h,s}
-$$</div>
+Q_{I,h,s} = Q_{h,s} $$
+<span class="eq-number">(1.4.5-2)</span>
+</div>
 
 
 - **저장 탱크용 펌프 보조에너지 (\( Q_{h,s,aux} \))**: 축열조 운전을 위한 별도의 펌프가 있는 경우, 펌프의 보조에너지 소비량은 아래와 같습니다.      
 
 <div align="center">$$
-Q_{h,s,aux} = \left( \frac{P_{\text{Pumpe}}}{1000} \right) \cdot t_P
-$$</div>
+Q_{h,s,aux} = \left( \frac{P_{\text{Pumpe}}}{1000} \right) \cdot t_P $$
+<span class="eq-number">(1.4.5-3)</span>
+</div>
 
 <div style="
   display: flex;
@@ -1646,13 +1674,14 @@ $$</div>
   </div>
 </div>
 
-### 3.1.4.6. 열 생산기기(보일러)의 에너지 공급량(Heat output)   
+### 1.4.6. 열 생산기기(보일러)의 에너지 공급량(Heat output)   
 
 - 난방 시스템에 태양열 시스템이나 공조 시설 등으로부터 열이 공급되면, 난방 시스템에서 요구하는 추가 열량을 보일러와 같은 열 생산기기로 공급해야 합니다. 이를 **생산기기 잔여 열 공급량** (\( Q^*_h \)) 이라고 정의하고 아래와 같이 계산합니다.      
 
 <div align="center">$$
 Q^*_h = Q_{h,\text{outg}} - Q_{h,\text{sol}} - Q_{rv,h,\text{outg}}
-$$</div>
+$$ <span class="eq-number">(1.4.6-1)</span>
+</div>
 
 - 보일러가 여러 대 적용된 경우, 공급되는 열량은 차례대로 계산합니다.      
 - 난방과 급탕이 하나의 보일러로 공급될 경우, 난방 운전시간에서 급탕을 위한 가동시간을 차감합니다.      
@@ -1660,7 +1689,8 @@ $$</div>
 
 <div align="center">$$
 \dot{Q}_N = \max \left( \sum \dot{Q}_{N,\text{gleichzeitig}}, \dot{Q}_{\text{Vorrang}} \right)
-$$</div>
+$$ <span class="eq-number">(1.4.6-2)</span>
+</div>
 
 
  
@@ -1668,7 +1698,7 @@ $$</div>
 
 
 
-#### 3.1.4.6.1. 난방 보일러    
+#### 1.4.6.1. 난방 보일러    
 
 
 난방 열 생산 과정의 열손실 (\( Q_{h,g} \))은 보일러 종류에 따라 계산됩니다.       
@@ -1679,19 +1709,22 @@ $$</div>
 <div align="center">
 $$
 \beta_h = \frac{ \dot{Q}_{d,in} }{ \dot{Q}_N }
-$$</div>
+$$ <span class="eq-number">(1.4.6.1-1)</span>
+</div>
 
 - **다수 보일러 동시 가동 시 부하율 (\( \beta_{h,i} \))**:   
 <div align="center">
 $$
 \beta_{h,i} = \frac{ \dot{Q}_{d,in} }{ \sum \dot{Q}_{N,j} }
-$$</div>
+$$ <span class="eq-number">(1.4.6.1-2)</span>
+</div>
 
 - **다수 보일러 순차 가동 시 부하율 (\( \beta_{h,n} \))**:   
 <div align="center">
 $$
 \beta_{h,n} = \frac{ \dot{Q}_{d,in} - \sum \dot{Q}_{N,n-1} }{ \dot{Q}_{N,n} } \quad (\dot{Q}_{d,in} < \sum \dot{Q}_{N,n} \text{일 경우})
-$$</div>
+$$ <span class="eq-number">(1.4.6.1-3)</span>
+</div>
 
 
 - **연료장전식 난방 보일러의 열 생산과정에서 손실 (\( Q_{h,g} \)) 및 보조에너지 (\( Q_{h,g,aux} \))**:   
@@ -1704,18 +1737,20 @@ $$</div>
 <div align="center">
 $$
 Q_{h,g} = \sum \left( Q_{h,g,v,i} \cdot d_{h,rB} \right)
-$$</div>
+$$ <span class="eq-number">(1.4.6.1-4)</span>
+</div>
 
  
 - \( 0 < \beta_{h,i} \leq \beta_{K,pl} \) 일 경우:   
 <div align="center">$$
-Q_{h,g,v,i} = \left( \left( \frac{ \beta_{h,i} }{ \beta_{K,pl} } \cdot \dot{Q}_{v,g,pl} - \dot{Q}_{B,h} \right) + \dot{Q}_{B,h} \right) \cdot (t_{h,rL} - t_{w,100\%})
-$$</div>
+Q_{h,g,v,i} = \left( \left( \frac{ \beta_{h,i} }{ \beta_{K,pl} } \cdot \dot{Q}_{v,g,pl} - \dot{Q}_{B,h} \right) + \dot{Q}_{B,h} \right) \cdot (t_{h,rL} - t_{w,100\%}) $$ <span class="eq-number">(1.4.6.1-5)</span>
+</div>
 
 - \( \beta_{K,pl} < \beta_{h,i} < 1.0 \) 일 경우:   
 <div align="center">$$
-Q_{h,g,v,i} = \frac{ \beta_{h,i} - \beta_{K,pl} }{ 1 - \beta_{K,pl} } \cdot (\dot{Q}_{V,g,100\%} - \dot{Q}_{V,g,pl}) \cdot (t_{h,rL} - t_{w,100\%})
-$$</div>
+Q_{h,g,v,i} = \frac{ \beta_{h,i} - \beta_{K,pl} }{ 1 - \beta_{K,pl} } \cdot (\dot{Q}_{V,g,100\%} - \dot{Q}_{V,g,pl}) \cdot (t_{h,rL} - t_{w,100\%}) $$
+<span class="eq-number">(1.4.6.1-6)</span>
+</div>
 
 <div style="
   display: flex;
@@ -1752,12 +1787,14 @@ $$</div>
 - 난방 또는 난방/급탕 시:   
 <div align="center">$$
 \dot{Q}_{d,in} = \frac{ Q_{h,outg} }{ d_{h,rB} \cdot (t_{h,r,L,T} - t_{w,100\%}) }
-$$</div>
+$$ <span class="eq-number">(1.4.6.1-7)</span>
+</div>
 
 - 난방/급탕/공조 시:   
 <div align="center">$$
 \dot{Q}_{d,in} = \sum \left( \frac{ Q_{h,outg} }{ t_{\text{Betrieb,K}} - t_{w,100\%} } \cdot d_{\text{Nutz,mth}} \right)
-$$</div>
+$$ <span class="eq-number">(1.4.6.1-8)</span>
+</div>
 
 ---    
 
@@ -1766,13 +1803,14 @@ $$</div>
 - **대기 손실 성능 (\( \dot{Q}_{B,h} \))**:   
 <div align="center">$$
 \dot{Q}_{B,h} = q_{B,θ} \cdot \left( \frac{ \dot{Q}_N }{ \eta_{K,100\%} } \right) \cdot f_{Hs/Hi}
-$$</div>
+$$ <span class="eq-number">(1.4.6.1-9)</span>
+</div>
 
 - \(q_{B,θ}\):
 <div align="center">
 $$
 q_{B,θ} = q_{B,70} \cdot \frac{ \theta_{HK,m} - \theta_i }{ 70 - 20 }
-$$
+$$ <span class="eq-number">(1.4.6.1-10)</span>
 </div>
 
 <div style="
@@ -1807,24 +1845,28 @@ $$
 
 <div align="center">$$
 \dot{Q}_{V,g,100\%} = \frac{ f_{Hs/Hi} - \eta_{K,100\%,Betrieb} }{ \eta_{K,100\%,Betrieb} } \cdot \dot{Q}_N
-$$</div>
+$$ <span class="eq-number">(1.4.6.1-11)</span>
+</div>
 
 - **부분 부하 손실 성능 (\(dot{Q}_{V,g,pl\%}\))**: 보일러가 부분 부하 운전할 때의 손실 성능  
 <div align="center">$$
 \dot{Q}_{V,g,pl} = \frac{ f_{Hs/Hi} - \eta_{K,pl\%,Betrieb} }{ \eta_{K,pl\%,Betrieb} } \cdot \beta_{K,pl} \cdot \dot{Q}_N
-$$</div>
+$$ <span class="eq-number">(1.4.6.1-12)</span>
+</div>
 
 - \(\eta_{K,100\%,\text{Betrieb}}\):
 <div align="center">
 $$
 \eta_{K,100\%,\text{Betrieb}} = \eta_{K,100\%} + G \cdot (\theta_{g,\text{test},100} - \theta_{HK,m})
-$$</div>
+$$ <span class="eq-number">(1.4.6.1-13)</span>
+</div>
 
 - \(\eta_{K,\text{pl}\%,\text{Betrieb}}\):
 <div align="center">
 $$
 \eta_{K,\text{pl}\%,\text{Betrieb}} = \eta_{K,\text{pl}\%} + H \cdot (\theta_{g,\text{test},\text{pl}} - \theta_{HK,m})
-$$</div>
+$$ <span class="eq-number">(1.4.6.1-14)</span>
+</div>
 
 
 
@@ -1850,7 +1892,7 @@ $$</div>
   </style>
 </head>
 
-<h5>&lt;표. 보일러 온도&gt;</h5>
+<h5>&lt;Table 1.4.6.1-15. 보일러 온도&gt;</h5>
 
 <table>
   <tr>
@@ -1901,7 +1943,7 @@ $$</div>
     }
   </style>
 </head>
-<h5>&lt;표. 온도 보정계수&gt;</h5>
+<h5>&lt;Table 1.4.6.1-16. 온도 보정계수&gt;</h5>
 
 <table>
   <tr>
@@ -1937,7 +1979,8 @@ $$</div>
 - **존으로의 비제어적 열 유입 (\( Q_{I,h,g} \))**: 보일러의 열손실은 보일러가 설치된 존의 비제어적 열획득으로 계산된다. 
 <div align="center">$$
 Q_{I,h,g} = q_{s,θ} \cdot \frac{ \dot{Q}_N }{ \eta_{K,100\%} } \cdot (t_{h,rL,T} - t_{w,100\%}) \cdot d_{h,rB}
-$$</div>
+$$ <span class="eq-number">(1.4.6.1-17)</span>
+</div>
 
 <div style="
   display: flex;
@@ -1971,7 +2014,8 @@ $$</div>
 - **보조에너지 (\( Q_{h,g,aux} \))**: 보일러의 보조에너지는 급수-환수 온도 차 20 ℃ 및 평균 부분부하 \(β_{h,i}\) 일 때 유량을 기준으로 최대 부하/부분 부하/대기모드에서 측정된 보일러의 보조 동력(\(P_{aux}\))을 기반으로 산정한다. 
 <div align="center">$$
 Q_{h,g,aux} = \sum \left( P_{h,g,aux,i} \cdot \left( t_{h,rL} - t_{w,100\%} \cdot \frac{ d_{\text{mth}} \cdot d_{\text{Nutz,a}} }{365} \right) + P_{aux,SB} \cdot (24 \cdot d_{\text{mth}} - t_{h,rL}) \right)
-$$</div>
+$$ <span class="eq-number">(1.4.6.1-18)</span>
+</div>
 
 <div style="
   display: flex;
@@ -2005,7 +2049,8 @@ $$</div>
 - \( 0 < \beta_{h,i} \leq \beta_{K,pl} \):
 <div align="center">$$
 P_{h,g,\text{aux},i} = \left( \frac{ \beta_{h,i} }{ \beta_{K,pl} } \right) \cdot (P_{\text{aux,pl},i} - P_{\text{aux,SB}}) + P_{\text{aux,SB}}
-$$</div>
+$$ <span class="eq-number">(1.4.6.1-19)</span>
+</div>
 
 <div style="
   display: flex;
@@ -2038,7 +2083,8 @@ $$</div>
 - \( \beta_{K,pl} < \beta_{h,i} < 1.0 \):
 <div align="center">$$
 P_{h,g,\text{aux},i} = \frac{ \beta_{h,i} - \beta_{K,pl} }{ 1 - \beta_{K,pl} } \cdot (P_{\text{aux,100}} - P_{\text{aux,pl}}) + P_{\text{aux,pl}}
-$$</div>
+$$ <span class="eq-number">(1.4.6.1-20)</span>
+</div>
 
 
 
@@ -2047,80 +2093,95 @@ $$</div>
 - 표준-난방 보일러   
    - 가스 보일러:   
 <div align="center">$$
-P_{aux,100} = P_{aux,p} = \frac{0.148 \cdot \dot{Q}_N + 40}{1000}$$</div>
+P_{aux,100} = P_{aux,p} = \frac{0.148 \cdot \dot{Q}_N + 40}{1000}$$ <span class="eq-number">(1.4.6.1-21)</span>
+</div>
 
    - 분무식 보일러 (가스/기름):   
 <div align="center">$$
-P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48}$$</div>
+P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48}$$ <span class="eq-number">(1.4.6.1-22)</span>
+</div>
 
 <div align="center">$$
-P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}$$</div>
+P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}$$ <span class="eq-number">(1.4.6.1-23)</span>
+</div>
 
 - 저온 보일러   
 
    - 가스 보일러:   
 <div align="center">$$
-P_{aux,100} = P_{aux,pl} = \frac{0.148 \cdot \dot{Q}_N + 40}{1000}$$</div>
+P_{aux,100} = P_{aux,pl} = \frac{0.148 \cdot \dot{Q}_N + 40}{1000}$$ <span class="eq-number">(1.4.6.1-24)</span>
+</div>
 
    - 분무식 보일러 (가스/기름):   
 <div align="center">$$
-P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48}$$</div>
+P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48}$$ <span class="eq-number">(1.4.6.1-25)</span>
+</div>
 
 <div align="center">$$
-P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}$$</div>
+P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}$$ <span class="eq-number">(1.4.6.1-26)</span>
+</div>
 
 - 콘덴싱 보일러:   
-<div align="center">$$P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48}$$</div>  
+<div align="center">$$P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48}$$ <span class="eq-number">(1.4.6.1-27)</span>
+</div>  
 
-<div align="center">$$P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}$$</div>
+<div align="center">$$P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}$$ <span class="eq-number">(1.4.6.1-28)</span>
+</div>
 
 
 ---    
 
-### 3.1.4.7. 개별 열 생산기기
+### 1.4.7. 개별 열 생산기기
 
-#### 3.1.4.7.1. 실내 가스히터   
+#### 1.4.7.1. 실내 가스히터   
 - **굴뚝 연계식 (1985년 이전)**:   
 <div align="center">$$
 Q_{h,f} = 1.4 \cdot Q_{h,b} \quad \text{월간 (1985년 이전)}
-$$</div>  
+$$ <span class="eq-number">(1.4.7.1-1)</span>
+</div>  
 
 <div align="center">$$
 Q_{h,f} = 1.34 \cdot Q_{h,b} \quad \text{월간 (1985년 이후)}
-$$</div>   
+$$ <span class="eq-number">(1.4.7.1-2)</span>
+</div>   
 
 
 - **외벽-기기**   
 <div align="center">$$
 Q_{h,f} = 1.47 \cdot Q_{h,b} \quad \text{월간 (1985년 이전)}
-$$</div>   
+$$ <span class="eq-number">(1.4.7.1-3)</span>
+</div>   
 
 <div align="center">$$
 Q_{h,f} = 1.40 \cdot Q_{h,b} \quad \text{월간 (1985년 이후)}
-$$</div>   
+$$ <span class="eq-number">(1.4.7.1-4)</span>
+</div>   
 
 ---    
 
-#### 3.1.4.7.2. 증발버너 기름연소난로   
+#### 1.4.7.2. 증발버너 기름연소난로   
 <div align="center">$$
 Q_{h,f} = 1.4 \cdot Q_{h,b} \quad \text{월간 (1985년 이전)}
-$$</div>   
+$$ <span class="eq-number">(1.4.7.2-1)</span>
+</div>   
 
 <div align="center">$$
 Q_{h,f} = 1.34 \cdot Q_{h,b} \quad \text{월간 (1985년 이후)}
-$$</div>   
+$$ <span class="eq-number">(1.4.7.2-2)</span>
+</div>   
 
 ---    
 
-#### 3.1.4.7.3. 홀 난방기   
+#### 1.4.7.3. 홀 난방기   
 - **복사열 파이프, 개별 온풍기**:   
 <div align="center">$$
 Q_{h,f} = (1 - f) \cdot Q_h
-$$</div>
+$$ <span class="eq-number">(1.4.7.3-1)</span>
+</div>
 
 <center>
-     <div><strong>이용 효율</strong></div>
-     <img src="../../_tables/2.1_2.png" style="max-width: 80%;" alt="이용 효율">
+     <div><strong>Table 1.4.7.3-2. 이용 효율</strong></div>
+     <img src="../../_tables/1.4.7.3_2.png" style="max-width: 80%;" alt="이용 효율">
 </center>
 
 
@@ -2128,37 +2189,43 @@ $$</div>
 - **복사열 히터 열손실 (\( Q_{h,g} \))**:   
 <div align="center">$$
 Q_{h,g} = V_{\text{abluft,spez}} \cdot C_{p,\text{Abluft}} \cdot (\theta_{\text{Abluft}} - \theta_{\text{Außen}}) \cdot t_{h,rL}
-$$</div>
+$$ <span class="eq-number">(1.4.7.3-3)</span>
+</div>
 
 - **복사열 히터의 보조에너지 (\( Q_{h,g,aux} \))**: 벽 또는 천정에 설치된 팬의 전력 소비량   
 <div align="center">$$
 Q_{h,g,aux} = 0.0006 \cdot Q_{h,b}
-$$</div>
+$$ <span class="eq-number">(1.4.7.3-4)</span>
+</div>
 
 ---         
 
-#### 3.1.4.7.4. 전기 보일러   
+#### 1.4.7.4. 전기 보일러   
 **분리 생산식 저장:**   
 <div align="center">$$
 Q_{h,s} + Q_{h,g} = 0.11 \cdot Q_{h,\text{outg}} \quad \text{월간}
-$$</div>   
+$$ <span class="eq-number">(1.4.7.4-1)</span>
+</div>   
 
 **내부 생산식 저장:**   
 <div align="center">$$
 Q_{h,s} + Q_{h,g} = 0.09 \cdot Q_{h,\text{outg}} \quad \text{월간}
-$$</div>   
+$$ <span class="eq-number">(1.4.7.4-2)</span>
+</div>   
 
 ---         
 
-#### 3.1.4.7.5. 원/근거리 지역난방   
+#### 1.4.7.5. 원/근거리 지역난방   
 **열 손실 (\( Q_{h,g} \))**:   
 <div align="center">$$
 Q_{h,g} = H_{DS} \cdot (\theta_{DS} - \theta_i)
-$$</div>
+$$ <span class="eq-number">(1.4.7.5-1)</span>
+</div>
 
 <div align="center">$$
 H_{DS} = B_{DS} \cdot \Phi_{DS}^{1/3}
-$$</div>
+$$ <span class="eq-number">(1.4.7.5-2)</span>
+</div>
 
 <div style="
   display: flex;
@@ -2190,7 +2257,8 @@ $$</div>
 
 <div align="center">$$
 \theta_{DS} = D_{DS} \cdot \theta_{\text{prim,DS}} + (1 - D_{DS}) \cdot \theta_{\text{sek,DS}}
-$$</div>
+$$ <span class="eq-number">(1.4.7.5-3)</span>
+</div>
 
 <div style="
   display: flex;
@@ -2223,12 +2291,12 @@ $$</div>
 </div> 
 
 <center>
-     <div><strong>\(D_{DS}\)</strong></div>
-     <img src="../../_tables/2.1_3.png" style="max-width: 80%;" alt="\(D_{DS}\)">
+     <div><strong>Table 1.4.7.5-4. \(D_{DS}\)</strong></div>
+     <img src="../../_tables/1.4.7.5_4.png" style="max-width: 80%;" alt="\(D_{DS}\)">
 </center>
 <center>
-     <div><strong>\(B_{DS}\)</strong></div>
-     <img src="../../_tables/2.1_4.png" style="max-width: 80%;" alt="\(B_{DS}\)">
+     <div><strong>Table 1.4.7.5-5. \(B_{DS}\)</strong></div>
+     <img src="../../_tables/1.4.7.5_5.png" style="max-width: 80%;" alt="\(B_{DS}\)">
 </center>
 
 
@@ -2236,36 +2304,40 @@ $$</div>
 지역난방 열이 건물로 중계되는 과정의 보조에너지는 무시하며, 난방 시스템의 공급온도제어가 기계실에서 이루어질 시, 이에 대한 보조에너지로 월간 10 kWh를 적용합니다.   
 
 
-## 3.1.5. HVAC 가열 유닛(Heating coil) 에너지 요구량 (Energy need)  
+## 1.5. HVAC 가열 유닛(Heating coil) 에너지 요구량 (Energy need)  
 공조시스템의 가열유닛에 필요한 에너지 요구량 (\( Q_h^*,b \))은 #절에서 계산된 공조 가열 에너지 요구량 (\( Q_{vh,b} \))에 전달 및 분배 과정에서 발생하는 손실을 더하여 산정됩니다.
 
 <div align="center">$$
 Q_h^*,b = Q_{vh,b} + Q_{vh,ce} + Q_{vh,d}
-$$</div>
+$$  <span class="eq-number">(1.5-1)</span>
+</div>
 
 ---
 
-### 3.1.5.1. 전달 과정 열손실 (\( Q_{vh,ce} \))  
+### 1.5.1. 전달 과정 열손실 (\( Q_{vh,ce} \))  
 공조시스템에서 존으로 열을 전달하는 과정의 손실이며, 별도의 기준이 없는 경우 전달 효율 (\( \eta_{vh,ce} \))은 1로 가정합니다.
 
 <div align="center">$$
 Q_{vh,ce} = (1 - \eta_{vh,ce}) \cdot Q_{vh,b}
-$$</div>
+$$ <span class="eq-number">(1.5.1-1)</span>
+</div>
 
 ---
 
-### 3.1.5.2. 분배 과정에서의 손실 (\( Q_{vh,d} \))  
+### 1.5.2. 분배 과정에서의 손실 (\( Q_{vh,d} \))  
 **건물 내부 배관**: 건물 전체 에너지 균형 관점에서 손실을 0으로 고려합니다.  
 <div align="center">$$
 Q_{vh,d} = 0
-$$</div>
+$$ <span class="eq-number">(1.5.2-1)</span>
+</div>
 
 **건물 외부 배관**: 외부에 설치된 배관의 표면적 (\( A_{K,A} \))과  
 가동 시간 (\( t_{h^*,\text{op,mth}} \))을 기준으로 열손실을 계산합니다.
 
 <div align="center">$$
 Q_{vh,d} = f_{vh,d} \cdot A_{K,A} \cdot \frac{t_{h^*,\text{op,mth}}}{1000}
-$$</div>
+$$ <span class="eq-number">(1.5.2-2)</span>
+</div>
 
 <div style="
   display: flex;
@@ -2299,43 +2371,48 @@ $$</div>
 
 ---
 
-### 3.1.5.3. 누기율  
+### 1.5.3. 누기율  
 급기 온도와 실내 온도의 차이가 10K 미만일 경우, 덕트 누기에 의한 열손실은 무시합니다.  
 급기와 실내 온도의 차이가 10K를 초과하는 경우, 열손실의 개별 계산과 증명이 필요합니다.
 
 ---
 
-### 3.1.5.4. 온수 시스템 온도  
+### 1.5.4. 온수 시스템 온도  
 공조기 가열유닛의 예열 및 재열을 위한 온수 공급 온도는 설계상 월별 평균값을 확정해야 합니다.   
 설정값이 없는 경우, **70/55℃**를 표준값으로 사용합니다.
 
 ---
 
-### 3.1.5.5. 가열유닛 운전시간 (\( t_{h^*,\text{op,mth}} \))  
+### 1.5.5. 가열유닛 운전시간 (\( t_{h^*,\text{op,mth}} \))  
 월별 운전시간은 연간 운전시간 (\( t_{H,r} \))을 월별 부하율 \(( b_{vh,\text{mth}} / b_{vh,a} )\)에 따라 배분하여 계산합니다.
 
 <div align="center">$$
 t_{h^*,\text{op,mth}} = t_{H,r} \cdot \left( \frac{b_{vh,\text{mth}}}{b_{vh,a}} \right)
-$$</div>
+$$ <span class="eq-number">(1.5.5-1)</span>
+</div>
 
 - \( t_{h^*,\text{op,mth}} > t_{\text{RLT-Betrieb,mth}} \)일 경우:  
 <div align="center">$$
 t_{h^*,\text{op,mth}} = t_{\text{RLT-Betrieb,mth}}
-$$</div>
+$$ <span class="eq-number">(1.5.5-2)</span>
+</div>
 
 - \( t_{h^*,\text{op,mth}} < 0.1 \cdot t_{\text{RLT-Betrieb,mth}} \)일 경우:  
 <div align="center">$$
 t_{h^*,\text{op,mth}} = 0.1 \cdot t_{\text{RLT-Betrieb,mth}}
-$$</div>
+$$ <span class="eq-number">(1.5.5-3)</span>
+</div>
 
 ---
 
 - \( b_{vh,\text{mth}}\)
 <div align="center">$$
 b_{vh,\text{mth}} = \frac{Q_{vh,b}}{\dot{Q}_{H,\text{max}}}
-$$</div>
+$$ <span class="eq-number">(1.5.5-4)</span>
+</div>
 
 - \( b_{vh,a}\)
 <div align="center">$$
 b_{vh,a} = \sum_{1}^{12} b_{vh,\text{mth}}
-$$</div>
+$$ <span class="eq-number">(1.5.5-5)</span>
+</div>
