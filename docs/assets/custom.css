@@ -409,3 +409,43 @@ svg[id^="mermaid-"] .edgeLabel tspan {
   margin-left: auto !important;
   margin-right: auto !important;
 }
+/* ============================================
+   ✅ Nomenclature 전용 표 스타일 (왼쪽정렬 + auto width + 여백)
+============================================ */
+.md-typeset table.nomenclature,
+.md-typeset table.nomenclature thead th,
+.md-typeset table.nomenclature tbody td {
+  text-align: left !important;       /* 왼쪽 정렬 */
+  vertical-align: top !important;    /* 위쪽 정렬 */
+  border: none !important;           /* 테두리 제거 */
+}
+
+/* 표 전체 레이아웃 */
+.md-typeset table.nomenclature {
+  width: auto !important;            /* 내용에 맞춰 폭 조정 (꽉 차지 않음) */
+  table-layout: auto !important;
+  border-collapse: collapse !important;
+  margin: 0.8em 2em 1.2em 2em !important; /* 위·좌·아래·우 여백 */
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  background: transparent !important;
+}
+
+/* 셀 내부 여백 (텍스트 주위 공간) */
+.md-typeset table.nomenclature th,
+.md-typeset table.nomenclature td {
+  padding: 6px 30px !important;     /* ← 셀 내부 여백을 늘림 */
+  line-height: 1.5 !important;
+  word-break: break-word;
+  white-space: normal;
+}
+
+/* 수식(KaTeX / MathJax)도 왼쪽 정렬 */
+.md-typeset table.nomenclature .katex-display,
+.md-typeset table.nomenclature .MathJax_Display,
+.md-typeset table.nomenclature .arithmatex {
+  text-align: left !important;
+  margin-left: 0 !important;
+}
+
