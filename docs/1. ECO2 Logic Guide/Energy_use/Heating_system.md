@@ -4,7 +4,9 @@
 
 ### Symbols
 <table class="nomenclature">
-  <thead><tr><th>Symbol</th><th>Meaning</th><th>Unit</th></tr></thead>
+  <thead style="background:#f5f7fa;">
+    <tr><th>Symbol</th><th>Meaning</th><th>Unit</th></tr>
+  </thead>
   <tbody>
     <tr><td>\(A_{C}\)</td><td>집열면적 (Collector area)</td><td>m²</td></tr>
     <tr><td>\(b\)</td><td>계수 (Coefficient)</td><td>-</td></tr>
@@ -43,9 +45,12 @@
   </tbody>
 </table>
 
+
 ### Subscripts
 <table class="nomenclature">
-  <thead><tr><th>Subscript</th><th>Meaning</th><th>Subscript</th><th>Meaning</th></tr></thead>
+  <thead style="background:#f5f7fa;">
+    <tr><th>Subscript</th><th>Meaning</th><th>Subscript</th><th>Meaning</th></tr>
+  </thead>
   <tbody>
     <tr><td>a</td><td>연간, 년 (Annual, Year)</td><td>C</td><td>실내온도제어 (Indoor temperature control)</td></tr>
     <tr><td>A</td><td>연결, 해석 (Connection, Analysis)</td><td>ce</td><td>전달 (Transfer)</td></tr>
@@ -90,6 +95,11 @@
   </tbody>
 </table>
 
+
+
+---  
+
+
 ## 1.1. 개요
 
 본 절은 난방 시스템의 각 단계(전달, 분배, 저장, 생산)에서 산출된 손실 (loss), 소요량 (energy use), 보조에너지 (auxiliary energy)를 종합하여, **최종적으로 열 생산기기(보일러, 히트펌프 등)가 공급해야 하는 에너지 소요량**을 산정하는 방법을 기술합니다.   
@@ -103,7 +113,7 @@
 열 생산기기의 에너지 소요량 산정을 위해 건물의 난방 에너지 요구량(\( Q_{h,b} \))에 각 과정에서 발생하는 모든 열손실을 더하여 열 생산기기가 실제로 감당해야 할 열 에너지 공급량(\( Q_{h,outg} \))을 결정합니다.      
 또한, 이 과정에서 소비되는 모든 보조에너지 공급량, 신재생에너지 시스템에 의한 열획득도 합산합니다.   
 
----    
+  
 
 ## 1.2. 생산기기 열 에너지 공급량(heat output)
 

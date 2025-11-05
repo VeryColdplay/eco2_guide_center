@@ -4,7 +4,9 @@
 
 ### Symbols
 <table class="nomenclature">
-  <thead><tr><th>Symbol</th><th>Meaning</th><th>Unit</th></tr></thead>
+  <thead style="background:#f5f7fa;">
+    <tr><th>Symbol</th><th>Meaning</th><th>Unit</th></tr>
+  </thead>
   <tbody>
     <tr><td>Q</td><td>에너지 (Energy)</td><td>kWh</td></tr>
     <tr><td>\(\dot{Q}\)</td><td>성능, 출력 (Power, Output)</td><td>kW</td></tr>
@@ -29,9 +31,12 @@
   </tbody>
 </table>
 
+
 ### Subscripts
 <table class="nomenclature">
-  <thead><tr><th>Subscript</th><th>Meaning</th><th>Subscript</th><th>Meaning</th></tr></thead>
+  <thead style="background:#f5f7fa;">
+    <tr><th>Subscript</th><th>Meaning</th><th>Subscript</th><th>Meaning</th></tr>
+  </thead>
   <tbody>
     <tr><td>w</td><td>급탕 (Hot water)</td><td>f</td><td>2차 에너지, 최종 (Final energy)</td></tr>
     <tr><td>outg</td><td>공급량 (Output)</td><td>g</td><td>생산 (Generation)</td></tr>
@@ -56,6 +61,10 @@
 </table>
 
 
+
+---
+
+
 급탕 에너지소요량 \(Q_{w,f}\)는 급탕 열 생산기기의 열 공급량(\(Q_{w,outg}\)), 생산과정에서 발생하는 (월별) 열손실(\(Q_{w,g}\)) 및 재생열에너지(태양열 및 주변 열)에 의해 다음과 같이 계산됩니다:
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
@@ -69,7 +78,7 @@ Where,
 \(Q_{w,reg}\): 재생열에너지(태양열 및 주변 열)  
 
 
----
+
 
 ## 3.1. 급탕 열 생산기기의 열 공급량
 
@@ -134,111 +143,55 @@ Where,
 
 배관의 열관류율 \(U_{i}\)는 사양에 근거하여 계산되며, 사양을 모르는 경우 다음 표에 따라 적용합니다.
 
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>배관의 열관류율 U_i</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      font-family: "Malgun Gothic", sans-serif;
-      font-size: 14px;
-      text-align: center;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 6px;
-    }
-    caption {
-      caption-side: top; /* 제목을 표 위로 배치 */
-      font-weight: bold;
-      font-size: 16px;
-      margin-bottom: 8px;
-    }
-  </style>
-</head>
-<body>
-  <table>
-    <caption>Table 3.1.2-4. 배관의 열관류율 U<sub>i</sub></caption>
-    <tr>
-      <th rowspan="2">건물 준공연도</th>
-      <th rowspan="1">분배</th>
-      <th colspan="2">외부에 설치된 수직배관</th>
-      <th colspan="2">내부에 설치된 수직배관</th>
-    </tr>
-    <tr>
-      <th>V</th>
-      <th>S</th>
-      <th>SL</th>
-      <th>S</th>
-      <th>SL</th>
-    </tr>
-    <tr>
-      <td>1995 이후</td>
-      <td>0.200</td>
-      <td>0.255</td>
-      <td>0.255</td>
-      <td>0.255</td>
-      <td>0.255</td>
-    </tr>
-    <tr>
-      <td>1980 ~ 1995</td>
-      <td>0.200</td>
-      <td>0.400</td>
-      <td>0.400</td>
-      <td>0.300</td>
-      <td>0.400</td>
-    </tr>
-    <tr>
-      <td>1980 이전</td>
-      <td>0.400</td>
-      <td>0.400</td>
-      <td>0.400</td>
-      <td>0.400</td>
-      <td>0.400</td>
-    </tr>
-  </table>
-</body>
-</html>
+<table>
+  <caption>Table 3.1.2-4. 배관의 열관류율 U<sub>i</sub></caption>
+  <tr>
+    <th rowspan="2">건물 준공연도</th>
+    <th rowspan="1">분배</th>
+    <th colspan="2">외부에 설치된 수직배관</th>
+    <th colspan="2">내부에 설치된 수직배관</th>
+  </tr>
+  <tr>
+    <th>V</th>
+    <th>S</th>
+    <th>SL</th>
+    <th>S</th>
+    <th>SL</th>
+  </tr>
+  <tr>
+    <td>1995 이후</td>
+    <td>0.200</td>
+    <td>0.255</td>
+    <td>0.255</td>
+    <td>0.255</td>
+    <td>0.255</td>
+  </tr>
+  <tr>
+    <td>1980 ~ 1995</td>
+    <td>0.200</td>
+    <td>0.400</td>
+    <td>0.400</td>
+    <td>0.300</td>
+    <td>0.400</td>
+  </tr>
+  <tr>
+    <td>1980 이전</td>
+    <td>0.400</td>
+    <td>0.400</td>
+    <td>0.400</td>
+    <td>0.400</td>
+    <td>0.400</td>
+  </tr>
+</table>
 
 
 구간 \(i\) 배관 길이 \(L_{i}\)는 세부 도면을 바탕으로 산정합니다.  
 
 주변온도 \(\vartheta_{i}\)는 용도프로필에서 설정된 값이 적용되며, 만일 주어진 값이 없다면 다음 표를 참고하여 채택합니다.
 
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>주변온도 표</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      font-family: "Malgun Gothic", sans-serif;
-      font-size: 14px;
-      text-align: center;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 6px;
-    }
-    td.left {
-      text-align: left;
-    }
-    caption {
-      caption-side: top; /* 표 위쪽에 제목 표시 */
-      font-weight: bold;
-      font-size: 16px;
-      margin-bottom: 8px;
-    }
-  </style>
-</head>
-<body>
-  <table>
-    <caption>Table 3.1.2-5. 주변온도 기준값</caption>
+<table>
+  <caption>Table 3.1.2-5. 주변온도 기준값</caption>
+  <thead>
     <tr>
       <th>표준치</th>
       <th>표기</th>
@@ -247,27 +200,30 @@ Where,
       <th>S</th>
       <th>SL</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>주변온도</td>
-      <td><i>\vartheta<sub>i</sub></i></td>
+      <td>\(\vartheta_i\)</td>
       <td>℃</td>
       <td colspan="3">제3장2절4항 참조</td>
     </tr>
     <tr>
       <td class="left">난방주기가 아닐 경우<br>평균 주변온도</td>
-      <td><i>\vartheta<sub>i</sub></i></td>
+      <td>\(\vartheta_i\)</td>
       <td>℃</td>
       <td colspan="3">22℃</td>
     </tr>
     <tr>
       <td>평균 주변온도</td>
-      <td><i>\vartheta<sub>i</sub></i></td>
+      <td>\(\vartheta_i\)</td>
       <td>℃</td>
       <td colspan="3">비 난방 존 13℃<br>난방 존 20℃</td>
     </tr>
-  </table>
-</body>
-</html>
+  </tbody>
+</table>
+
+
 
 
 
@@ -395,42 +351,27 @@ Where,
     <tr>
       <td>1995-</td>
       <td>1,000ℓ 이상</td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 0.39 \cdot V^{0.35} + 0.5 \)
-</a>
-</td>
+      <td>\( q_{B,S} = 0.39 \cdot V^{0.35} + 0.5 \)</td>
     </tr>
     <tr>
       <td></td>
       <td>1,000ℓ 이하</td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 0.8 + 0.02 \cdot V^{0.77} \)
-</a>
-</td>
+      <td>\( q_{B,S} = 0.8 + 0.02 \cdot V^{0.77} \)</td>
     </tr>
     <tr>
       <td>1987-1994</td>
       <td></td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 0.4 + 0.21 \cdot V^{0.4} \)
-</a>
-</td>
+      <td>\( q_{B,S} = 0.4 + 0.21 \cdot V^{0.4} \)</td>
     </tr>
     <tr>
       <td>1978-1986</td>
       <td></td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 0.4 + 0.23 \cdot V^{0.4} \)
-</a>
-</td>
+      <td>\( q_{B,S} = 0.4 + 0.23 \cdot V^{0.4} \)</td>
     </tr>
     <tr>
       <td>-1977</td>
       <td></td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 0.4 + 0.27 \cdot V^{0.5} \)
-</a>
-</td>
+      <td>\( q_{B,S} = 0.4 + 0.27 \cdot V^{0.5} \)</td>
     </tr>
   </tbody>
 </table>
@@ -515,24 +456,15 @@ Where,
   <tbody>
     <tr>
       <td>1995-</td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 0.29 + 0.019 \cdot V^{0.8} \)
-</a>
-</td>
+      <td>\( q_{B,S} = 0.29 + 0.019 \cdot V^{0.8} \)</td>
     </tr>
     <tr>
       <td>1989-1994</td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 1.25 \cdot (0.29 + 0.019 \cdot V^{0.8}) \)
-</a>
-</td>
+      <td>\( q_{B,S} = 1.25 \cdot (0.29 + 0.019 \cdot V^{0.8}) \)</td>
     </tr>
     <tr>
       <td>-1988</td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 1.4 \cdot (0.29 + 0.019 \cdot V^{0.8}) \)
-</a>
-</td>
+      <td>\( q_{B,S} = 1.4 \cdot (0.29 + 0.019 \cdot V^{0.8}) \)</td>
     </tr>
   </tbody>
 </table>
@@ -556,18 +488,12 @@ Where, V: 축열조 용량
     <tr>
       <td>심야</td>
       <td>주로 심야에 가동</td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( V_s = \frac{1.42 \cdot Q_{w,b,d} \cdot f_N \cdot 860}{(\vartheta_{w,m} - \vartheta_k) \cdot \eta_s} \)
-</a>
-</td>
+      <td>\( V_s = \frac{1.42 \cdot Q_{w,b,d} \cdot f_N \cdot 860}{(\vartheta_{w,m} - \vartheta_k) \cdot \eta_s} \)</td>
     </tr>
     <tr>
       <td>주간</td>
       <td>지속적 재충전 가능</td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( V_s = \frac{0.67 \cdot Q_{w,b,d} \cdot f_N \cdot 860}{(\vartheta_{w,m} - \vartheta_k) \cdot \eta_s} \)
-</a>
-</td>
+      <td>\( V_s = \frac{0.67 \cdot Q_{w,b,d} \cdot f_N \cdot 860}{(\vartheta_{w,m} - \vartheta_k) \cdot \eta_s} \)</td>
     </tr>
   </tbody>
 </table>
@@ -620,24 +546,15 @@ Where,
   <tbody>
       <tr>
       <td>1995-</td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 2.0 + 0.033 \cdot V^{1.1} \)
-</a>
-</td>
+      <td>\( q_{B,S} = 2.0 + 0.033 \cdot V^{1.1} \)</td>
     </tr>
     <tr>
       <td>1985-1994</td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 2.0 + 0.033 \cdot V^{1.1} \)
-</a>
-</td>
+      <td>\( q_{B,S} = 2.0 + 0.033 \cdot V^{1.1} \)</td>
     </tr>
     <tr>
       <td>-1984</td>
-      <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = 1.4 \cdot (2.0 + 0.033 \cdot V^{1.1}) \)
-</a>
-</td>
+      <td>\( q_{B,S} = 1.4 \cdot (2.0 + 0.033 \cdot V^{1.1}) \)</td>
     </tr>
   </tbody>
 </table>
@@ -712,28 +629,6 @@ A, B: 효율계수
 이 식은 정격성능이 400kW인 경우까지 유효하며, 정격성능 \(\dot{Q}_N\)이 400kW를 초과할 경우 \(\dot{Q}_N\)=400kW로 적용합니다.  
 
 효율계수 A, B는 다음 표와 같습니다.  
-
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>보일러 계수표</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 85%;
-      font-family: "Malgun Gothic", sans-serif;
-      font-size: 14px;
-      text-align: center;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 6px 10px;
-      vertical-align: middle;
-    }
-  </style>
-</head>
-<body>
 
 <table>
 <caption>Table 3.2-7. 효율계수 A, B</caption>
@@ -833,9 +728,6 @@ A, B: 효율계수
     <td>1</td>
   </tr>
 </table>
-
-</body>
-</html>
 
 
 정격성능 \(\dot{Q}_N\)은 동시에 가동되는 모든 보일러성능의 합이거나 순차가동에서 최대 보일러성능 중 큰 값으로 정합니다. 즉:  
@@ -968,30 +860,6 @@ Where,
 \(Φ_{DS}\): 지역난방기계실 성능
 
 \(B_{DS}\)의 값은 다음 표를 참조합니다.  
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>지역난방기계실 단열등급 표</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 80%;
-      font-family: "Malgun Gothic", sans-serif;
-      font-size: 14px;
-      text-align: center;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 6px 10px;
-      vertical-align: middle;
-    }
-    td.left {
-      text-align: left;
-    }
-  </style>
-</head>
-<body>
 
 <table>
 <caption>Table 3.2-20. \(B_{DS}\)</caption>
@@ -1010,9 +878,6 @@ Where,
   </tr>
 </table>
 
-</body>
-</html>
-
 
 \(\vartheta_{DS}\)는 다음을 따라 계산됩니다:  
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
@@ -1028,43 +893,30 @@ Where,
 - \(\vartheta_{sek,DS}\)는 지역난방 2차 온도로 40℃ 또는 50℃ 값을 활용합니다.
 
 \(D_{DS}\)의 값은 \(v_{prim,DS}\)에 따라 다음 표를 참조합니다.  
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>지역난방기계실 해석 온도</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 70%;
-      font-family: "Malgun Gothic", sans-serif;
-      font-size: 14px;
-      text-align: center;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 6px 10px;
-    }
-  </style>
-</head>
-<body>
 
 <table>
-<caption>Table 3.2-22. \(D_{DS}\)</caption>
-  <tr>
-    <th rowspan="1">지역난방기계실 종류</th>
-    <th colspan="1">1차 온도 (해석)<br><i>\vartheta<sub>P,DS</sub> (℃)</i></th>
-    <th rowspan="1"><i>D<sub>DS</sub></i></th>
-  </tr>
-  <tr>
-    <td>중온수<br>고온수</td>
-    <td>105<br>150</td>
-    <td>0.6<br>0.4</td>
-  </tr>
+  <caption>Table 3.2-22. \(D_{DS}\)</caption>
+  <thead>
+    <tr>
+      <th>지역난방기계실 종류</th>
+      <th>1차 온도 (해석)<br>\(\vartheta_{P,DS}\) (℃)</th>
+      <th>\(D_{DS}\)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>중온수</td>
+      <td>105</td>
+      <td>0.6</td>
+    </tr>
+    <tr>
+      <td>고온수</td>
+      <td>150</td>
+      <td>0.4</td>
+    </tr>
+  </tbody>
 </table>
 
-</body>
-</html>
 
 
 ---

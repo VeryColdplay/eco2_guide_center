@@ -4,7 +4,9 @@
 
 ### Symbols
 <table class="nomenclature">
-  <thead><tr><th>Symbol</th><th>Meaning</th><th>Unit</th></tr></thead>
+  <thead style="background:#f5f7fa;">
+    <tr><th>Symbol</th><th>Meaning</th><th>Unit</th></tr>
+  </thead>
   <tbody>
     <tr><td>\(A_{K,A}\)</td><td>열적 외피 외부 설치 표면적 (Surface area outside thermal envelope)</td><td>m²</td></tr>
     <tr><td>a</td><td>밸브 authority (Valve authority)</td><td>-</td></tr>
@@ -42,9 +44,12 @@
   </tbody>
 </table>
 
+
 ### Subscripts
 <table class="nomenclature">
-  <thead><tr><th>Subscript</th><th>Meaning</th><th>Subscript</th><th>Meaning</th></tr></thead>
+  <thead style="background:#f5f7fa;">
+    <tr><th>Subscript</th><th>Meaning</th><th>Subscript</th><th>Meaning</th></tr>
+  </thead>
   <tbody>
     <tr><td>a</td><td>연간 (Annual)</td><td>Abgl</td><td>평형 (Balancing)</td></tr>
     <tr><td>Adap</td><td>적응 (Adaptation)</td><td>av</td><td>평균 (Average)</td></tr>
@@ -67,6 +72,7 @@
     <tr><td>x</td><td>절대 습도 (Humidity ratio)</td><td>Z</td><td>실 (Zone)</td></tr>
   </tbody>
 </table>
+
 
 ## 2.1. 개요
 본 절은 냉방 시스템의 각 단계(전달, 분배, 저장, 생산)에서 산출된 손실, 소요량, 보조에너지를 종합하여, **최종적으로 냉열 생산기기(히트펌프 등)가 공급해야 하는 총에너지 소요량을 산정**하는 방법을 기술합니다.
