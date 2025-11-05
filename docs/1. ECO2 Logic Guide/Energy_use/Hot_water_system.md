@@ -1,5 +1,61 @@
 # 3. 급탕 에너지소요량 (Energy use for hot water system)
 
+## Nomenclature
+
+### Symbols
+<table class="nomenclature">
+  <thead><tr><th>Symbol</th><th>Meaning</th><th>Unit</th></tr></thead>
+  <tbody>
+    <tr><td>Q</td><td>에너지 (Energy)</td><td>kWh</td></tr>
+    <tr><td>\(\dot{Q}\)</td><td>성능, 출력 (Power, Output)</td><td>kW</td></tr>
+    <tr><td>U</td><td>열관류율 (Heat transfer coefficient)</td><td>W/m²K</td></tr>
+    <tr><td>L</td><td>배관 길이 (Pipe length)</td><td>m</td></tr>
+    <tr><td>\(\vartheta\)</td><td>온도 (Temperature)</td><td>°C</td></tr>
+    <tr><td>\(\Delta \vartheta\)</td><td>온도차 (Temperature difference)</td><td>K</td></tr>
+    <tr><td>d</td><td>일수 (Days)</td><td>d</td></tr>
+    <tr><td>t</td><td>시간 (Time)</td><td>h</td></tr>
+    <tr><td>f</td><td>계수 (Factor, Coefficient)</td><td>-</td></tr>
+    <tr><td>q</td><td>열손실/열손실률 (Heat loss/rate)</td><td>kWh/d</td></tr>
+    <tr><td>V</td><td>용량 (Volume)</td><td>ℓ</td></tr>
+    <tr><td>\(UA\)</td><td>측정된 책정-열손실 (Measured rated heat loss)</td><td>W/K</td></tr>
+    <tr><td>\(\eta\)</td><td>효율 (Efficiency)</td><td>-</td></tr>
+    <tr><td>n</td><td>횟수 (Number)</td><td>-</td></tr>
+    <tr><td>A, B</td><td>(보일러) 효율계수 (Efficiency coefficients)</td><td>-</td></tr>
+    <tr><td>E, F</td><td>책정열손실 계수 (Rated heat loss coefficients)</td><td>-</td></tr>
+    <tr><td>H</td><td>지역난방 열손실 계수 (DH heat loss coefficient)</td><td>-</td></tr>
+    <tr><td>B</td><td>단열 등급 계수 (Insulation class coefficient)</td><td>-</td></tr>
+    <tr><td>\(\Phi\)</td><td>지역난방기계실 성능 (Rated power of DH station)</td><td>kW</td></tr>
+    <tr><td>D</td><td>지역난방 급수 온도 계수 (Coefficient for DH supply temperature)</td><td>-</td></tr>
+  </tbody>
+</table>
+
+### Subscripts
+<table class="nomenclature">
+  <thead><tr><th>Subscript</th><th>Meaning</th><th>Subscript</th><th>Meaning</th></tr></thead>
+  <tbody>
+    <tr><td>w</td><td>급탕 (Hot water)</td><td>f</td><td>2차 에너지, 최종 (Final energy)</td></tr>
+    <tr><td>outg</td><td>공급량 (Output)</td><td>g</td><td>생산 (Generation)</td></tr>
+    <tr><td>reg</td><td>재생 (Renewable)</td><td>b</td><td>요구량 (Need)</td></tr>
+    <tr><td>ce</td><td>전달 (Transmission)</td><td>d</td><td>분배 (Distribution)</td></tr>
+    <tr><td>s</td><td>저장 (Storage)</td><td>aux</td><td>보조 (Auxiliary)</td></tr>
+    <tr><td>I</td><td>존 비제어 열유입 (Uncontrolled zone heat gain)</td><td>i</td><td>구간 (Section)</td></tr>
+    <tr><td>m</td><td>평균 (Mean, Average)</td><td>mth</td><td>월/월별 (Month, Monthly)</td></tr>
+    <tr><td>Nutz</td><td>이용 (Usage)</td><td>T</td><td>일일 (Daily)</td></tr>
+    <tr><td>verbindung</td><td>연결배관 (Connecting pipes)</td><td>B</td><td>대기/정지/요소 (Stand-by, Shut down, Components)</td></tr>
+    <tr><td>S</td><td>저장 (Storage)</td><td>SB</td><td>Stand-by</td></tr>
+    <tr><td>a</td><td>연간 (Annual)</td><td>sol</td><td>태양열 (Solar)</td></tr>
+    <tr><td>N</td><td>정격 (Rated/Nominal)</td><td>K</td><td>냉수 (Cold water)</td></tr>
+    <tr><td>k</td><td>보일러 (Boiler)</td><td>Sp</td><td>순간최대취수 (Peak draw)</td></tr>
+    <tr><td>100%</td><td>정격부하 (100% load)</td><td>h</td><td>난방 (Heating)</td></tr>
+    <tr><td>rB</td><td>운전 (Calculated operation)</td><td>Hs/Hi</td><td>고위/저위발열 비 (Gross/Net calorific value)</td></tr>
+    <tr><td>gleichzeitig</td><td>동시 (Simultaneous)</td><td>Vorrangig</td><td>순차/우선 (Priority)</td></tr>
+    <tr><td>70</td><td>ΔT=70 K 기준 (Based on 70 K delta)</td><td>DS</td><td>지역난방 (Dwelling substation)</td></tr>
+    <tr><td>prim</td><td>1차측 (Primary)</td><td>sek</td><td>2차측 (Secondary)</td></tr>
+    <tr><td>in</td><td>유입 (Inlet, Gain)</td><td></td><td></td></tr>
+  </tbody>
+</table>
+
+
 급탕 에너지소요량 \(Q_{w,f}\)는 급탕 열 생산기기의 열 공급량(\(Q_{w,outg}\)), 생산과정에서 발생하는 (월별) 열손실(\(Q_{w,g}\)) 및 재생열에너지(태양열 및 주변 열)에 의해 다음과 같이 계산됩니다:
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
@@ -51,15 +107,15 @@ Where
 한편 구간 i의 열손실 \(Q_{w,d,i}\):
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,d,i} = \frac{1}{1000} \cdot U_i \cdot L_i \cdot (v_{w,m} - v_i) \cdot d_{Nutz,mth} \cdot t_{Nutz,T} \) <span class="eq-number">(3.1.2-2)</span>
+  \( Q_{w,d,i} = \frac{1}{1000} \cdot U_i \cdot L_i \cdot (\vartheta_{w,m} - \vartheta_i) \cdot d_{Nutz,mth} \cdot t_{Nutz,T} \) <span class="eq-number">(3.1.2-2)</span>
 </a>
 
 
 Where,  
 \(U_{i}\): 구간 i 배관 열관류율  
 \(L_{i}\): 구간 i 배관 길이  
-\(v_{w,m}\): 급탕배관망 온도 (보고서에서는 복수의 의미로 사용)  
-\(v_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)  
+\(\vartheta_{w,m}\): 급탕배관망 온도 (보고서에서는 복수의 의미로 사용)  
+\(\vartheta_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)  
 \(d_{Nutz,mth}\): 월간 이용일수  
 \(t_{Nutz,T}\): 일일 이용시간  
 
@@ -150,7 +206,7 @@ Where,
 
 구간 \(i\) 배관 길이 \(L_{i}\)는 세부 도면을 바탕으로 산정합니다.  
 
-주변온도 \(v_{i}\)는 용도프로필에서 설정된 값이 적용되며, 만일 주어진 값이 없다면 다음 표를 참고하여 채택합니다.
+주변온도 \(\vartheta_{i}\)는 용도프로필에서 설정된 값이 적용되며, 만일 주어진 값이 없다면 다음 표를 참고하여 채택합니다.
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -193,19 +249,19 @@ Where,
     </tr>
     <tr>
       <td>주변온도</td>
-      <td><i>v<sub>i</sub></i></td>
+      <td><i>\vartheta<sub>i</sub></i></td>
       <td>℃</td>
       <td colspan="3">제3장2절4항 참조</td>
     </tr>
     <tr>
       <td class="left">난방주기가 아닐 경우<br>평균 주변온도</td>
-      <td><i>v<sub>i</sub></i></td>
+      <td><i>\vartheta<sub>i</sub></i></td>
       <td>℃</td>
       <td colspan="3">22℃</td>
     </tr>
     <tr>
       <td>평균 주변온도</td>
-      <td><i>v<sub>i</sub></i></td>
+      <td><i>\vartheta<sub>i</sub></i></td>
       <td>℃</td>
       <td colspan="3">비 난방 존 13℃<br>난방 존 20℃</td>
     </tr>
@@ -231,13 +287,13 @@ Where,
 
 
 
-급탕배관망 온도 \(v_{w,m}\):
+급탕배관망 온도 \(\vartheta_{w,m}\):
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html"
    class="equation-link"
    target="_blank"
    rel="noopener noreferrer">
-  \( v_{w,m} = 23 \cdot U^{-0.2} \)
+  \( \vartheta_{w,m} = 23 \cdot U^{-0.2} \)
   <span class="eq-number">(3.1.2-7)</span>
 </a>
 
@@ -257,13 +313,13 @@ Where,
 </a>
 
 
-급탕배관망 온도 \(v_{w,m}\):
+급탕배관망 온도 \(\vartheta_{w,m}\):
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html"
    class="equation-link"
    target="_blank"
    rel="noopener noreferrer">
-  \( v_{w,m} = 23 \cdot U^{-0.2} \)
+  \( \vartheta_{w,m} = 23 \cdot U^{-0.2} \)
   <span class="eq-number">(3.1.2-9)</span>
 </a>
 
@@ -282,14 +338,14 @@ Where,
 **(1) 간접 가열식**
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = f_{\text{verbindung}} \cdot \frac{(50 - v_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \) <span class="eq-number">(3.1.3-1)</span>
+  \( Q_{w,s} = f_{\text{verbindung}} \cdot \frac{(50 - \vartheta_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \) <span class="eq-number">(3.1.3-1)</span>
 </a>
 
 
 **(2) 간접 가열식, 태양열 복합**
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = f_{\text{verbindung}} \cdot (UA)_{sb,s,a} \cdot \Delta v_i \cdot 24 \cdot 3600 \cdot d_{Nutz,mth} \cdot \frac{V_{s,aux}}{V_{s,aux} + V_{s,sol}} \) <span class="eq-number">(3.1.3-2)</span>
+  \( Q_{w,s} = f_{\text{verbindung}} \cdot (UA)_{sb,s,a} \cdot \Delta \vartheta_i \cdot 24 \cdot 3600 \cdot d_{Nutz,mth} \cdot \frac{V_{s,aux}}{V_{s,aux} + V_{s,sol}} \) <span class="eq-number">(3.1.3-2)</span>
 </a>
 
 
@@ -297,7 +353,7 @@ Where,
 **(3) 전기 가열식**
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = \frac{(55 - v_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \) <span class="eq-number">(3.1.3-3)</span>
+  \( Q_{w,s} = \frac{(55 - \vartheta_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \) <span class="eq-number">(3.1.3-3)</span>
 </a>
 
 
@@ -305,7 +361,7 @@ Where,
 **(4) 가스 가열식**
 
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = \frac{(55 - v_i)}{50} \cdot d_{Nutz,mth} \cdot q_{B,S} \) <span class="eq-number">(3.1.3-4)</span>
+  \( Q_{w,s} = \frac{(55 - \vartheta_i)}{50} \cdot d_{Nutz,mth} \cdot q_{B,S} \) <span class="eq-number">(3.1.3-4)</span>
 </a>
 
 
@@ -315,7 +371,7 @@ Where,
 
 간접 가열식 축열조의 저장 열손실:  
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = f_{\text{verbindung}} \cdot \frac{(50 - v_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \) <span class="eq-number">(3.1.3-5)</span>
+  \( Q_{w,s} = f_{\text{verbindung}} \cdot \frac{(50 - \vartheta_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \) <span class="eq-number">(3.1.3-5)</span>
 </a>
 
 Where,  
@@ -384,14 +440,14 @@ Where V: 축열조 용량
 
 축열조 용량은 제품사양서에 주어지지만, 용량을 모르는 경우 다음 식에 따라 계산합니다:  
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( V_s = \frac{Q_{w,b,d} \cdot f_N \cdot 860}{(v_{w,m} - v_k) \cdot \eta_s} \) <span class="eq-number">(3.1.3-7)</span>
+  \( V_s = \frac{Q_{w,b,d} \cdot f_N \cdot 860}{(\vartheta_{w,m} - \vartheta_k) \cdot \eta_s} \) <span class="eq-number">(3.1.3-7)</span>
 </a>
 
 Where  
 \(Q_{w,b,d}\): 일간 급탕에너지요구량  
 \(f_{N}\): 보고서에 명시되지 않음  
-\(v_{w,m}\): 급탕 배관망 온도 (보고서에서는 복수의 의미로 사용)  
-\(v_{K}\): 보고서에 정확히 명시되지 않음 (\(v_{K}\): 냉수 공급온도)  
+\(\vartheta_{w,m}\): 급탕 배관망 온도 (보고서에서는 복수의 의미로 사용)  
+\(\vartheta_{K}\): 보고서에 정확히 명시되지 않음 (\(\vartheta_{K}\): 냉수 공급온도)  
 \(n_{S}\): 축열조 효율 (입식=0.95, 좌식=0.9)  
 
 한편 \(f_{N}\)은 다음과 같이 계산합니다:  
@@ -409,7 +465,7 @@ Where
 
 간접 가열식, 태양열 복합 축열조의 저장 열손실:  
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = f_{\text{verbindung}} \cdot (UA)_{sb,s,a} \cdot \Delta v_i \cdot 24 \cdot 3600 \cdot d_{Nutz,mth} \cdot \frac{V_{s,aux}}{V_{s,aux} + V_{s,sol}} \)  <span class="eq-number">(3.1.3-9)</span>
+  \( Q_{w,s} = f_{\text{verbindung}} \cdot (UA)_{sb,s,a} \cdot \Delta \vartheta_i \cdot 24 \cdot 3600 \cdot d_{Nutz,mth} \cdot \frac{V_{s,aux}}{V_{s,aux} + V_{s,sol}} \)  <span class="eq-number">(3.1.3-9)</span>
 </a>
 
 Where,  
@@ -438,11 +494,11 @@ Where,
 
 전기 가열식 축열조의 저장 열손실:  
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = \frac{(55 - v_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \) <span class="eq-number">(3.1.3-11)</span>
+  \( Q_{w,s} = \frac{(55 - \vartheta_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \) <span class="eq-number">(3.1.3-11)</span>
 </a>
 
 Where,  
-\(v_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)  
+\(\vartheta_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)  
 \(d_{Nutz,mth}\): 월간 이용일수  
 \(q_{B,S}\): 책정-열손실  
 
@@ -501,7 +557,7 @@ Where, V: 축열조 용량
       <td>심야</td>
       <td>주로 심야에 가동</td>
       <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( V_s = \frac{1.42 \cdot Q_{w,b,d} \cdot f_N \cdot 860}{(v_{w,m} - v_k) \cdot \eta_s} \)
+  \( V_s = \frac{1.42 \cdot Q_{w,b,d} \cdot f_N \cdot 860}{(\vartheta_{w,m} - \vartheta_k) \cdot \eta_s} \)
 </a>
 </td>
     </tr>
@@ -509,7 +565,7 @@ Where, V: 축열조 용량
       <td>주간</td>
       <td>지속적 재충전 가능</td>
       <td><a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( V_s = \frac{0.67 \cdot Q_{w,b,d} \cdot f_N \cdot 860}{(v_{w,m} - v_k) \cdot \eta_s} \)
+  \( V_s = \frac{0.67 \cdot Q_{w,b,d} \cdot f_N \cdot 860}{(\vartheta_{w,m} - \vartheta_k) \cdot \eta_s} \)
 </a>
 </td>
     </tr>
@@ -519,8 +575,8 @@ Where, V: 축열조 용량
 Where,  
 \(Q_{w,b,d}\): 일간 급탕에너지요구량  
 \(f_{N}\): 보고서에 명시되지 않음  
-\(v_{w,m}\): 급탕 배관망 온도 (보고서에서는 복수의 의미로 사용)  
-\(v_{K}\): 보고서에 정확히 명시되지 않음 (\(v_{K}\): 냉수 공급온도)  
+\(\vartheta_{w,m}\): 급탕 배관망 온도 (보고서에서는 복수의 의미로 사용)  
+\(\vartheta_{K}\): 보고서에 정확히 명시되지 않음 (\(\vartheta_{K}\): 냉수 공급온도)  
 \(n_{S}\): 축열조 효율 (입식=0.95, 좌식=0.9)  
 
 한편 \(f_{N}\)은 다음과 같이 계산합니다:  
@@ -543,11 +599,11 @@ Where,
 
 가스 가열식 축열조의 저장 열손실:  
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = \frac{(55 - v_i)}{50} \cdot d_{Nutz,mth} \cdot q_{B,S} \) <span class="eq-number">(3.1.3-15)</span>
+  \( Q_{w,s} = \frac{(55 - \vartheta_i)}{50} \cdot d_{Nutz,mth} \cdot q_{B,S} \) <span class="eq-number">(3.1.3-15)</span>
 </a>
 
 Where,  
-\(v_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)  
+\(\vartheta_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)  
 \(d_{Nutz,mth}\): 월간 이용일수  
 \(q_{B,S}\): 책정-열손실  
 
@@ -613,7 +669,7 @@ Where, V: 축열조 용량
 
 - (3) 지역난방  
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,g} = H_{DS} \cdot (v_{DS} - v_i) \) <span class="eq-number">(3.2-3)</span>
+  \( Q_{w,g} = H_{DS} \cdot (\vartheta_{DS} - \vartheta_i) \) <span class="eq-number">(3.2-3)</span>
 </a>
 
 ---
@@ -822,13 +878,13 @@ Where,
 
 \(q_{B,v}\)는 다음과 같이 계산됩니다:  
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,w} = q_{B,70} \cdot (v_{g,m} - v_i) / (70 - 20) \) <span class="eq-number">(3.2-12)</span>
+  \( q_{B,w} = q_{B,70} \cdot (\vartheta_{g,m} - \vartheta_i) / (70 - 20) \) <span class="eq-number">(3.2-12)</span>
 </a>
 
 Where,  
 \(q_{B,70}\): 책정 열손실  
-\(v_{g,m}\): 대기모드 상태에서의 평균 보일러 온도(순환: 50℃, 비순환: 40℃)  
-\(v_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)
+\(\vartheta_{g,m}\): 대기모드 상태에서의 평균 보일러 온도(순환: 50℃, 비순환: 40℃)  
+\(\vartheta_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)
 
 ---
 
@@ -894,13 +950,13 @@ Where,
 
 지역난방의 생산손실:  
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,g} = H_{DS} \cdot (v_{DS} - v_i) \) <span class="eq-number">(3.2-18)</span>
+  \( Q_{w,g} = H_{DS} \cdot (\vartheta_{DS} - \vartheta_i) \) <span class="eq-number">(3.2-18)</span>
 </a>
 
 Where,  
 \(H_{DS}\): 찾는중  
 \(v_{DS}\): 찾는중  
-\(v_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)
+\(\vartheta_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)
 
 한편 \(H_{DS}\)는:  
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
@@ -958,18 +1014,18 @@ Where,
 </html>
 
 
-\(v_{DS}\)는 다음을 따라 계산됩니다:  
+\(\vartheta_{DS}\)는 다음을 따라 계산됩니다:  
 <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( \nu_{DS} = D_{DS} \cdot \nu_{prim,DS} + (1 - D_{DS}) \cdot \nu_{sek,DS} \) <span class="eq-number">(3.2-21)</span>
+  \( \vartheta_{DS} = D_{DS} \cdot \vartheta_{prim,DS} + (1 - D_{DS}) \cdot \vartheta_{sek,DS} \) <span class="eq-number">(3.2-21)</span>
 </a>
 
 Where,  
 \(D_{DS}\)  
-\(v_{prim,DS}\)  
-\(v_{sek,DS}\)
+\(\vartheta_{prim,DS}\)  
+\(\vartheta_{sek,DS}\)
 
-- \(v_{prim,DS}\)는 지역난방 1차 온도를 의미합니다. (보고서에는 명시되어 있지 않음)  
-- \(v_{sek,DS}\)는 지역난방 2차 온도로 40℃ 또는 50℃ 값을 활용합니다.
+- \(\vartheta_{prim,DS}\)는 지역난방 1차 온도를 의미합니다. (보고서에는 명시되어 있지 않음)  
+- \(\vartheta_{sek,DS}\)는 지역난방 2차 온도로 40℃ 또는 50℃ 값을 활용합니다.
 
 \(D_{DS}\)의 값은 \(v_{prim,DS}\)에 따라 다음 표를 참조합니다.  
 <!DOCTYPE html>
@@ -997,7 +1053,7 @@ Where,
 <caption>Table 3.2-22. \(D_{DS}\)</caption>
   <tr>
     <th rowspan="1">지역난방기계실 종류</th>
-    <th colspan="1">1차 온도 (해석)<br><i>v<sub>P,DS</sub> (℃)</i></th>
+    <th colspan="1">1차 온도 (해석)<br><i>\vartheta<sub>P,DS</sub> (℃)</i></th>
     <th rowspan="1"><i>D<sub>DS</sub></i></th>
   </tr>
   <tr>

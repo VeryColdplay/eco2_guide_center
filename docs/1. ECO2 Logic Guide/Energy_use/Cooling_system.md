@@ -1,5 +1,72 @@
 # 2. 냉방 에너지소요량 (Energy use for cooling system)
 
+## Nomenclature
+
+### Symbols
+<table class="nomenclature">
+  <thead><tr><th>Symbol</th><th>Meaning</th><th>Unit</th></tr></thead>
+  <tbody>
+    <tr><td>\(A_{K,A}\)</td><td>열적 외피 외부 설치 표면적 (Surface area outside thermal envelope)</td><td>m²</td></tr>
+    <tr><td>a</td><td>밸브 authority (Valve authority)</td><td>-</td></tr>
+    <tr><td>b</td><td>평가계수 (Evaluation factor)</td><td>-</td></tr>
+    <tr><td>\(b_{VC}\)</td><td>냉각코일 가동시간(월/연) (Full utilization hours)</td><td>h</td></tr>
+    <tr><td>c</td><td>비열 (Specific heat)</td><td>kJ/kg·K</td></tr>
+    <tr><td>e</td><td>소비지수 (Expenditure factor)</td><td>-</td></tr>
+    <tr><td>EER</td><td>에너지 효율 비율 (Energy efficiency ratio)</td><td>kW/kW</td></tr>
+    <tr><td>f</td><td>계수 (Factor)</td><td>-</td></tr>
+    <tr><td>\(L_{max}\)</td><td>최대 배관 길이 (Maximum pipe length)</td><td>m</td></tr>
+    <tr><td>P</td><td>성능 (Power)</td><td>W</td></tr>
+    <tr><td>\(P_{d,hydr}\)</td><td>설계점 수압성능(CW/CHW) (Hydraulic power at design point)</td><td>W</td></tr>
+    <tr><td>\(P_{el,av,rot}\)</td><td>열회수 회전자 평균전력 (Mean electric power for HR rotor)</td><td>W</td></tr>
+    <tr><td>\(P_{C,elektr}\)</td><td>냉열기기 정격소비전력 (Rated drive power)</td><td>kW</td></tr>
+    <tr><td>\(P_{el,av,KVS}\)</td><td>KVS 펌프 단위유량당 평균전력 (Mean pump power per unit flow)</td><td>W/(m³/h)</td></tr>
+    <tr><td>\(P_{el,mh}\)</td><td>가습펌프 단위풍량당 전력 (Specific power of humidification pumps)</td><td>W/(m³/h\(_{air}\))</td></tr>
+    <tr><td>PLV</td><td>평균 부분부하계수 (Mean part-load value)</td><td>-</td></tr>
+    <tr><td>Q</td><td>에너지 (Energy)</td><td>kWh</td></tr>
+    <tr><td>\(\dot{Q}\)</td><td>정격 열성능 (Rated power)</td><td>kW</td></tr>
+    <tr><td>\(q_{R,elektr}\)</td><td>재냉기 단위 전기에너지요구량 (Specific electrical energy demand, recooler)</td><td>-</td></tr>
+    <tr><td>R</td><td>배관 단위길이당 압력손실 (Pressure loss along pipes)</td><td>kPa/m</td></tr>
+    <tr><td>SEER</td><td>연간 에너지 효율 비율 (Seasonal EER)</td><td>-</td></tr>
+    <tr><td>t</td><td>시간 (Time)</td><td>h</td></tr>
+    <tr><td>\(t_{C,r}\)</td><td>HVAC 냉각유닛 연간 가동시간 (Relative annual running time)</td><td>h</td></tr>
+    <tr><td>\(\dot{V}\)</td><td>유량 (Volume flow rate)</td><td>m³/h</td></tr>
+    <tr><td>\(W_{d,hydr,l}\)</td><td>주기별 수력학적 에너지 (Hydraulic energy per period)</td><td>kWh/period</td></tr>
+    <tr><td>\(\beta\)</td><td>부하율 (Part-load level)</td><td>-</td></tr>
+    <tr><td>\(\Delta p\)</td><td>압력손실 (Pressure drop)</td><td>kPa</td></tr>
+    <tr><td>\(\Delta p_{z}\)</td><td>설계점 압력손실 (Pressure drop at design point)</td><td>kPa</td></tr>
+    <tr><td>\(\eta\)</td><td>효율 (Efficiency)</td><td>-</td></tr>
+    <tr><td>\(\vartheta\)</td><td>온도 (Temperature)</td><td>°C</td></tr>
+    <tr><td>\(\nu\)</td><td>동점도 (Kinematic viscosity)</td><td>㎟/s</td></tr>
+    <tr><td>\(\zeta\)</td><td>열 성능비 (Rated heat ratio)</td><td>-</td></tr>
+    <tr><td>\(\rho\)</td><td>밀도 (Density)</td><td>kg/m³</td></tr>
+  </tbody>
+</table>
+
+### Subscripts
+<table class="nomenclature">
+  <thead><tr><th>Subscript</th><th>Meaning</th><th>Subscript</th><th>Meaning</th></tr></thead>
+  <tbody>
+    <tr><td>a</td><td>연간 (Annual)</td><td>Abgl</td><td>평형 (Balancing)</td></tr>
+    <tr><td>Adap</td><td>적응 (Adaptation)</td><td>av</td><td>평균 (Average)</td></tr>
+    <tr><td>aux</td><td>보조 (Auxiliary)</td><td>C, c</td><td>냉방/냉열 (Cooling, Refrigeration)</td></tr>
+    <tr><td>\(C^{*}\)</td><td>HVAC 냉방 (HVAC cooling)</td><td>ce</td><td>전달 (Transfer)</td></tr>
+    <tr><td>cl</td><td>냉매 (Refrigerant)</td><td>f</td><td>2차 에너지 (Final energy)</td></tr>
+    <tr><td>d</td><td>분배, 시간주기 (Distribution, Period)</td><td>e</td><td>효율 (Efficiency)</td></tr>
+    <tr><td>el</td><td>전력 (Electric power)</td><td>elektr</td><td>전기적 (Electrical)</td></tr>
+    <tr><td>H, h</td><td>가열·예열·재열 (Heating, Pre-heating, Re-heating)</td><td>\(H^{*}\)</td><td>HVAC 가열 (HVAC heating)</td></tr>
+    <tr><td>hr</td><td>열회수기 (Heat recovery)</td><td>hydr</td><td>수압적 (Hydraulic)</td></tr>
+    <tr><td>l</td><td>냉각수/냉수; 기간 (Cooling water; Period)</td><td>\(m^{*}\)</td><td>증기가습 (Steam humidification)</td></tr>
+    <tr><td>max</td><td>최대 (Maximum)</td><td>mh</td><td>가습 제어 (Humidification control)</td></tr>
+    <tr><td>min</td><td>최소 (Minimum)</td><td>mth</td><td>월 (Month)</td></tr>
+    <tr><td>n</td><td>특정 용도 \(n\) (Usage \(n\))</td><td>op</td><td>운전 (Operation)</td></tr>
+    <tr><td>outg</td><td>공급량 (Output)</td><td>pumpe</td><td>펌프 (Pump)</td></tr>
+    <tr><td>R</td><td>재냉 (Recooling)</td><td>rd</td><td>회수 (Recovered)</td></tr>
+    <tr><td>reg</td><td>재생에너지 (Renewable)</td><td>sens</td><td>현열 (Sensible)</td></tr>
+    <tr><td>t</td><td>온도 (Temperature)</td><td>therm</td><td>열적 (Thermal)</td></tr>
+    <tr><td>VC</td><td>중앙 냉각 유닛 (Central cooling unit)</td><td>vc</td><td>공기 냉방 (Cooling air)</td></tr>
+    <tr><td>x</td><td>절대 습도 (Humidity ratio)</td><td>Z</td><td>실 (Zone)</td></tr>
+  </tbody>
+</table>
 
 ## 2.1. 개요
 본 절은 냉방 시스템의 각 단계(전달, 분배, 저장, 생산)에서 산출된 손실, 소요량, 보조에너지를 종합하여, **최종적으로 냉열 생산기기(히트펌프 등)가 공급해야 하는 총에너지 소요량을 산정**하는 방법을 기술합니다.
