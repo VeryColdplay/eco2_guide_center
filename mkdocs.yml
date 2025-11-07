@@ -16,9 +16,7 @@ nav:
     - 4. 조명 에너지요구량: 1. ECO2 Logic Guide/Energy_demand/Lighting_energy_demand.md  
     - 5. 급탕 에너지요구량: 1. ECO2 Logic Guide/Energy_demand/Hot_water.md
   - 공조처리: 
-    - 1. 분석치의 연계: 1. ECO2 Logic Guide/HVAC/Integration.md
-    - 2. 송풍: 1. ECO2 Logic Guide/HVAC/Fan.md
-    - 3. 가열, 냉각, 가습, 제습: 1. ECO2 Logic Guide/HVAC/HCHD.md
+    - 공조처리: 1. ECO2 Logic Guide/HVAC/Integration.md
   - 에너지소요량:
     - 1. 난방 에너지소요량: 1. ECO2 Logic Guide/Energy_use/Heating_system.md
     - 2. 냉방 에너지소요량: 1. ECO2 Logic Guide/Energy_use/Cooling_system.md

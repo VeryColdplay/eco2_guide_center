@@ -246,7 +246,7 @@ $$ <span class="eq-number">(1.3.1-2)</span>
 
 <div align="center">
 $$
-\beta_{h,s} = \frac{Q_{h,b} + Q_{h,ce} + Q_{h,d}}{\dot{Q}_{dot\,h,max} \cdot t_h}
+\beta_{h,s} = \frac{Q_{h,b} + Q_{h,ce} + Q_{h,d}}{\dot{Q}_{h,max} \cdot t_h}
 $$ <span class="eq-number">(1.3.1-3)</span>
 </div>
 
@@ -254,7 +254,7 @@ $$ <span class="eq-number">(1.3.1-3)</span>
 
 <div align="center">
 $$
-\beta_{h,g} = \frac{Q_{h,b} + Q_{h,ce} + Q_{h,d} + Q_{h,s}}{\dot{Q}_{dot\,h,max} \cdot t_h}
+\beta_{h,g} = \frac{Q_{h,b} + Q_{h,ce} + Q_{h,d} + Q_{h,s}}{\dot{Q}_{h,max} \cdot t_h}
 $$ <span class="eq-number">(1.3.1-4)</span>
 </div>
 
@@ -326,7 +326,7 @@ $$ <span class="eq-number">(1.3.2-3)</span>
 
 <div align="center">
 $$
-\theta_{RL,m}(\beta_i) = ( \theta_{RA} - \theta_{i,h,soll} ) \cdot \beta_j^{\frac{1}{n}} + \theta_{i,h,soll}
+\theta_{RL,m}(\beta_i) = ( \theta_{RA} - \theta_{i,h,soll} ) \cdot \beta_i^{\frac{1}{n}} + \theta_{i,h,soll}
 $$ <span class="eq-number">(1.3.2-4)</span>
 </div>
 
@@ -689,7 +689,7 @@ $$ <span class="eq-number">(1.3.4-6)</span>
 - **월별 이용일수 \( d_{Nutz,mth} \)**:   
 <div align="center">
 $$
-d_{Nutz,mth} = \frac{d_{Nutz,A}}{365} \cdot d_{mth}
+d_{Nutz,mth} = \frac{d_{Nutz,A}}{t_{h}} \cdot d_{mth}
 $$ <span class="eq-number">(1.3.4-7)</span>
 </div>
 
@@ -2352,10 +2352,16 @@ $$ <span class="eq-number">(1.4.7.5-2)</span>
   </div>
 </div> 
 
-<div align="center">$$
-\theta_{DS} = D_{DS} \cdot \theta_{\text{prim,DS}} + (1 - D_{DS}) \cdot \theta_{\text{sek,DS}}
-$$ <span class="eq-number">(1.4.7.5-3)</span>
+
+<div align="center">
+$$
+v_{DS} =
+D_{DS} \cdot v_{\mathrm{prim},DS}
++ \left( 1 - D_{DS} \right) \cdot v_{\mathrm{sek},DS}
+$$
+<span class="eq-number">(1.4.7.5-3)</span>
 </div>
+
 
 <div style="
   display: flex;
@@ -2404,9 +2410,14 @@ $$ <span class="eq-number">(1.4.7.5-3)</span>
 ## 1.5. HVAC 가열 유닛(Heating coil) 에너지 요구량 (Energy need)  
 공조시스템의 가열유닛에 필요한 에너지 요구량 (\( Q_{h^*,b} \))은 #절에서 계산된 공조 가열 에너지 요구량 (\( Q_{vh,b} \))에 전달 및 분배 과정에서 발생하는 손실을 더하여 산정됩니다.
 
-<div align="center">$$
-Q_{h^*,b} = Q_{vh,b} + Q_{vh,ce} + Q_{vh,d}
-$$  <span class="eq-number">(1.5-1)</span>
+<div align="center">
+$$
+Q_{h,b}^{\ast} =
+Q_{vh,b} +
+Q_{vh,ce} +
+Q_{vh,d}
+$$
+<span class="eq-number">(1.5-1)</span>
 </div>
 
 ---
