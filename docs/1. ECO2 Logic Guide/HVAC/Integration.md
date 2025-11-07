@@ -98,6 +98,12 @@
 </div>
   
 
+  <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
+<span style="display: block;">\( \dot{V}_{\mathrm{mech},b,m} \) : 월별 기준 급기풍량 (DIN V 18599-2에 정의됨) [단위 m³/h]</span>
+<span style="display: block;">\( \dot{V}_{\mathrm{mech},m} \) : 열공조 에너지 요구량 산정 시 사용되는 월평균 급기풍량 [단위 m³/h]</span>
+<span style="display: block;">\( \dot{V}^{\ast} \) : 설계 급기풍량 [단위 m³/h]</span>
+
+
 ## 1.3. 시간 및 용도 기반 변풍량방식(VAV) 공조기의 급기풍량
 실내공기질 유지, 스케줄, 실험실 배기 등 시간이나 용도에 따라 풍량이 변하는 경우, 월별 평균 급기풍량은 부분부하 비율 및 부분부하 운전 시간에 따라 산정됩니다.    아래에서 \(j\)는 부분부하 운전(시간별 풍량이 다른)을 나타내며, 월별 공조기의 운전시간에 따른 부분부하일 경우, 월별 운전시간의 비율에 의해 급기풍량이 정해집니다.   
 
@@ -129,7 +135,8 @@
     </div>
 
     <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-    <span style="display: block;">\( Q_{c,b,mth} \) : 부분부하 운전 \(j\)에서의 급기풍량</span>
+    <span style="display: block;"> \( \dot{V}_{j} \)
+  : 부분부하 운전 \(j\)에서의 급기풍량</span>
     <span style="display: block;">\( t_{V,\mathrm{mech},j,m} \) : 부분부하 운전 \(j\)에서의 월별 운전시간</span>
     <span style="display: block;">\( t_{V,\mathrm{mech},m} \) : 일일 운전시간 </span>
     <span style="display: block;">\( d_{V,\mathrm{mech},m} \) : 월별 시스템 운전 일수</span>
@@ -141,10 +148,23 @@
 실내 냉방 부하에 따라 풍량이 변하는 변풍량 공조기의 경우, 월별 평균 급기풍량은 실내 공기질 유지를 위한 최소 급기풍량과 냉방 부하를 처리하기 위한 추가 풍량을 더하여 산정합니다.   
 
 - 월별 평균 급기풍량 (\(\dot{V}_{\mathrm{mech},m}\)):   
-<div align="center">$$
- \dot{V}_{mech,m}=\dot{V}_{mech,b,m} + Q_{c,b}=\frac{\sum_{j} \left( \dot{V}_{j} \cdot t_{V,\mathrm{mech},j,m} \right)}{t_{V,\mathrm{mech},m} \cdot d_{V,\mathrm{mech},m}}$$
- <span class="eq-number">(1.4-1)</span>
-</div>   
+<div align="center">
+$$
+\dot{V}_{\mathrm{mech},m} =
+\dot{V}_{\mathrm{mech},b,m} +
+\frac{
+Q_{C,b}
+}{
+t_{V,\mathrm{mech},m} \,
+d_{V,\mathrm{mech},m} \,
+c_{p,L} \,
+\rho_{L} \,
+\left( \vartheta_{i,c,m} - \vartheta_{V,\mathrm{mech},m} \right)
+}
+$$
+<span class="eq-number">(1.4-2)</span>
+</div>
+
 
 또는   
 

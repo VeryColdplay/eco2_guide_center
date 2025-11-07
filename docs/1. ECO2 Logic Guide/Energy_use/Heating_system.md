@@ -238,7 +238,7 @@ $$ <span class="eq-number">(1.3.1-1)</span>
 
 <div align="center">
 $$
-\beta_{h,d} = \frac{Q_{h,b} + Q_{h,ce}}{\dot{Q}_{dot\,h,max} \cdot t_h}
+\beta_{h,d} = \frac{Q_{h,b} + Q_{h,ce}}{\dot{Q}_{h,max} \cdot t_h}
 $$ <span class="eq-number">(1.3.1-2)</span>
 </div>
 
@@ -300,7 +300,7 @@ $$ <span class="eq-number">(1.3.1-4)</span>
 
 <div align="center">
 $$
-\theta_{HK,m(\beta_j)} = 0.5 \cdot ( \theta_{VL,m(\beta_j)} + \theta_{RL,m(\beta_j)} )
+\theta_{HK,m}(\beta_i) = 0.5 \cdot ( \theta_{VL,m}(\beta_i) + \theta_{RL,m}(\beta_i) )
 $$ <span class="eq-number">(1.3.2-1)</span>
 </div>
 
@@ -326,7 +326,7 @@ $$ <span class="eq-number">(1.3.2-3)</span>
 
 <div align="center">
 $$
-\theta_{RL,m(\beta_i)} = ( \theta_{RA} - \theta_{i,h,soll} ) \cdot \beta_j^{(1/n)} + \theta_{i,h,soll}
+\theta_{RL,m}(\beta_i) = ( \theta_{RA} - \theta_{i,h,soll} ) \cdot \beta_j^{\frac{1}{n}} + \theta_{i,h,soll}
 $$ <span class="eq-number">(1.3.2-4)</span>
 </div>
 
@@ -450,11 +450,11 @@ $$ <span class="eq-number">(1.3.2-7)</span>
 
 - **보일러 정격출력(\( \dot{Q}_{N,h} \))**: 보일러의 정격 출력을 산정하기 위해 첫 번째로 모든 연결된 열 소비기기의 최대 출력이 결정되어야 합니다. 동시 발생하는 수요에 따라 보일러의 정격 출력은 가장 큰 단일 수요 또는 동시 발생하는 수요의 합 중에서 결정됩니다.      
 
-- **난방 시스템의 보일러 정격 출력(\(Q_{N,h}\))**:   
+- **난방 시스템의 보일러 정격 출력(\(\dot{Q}_{N,h}\))**:   
 
 <div align="center">
 $$
-\dot{Q}_{dot\,N,h} = 1.3 \cdot \dot{Q}_{dot\,h,max}
+\dot{Q}_{N,h} = 1.3 \cdot \dot{Q}_{h,max}
 $$ <span class="eq-number">(1.3.3-1)</span>
 </div>
 
@@ -499,7 +499,7 @@ $$ <span class="eq-number">(1.3.3-2)</span>
 
 <div align="center">
 $$
-\dot{Q}_N = \max\left( \sum \dot{Q}_{N,\text{gleichzeitig}} , \dot{Q}_{\text{vorrang}} \right)
+\dot{Q}_N = \max\left( \sum \dot{Q}_{N,\text{동시에 발생하는 부하}} , \dot{Q}_{\text{우선순위가 높은 부하}} \right)
 $$ <span class="eq-number">(1.3.3-3)</span>
 </div>
 
@@ -507,7 +507,7 @@ $$ <span class="eq-number">(1.3.3-3)</span>
 
 ### 1.3.4. 운전 시간
 
-건물 난방/급탕 요구량(# 절)에서 야간감소/정지 또는 주말감소/정지가 고려되었다면, 보일러 운전에서도 동일하게 고려해야 합니다.   
+건물 난방/급탕 요구량(에너지요구량의 2장, 5장)에서 야간감소/정지 또는 주말감소/정지가 고려되었다면, 보일러 운전에서도 동일하게 고려해야 합니다.   
 
 - **난방 시스템의 운전 시간 설계**: 분배 배관망 및 열 생산 과정의 열 손실 계산을 위해 야간이나 주말의 운전 감소/정지, 온도 저하, 지속 운전 방식을 고려하는 일일 운전 시간이 사용됩니다.   
 
@@ -622,7 +622,7 @@ $$ <span class="eq-number">(1.3.3-3)</span>
 
     <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
     <span style="display: block;">\( d_{mth} \): 월별 일수</span>
-    <span style="display: block;">\( d_{Nutz,A} \): 연간 이용기간 </span>
+    <span style="display: block;">\( d_{Nutz,A} \): 연간 이용일수 </span>
     <span style="display: block;">\( f_{L,WA} \): 주말 운전 감소/정지 계수 </span>
   </div>
 </div> 
@@ -668,18 +668,12 @@ $$ <span class="eq-number">(1.3.4-4)</span>
 ---    
 
 - **월별 계산 난방 운전시간 \( t_{h,rL} \)**   
-<div align="center">
-$$
-t_{h,rL} = t_{h,rL,T} \cdot d_{h,rB}
-$$ <span class="eq-number">(1.3.4-5)</span>
-</div>
-
 - 상이한 난방 배관망 운전 또는 난방 시스템 이외의 열 생산기기가 존재하거나 배관망에 다른 열 수요를 갖는 에너지원(냉동기, 공조장치, 온수 등)이 연결되어 있는 경우, 가장 오랜 시간 수요가 발생하는 에너지원의 운전시간을 적용합니다.   
 
 <div align="center">
 $$
 t_{h,rL} = t_{h,rL,T} \cdot d_{h,rB}
-$$ <span class="eq-number">(1.3.4-6)</span>
+$$ <span class="eq-number">(1.3.4-5)</span>
 </div>
 
 
@@ -689,14 +683,14 @@ $$ <span class="eq-number">(1.3.4-6)</span>
 <div align="center">
 $$
 d_{h,mth} = \frac{t_{h,rL,T}^*}{24}
-$$ <span class="eq-number">(1.3.4-7)</span>
+$$ <span class="eq-number">(1.3.4-6)</span>
 </div>
 
 - **월별 이용일수 \( d_{Nutz,mth} \)**:   
 <div align="center">
 $$
 d_{Nutz,mth} = \frac{d_{Nutz,A}}{365} \cdot d_{mth}
-$$ <span class="eq-number">(1.3.4-8)</span>
+$$ <span class="eq-number">(1.3.4-7)</span>
 </div>
 
 - **일년 단위 산정치의 월별 분배**: 
@@ -706,7 +700,7 @@ $$ <span class="eq-number">(1.3.4-8)</span>
 <div align="center">
 $$
 W_{h,d,e,M} = W_{h,d,e,a} \cdot \frac{ \beta_{h,d,M} \cdot t_{\text{Nutz,mth}} }{ \beta_{h,d,a} \cdot t_{h,op} \cdot d_{\text{Nutz,a}} }
-$$ <span class="eq-number">(1.3.4-9)</span>
+$$ <span class="eq-number">(1.3.4-8)</span>
 </div>
 
 ---    
@@ -1167,6 +1161,7 @@ Q_{V,P} = (P_V \cdot n_V + P_P \cdot n_P) \cdot \frac{t_{h,rL}}{1000} $$
     <span style="display: block;">\( n_P \) = 펌프 개수</span>
     <span style="display: block;">\( P_V \) = 팬 정격 전력 소비</span>
     <span style="display: block;">\( P_P \) = 펌프의 정격 전력 소비</span>
+    <span style="display: block;">\( t_{h,rL} \) = 일일 설계운전시간</span>
   </div>
 </div> 
 
@@ -1689,7 +1684,7 @@ $$ <span class="eq-number">(1.4.4-6)</span>
 
 <div align="center">
 $$
-Q_{h,s} = f_{\text{verbindung}} \cdot \left( \frac{\theta_{h,s} - \theta_i}{45} \right) \cdot d_{h,\text{mth}} \cdot q_{B,S}
+Q_{h,s} = f_{\text{연결}} \cdot \left( \frac{\theta_{h,s} - \theta_i}{45} \right) \cdot d_{h,\text{mth}} \cdot q_{B,S}
 $$ <span class="eq-number">(1.4.5-1)</span>
 </div>
 
@@ -1717,7 +1712,7 @@ $$ <span class="eq-number">(1.4.5-1)</span>
     </div>
 
     <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-    <span style="display: block;">\( f_{\text{verbindung}} \) (열 생산기기 - 저장탱크 연결 배관 열 손실)</span>
+    <span style="display: block;">\( f_{\text{연결}} \) = 열 생산기기 - 저장탱크 연결 배관 열 손실 </span>
     <span style="display: block;">\( q_{B,S} \) = 일일 열 손실 (탱크 내부 물 - 설치 공간 간 평균 온도차 45 K 기준) </span>
   </div>
 </div> 
@@ -1725,7 +1720,7 @@ $$ <span class="eq-number">(1.4.5-1)</span>
 열 생산기기 - 저장탱크 연결 배관 열 손실   
 
 - 열 생산기기와 저장 탱크 위치가 동일할 때: \( f_{\text{verbindung}} = 1.2 \)   
-- 열 생산기기와 저장 탱크 위치가 다를 때: #.4.4의 배관손실처럼 계산   
+- 열 생산기기와 저장 탱크 위치가 다를 때: 1.4.4의 배관손실처럼 계산   
 
 일일 열 손실   
 \( q_{B,S} = 0.4 + 0.14 \cdot V^{0.45} \)
@@ -1741,7 +1736,7 @@ Q_{I,h,s} = Q_{h,s} $$
 - **저장 탱크용 펌프 보조에너지 (\( Q_{h,s,aux} \))**: 축열조 운전을 위한 별도의 펌프가 있는 경우, 펌프의 보조에너지 소비량은 아래와 같습니다.      
 
 <div align="center">$$
-Q_{h,s,aux} = \left( \frac{P_{\text{Pumpe}}}{1000} \right) \cdot t_P $$
+Q_{h,s,aux} = \left( \frac{P_{\text{Pump}}}{1000} \right) \cdot t_P $$
 <span class="eq-number">(1.4.5-3)</span>
 </div>
 
@@ -1769,7 +1764,7 @@ Q_{h,s,aux} = \left( \frac{P_{\text{Pumpe}}}{1000} \right) \cdot t_P $$
     </div>
 
     <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-    <span style="display: block;">\( P_{\text{Pumpe}} \) = 펌프의 정격 전력 소비</span>
+    <span style="display: block;">\( P_{\text{Pump}} \) = 펌프의 정격 전력 소비</span>
     <span style="display: block;">\( t_P = \beta_{h,s} \cdot 24 \cdot d_{h,\text{mth}} \) (열 생산기기와 동시 가동될 경우)</span>
   </div>
 </div>
@@ -1788,7 +1783,7 @@ $$ <span class="eq-number">(1.4.6-1)</span>
 - 난방/급탕/공조를 위해 요구되는 보일러의 최대 성능은 동시 가동할 경우 모든 보일러 성능의 합 또는 순차 가동의 최대 보일러 성능으로부터 정합니다.      
 
 <div align="center">$$
-\dot{Q}_N = \max \left( \sum \dot{Q}_{N,\text{gleichzeitig}}, \dot{Q}_{\text{Vorrang}} \right)
+\dot{Q}_N = \max \left( \sum \dot{Q}_{N,\text{동시 가동}}, \dot{Q}_{\text{순차 가동}} \right)
 $$ <span class="eq-number">(1.4.6-2)</span>
 </div>
 
@@ -1884,6 +1879,8 @@ Q_{h,g,v,i} = \frac{ \beta_{h,i} - \beta_{K,pl} }{ 1 - \beta_{K,pl} } \cdot (\do
 ---    
 
 **평균 열 출력 (\( \dot{Q}_{d,in} \))**: 평균 열 공급성능(\( dot{Q}_{d,in} \))은 난방, 난방/급탕, 난방/급탕/공조 3가지로 구분되며 아래와 같이 계산한다.
+
+
 - 난방 또는 난방/급탕 시:   
 <div align="center">$$
 \dot{Q}_{d,in} = \frac{ Q_{h,outg} }{ d_{h,rB} \cdot (t_{h,r,L,T} - t_{w,100\%}) }
@@ -1892,7 +1889,7 @@ $$ <span class="eq-number">(1.4.6.1-7)</span>
 
 - 난방/급탕/공조 시:   
 <div align="center">$$
-\dot{Q}_{d,in} = \sum \left( \frac{ Q_{h,outg} }{ t_{\text{Betrieb,K}} - t_{w,100\%} } \cdot d_{\text{Nutz,mth}} \right)
+\dot{Q}_{d,in} = \sum \left( \frac{ Q_{h,outg} }{ t_{\text{operation,K}} - t_{w,100\%} } \cdot d_{\text{use,mth}} \right)
 $$ <span class="eq-number">(1.4.6.1-8)</span>
 </div>
 
@@ -2288,7 +2285,7 @@ $$ <span class="eq-number">(1.4.7.3-1)</span>
 
 - **복사열 히터 열손실 (\( Q_{h,g} \))**:   
 <div align="center">$$
-Q_{h,g} = V_{\text{abluft,spez}} \cdot C_{p,\text{Abluft}} \cdot (\theta_{\text{Abluft}} - \theta_{\text{Außen}}) \cdot t_{h,rL}
+Q_{h,g} = V_{\text{exhaust air,special}} \cdot C_{p,\text{exhaust air}} \cdot (\theta_{\text{exhaust air}} - \theta_{\text{outside}}) \cdot t_{h,rL}
 $$ <span class="eq-number">(1.4.7.3-3)</span>
 </div>
 
@@ -2351,7 +2348,7 @@ $$ <span class="eq-number">(1.4.7.5-2)</span>
     </div>
 
     <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-    <span style="display: block;">\( \Phi_{DS} \): 정격 출력(= \(dot{Q}_{N}\))</span>   
+    <span style="display: block;">\( \Phi_{DS} \): 정격 출력(= \(Q_{N}\))</span>   
   </div>
 </div> 
 
@@ -2405,10 +2402,10 @@ $$ <span class="eq-number">(1.4.7.5-3)</span>
 
 
 ## 1.5. HVAC 가열 유닛(Heating coil) 에너지 요구량 (Energy need)  
-공조시스템의 가열유닛에 필요한 에너지 요구량 (\( Q_h^*,b \))은 #절에서 계산된 공조 가열 에너지 요구량 (\( Q_{vh,b} \))에 전달 및 분배 과정에서 발생하는 손실을 더하여 산정됩니다.
+공조시스템의 가열유닛에 필요한 에너지 요구량 (\( Q_{h^*,b} \))은 #절에서 계산된 공조 가열 에너지 요구량 (\( Q_{vh,b} \))에 전달 및 분배 과정에서 발생하는 손실을 더하여 산정됩니다.
 
 <div align="center">$$
-Q_h^*,b = Q_{vh,b} + Q_{vh,ce} + Q_{vh,d}
+Q_{h^*,b} = Q_{vh,b} + Q_{vh,ce} + Q_{vh,d}
 $$  <span class="eq-number">(1.5-1)</span>
 </div>
 
@@ -2491,15 +2488,15 @@ t_{h^*,\text{op,mth}} = t_{H,r} \cdot \left( \frac{b_{vh,\text{mth}}}{b_{vh,a}} 
 $$ <span class="eq-number">(1.5.5-1)</span>
 </div>
 
-- \( t_{h^*,\text{op,mth}} > t_{\text{RLT-Betrieb,mth}} \)일 경우:  
+- \( t_{h^*,\text{op,mth}} > t_{\text{RLT-operation,mth}} \)일 경우:  
 <div align="center">$$
-t_{h^*,\text{op,mth}} = t_{\text{RLT-Betrieb,mth}}
+t_{h^*,\text{op,mth}} = t_{\text{RLT-operation,mth}}
 $$ <span class="eq-number">(1.5.5-2)</span>
 </div>
 
-- \( t_{h^*,\text{op,mth}} < 0.1 \cdot t_{\text{RLT-Betrieb,mth}} \)일 경우:  
+- \( t_{h^*,\text{op,mth}} < 0.1 \cdot t_{\text{RLT-operation,mth}} \)일 경우:  
 <div align="center">$$
-t_{h^*,\text{op,mth}} = 0.1 \cdot t_{\text{RLT-Betrieb,mth}}
+t_{h^*,\text{op,mth}} = 0.1 \cdot t_{\text{RLT-operation,mth}}
 $$ <span class="eq-number">(1.5.5-3)</span>
 </div>
 

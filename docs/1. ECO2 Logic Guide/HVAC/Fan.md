@@ -4,12 +4,12 @@
 제품 성능이 주어진 경우 그 값을 사용하고, 제품 성능이 없는 경우, 급/배기 풍량 (\(\dot{V}\)), 덕트망의 총 압력손실 (\(\Delta p^*\)), 그리고 시스템의 팬\( \cdot \)전달시스템\( \cdot \)모터 및 회전수제어 등에 대한 총 효율 (\(\eta\))로부터 계산합니다.   
 
 - 급기 팬:   
-<div align="center">$$P_{V,ZUL,m} = P_{V,ZUL,m} = \frac{ \dot{V}_{ZUL} \Delta p^*_{ZUL} } { \eta_{ZUL} }$$
+<div align="center">$$P_{V,ZUL,m} = \frac{ \dot{V}_{ZUL} \Delta p^*_{ZUL} } { \eta_{ZUL} }$$
 <span class="eq-number">(2.1.1-1)</span>
 </div>   
 
 - 배기 팬:
-<div align="center">$$P_{V,ABL,m} = P_{V,ABL,m} = \frac{ \dot{V}_{ABL} \Delta p^*_{ABL} } { \eta_{ABL} }$$
+<div align="center">$$P_{V,ABL,m} = \frac{ \dot{V}_{ABL} \Delta p^*_{ABL} } { \eta_{ABL} }$$
 <span class="eq-number">(2.1.1-2)</span>
 </div>
 
@@ -20,7 +20,7 @@
 <span class="eq-number">(2.1.1-3)</span>
 </div>
 
-### 2.1.2. 월별 에너지소요량 (\(Q_{V,E,m}\))
+### 2.1.2. 송풍 월별 에너지소요량 (\(Q_{V,E,m}\))
 급기 팬과 배기 팬의 소비전력 합에 월간 총 가동시간을 곱하여 산출합니다.   
 <div align="center">$$
 Q_{V,E,m} = (P_{V,ZUL,m} + P_{V,ABL,m}) \cdot t_{V,\mathrm{mech},m} \cdot d_{V,\mathrm{mech},m}$$
