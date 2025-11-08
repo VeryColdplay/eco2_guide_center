@@ -212,12 +212,47 @@ Q_{l,h} = Q_{l,h,s} + Q_{l,h,g}
 $$ <span class="eq-number">(1.2.3-1)</span>
 </div>
 
+<div style="
+  display: flex;
+  justify-content: center;
+  font-family: Pretendard, sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+">
+  <div style="
+    text-align: left;
+    line-height: 1;
+    padding: 4px 8px;
+    border-radius: 0px;
+  ">
+    <!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
+    <div style="
+      font-style: italic;
+      font-weight: bold;
+      font-family: 'Times New Roman', 'Cambria Math', serif;
+      margin-bottom: 24px;
+    ">
+      Where,
+    </div>
+
+    <!-- 수식 설명들 -->
+    <span style="display: block;">\( Q_{l,h} \)
+      : 전체 난방 손실량 (Total heat loss for heating) [단위 kWh]</span>
+    <span style="display: block;">\( Q_{l,h,s} \)
+      : 저장기(축열조)에서의 손실량 (Heat loss from storage tank) [단위 kWh]</span>
+    <span style="display: block;">\( Q_{l,h,g} \)
+      : 발전기(보일러 등 열원기기)에서의 손실량 (Heat loss from heat generator) [단위 kWh]</span>
+  </div>
+</div>
+
+
+
 ---    
 
 ## 1.3. 각 프로세스의 기준 조건 설정
 
 기본적으로 일일 난방이용시간 \( t_{h,Nutz} = 0 \)이면, 부하율 \( \beta_j = 0 \)입니다.      
-만약 #장의 공조난방 시스템에서 요구사항이 있을 경우, #장에서 산정된 \( t_{h,Nutz} \)를 따르도록 합니다.   
+만약 #장의 공조난방 시스템에서 요구사항이 있을 경우, #에서 산정된 \( t_{h,Nutz} \)를 따르도록 합니다.   
 
 ---    
 
@@ -434,7 +469,7 @@ $$ <span class="eq-number">(1.3.2-5)</span>
 - 축열조가 없는 열 생산기기의 경우 평균 공급/환수 온도는   
 <div align="center"> $$
 \theta_{HK,m}(\beta_i) = 0.5 \cdot \left( \theta_{VL,m}(\beta_i) + \theta_{RL,m}(\beta_i) \right)
-$$ <span class="eq-number">(1.3.2-7)</span>
+$$ <span class="eq-number">(1.3.2-1)</span>
 </div>
 식으로 구합니다.   
 
@@ -1161,7 +1196,7 @@ Q_{V,P} = (P_V \cdot n_V + P_P \cdot n_P) \cdot \frac{t_{h,rL}}{1000} $$
     <span style="display: block;">\( n_P \) = 펌프 개수</span>
     <span style="display: block;">\( P_V \) = 팬 정격 전력 소비</span>
     <span style="display: block;">\( P_P \) = 펌프의 정격 전력 소비</span>
-    <span style="display: block;">\( t_{h,rL} \) = 일일 설계운전시간</span>
+    <span style="display: block;">\( t_{h,rL} \) = 분석 운전시간</span>
   </div>
 </div> 
 
@@ -1958,11 +1993,82 @@ $$
 $$ <span class="eq-number">(1.4.6.1-13)</span>
 </div>
 
+<div style="
+  display: flex;
+  justify-content: center;
+  font-family: Pretendard, sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+">
+  <div style="
+    text-align: left;
+    line-height: 1;
+    padding: 4px 8px;
+    border-radius: 0px;
+  ">
+    <!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
+    <div style="
+      font-style: italic;
+      font-weight: bold;
+      font-family: 'Times New Roman', 'Cambria Math', serif;
+      margin-bottom: 24px;
+    ">
+      Where,
+    </div>
+
+    <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
+    <span style="display: block;">\( \eta_{K,100\%,Betrieb} \) : 실제 운전 조건에서의 100% 부하 효율 (Boiler efficiency at 100% load under operating condition)</span>
+    <span style="display: block;">\( \eta_{K,100\%} \) : 시험 조건에서의 100% 부하 효율 (Boiler efficiency at 100% load under test condition)</span>
+    <span style="display: block;">\( G \) : 효율 보정계수 (Efficiency correction factor)</span>
+    <span style="display: block;">\( \vartheta_{g,\mathrm{test},100} \) : 시험 조건의 급수온도 (Feed water temperature under test condition)</span>
+    <span style="display: block;">\( \vartheta_{HK,m} \) : 운전 중 난방회로의 평균 온도 (Mean heating circuit temperature during operation)</span>
+  </div>
+</div>
+
+
+
 - \(\eta_{K,\text{pl}\%,\text{Betrieb}}\):
 <div align="center">
 $$
 \eta_{K,\text{pl}\%,\text{Betrieb}} = \eta_{K,\text{pl}\%} + H \cdot (\theta_{g,\text{test},\text{pl}} - \theta_{HK,m})
 $$ <span class="eq-number">(1.4.6.1-14)</span>
+</div>
+
+<div style="
+  display: flex;
+  justify-content: center;
+  font-family: Pretendard, sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+">
+  <div style="
+    text-align: left;
+    line-height: 1;
+    padding: 4px 8px;
+    border-radius: 0px;
+  ">
+    <!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
+    <div style="
+      font-style: italic;
+      font-weight: bold;
+      font-family: 'Times New Roman', 'Cambria Math', serif;
+      margin-bottom: 24px;
+    ">
+      Where,
+    </div>
+
+    <!-- 수식 설명들 -->
+    <span style="display: block;">\( \eta_{K,pl\%,Betrieb} \)
+      : 실제 운전 조건에서의 부분부하 효율 (Boiler efficiency at part-load under operating condition)</span>
+    <span style="display: block;">\( \eta_{K,pl\%} \)
+      : 시험 조건에서의 부분부하 효율 (Boiler efficiency at part-load under test condition)</span>
+    <span style="display: block;">\( H \)
+      : 부분부하 효율 보정계수 (Efficiency correction factor for part-load condition)</span>
+    <span style="display: block;">\( \vartheta_{g,\mathrm{test},pl} \)
+      : 시험 조건의 급수온도 (Feed water temperature under part-load test condition)</span>
+    <span style="display: block;">\( \vartheta_{HK,m} \)
+      : 운전 중 난방회로 평균 온도 (Mean heating circuit temperature during operation)</span>
+  </div>
 </div>
 
 
@@ -1971,8 +2077,16 @@ $$ <span class="eq-number">(1.4.6.1-14)</span>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>보일러 온도</title>
+  <title>보일러 온도 및 온도 보정계수</title>
   <style>
+    body {
+      font-family: Pretendard, Arial, sans-serif;
+      margin: 40px;
+    }
+    h5 {
+      text-align: center;
+      margin-top: 40px;
+    }
     table {
       margin: auto;
       border-collapse: collapse;
@@ -1988,88 +2102,71 @@ $$ <span class="eq-number">(1.4.6.1-14)</span>
     }
   </style>
 </head>
+<body>
 
-<h5>&lt;Table 1.4.6.1-15. 보일러 온도&gt;</h5>
+  <!-- Table 1 -->
+  <h5>&lt;Table 1.4.6.1-15. 보일러 온도&gt;</h5>
 
-<table>
-  <tr>
-    <th rowspan="1">보일러 유형</th>
-    <th>\(\theta_{g,\text{test,100}}\) (부하 100%) (°C)<th> 
-    <th>  \(\theta_{g,\text{test,pl}}\) (부분 부하) (°C)</th>
-  </tr>
-  <tr>
-    <th colspan="3">가스 / 기름</th>
-  </tr>
-  <tr>
-    <td>표준</td>
-    <td>70</td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>저온</td>
-    <td>70</td>
-    <td>40</td>
-  </tr>
-  <tr>
-    <td>콘덴싱</td>
-    <td>70</td>
-    <td>30</td>
-  </tr>
-</table>
+  <table>
+    <tr>
+      <th>보일러 유형</th>
+      <th>\(\theta_{g,\text{test,100}}\)<br>(부하 100%) (°C)</th>
+      <th>\(\theta_{g,\text{test,pl}}\)<br>(부분 부하) (°C)</th>
+    </tr>
+    <tr>
+      <th colspan="3">가스 / 기름</th>
+    </tr>
+    <tr>
+      <td>표준</td>
+      <td>70</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>저온</td>
+      <td>70</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td>콘덴싱</td>
+      <td>70</td>
+      <td>30</td>
+    </tr>
+  </table>
+
+  <!-- Table 2 -->
+  <h5>&lt;Table 1.4.6.1-16. 온도 보정계수&gt;</h5>
+
+  <table>
+    <tr>
+      <th>보일러 유형</th>
+      <th>계수 G</th>
+      <th>계수 H</th>
+    </tr>
+    <tr>
+      <td>표준 보일러</td>
+      <td>0</td>
+      <td>0.0004</td>
+    </tr>
+    <tr>
+      <td>저온보일러</td>
+      <td>0.0004</td>
+      <td>0.0004</td>
+    </tr>
+    <tr>
+      <td>가스 콘덴싱 보일러</td>
+      <td>0.002</td>
+      <td>0.002</td>
+    </tr>
+    <tr>
+      <td>기름 콘덴싱 보일러</td>
+      <td>0</td>
+      <td>0.0004</td>
+    </tr>
+  </table>
+
+</body>
 </html>
 
-
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>온도 보정 계수</title>
-  <style>
-    table {
-      margin: auto;
-      border-collapse: collapse;
-      width: 70%;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 6px 12px;
-      text-align: center;
-    }
-    th {
-      background-color: #f9f9f9;
-    }
-  </style>
-</head>
-<h5>&lt;Table 1.4.6.1-16. 온도 보정계수&gt;</h5>
-
-<table>
-  <tr>
-    <th rowspan="1">보일러 유형</th>
-    <th>계수 G<th> 
-    <th>계수 H</th>
-  </tr>
-  <tr>
-    <td>표준 보일러</td>
-    <td>0</td>
-    <td>0.0004</td>
-  </tr>
-  <tr>
-    <td>저온보일러</td>
-    <td>0.0004</td>
-    <td>0.0004</td>
-  </tr>
-  <tr>
-    <td>가스 콘덴싱 보일러</td>
-    <td>0.002</td>
-    <td>0.002</td>
-  </tr>
-  <tr>
-    <td>기름 콘덴싱 보일러</td>
-    <td>0</td>
-    <td>0.0004</td>
-  </tr>
-</table>
-</html>
 
  
 
@@ -2347,10 +2444,20 @@ $$ <span class="eq-number">(1.4.7.5-2)</span>
       Where,
     </div>
 
-    <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-    <span style="display: block;">\( \Phi_{DS} \): 정격 출력(= \(\dot{Q}_N\))</span>   
+    <!-- 수식 설명들 -->
+    <span style="display: block;">\( Q_{h,g} \)
+      : 발전기(지역난방 기계실) 열손실량 (Heat loss from district heating station) [단위 kWh]</span>
+    <span style="display: block;">\( H_{DS} \)
+      : 지역난방 기계실의 열전달계수 (Heat transfer coefficient of district heating station) [단위 W/K]</span>
+    <span style="display: block;">\( \vartheta_{DS} \)
+      : 지역난방 기계실의 내부온도 (Internal temperature of district heating station) [단위 °C]</span>
+    <span style="display: block;">\( \vartheta_i \)
+      : 인접 공간(주거 또는 비가열구역)의 온도 (Temperature of adjacent indoor zone) [단위 °C]</span>
+    <span style="display: block;">\( B_{DS} \)
+      : 지역난방 기계실의 열손실 상수 (Heat loss constant of district heating station) [단위 W/K·m³\(^{1/3}\)]</span>
+    <span style="display: block;">\( \Phi_{DS} \): 정격 출력(= \(\dot{Q}_N\))</span>  
   </div>
-</div> 
+</div>
 
 
 <div align="center">
