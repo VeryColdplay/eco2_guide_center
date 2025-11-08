@@ -6,7 +6,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://verycoldplay.github.io/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Energy_use/Heating_system.html" rel="canonical"/>
-<link href="../HVAC/HCHD.html" rel="prev"/>
+<link href="../HVAC/Integration.html" rel="prev"/>
 <link href="Cooling_system.html" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.15" name="generator"/>
@@ -251,23 +251,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../HVAC/Integration.html">
 <span class="md-ellipsis">
-    1. 분석치의 연계
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../HVAC/Fan.html">
-<span class="md-ellipsis">
-    2. 송풍
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../HVAC/HCHD.html">
-<span class="md-ellipsis">
-    3. 가열, 냉각, 가습, 제습
+    공조처리
     
   </span>
 </a>
@@ -1375,7 +1359,7 @@ $$ <span class="eq-number">(1.3.1-2)</span>
 </ul>
 <div align="center">
 $$
-\beta_{h,s} = \frac{Q_{h,b} + Q_{h,ce} + Q_{h,d}}{\dot{Q}_{dot\,h,max} \cdot t_h}
+\beta_{h,s} = \frac{Q_{h,b} + Q_{h,ce} + Q_{h,d}}{\dot{Q}_{h,max} \cdot t_h}
 $$ <span class="eq-number">(1.3.1-3)</span>
 </div>
 <ul>
@@ -1383,7 +1367,7 @@ $$ <span class="eq-number">(1.3.1-3)</span>
 </ul>
 <div align="center">
 $$
-\beta_{h,g} = \frac{Q_{h,b} + Q_{h,ce} + Q_{h,d} + Q_{h,s}}{\dot{Q}_{dot\,h,max} \cdot t_h}
+\beta_{h,g} = \frac{Q_{h,b} + Q_{h,ce} + Q_{h,d} + Q_{h,s}}{\dot{Q}_{h,max} \cdot t_h}
 $$ <span class="eq-number">(1.3.1-4)</span>
 </div>
 <div style="
@@ -1447,7 +1431,7 @@ $$ <span class="eq-number">(1.3.2-3)</span>
 </ul>
 <div align="center">
 $$
-\theta_{RL,m}(\beta_i) = ( \theta_{RA} - \theta_{i,h,soll} ) \cdot \beta_j^{\frac{1}{n}} + \theta_{i,h,soll}
+\theta_{RL,m}(\beta_i) = ( \theta_{RA} - \theta_{i,h,soll} ) \cdot \beta_i^{\frac{1}{n}} + \theta_{i,h,soll}
 $$ <span class="eq-number">(1.3.2-4)</span>
 </div>
 <div style="
@@ -1807,7 +1791,7 @@ $$ <span class="eq-number">(1.3.4-6)</span>
 </ul>
 <div align="center">
 $$
-d_{Nutz,mth} = \frac{d_{Nutz,A}}{365} \cdot d_{mth}
+d_{Nutz,mth} = \frac{d_{Nutz,A}}{t_{h}} \cdot d_{mth}
 $$ <span class="eq-number">(1.3.4-7)</span>
 </div>
 <ul>
@@ -3428,9 +3412,13 @@ $$ <span class="eq-number">(1.4.7.5-2)</span>
 <span style="display: block;">\( \Phi_{DS} \): 정격 출력(= \(Q_{N}\))</span>
 </div>
 </div>
-<div align="center">$$
-\theta_{DS} = D_{DS} \cdot \theta_{\text{prim,DS}} + (1 - D_{DS}) \cdot \theta_{\text{sek,DS}}
-$$ <span class="eq-number">(1.4.7.5-3)</span>
+<div align="center">
+$$
+v_{DS} =
+D_{DS} \cdot v_{\mathrm{prim},DS}
++ \left( 1 - D_{DS} \right) \cdot v_{\mathrm{sek},DS}
+$$
+<span class="eq-number">(1.4.7.5-3)</span>
 </div>
 <div style="
   display: flex;
@@ -3472,9 +3460,14 @@ $$ <span class="eq-number">(1.4.7.5-3)</span>
 지역난방 열이 건물로 중계되는 과정의 보조에너지는 무시하며, 난방 시스템의 공급온도제어가 기계실에서 이루어질 시, 이에 대한 보조에너지로 월간 10 kWh를 적용합니다.   </br></p>
 <h2 id="15-hvac-heating-coil-energy-need">1.5. HVAC 가열 유닛(Heating coil) 에너지 요구량 (Energy need)<a class="headerlink" href="#15-hvac-heating-coil-energy-need" title="Permanent link">¶</a></h2>
 <p>공조시스템의 가열유닛에 필요한 에너지 요구량 (<span class="arithmatex">\( Q_{h^*,b} \)</span>)은 #절에서 계산된 공조 가열 에너지 요구량 (<span class="arithmatex">\( Q_{vh,b} \)</span>)에 전달 및 분배 과정에서 발생하는 손실을 더하여 산정됩니다.</p>
-<div align="center">$$
-Q_{h^*,b} = Q_{vh,b} + Q_{vh,ce} + Q_{vh,d}
-$$  <span class="eq-number">(1.5-1)</span>
+<div align="center">
+$$
+Q_{h,b}^{\ast} =
+Q_{vh,b} +
+Q_{vh,ce} +
+Q_{vh,d}
+$$
+<span class="eq-number">(1.5-1)</span>
 </div>
 <hr/>
 <h3 id="151-q_vhce">1.5.1. 전달 과정 열손실 (<span class="arithmatex">\( Q_{vh,ce} \)</span>)<a class="headerlink" href="#151-q_vhce" title="Permanent link">¶</a></h3>
@@ -3574,7 +3567,7 @@ $$ <span class="eq-number">(1.5.5-5)</span>
 <span class="md-icon" title="마지막 업데이트">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 11월 7일 11:48:55 UTC">2025년 11월 7일</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 11월 7일 16:42:26 UTC">2025년 11월 7일</span>
 </span>
 </aside>
 </article>

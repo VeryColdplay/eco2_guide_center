@@ -2320,7 +2320,7 @@ $$ <span class="eq-number">(1.4.7.5-1)</span>
 </div>
 
 <div align="center">$$
-H_{DS} = B_{DS} \cdot \Phi_{DS}^{1/3}
+H_{DS} = B_{DS} \cdot \Phi_{DS}^{\frac{1}{3}}
 $$ <span class="eq-number">(1.4.7.5-2)</span>
 </div>
 
@@ -2348,7 +2348,7 @@ $$ <span class="eq-number">(1.4.7.5-2)</span>
     </div>
 
     <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-    <span style="display: block;">\( \Phi_{DS} \): 정격 출력(= \(Q_{N}\))</span>   
+    <span style="display: block;">\( \Phi_{DS} \): 정격 출력(= \(\dot{Q}_N\))</span>   
   </div>
 </div> 
 

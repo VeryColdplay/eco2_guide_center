@@ -98,10 +98,40 @@
 </div>
   
 
-  <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-<span style="display: block;">\( \dot{V}_{\mathrm{mech},b,m} \) : 월별 기준 급기풍량 (DIN V 18599-2에 정의됨) [단위 m³/h]</span>
-<span style="display: block;">\( \dot{V}_{\mathrm{mech},m} \) : 열공조 에너지 요구량 산정 시 사용되는 월평균 급기풍량 [단위 m³/h]</span>
-<span style="display: block;">\( \dot{V}^{\ast} \) : 설계 급기풍량 [단위 m³/h]</span>
+</div>
+<div style="
+  display: flex;
+  justify-content: center;
+  font-family: Pretendard, sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+">
+  <div style="
+    text-align: left;
+    line-height: 1;
+    padding: 4px 8px;
+    border-radius: 0px;
+  ">
+    <!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
+    <div style="
+      font-style: italic;
+      font-weight: bold;
+      font-family: 'Times New Roman', 'Cambria Math', serif;
+      margin-bottom: 24px;
+    ">
+      Where,
+    </div>
+
+    <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
+    <span style="display: block;">\( \dot{V}_{\mathrm{mech},b,m} \)
+      : 월별 기준 급기풍량 (DIN V 18599-2에 정의됨) [단위 m³/h]</span>
+    <span style="display: block;">\( \dot{V}_{\mathrm{mech},m} \)
+      : 열공조 에너지 요구량 산정 시 사용되는 월평균 급기풍량 [단위 m³/h]</span>
+    <span style="display: block;">\( \dot{V}^{\ast} \)
+      : 설계 급기풍량 [단위 m³/h]</span>
+  </div>
+</div>
+
 
 
 ## 1.3. 시간 및 용도 기반 변풍량방식(VAV) 공조기의 급기풍량
@@ -173,6 +203,57 @@ $$
  \sum_{m} \dot{V} = t_{V,\mathrm{mech},m} \cdot d_{V,\mathrm{mech},m} \cdot \dot{V}_{\mathrm{mech},b,m} + \frac{Q_{c,b}}{c_{p,L} \cdot \rho_{L} \cdot\left( \vartheta_{i,c,m} - \vartheta_{V,\mathrm{mech},m} \right)}$$
  <span class="eq-number">(1.4-2)</span>
 </div>   
+
+</div>
+<div style="
+  display: flex;
+  justify-content: center;
+  font-family: Pretendard, sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+">
+  <div style="
+    text-align: left;
+    line-height: 1;
+    padding: 4px 8px;
+    border-radius: 0px;
+  ">
+    <!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
+    <div style="
+      font-style: italic;
+      font-weight: bold;
+      font-family: 'Times New Roman', 'Cambria Math', serif;
+      margin-bottom: 24px;
+    ">
+      Where,
+    </div>
+
+    <!-- 수식 설명들 -->
+    <span style="display: block;">\( \dot{V}_{\mathrm{mech},m} \)
+      : 열공조 에너지 요구량 산정을 위한 월평균 급기풍량 [단위 m³/h]</span>
+    <span style="display: block;">\( \sum_m \dot{V} \)
+      : 각 월별 급기풍량의 합계 [단위 m³/h]</span>
+    <span style="display: block;">\( \dot{V}_{\mathrm{mech},b,m} \)
+      : DIN V 18599-2에 따른 월별 기준 급기풍량 [단위 m³/h]</span>
+    <span style="display: block;">\( Q_{c,b} \)
+      : 건물 에너지 밸런스에서 산정된 월별 냉방 에너지 요구량 [단위 kWh]</span>
+    <span style="display: block;">\( t_{V,\mathrm{mech},m} \)
+      : 월별 일일 송풍 운전시간 [단위 h/d]</span>
+    <span style="display: block;">\( d_{V,\mathrm{mech},m} \)
+      : 월별 송풍기 운전일수 [단위 d]</span>
+    <span style="display: block;">\( \vartheta_{i,c,m} \)
+      : DIN V 18599-2에 정의된 구역의 월평균 실내온도 [단위 °C]</span>
+    <span style="display: block;">\( \vartheta_{V,\mathrm{mech},m} \)
+      : 월별 공조기 급기온도 평균값 [단위 °C]</span>
+    <span style="display: block;">\( \rho_L \)
+      : 표준대기압에서의 공기 밀도 [단위 kg/m³]</span>
+    <span style="display: block;">\( c_{p,L} \)
+      : 공기의 비열 [단위 kJ/(kg·K)]</span>
+    <span style="display: block;">\( c_{p,L} \rho_L \)
+      : 0.34 Wh/(m³·K)로 간주 가능</span>
+  </div>
+</div>
+
 
 - 최대급기풍량 (\(\dot{V}_{\mathrm{mech},\max,m}\)): 월별 최대 냉방 부하(\(\dot{Q}_{c,max,m}\))를 처리하기 위해 필요한 풍량으로, 송풍 에너지 계산에 사용됩니다.   
 
@@ -259,6 +340,56 @@ $$
 <span class="eq-number">(2.1.1-2)</span>
 </div>
 
+</div>
+<div style="
+  display: flex;
+  justify-content: center;
+  font-family: Pretendard, sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+">
+  <div style="
+    text-align: left;
+    line-height: 1;
+    padding: 4px 8px;
+    border-radius: 0px;
+  ">
+    <!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
+    <div style="
+      font-style: italic;
+      font-weight: bold;
+      font-family: 'Times New Roman', 'Cambria Math', serif;
+      margin-bottom: 24px;
+    ">
+      Where,
+    </div>
+
+    <!-- 수식 설명들 -->
+    <span style="display: block;">\( P_V \)
+      : 송풍기의 전력소비량 (Electrical power of the fan) [단위 W]</span>
+    <span style="display: block;">\( \eta \)
+      : 송풍기, 구동장치, 모터 및 속도제어 회로의 평균 전체 효율 (Mean overall efficiency)</span>
+    <span style="display: block;">\( \dot{V} \)
+      : 부분부하 운전 시 공기유량 (Air volume flow in part load operation) [단위 m³/h]</span>
+    <span style="display: block;">\( \Delta p^{\ast} \)
+      : 설계 풍량 조건에서의 공급 또는 배기 덕트 내 전압강하 (Total pressure drop) [단위 Pa]</span>
+
+    <div style="
+      font-style: italic;
+      font-weight: bold;
+      font-family: 'Times New Roman', 'Cambria Math', serif;
+      margin: 24px 0 16px 0;
+    ">
+      The following subscripts are used:
+    </div>
+
+    <!-- 아래첨자 설명 -->
+    <span style="display: block;">ZUL : 급기 (Supply air)</span>
+    <span style="display: block;">ABL : 배기 (Exhaust air)</span>
+  </div>
+</div>
+
+
 - 급기와 배기 풍량이 5% 미만의 편차를 보일 경우, 아래와 같이 가정합니다:   
 
 <div align="center">$$
@@ -301,6 +432,47 @@ Q_{V,E,m} = (P_{V,ZUL,m} + P_{V,ABL,m}) \cdot t_{V,\mathrm{mech},m} \cdot d_{V,\
 \frac{ \dot{V}_{ABL}^3 \Delta p^*_{ABL} (1 - f_{p,ABL}) }{ \eta_{ABL} \, \dot{V}_{ABL}^{*2} }$$
 <span class="eq-number">(2.2.2-2)</span>
 </div>
+
+</div>
+<div style="
+  display: flex;
+  justify-content: center;
+  font-family: Pretendard, sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+">
+  <div style="
+    text-align: left;
+    line-height: 1;
+    padding: 4px 8px;
+    border-radius: 0px;
+  ">
+    <!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
+    <div style="
+      font-style: italic;
+      font-weight: bold;
+      font-family: 'Times New Roman', 'Cambria Math', serif;
+      margin-bottom: 24px;
+    ">
+      Where,
+    </div>
+
+    <!-- 수식 설명들 -->
+    <span style="display: block;">\( P_V \)
+      : 부분부하 조건에서의 송풍기 전력소비량 (Electrical power of the fan under part load conditions) [단위 W]</span>
+    <span style="display: block;">\( f_p \)
+      : 압력상관비계수 (Pressure ratio factor)</span>
+    <span style="display: block;">\( \eta \)
+      : 송풍기, 구동장치, 모터 및 속도제어 회로의 평균 전체 효율 (Mean overall efficiency)</span>
+    <span style="display: block;">\( \dot{V} \)
+      : 부분부하 운전 시 공기유량 (Air volume flow in part load operation) [단위 m³/h]</span>
+    <span style="display: block;">\( \dot{V}^{\ast} \)
+      : 설계 공기유량 (최대 풍량) (Design air volume flow, maximum volume flow) [단위 m³/h]</span>
+    <span style="display: block;">\( \Delta p^{\ast} \)
+      : 설계 풍량에서의 공급 또는 배기 덕트 내 전체 압력손실 (Total pressure drop across ductwork at design air volume flow) [단위 Pa]</span>
+  </div>
+</div>
+
 
 - 압력상관비계수:   
 <div align="center">$$
@@ -345,6 +517,43 @@ f_{p} = \frac{\Delta p_{\mathrm{konst}}}{\Delta p^{*}}$$
 Q_{V,E,m} = \sum_{j} t_{V,\mathrm{mech},j,m} \cdot \left( P_{V,ZUL,j} + P_{V,ABL,j} \right)$$
 <span class="eq-number">(2.2.3-1)</span>
 </div>
+
+</div>
+<div style="
+  display: flex;
+  justify-content: center;
+  font-family: Pretendard, sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+">
+  <div style="
+    text-align: left;
+    line-height: 1;
+    padding: 4px 8px;
+    border-radius: 0px;
+  ">
+    <!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
+    <div style="
+      font-style: italic;
+      font-weight: bold;
+      font-family: 'Times New Roman', 'Cambria Math', serif;
+      margin-bottom: 24px;
+    ">
+      Where,
+    </div>
+
+    <!-- 수식 설명들 -->
+    <span style="display: block;">\( j \)
+      : 각 부분부하 운전을 식별하는 일련 변수 (Serial variable identifying the respective part load operation)</span>
+    <span style="display: block;">\( t_{V,\mathrm{mech},j,m} \)
+      : 부분부하 운전 \( j \)의 월별 운전시간 (Monthly number of operating hours for part load operation \( j \)) [단위 h]</span>
+    <span style="display: block;">\( P_{V,\mathrm{ZUL},j} \)
+      : 부분부하 운전 \( j \)에서의 급기팬 전력소비량 (Electrical power of the supply air fan for part load operation \( j \)) [단위 kW]</span>
+    <span style="display: block;">\( P_{V,\mathrm{ABL},j} \)
+      : 부분부하 운전 \( j \)에서의 배기팬 전력소비량 (Electrical power of the extract air fan for part load operation \( j \)) [단위 kW]</span>
+  </div>
+</div>
+
    
 
 ### 2.2.4. 실내 냉방부하에 따른 변풍량방식 공조기
@@ -370,6 +579,92 @@ Q_{V,E,m} = Q_{V,E,ZUL,m} + Q_{V,E,ABL,m}$$
 \sum_{m} \dot{V}^3 = \sum_{m} \dot{V} \cdot \left( 0.8 \cdot \dot{V}_{\mathrm{mech},m} + 0.2 \cdot \dot{V}_{\mathrm{mech},\max,m} \right)^2 $$
 <span class="eq-number">(2.2.4-4)</span>
 </div>
+
+</div>
+<div style="
+  display: flex;
+  justify-content: center;
+  font-family: Pretendard, sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+">
+  <div style="
+    text-align: left;
+    line-height: 1;
+    padding: 4px 8px;
+    border-radius: 0px;
+  ">
+    <!-- Where 텍스트 -->
+    <div style="
+      font-style: italic;
+      font-weight: bold;
+      font-family: 'Times New Roman', 'Cambria Math', serif;
+      margin-bottom: 24px;
+    ">
+      Where,
+    </div>
+
+    <!-- 수식 설명들 -->
+    <span style="display: block;">\( \Delta p^{\ast} \)
+      : 설계 풍량 조건에서 덕트 내 전체 압력손실 (Total pressure drop across the ductwork at design volume flow) [단위 Pa]</span>
+    <span style="display: block;">\( f_p \)
+      : (13)식에 의해 계산된 덕트의 압력상관비계수 (Pressure-ratio factor of the ductwork calculated using equation (13))</span>
+    <span style="display: block;">\( \dot{V}^{\ast} \)
+      : 설계 공기유량 (최대 풍량) (Design air volume flow, maximum volume flow) [단위 m³/h]</span>
+    <span style="display: block;">\( \sum_m \dot{V} \)
+      : 월별 공급공기 유량의 합계 (Supply air volume flow transported monthly) [단위 m³/h]</span>
+    <span style="display: block;">\( \sum_m \dot{V}^3 \)
+      : 월별 공급공기 유량의 세제곱합 (Cube of the monthly air volume flows) [단위 m⁹/h³]</span>
+    <span style="display: block;">\( \eta \)
+      : 송풍기, 구동장치, 모터 및 속도제어 회로의 평균 전체 효율 (Mean overall efficiency)</span>
+
+    <!-- 아래첨자 설명 -->
+    <div style="
+      font-style: italic;
+      font-weight: bold;
+      font-family: 'Times New Roman', 'Cambria Math', serif;
+      margin: 24px 0 16px 0;
+    ">
+      The following subscripts are used:
+    </div>
+
+    <span style="display: block;">ZUL : 급기 (Supply air)</span>
+    <span style="display: block;">ABL : 배기 (Extract air)</span>
+  </div>
+</div>
+
+<!-- 두 번째 where (식 19 하단) -->
+<div style="
+  display: flex;
+  justify-content: center;
+  font-family: Pretendard, sans-serif;
+  font-size: 15px;
+  margin-top: 8px;
+">
+  <div style="
+    text-align: left;
+    line-height: 1;
+    padding: 4px 8px;
+    border-radius: 0px;
+  ">
+    <div style="
+      font-style: italic;
+      font-weight: bold;
+      font-family: 'Times New Roman', 'Cambria Math', serif;
+      margin-bottom: 24px;
+    ">
+      Where,
+    </div>
+
+    <span style="display: block;">\( \dot{V}_{\mathrm{mech},m} \)
+      : 월별 평균 급기풍량 (Mean monthly supply air volume flow) [단위 m³/h]</span>
+    <span style="display: block;">\( \dot{V}_{\mathrm{mech},\max,m} \)
+      : 월별 최대 급기풍량 (Maximum monthly supply air volume flow) [단위 m³/h]</span>
+    <span style="display: block;">\( \sum_m \dot{V} \)
+      : 해당 월의 공급공기 유량의 합계 (Supply air volume flow in the respective month) [단위 m³/h]</span>
+  </div>
+</div>
+
 
 ---
 

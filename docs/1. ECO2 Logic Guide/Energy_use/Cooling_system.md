@@ -115,7 +115,9 @@ Q_{c^*,b} = Q_{vc,b} + Q_{vc,ce} + Q_{vc,d}$$
 </div>
 
 
-**- 전달 손실(\(Q_{vc,ce}\))**: 대다수의 시스템에서 전달 손실 기준은 없으며, 전달 과정 효율 (\(η_{vc,ce}\))은 1을 적용합니다.
+**- 전달 손실(\(Q_{vc,ce}\))**: 별도의 효율 가이드라인이 없는 경우, 전달 과정 효율은 1을 적용합니다.
+
+
 <div align="center">$$
 Q_{vc,ce} = \left(1 - \eta_{vc,ce}\right) \cdot Q_{vc,b}$$
 <span class="eq-number">(2.1.1-2)</span>
