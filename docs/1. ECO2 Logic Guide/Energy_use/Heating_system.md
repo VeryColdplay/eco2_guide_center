@@ -232,7 +232,7 @@ $$Q_{I,h}=Q_{I,h,d}+Q_{I,h,s}+Q_{I,h,g} \tag{1.2.3-1}$$
 
 평균 부하율(\( \beta_{i} \))은 시스템의 최대 공급 능력 대비 실제 평균 부하가 어느 정도인지를 나타내는 무차원 변수입니다.    각 단계(전달, 분배, 저장, 생산)마다 열손실이 존재하므로, 각 단계의 부하율을 개별적으로 계산합니다.   
 
-- **열 전달 부하율 \( \beta_{h,ce} \)**
+- 열 전달 부하율 \( \beta_{h,ce} \)
 
 <div align="center">
 $$
@@ -240,7 +240,7 @@ $$
 $$
 </div>
 
-- **열 분배 부하율 \( \beta_{h,d} \)**
+- 열 분배 부하율 \( \beta_{h,d} \)
 
 <div align="center">
 $$
@@ -248,7 +248,7 @@ $$
 $$
 </div>
 
-- **열 저장 부하율 \( \beta_{h,s} \)**
+- 열 저장 부하율 \( \beta_{h,s} \)
 
 <div align="center">
 $$
@@ -256,7 +256,7 @@ $$
 $$
 </div>
 
-- **열 생산 부하율 \( \beta_{h,g} \)**
+- 열 생산 부하율 \( \beta_{h,g} \)
 
 <div align="center">
 $$
@@ -276,7 +276,7 @@ $$
 
 온도에 따라 자동 조절되는 난방 시스템에서, 개별 프로세스(전달, 분배, 저장, 생산)의 온도는 시스템의 설계 조건에서 평균 부하율과 평균 온도차에 의해 정해집니다. 온도 $\theta_{HK,m(\beta_{j})}$ 를 산정합니다.   
 
-- **평균 난방 사이클 온도(\( \theta_{HK,m} \))**
+- 평균 난방 사이클 온도(\( \theta_{HK,m} \))
 
 <div align="center">
 $$
@@ -284,7 +284,7 @@ $$
 $$
 </div>
 
-- **평균 온도차(\( \Delta \theta_{HK,m}(\beta_i) \))**
+- 평균 온도차(\( \Delta \theta_{HK,m}(\beta_i) \))
 
 <div align="center">
 $$
@@ -293,7 +293,7 @@ $$
 </div>
 
 
-- **평균 공급 온도(\(\theta_{VL,m}\))**
+- 평균 공급 온도(\(\theta_{VL,m}\))
 
 <div align="center">
 $$
@@ -302,7 +302,7 @@ $$
 </div>
 
 
-- **평균 환수 온도(\( \theta_{RL,m} \))**
+- 평균 환수 온도(\( \theta_{RL,m} \))
 
 <div align="center">
 $$
@@ -320,7 +320,7 @@ $$
 
     
 
-- **작동 유체(Working fluid)의 평균 초과 온도 \( \Delta \theta_A \)**
+- 작동 유체(Working fluid)의 평균 초과 온도 \( \Delta \theta_A \)
 
 <div align="center">
 $$
@@ -369,7 +369,7 @@ $$
 
 * 보일러 정격출력 ($\dot{Q}_{N,h}$) 보일러의 정격 출력을 산정하기 위해 첫 번째로 모든 연결된 열 소비기기의 최대 수요가 결정되어야 합니다. 동시 발생하는 수요에 따라 보일러의 정격 출력은 가장 큰 단일 수요 또는 동시 발생하는 수요의 합 중에서 결정됩니다.    
 
-- **난방 시스템의 보일러 정격 출력(\(\dot{Q}_{N,h}\))**:   
+- 난방 시스템의 보일러 정격 출력(\(\dot{Q}_{N,h}\)):   
 
 <div align="center">
 $$
@@ -902,6 +902,7 @@ t_{P} = \beta_{h,s}\cdot 24 [h/d]\cdot d_{h,mth} \text{ (열 생산기기와 동
 > • $\beta_{h,s}$는 열 저장 부하율 입니다.  
 > • $d_{h,mth}$는 월별 난방 일 수 입니다. [d]  
 
+
 ### **1.4.6. 열 생산기기(보일러)의 에너지 공급량(Heat output)**
 
 * 난방 시스템에 태양열 시스템이나 공조 시설 등으로부터 열이 공급되면, 난방 시스템에서 요구하는 추가 열량을 보일러와 같은 열 생산기기로 공급해야 합니다. 이를 생산기기 잔여 열 공급량 ($Q_{h}^{*}$) 이라고 정의하고 아래와 같이 계산합니다.     
@@ -917,12 +918,15 @@ $$
 > • $Q_{h,sol}$는 월별 난방 일 수 입니다. [d]  
 > • $Q_{rv,h,outg}$는 월별 난방 일 수 입니다. [d]  
 
+
+
+
 * 보일러가 여러 대 적용된 경우, 공급되는 열량은 차례대로 계산합니다.  
 * 난방과 급탕이 하나의 보일러로 공급될 경우, 난방 운전시간에서 급탕을 위한 가동시간을 차감합니다.  
 * 난방/급탕/공조를 위해 요구되는 보일러의 최대 성능은 동시 가동할 경우 모든 보일러 성능의 합 또는 순차 가동의 최대 보일러 성능으로부터 정합니다.   
 
 <div align="center">$$
-\dot{Q}_N = \max \left( \sum \dot{Q}_{N,\text{동시 가동}}, \dot{Q}_{\text{순차 가동}} \right)  \tag{1.4.6-2}
+\dot{Q}_N = \max \left( \sum \dot{Q}_{N,\text{gleichzeitig}}, \dot{Q}_{\text{V orrang}} \right)  \tag{1.4.6-2}
 $$
 </div>
   
@@ -939,19 +943,19 @@ $$
 $$
 </div>
 
-* 다수 보일러 동시 가동 시 부하율 (\( \beta_{h,i} \)):   
-<div align="center">
-$$
-\beta_{h,i} = \frac{ \dot{Q}_{d,in} }{ \sum \dot{Q}_{N,j} }  \tag{1.4.6.1-2}
-$$
-</div>
+* 다수 보일러 동시 가동 시 부하율 (\(\beta_{h,i}\)):  
+각 보일러의 부하율은 평균 열 출력과 각 보일러의 정격 열 출력의 합의 비 입니다.  
 
-* 다수 보일러 순차 가동 시 부하율 (\( \beta_{h,n} \)):   
 <div align="center">
-$$
-\beta_{h,n} = \frac{ \dot{Q}_{d,in} - \sum \dot{Q}_{N,n-1} }{ \dot{Q}_{N,n} } \quad (\dot{Q}_{d,in} < \sum \dot{Q}_{N,n} \text{일 경우})  \tag{1.4.6.1-3}
-$$
-</div>
+$$\beta_{h,i}=\frac{\dot{Q}_{d,in}}{\sum\dot{Q}_{N,j}}\tag{1.4.6.1-2}$$</div>
+
+
+* 다수 보일러 순차 가동 시 n번째로 가동되는 보일러의 부하율 (\(\beta_{h,n}\)):  
+
+보일러의 정격 출력은 각 보일러가 가동되는 순서에 따라 단계별로 합산됩니다. 각 단계 이후 보일러의 출력의 합이 요구량 미만일 경우, 보일러는 최대 부하 가동을 유지합니다. 추가된 보일러의 출력 합이 요구량을 초과할 경우에만, 마지막 n 번째에 가동되는 보일러가 부분 부하로 가동합니다.  
+
+<div align="center">
+$$\beta_{h,n}=\frac{\dot{Q}_{d,in}-\sum\dot{Q}_{N,n-1}}{\dot{Q}_{N,n}}\quad(\dot{Q}_{d,in} \lt \sum\dot{Q}_{N,n} \text{ 일 경우}) \tag{1.4.6.1-3}$$</div>
 
 
 > Where,  
@@ -984,7 +988,7 @@ Q_{h,g,v,i} = \frac{ \beta_{h,i} - \beta_{K,pl} }{ 1 - \beta_{K,pl} } \cdot (\do
 
 급탕 가열을 위한 보일러의 정격 출력 시 일일 운전 시간 (\(t_{w,100\%}\)):
 <div align="center">$$
-t_{w,100\%}=\frac{Q_{w,outg}}{\dot{Q}_{N}\cdot d_{Nutz,mth}}\tag{1.4.6.1-7  \tag{1.4.6.1-7}}$$</div>
+t_{w,100\%}=\frac{Q_{w,outg}}{\dot{Q}_{N}\cdot d_{Nutz,mth}} \tag{1.4.6.1-7}$$</div>
 
 > Where,  
 >
@@ -1006,12 +1010,9 @@ t_{w,100\%}=\frac{Q_{w,outg}}{\dot{Q}_{N}\cdot d_{Nutz,mth}}\tag{1.4.6.1-7  \tag
 \dot{Q}_{d,in} = \frac{ Q_{h,outg} }{ d_{h,rB} \cdot (t_{h,r,L,T} - t_{w,100\%}) }  \tag{1.4.6.1-8}
 $$
 </div>
-
-- 난방/급탕/공조 시:   
-<div align="center">$$
-\dot{Q}_{d,in} = \sum \left( \frac{ Q_{h,outg} }{ t_{\text{operation,K}} - t_{w,100\%} } \cdot d_{\text{use,mth}} \right)  \tag{1.4.6.1-9}
-$$
-</div>
+ 
+* 난방/급탕/공조 시:
+<div align="center">$$\dot{Q}_{d,in}=\sum(\frac{Q_{h,outg}}{t_{Betrieb,K}-t_{w,100\%}}\cdot d_{Nutz,mth})\tag{1.4.6.1-9}$$</div>
    
 > Where,  
 >
@@ -1020,17 +1021,9 @@ $$
 
 * 보일러의 일일 열 손실: 보일러의 일일 열 손실은 대기(정지) 상태, 부분 부하 상태, 그리고 최대 부하(100%) 운전 상태에서의 손실로 구분됩니다.
 
-- 대기 손실 성능 (\( \dot{Q}_{B,h} \)):   
-<div align="center">$$
-\dot{Q}_{B,h} = q_{B,θ} \cdot \left( \frac{ \dot{Q}_N }{ \eta_{K,100\%} } \right) \cdot f_{Hs/Hi}  \tag{1.4.6.1-10}
-$$
-</div>
-
-<div align="center">
-$$
-q_{B,θ} = q_{B,70} \cdot \frac{ \theta_{HK,m} - \theta_i }{ 70 - 20 }  \tag{1.4.6.1-11}
-$$
-</div>
+* 대기 상태 손실 (\( \dot{Q}_{B,h}\)):
+<div align="center">$$\dot{Q}_{B,h}=q_{B,\theta}\cdot(\frac{\dot{Q}_{N}}{\eta_{K,100\%}})\cdot f_{Hs/Hi}\tag{1.4.6.1-10}$$</div>
+<div align="center">$$q_{B,\theta}=q_{B,70}\cdot\frac{\theta_{HK,m}-\theta_{i}}{70-20 [°C]}\tag{1.4.6.1-11}$$</div>
 
 > Where,  
 >
@@ -1047,29 +1040,18 @@ $$
 $$
 </div>
 
-* 부분 부하 시 손실 (\(dot{Q}_{V,g,pl\%}\)):  
-<div align="center">$$
-\dot{Q}_{V,g,pl} = \frac{ f_{Hs/Hi} - \eta_{K,pl\%,Betrieb} }{ \eta_{K,pl\%,Betrieb} } \cdot \beta_{K,pl} \cdot \dot{Q}_N  \tag{1.4.6.1-13}
-$$
-</div>
+* 부분 부하 시 손실 ($\dot{Q}_{V,g,pl\%}$):  
+<div align="center">$$\dot{Q}_{V,g,pl}=\frac{f_{Hs/Hi}-\eta_{K,pl\%,Betrieb}}{\eta_{K,pl\%,Betrieb}}\cdot\beta_{K,pl}\cdot\dot{Q}_{N}\tag{1.4.6.1-13}$$</div>
 
-- \(\eta_{K,100\%,\text{Betrieb}}\):
-<div align="center">
-$$
-\eta_{K,100\%,\text{Betrieb}} = \eta_{K,100\%} + G \cdot (\theta_{g,\text{test},100} - \theta_{HK,m})
-$$ <span class="eq-number">(1.4.6.1-13)</span>
-</div>
-
-* 보일러의 평균 운전 온도 (\(\vartheta_{HK,m}\)) (콘덴싱 보일러의 경우, 평균 회수 온도 \(\vartheta_{RL,m}\) 사용)가 Table 1.4.6.1-14 의 테스트 온도와 다르면 보일러 효율은 바뀐 온도 조건에 맞춰야 합니다.
+* 보일러의 평균 운전 온도 ($\vartheta_{HK,m}$) (콘덴싱 보일러의 경우, 평균 회수 온도 $\vartheta_{RL,m}$ 사용)가 Table 1.4.6.1-14 의 테스트 온도와 다르면 보일러 효율은 바뀐 온도 조건에 맞춰야 합니다.
 
 * 최대  부하 시 보일러 운전 효율 (\(\eta_{K,100\%,Betrieb}\)):  
 <div align="center">
 $$
-$$\eta_{K,100\%,Betrieb}=\eta_{K,100\%}+G\cdot(\theta_{g,test,100}-\theta_{HK,m})  \tag{1.4.6.1-14}$$
-$$
+\eta_{K,100\%,Betrieb}=\eta_{K,100\%}+G\cdot(\theta_{g,test,100}-\theta_{HK,m})  \tag{1.4.6.1-14}$$
 </div>
 
-* 부분 부하 시 보일러 운전 효율 (\(\eta_{K,pl\%,Betrieb}$\)):
+* 부분 부하 시 보일러 운전 효율 (\(\eta_{K,pl\%,Betrieb}\)):
 
 <div align="center">
 $$
@@ -1112,12 +1094,10 @@ $$
 > • $t_{h,rL,T}:$ 일일 설계 운전 시간 [h]  
 > • $t_{w,100\%}$ : 급탕 가열을 위한 보일러의 정격 출력 시 일일 운전 시간 [h]  
 
-* 난방 보조에너지 (\( Q_{h,g,aux} \))**: 보일러의 난방 보조에너지는 급수-환수 온도 차 \(20^{\circ}C\) 일 때 유량 및 평균 부하율 (\(\beta_{h,i}\))를 기준으로 최대 부하/부분 부하/대기 모드에서 측정된 보일러의 보조 전력소비 (\(P_{aux}\)) 을 기반으로 산정합니다.  
 
-<div align="center">$$
-Q_{h,g,aux} = \sum \left( P_{h,g,aux,i} \cdot \left( t_{h,rL} - t_{w,100\%} \cdot \frac{ d_{\text{mth}} \cdot d_{\text{Nutz,a}} }{365} \right) + P_{aux,SB} \cdot (24 \cdot d_{\text{mth}} - t_{h,rL}) \right)  \tag{1.4.6.1-19}
-$$
-</div>
+* 난방 보조에너지 (\( Q_{h,g,aux} \)): 보일러의 난방 보조에너지는 급수-환수 온도 차 \(20^{\circ}C\) 일 때 유량 및 평균 부하율 (\(\beta_{h,i}\))를 기준으로 최대 부하/부분 부하/대기 모드에서 측정된 보일러의 보조 전력소비 (\(P_{aux}\)) 을 기반으로 산정합니다.  
+
+<div align="center">$$Q_{h,g,aux}=\sum(P_{h,g,aux,i}\cdot(t_{h,rL}-t_{w,100\%}\cdot\frac{d_{mth}\cdot d_{Nutz,a}}{365 [d]})+P_{aux,SB}\cdot(24\cdot d_{mth}-t_{h,rL})\tag{1.4.6.1-19}$$</div>
 
 * \(0\le\beta_{h,i}\le\beta_{K,pl}\):
 
@@ -1274,120 +1254,80 @@ $$\theta_{DS}=D_{DS}\cdot\theta_{prim,DS}+(1-D_{DS})\cdot\theta_{sek,DS}\tag{1.4
 
 ---  
 
-## 1.5. HVAC 가열 유닛(Heating coil) 에너지 요구량 (Energy need)  
-공조시스템의 가열유닛에 필요한 에너지 요구량 (\( Q_{h^*,b} \))은 #절에서 계산된 공조 가열 에너지 요구량 (\( Q_{vh,b} \))에 전달 및 분배 과정에서 발생하는 손실을 더하여 산정됩니다.
+## **1.5. HVAC 가열 유닛(Heating coil) 에너지 요구량 (Energy need)**
 
-<div align="center">
-$$
-Q_{h,b}^{\ast} =
-Q_{vh,b} +
-Q_{vh,ce} +
-Q_{vh,d}
-$$
-<span class="eq-number">(1.5-1)</span>
-</div>
-
----
-
-### 1.5.1. 전달 과정 열손실 (\( Q_{vh,ce} \))  
-공조시스템에서 존으로 열을 전달하는 과정의 손실이며, 별도의 기준이 없는 경우 전달 효율 (\( \eta_{vh,ce} \))은 1로 가정합니다.
+공조시스템(HVAC)의 가열유닛 (heating coil)에 필요한 에너지 요구량 (\(Q_{h^{*},b}\))은 에너지요구량. 2. 냉방 및 난방 에너지요구량에서 계산된 공조 가열 에너지요구량(\(Q_{vh,b}\))에 전달 및 분배 과정에서 발생하는 손실을 더하여 산정됩니다.
 
 <div align="center">$$
-Q_{vh,ce} = (1 - \eta_{vh,ce}) \cdot Q_{vh,b}
-$$ <span class="eq-number">(1.5.1-1)</span>
-</div>
+Q_{h^{*},b}=Q_{vh,b}+Q_{vh,ce}+Q_{vh,d}\tag{1.5-1}$$</div>
 
----
+> Where,  
+>
+> • $Q_{h^{*},b}:$ 가열유닛의 에너지 요구량 $[kWh]$  
+> • $Q_{vh,b}:$ 공조 가열 에너지요구량 $[kWh]$  
+> • $Q_{vh,ce}:$ 공조 가열 전달 과정 열 손실 $[kWh]$  
+> • $Q_{vh,d}:$ 공조 가열 분배 과정 열 손실 $[kWh]$  
 
-### 1.5.2. 분배 과정에서의 손실 (\( Q_{vh,d} \))  
-**건물 내부 배관**: 건물 전체 에너지 균형 관점에서 손실을 0으로 고려합니다.  
+### **1.5.1. 전달 과정 열손실 (\(Q_{vh,ce}\))**
+공조시스템에서 존으로 열을 전달하는 과정의 손실이며, 별도의 기준이 없는 경우 전달 효율 (\(\eta_{vh,ce}\))은 1로 가정합니다.
 <div align="center">$$
-Q_{vh,d} = 0
-$$ <span class="eq-number">(1.5.2-1)</span>
-</div>
+Q_{vh,ce}=(1-\eta_{vh,ce})\cdot Q_{vh,b}\tag{1.5.1-1}$$</div>
 
-**건물 외부 배관**: 외부에 설치된 배관의 표면적 (\( A_{K,A} \))과  
-가동 시간 (\( t_{h^*,\text{op,mth}} \))을 기준으로 열손실을 계산합니다.
+### **1.5.2. 분배 과정에서의 손실 (\(Q_{vh,d}\))**
+* 건물 내부 배관: 건물 전체 에너지 균형 관점에서 손실을 0으로 고려합니다.
+<div align="center">$$Q_{vh,d}=0\tag{1.5.2-1}$$</div>
 
-<div align="center">$$
-Q_{vh,d} = f_{vh,d} \cdot A_{K,A} \cdot \frac{t_{h^*,\text{op,mth}}}{1000}
-$$ <span class="eq-number">(1.5.2-2)</span>
-</div>
+* 건물 외부 배관: 외부에 설치된 배관의 표면적 (\(A_{K,A}\))과 가동 시간 (\(t_{h^{*},op,mth}\))을 기준으로 열손실을 계산합니다. 배관 단열재의 열전도율은 \(0.04\,W/m\cdot K\), 두께는 \(50\,mm\)를 가정합니다.
+<div align="center">$$Q_{vh,d}=f_{vh,d}\cdot A_{K,A}\cdot\frac{t_{h^{*},op,mth}}{1000}\tag{1.5.2-2}$$</div>
 
-<div style="
-  display: flex;
-  justify-content: center;
-  font-family: Pretendard, sans-serif;
-  font-size: 15px;
-  margin-top: 0px;
-">
-  <div style="
-    text-align: left;
-    line-height: 1;
-    padding: 4px 8px;
-    border-radius: 0px;
-  ">
-    <!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
-    <div style="
-      font-style: italic;
-      font-weight: bold;
-      font-family: 'Times New Roman', 'Cambria Math', serif;
-      margin-bottom: 24px;
-    ">
-      Where,
-    </div>
+> Where,  
+>
+> • $f_{vh,d}:$ 공기 분배에 대한 열 손실 계수 (난방 시 표준값: $16\, W/m^{2}$)  
+> • $A_{K,A}:$ 건물 외부에 설치된 배관의 외피 면적 $[m^{2}]$  
+> • $t_{h^{*},op,mth}:$ HVAC 난방 시스템의 요구 운전 시간 (해당 월 기준) [h]  
 
-    <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-    <span style="display: block;">\( f_{vh,d} \): 공기 분배에 대한 열손실계수 (표준값: 16 (\(W/m^2\))</span>
-  </div>
-</div> 
 
-- 급기와 실내 온도의 차이가 10K를 초과하는 경우, 별도의 상세 계산과 증명이 필요합니다.
+### **1.5.3. 누기율**
 
----
+덕트 누기에 의한 열손실은 무시합니다.
 
-### 1.5.3. 누기율  
-급기 온도와 실내 온도의 차이가 10K 미만일 경우, 덕트 누기에 의한 열손실은 무시합니다.  
-급기와 실내 온도의 차이가 10K를 초과하는 경우, 열손실의 개별 계산과 증명이 필요합니다.
+### **1.5.4. HVAC 가열유닛 온수 시스템 온도 (\(\vartheta_{h^{*},op}\))**
 
----
+공조기 가열유닛의 예열(preheating) 및 재열(reheating)을 위한 온수 공급 온도 (\(\vartheta_{h^{*},op}\))는 설계상 월별 평균값을 확정해야 합니다.
+설계 값이 없는 경우, \(\vartheta_{h^{*},op}=70/55\,°C\)를 표준값으로 사용합니다.
 
-### 1.5.4. 온수 시스템 온도  
-공조기 가열유닛의 예열 및 재열을 위한 온수 공급 온도는 설계상 월별 평균값을 확정해야 합니다.   
-설정값이 없는 경우, **70/55℃**를 표준값으로 사용합니다.
-
----
-
-### 1.5.5. 가열유닛 운전시간 (\( t_{h^*,\text{op,mth}} \))  
-월별 운전시간은 연간 운전시간 (\( t_{H,r} \))을 월별 부하율 \(( b_{vh,\text{mth}} / b_{vh,a} )\)에 따라 배분하여 계산합니다.
+### **1.5.5. HVAC 가열유닛 운전시간 (\(t_{h^{*},op,mth}\))**
+* HVAC 가열유닛의 월별 운전시간 ($t_{h^{*},op,mth}$)은 가열유닛의 연간 운전시간 (\(t_{H}\))으로부터 계산됩니다.
 
 <div align="center">$$
-t_{h^*,\text{op,mth}} = t_{H,r} \cdot \left( \frac{b_{vh,\text{mth}}}{b_{vh,a}} \right)
-$$ <span class="eq-number">(1.5.5-1)</span>
-</div>
+t_{h^{*},op,mth}=t_{H}\cdot(\frac{b_{vh,mth}}{b_{vh,a}})\tag{1.5.5-1}$$</div>
 
-- \( t_{h^*,\text{op,mth}} > t_{\text{RLT-operation,mth}} \)일 경우:  
+  * \(t_{h^{*},op,mth} \gt t_{RLT-Betrieb,mth}\)일 경우: \(t_{h^{*},op,mth}=t_{RLT-Betrieb,mth}\)
+  * \(t_{h^{*},op,mth} \lt 0.1\cdot t_{RLT-Betrieb,mth}$ 일 경우: $t_{h^{*},op,mth}=0.1\cdot t_{RLT-Betrieb,mth}\)  
+
+* 월간 완전 이용 시간 (\(b_{vh,mth}\)):
 <div align="center">$$
-t_{h^*,\text{op,mth}} = t_{\text{RLT-operation,mth}}
-$$ <span class="eq-number">(1.5.5-2)</span>
-</div>
+b_{vh,mth}=\frac{Q_{vh,b}}{\dot{Q}_{H,max}}\tag{1.5.5-2}$$</div>
 
-- \( t_{h^*,\text{op,mth}} < 0.1 \cdot t_{\text{RLT-operation,mth}} \)일 경우:  
-<div align="center">$$
-t_{h^*,\text{op,mth}} = 0.1 \cdot t_{\text{RLT-operation,mth}}
-$$ <span class="eq-number">(1.5.5-3)</span>
-</div>
+* 연간 총 이용시간 (\(b_{vh,a}\)):
+<div align="center">$$b_{vh,a}=\sum_{1}^{12}b_{vh,mth}\tag{1.5.5-3}$$</div>
 
----
+* 가열유닛 연간 운전시간(\(t_{H}\)):
+<div align="center">$$t_{H}=t_{H,r}\cdot t_{V,mech}\cdot d_{V,mech}\tag{1.5.5-4}$$</div>
 
-- \( b_{vh,\text{mth}}\)
-<div align="center">$$
-b_{vh,\text{mth}} = \frac{Q_{vh,b}}{\dot{Q}_{H,\text{max}}}
-$$ <span class="eq-number">(1.5.5-4)</span>
-</div>
+* 월간 HVAC 운전시간(\(t_{RLT-Betrieb,mth}\)):
+<div align="center">$$t_{RLT-Betrieb,mth}=\frac{d_{mth}}{365}\cdot d_{op,a}\cdot t_{h^{*},op}\tag{1.5.5-5}$$</div>
 
-- \( b_{vh,a}\)
-<div align="center">$$
-b_{vh,a} = \sum_{1}^{12} b_{vh,\text{mth}}
-$$ <span class="eq-number">(1.5.5-5)</span>
-</div>
+> Where,  
+>
+> • $t_{h^{*},op,mth}:$ HVAC 가열유닛의 월별 운전시간 [h]  
+> • $t_{H}:$ 가열유닛 연간 운전시간 [h]  
+> • $t_{RLT-Betrieb,mth}:$ 월간 HVAC 운전시간 [h]  
+> • $d_{op,a}:$ 연간 가동 일 수 (용도프로필 참고) [d]   
+> • $t_{h^{*},op}:$ HVAC 가열유닛의 일일 가동 시간 (용도프로필 참고) [h]  
+> • $b_{vh}:$ 최대부하 운전 가동 시간 (Full utilization hours) (월간, 연간) [h]  
+> • $Q_{vh,b}:$ 공조 가열 에너지요구량 $[kWh]$  
+> • $\dot{Q}_{H,max}:$ 최대 HVAC 가열 출력 $[kW]$  
+> • $Q_{vh,d}:$ 공조 가열 분배 과정 열 손실 $[kWh]$  
+
+* 운전시간의 정확한 산정법이 나와있지 않아 추후 논의 필요
