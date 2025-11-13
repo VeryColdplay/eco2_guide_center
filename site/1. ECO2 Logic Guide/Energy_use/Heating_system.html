@@ -1391,7 +1391,6 @@
 <h2 id="13"><strong>1.3. 각 프로세스의 기준 조건 설정</strong><a class="headerlink" href="#13" title="Permanent link">¶</a></h2>
 <p>기본적으로 일일 난방이용시간 <span class="arithmatex">\(t_{h,Nutz}=0\)</span> 이면, 부하율 <span class="arithmatex">\(\beta_{j}=0\)</span> 입니다.</p>
 <p>만약 # 장. 난방 에너지 요구량의 공조난방 시스템에서 요구사항이 있을 경우, # 장에서 산정된 <span class="arithmatex">\(t_{h,Nutz}\)</span> 를 따르도록 합니다.</p>
-<hr/>
 <h3 id="131-part-load-level">1.3.1. 평균 부하율(Part load level)<a class="headerlink" href="#131-part-load-level" title="Permanent link">¶</a></h3>
 <p>평균 부하율(<span class="arithmatex">\( \beta_{i} \)</span>)은 시스템의 최대 공급 능력 대비 실제 평균 부하가 어느 정도인지를 나타내는 무차원 변수입니다.    각 단계(전달, 분배, 저장, 생산)마다 열손실이 존재하므로, 각 단계의 부하율을 개별적으로 계산합니다.   </p>
 <ul>
@@ -1432,7 +1431,6 @@ $$
 • <span class="arithmatex">\(\dot{Q}_{h,max}\)</span>: 최대 난방 출력 [kW]<br/>
 • <span class="arithmatex">\(t_{h}\)</span>: 월별 난방 시간 [h]</p>
 </blockquote>
-<hr/>
 <h3 id="132"><strong>1.3.2. 온도 기반 제어</strong><a class="headerlink" href="#132" title="Permanent link">¶</a></h3>
 <p>온도에 따라 자동 조절되는 난방 시스템에서, 개별 프로세스(전달, 분배, 저장, 생산)의 온도는 시스템의 설계 조건에서 평균 부하율과 평균 온도차에 의해 정해집니다. 온도 <span class="arithmatex">\(\theta_{HK,m(\beta_{j})}\)</span> 를 산정합니다.   </p>
 <ul>
@@ -1475,7 +1473,6 @@ $$
 • <span class="arithmatex">\(n\)</span>: 방열지수 (라디에이터 = 1.33, 바닥 난방 =1.1)<br/>
 • <span class="arithmatex">\(\theta_{i,h,soll}\)</span>: 난방 시스템 가동 시간 동안의 실내 온도 [°C]</p>
 </blockquote>
-<hr/>
 <ul>
 <li><strong>작동 유체(Working fluid)의 평균 초과 온도 <span class="arithmatex">\( \Delta \theta_A \)</span></strong></li>
 </ul>
@@ -1493,7 +1490,7 @@ $$
 <p>건물이 리모델링 되었을 경우, 설계 온도는 조정할 수 있습니다. 새로운 자세한 설계가 수립되지 않은 경우, Table 1.3.2-6. 의 설계 온도를 사용하도록 합니다. 중간 값일 경우, 한 단계 높은 온도 쌍을 선택하도록 합니다.</p>
 </li>
 </ul>
-<p><strong><table 1.3.2-6.="" 설계온도=""></table></strong></p>
+<p><strong>〈Table 1.3.2-6. 설계온도〉</strong></p>
 <table>
 <thead>
 <tr>
@@ -1549,11 +1546,10 @@ $$
 <li>콘덴싱 보일러의 효율 계산에서 환수 온도가 고려되어야 합니다.</li>
 <li>저온 및 콘덴싱 보일러에서 준비 손실은 평균 난방 배관망 온도에 관련됩니다. </li>
 </ul>
-<hr/>
 <h3 id="133-rated-output"><strong>1.3.3. 보일러 정격 출력(Rated output) 산정</strong><a class="headerlink" href="#133-rated-output" title="Permanent link">¶</a></h3>
 <ul>
 <li>
-<p>보일러 정격출력 (<span class="arithmatex">\(\dot{Q}_{N,h}\)</span>) 보일러의 정격 출력을 산정하기 위해 첫 번째로 모든 연결된 열 소비기기의 최대 수요가 결정되어야 합니다. 동시 발생하는 수요에 따라 보일러의 정격 출력은 가장 큰 단일 수요 또는 동시 발생하는 수요의 합 중에서 결정됩니다.     </p>
+<p>보일러 정격출력 (<span class="arithmatex">\(\dot{Q}_{N,h}\)</span>) 보일러의 정격 출력을 산정하기 위해 첫 번째로 모든 연결된 열 소비기기의 최대 수요가 결정되어야 합니다. 동시 발생하는 수요에 따라 보일러의 정격 출력은 가장 큰 단일 수요 또는 동시 발생하는 수요의 합 중에서 결정됩니다.    </p>
 </li>
 <li>
 <p><strong>난방 시스템의 보일러 정격 출력(<span class="arithmatex">\(\dot{Q}_{N,h}\)</span>)</strong>:   </p>
@@ -1561,245 +1557,146 @@ $$
 </ul>
 <div align="center">
 $$
-\dot{Q}_{N,h} = 1.3 \cdot \dot{Q}_{h,max}
-$$ <span class="eq-number">(1.3.3-1)</span>
+\dot{Q}_{N,h} = 1.3 \cdot \dot{Q}_{h,max}  \tag{1.3.3-1}
+$$
 </div>
-<p>이미 열 생산기기가 설치된 기존 건물의 경우, 정격 출력은 설치된 기기의 값을 이용합니다.    설치된 기기 값을 알 수 없는 경우, 아래 식을 사용합니다.   </p>
+<p>이미 열 생산기기가 설치된 기존 건물의 경우, 정격 출력은 설치된 기기의 값을 이용합니다. 설치된 기기 값을 알 수 없는 경우, 아래 식을 사용합니다. (1994년 이전 설치 시)</p>
 <div align="center">
 $$
-\dot{Q}_{N,h} = 2.5 \cdot \dot{Q}_{h,\text{max}}
-$$ <span class="eq-number">(1.3.3-2)</span>
+\dot{Q}_{N,h} = 2.5 \cdot \dot{Q}_{h,\text{max}}  \tag{1.3.3-2}
+$$
 </div>
-<div style="
-  display: flex;
-  justify-content: center;
-  font-family: Pretendard, sans-serif;
-  font-size: 15px;
-  margin-top: 0px;
-">
-<div style="
-    text-align: left;
-    line-height: 1;
-    padding: 4px 8px;
-    border-radius: 0px;
-  ">
-<!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
-<div style="
-      font-style: italic;
-      font-weight: bold;
-      font-family: 'Times New Roman', 'Cambria Math', serif;
-      margin-bottom: 24px;
-    ">
-      Where,
-    </div>
-<!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-<span style="display: block;">\( \dot{Q}_{h,\text{max}} \) : 건물의 최대 열 부하 [kW]</span>
-</div>
-</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(\dot{Q}_{h,max}\)</span>: 건물의 최대 열 부하 [kW]  </p>
+</blockquote>
 <ul>
-<li><strong>동시 열 부하(난방, 급탕, 공조 등) 발생 시</strong>: <br/>
-동시에 여러 가지의 열 부하가 발생할 경우, 보일러의 정격출력은 <strong>동시에 발생하는 부하들의 합</strong>으로 또는 <strong>우선순위가 높은 부하 중 가장 큰 값</strong>으로 결정됩니다.   </li>
+<li>동시 열 부하(난방, 급탕, 공조 등) 발생 시: 동시에 난방, 급탕, 환기, 공조 등의 여러 가지의 열 부하가 발생할 경우, 보일러의 최대 정격 출력은 동시에 요구되는 출력의 합 또는 우선 순위에 따른 순차 운전에서 요구되는 가장 큰 출력으로 결정됩니다.</li>
 </ul>
 <div align="center">
 $$
-\dot{Q}_N = \max\left( \sum \dot{Q}_{N,\text{동시에 발생하는 부하}} , \dot{Q}_{\text{우선순위가 높은 부하}} \right)
-$$ <span class="eq-number">(1.3.3-3)</span>
+\dot{Q}_N = \max\left( \sum \dot{Q}_{N,\text{gleichzeitig}} , \dot{Q}_{\text{Vorrang}} \right)  \tag{1.3.3-3}
+$$
 </div>
-<hr/>
-<h3 id="134">1.3.4. 운전 시간<a class="headerlink" href="#134" title="Permanent link">¶</a></h3>
-<p>건물 난방/급탕 요구량(에너지요구량의 2장, 5장)에서 야간감소/정지 또는 주말감소/정지가 고려되었다면, 보일러 운전에서도 동일하게 고려해야 합니다.   </p>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(\sum \dot{Q}_{N,gleichzeitig}\)</span>는 동시에 요구되는 출력의 합입니다. [kW]  <br/>
+• <span class="arithmatex">\(\dot{Q}_{Vorrang}\)</span>는 우선 순위에 따른 순차 운전에서 요구되는 가장 큰 출력 입니다. [kW]  </p>
+</blockquote>
+<h3 id="134"><strong>1.3.4. 운전 시간</strong><a class="headerlink" href="#134" title="Permanent link">¶</a></h3>
+<p>건물 난방/급탕 요구량(# 절)에서 야간감소/정지 또는 주말감소/정지가 고려되었다면, 보일러 운전에서도 동일하게 고려해야 합니다.</p>
 <ul>
 <li>
-<p><strong>난방 시스템의 운전 시간 설계</strong>: 분배 배관망 및 열 생산 과정의 열 손실 계산을 위해 야간이나 주말의 운전 감소/정지, 온도 저하, 지속 운전 방식을 고려하는 일일 운전 시간이 사용됩니다.   </p>
+<p>난방 시스템의 운전 시간 설계: 분배 배관망 및 열 생산 과정의 열 손실 계산을 위해 야간이나 주말의 운전 감소/정지, 온도 저하, 지속 운전 방식을 고려하는 일일 운전 시간이 사용됩니다.  </p>
 </li>
 <li>
-<p><strong>일일 설계 운전시간 <span class="arithmatex">\( t_{h,rL,T} \)</span></strong> </p>
+<p>일일 설계 운전시간 <span class="arithmatex">\( t_{h,rL,T} \)</span> </p>
 </li>
 </ul>
 <div align="center">   
    $$
-   t_{h,rL,T} = 24 - f_{L,NA} \cdot (24 - t_{h,op})
-   $$ <span class="eq-number">(1.3.4-1)</span>
+   t_{h,rL,T} = 24 - f_{L,NA} \cdot (24 - t_{h,op})  \tag{1.3.4-1}
+   $$
 </div>
-<div style="
-  display: flex;
-  justify-content: center;
-  font-family: Pretendard, sans-serif;
-  font-size: 15px;
-  margin-top: 0px;
-">
-<div style="
-    text-align: left;
-    line-height: 1;
-    padding: 4px 8px;
-    border-radius: 0px;
-  ">
-<!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
-<div style="
-      font-style: italic;
-      font-weight: bold;
-      font-family: 'Times New Roman', 'Cambria Math', serif;
-      margin-bottom: 24px;
-    ">
-      Where,
-    </div>
-<!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-<span style="display: block;">\( f_{L,NA} \): 야간감소/정지에 대한 운전시간계수</span>
-<span style="display: block;">\( t_{h,op} \): 일일 난방 시간</span>
-</div>
-</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(f_{L,NA}\)</span>: 야간감소/정지에 대한 운전시간계수<br/>
+• <span class="arithmatex">\(t_{h,op}\)</span>: 일일 난방 시간 [h]</p>
+</blockquote>
 <ul>
-<li>
-<p><strong>지속 운전</strong>: <span class="arithmatex">\( f_{L,NA} = 0 \)</span> </p>
-</li>
-<li>
-<p><strong>야간 정지</strong>: <span class="arithmatex">\( f_{L,NA} = 1 \)</span> </p>
-</li>
-<li>
-<p><strong>야간 감소</strong>:   </p>
-</li>
+<li>지속 운전: <span class="arithmatex">\( f_{L,NA} = 0 \)</span> </li>
+<li>야간 정지: <span class="arithmatex">\( f_{L,NA} = 1 \)</span> </li>
+<li>야간 감소:  </li>
 </ul>
 <div align="center"> 
    $$
-   f_{L,NA} = 1 - \frac{\theta_{NA,Grenz} - \theta_e}{\theta_{NA,Grenz} - \theta_{e,min}}
-   $$ <span class="eq-number">(1.3.4-2)</span>
+   f_{L,NA} = 1 - \frac{\theta_{NA,Grenz} - \theta_e}{\theta_{NA,Grenz} - \theta_{e,min}}  \tag{1.3.4-2}
+   $$
 </div>
-<div style="
-  display: flex;
-  justify-content: center;
-  font-family: Pretendard, sans-serif;
-  font-size: 15px;
-  margin-top: 0px;
-">
-<div style="
-    text-align: left;
-    line-height: 1;
-    padding: 4px 8px;
-    border-radius: 0px;
-  ">
-<!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
-<div style="
-      font-style: italic;
-      font-weight: bold;
-      font-family: 'Times New Roman', 'Cambria Math', serif;
-      margin-bottom: 24px;
-    ">
-      Where,
-    </div>
-<!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-<span style="display: block;">\( \theta_{NA,Grenz} \) = 야간 감소 한계 온도 = \(10^\circ\mathrm{C} \)  </span>
-<span style="display: block;">\( \theta_e \): 월 평균 외기 온도[℃]</span>
-<span style="display: block;">\( \theta_{e,min} \): 일평균 설계 온도[℃]</span>
-</div>
-</div>
-<hr/>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(\theta_{NA,Grenz}\)</span>: 야간 감소 한계 온도 <span class="arithmatex">\(=10 ^{\circ}C\)</span><br/>
+• <span class="arithmatex">\(\theta_{e}\)</span>: 월 평균 외기 온도 [°C]<br/>
+• <span class="arithmatex">\(\theta_{e,min}\)</span>: 일평균 설계 온도 [°C]  </p>
+</blockquote>
 <ul>
-<li><strong>월별 설계 운전일 <span class="arithmatex">\( d_{h,rB} \)</span></strong> </li>
+<li>월별 설계 운전일 <span class="arithmatex">\( d_{h,rB} \)</span> </li>
 </ul>
 <div align="center"> 
    $$
-   d_{h,rB} = d_{mth} \cdot \left( \frac{365 - f_{L,WA} \cdot (365 - d_{Nutz,A})}{365} \right)
-   $$ <span class="eq-number">(1.3.4-3)</span>
+   d_{h,rB} = d_{mth} \cdot \left( \frac{365 - f_{L,WA} \cdot (365 - d_{Nutz,A})}{365} \right)  \tag{1.3.4-3}$$
+   $$
 </div>
-<div style="
-  display: flex;
-  justify-content: center;
-  font-family: Pretendard, sans-serif;
-  font-size: 15px;
-  margin-top: 0px;
-">
-<div style="
-    text-align: left;
-    line-height: 1;
-    padding: 4px 8px;
-    border-radius: 0px;
-  ">
-<!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
-<div style="
-      font-style: italic;
-      font-weight: bold;
-      font-family: 'Times New Roman', 'Cambria Math', serif;
-      margin-bottom: 24px;
-    ">
-      Where,
-    </div>
-<!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-<span style="display: block;">\( d_{mth} \): 월별 일수</span>
-<span style="display: block;">\( d_{Nutz,A} \): 연간 이용일수 </span>
-<span style="display: block;">\( f_{L,WA} \): 주말 운전 감소/정지 계수 </span>
-</div>
-</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(d_{mth}\)</span>: 월별 일수 (e.g. 3월 - 31일, 4월 - 30일)<br/>
+• <span class="arithmatex">\(d_{Nutz,A}\)</span>: 연간 이용 일수기간 [d]<br/>
+• <span class="arithmatex">\(f_{L,WA}\)</span>: 주말 운전 감소/정지 계수  </p>
+</blockquote>
 <ul>
-<li><strong>지속 운전</strong>: <span class="arithmatex">\( f_{L,WA} = 0 \)</span> </li>
-<li><strong>주말 정지</strong>: <span class="arithmatex">\( f_{L,WA} = 1 \)</span> </li>
-<li><strong>주말 감소</strong>:   </li>
+<li>지속 운전: <span class="arithmatex">\( f_{L,WA} = 0 \)</span> </li>
+<li>주말 정지: <span class="arithmatex">\( f_{L,WA} = 1 \)</span> </li>
+<li>주말 감소:    </li>
 </ul>
 <div align="center"> 
 $$
-f_{L,WA} = 1 - \frac{\theta_{WA,Grenz} - \theta_e}{\theta_{WA,Grenz} - \theta_{e,min}}
-$$ <span class="eq-number">(1.3.4-4)</span>
+f_{L,WA} = 1 - \frac{\theta_{WA,Grenz} - \theta_e}{\theta_{WA,Grenz} - \theta_{e,min}}  \tag{1.3.4-4}
+$$
 </div>
-<div style="
-  display: flex;
-  justify-content: center;
-  font-family: Pretendard, sans-serif;
-  font-size: 15px;
-  margin-top: 0px;
-">
-<div style="
-    text-align: left;
-    line-height: 1;
-    padding: 4px 8px;
-    border-radius: 0px;
-  ">
-<!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
-<div style="
-      font-style: italic;
-      font-weight: bold;
-      font-family: 'Times New Roman', 'Cambria Math', serif;
-      margin-bottom: 24px;
-    ">
-      Where,
-    </div>
-<!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-<span style="display: block;">\( \theta_{WA,Grenz} \) = 주말 감소 한계 온도 = \( 15^\circ\mathrm{C} \)</span>
-</div>
-</div>
-<hr/>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(\theta_{WA,Grenz}\)</span>: 주말 감소 한계 온도 <span class="arithmatex">\(=15^{\circ}C\)</span> </p>
+</blockquote>
 <ul>
-<li><strong>월별 계산 난방 운전시간 <span class="arithmatex">\( t_{h,rL} \)</span></strong> </li>
-<li>상이한 난방 배관망 운전 또는 난방 시스템 이외의 열 생산기기가 존재하거나 배관망에 다른 열 수요를 갖는 에너지원(냉동기, 공조장치, 온수 등)이 연결되어 있는 경우, 가장 오랜 시간 수요가 발생하는 에너지원의 운전시간을 적용합니다.   </li>
+<li>월별 계산 난방 운전시간 <span class="arithmatex">\( t_{h,rL} \)</span> </li>
 </ul>
 <div align="center">
 $$
-t_{h,rL} = t_{h,rL,T} \cdot d_{h,rB}
-$$ <span class="eq-number">(1.3.4-5)</span>
+t_{h,rL} = t_{h,rL,T} \cdot d_{h,rB}  \tag{1.3.4-5}
+$$
 </div>
-<hr/>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(t_{h,rL,T}\)</span>는 일일 설계 운전시간입니다. [h]<br/>
+• <span class="arithmatex">\(d_{h,rB}\)</span>는 월별 설계 운전 일입니다. [d]  </p>
+</blockquote>
 <ul>
-<li><strong>월별 난방일수 <span class="arithmatex">\( d_{h,mth} \)</span></strong>:   </li>
+<li>
+<p>상이한 난방 배관망 운전 또는 난방 시스템 이외의 열 생산기기가 존재하거나 배관망에 다른 열 수요를 갖는 에너지원(냉동기, 공조장치, 온수 등)이 연결되어 있는 경우, 가장 오랜 시간 수요가 발생하는 에너지원의 운전시간을 적용합니다.</p>
+</li>
+<li>
+<p>월별 난방일 수 <span class="arithmatex">\( d_{h,mth} \)</span>:   </p>
+</li>
 </ul>
 <div align="center">
 $$
-d_{h,mth} = \frac{t_{h,rL,T}^*}{24}
-$$ <span class="eq-number">(1.3.4-6)</span>
+d_{h,mth} = \frac{t_{h}^*}{24}  \tag{1.3.4-6}
+$$
 </div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(t_{h}\)</span>는 월별 난방시간입니다. (용도프로필 참고) [h]</p>
+</blockquote>
 <ul>
-<li><strong>월별 이용일수 <span class="arithmatex">\( d_{Nutz,mth} \)</span></strong>:   </li>
+<li>월별 이용일 수 <span class="arithmatex">\( d_{Nutz,mth} \)</span>:   </li>
 </ul>
 <div align="center">
 $$
-d_{Nutz,mth} = \frac{d_{Nutz,A}}{t_{h}} \cdot d_{mth}
-$$ <span class="eq-number">(1.3.4-7)</span>
+d_{Nutz,mth} = \frac{d_{Nutz,A}}{365} \cdot d_{mth}  \tag{1.3.4-7}
+$$
 </div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(d_{Nutz,A}\)</span>는 연간 사용일 수 입니다. [d]<br/>
+• <span class="arithmatex">\(d_{mth}\)</span>는 월별 일 수 입니다. [d]  </p>
+</blockquote>
 <ul>
-<li><strong>일년 단위 산정치의 월별 분배</strong>: </li>
+<li>일년 단위 산정치의 월별 분배: 난방 시스템 구성요소 중 에너지 요구량이 존 별 대차대조에 영향을 미치지 않는 요소(순환 펌프 등)는 일 년 단위로 계산하여도 무방합니다다 하다. 에너지 요구량을 월별로 비교해야 하는 경우, 일 년 요구량인 <span class="arithmatex">\(W_{h,d,e,a}\)</span> 로부터 월별 요구량 <span class="arithmatex">\(W_{h,d,e,M}\)</span> 를 계산합니다.   </li>
 </ul>
-<p>난방 시스템 구성요소 중 에너지 요구량이 존 별 대차대조에 영향을 미치지 않는 요소(순환펌프 등)는 일 년 단위로 계산하여도 무방하다. 에너지 요구량을 월별로 비교해야 하는 경우, 일 년 요구량인 <span class="arithmatex">\(W_{h,d,e,a}\)</span>로부터 월별 요구량 <span class="arithmatex">\(W_{h,d,e,M}\)</span>를 계산합니다.   </p>
 <div align="center">
 $$
-W_{h,d,e,M} = W_{h,d,e,a} \cdot \frac{ \beta_{h,d,M} \cdot t_{\text{Nutz,mth}} }{ \beta_{h,d,a} \cdot t_{h,op} \cdot d_{\text{Nutz,a}} }
-$$ <span class="eq-number">(1.3.4-8)</span>
+W_{h,d,e,M} = W_{h,d,e,a} \cdot \frac{ \beta_{h,d,M} \cdot t_{\text{Nutz,mth}} }{ \beta_{h,d,a} \cdot t_{h,op} \cdot d_{\text{Nutz,a}} }  \tag{1.3.4-8}
+$$
 </div>
 <hr/>
 <h2 id="14">1.4. 열 손실 및 보조에너지 계산<a class="headerlink" href="#14" title="Permanent link">¶</a></h2>
@@ -3622,7 +3519,7 @@ $$ <span class="eq-number">(1.5.5-5)</span>
 <span class="md-icon" title="마지막 업데이트">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 11월 12일 12:49:12 UTC">2025년 11월 12일</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 11월 13일 02:43:17 UTC">2025년 11월 13일</span>
 </span>
 </aside>
 </article>
