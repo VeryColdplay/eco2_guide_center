@@ -226,7 +226,7 @@ $$Q_{I,h}=Q_{I,h,d}+Q_{I,h,s}+Q_{I,h,g} \tag{1.2.3-1}$$
 만약 \# 장. 난방 에너지 요구량의 공조난방 시스템에서 요구사항이 있을 경우, \# 장에서 산정된 $t_{h,Nutz}$ 를 따르도록 합니다.
  
 
----    
+    
 
 ### 1.3.1. 평균 부하율(Part load level)
 
@@ -270,7 +270,7 @@ $$
 > • $\dot{Q}_{h,max}$: 최대 난방 출력 [kW]  
 > • $t_{h}$: 월별 난방 시간 [h]
 
----    
+    
 
 ### **1.3.2. 온도 기반 제어**
 
@@ -318,7 +318,7 @@ $$
 > • $n$: 방열지수 (라디에이터 = 1.33, 바닥 난방 =1.1)  
 > • $\theta_{i,h,soll}$: 난방 시스템 가동 시간 동안의 실내 온도 [°C]
 
----    
+    
 
 - **작동 유체(Working fluid)의 평균 초과 온도 \( \Delta \theta_A \)**
 
@@ -333,7 +333,7 @@ $$
 
 * 건물이 리모델링 되었을 경우, 설계 온도는 조정할 수 있습니다. 새로운 자세한 설계가 수립되지 않은 경우, Table 1.3.2-6. 의 설계 온도를 사용하도록 합니다. 중간 값일 경우, 한 단계 높은 온도 쌍을 선택하도록 합니다.
 
-**<Table 1.3.2-6. 설계온도>**
+**〈Table 1.3.2-6. 설계온도〉**
 
 | 기존 설계 온도 | 새 설계 온도에서 $\dot{Q}_{N,neu}/\dot{Q}_{N,aIt}$ | | |
 | :---- | :---- | :---- | :---- |
@@ -363,266 +363,153 @@ $$
 * 저온 및 콘덴싱 보일러에서 준비 손실은 평균 난방 배관망 온도에 관련됩니다. 
 
 
----    
+    
 
 ### **1.3.3. 보일러 정격 출력(Rated output) 산정**
 
-* 보일러 정격출력 ($\dot{Q}_{N,h}$) 보일러의 정격 출력을 산정하기 위해 첫 번째로 모든 연결된 열 소비기기의 최대 수요가 결정되어야 합니다. 동시 발생하는 수요에 따라 보일러의 정격 출력은 가장 큰 단일 수요 또는 동시 발생하는 수요의 합 중에서 결정됩니다.     
+* 보일러 정격출력 ($\dot{Q}_{N,h}$) 보일러의 정격 출력을 산정하기 위해 첫 번째로 모든 연결된 열 소비기기의 최대 수요가 결정되어야 합니다. 동시 발생하는 수요에 따라 보일러의 정격 출력은 가장 큰 단일 수요 또는 동시 발생하는 수요의 합 중에서 결정됩니다.    
 
 - **난방 시스템의 보일러 정격 출력(\(\dot{Q}_{N,h}\))**:   
 
 <div align="center">
 $$
-\dot{Q}_{N,h} = 1.3 \cdot \dot{Q}_{h,max}
-$$ <span class="eq-number">(1.3.3-1)</span>
+\dot{Q}_{N,h} = 1.3 \cdot \dot{Q}_{h,max}  \tag{1.3.3-1}
+$$
 </div>
 
-이미 열 생산기기가 설치된 기존 건물의 경우, 정격 출력은 설치된 기기의 값을 이용합니다.    설치된 기기 값을 알 수 없는 경우, 아래 식을 사용합니다.   
+이미 열 생산기기가 설치된 기존 건물의 경우, 정격 출력은 설치된 기기의 값을 이용합니다. 설치된 기기 값을 알 수 없는 경우, 아래 식을 사용합니다. (1994년 이전 설치 시)
 
 <div align="center">
 $$
-\dot{Q}_{N,h} = 2.5 \cdot \dot{Q}_{h,\text{max}}
-$$ <span class="eq-number">(1.3.3-2)</span>
+\dot{Q}_{N,h} = 2.5 \cdot \dot{Q}_{h,\text{max}}  \tag{1.3.3-2}
+$$
 </div>
 
-<div style="
-  display: flex;
-  justify-content: center;
-  font-family: Pretendard, sans-serif;
-  font-size: 15px;
-  margin-top: 0px;
-">
-  <div style="
-    text-align: left;
-    line-height: 1;
-    padding: 4px 8px;
-    border-radius: 0px;
-  ">
-    <!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
-    <div style="
-      font-style: italic;
-      font-weight: bold;
-      font-family: 'Times New Roman', 'Cambria Math', serif;
-      margin-bottom: 24px;
-    ">
-      Where,
-    </div>
+> Where,  
+>
+> • $\dot{Q}_{h,max}$: 건물의 최대 열 부하 [kW]  
 
-    <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-    <span style="display: block;">\( \dot{Q}_{h,\text{max}} \) : 건물의 최대 열 부하 [kW]</span>
-  </div>
-</div> 
-
-- **동시 열 부하(난방, 급탕, 공조 등) 발생 시**:   
-동시에 여러 가지의 열 부하가 발생할 경우, 보일러의 정격출력은 **동시에 발생하는 부하들의 합**으로 또는 **우선순위가 높은 부하 중 가장 큰 값**으로 결정됩니다.   
+* 동시 열 부하(난방, 급탕, 공조 등) 발생 시: 동시에 난방, 급탕, 환기, 공조 등의 여러 가지의 열 부하가 발생할 경우, 보일러의 최대 정격 출력은 동시에 요구되는 출력의 합 또는 우선 순위에 따른 순차 운전에서 요구되는 가장 큰 출력으로 결정됩니다.
 
 <div align="center">
 $$
-\dot{Q}_N = \max\left( \sum \dot{Q}_{N,\text{동시에 발생하는 부하}} , \dot{Q}_{\text{우선순위가 높은 부하}} \right)
-$$ <span class="eq-number">(1.3.3-3)</span>
+\dot{Q}_N = \max\left( \sum \dot{Q}_{N,\text{gleichzeitig}} , \dot{Q}_{\text{Vorrang}} \right)  \tag{1.3.3-3}
+$$
 </div>
 
----    
+> Where,  
+>
+> • $\sum \dot{Q}_{N,gleichzeitig}$는 동시에 요구되는 출력의 합입니다. [kW]    
+> • $\dot{Q}_{Vorrang}$는 우선 순위에 따른 순차 운전에서 요구되는 가장 큰 출력 입니다. [kW]  
 
-### 1.3.4. 운전 시간
+    
 
-건물 난방/급탕 요구량(에너지요구량의 2장, 5장)에서 야간감소/정지 또는 주말감소/정지가 고려되었다면, 보일러 운전에서도 동일하게 고려해야 합니다.   
+### **1.3.4. 운전 시간**
 
-- **난방 시스템의 운전 시간 설계**: 분배 배관망 및 열 생산 과정의 열 손실 계산을 위해 야간이나 주말의 운전 감소/정지, 온도 저하, 지속 운전 방식을 고려하는 일일 운전 시간이 사용됩니다.   
+건물 난방/급탕 요구량(\# 절)에서 야간감소/정지 또는 주말감소/정지가 고려되었다면, 보일러 운전에서도 동일하게 고려해야 합니다.
 
-- **일일 설계 운전시간 \( t_{h,rL,T} \)**   
+* 난방 시스템의 운전 시간 설계: 분배 배관망 및 열 생산 과정의 열 손실 계산을 위해 야간이나 주말의 운전 감소/정지, 온도 저하, 지속 운전 방식을 고려하는 일일 운전 시간이 사용됩니다.  
+
+* 일일 설계 운전시간 \( t_{h,rL,T} \) 
 <div align="center">   
    $$
-   t_{h,rL,T} = 24 - f_{L,NA} \cdot (24 - t_{h,op})
-   $$ <span class="eq-number">(1.3.4-1)</span>
+   t_{h,rL,T} = 24 - f_{L,NA} \cdot (24 - t_{h,op})  \tag{1.3.4-1}
+   $$
 </div>
 
-<div style="
-  display: flex;
-  justify-content: center;
-  font-family: Pretendard, sans-serif;
-  font-size: 15px;
-  margin-top: 0px;
-">
-  <div style="
-    text-align: left;
-    line-height: 1;
-    padding: 4px 8px;
-    border-radius: 0px;
-  ">
-    <!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
-    <div style="
-      font-style: italic;
-      font-weight: bold;
-      font-family: 'Times New Roman', 'Cambria Math', serif;
-      margin-bottom: 24px;
-    ">
-      Where,
-    </div>
+> Where,  
+>
+> • $f_{L,NA}$: 야간감소/정지에 대한 운전시간계수  
+> • $t_{h,op}$: 일일 난방 시간 [h]
 
-    <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-    <span style="display: block;">\( f_{L,NA} \): 야간감소/정지에 대한 운전시간계수</span>
-    <span style="display: block;">\( t_{h,op} \): 일일 난방 시간</span>
-  </div>
-</div> 
-
-   - **지속 운전**: \( f_{L,NA} = 0 \)   
-
-   - **야간 정지**: \( f_{L,NA} = 1 \)   
-
-   - **야간 감소**:   
+* 지속 운전: \( f_{L,NA} = 0 \)   
+* 야간 정지: \( f_{L,NA} = 1 \)   
+* 야간 감소:  
 <div align="center"> 
    $$
-   f_{L,NA} = 1 - \frac{\theta_{NA,Grenz} - \theta_e}{\theta_{NA,Grenz} - \theta_{e,min}}
-   $$ <span class="eq-number">(1.3.4-2)</span>
+   f_{L,NA} = 1 - \frac{\theta_{NA,Grenz} - \theta_e}{\theta_{NA,Grenz} - \theta_{e,min}}  \tag{1.3.4-2}
+   $$
 </div>
 
-<div style="
-  display: flex;
-  justify-content: center;
-  font-family: Pretendard, sans-serif;
-  font-size: 15px;
-  margin-top: 0px;
-">
-  <div style="
-    text-align: left;
-    line-height: 1;
-    padding: 4px 8px;
-    border-radius: 0px;
-  ">
-    <!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
-    <div style="
-      font-style: italic;
-      font-weight: bold;
-      font-family: 'Times New Roman', 'Cambria Math', serif;
-      margin-bottom: 24px;
-    ">
-      Where,
-    </div>
+> Where,  
+>
+> • $\theta_{NA,Grenz}$: 야간 감소 한계 온도 $=10 ^{\circ}C$  
+> • $\theta_{e}$: 월 평균 외기 온도 [°C]  
+> • $\theta_{e,min}$: 일평균 설계 온도 [°C]  
 
-    <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-    <span style="display: block;">\( \theta_{NA,Grenz} \) = 야간 감소 한계 온도 = \(10^\circ\mathrm{C} \)  </span>
-    <span style="display: block;">\( \theta_e \): 월 평균 외기 온도[℃]</span>
-    <span style="display: block;">\( \theta_{e,min} \): 일평균 설계 온도[℃]</span>
-  </div>
-</div> 
-
----    
-
-- **월별 설계 운전일 \( d_{h,rB} \)**   
+* 월별 설계 운전일 \( d_{h,rB} \)   
 <div align="center"> 
    $$
-   d_{h,rB} = d_{mth} \cdot \left( \frac{365 - f_{L,WA} \cdot (365 - d_{Nutz,A})}{365} \right)
-   $$ <span class="eq-number">(1.3.4-3)</span>
+   d_{h,rB} = d_{mth} \cdot \left( \frac{365 - f_{L,WA} \cdot (365 - d_{Nutz,A})}{365} \right)  \tag{1.3.4-3}$$
+   $$
 </div> 
 
-<div style="
-  display: flex;
-  justify-content: center;
-  font-family: Pretendard, sans-serif;
-  font-size: 15px;
-  margin-top: 0px;
-">
-  <div style="
-    text-align: left;
-    line-height: 1;
-    padding: 4px 8px;
-    border-radius: 0px;
-  ">
-    <!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
-    <div style="
-      font-style: italic;
-      font-weight: bold;
-      font-family: 'Times New Roman', 'Cambria Math', serif;
-      margin-bottom: 24px;
-    ">
-      Where,
-    </div>
+> Where,  
+>
+> • $d_{mth}$: 월별 일수 (e.g. 3월 \- 31일, 4월 \- 30일)  
+> • $d_{Nutz,A}$: 연간 이용 일수기간 [d]  
+> • $f_{L,WA}$: 주말 운전 감소/정지 계수  
 
-    <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-    <span style="display: block;">\( d_{mth} \): 월별 일수</span>
-    <span style="display: block;">\( d_{Nutz,A} \): 연간 이용일수 </span>
-    <span style="display: block;">\( f_{L,WA} \): 주말 운전 감소/정지 계수 </span>
-  </div>
-</div> 
-
-   - **지속 운전**: \( f_{L,WA} = 0 \)   
-   - **주말 정지**: \( f_{L,WA} = 1 \)   
-   - **주말 감소**:   
+* 지속 운전: \( f_{L,WA} = 0 \)   
+* 주말 정지: \( f_{L,WA} = 1 \)   
+* 주말 감소:    
 <div align="center"> 
 $$
-f_{L,WA} = 1 - \frac{\theta_{WA,Grenz} - \theta_e}{\theta_{WA,Grenz} - \theta_{e,min}}
-$$ <span class="eq-number">(1.3.4-4)</span>
+f_{L,WA} = 1 - \frac{\theta_{WA,Grenz} - \theta_e}{\theta_{WA,Grenz} - \theta_{e,min}}  \tag{1.3.4-4}
+$$
 </div> 
 
-<div style="
-  display: flex;
-  justify-content: center;
-  font-family: Pretendard, sans-serif;
-  font-size: 15px;
-  margin-top: 0px;
-">
-  <div style="
-    text-align: left;
-    line-height: 1;
-    padding: 4px 8px;
-    border-radius: 0px;
-  ">
-    <!-- Where 텍스트: 독립적, 굵고 이탤릭 -->
-    <div style="
-      font-style: italic;
-      font-weight: bold;
-      font-family: 'Times New Roman', 'Cambria Math', serif;
-      margin-bottom: 24px;
-    ">
-      Where,
-    </div>
+> Where,  
+>
+> • $\theta_{WA,Grenz}$: 주말 감소 한계 온도 $=15^{\circ}C$  
 
-    <!-- 수식 설명들: 왼쪽 정렬, Pretendard 유지 -->
-    <span style="display: block;">\( \theta_{WA,Grenz} \) = 주말 감소 한계 온도 = \( 15^\circ\mathrm{C} \)</span>
-
-  </div>
-</div> 
-
----    
-
-- **월별 계산 난방 운전시간 \( t_{h,rL} \)**   
-- 상이한 난방 배관망 운전 또는 난방 시스템 이외의 열 생산기기가 존재하거나 배관망에 다른 열 수요를 갖는 에너지원(냉동기, 공조장치, 온수 등)이 연결되어 있는 경우, 가장 오랜 시간 수요가 발생하는 에너지원의 운전시간을 적용합니다.   
+* 월별 계산 난방 운전시간 \( t_{h,rL} \)   
 
 <div align="center">
 $$
-t_{h,rL} = t_{h,rL,T} \cdot d_{h,rB}
-$$ <span class="eq-number">(1.3.4-5)</span>
+t_{h,rL} = t_{h,rL,T} \cdot d_{h,rB}  \tag{1.3.4-5}
+$$
 </div>
 
+> Where,  
+>
+> • $t_{h,rL,T}$는 일일 설계 운전시간입니다. [h]  
+> • $d_{h,rB}$는 월별 설계 운전 일입니다. [d]  
 
----    
+* 상이한 난방 배관망 운전 또는 난방 시스템 이외의 열 생산기기가 존재하거나 배관망에 다른 열 수요를 갖는 에너지원(냉동기, 공조장치, 온수 등)이 연결되어 있는 경우, 가장 오랜 시간 수요가 발생하는 에너지원의 운전시간을 적용합니다.
 
-- **월별 난방일수 \( d_{h,mth} \)**:   
+* 월별 난방일 수 \( d_{h,mth} \):   
 <div align="center">
 $$
-d_{h,mth} = \frac{t_{h,rL,T}^*}{24}
-$$ <span class="eq-number">(1.3.4-6)</span>
+d_{h,mth} = \frac{t_{h}^*}{24}  \tag{1.3.4-6}
+$$
 </div>
 
-- **월별 이용일수 \( d_{Nutz,mth} \)**:   
+> Where,  
+>
+> • $t_{h}$는 월별 난방시간입니다. (용도프로필 참고) [h]
+
+* 월별 이용일 수 \( d_{Nutz,mth} \):   
 <div align="center">
 $$
-d_{Nutz,mth} = \frac{d_{Nutz,A}}{t_{h}} \cdot d_{mth}
-$$ <span class="eq-number">(1.3.4-7)</span>
+d_{Nutz,mth} = \frac{d_{Nutz,A}}{365} \cdot d_{mth}  \tag{1.3.4-7}
+$$
 </div>
 
-- **일년 단위 산정치의 월별 분배**: 
+> Where,  
+>
+> • $d_{Nutz,A}$는 연간 사용일 수 입니다. [d]  
+> • $d_{mth}$는 월별 일 수 입니다. [d]  
 
-난방 시스템 구성요소 중 에너지 요구량이 존 별 대차대조에 영향을 미치지 않는 요소(순환펌프 등)는 일 년 단위로 계산하여도 무방하다. 에너지 요구량을 월별로 비교해야 하는 경우, 일 년 요구량인 \(W_{h,d,e,a}\)로부터 월별 요구량 \(W_{h,d,e,M}\)를 계산합니다.   
+* 일년 단위 산정치의 월별 분배: 난방 시스템 구성요소 중 에너지 요구량이 존 별 대차대조에 영향을 미치지 않는 요소(순환 펌프 등)는 일 년 단위로 계산하여도 무방합니다다 하다. 에너지 요구량을 월별로 비교해야 하는 경우, 일 년 요구량인 $W_{h,d,e,a}$ 로부터 월별 요구량 $W_{h,d,e,M}$ 를 계산합니다.   
 
 <div align="center">
 $$
-W_{h,d,e,M} = W_{h,d,e,a} \cdot \frac{ \beta_{h,d,M} \cdot t_{\text{Nutz,mth}} }{ \beta_{h,d,a} \cdot t_{h,op} \cdot d_{\text{Nutz,a}} }
-$$ <span class="eq-number">(1.3.4-8)</span>
+W_{h,d,e,M} = W_{h,d,e,a} \cdot \frac{ \beta_{h,d,M} \cdot t_{\text{Nutz,mth}} }{ \beta_{h,d,a} \cdot t_{h,op} \cdot d_{\text{Nutz,a}} }  \tag{1.3.4-8}
+$$
 </div>
 
----    
+---  
 
 ## 1.4. 열 손실 및 보조에너지 계산
 
