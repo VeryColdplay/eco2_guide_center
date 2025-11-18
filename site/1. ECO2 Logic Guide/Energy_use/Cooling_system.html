@@ -1279,24 +1279,23 @@ b_{vc,a} = \sum_{m=1}^{12} b_{vc,mth} \tag{2.2.2-3}
 Q_{c^{*},outg} = Q_{c^{*},b} + Q_{c^{*},ce} + Q_{c^{*},d} + Q_{c^{*},s} \tag{2.3.2-1}
 \]</div>
 <ul>
-<li>
-<p>전달 손실(<span class="arithmatex">\(Q_{c*,d}\)</span>):
+<li>전달 손실(<span class="arithmatex">\(Q_{c*,d}\)</span>):  </li>
+</ul>
+<div align="center">
 $$
-Q_{c^{<em>},ce} = [(1 - \eta_{c^{</em>},ce}) + (1 - \eta_{c^{<em>},ce,sens})] \cdot Q_{c^{</em>},b} \tag{2.3.2-2}
-$$</p>
-</li>
-<li>
-<p>분배 손실(<span class="arithmatex">\(Q_{c*,d}\)</span>):
-$$
-Q_{c^{<em>},d} = (1 - \eta_{c^{</em>},d}) \cdot Q_{c^{*},b} \tag {2.3.2-3}
-$$</p>
-</li>
-<li>
-<p>저장 손실(<span class="arithmatex">\(Q_{c*,s}\)</span>): ECO2에서 냉열 저장 손실은 무시합니다.
+Q_{c^{*},ce} = [(1 - \eta_{c^{*},ce}) + (1 - \eta_{c^{*},ce,sens})] \cdot Q_{c^{*},b} \tag{2.3.2-2}
+$$</div>
+<ul>
+<li>분배 손실(<span class="arithmatex">\(Q_{c*,d}\)</span>):  </li>
+</ul>
+<div align="center">$$
+Q_{c^{*},d} = (1 - \eta_{c^{*},d}) \cdot Q_{c^{*},b} \tag {2.3.2-3}
+$$</div>
+<ul>
+<li>저장 손실(<span class="arithmatex">\(Q_{c*,s}\)</span>): ECO2에서 냉열 저장 손실은 무시합니다.
 $$
 Q_{c^{*},s} = 0 \tag{2.3.2-4} 
-$$</p>
-</li>
+$$</li>
 </ul>
 <blockquote>
 <p>Where,  </p>
@@ -1334,25 +1333,24 @@ $$</p>
 Q_{c,outg} = Q_{c,b} + Q_{c,ce} + Q_{c,d} + Q_{c,s} \tag{2.3.3-1}
 \]</div>
 <ul>
-<li>
-<p>전달 손실(<span class="arithmatex">\(Q_{c,ce}\)</span>):
+<li>전달 손실(<span class="arithmatex">\(Q_{c,ce}\)</span>):  </li>
+</ul>
+<div align="center">
 $$
 Q_{c,ce} = [(1 - \eta_{c,ce}) + (1 - \eta_{c,ce,sens})] \cdot Q_{c,b} \tag{2.3.3-2}
-$$</p>
-</li>
-<li>
-<p>분배 손실(<span class="arithmatex">\(Q_{c,d}\)</span>):
-$$
-Q_{c,d} = (1 - \eta_{c,d}) \cdot Q_{c,b} \tag{2.3.3-3}
-$$</p>
-</li>
-<li>
-<p>저장 손실(<span class="arithmatex">\(Q_{c,s}\)</span>): ECO2에서 냉열 저장 손실은 무시합니다.
-$$
-Q_{c,s} = 0 \tag{2.3.3-4}
-$$</p>
-</li>
+$$</div>
+<ul>
+<li>분배 손실(<span class="arithmatex">\(Q_{c,d}\)</span>):  </li>
 </ul>
+<div align="center">$$
+Q_{c,d} = (1 - \eta_{c,d}) \cdot Q_{c,b} \tag{2.3.3-3}
+$$</div>
+<ul>
+<li>저장 손실(<span class="arithmatex">\(Q_{c,s}\)</span>): ECO2에서 냉열 저장 손실은 무시합니다.  </li>
+</ul>
+<div align="center">$$
+Q_{c,s} = 0 \tag{2.3.3-4}
+$$</div>
 <center>
 <div><strong>Table 2.3.3-1. 실내 냉방시설 계수 (연평균 값)</strong></div>
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://verycoldplay.github.io/eco2_guide_center/_tables/2.3.3_6.png"><img alt="실내 냉방시설 계수 (연평균 값)" src="https://verycoldplay.github.io/eco2_guide_center/_tables/2.3.3_6.png" style="max-width: 80%;"/></a>
@@ -1404,7 +1402,7 @@ $$</p>
 </li>
 </ul>
 <blockquote>
-<p>where,  </p>
+<p>Where,  </p>
 <p>• <span class="arithmatex">\(Q_{Z,aux,d,a}:\)</span> 냉수 분배망의 연간 전기 에너지요구량 [kWh]<br/>
 • <span class="arithmatex">\(Q_{Z,aux,d,l}:\)</span> 냉수 분배망의 기간별 전기 에너지요구량 [kWh]<br/>
 • <span class="arithmatex">\(W_{d,hydr,l}:\)</span> 기간별 수력학적 에너지요구량 [kWh]<br/>
@@ -1421,22 +1419,23 @@ $$</li>
 P_{d,hydr} = 1000 \cdot \Delta p_{Z} \cdot \frac{\dot{V}_{Z}}{3600 [s/h]} \tag{2.3.5-4}
 \]</div>
 <ul>
-<li>
-<p>설계 유량(<span class="arithmatex">\(\dot{V}_{Z}\)</span>): 설계 유량은 설계 조건에서의 냉각 용량(<span class="arithmatex">\(\dot{Q}_Z\)</span>)과 공급-환수 간 온도차(<span class="arithmatex">\(Δθ_{Z,cl}\)</span>), 분배망 내 냉매 물성치로 계산합니다.
-$$
-\dot{V}<em z="Z">{Z} = \frac{3600 [s/h] \cdot \dot{Q}</em>
-$$}}{\Delta \vartheta_{Z,cl} \cdot C_{cl} \cdot \rho_{cl}} \tag{2.3.5-5</p>
-</li>
-<li>
-<p>수냉식 냉동기의 경우, 냉수 분배망의 정격 냉각 용량 (<span class="arithmatex">\(\dot{Q}_{Z}\)</span>)은 정격 재냉각 출력 (<span class="arithmatex">\(\dot{Q}_{R,outz}\)</span>)과 같다고 가정합니다.
-$$
-\dot{Q}<em r_outz="R,outz">{Z} = \dot{Q}</em>
-$$} \tag{2.3.5-6</p>
-</li>
+<li>설계 유량(<span class="arithmatex">\(\dot{V}_{Z}\)</span>): 설계 유량은 설계 조건에서의 냉각 용량(<span class="arithmatex">\(\dot{Q}_Z\)</span>)과 공급-환수 간 온도차(<span class="arithmatex">\(Δθ_{Z,cl}\)</span>), 분배망 내 냉매 물성치로 계산합니다.  </li>
 </ul>
-<div class="arithmatex">\[
+<div align="center">
+$$
+\dot{V}_{Z} = \frac{3600 [s/h] \cdot \dot{Q}_{Z}}{\Delta \vartheta_{Z,cl} \cdot C_{cl} \cdot \rho_{cl}} \tag{2.3.5-5}
+$$</div>
+<ul>
+<li>수냉식 냉동기의 경우, 냉수 분배망의 정격 냉각 용량 (<span class="arithmatex">\(\dot{Q}_{Z}\)</span>)은 정격 재냉각 출력 (<span class="arithmatex">\(\dot{Q}_{R,outz}\)</span>)과 같다고 가정합니다.  </li>
+</ul>
+<div align="center">
+$$
+\dot{Q}_{Z} = \dot{Q}_{R,outz} \tag{2.3.5-6}
+$$</div>
+<div align="center">
+$$
 \dot{Q}_{z}=\dot{Q}_{R,outg}=\dot{Q}_{c,outg} + (1 + \frac{1}{EER}) \tag{2.3.5-7}
-\]</div>
+$$</div>
 <ul>
 <li>
 <p>재냉각 순환망에서 열에너지는 아래 식으로 계산합니다.
@@ -1449,7 +1448,7 @@ $$</p>
 </li>
 </ul>
 <blockquote>
-<p>where,  </p>
+<p>Where,  </p>
 <p>• <span class="arithmatex">\(W_{d,hydr,l}:\)</span> 수력학적 에너지요구량 [kWh]<br/>
 • <span class="arithmatex">\(P_{d,hydr}:\)</span> 설계 조건에서 냉수 분배망의 수력 동력 [W]<br/>
 • <span class="arithmatex">\(t_{d,l}:\)</span> 기간별 펌프 운전시간 [h]<br/>
@@ -1598,15 +1597,14 @@ $$</p>
 • <span class="arithmatex">\(b\)</span> = 건물 범주에 따른 평가계수(기존 건물 = 1.2, 신축 = 1.0)  </p>
 </blockquote>
 <ul>
-<li>
-<p>고점성 냉매 사용 시 펌프 효율계수 보정: 동점성 계수(<span class="arithmatex">\(ν_{cl}\)</span>)가 4 <span class="arithmatex">\(mm^{2}/s\)</span>를 초과하는 냉매 또는 Flo-Ice를 사용하는 경우, <span class="arithmatex">\(f_{e}\)</span>의 가정 값은 별도로 결정되어야 합니다. <span class="arithmatex">\(4\, mm^{2}/s \le \nu \le 40\, mm^{2}/s\)</span> 인 냉매의 경우, 보정된 <span class="arithmatex">\(f_{e}\)</span>는 위에서 언급된 펌프 유형과 양정, 식 2.3.5.4-3 으로 계산된 <span class="arithmatex">\(f'_{e}\)</span>에 따라 계산될 수 있습니다.
+<li>고점성 냉매 사용 시 펌프 효율계수 보정: 동점성 계수(<span class="arithmatex">\(ν_{cl}\)</span>)가 4 <span class="arithmatex">\(mm^{2}/s\)</span>를 초과하는 냉매 또는 Flo-Ice를 사용하는 경우, <span class="arithmatex">\(f_{e}\)</span>의 가정 값은 별도로 결정되어야 합니다. <span class="arithmatex">\(4\, mm^{2}/s \le \nu \le 40\, mm^{2}/s\)</span> 인 냉매의 경우, 보정된 <span class="arithmatex">\(f_{e}\)</span>는 위에서 언급된 펌프 유형과 양정, 식 2.3.5.4-3 으로 계산된 <span class="arithmatex">\(f'_{e}\)</span>에 따라 계산될 수 있습니다.  </li>
+</ul>
+<div align="center">
 $$
-f_e = f'<em cl="cl">e \cdot ( 1 + ( \frac{\nu</em>
-$$}^2}{16 \cdot P_{d,hydr}} )^{0.4} ) \tag{2.3.5-17</p>
-</li>
-<li>
-<p>적응 보정계수(<span class="arithmatex">\(f_{Adap}\)</span>): 실제 설치된 펌프와 설계조건 하에서 최적화된 펌프의 전력 소비 차이를 고려하여 실제 운전 점에서의 펌프 전력 소비를 반영합니다. 펌프의 실제 운전점은 항상 설계유량과 연관되어 있습니다. 조정이 불가능한 펌프의 경우, 실제 운전 점과 설계점 사이에 다소 큰 차이가 있을 것이며, 조정 가능한 펌프의 경우, 일반적으로 설계 점 값에 가깝게 조정될 수 있습니다.</p>
-</li>
+f_e = f'_e \cdot ( 1 + ( \frac{\nu_{cl}^2}{16 \cdot P_{d,hydr}} )^{0.4} ) \tag{2.3.5-17}
+$$</div>
+<ul>
+<li>적응 보정계수(<span class="arithmatex">\(f_{Adap}\)</span>): 실제 설치된 펌프와 설계조건 하에서 최적화된 펌프의 전력 소비 차이를 고려하여 실제 운전 점에서의 펌프 전력 소비를 반영합니다. 펌프의 실제 운전점은 항상 설계유량과 연관되어 있습니다. 조정이 불가능한 펌프의 경우, 실제 운전 점과 설계점 사이에 다소 큰 차이가 있을 것이며, 조정 가능한 펌프의 경우, 일반적으로 설계 점 값에 가깝게 조정될 수 있습니다.</li>
 <li>성능이 알려진/최적으로 조정된 펌프: <span class="arithmatex">\(f_{Adap}\)</span> = 1.0</li>
 <li>
 <p>성능을 모르는 경우:</p>
@@ -1628,7 +1626,7 @@ $$}^2}{16 \cdot P_{d,hydr}} )^{0.4} ) \tag{2.3.5-17</p>
 </li>
 </ul>
 <center>
-<div><strong>Table 2.3.5.4-1. 펌프 운전방식에 따른 상수 $C_{P1}$, $C_{P2}$</strong></div>
+<div><strong>Table 2.3.5.4-1. 펌프 운전방식에 따른 상수 \(C_{P1}\), \(C_{P2}\)</strong></div>
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://verycoldplay.github.io/eco2_guide_center/_tables/2.3.5.4_5.png"><img alt="펌프 운전방식에 따른 상수 Cp1, Cp2" src="https://verycoldplay.github.io/eco2_guide_center/_tables/2.3.5.4_5.png" style="max-width: 80%;"/></a>
 </center>
 <ul>
@@ -1667,20 +1665,20 @@ $$}^2}{16 \cdot P_{d,hydr}} )^{0.4} ) \tag{2.3.5-17</p>
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://verycoldplay.github.io/eco2_guide_center/_tables/2.4_2.png"><img alt="냉열공급을 위한 조닝" src="https://verycoldplay.github.io/eco2_guide_center/_tables/2.4_2.png" style="max-width: 80%;"/></a>
 </center>
 <ul>
-<li>
-<p>한 냉동기가 각 시스템의 냉각 유닛에 공급하는 연간 냉열 에너지공급량은 각 용도 종류 n (용도프로필 참고)으로 나누어 계산합니다. <span class="arithmatex">\(j\)</span> 개의 건물 존에 대해 공조 시스템과 실내냉방 시스템으로 공급된 각 월별 냉열 에너지공급량을 연간으로 합산하여 냉동기의 연간 총 냉열 에너지공급량을 계산합니다.
-$$
-Q_{C,outg,a,n} = Q_{c,outg,a,n} + Q_{c^{<em>},outg,a,n} = \sum_{1}^{j} (\sum_{1}^{12} Q_{c,outg,mth,j} + \sum_{1}^{12} Q_{c^{</em>},outg,mth,j} ) \tag{2.4-3}
-$$</p>
-</li>
-<li>
-<p>냉열 공급이 HVAC / 실내냉방 시스템 중 하나에만 공급된다면, 해당되지 않는 항은 0이 됩니다.</p>
-</li>
-<li>냉동기 총 연간 냉열 에너지공급량(<span class="arithmatex">\(Q_{C,outg,a}\)</span>): 냉열 공급영역을 담당하는 냉동기의 연간 냉열 에너지공급량의 총합은 모든 용도 n에 대한 연간 냉열 에너지공급량의 합입니다.
-$$
-Q_{C,outg,a} = \sum^{n}<em c_outg_a_n="C,outg,a,n">{1} Q</em>
-$$} \tag{2.4-4</li>
+<li>한 냉동기가 각 시스템의 냉각 유닛에 공급하는 연간 냉열 에너지공급량은 각 용도 종류 n (용도프로필 참고)으로 나누어 계산합니다. <span class="arithmatex">\(j\)</span> 개의 건물 존에 대해 공조 시스템과 실내냉방 시스템으로 공급된 각 월별 냉열 에너지공급량을 연간으로 합산하여 냉동기의 연간 총 냉열 에너지공급량을 계산합니다.  </li>
 </ul>
+<div align="center">
+$$
+Q_{C,outg,a,n} = Q_{c,outg,a,n} + Q_{c^{*},outg,a,n} = \sum_{1}^{j} (\sum_{1}^{12} Q_{c,outg,mth,j} + \sum_{1}^{12} Q_{c^{*},outg,mth,j} ) \tag{2.4-3}
+$$</div>
+<ul>
+<li>냉열 공급이 HVAC / 실내냉방 시스템 중 하나에만 공급된다면, 해당되지 않는 항은 0이 됩니다.</li>
+<li>냉동기 총 연간 냉열 에너지공급량(<span class="arithmatex">\(Q_{C,outg,a}\)</span>): 냉열 공급영역을 담당하는 냉동기의 연간 냉열 에너지공급량의 총합은 모든 용도 n에 대한 연간 냉열 에너지공급량의 합입니다.</li>
+</ul>
+<div align="center">
+$$
+Q_{C,outg,a} = \sum^{n}_{1} Q_{C,outg,a,n} \tag{2.4-4}
+$$</div>
 <blockquote>
 <p>Where,  </p>
 <p>• <span class="arithmatex">\(Q_{C,outg,a,n}:\)</span> 용도 n의 공조를 위한 연간 냉열 에너지공급량 [kWh]<br/>
@@ -1817,12 +1815,12 @@ Q_{C,outg,therm} = \frac{Q_{C,outg,a}}{\zeta \cdot PLV_{av}} \tag{2.5-2}
 $$</p>
 </li>
 <li>
-<p>정격 열성능비(ζ): 흡수식 냉동기의 정격 냉열 출력(<span class="arithmatex">\(\dot{Q}_{C,outg}\)</span>)과 정격 열 소비(<span class="arithmatex">\(\dot{Q}_{C,therm}\)</span>)의 비율 입니다.
-$$
-\zeta = \frac{\dot{Q}<em c_therm="C,therm">{C,outg}}{\dot{Q}</em>
-$$}} \tag{2.5-3</p>
+<p>정격 열성능비(ζ): 흡수식 냉동기의 정격 냉열 출력(<span class="arithmatex">\(\dot{Q}_{C,outg}\)</span>)과 정격 열 소비(<span class="arithmatex">\(\dot{Q}_{C,therm}\)</span>)의 비율 입니다.  </p>
 </li>
 </ul>
+<div align="center">$$
+\zeta = \frac{\dot{Q}_{C,outg}}{\dot{Q}_{C,therm}} \tag{2.5-3}
+$$</div>
 <blockquote>
 <p>Where,  </p>
 <p>• <span class="arithmatex">\(ζ:\)</span> 정격 열성능비 [kW/kW]<br/>
@@ -1890,11 +1888,12 @@ Q_{C,outg,therm,mth} = Q_{C,outg,therm,a} \cdot ( \frac{Q_{C,outg,mth}}{Q_{C,out
 <hr/>
 <h2 id="26-energy-use">2.6. 재냉각의 에너지소요량 (Energy use)<a class="headerlink" href="#26-energy-use" title="Permanent link">¶</a></h2>
 <ul>
-<li>재냉각의 에너지소요량은 재냉각기의 기기 구성 특징에 기반을 둔 전기 에너지 수요(<span class="arithmatex">\(q_{R,elektr}\)</span>)과 재냉각의 평균 이용 계수(<span class="arithmatex">\(f_{R,av}\)</span>)을 기반으로 계산합니다.
-$$
-Q_{C,f,R,elektr} = \dot{Q}<em r_elektr="R,elektr">{R,outg} \cdot q</em>
-$$} \cdot f_{R,av} \cdot t_{R,op} \tag{2.6-1</li>
+<li>재냉각의 에너지소요량은 재냉각기의 기기 구성 특징에 기반을 둔 전기 에너지 수요(<span class="arithmatex">\(q_{R,elektr}\)</span>)과 재냉각의 평균 이용 계수(<span class="arithmatex">\(f_{R,av}\)</span>)을 기반으로 계산합니다.</li>
 </ul>
+<div align="center">
+$$
+Q_{C,f,R,elektr} = \dot{Q}_{R,outg} \cdot q_{R,elektr} \cdot f_{R,av} \cdot t_{R,op} \tag{2.6-1}
+$$</div>
 <div class="arithmatex">\[
 \dot{Q}_{R,outg} = \dot{Q}_{c,outg} \cdot (1 + \frac{1}{EER}) \quad \text{(압축식 냉동기)} \tag{2.6-2}
 \]</div>
@@ -1916,7 +1915,7 @@ $$} \cdot f_{R,av} \cdot t_{R,op} \tag{2.6-1</li>
 <li>특성치 방법을 적용할 때, 증발식 재냉각 (개방형 및 밀폐형 냉각수 순환망)과 건식 재냉각 시스템은 구별됩니다. Table 2.6-4.는 보조 방음기 유무에 따른 단위 전기에너지 수요입니다. </li>
 </ul>
 <center>
-<div><strong>Table 2.6-4. 재냉각기의 단위 전기에너지 수요 $q_{R,elektr}$</strong></div>
+<div><strong>Table 2.6-4. 재냉각기의 단위 전기에너지 수요 \(q_{R,elektr}\)</strong></div>
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://verycoldplay.github.io/eco2_guide_center/_tables/2.6_4.png"><img alt="재냉각기의 고유 전기에너지요구량" src="https://verycoldplay.github.io/eco2_guide_center/_tables/2.6_4.png" style="max-width: 80%;"/></a>
 </center>
 <ul>
@@ -1986,12 +1985,13 @@ Q_{c,g} = Q_{c^{*},g} = 0 \tag{2.7.1-2}
 $$</p>
 </li>
 <li>
-<p>신재생에너지로 생산된 냉열 에너지는 아래 식과 같습니다.
-$$
-Q_{c,reg} = Q_{c,outg} - Q_{c,f}\ \text{or} \  Q_{c^{<em>},reg} = Q_{c^{</em>},outg} - Q_{c^{*},f} \ \text{or} \ Q_{C,outg} - Q_{C,f} \tag{2.7.1-3}
-$$</p>
+<p>신재생에너지로 생산된 냉열 에너지는 아래 식과 같습니다.  </p>
 </li>
 </ul>
+<div align="center">$$
+Q_{c,reg} = Q_{c,outg} - Q_{c,f}\ \text{or} \  Q_{c^{*},reg} = Q_{c^{*},outg} - Q_{c^{*},f} \ \text{or} \ Q_{C,outg} - Q_{C,f} \tag{2.7.1-3}
+$$
+</div>
 <h3 id="272">2.7.2. 흡수식 냉동기의 열 에너지 (증기)<a class="headerlink" href="#272" title="Permanent link">¶</a></h3>
 <p>110℃ 이하 온도에서 필요한 열 에너지는 난방 에너지소요량에서 계산됩니다.
 $$
@@ -2026,7 +2026,7 @@ $$</li>
 <span class="md-icon" title="마지막 업데이트">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 11월 18일 10:49:27 UTC">2025년 11월 18일</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 11월 18일 12:43:18 UTC">2025년 11월 18일</span>
 </span>
 </aside>
 </article>
