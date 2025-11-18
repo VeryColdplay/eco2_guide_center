@@ -165,7 +165,7 @@ $$
 b_{vc,a} = \sum_{m=1}^{12} b_{vc,mth} \tag{2.2.2-3}
 $$
 
->Where,  
+> Where,  
 > 
 > • $t_{c^{*},op,mth}:$ 공조기 냉각 유닛의 월별 운전 시간 [h]  
 > • $t_{C,r}:$ 연간 상대적 냉방 운전 시간 [h]  
@@ -191,22 +191,23 @@ $$
 Q_{c^{*},outg} = Q_{c^{*},b} + Q_{c^{*},ce} + Q_{c^{*},d} + Q_{c^{*},s} \tag{2.3.2-1}
 $$
 
-* 전달 손실($Q_{c*,d}$):
+* 전달 손실($Q_{c*,d}$):  
+<div align="center">
 $$
 Q_{c^{*},ce} = [(1 - \eta_{c^{*},ce}) + (1 - \eta_{c^{*},ce,sens})] \cdot Q_{c^{*},b} \tag{2.3.2-2}
-$$
+$$</div>
 
-* 분배 손실($Q_{c*,d}$):
-$$
+* 분배 손실($Q_{c*,d}$):  
+<div align="center">$$
 Q_{c^{*},d} = (1 - \eta_{c^{*},d}) \cdot Q_{c^{*},b} \tag {2.3.2-3}
-$$
+$$</div>
 
 * 저장 손실($Q_{c*,s}$): ECO2에서 냉열 저장 손실은 무시합니다.
 $$
 Q_{c^{*},s} = 0 \tag{2.3.2-4} 
 $$
 
->Where,  
+> Where,  
 >
 > • $Q_{c^{*},outg}:$ HVAC 시스템 냉각유닛에 대한 냉열 에너지공급량 (해당 월 기준) [kWh]  
 > • $Q_{c^{*},b}:$ HVAC 시스템 냉각유닛의 냉열 에너지요구량 (해당 월 기준) [kWh]  
@@ -239,20 +240,22 @@ $$
 Q_{c,outg} = Q_{c,b} + Q_{c,ce} + Q_{c,d} + Q_{c,s} \tag{2.3.3-1}
 $$
 
-* 전달 손실($Q_{c,ce}$):
+* 전달 손실(\(Q_{c,ce}\)):  
+
+<div align="center">
 $$
 Q_{c,ce} = [(1 - \eta_{c,ce}) + (1 - \eta_{c,ce,sens})] \cdot Q_{c,b} \tag{2.3.3-2}
-$$
+$$</div>
 
-* 분배 손실($Q_{c,d}$):
-$$
+* 분배 손실(\(Q_{c,d}\)):  
+<div align="center">$$
 Q_{c,d} = (1 - \eta_{c,d}) \cdot Q_{c,b} \tag{2.3.3-3}
-$$
+$$</div>
 
-* 저장 손실($Q_{c,s}$): ECO2에서 냉열 저장 손실은 무시합니다.
-$$
+* 저장 손실(\(Q_{c,s}\)): ECO2에서 냉열 저장 손실은 무시합니다.  
+<div align="center">$$
 Q_{c,s} = 0 \tag{2.3.3-4}
-$$
+$$</div>
 
 <center>
 <div><strong>Table 2.3.3-1. 실내 냉방시설 계수 (연평균 값)</strong></div>
@@ -305,7 +308,7 @@ $$
 Q_{Z,aux,d,l} = W_{d,hydr,l} \cdot e_{d,l} \tag{2.3.5-2}
 $$
 
-> where,  
+> Where,  
 >
 > • $Q_{Z,aux,d,a}:$ 냉수 분배망의 연간 전기 에너지요구량 [kWh]  
 > • $Q_{Z,aux,d,l}:$ 냉수 분배망의 기간별 전기 에너지요구량 [kWh]  
@@ -323,19 +326,22 @@ $$
 P_{d,hydr} = 1000 \cdot \Delta p_{Z} \cdot \frac{\dot{V}_{Z}}{3600 [s/h]} \tag{2.3.5-4}
 $$
 
-* 설계 유량($\dot{V}_{Z}$): 설계 유량은 설계 조건에서의 냉각 용량($\dot{Q}_Z$)과 공급-환수 간 온도차($Δθ_{Z,cl}$), 분배망 내 냉매 물성치로 계산합니다.
+* 설계 유량($\dot{V}_{Z}$): 설계 유량은 설계 조건에서의 냉각 용량($\dot{Q}_Z$)과 공급-환수 간 온도차($Δθ_{Z,cl}$), 분배망 내 냉매 물성치로 계산합니다.  
+<div align="center">
 $$
 \dot{V}_{Z} = \frac{3600 [s/h] \cdot \dot{Q}_{Z}}{\Delta \vartheta_{Z,cl} \cdot C_{cl} \cdot \rho_{cl}} \tag{2.3.5-5}
-$$
+$$</div>
 
-* 수냉식 냉동기의 경우, 냉수 분배망의 정격 냉각 용량 ($\dot{Q}_{Z}$)은 정격 재냉각 출력 ($\dot{Q}_{R,outz}$)과 같다고 가정합니다.
+* 수냉식 냉동기의 경우, 냉수 분배망의 정격 냉각 용량 ($\dot{Q}_{Z}$)은 정격 재냉각 출력 ($\dot{Q}_{R,outz}$)과 같다고 가정합니다.  
+<div align="center">
 $$
 \dot{Q}_{Z} = \dot{Q}_{R,outz} \tag{2.3.5-6}
-$$
+$$</div>  
 
+<div align="center">
 $$
 \dot{Q}_{z}=\dot{Q}_{R,outg}=\dot{Q}_{c,outg} + (1 + \frac{1}{EER}) \tag{2.3.5-7}
-$$
+$$</div>
 
 * 재냉각 순환망에서 열에너지는 아래 식으로 계산합니다.
 $$
@@ -344,7 +350,7 @@ $$
 
 * 흡수식 냉동기의 경우 SEER 대신 평균 열성능비 ($ζ_{av}$)을 사용합니다.
 
->where,  
+> Where,  
 >
 > • $W_{d,hydr,l}:$ 수력학적 에너지요구량 [kWh]  
 > • $P_{d,hydr}:$ 설계 조건에서 냉수 분배망의 수력 동력 [W]  
@@ -367,7 +373,7 @@ $$
 \Delta p_Z = R \cdot L_{max} \cdot (1 + z) + \Delta p_{WUE} + \Delta p_{RV} + \Delta p_{WUV} \tag{2.3.5-9}
 $$
 
->Where,  
+> Where,  
 >
 > • $\Delta p_Z:$ 설계 조건에서 냉수 분배망의 압력 손실 [kPa]  
 > • $R:$ 배관 압력손실 [kPa/m]  
@@ -390,7 +396,7 @@ $$
 L_{max} = 2 \cdot (L + \frac{B}{2} + h_G \cdot n_G + 10) \tag{2.3.5-10}
 $$
 
->Where,  
+> Where,  
 >
 > • $L:$ 건물 길이 [m]  
 > • $B$:$ 건물 폭 [m]  
@@ -438,7 +444,7 @@ $$
 * 최소 유량은 냉수 분배망의 요구 또는 냉열 소비측 망에 있는 과압 방지 밸브 (overpressure relief valve, 시스템 압력 손실, 펌프 특성, 밸브 작동 압력의 상호작용에 따라 기능이 결정됨)에 기반하여 계산되어야 합니다.
 * 1차 배관망의 수력학적 분리되어 있거나 (e.g. 수력학적으로 분리된 line valve 또는 평행으로 연결된 저장 장치) 또는 냉열 소비측 망에 전향 밸브 (deflection valve)를 사용할 경우, 관련된 공급 펌프에 $\beta_{d} = 1$ 을 적용할 수 있습니다.
 
->Where,  
+> Where,  
 >
 > • $Q_{Z,outg,l}:$ 설계 조건에서 냉수 분배망의 정격 냉방/냉각 용량 [kW]  
 > • $\dot{Q}_Z:$ 냉수 분배망의 냉열 에너지요구량 (기간별) [kWh]  
@@ -485,10 +491,11 @@ $$
 > • $f_{Adap}$ = 펌프 운전 점 (operating point)에 대한 적응 보정계수  
 > • $b$ = 건물 범주에 따른 평가계수(기존 건물 = 1.2, 신축 = 1.0)  
 
-* 고점성 냉매 사용 시 펌프 효율계수 보정: 동점성 계수($ν_{cl}$)가 4 $mm^{2}/s$를 초과하는 냉매 또는 Flo-Ice를 사용하는 경우, $f_{e}$의 가정 값은 별도로 결정되어야 합니다. $4\, mm^{2}/s \le \nu \le 40\, mm^{2}/s$ 인 냉매의 경우, 보정된 $f_{e}$는 위에서 언급된 펌프 유형과 양정, 식 2.3.5.4-3 으로 계산된 $f'_{e}$에 따라 계산될 수 있습니다.
+* 고점성 냉매 사용 시 펌프 효율계수 보정: 동점성 계수($ν_{cl}$)가 4 $mm^{2}/s$를 초과하는 냉매 또는 Flo-Ice를 사용하는 경우, $f_{e}$의 가정 값은 별도로 결정되어야 합니다. $4\, mm^{2}/s \le \nu \le 40\, mm^{2}/s$ 인 냉매의 경우, 보정된 $f_{e}$는 위에서 언급된 펌프 유형과 양정, 식 2.3.5.4-3 으로 계산된 $f'_{e}$에 따라 계산될 수 있습니다.  
+<div align="center">
 $$
 f_e = f'_e \cdot ( 1 + ( \frac{\nu_{cl}^2}{16 \cdot P_{d,hydr}} )^{0.4} ) \tag{2.3.5-17}
-$$
+$$</div>
 
 * 적응 보정계수($f_{Adap}$): 실제 설치된 펌프와 설계조건 하에서 최적화된 펌프의 전력 소비 차이를 고려하여 실제 운전 점에서의 펌프 전력 소비를 반영합니다. 펌프의 실제 운전점은 항상 설계유량과 연관되어 있습니다. 조정이 불가능한 펌프의 경우, 실제 운전 점과 설계점 사이에 다소 큰 차이가 있을 것이며, 조정 가능한 펌프의 경우, 일반적으로 설계 점 값에 가깝게 조정될 수 있습니다.
   * 성능이 알려진/최적으로 조정된 펌프: $f_{Adap}$ = 1.0
@@ -504,7 +511,7 @@ $$
 * 펌프의 제어 방식(비제어/제어)에 따른 펌프 동력 감소를 설명하는 상수($C_{P1}$, $C_{P2}$)가 결정되며, 소비지수 계산(식 2.3.5-14)에 사용합니다.
 
 <center>
-<div><strong>Table 2.3.5.4-1. 펌프 운전방식에 따른 상수 $C_{P1}$, $C_{P2}$</strong></div>
+<div><strong>Table 2.3.5.4-1. 펌프 운전방식에 따른 상수 \(C_{P1}\), \(C_{P2}\)</strong></div>
 <img alt="펌프 운전방식에 따른 상수 Cp1, Cp2" src="https://verycoldplay.github.io/eco2_guide_center/_tables/2.3.5.4_5.png" style="max-width: 80%;">
 </center>
 
@@ -544,16 +551,18 @@ $$
 <img alt="냉열공급을 위한 조닝" src="https://verycoldplay.github.io/eco2_guide_center/_tables/2.4_2.png" style="max-width: 80%;">
 </center>
 
-* 한 냉동기가 각 시스템의 냉각 유닛에 공급하는 연간 냉열 에너지공급량은 각 용도 종류 n (용도프로필 참고)으로 나누어 계산합니다. $j$ 개의 건물 존에 대해 공조 시스템과 실내냉방 시스템으로 공급된 각 월별 냉열 에너지공급량을 연간으로 합산하여 냉동기의 연간 총 냉열 에너지공급량을 계산합니다.
+* 한 냉동기가 각 시스템의 냉각 유닛에 공급하는 연간 냉열 에너지공급량은 각 용도 종류 n (용도프로필 참고)으로 나누어 계산합니다. $j$ 개의 건물 존에 대해 공조 시스템과 실내냉방 시스템으로 공급된 각 월별 냉열 에너지공급량을 연간으로 합산하여 냉동기의 연간 총 냉열 에너지공급량을 계산합니다.  
+<div align="center">
 $$
 Q_{C,outg,a,n} = Q_{c,outg,a,n} + Q_{c^{*},outg,a,n} = \sum_{1}^{j} (\sum_{1}^{12} Q_{c,outg,mth,j} + \sum_{1}^{12} Q_{c^{*},outg,mth,j} ) \tag{2.4-3}
-$$
+$$</div>
 
 * 냉열 공급이 HVAC / 실내냉방 시스템 중 하나에만 공급된다면, 해당되지 않는 항은 0이 됩니다.
 * 냉동기 총 연간 냉열 에너지공급량($Q_{C,outg,a}$): 냉열 공급영역을 담당하는 냉동기의 연간 냉열 에너지공급량의 총합은 모든 용도 n에 대한 연간 냉열 에너지공급량의 합입니다.
+<div align="center">
 $$
 Q_{C,outg,a} = \sum^{n}_{1} Q_{C,outg,a,n} \tag{2.4-4}
-$$
+$$</div>
 
 > Where,  
 >
@@ -580,7 +589,7 @@ $$
 EER = \frac{\dot{Q}_{C,outg}}{P_{C,elektr}} \tag{2.4-7}
 $$
 
->Where,  
+> Where,  
 >
 > • $EER:$ 에너지 성능지수 (Energy efficiency ratio) [kW/kW]  
 > • $SEER:$ 계절별 에너지 성능지수 (Seasonal energy efficiency ratio) [kWh/kWh]  
@@ -684,12 +693,13 @@ $$
 Q_{C,outg,therm} = \frac{Q_{C,outg,a}}{\zeta \cdot PLV_{av}} \tag{2.5-2}
 $$
 
-* 정격 열성능비(ζ): 흡수식 냉동기의 정격 냉열 출력($\dot{Q}_{C,outg}$)과 정격 열 소비($\dot{Q}_{C,therm}$)의 비율 입니다.
-$$
-\zeta = \frac{\dot{Q}_{C,outg}}{\dot{Q}_{C,therm}} \tag{2.5-3}
-$$
+* 정격 열성능비(ζ): 흡수식 냉동기의 정격 냉열 출력($\dot{Q}_{C,outg}$)과 정격 열 소비($\dot{Q}_{C,therm}$)의 비율 입니다.  
 
->Where,  
+<div align="center">$$
+\zeta = \frac{\dot{Q}_{C,outg}}{\dot{Q}_{C,therm}} \tag{2.5-3}
+$$</div>  
+
+> Where,  
 >
 > • $ζ:$ 정격 열성능비 [kW/kW]  
 > • $ζ_{av}:$ 연간 평균 열성능비 [kWh/kWh]  
@@ -733,7 +743,7 @@ $$
 Q_{C,outg,therm,mth} = Q_{C,outg,therm,a} \cdot ( \frac{Q_{C,outg,mth}}{Q_{C,outg,a}} ) \tag{2.5-6}
 $$
 
->Where,  
+> Where,  
 >
 > • $Q_{C,outg,mth,n}:$ 월별 냉열 에너지공급량 (용도 n에 따른) [kWh]  
 > • $Q_{c,outg,mth,j}:$ 월별 실내냉방 시스템에 대한 냉열 에너지공급량 (각 존 j) [kWh]  
@@ -747,7 +757,7 @@ $$
 \dot{Q}_{C,therm} = \frac{\dot{Q}_{C,outg}}{\zeta} (\dot{Q}_{C,outg} = \sum(\dot{Q}_{C,max}; \dot{Q}_{C^{*},max}) \tag{2.5-7}
 $$
 
->Where,  
+> Where,  
 >
 > • $\dot{Q}_{C,therm}:$ 흡수식 냉동기의 정격 열 출력 [kW]  
 > • $\dot{Q}_{C,outg}:$ 흡수식 냉동기의 정격 냉열 출력 [kW]  
@@ -757,9 +767,10 @@ $$
 
 ## 2.6. 재냉각의 에너지소요량 (Energy use)
 * 재냉각의 에너지소요량은 재냉각기의 기기 구성 특징에 기반을 둔 전기 에너지 수요($q_{R,elektr}$)과 재냉각의 평균 이용 계수($f_{R,av}$)을 기반으로 계산합니다.
+<div align="center">
 $$
 Q_{C,f,R,elektr} = \dot{Q}_{R,outg} \cdot q_{R,elektr} \cdot f_{R,av} \cdot t_{R,op} \tag{2.6-1}
-$$
+$$</div>
 
 $$
 \dot{Q}_{R,outg} = \dot{Q}_{c,outg} \cdot (1 + \frac{1}{EER}) \quad \text{(압축식 냉동기)} \tag{2.6-2}
@@ -769,7 +780,7 @@ $$
 \dot{Q}_{R,outg} = \dot{Q}_{c,outg} \cdot (1 + \frac{1}{\zeta}) \quad \text{(흡수식 냉동기)} \tag{2.6-3}
 $$
 
->Where,  
+> Where,  
 >
 > • $Q_{C,f,R,elektr}:$ 재냉각 시스템의 전기 에너지소요량 [kWh]  
 > • $\dot{Q}_{R,outg}:$ 재냉각 시스템의 정격 냉열 출력 [kW]  
@@ -783,7 +794,7 @@ $$
 * 특성치 방법을 적용할 때, 증발식 재냉각 (개방형 및 밀폐형 냉각수 순환망)과 건식 재냉각 시스템은 구별됩니다. Table 2.6-4.는 보조 방음기 유무에 따른 단위 전기에너지 수요입니다. 
 
 <center>
-<div><strong>Table 2.6-4. 재냉각기의 단위 전기에너지 수요 $q_{R,elektr}$</strong></div>
+<div><strong>Table 2.6-4. 재냉각기의 단위 전기에너지 수요 \(q_{R,elektr}\)</strong></div>
 <img alt="재냉각기의 고유 전기에너지요구량" src="https://verycoldplay.github.io/eco2_guide_center/_tables/2.6_4.png" style="max-width: 80%;">
 </center>
 
@@ -804,7 +815,7 @@ $$
 f_{R,av} = \sum_{1}^{n} ( \frac{Q_{C,outg,a,n} \cdot f_{R,av,n}}{Q_{C,outg,a}} ) \tag {2.6-6}
 $$
 
->Where,  
+> Where,  
 >
 > • $f_{R,av,n}:$ 용도 n에 따른 재냉각 평균 이용 계수  
 > • $Q_{C,outg,a,n}:$ 용도 n에 따른 냉동기의 연간 냉열 에너지공급량 [kWh]  
@@ -855,10 +866,12 @@ $$
 Q_{c,g} = Q_{c^{*},g} = 0 \tag{2.7.1-2}
 $$
 
-* 신재생에너지로 생산된 냉열 에너지는 아래 식과 같습니다.
-$$
+* 신재생에너지로 생산된 냉열 에너지는 아래 식과 같습니다.  
+<div align="center">$$
 Q_{c,reg} = Q_{c,outg} - Q_{c,f}\ \text{or} \  Q_{c^{*},reg} = Q_{c^{*},outg} - Q_{c^{*},f} \ \text{or} \ Q_{C,outg} - Q_{C,f} \tag{2.7.1-3}
 $$
+</div>  
+
 
 ### 2.7.2. 흡수식 냉동기의 열 에너지 (증기)
 110℃ 이하 온도에서 필요한 열 에너지는 난방 에너지소요량에서 계산됩니다.
@@ -874,7 +887,7 @@ $$
 Q_{C,max} = \sum Q_{c^{*},aux,a} + \sum Q_{c,aux,a} = \sum Q_{c,ce,aux,a} + \sum Q_{Z,aux,d,a} + \sum Q_{hr,f,aux,a} + \sum Q_{mh,f,aux,a} + \sum Q_{C,f,R,elektrisch} \tag{2.7.3-1}
 $$
 
->Where,  
+> Where,  
 >
 > • $Q_{C,aux}:$ 냉방를 위한 연간 보조에너지 [kWh]  
 > • $\sum Q_{c^{*},aux,a}:$ HVAC 시스템의 연간 보조에너지 [kWh]  
