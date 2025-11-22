@@ -3,939 +3,902 @@
 ## Nomenclature
 
 ### Symbols
+
+
 <table class="nomenclature">
   <thead style="background:#f5f7fa;">
     <tr><th>Symbol</th><th>Meaning</th><th>Unit</th></tr>
   </thead>
   <tbody>
-    <tr><td>Q</td><td>에너지 (Energy)</td><td>kWh</td></tr>
-    <tr><td>\(\dot{Q}\)</td><td>성능, 출력 (Power, Output)</td><td>kW</td></tr>
-    <tr><td>U</td><td>열관류율 (Heat transfer coefficient)</td><td>W/m²K</td></tr>
-    <tr><td>L</td><td>배관 길이 (Pipe length)</td><td>m</td></tr>
-    <tr><td>\(\vartheta\)</td><td>온도 (Temperature)</td><td>°C</td></tr>
     <tr><td>\(\Delta \vartheta\)</td><td>온도차 (Temperature difference)</td><td>K</td></tr>
     <tr><td>d</td><td>일수 (Days)</td><td>d</td></tr>
-    <tr><td>t</td><td>시간 (Time)</td><td>h</td></tr>
     <tr><td>f</td><td>계수 (Factor, Coefficient)</td><td>-</td></tr>
-    <tr><td>q</td><td>열손실/열손실률 (Heat loss/rate)</td><td>kWh/d</td></tr>
-    <tr><td>V</td><td>용량 (Volume)</td><td>ℓ</td></tr>
-    <tr><td>\(UA\)</td><td>측정된 책정-열손실 (Measured rated heat loss)</td><td>W/K</td></tr>
-    <tr><td>\(\eta\)</td><td>효율 (Efficiency)</td><td>-</td></tr>
+    <tr><td>L</td><td>배관 길이 (Pipe length)</td><td>m</td></tr>
     <tr><td>n</td><td>횟수 (Number)</td><td>-</td></tr>
-    <tr><td>A, B</td><td>(보일러) 효율계수 (Efficiency coefficients)</td><td>-</td></tr>
-    <tr><td>E, F</td><td>책정열손실 계수 (Rated heat loss coefficients)</td><td>-</td></tr>
-    <tr><td>H</td><td>지역난방 열손실 계수 (DH heat loss coefficient)</td><td>-</td></tr>
-    <tr><td>B</td><td>단열 등급 계수 (Insulation class coefficient)</td><td>-</td></tr>
-    <tr><td>\(\Phi\)</td><td>지역난방기계실 성능 (Rated power of DH station)</td><td>kW</td></tr>
-    <tr><td>D</td><td>지역난방 급수 온도 계수 (Coefficient for DH supply temperature)</td><td>-</td></tr>
+    <tr><td>Q</td><td>에너지 (Energy)</td><td>kWh</td></tr>
+    <tr><td>\(\dot{Q}\)</td><td>성능, 출력 (Power, Output)</td><td>kW</td></tr>
+    <tr><td>q</td><td>열손실/열손실률 (Heat loss/rate)</td><td>kWh/d</td></tr>
+    <tr><td>t</td><td>시간 (Time)</td><td>h</td></tr>
+    <tr><td>U</td><td>열관류율 (Heat transfer coefficient)</td><td>W/m²K</td></tr>
+    <tr><td>UA</td><td>열손실율 (Heat loss rate)</td><td>W/K</td></tr>
+    <tr><td>V</td><td>용량 (Volume)</td><td>ℓ</td></tr>
+    <tr><td>\(\eta\)</td><td>효율 (Efficiency)</td><td>-</td></tr>
+    <tr><td>\(\vartheta\)</td><td>온도 (Temperature)</td><td>°C</td></tr>
   </tbody>
 </table>
 
 
+
 ### Subscripts
+
 <table class="nomenclature">
   <thead style="background:#f5f7fa;">
     <tr><th>Subscript</th><th>Meaning</th><th>Subscript</th><th>Meaning</th></tr>
   </thead>
   <tbody>
-    <tr><td>w</td><td>급탕 (Hot water)</td><td>f</td><td>2차 에너지, 최종 (Final energy)</td></tr>
-    <tr><td>outg</td><td>공급량 (Output)</td><td>g</td><td>생산 (Generation)</td></tr>
-    <tr><td>reg</td><td>재생 (Renewable)</td><td>b</td><td>요구량 (Need)</td></tr>
+    <tr><td>100%</td><td>정격부하 (100% load)</td><td>70</td><td>ΔT = 70 K 기준</td></tr>
+    <tr><td>a</td><td>연간 (Annual)</td><td>aux</td><td>보조 (Auxiliary)</td></tr>
+    <tr><td>B</td><td>대기/정지/요소 (Stand-by, Shut down, Components)</td><td>b</td><td>요구량 (Need)</td></tr>
     <tr><td>ce</td><td>전달 (Transmission)</td><td>d</td><td>분배 (Distribution)</td></tr>
-    <tr><td>s</td><td>저장 (Storage)</td><td>aux</td><td>보조 (Auxiliary)</td></tr>
-    <tr><td>I</td><td>존 비제어 열유입 (Uncontrolled zone heat gain)</td><td>i</td><td>구간 (Section)</td></tr>
-    <tr><td>m</td><td>평균 (Mean, Average)</td><td>mth</td><td>월/월별 (Month, Monthly)</td></tr>
-    <tr><td>Nutz</td><td>이용 (Usage)</td><td>T</td><td>일일 (Daily)</td></tr>
-    <tr><td>verbindung</td><td>연결배관 (Connecting pipes)</td><td>B</td><td>대기/정지/요소 (Stand-by, Shut down, Components)</td></tr>
-    <tr><td>S</td><td>저장 (Storage)</td><td>SB</td><td>Stand-by</td></tr>
-    <tr><td>a</td><td>연간 (Annual)</td><td>sol</td><td>태양열 (Solar)</td></tr>
-    <tr><td>N</td><td>정격 (Rated/Nominal)</td><td>K</td><td>냉수 (Cold water)</td></tr>
-    <tr><td>k</td><td>보일러 (Boiler)</td><td>Sp</td><td>순간최대취수 (Peak draw)</td></tr>
-    <tr><td>100%</td><td>정격부하 (100% load)</td><td>h</td><td>난방 (Heating)</td></tr>
-    <tr><td>rB</td><td>운전 (Calculated operation)</td><td>Hs/Hi</td><td>고위/저위발열 비 (Gross/Net calorific value)</td></tr>
-    <tr><td>gleichzeitig</td><td>동시 (Simultaneous)</td><td>Vorrangig</td><td>순차/우선 (Priority)</td></tr>
-    <tr><td>70</td><td>ΔT=70 K 기준 (Based on 70 K delta)</td><td>DS</td><td>지역난방 (Dwelling substation)</td></tr>
-    <tr><td>prim</td><td>1차측 (Primary)</td><td>sek</td><td>2차측 (Secondary)</td></tr>
-    <tr><td>in</td><td>유입 (Inlet, Gain)</td><td></td><td></td></tr>
+    <tr><td>DS</td><td>지역난방 기계실 (Dwelling substation)</td><td>f</td><td>소요량, 계수 (Energy use / factor)</td></tr>
+    <tr><td>g</td><td>생산 (Generation)</td><td>gleichzeitig</td><td>동시 (Simultaneous)</td></tr>
+    <tr><td>h</td><td>난방 (Heating)</td><td>Hs/Hi</td><td>고위/저위발열량 비 (Gross/Net calorific value)</td></tr>
+    <tr><td>I</td><td>존의 비제어적 열유입 (Uncontrolled zone heat gain)</td><td>i</td><td>구간 (Section)</td></tr>
+    <tr><td>in</td><td>유입 (Inlet, Gain)</td><td>K</td><td>냉수 (Cold water)</td></tr>
+    <tr><td>k</td><td>보일러 (Boiler)</td><td>m</td><td>평균 (Mean, Average)</td></tr>
+    <tr><td>mth</td><td>월/월별 (Month, Monthly)</td><td>N</td><td>정격 (Rated/Nominal)</td></tr>
+    <tr><td>Nutz</td><td>이용 (Usage)</td><td>outg</td><td>공급량 (Output)</td></tr>
+    <tr><td>prim</td><td>1차측 (Primary)</td><td>rB</td><td>설계 운전시간 (Design operation time)</td></tr>
+    <tr><td>reg</td><td>신재생 (Renewable)</td><td>S</td><td>저장 (Storage)</td></tr>
+    <tr><td>s</td><td>저장 (Storage)</td><td>SB</td><td>대기 (Stand-by)</td></tr>
+    <tr><td>sek</td><td>2차측 (Secondary)</td><td>sol</td><td>태양열 (Solar)</td></tr>
+    <tr><td>Sp</td><td>순간 최대 취수 (Peak tapping)</td><td>T</td><td>일 (Day)</td></tr>
+    <tr><td>verbindung</td><td>연결배관 (Connecting pipes)</td><td>Vorrangig</td><td>순차/우선 (Priority)</td></tr>
+    <tr><td>w</td><td>급탕 (Hot water)</td><td></td><td></td></tr>
   </tbody>
 </table>
 
 
 
----
+## 3.1. 개요
 
+급탕 에너지소요량에서는 급탕 시스템 (Domestic hot water system)의 열 생산 (generation), 전달 (control and emission), 분배 (distribution), 저장 (storage)의 에너지소요량 (Energy use)를 설명합니다. 열 손실 (Thermal losses)과 보조에너지 (Auxiliary energy)가 산정되며, 난방 존 (heated zone) 내에서 발생할 경우, 존의 부하에 포함됩니다.
 
-급탕 에너지소요량 \(Q_{w,f}\)는 급탕 열 생산기기의 열 공급량(\(Q_{w,outg}\)), 생산과정에서 발생하는 (월별) 열손실(\(Q_{w,g}\)) 및 재생열에너지(태양열 및 주변 열)에 의해 다음과 같이 계산됩니다:
+### 3.1.1. 급탕 열 생산기기의 열 에너지공급량 (Heat output)
 
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,f} = Q_{w,outg} + Q_{w,g} - Q_{w,reg} \) <span class="eq-number">(3-1)</span>
-</a>
+* 급탕 열 생산기기의 열 에너지공급량은 존의 급탕 요구량 및 전달, 분배, 저장 손실을 합산합니다.
 
+$$
+Q_{w,outg} = Q_{w,b} + Q_{w,ce} + Q_{w,d} + Q_{w,s} \tag{3.1-1}
+$$
 
-Where,  
-\(Q_{w,outg}\): 급탕 열 생산기기의 열 공급량  
-\(Q_{w,g}\): 생산과정에서 발생하는 (월별) 열손실  
-\(Q_{w,reg}\): 재생열에너지(태양열 및 주변 열)  
+### 3.1.2. 급탕 열 생산기기의 열 에너지소요량 (Energy use)
 
+급탕 열 생산기기의 에너지소요량 ($Q_{w,f}$)은 열 생산기기의 열 에너지공급량($Q_{w,outg}$), 생산 손실 ($Q_{w,g}$) 및 신재생에너지 (태양열 등) 및 주변 열 유입에 의해 계산됩니다.
 
+$$
+Q_{w,f} = Q_{w,outg} + Q_{w,g} - Q_{w,reg} \tag{3.1-2}
+$$
 
+$$
+Q_{w,reg} = Q_{w,sol} + Q_{w,in} \tag{3.1-3}
+$$
 
-## 3.1. 급탕 열 생산기기의 열 공급량
+> Where,  
+>
+> • $Q_{w,f}:$ 급탕 열 생산기기의 열 에너지소요량 (해당 월 기준) [kWh]  
+> • $Q_{w,outg}:$ 급탕 열 생산기기의 열 공급량 (해당 월 기준) [kWh]  
+> • $Q_{w,g}:$ 급탕 열 생산기기의 열 생산과정 손실 (해당 월 기준) [kWh]  
+> • $Q_{w,reg}:$ 신재생에너지(태양열 등) (해당 월 기준) [kWh]  
+> • $Q_{w,in}:$ 주변 열 유입 (Ambient heat) (해당 월 기준) [kWh]  
+> • $Q_{w,sol}:$  태양열 에너지 유입 (해당 월 기준) [kWh]  
 
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,outg} = Q_{w,b} + Q_{w,ce} + Q_{w,d} + Q_{w,s} \) <span class="eq-number">(3.1-1)</span>
-</a>
+### 3.1.3. 급탕 시스템의 보조에너지 (Auxiliary energy)
 
+급탕 시스템의 보조에너지는 다음과 같습니다.
 
-Where,  
-\(Q_{w,b}\): 급탕에너지요구량  
-\(Q_{w,ce}\): 전달 열손실  
-\(Q_{w,d}\): 분배 열손실  
-\(Q_{w,s}\): 저장 열손실  
+$$
+Q_{w,aux}=Q_{w,ce,aux}+Q_{w,d,aux}+Q_{w,s,aux}+Q_{w,g,aux} \tag{3.1-4}
+$$
 
----
+> Where,  
+>
+> • $Q_{w,aux}:$ 급탕 시스템의 보조에너지 (해당 월 기준) [kWh]  
+> • $Q_{w,ce,aux}:$ 급탕 시스템의 전달 과정 보조에너지 (해당 월 기준) [kWh]  
+> • $Q_{w,d,aux}:$ 급탕 시스템의 분배 과정 보조에너지 (해당 월 기준) [kWh]  
+> • $Q_{w,s,aux}:$ 급탕 시스템의 저장 과정 보조에너지 (해당 월 기준) [kWh]  
+> • $Q_{w,g,aux}:$ 급탕 시스템의 생산 과정 보조에너지 (해당 월 기준) [kWh]  
 
-### 3.1.1. 전달 열손실
+### 3.1.4. 존으로의 비제어적 열 획득 (Uncontrolled heat gains)
 
-전달 열손실 \(Q_{w,ce}\)는 이미 존의 급탕 에너지요구량 \(Q_{w,b}\)에 포함되어 있으므로 0으로 계산합니다. 이에 따라 전달 열손실에 필요한 보조에너지 \(Q_{w,ce,aux}\) 또한 0이 됩니다.
+급탕 시스템의 비제어적 열 획득은 다음과 같습니다.
 
----
+$$
+Q_{I,w}=Q_{I,w,d}+Q_{I,w,s}+Q_{I,w,g} \tag{3.1-5}
+$$
 
-### 3.1.2 분배 열손실
+> Where,  
+>
+> • $Q_{I,w}:$ 급탕 시스템으로부터 존으로의 비제어적 열 획득 (해당 월 기준) [kWh]  
+> • $Q_{I,w,d}:$ 급탕 시스템 분배 손실로부터 존으로의 비제어적 열 획득 (해당 월 기준) [kWh]  
+> • $Q_{I,w,s}:$ 급탕 시스템 저장 손실로부터 존으로의 비제어적 열 획득 (해당 월 기준) [kWh]  
+> • $Q_{I,w,g}:$ 급탕 시스템 생산 손실로부터 존으로의 비제어적 열 획득 (해당 월 기준) [kWh]  
 
-급탕배관망을 따라 분배되는 중앙 공급식 급탕의 경우, 전체 배관망의 열손실은 다음과 같이 계산됩니다:
+## 3.2. 경계 조건 설정
 
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,d} = \sum Q_{w.d.i} \) <span class="eq-number">(3.1.2-1)</span>
-</a>
+제조사의 제품 데이터가 있는 경우, 사용 가능합니다. 제품 데이터가 없는 경우, Table. 3.2-1. 에 주어진 표준값을 사용합니다. 표준값은 평균 이하 수준의 제품들을 대변하므로, 일반적으로 실제 제품/설계 데이터를 사용하는 것이 계산에 유리합니다.
 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>일반적인 경계조건</title>
+   <style>
+      table {
+         border-collapse: collapse;
+         width: 80%;
+         font-size: 14px;
+         text-align: center;
+         margin: 0 auto;
+      }
+      th, td {
+         border: 1px solid black;
+         padding: 6px 10px;
+      }
+   </style>
+</head>
 
-Where  
-\(Q_{w,d,i}\): 급탕배관망 구간 i의 열손실  
-
-한편 구간 i의 열손실 \(Q_{w,d,i}\):
-
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,d,i} = \frac{1}{1000} \cdot U_i \cdot L_i \cdot (\vartheta_{w,m} - \vartheta_i) \cdot d_{Nutz,mth} \cdot t_{Nutz,T} \) <span class="eq-number">(3.1.2-2)</span>
-</a>
-
-
-Where,  
-\(U_{i}\): 구간 i 배관 열관류율  
-\(L_{i}\): 구간 i 배관 길이  
-\(\vartheta_{w,m}\): 급탕배관망 온도 (보고서에서는 복수의 의미로 사용)  
-\(\vartheta_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)  
-\(d_{Nutz,mth}\): 월간 이용일수  
-\(t_{Nutz,T}\): 일일 이용시간  
-
----
-
-배관망은 다음 그림과 같이 크게 V, S, SL의 3가지로 분류합니다.
-
-![Figure 3.1.2-3](../../_images/3.1.2_3.png)  
-**그림 3.1.2-3. 배관망 분류**
-
-- **V**: 생산기기에서 주관까지의 수평분배범위  
-- **S**: 지관  
-- **SL**: 취수구까지의 차단 가능한 말단 배관  
-
----
-
-배관의 열관류율 \(U_{i}\)는 사양에 근거하여 계산되며, 사양을 모르는 경우 다음 표에 따라 적용합니다.
-
-<table>
-  <caption>Table 3.1.2-4. 배관의 열관류율 U<sub>i</sub></caption>
-  <tr>
-    <th rowspan="2">건물 준공연도</th>
-    <th rowspan="1">분배</th>
-    <th colspan="2">외부에 설치된 수직배관</th>
-    <th colspan="2">내부에 설치된 수직배관</th>
-  </tr>
-  <tr>
-    <th>V</th>
-    <th>S</th>
-    <th>SL</th>
-    <th>S</th>
-    <th>SL</th>
-  </tr>
-  <tr>
-    <td>1995 이후</td>
-    <td>0.200</td>
-    <td>0.255</td>
-    <td>0.255</td>
-    <td>0.255</td>
-    <td>0.255</td>
-  </tr>
-  <tr>
-    <td>1980 ~ 1995</td>
-    <td>0.200</td>
-    <td>0.400</td>
-    <td>0.400</td>
-    <td>0.300</td>
-    <td>0.400</td>
-  </tr>
-  <tr>
-    <td>1980 이전</td>
-    <td>0.400</td>
-    <td>0.400</td>
-    <td>0.400</td>
-    <td>0.400</td>
-    <td>0.400</td>
-  </tr>
-</table>
-
-
-구간 \(i\) 배관 길이 \(L_{i}\)는 세부 도면을 바탕으로 산정합니다.  
-
-주변온도 \(\vartheta_{i}\)는 용도프로필에서 설정된 값이 적용되며, 만일 주어진 값이 없다면 다음 표를 참고하여 채택합니다.
+<p><strong>&lt;Table 3.2-1. 일반적인 경계조건&gt;</strong></p>
 
 <table>
-  <caption>Table 3.1.2-5. 주변온도 기준값</caption>
-  <thead>
-    <tr>
-      <th>표준치</th>
-      <th>표기</th>
+   <tr>
+      <th>변수명</th>
+      <th>Symbol</th>
       <th>단위</th>
-      <th>V</th>
-      <th>S</th>
-      <th>SL</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>주변온도</td>
-      <td>\(\vartheta_i\)</td>
-      <td>℃</td>
-      <td colspan="3">제3장2절4항 참조</td>
-    </tr>
-    <tr>
-      <td class="left">난방주기가 아닐 경우<br>평균 주변온도</td>
-      <td>\(\vartheta_i\)</td>
-      <td>℃</td>
-      <td colspan="3">22℃</td>
-    </tr>
-    <tr>
-      <td>평균 주변온도</td>
-      <td>\(\vartheta_i\)</td>
-      <td>℃</td>
-      <td colspan="3">비 난방 존 13℃<br>난방 존 20℃</td>
-    </tr>
-  </tbody>
+      <th>값</th>
+   </tr>
+
+   <tr>
+      <td>난방 존의 평균 실내 온도 (난방 에너지요구량에서 설정되지 않을 경우)</td>
+      <td>\(\vartheta_{i}\)</td>
+      <td>°C</td>
+      <td>20</td>
+   </tr>
+
+   <tr>
+      <td>비난방 존의 평균 실내 온도 (난방 에너지요구량에서 설정되지 않을 경우)</td>
+      <td>\(\vartheta_{i}\)</td>
+      <td>°C</td>
+      <td>13</td>
+   </tr>
+
+   <tr>
+      <td>순환이 없는/정지된 급탕 분배 배관망의 평균 온도</td>
+      <td>\(\vartheta_{w,m}\)</td>
+      <td>°C</td>
+      <td>25 · U<sup>-0.2</sup></td>
+   </tr>
+
+   <tr>
+      <td>순환/동파 방지 열선이 있는 급탕 분배 배관망과 온수 탱크의 평균 온도</td>
+      <td>\(\vartheta_{w,m}\)</td>
+      <td>°C</td>
+      <td>50</td>
+   </tr>
+
+   <tr>
+      <td>냉수 유입 온도</td>
+      <td>\(\vartheta_{k}\)</td>
+      <td>°C</td>
+      <td>10</td>
+   </tr>
+
+   <tr>
+      <td>순환 루프의 온도차</td>
+      <td>\(\Delta \vartheta_{z}\)</td>
+      <td>K</td>
+      <td>5</td>
+   </tr>
 </table>
 
+</html>
 
 
+* 순환 설비가 없거나/정지된 경우, 급탕 배관망의 평균 온도는 단열재의 열관류율의 함수로 주어집니다.
 
+$$
+\vartheta_{w,m} = 25 \cdot U^{-0.2} \ [^{\circ}C] \tag{3.2-1}
+$$
 
----
+## 3.3. 급탕 시스템의 전달, 분배, 저장, 생산 손실
 
-한편 순환배관이 있지만 순환이 정지되었다면 위 식에서의  
+### 3.3.1. 전달 손실
 
-일일 이용시간 \(t_{Nutz,T}\):
+사용자 부분에서 사용되지 않고 배출되는 급탕수로 인한 열 손실은 이미 존의 급탕 에너지요구량 $Q_{w,b}$에 포함되어 있으므로 전달 손실 ($Q_{w,ce}$)과 전달 과정 보조에너지 ($Q_{w,ce,aux}$)는 0으로 계산합니다. 사용자 부분에서 버려지는 물은 고려하지 않습니다.
 
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html"
-   class="equation-link"
-   target="_blank"
-   rel="noopener noreferrer">
-  \( t_{Nutz,T} = 24\,\text{h} - t_{Nutz} \)
-  <span class="eq-number">(3.1.2-6)</span>
-</a>
+### 3.3.2. 분배 손실
 
+#### 3.3.2.1. 중앙 공급식 급탕 시스템의 분배 손실
 
+* 급탕배관망을 따라 분배되는 중앙 공급식 급탕의 경우, 배관망 중 구간 i에서의 분배 손실은 다음과 같이 계산됩니다.
 
-급탕배관망 온도 \(\vartheta_{w,m}\):
+$$
+Q_{w,d,i} = \frac{1}{1000} \cdot U_i \cdot L_i \cdot (\vartheta_{w,m} - \vartheta_i) \cdot d_{Nutz,mth} \cdot t_{Nutz,T} \tag{3.3-1}
+$$
 
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html"
-   class="equation-link"
-   target="_blank"
-   rel="noopener noreferrer">
-  \( \vartheta_{w,m} = 23 \cdot U^{-0.2} \)
-  <span class="eq-number">(3.1.2-7)</span>
-</a>
+* 순환 설비가 있는 시스템의 열 손실은 순환 펌프가 운전하는 동안의 손실과 간헐적 운전 (intermittent operation) 기간 동안의 손실을 포함합니다. 순환 배관 또는 전기 열선이 있는 배관의 경우, 간헐적 운전 동안 $t_{Nutz,T}=24h - z$ (비운전 시간), $\vartheta_{w,m}=25 \cdot U^{-0.2}$를 사용하여 계산되며, 이 때 배관 길이는 순환 배관 총 길이의 절반을 가정합니다.
+* 순환 배관이 없는 급탕 시스템과 지관 (branch)은 $t_{Nutz,T}=24$ 및 $\vartheta_{w,m}=25 \cdot U^{-0.2}$를 사용하여 계산합니다.
+* 평균 급탕 온도 ($\vartheta_{w,m}$)는 순환 시스템의 부재 또는 간헐적 운전에 따라 사용자 부분에서 발생하는 증가된 출구 손실 (간헐적 운전 시 펌프가 정지한 동안 배관 내에서 식은 물의 버림으로 인한 손실)을 포함합니다.
 
+> Where,  
+>
+> • $Q_{w,d,i}:$ 급탕배관망 구간 i의 분배 손실 (해당 월 기준) [kWh]  
+> • $U_{i}:$ 구간 i 배관 열관류율 [W/mK]  
+> • $L_{i}:$ 구간 i 배관 길이 [m]  
+> • $\vartheta_{w,m}:$ 배관 구간 i에서의 급탕 평균 온도 $[^{\circ}C]$ (Table 3.2-1.)  
+> • $\vartheta_{i}:$ 존의 평균 실내 온도 $[^{\circ}C]$ (Table 3.2-1.)  
+> • $d_{Nutz,mth}:$ 월별 급탕 사용 일수 [d]  
+> • $t_{Nutz,T}:$ $\vartheta_{w,m}$일 때 일일 사용 시간 [h]  
 
----
+* 여러 구간으로 구성된 배관 시스템의 전체 열 손실은 구간별 손실의 합계입니다.
 
-만일 순환배관과 연결배관이 없다면 위 식에서의  
+$$
+Q_{w,d} = \sum Q_{w.d.i} \tag{3.3-2}
+$$
 
-일일 이용시간 \(t_{Nutz,T}\):
+* 배관망이 존을 통과하는 경우, 존 내의 구간 i의 열 손실은 존의 비제어적 열 획득으로 고려됩니다.
 
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html"
-   class="equation-link"
-   target="_blank"
-   rel="noopener noreferrer">
-  \( t_{Nutz,T} = 24\,\text{h} \)
-  <span class="eq-number">(3.1.2-8)</span>
-</a>
+$$
+Q_{I,w,d,i} = Q_{w.d.i} \tag{3.3-3}
+$$
 
+* 급탕 시스템의 열 손실은 개별 구간의 길이, 위치 열관류율을 알고 있으면 계산 가능합니다. 이러한 변수들은 Table 3.2-1과 세부 도면을 참고합니다.
+* 만약 순환 설비 대신 전기 열선 (Trace heating)이 사용되는 경우, 해당 구간 i 내의 열 손실은 난방/냉방 (해당되는 경우) 운전 중 에너지 밸런스에 열 부하로 고려되어야 합니다. 요구되는 열 에너지는 식 3.3-1. 에 의해 계산되어야 하지만, 에너지 밸런스에서는 보조에너지 ($Q_{w,d,aux}$)로 취급되어야 합니다 (배관 손실을 막기 위한 추가 에너지이므로).
 
-급탕배관망 온도 \(\vartheta_{w,m}\):
+> Where,  
+>
+> • $Q_{w,d}:$ 전체 급탕 배관망의 분배 손실 (해당 월 기준) [kWh]  
+> • $Q_{w.d.i}:$ 급탕배관망 구간 i의 분배 손실 (해당 월 기준) [kWh]  
+> • $Q_{I,w,d,i}:$ 구간 i 가 포함된 존의 비제어적 열 획득 (해당 월 기준) [kWh]  
 
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html"
-   class="equation-link"
-   target="_blank"
-   rel="noopener noreferrer">
-  \( \vartheta_{w,m} = 23 \cdot U^{-0.2} \)
-  <span class="eq-number">(3.1.2-9)</span>
-</a>
+### 3.3.3. 표준값에 대한 경계 조건
 
-
----
-
-### 3.1.3 저장 열손실
-
-저장 열손실 \(Q_{w,s}\)는 축열조의 가열 방식, 즉:  
-(1) 간접 가열식  
-(2) 간접 가열식, 태양열 복합  
-(3) 전기 가열식  
-(4) 가스 가열식  
-에 따라 다음의 4가지 방식으로 계산됩니다:
-
-**(1) 간접 가열식**
-
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = f_{\text{verbindung}} \cdot \frac{(50 - \vartheta_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \) <span class="eq-number">(3.1.3-1)</span>
-</a>
-
-
-**(2) 간접 가열식, 태양열 복합**
-
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = f_{\text{verbindung}} \cdot (UA)_{sb,s,a} \cdot \Delta \vartheta_i \cdot 24 \cdot 3600 \cdot d_{Nutz,mth} \cdot \frac{V_{s,aux}}{V_{s,aux} + V_{s,sol}} \) <span class="eq-number">(3.1.3-2)</span>
-</a>
-
-
-
-**(3) 전기 가열식**
-
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = \frac{(55 - \vartheta_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \) <span class="eq-number">(3.1.3-3)</span>
-</a>
-
-
-
-**(4) 가스 가열식**
-
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = \frac{(55 - \vartheta_i)}{50} \cdot d_{Nutz,mth} \cdot q_{B,S} \) <span class="eq-number">(3.1.3-4)</span>
-</a>
-
-
----
-
-### (1) 간접 가열식
-
-간접 가열식 축열조의 저장 열손실:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = f_{\text{verbindung}} \cdot \frac{(50 - \vartheta_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \) <span class="eq-number">(3.1.3-5)</span>
-</a>
-
-Where,  
-\(f_{verbindung}\): 연결배관에서 발생하는 열손실 계수, 1.2  
-\(v_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)  
-\(d_{Nutz,mth}\): 월간 이용일수  
-\(q_{B,S}\): 책정-열손실  
-
-만일 책정-열손실이 주어지지 않았다면 축열조의 용량을 기준으로 다음과 같이 계산합니다:
-
-<table>
-  <caption>Table 3.1.3-6. 축열조 생산연도별 열손실 산정식</caption>
-  <thead>
-    <tr>
-      <th>축열조 생산연도</th>
-      <th>축열조 용량</th>
-      <th>책정-열손실</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1995-</td>
-      <td>1,000ℓ 이상</td>
-      <td>\( q_{B,S} = 0.39 \cdot V^{0.35} + 0.5 \)</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>1,000ℓ 이하</td>
-      <td>\( q_{B,S} = 0.8 + 0.02 \cdot V^{0.77} \)</td>
-    </tr>
-    <tr>
-      <td>1987-1994</td>
-      <td></td>
-      <td>\( q_{B,S} = 0.4 + 0.21 \cdot V^{0.4} \)</td>
-    </tr>
-    <tr>
-      <td>1978-1986</td>
-      <td></td>
-      <td>\( q_{B,S} = 0.4 + 0.23 \cdot V^{0.4} \)</td>
-    </tr>
-    <tr>
-      <td>-1977</td>
-      <td></td>
-      <td>\( q_{B,S} = 0.4 + 0.27 \cdot V^{0.5} \)</td>
-    </tr>
-  </tbody>
-</table>
-
-
-Where V: 축열조 용량
-
-축열조 용량은 제품사양서에 주어지지만, 용량을 모르는 경우 다음 식에 따라 계산합니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( V_s = \frac{Q_{w,b,d} \cdot f_N \cdot 860}{(\vartheta_{w,m} - \vartheta_k) \cdot \eta_s} \) <span class="eq-number">(3.1.3-7)</span>
-</a>
-
-Where  
-\(Q_{w,b,d}\): 일간 급탕에너지요구량  
-\(f_{N}\): 보고서에 명시되지 않음  
-\(\vartheta_{w,m}\): 급탕 배관망 온도 (보고서에서는 복수의 의미로 사용)  
-\(\vartheta_{K}\): 보고서에 정확히 명시되지 않음 (\(\vartheta_{K}\): 냉수 공급온도)  
-\(n_{S}\): 축열조 효율 (입식=0.95, 좌식=0.9)  
-
-한편 \(f_{N}\)은 다음과 같이 계산합니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( f_N = \frac{1}{t_{Nutz,T} \cdot n_{Sp}} \) <span class="eq-number">(3.1.3-8)</span>
-</a>
-
-Where  
-\(t_{Nutz,T}\): 일일 이용시간  
-\(n_{Sp}\): 일일 순간최대취수량 발생횟수
-
----
-
-### (2) 간접 가열식, 태양열 복합
-
-간접 가열식, 태양열 복합 축열조의 저장 열손실:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = f_{\text{verbindung}} \cdot (UA)_{sb,s,a} \cdot \Delta \vartheta_i \cdot 24 \cdot 3600 \cdot d_{Nutz,mth} \cdot \frac{V_{s,aux}}{V_{s,aux} + V_{s,sol}} \)  <span class="eq-number">(3.1.3-9)</span>
-</a>
-
-Where,  
-\(f_{verbindung}\): 연결배관에서 발생하는 열손실 계수, 1.2  
-\({UA}_{sb,s,a}\): 측정된 책정-열손실 [W/K]  
-\(Δv_{i}\): 보고서에 명시되어 있지 않으나 온도차로 추정됨  
-\(d_{Nutz,mth}\): 월간 이용일수  
-\(V_{s,aux}\): 축열조 상부(태양열 부분을 뺀) 용량 [ℓ]  
-\(V_{s,scl}\): 축열조 하부(태양열 저장부분)의 용량 [ℓ]
-
-만일 축열조 책정-열손실 \({UA}_{sb,s,a}\)를 모르는 경우 축열조 용량에 따라 다음과 같이 계산합니다:
-
-  **1) 축열조 용량 ≤ 1,000ℓ:**  
- <a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,S} = \left( 0.4 + 0.2 \cdot (V_{s,aux} + V_{s,sol})^{0.4} \right) \cdot \frac{V_{s,aux}}{V_{s,aux} + V_{s,sol}} \) <span class="eq-number">(3.1.3-10)</span>
-</a>
-
-
-  **2) 축열조 용량 > 1,000ℓ:**  
-  1,000ℓ를 초과하는 축열조는 여러 대의 분리된 축열조로 가정하여 계산합니다.  
-  (각 축열조당 최대 1,000ℓ 적용)
-
----
-
-### (3) 전기 가열식
-
-전기 가열식 축열조의 저장 열손실:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = \frac{(55 - \vartheta_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \) <span class="eq-number">(3.1.3-11)</span>
-</a>
-
-Where,  
-\(\vartheta_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)  
-\(d_{Nutz,mth}\): 월간 이용일수  
-\(q_{B,S}\): 책정-열손실  
-
-책정-열손실 \(q_{B,S}\)은 저장온수와 설치공간과의 평균 온도차가 45K일 때 측정된 것으로, 측정값이 없는 경우 다음과 같이 계산합니다:
-
-<table>
- <caption>Table 3.1.3-12. 축열조 생산연도별 열손실 산정식</caption>
-  <thead>
-    <tr>
-      <th>축열조 생산연도</th>
-      <th>책정-열손실</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1995-</td>
-      <td>\( q_{B,S} = 0.29 + 0.019 \cdot V^{0.8} \)</td>
-    </tr>
-    <tr>
-      <td>1989-1994</td>
-      <td>\( q_{B,S} = 1.25 \cdot (0.29 + 0.019 \cdot V^{0.8}) \)</td>
-    </tr>
-    <tr>
-      <td>-1988</td>
-      <td>\( q_{B,S} = 1.4 \cdot (0.29 + 0.019 \cdot V^{0.8}) \)</td>
-    </tr>
-  </tbody>
-</table>
-
-Where, V: 축열조 용량
-
-축열조 용량은 제품사양서에 주어지지만, 용량을 모르는 경우 다음 식에 따라 계산합니다:  
-
-#### 1) 축열조 용량 ≤ 1,000ℓ
-
-<table>
-<caption>Table 3.1.3-13. 축열조 용량 ≤ 1,000ℓ일 때, 축열조 용량</caption>
-  <thead>
-    <tr>
-      <th>구분</th>
-      <th>설명</th>
-      <th>축열조 용량</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>심야</td>
-      <td>주로 심야에 가동</td>
-      <td>\( V_s = \frac{1.42 \cdot Q_{w,b,d} \cdot f_N \cdot 860}{(\vartheta_{w,m} - \vartheta_k) \cdot \eta_s} \)</td>
-    </tr>
-    <tr>
-      <td>주간</td>
-      <td>지속적 재충전 가능</td>
-      <td>\( V_s = \frac{0.67 \cdot Q_{w,b,d} \cdot f_N \cdot 860}{(\vartheta_{w,m} - \vartheta_k) \cdot \eta_s} \)</td>
-    </tr>
-  </tbody>
-</table>
-
-Where,  
-\(Q_{w,b,d}\): 일간 급탕에너지요구량  
-\(f_{N}\): 보고서에 명시되지 않음  
-\(\vartheta_{w,m}\): 급탕 배관망 온도 (보고서에서는 복수의 의미로 사용)  
-\(\vartheta_{K}\): 보고서에 정확히 명시되지 않음 (\(\vartheta_{K}\): 냉수 공급온도)  
-\(n_{S}\): 축열조 효율 (입식=0.95, 좌식=0.9)  
-
-한편 \(f_{N}\)은 다음과 같이 계산합니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( f_N = \frac{1}{t_{Nutz,T} \cdot n_{Sp}} \) <span class="eq-number">(3.1.3-14)</span>
-</a>
-
-Where,  
-\(t_{Nutz,T}\): 일일 이용시간  
-\(n_{Sp}\): 일일 순간최대취수량 발생횟수
-
-#### 2) 축열조 용량 > 1,000ℓ
-
-1,000ℓ를 초과하는 축열조는 여러 대의 분리된 축열조로 가정하여 계산합니다.  
-(각 축열조당 최대 1,000ℓ 적용)
-
----
-
-### (4) 가스 가열식
-
-가스 가열식 축열조의 저장 열손실:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,s} = \frac{(55 - \vartheta_i)}{50} \cdot d_{Nutz,mth} \cdot q_{B,S} \) <span class="eq-number">(3.1.3-15)</span>
-</a>
-
-Where,  
-\(\vartheta_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)  
-\(d_{Nutz,mth}\): 월간 이용일수  
-\(q_{B,S}\): 책정-열손실  
-
-책정-열손실 \(q_{B,S}\)은 저장온수와 설치공간과의 평균 온도차가 50K일 때 측정된 것으로, 측정값이 없는 경우 다음과 같이 계산합니다:-
-
-<table>
-<caption>Table 3.1.3-16. 축열조 생산연도별 책정 열손실</caption>
-  <thead>
-    <tr>
-      <th>축열조 생산연도</th>
-      <th>책정-열손실</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-      <td>1995-</td>
-      <td>\( q_{B,S} = 2.0 + 0.033 \cdot V^{1.1} \)</td>
-    </tr>
-    <tr>
-      <td>1985-1994</td>
-      <td>\( q_{B,S} = 2.0 + 0.033 \cdot V^{1.1} \)</td>
-    </tr>
-    <tr>
-      <td>-1984</td>
-      <td>\( q_{B,S} = 1.4 \cdot (2.0 + 0.033 \cdot V^{1.1}) \)</td>
-    </tr>
-  </tbody>
-</table>
-
-Where, V: 축열조 용량
-
-단 위 식에서의 축열조 용량은 최대 500ℓ까지 적용되며, 500ℓ를 초과하는 용량은 여러 대의 최대 500ℓ 축열조로 구성된 것으로 간주하여 각 축열조의 열손실을 합산하여 계산합니다.
-
----
-
-## 3.2. 생산과정에서 발생하는 (월별) 열손실
-
-생산손실 \(Q_{w,g}\)는 급탕 방식, 즉:  
-- (1) 연료장전식 급탕보일러  
-- (2) 직접 가열식 축열조(가스)  
-- (3) 지역난방  
-에 따라 다음의 3가지 방식으로 계산됩니다:
-
----
-- (1) 연료장전식 급탕보일러  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,g} = Q_{w,g,100\%} \cdot d_{Nutz,mth} + Q_{B,w} \cdot \left( d_{Nutz,mth} - d_{h,r,B} \right) \) <span class="eq-number">(3.2-1)</span>
-</a>
-
-- (2) 직접 가열식 축열조(가스)  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,g} = Q_{w,g,100\%} \cdot d_{Nutz,mth} \quad [\text{kWh}] \) <span class="eq-number">(3.2-2)</span>
-</a>
-
-- (3) 지역난방  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,g} = H_{DS} \cdot (\vartheta_{DS} - \vartheta_i) \) <span class="eq-number">(3.2-3)</span>
-</a>
-
----
-
-**(1) 연료장전식 급탕보일러**
-
-연료장전식 급탕보일러의 생산손실:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,g} = Q_{w,g,100\%} \cdot d_{Nutz,mth} + Q_{B,w} \cdot \left( d_{Nutz,mth} - d_{h,r,B} \right) \) <span class="eq-number">(3.2-4)</span>
-</a>
-
-Where,  
-\( Q_{w,g,100\%} \): 최대부하(정격성능)에서의 열손실  
-\(d_{Nuts,mth}\): 월별 이용일수  
-\(Q_{B,w}\): 대기모드(machine down-time)에서의 열손실 Q_B (Q_B,w와 정확히 매칭되는 설명은 부재)  
-\(d_{h,r,B}\): 분석-운전일수 (난방 에너지소요량의 월별 계산 운전일 참조)  
-
----
-
-\( Q_{w,g,100\%} \)는 다음과 같이 계산됩니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,g,100\%} = \left( f_{H_s/H} - \eta_{k,100\%} \right) / \eta_{k,100\%} \cdot Q_{w,outg} / d_{Nutz,mth} \) <span class="eq-number">(3.2-5)</span>
-</a>
-
-Where,  
-\(f_{Hs/Hi}\): 연료원에 따른 고위발열/저위발열의 비  
-\(\eta_{k,100\%}\): 찾는중 (maybe 정격성능효율)  
-\(Q_{w,outg}\): 급탕시스템 열 생산기기의 열 공급량  
-\(d_{Nutz,mth}\): 월별 이용일수  
-
-정격성능 효율 \( \eta_{k,100\%} \)은 테스트 온도 70℃에서의 보일러의 정격성능과 관련된 효율로, 다음 식을 따라 계산합니다.  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( \eta_{k,100\%} = (A + B \cdot \log(\dot{Q}_N)) / 100 \) <span class="eq-number">(3.2-6)</span>
-</a>
- 
-Where,  
-A, B: 효율계수  
-\(\dot{Q}_N\): 정격성능  
-
-이 식은 정격성능이 400kW인 경우까지 유효하며, 정격성능 \(\dot{Q}_N\)이 400kW를 초과할 경우 \(\dot{Q}_N\)=400kW로 적용합니다.  
-
-효율계수 A, B는 다음 표와 같습니다.  
-
-<table>
-<caption>Table 3.2-7. 효율계수 A, B</caption>
-  <tr>
-    <th colspan="2">보일러 형식</th>
-    <th>연식</th>
-    <th>계수 A</th>
-    <th>계수 B</th>
-  </tr>
-  <tr>
-   <td rowspan="7">표준형 보일러</td>
-    <td rowspan="3">가스보일러</td>
-    <td>1978 이전</td>
-    <td>79.5</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>1978 ~ 1994</td>
-    <td>82.5</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>1994 이후</td>
-    <td>85</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td rowspan="4">연료분사식 보일러<br>(가스/기름)</td>
-    <td>1978 이전</td>
-    <td>80</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>1978 ~ 1986</td>
-    <td>82</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>1987 ~ 1994</td>
-    <td>84</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>1994 이후</td>
-    <td>85</td>
-    <td>2</td>
-  </tr>
-  <tr>
-  <td rowspan="5">저온 보일러</td>
-    <td rowspan="2">가스보일러</td>
-    <td>1978 ~ 1994</td>
-    <td>85.5</td>
-    <td>1.5</td>
-  </tr>
-  <tr>
-    <td>1994 이후</td>
-    <td>88.5</td>
-    <td>1.5</td>
-  </tr>
-  <tr>
-    <td rowspan="3">연료분사식 보일러<br>(가스/기름)</td>
-    <td>1987 이전</td>
-    <td>84</td>
-    <td>1.5</td>
-  </tr>
-  <tr>
-    <td>1987 ~ 1994</td>
-    <td>86</td>
-    <td>1.5</td>
-  </tr>
-  <tr>
-    <td>1994 이후</td>
-    <td>88.5</td>
-    <td>1.5</td>
-  </tr>
-  <tr>
-    <td rowspan="4">콘덴싱 보일러<br>(가스/기름)</td>
-    <td rowspan="3">일반</td>
-    <td>1987 이전</td>
-    <td>89</td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td>1987 ~ 1994</td>
-    <td>91</td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td>1994 이후</td>
-    <td>92</td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td>고효율</td>
-    <td>1999 이후</td>
-    <td>94</td>
-    <td>1</td>
-  </tr>
-</table>
-
-
-정격성능 \(\dot{Q}_N\)은 동시에 가동되는 모든 보일러성능의 합이거나 순차가동에서 최대 보일러성능 중 큰 값으로 정합니다. 즉:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( \dot{Q}_N = \max\left( \sum \dot{Q}_{N,gleichzeitig},\ \dot{Q}_{vorrangig} \right) \) <span class="eq-number">(3.2-8)</span>
-</a>
-
-
-만일 제품사양이 없는 경우 콤비보일러 여부에 따라 다음과 같은 표준치를 적용합니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html"
-   class="equation-link"
-   target="_blank"
-   rel="noopener noreferrer">
-  \( \dot{Q}_N = 0.42 \left( \dfrac{Q_{w,b,d}}{0.036} \right)^{0.7} \)
-  <span class="eq-number">(3.2-9)</span>
-</a>
-
-
-콤비보일러인 경우, 
-
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( \dot{Q}_N = 24\ \text{kW} \) <span class="eq-number">(3.2-10)</span>
-</a>
-
-
----
-
-또한 \(Q_{B,w}\)는 다음과 같이 계산됩니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{B,w} = q_{B,w} \cdot \dot{Q}_N / \eta_{k,100\%} \cdot (t_{Nutz,T} - t_{w,100\%}) \cdot f_{Hö/Ht} \) <span class="eq-number">(3.2-11)</span>
-</a>
-
-Where,  
-\(q_{B,v}\)  
-\(\dot{Q}_N\): 정격성능  
-\( \eta_{k,100\%} \): 찾는중 (maybe 정격성능효율)  
-\(t_{Nutz,T}\): 일일 이용시간  
-\( t_{w,100\%} \): 정격성능에서의 급탕용 보일러의 일일 가동시간  
-\(f_{Hs/Hi}\): 연료원에 따른 고위발열/저위발열의 비  
-
-\(q_{B,v}\)는 다음과 같이 계산됩니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,w} = q_{B,70} \cdot (\vartheta_{g,m} - \vartheta_i) / (70 - 20) \) <span class="eq-number">(3.2-12)</span>
-</a>
-
-Where,  
-\(q_{B,70}\): 책정 열손실  
-\(\vartheta_{g,m}\): 대기모드 상태에서의 평균 보일러 온도(순환: 50℃, 비순환: 40℃)  
-\(\vartheta_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)
-
----
-
-정격성능 \(\dot{Q}_N\)에서의 급탕용 보일러의 일일 가동시간 \( t_{w,100\%} \)는 다음 계산식을 따릅니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( t_{w,100\%} = Q_{w,outg} / (\dot{Q}_N \cdot d_{Nutz,mth}) \) <span class="eq-number">(3.2-13)</span>
-</a>
-
-Where,  
-\(Q_{w,outg}\): 급탕시스템 열 생산기기의 열 공급량  
-\(\dot{Q}_N\): 정격성능  
-\(d_{Nutz,mth}\): 월별 이용일수
-
-보일러의 책정열손실 \(q_{B,70}\)은 다음 식에 따라 계산됩니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( q_{B,70} = (E \cdot (Q_N)^F)/100 \) <span class="eq-number">(3.2-14)</span>
-</a>
-
-Where,  
-\(\dot{Q}_N\): 정격성능  
-E, F: 책정열손실 계수  
-
-책정열손실 계수 E, F는 다음 표와 같습니다.  
+* 상세 설계값이 없는 경우, 급탕 시스템의 열 손실은 Table 3.3-1. 의 값을 사용하여 근사가 가능합니다. 일반적인 배관 시스템은 V, S, SL 3개의 다른 구역으로 구성된다고 가정합니다. 구역 V는 열 생산기기로부터 주 공급관 (Main supply pipe)까지의 수평 열 분배 구간이고 S는 주 공급관에서 지관 (branching pipe)까지의 구간, SL은 지관 구간입니다. 급탕 공급은 건물 전체에 균등하게 분포되었다고 것으로 가정합니다.
+* $L_{V}$ : 열 생산기기와 수직 배관 간의 (수평) 배관 구간이며 비난방 존 (지하실, 다락방 등) 및 난방 존 (Screed 내부 등)에 위치할 수 있습니다.
+* $L_{S}$ : 주 공급관 (대부분 수직)으로 난방 존 내에 위치합니다.
+* $L_{SL}$ : 주 공급관과 사용자의 수전 사이를 연결하는 지관이며 순환이 없습니다.
 
 <center>
-     <div><strong>Table 3.2-15. 책정열손실 계수</strong></div>
-     <img src="../../_tables/3.2_15.png" style="max-width: 80%;" alt="책정열손실 계수">
+    <img alt=""
+         src="https://verycoldplay.github.io/eco2_guide_center/_images/3.1.2_3.png"
+         style="max-width: 50%;">
+<div><strong>Figure 3.4-1. 급탕 배관망에서 배관 설계 </strong></div>
 </center>
 
+* ECO2에서 배관 길이는 입력값으로 결정됩니다. 배관망 구간이 위치한 존의 실내 온도는 난방 에너지요구량 계산에서 결정된 값을 사용하며, 없을 시 Table 3.3-1.의 표준값을 사용합니다.
 
-한편 d_h,r,B > \(d_{Nuts,mth}\)인 경우 \(d_{h,r,B}\) - \(d_{Nuts,mth}\) = 0으로 가정합니다.
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>일반적인 경계조건</title>
+   <style>
+      table {
+         border-collapse: collapse;
+         width: 80%;
+         font-size: 14px;
+         text-align: center;
+         margin: 0 auto;
+      }
+      th, td {
+         border: 1px solid black;
+         padding: 6px 10px;
+      }
+   </style>
+</head>
 
----
-
-**(2) 직접 가열식 축열조(가스)**
-
-직접 가열식 축열조(가스)의 생산손실:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,g} = Q_{w,g,100\%} \cdot d_{Nutz,mth} \quad [\text{kWh}] \) <span class="eq-number">(3.2-16)</span>
-</a>
-
-Where,  
-\( Q_{w,g,100\%} \): 최대부하(정격성능)에서의 열손실  
-\(d_{Nuts,mth}\): 월별 이용일수  
-
-가스에 의해 직접 가열되는 축열조의 경우 고려되는 생산손실은 난방보일러의 경우와 동일합니다.  
-다만 대기모드에서의 열손실 \(Q_{B}\)(또는 \(Q_{B,w}\))은 가스 가열식 급탕용 축열조의 저장 열손실 \(Q_{w,s}\)에서 이미 고려한 바 있습니다.
-
-최대부하(정격성능)에서의 열손실 \( Q_{w,g,100\%} \)은 다음에 의해 계산됩니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,g,100\%} = \left( \frac{f_{H3/H} \cdot \eta_{100\%}}{\eta_{100\%}} \right) \cdot Q_{w,outg} / d_{Nutz,mth} \quad [\mathrm{kWh}] \) <span class="eq-number">(3.2-17)</span>
-</a>
-
-Where,  
-\(f_{Hs/Hi}\): 연료원에 따른 고위발열/저위발열의 비  
-\( \eta_{100\%} \): 찾는중 (maybe 정격성능효율, 82%)  
-\(Q_{w,outg}\): 급탕시스템 열 생산기기의 열 공급량  
-\(d_{Nutz,mth}\): 월별 이용일수
-
----
-
-**(3) 지역난방**
-
-지역난방의 생산손실:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,g} = H_{DS} \cdot (\vartheta_{DS} - \vartheta_i) \) <span class="eq-number">(3.2-18)</span>
-</a>
-
-Where,  
-\(H_{DS}\): 찾는중  
-\(v_{DS}\): 찾는중  
-\(\vartheta_{i}\): 주변온도 (보고서에서는 복수의 의미로 사용)
-
-한편 \(H_{DS}\)는:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( H_{DS} = B_{DS} \cdot \dot{V}_{DS}^{1/3} \) <span class="eq-number">(3.2-19)</span>
-</a>
-
-Where,  
-\(B_{DS}\): 찾는중  
-\(Φ_{DS}\): 지역난방기계실 성능
-
-\(B_{DS}\)의 값은 다음 표를 참조합니다.  
+<p><strong>&lt;Table 3.3-1. 일반적인 경계조건&gt;</strong></p>
 
 <table>
-<caption>Table 3.2-20. \(B_{DS}\)</caption>
-  <tr>
-    <th rowspan="3">지역난방<br>기계실</th>
-    <th>구분</th>
-    <th colspan="1">지역난방기계실 단열등급</th>
-  </tr>
-  <tr>
-    <td>2차에서의 단열<br>1차에서의 단열</td>
-    <td> 4    3    2    1<br> 5    4    3    2</td>
-  </tr>
-  <tr>
-    <td>온수, 저온<br>온수, 저온</td>
-    <td>3.5  4.0  4.4  4.9<br>3.1  3.5  3.9  4.3</td>
-  </tr>
+   <tr>
+      <th>변수</th>
+      <th>Symbol</th>
+      <th>단위</th>
+      <th>구간 V</th>
+      <th>구간 S</th>
+      <th>구간 SL</th>
+   </tr>
+
+   <tr>
+      <td>실내 온도</td>
+      <td>\(\vartheta_{i}\)</td>
+      <td>°C</td>
+      <td>난방 에너지요구량 참조</td>
+      <td>"</td>
+      <td>"</td>
+   </tr>
+
+   <tr>
+      <td>난방주기가 아닐 때 실내 온도 (난방 에너지요구량에서 결정되지 않을 경우)</td>
+      <td>\(\vartheta_{i}\)</td>
+      <td>°C</td>
+      <td>22</td>
+      <td>"</td>
+      <td>"</td>
+   </tr>
+
+   <tr>
+      <td>실내 온도 (난방 에너지요구량에서 결정되지 않을 경우)</td>
+      <td>\(\vartheta_{i}\)</td>
+      <td>°C</td>
+      <td>비 난방 존 13℃ / 난방 존 20℃</td>
+      <td>"</td>
+      <td>"</td>
+   </tr>
+
 </table>
 
+</html>
 
-\(\vartheta_{DS}\)는 다음을 따라 계산됩니다:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( \vartheta_{DS} = D_{DS} \cdot \vartheta_{prim,DS} + (1 - D_{DS}) \cdot \vartheta_{sek,DS} \) <span class="eq-number">(3.2-21)</span>
-</a>
 
-Where,  
-\(D_{DS}\)  
-\(\vartheta_{prim,DS}\)  
-\(\vartheta_{sek,DS}\)
+* 배관의 열관류율은 설계값으로 계산되며, 설계값을 모르는 경우 Table 3.3-2.의 표준값을 적용합니다.
 
-- \(\vartheta_{prim,DS}\)는 지역난방 1차 온도를 의미합니다. (보고서에는 명시되어 있지 않음)  
-- \(\vartheta_{sek,DS}\)는 지역난방 2차 온도로 40℃ 또는 50℃ 값을 활용합니다.
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>배관의 열관류율</title>
+   <style>
+      table {
+         border-collapse: collapse;
+         width: 80%;
+         font-size: 14px;
+         text-align: center;
+         margin: 0 auto;
+      }
+      th, td {
+         border: 1px solid black;
+         padding: 6px 10px;
+      }
+   </style>
+</head>
 
-\(D_{DS}\)의 값은 \(v_{prim,DS}\)에 따라 다음 표를 참조합니다.  
+<p><strong>&lt;Table 3.3-2. 배관의 열관류율 \(U_{i}\)&gt;</strong></p>
 
 <table>
-  <caption>Table 3.2-22. \(D_{DS}\)</caption>
-  <thead>
-    <tr>
-      <th>지역난방기계실 종류</th>
-      <th>1차 온도 (해석)<br>\(\vartheta_{P,DS}\) (℃)</th>
-      <th>\(D_{DS}\)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>중온수</td>
-      <td>105</td>
-      <td>0.6</td>
-    </tr>
-    <tr>
-      <td>고온수</td>
-      <td>150</td>
-      <td>0.4</td>
-    </tr>
-  </tbody>
+   <tr>
+      <th rowspan="2">분배</th>
+      <th colspan="2">외부에 설치된 수직배관</th>
+      <th colspan="2">내부에 설치된 수직배관</th>
+   </tr>
+   <tr>
+      <th>S</th>
+      <th>SL</th>
+      <th>S</th>
+      <th>SL</th>
+   </tr>
+
+   <tr>
+      <td>V</td>
+      <td>0.255</td>
+      <td>0.255</td>
+      <td>0.255</td>
+      <td>0.255</td>
+   </tr>
 </table>
 
+</html>
 
 
----
+### 3.3.4. 가열된 온수의 순환을 위한 보조에너지
 
-## 3.3. 재생열에너지(태양열 및 주변 열)
+* 순환 펌프의 운전을 위한 보조에너지는 분배 시스템의 수력학적 (Hydraulic) 요구량과 펌프 운전을 의미하는 소비지수 (Expenditure factor)를 기반으로 계산됩니다.
+$$
+Q_{w,d,aux} = W_{w,d,hydr} \cdot e_{w,d,aux} \tag{3.3-4}
+$$
 
-급탕 에너지소요량 식:  
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,f} = Q_{w,outg} + Q_{w,g} - Q_{w,reg} \) <span class="eq-number">(3.3-1)</span>
-</a>
+* 급탕 시스템의 수력학적 에너지요구량은 설계점에서의 순환펌프 출력과 순환 운전시간으로 계산됩니다.
 
-에서, 
-태양열 및 주변 열 등의 재생열에너지 \(Q_{w,reg}\)는 다음과 같이 계산됩니다:
-<a href="/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Hee1_Equation_List.html" class="equation-link" target="_blank" rel="noopener noreferrer">
-  \( Q_{w,reg} = Q_{w,sol} + Q_{w,in} \) <span class="eq-number">(3.3-2)</span>
-</a>
+$$
+W_{w,d,hydr} = \frac {P_{hydr}}{1000} \cdot d_{Nutz,mth} \cdot z \tag{3.3-5}
+$$
 
-Where,  
-\(Q_{w,sol}\): 급탕에 공급된 태양열시스템 공급 열량  
-\(Q_{w,in}\): 찾는중  
+* 순환펌프의 운전시간 z는 일일 이용 시간 $t_{Nutz}$입니다.
 
-급탕에 공급된 태양열시스템 공급 열량은 **신재생에너지의 1. 태양열**에서 다룹니다.
+$$
+z = t_{Nutz} \tag{3.3-6}
+$$
+
+> Where,  
+>
+> • $Q_{w,d,aux}:$ 급탕 분배 보조에너지 (해당 월 기준) [kWh]  
+> • $W_{w,d,hydr}:$ 수력학적 에너지요구량 (해당 월 기준) [kWh]  
+> • $e_{w,d,aux}:$ 순환 펌프 운전에 대한 소비지수  
+> • $P_{hydr}:$ 설계점에서의 펌프 출력 (입력값) [W]  
+> • $d_{Nutz,mth}:$ 급탕 사용 일 수 (해당 월 기준) [d]  
+> • $z:$ 순환 펌프 일일 운전시간 [h]  
+
+### 3.3.5. 소비지수
+급탕 시스템 순환 펌프의 소비지수는 아래 식으로 계산됩니다.
+$$
+e_{w,d,aux} = f_e \cdot (C_{P1} + C_{P2}) \tag{3.3-6}
+$$
+
+$$
+f_e = \frac{P_{P}}{P_{hydr}} \tag{3.3-7}
+$$
+
+> Where,  
+>
+> • $P_{hydr}:$ 설계점에서의 펌프 출력 (입력값) [W]  
+> • $P_{P}:$ 펌프의 정격 전력 소비 (입력값) [W]  
+> • $e_{w,d,aux}:$ 순환 펌프 운전에 대한 소비지수  
+> • $f_e:$ 효율 계수  
+> • $C_{P1, C_{P2}}:$ 순환 펌프 제어에 따른 계수  
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>순환 펌프 제어 계수</title>
+   <style>
+      table {
+         border-collapse: collapse;
+         width: 80%;
+         font-size: 14px;
+         text-align: center;
+         margin: 0 auto;
+      }
+      th, td {
+         border: 1px solid black;
+         padding: 6px 10px;
+      }
+   </style>
+</head>
+
+<p><strong>&lt;Table 3.3-3. 순환 펌프 제어에 따른 계수 \(C_{P1}, C_{P2}\)&gt;</strong></p>
+
+<table>
+   <tr>
+      <th>펌프제어</th>
+      <th>\(C_{P1}\)</th>
+      <th>\(C_{P2}\)</th>
+   </tr>
+
+   <tr>
+      <td>비제어</td>
+      <td>0.25</td>
+      <td>0.94</td>
+   </tr>
+
+   <tr>
+      <td>제어</td>
+      <td>0.50</td>
+      <td>0.63</td>
+   </tr>
+</table>
+
+</html>
+
+
+### 3.3.6. 저장 손실
+급탕을 위한 저장 탱크는 간접 가열식, 태양열 복합, 전기 가열식, 가스 가열식을 고려합니다.
+
+#### 3.3.6.1. 간접 가열식 저장 탱크
+간접 가열식 저장 탱크의 경우, 계산 기간동안의 총 열 출력을 손실이라고 가정합니다.
+$$
+Q_{w,s} = f_{verbindung} \cdot \frac{(50 - \vartheta_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \tag{3.3-8}
+$$
+
+* 계수 $f_{verbindung}$는 저장 탱크와 관련된 배관으로 인해 발생하는 추가적인 열 손실을 일괄적으로 고려한 연결 배관 열손실 계수이며 표준값은 1.2입니다. 급탕 저장 탱크의 대기 열 손실은 저장된 온수와 설치된 공간의 평균 온도차 45 K를 기준으로 측정되며, 저장 손실은 대기 열 손실 ($q_{B,S}$)을 기준으로 결정됩니다.
+* 만약 저장 탱크가 난방 존 내에 위치한다면, 에너지 밸런스 관점에서 발생한 저장 손실은 난방 에너지요구량 계산에서 고려되어야 합니다. 이 경우, 저장 손실은 존의 비제어적 열 획득과 같습니다.
+$$
+Q_{I,w,s} = Q_{w,s} \tag{3.3-9}
+$$
+
+* 만약 대기 열 손실 ($q_{B,S}$)가 주어지지 않은 경우, 입력값으로 주어진 저장 탱크 용량을 기준으로 아래 식으로 계산합니다.
+
+저장 탱크 용량 1000 $l$ 이하:
+$$
+q_{B,S} = 0.8 + 0.02 \cdot V^{0.77} \tag{3.3-9}
+$$
+
+저장 탱크 용량 1000 $l$ 초과:
+$$
+q_{B,S} = 0.39 \cdot V^{0.35} + 0.5 \tag{3.3-10}
+$$
+
+> Where,  
+>
+> • $Q_{w,s}:$ 급탕 저장 탱크의 대기 열 손실 (해당 월 기준) [kWh]  
+> • $f_{verbindung}:$ 연결 배관 열손실 계수, 표준값 = 1.2 (저장 탱크가 열 생산기기와 같은 실에 있는 경우)  
+> • $\vartheta_i:$ 존의 실내 온도 [$^{\circ}C$]  
+> • $d_{Nutz,mth}:$ 급탕 사용 일 수 [d]  
+> • $q_{B,S}:$ 일일 대기 열 손실 [kWh]  
+> • $Q_{I,w,s}:$ 급탕 저장 손실로 인한 비제어적 열 획득 (해당 월 기준) [kWh]  
+> • $V:$ 저장 탱크 용량 [$l$]  
+
+#### 3.3.6.2. 태양열 복합 저장 탱크
+간접 가열식 급탕 저장 탱크의 계산 시간동안 주변으로 방출되는 총 열량은 손실로 가정합니다. 만약 급탕 저장 탱크의 하단 부분의 물 일부를 오직 태양열 저장 용도로만 사용하여 태양열 에너지에 의해서만 가열된다면, 해당되는 부피의 열 손실은 고려하지 않습니다. 
+$$
+Q_{w,s} = f_{verbindung} \cdot (UA)_{sb,s,a} \cdot \Delta \vartheta_{i} \cdot 24 \cdot 3600 \cdot d_{Nutz,mth} \cdot \frac{V_{s,aux}}{V_{s,aux} + V_{s,sol}} \tag{3.3-11}
+$$
+
+* 대기 열 손실 값이 주어지지 않은 경우, 아래 식으로 계산합니다.
+$$
+q_{B,S} = (0.4 + 0.2 \cdot (V_{s,aux} + V_{s,sol})^{0.4}) \cdot \frac{V_{s,aux}}{V_{s,aux} + V_{s,sol}} \tag{3.3-12}
+$$
+
+* 식 3.3-11.로 계산된 일일 대기 열 손실 값은 특정 대기 열 손실 계산에 사용됩니다. 대기 저장 탱크가 전기 히터로부터 보조 가열을 받는 경우, $f_{verbindung} = 1$을 적용합니다.
+* 이러한 가정들은 최대 1,000 $l$까지만 유효하며, 이를 초과할 경우, 여러 대의 최대 1,000 $l$ 저장 탱크로 분리하여 계산합니다.
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>저장 탱크 관련 변수</title>
+   <style>
+      table {
+         border-collapse: collapse;
+         width: 80%;
+         font-size: 14px;
+         text-align: center;
+         margin: 0 auto;
+      }
+      th, td {
+         border: 1px solid black;
+         padding: 6px 10px;
+      }
+   </style>
+</head>
+
+<p><strong>&lt;Table 3.3-4.&gt;</strong></p>
+
+<table>
+   <tr>
+      <th>변수</th>
+      <th>의미</th>
+      <th>단위</th>
+      <th>값</th>
+   </tr>
+
+   <tr>
+      <td>\(V_{S,aux}\)</td>
+      <td>저장 탱크의 윗 부분 (대기 상태) 용량</td>
+      <td>ℓ</td>
+      <td>입력값</td>
+   </tr>
+
+   <tr>
+      <td>\(V_{S,sol}\)</td>
+      <td>저장 탱크의 아랫 부분 (태양열 용) 용량</td>
+      <td>ℓ</td>
+      <td>\(V_{S,sol} = 2 \cdot (L_G \cdot B_G \cdot n_G)^{0.9}\)</td>
+   </tr>
+
+   <tr>
+      <td>\(q_{B,s}\) (태양열 복합 저장 탱크)</td>
+      <td>저장 탱크의 대기 열 손실 (태양열 복합 저장 탱크)</td>
+      <td>kWh/day</td>
+      <td>식 (3.3-12)</td>
+   </tr>
+
+   <tr>
+      <td>\(q_{B,s}\) (개별 저장 탱크)</td>
+      <td>저장 탱크의 대기 열 손실 (개별 저장 탱크)</td>
+      <td>kWh/day</td>
+      <td>식 (3.3-9), (3.3-10)</td>
+   </tr>
+
+</table>
+
+</html>
+
+
+
+
+> Where,  
+>
+> • $Q_{w,s}:$ 급탕 저장 탱크의 대기 열 손실 (해당 월 기준) [kWh]  
+> • $f_{verbindung}:$ 열 생산기기-저장 탱크 간 연결 배관 손실 계수  
+> • $(UA)_{sb,s,a}:$ 측정된 대기 열 손실율 [W/K]  
+> • $\Delta \vartheta_{i}:$ 저장 탱크와 탱크 주변 간의 평균 온도차 (태양열 시스템: 47 K) [W]  
+> • $d_{Nutz,mth}:$ 급탕 사용 일 수 (해당 월 기준) [d]  
+> • $V_{s,aux}:$ 저장 탱크 윗 부분의 용량 [$l$]  
+> • $V_{s,sol}:$ 저장 탱크 아랫 부분의 용량 (태양열) [$l$]  
+> • $q_{B,S}:$ 일일 대기 열 손실 [kWh]  
+> • $L_{G}:$ 건물의 최대 길이 (length) [m]  
+> • $B_{G}:$ 건물의 최대 폭 (width) [m]  
+> • $n_{G}:$ 난방 존의 개수  
+
+
+#### 3.3.6.3. 간접 가열식 급탕 저장 탱크 운전을 위한 보조에너지
+$$
+Q_{w,s,aux} = \frac{P_{P} \cdot t_{P}}{1000} \tag{3.3-13}
+$$
+
+* 펌프 운전시간은 열 생산기기 운전시간의 1.1 배로 고려합니다.
+$$
+t_{P} = \frac{Q_{w,outg} \cdot 1.1}{\dot{Q}_{N}} \tag{3.3-14}
+$$
+
+> Where,  
+>
+> • $Q_{w,s,aux}:$ 급탕 저장 탱크 운전을 위한 보조에너지 (해당 월 기준) [kWh]  
+> • $Q_{w,outg}:$ 급탕 시스템에 대한 열 에너지공급량 (해당 월 기준) [kWh]  
+> • $\dot{Q}_{N}:$ 열 생산기기의 정격 출력 [kW]  
+> • $P_{P}:$ 펌프의 정격 전력 소비 (입력값) [W]  
+> • $t_{P}:$ 순환 펌프의 운전 시간 (해당 월 기준) [h]  
+
+#### 3.3.6.4. 전기 가열식 급탕 저장 탱크
+전기 가열식 저장 탱크의 열 손실 계산에서, 계산 기간 동안 전체 열 공급량은 손실로 고려된다고 가정합니다.
+$$
+Q_{w,s} = \frac{(55 - \vartheta_i)}{45} \cdot d_{Nutz,mth} \cdot q_{B,S} \tag{3.3-15}
+$$
+
+* 저장 탱크의 일일 열 손실 $q_{B,S}$는 저장 탱크와 설치된 공간 간의 평균 온도차 45 K 를 기준으로 측정되어야 합니다. 저장 탱크가 난방 존 내에 위치할 경우 탱크의 열 손실은 존의 비제어적 열 유입으로 고려됩니다. 
+
+$$
+Q_{I,w,s} = Q_{w,s} \tag{3.3-16}
+$$
+
+* 일일 대기 열 손실의 측정값이 없을 경우, 아래 식으로 근사값을 계산합니다 (DIN EN 60379에서 최소 요구량의 80 % 기준).
+$$
+q_{B,S} = 0.29 + 0.019 \cdot V^{0.8} \tag{3.3-17}
+$$
+
+> Where,  
+>
+> • $Q_{w,s}:$ 급탕 저장 탱크의 대기 열 손실 (해당 월 기준) [kWh]  
+> • $\vartheta_{i}:$ 존의 실내 온도 [$^{\circ}C$]  
+> • $d_{Nutz,mth}:$ 급탕 사용 일 수 (해당 월 기준) [d]  
+> • $q_{B,S}:$ 일일 대기 열 손실 [kWh]  
+> • $Q_{I,w,s}:$ 존의 비제어적 열 획득 (해당 월 기준) [kWh]  
+> • $V:$ 저장 탱크 용량 (입력값) [$l$]  
+
+#### 3.3.6.5. 가스 가열식 급탕 저장 탱크
+가스 가열식의 경우, 급탕 탱크에서 방열되는 전체 열량은 손실로 고려됩니다.
+$$
+Q_{w,s} = \frac{(55 - \vartheta_i)}{50} \cdot d_{Nutz,mth} \cdot q_{B,S} \tag{3.3-18}
+$$
+
+* 가스 가열식 급탕 저장 탱크의 일일 대기 열 손실은 저장 탱크와 설치된 공간 간의 평균 온도차 50 K 를 기준으로 측정되어야 합니다. 열 생산이 저장 탱크에서 이루어지므로 이와 관련된 손실을 고려해야 합니다.
+* 일일 열 손실의 측정값이 없을 경우, 아래 근사식을 사용합니다 (DIN EN 89의 단위 정격 열 유입 0.07 kW/$l$ 기준 최소 요구량의 80 %).
+$$
+q_{B,S} = 2.0 + 0.033 \cdot V^{1.1} \tag{3.3-19}
+$$
+
+* 저장 탱크의 용량은 최대 500 $l$까지만 유효하며, 이를 초과할 경우, 여러 대의 최대 500 $l$ 저장 탱크로 분리하여 열 손실을 합산합니다.
+
+> Where,  
+>
+> • $Q_{w,s}:$ 급탕 저장 탱크의 대기 열 손실 (해당 월 기준) [kWh]  
+> • $\vartheta_{i}:$ 존의 실내 온도 [$^{\circ}C$]  
+> • $d_{Nutz,mth}:$ 급탕 사용 일 수 (해당 월 기준) [d]  
+> • $q_{B,S}:$ 일일 대기 열 손실 [kWh]  
+> • $Q_{I,w,s}:$ 존의 비제어적 열 획득 (해당 월 기준) [kWh]  
+> • $V:$ 저장 탱크 용량 (입력값) [$l$]  
+
+## 3.4. 열 생산
+급탕을 위한 열 공급을 위해 여러 열 생산기기 (e.g. 태양열, 보일러, 히트펌프, 전기 열선 등)가 사용 가능합니다. 열 에너지요구량의 총합은 모든 열 생산기기의 열 에너지공급량의 총합과 같아야 합니다.
+
+$$
+\sum_{j} Q_{w,outg,j} = \sum_{k} Q_{in,d,k} \tag{3.4-1}
+$$
+
+* 만약 여러 개의 열 생산기기가 있는 경우, 분배 시스템의 열 에너지요구량의 총합 ($Q_{in,d,t}$)은 사용 가능한 열 생산기기들에 분배됩니다. 계산은 각 열 생산기기의 에너지공급량 ($Q_{w,outg,j}$)를 기준으로 개별적으로 수행되어야 합니다.
+* 시스템의 다른 부분 (e.g. 배기열 히트펌프, 태양열 등)에서 열이 공급된다면, 열 생산량에 고려되어야 합니다. 추가 열원 (e.g. 보일러)에 의해 충족되어야 하는 잔여 열 에너지공급량은 아래 식으로 계산됩니다.
+* 여러 개의 열 생산기기가 사용될 경우, 에너지 생산에 사용된 순서대로 계산되어야 합니다.
+$$
+Q^{*}_{w,outg} = Q_{w,outg} - Q_{w,sol} - Q_{rv,w,outg} \tag{3.4-2}
+$$
+
+> Where,  
+>
+> • $Q_{w,outg,j}:$ 열 생산기기 j 의 에너지공급량 (해당 월 기준) [kWh]  
+> • $Q_{in,d,k}:$ 분배 시스템 k 의 유입 에너지 (해당 월 기준) [kWh]  
+> • $Q^{*}_{w,outg}:$ 잔여 열 에너지공급량 (해당 월 기준) [kWh]  
+> • $Q_{w,outg}:$ 열 생산기기로부터 급탕 시스템으로의 열 에너지공급량 [kWh]  
+> • $Q_{w,sol}:$ 급탕 온수 생산을 위한 태양열 시스템의 열 에너지공급량 (입력값) (해당 월 기준) [kWh]  
+> • $Q_{rv,w,outg}:$ 급탕 시스템에 대한 환기유닛의 열 에너지공급량 (해당 월 기준) [kWh] (ECO2에서 현재 고려되지 않으므로 0)  
+
+### 3.4.1. 전기 히터
+전기 히터의 경우, 열 공급량에 계수를 고려하여 에너지소요량을 계산합니다. 보조에너지는 0으로 가정합니다.
+$$
+Q_{w,f} = 1.0 \cdot Q_{w,outg} \tag{3.4-3}
+$$
+
+### 3.4.2. 보일러가 여러 개일 경우
+보일러가 여러 개일 경우, 난방 에너지소요량 1.4.6.1.을 참고합니다.
+
+### 3.4.3. 급탕 열 생산을 위한 에너지 소비의 결정
+난방과 급탕에 동일한 열 생산기기를 사용한다면, 에너지소요량 계산 시 운전시간만 추가로 고려합니다. 난방/급탕/환기/공조를 위해 건물에서 요구하는 열 생산기기의 최대 출력은 병렬로 요구되는 모든 부하의 합 또는 우선순위 기반 순차적 운전에서 최대 부하 중 최대값으로 정해집니다.
+$$
+\dot{Q}_{N,max} = max(\sum \dot{Q}_{N,gleichzeitig}, \dot{Q}_{Vorrang}) \tag{3.4-4}
+$$
+
+> Where,  
+>
+> • $\dot{Q}_{N,max}:$ 보일러에 요구되는 최대 정격 출력 [kW]  
+> • $\dot{Q}_{N,gleichzeitig}:$ 동시에 요구되는 출력의 총합 [kW]  
+> • $\dot{Q}_{Vorrang}:$ 우선순위 기반 순차적 운전에서 요구되는 가장 큰 출력 [kW]  
+
+#### 3.4.3.1. 연료 장전식 보일러
+보일러의 열 손실과 보조에너지 ($Q_{TW,g,aux}$)는 정격 열 출력 ($\dot{Q}_{N}$), 정격 출력 효율 ($\eta_{100\%}$), 대기 열 손실 ($q_{B,70}$), 보일러 보조 장치들(제어기 등)의 소비 전력 ($P_{aux}$)으로 계산됩니다. 만약 태양열 시스템을 사용할 경우, 열 에너지공급량 ($Q_{w,outg}$) 대신 잔여 열 에너지공급량 ($Q_{w^{*},outg}$)을 사용합니다.
+$$
+Q_{w,g} = Q_{w,g,100\%} \cdot t_{w,100\%} \cdot d_{Nutz,mth} + Q_{B,w} \cdot (d_{Nutz,mth} - d_{h,rB}) \tag{3.4-5}
+$$
+
+* $d_{h,rB} \gt d_{Nutz,mth}$ 일 경우, $d_{Nutz,mth} - d_{h,rB} = 0$ 입니다.
+$$
+Q_{w,g,100\%} = \frac{(f_{HS/Hi} - \eta_{k,100\%})}{\eta_{k,100\%}} \cdot \frac{Q_{w,outg}}{d_{Nutz,mth}} \tag{3.4-6}
+$$
+
+$$
+Q_{B,w} = q_{B,\vartheta} \cdot \frac{\dot{Q}_N}{\eta_{k,100\%}} \cdot (t_{Nutz,T} - t_{w,100\%}) \cdot f_{HS/Hi} \tag{3.4-7}
+$$
+
+$$
+q_{B,\vartheta} = q_{B,70} \cdot \frac{(\vartheta_{g,m} - \vartheta_{i})}{(70-20)} \tag{3.4-8}
+$$
+
+$$
+t_{w,100\%} = \frac{Q_{w,outg}}{\dot{Q}_{N} \cdot d_{Nutz,mth}} \tag{3.4-9}
+$$
+
+> Where,  
+>
+> • $Q_{w,g}:$ 보일러의 열 손실 (해당 월 기준) [kWh]  
+> • $Q_{w,g,100\%}:$  보일러의 일일 열 손실 [kWh]  
+> • $Q_{w,outg}:$ 열 생산기기로부터 급탕 시스템으로의 열 에너지공급량 (해당 월 기준) [kWh]  
+> • $Q_{B,w}:$ 운전 정지 시 보일러의 대기 열 손실 [kWh]  
+> • $f_{HS/Hi}:$ 연료의 고위/저위 발열량 비  
+> • $\eta_{100\%}:$ 보일러의 정격 출력 효율 (입력값)  
+> • $t_{w,100\%}:$ 정격 출력 시 급탕 열 생산을 위한 보일러의 일일 운전시간 [h]  
+> • $d_{Nutz,mth}:$ 급탕 사용 일 수 (해당 월 기준) [d]  
+> • $d_{h,rB}:$ 월별 설계 운전 일 수 [d]  
+> • $t_{Nutz,T}:$ 일일 사용 시간 [h]  
+> • $q_{B,70}:$ 평균 온도 70 $^{\circ}C$ 에서 대기 열 손실 [-]  
+> • $\vartheta_{g,m}:$ 대기 모드 시 평균 보일러 온도 [$^{\circ}C$]  
+> • $\vartheta_{i}:$ 보일러 설치 공간의 실내 온도 [$^{\circ}C$]  
+> • $\dot{Q}_{N}:$ 열 생산기기의 정격 출력 [kW]  
+
+보일러가 난방 존에 설치된 경우, 보일러의 외피 열 손실 ($q_s,\vartheta$)은 존의 비제어적 열 획득으로 고려됩니다.
+
+대기압 가스 보일러 (Atmospheric gas boiler)일 경우:
+$$
+q_{s,\vartheta} = 0.5 \cdot q_{B,\vartheta} \tag{3.4-10}
+$$
+
+이외의 보일러일 경우:
+$$
+q_{s,\vartheta} = 0.75 \cdot q_{B,\vartheta} \tag{3.4-11}
+$$
+
+$$
+Q_{I,w,g} = q_{s,\vartheta} \cdot \frac{\dot{Q}_{N}}{\eta_{k,100\%}} \cdot ((t_{Nutz,T} - t_{w,100\%}) \cdot (d_{Nutz,mth} - d_{h,rB}) + t_{w,100\%} \cdot d_{Nutz,mth}) \tag{3.4-12}
+$$
+
+* $d_{h,rB} \gt d_{Nutz,mth}$ 일 경우, $d_{Nutz,mth} - d_{h,rB} = 0$ 입니다.
+
+> Where,  
+>
+> • $q_{s,\vartheta}:$ 보일러의 외피 열 손실 [-]  
+> • $Q_{I,w,g}:$ 비제어적 열 획득 (해당 월 기준) [kWh]  
+
+#### 3.4.3.2. 보일러 운전을 위한 보조에너지
+보일러 운전을 위한 보조에너지는 보일러의 보조 장치의 전력 소비 ($P_{aux}$)로 계산됩니다. $P_{aux}$는 최대 부하, 정격 출력 유량, 공급/환수 온도 차 20 K 조건 기준에서 측정된 값입니다. 펌프 운전에 의한 보조에너지는 3.3.6.3. 에서 고려합니다.
+$$
+Q_{w,g,aux} = P_{aux,100} \cdot t_{w,100\%} \cdot d_{Nutz,mth} + P_{aux,SB} \cdot (24 - t_{w,100\%}) \cdot (d_{Nutz,mth} - d_{h,rB}) \tag{3.4-13}
+$$
+
+* $d_{h,rB} \gt d_{Nutz,mth}$ 일 경우, $d_{Nutz,mth} - d_{h,rB} = 0$ 입니다.
+
+> Where,  
+>
+> • $Q_{w,g,aux}:$ 정격 출력 시 보일러의 보조에너지 (해당 월 기준) [kWh]  
+> • $P_{aux,100}:$  보일러의 보조에너지 소비 (해당 월 기준) [kW]  
+> • $P_{aux,SB}:$ 대기 모드 시 보일러의 보조에너지 소비 [kW]  
+> • $t_{w,100\%}:$ 정격 출력 시 급탕 열 생산을 위한 보일러의 일일 운전시간 [h]  
+> • $d_{Nutz,mth}:$ 급탕 사용 일 수 (해당 월 기준) [d]  
+> • $d_{h,rB}:$ 월별 설계 운전 일 수 [d]  
+
+#### 3.4.3.3. 계산을 위한 표준값
+* 보일러의 대기 열 손실 ($q_{B,70}$) 은 보일러의 정격 출력에 대한 함수로 주어집니다. 
+$$
+q_{B,70} = \frac{(E \cdot (\dot{Q}_{N})^{F})}{100} \tag{3.4-14}
+$$
+
+Table 3.4-1. 보일러 유형에 따른 대기열손실 계수
+"보고서 pdf p272 표 <3.2.9-11> 넣어주세요"
+
+* 보일러 운전을 위한 보조에너지 ($P_{aux,100}, P_{aux,SB}$)는 보일러 정격 출력의 함수로 주어집니다. 
+
+* 강제 급배기식 보일러 (Boiler with forced draught burner):
+$$
+P_{aux,100} = \frac{45 \cdot (\dot{Q}_{N})^{0.48}}{1000} \tag{3.4-15}
+$$
+
+$$
+P_{aux,SB} = 0.015 \tag{3.4-16}
+$$
+
+* 250 kW 이하 대기압식 보일러 (Boiler with Atmospheric burner):
+$$
+P_{aux,100} = \frac{0.35 \cdot (\dot{Q}_{N}) + 40}{1000} \tag{3.4-17}
+$$
+
+$$
+P_{aux,SB} = 0.015 \tag{3.4-18}
+$$
+
+* 250 kW 이상 대기압식 보일러 (Boiler with Atmospheric burner):
+$$
+P_{aux,100} = \frac{0.7 \cdot (\dot{Q}_{N}) + 80}{1000} \tag{3.4-19}
+$$
+
+$$
+P_{aux,SB} = 0.015 \tag{3.4-20}
+$$
+
+표준 보일러의 경우:
+* 대기압식 가스 보일러:
+$$
+P_{aux,100} = \frac{0.148 \cdot (\dot{Q}_{N}) + 40}{1000} \tag{3.4-21}
+$$
+* 강제 급배기식 보일러(기름/가스):
+$$
+P_{aux,100} = \frac{45 \cdot (\dot{Q}_{N})^{0.48}}{1000} \tag{3.4-22}
+$$
+
+저온 보일러의 경우:
+* 대기압식 가스 보일러:
+$$
+P_{aux,100} = \frac{0.148 \cdot (\dot{Q}_{N}) + 40}{1000} \tag{3.4-23}
+$$
+
+* 강제 급배기식 보일러(기름/가스):
+$$
+P_{aux,100} = \frac{45 \cdot (\dot{Q}_{N})^{0.48}}{1000} \tag{3.4-24}
+$$
+
+* 콘덴싱 보일러(기름/가스):
+$$
+P_{aux,100} = \frac{45 \cdot (\dot{Q}_{N})^{0.48}}{1000} \tag{3.4-25}
+$$
+
+* 전기적 제어 보일러의 경우, $P_{aux,SB} = 0.02 kW$ 입니다.
+
+### 3.4.4. 직접 가열식 저장 탱크 (가스)
+가스로 직접 가열되는 저장 탱크의 경우, 열 손실은 보일러처럼 계산되며, 대기 열 손실은 3.3.6.5. 에서 계산됩니다. 정격 출력 효율 $\eta_{100\%}$ 는 82 %로 가정합니다 (DIN EN 89). 
+$$
+Q_{w,g} = Q_{w,g,100\%} \cdot d_{Nutz,mth} \tag{3.4-26}
+$$
+
+$$
+Q_{w,g,100\%} = \frac{(f_{HS/Hi} - \eta_{100\%})}{\eta_{100\%}} \cdot \frac{Q_{w,outg}}{d_{Nutz,mth}} \tag{3.4-26}
+$$
+
+> Where,  
+>
+> • $Q_{w,g}:$ 가열식 저장 탱크의 열 손실 (해당 월 기준) [kWh]  
+> • $Q_{w,g,100\%}:$ 가열식 저장 탱크의 일일 열 손실 [kWh]  
+> • $Q_{w,outg}:$ 열 생산기기의 급탕용 열 에너지공급량 (해당 월 기준) [kWh]  
+> • $f_{HS/Hi}:$ 고위/저위발열량 비  
+> • $d_{Nutz,mth}:$ 급탕 사용 일 수 (해당 월 기준) [d]  
+
+* 단순화를 위해, 보조에너지 요구량 ($Q_{w,g,aux}$) 는 0으로 가정합니다.
+
+### 3.4.5. 지역 난방 (District heating)
+* 지역난방 시 건물 기계실에서의 열 손실 ($Q_{w,g}$):
+$$
+Q_{w,g} = H_{DS} \cdot (\vartheta_{DS} - \vartheta_{i}) \tag{3.4-27}
+$$
+
+* 지역난방 열 손실은 난방 에너지소요량 1.4.7.5.를 참고합니다.
+
+* 급탕 배관망에서 2차측 평균 온도 $\vartheta_{sek,DS}$ 는 아래와 같습니다.
+$$
+\vartheta_{sek,DS} = \vartheta_{g,m} = 50 \ or \ 40 \ ^{\circ}C \tag{3.4-28}
+$$
+
