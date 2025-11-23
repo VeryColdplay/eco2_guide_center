@@ -1611,10 +1611,11 @@ $$</p>
 • <span class="arithmatex">\(V:\)</span> 저장 탱크 용량 [<span class="arithmatex">\(l\)</span>]  </p>
 </blockquote>
 <h4 id="3362">3.3.6.2. 태양열 복합 저장 탱크<a class="headerlink" href="#3362" title="Permanent link">¶</a></h4>
-<p>간접 가열식 급탕 저장 탱크의 계산 시간동안 주변으로 방출되는 총 열량은 손실로 가정합니다. 만약 급탕 저장 탱크의 하단 부분의 물 일부를 오직 태양열 저장 용도로만 사용하여 태양열 에너지에 의해서만 가열된다면, 해당되는 부피의 열 손실은 고려하지 않습니다. 
+<p>간접 가열식 급탕 저장 탱크의 계산 시간동안 주변으로 방출되는 총 열량은 손실로 가정합니다. 만약 급탕 저장 탱크의 하단 부분의 물 일부를 오직 태양열 저장 용도로만 사용하여 태양열 에너지에 의해서만 가열된다면, 해당되는 부피의 열 손실은 고려하지 않습니다. </p>
+<div align="center">$$
+Q_{w,s} = f_{verbindung} \cdot (UA)_{sb,s,a} \cdot \Delta \vartheta_{i} \cdot 24 \cdot 3600 \cdot d_{Nutz,mth} \cdot \frac{V_{s,aux}}{V_{s,aux} + V_{s,sol}} \tag{3.3-11}
 $$
-Q_{w,s} = f_{verbindung} \cdot (UA)<em i="i">{sb,s,a} \cdot \Delta \vartheta</em>
-$$} \cdot 24 \cdot 3600 \cdot d_{Nutz,mth} \cdot \frac{V_{s,aux}}{V_{s,aux} + V_{s,sol}} \tag{3.3-11</p>
+</div>
 <ul>
 <li>
 <p>대기 열 손실 값이 주어지지 않은 경우, 아래 식으로 계산합니다.
@@ -1782,11 +1783,12 @@ $$</p>
 <ul>
 <li>만약 여러 개의 열 생산기기가 있는 경우, 분배 시스템의 열 에너지요구량의 총합 (<span class="arithmatex">\(Q_{in,d,t}\)</span>)은 사용 가능한 열 생산기기들에 분배됩니다. 계산은 각 열 생산기기의 에너지공급량 (<span class="arithmatex">\(Q_{w,outg,j}\)</span>)를 기준으로 개별적으로 수행되어야 합니다.</li>
 <li>시스템의 다른 부분 (e.g. 배기열 히트펌프, 태양열 등)에서 열이 공급된다면, 열 생산량에 고려되어야 합니다. 추가 열원 (e.g. 보일러)에 의해 충족되어야 하는 잔여 열 에너지공급량은 아래 식으로 계산됩니다.</li>
-<li>여러 개의 열 생산기기가 사용될 경우, 에너지 생산에 사용된 순서대로 계산되어야 합니다.
-$$
-Q^{*}<em w_outg="w,outg">{w,outg} = Q</em>
-$$} - Q_{w,sol} - Q_{rv,w,outg} \tag{3.4-2</li>
+<li>여러 개의 열 생산기기가 사용될 경우, 에너지 생산에 사용된 순서대로 계산되어야 합니다.</li>
 </ul>
+<div align="center">
+$$
+Q^{*}_{w,outg} = Q_{w,outg} - Q_{w,sol} - Q_{rv,w,outg} \tag{3.4-2}
+$$</div>
 <blockquote>
 <p>Where,  </p>
 <p>• <span class="arithmatex">\(Q_{w,outg,j}:\)</span> 열 생산기기 j 의 에너지공급량 (해당 월 기준) [kWh]<br/>
@@ -1804,10 +1806,11 @@ $$</p>
 <h3 id="342">3.4.2. 보일러가 여러 개일 경우<a class="headerlink" href="#342" title="Permanent link">¶</a></h3>
 <p>보일러가 여러 개일 경우, 난방 에너지소요량 1.4.6.1.을 참고합니다.</p>
 <h3 id="343">3.4.3. 급탕 열 생산을 위한 에너지 소비의 결정<a class="headerlink" href="#343" title="Permanent link">¶</a></h3>
-<p>난방과 급탕에 동일한 열 생산기기를 사용한다면, 에너지소요량 계산 시 운전시간만 추가로 고려합니다. 난방/급탕/환기/공조를 위해 건물에서 요구하는 열 생산기기의 최대 출력은 병렬로 요구되는 모든 부하의 합 또는 우선순위 기반 순차적 운전에서 최대 부하 중 최대값으로 정해집니다.
+<p>난방과 급탕에 동일한 열 생산기기를 사용한다면, 에너지소요량 계산 시 운전시간만 추가로 고려합니다. 난방/급탕/환기/공조를 위해 건물에서 요구하는 열 생산기기의 최대 출력은 병렬로 요구되는 모든 부하의 합 또는 우선순위 기반 순차적 운전에서 최대 부하 중 최대값으로 정해집니다.</p>
+<div align="center">
 $$
-\dot{Q}<em n_gleichzeitig="N,gleichzeitig">{N,max} = max(\sum \dot{Q}</em>
-$$}, \dot{Q}_{Vorrang}) \tag{3.4-4</p>
+\dot{Q}_{N,max} = max(\sum \dot{Q}_{N,gleichzeitig}, \dot{Q}_{Vorrang}) \tag{3.4-4}
+$$</div>
 <blockquote>
 <p>Where,  </p>
 <p>• <span class="arithmatex">\(\dot{Q}_{N,max}:\)</span> 보일러에 요구되는 최대 정격 출력 [kW]<br/>
@@ -1895,8 +1898,145 @@ $$
 q_{B,70} = \frac{(E \cdot (\dot{Q}_{N})^{F})}{100} \tag{3.4-14}
 $$</li>
 </ul>
-<p>Table 3.4-1. 보일러 유형에 따른 대기열손실 계수
-"보고서 pdf p272 표 &lt;3.2.9-11&gt; 넣어주세요"</p>
+<p>Table 3.4-1. 보일러 유형에 따른 대기열손실 계수</p>
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<title>보일러 유형에 따른 대기열손실 계수</title>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 80%;
+        font-size: 14px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 6px 10px;
+    }
+</style>
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<p><strong>&lt;표 3.2.9-11&gt; 보일러 유형에 따른 대기열손실 계수</strong></p>
+<table>
+<!-- Header -->
+<tr>
+<th>보일러형식</th>
+<th>연식</th>
+<th>계수 E</th>
+<th>계수 F</th>
+</tr>
+<!-- 표준난방보일러 -->
+<tr><th colspan="4">표준난방보일러</th></tr>
+<!-- 가스보일러 -->
+<tr>
+<td rowspan="3">가스보일러</td>
+<td>1978 이전</td>
+<td>8.0</td>
+<td>-0.27</td>
+</tr>
+<tr>
+<td>1978 ~ 1994</td>
+<td>7.0</td>
+<td>-0.30</td>
+</tr>
+<tr>
+<td>1994 이후</td>
+<td>8.5</td>
+<td>-0.40</td>
+</tr>
+<!-- 연료분사식 보일러 (기름/가스) -->
+<tr>
+<td rowspan="3">연료분사식 보일러 (기름/가스)</td>
+<td>1978 이전</td>
+<td>9.0</td>
+<td>-0.28</td>
+</tr>
+<tr>
+<td>1978 ~ 1994</td>
+<td>7.5</td>
+<td>-0.31</td>
+</tr>
+<tr>
+<td>1994 이후</td>
+<td>8.5</td>
+<td>-0.40</td>
+</tr>
+<!-- 저온보일러 -->
+<tr><th colspan="4">저온보일러</th></tr>
+<!-- 가스보일러 -->
+<tr>
+<td rowspan="2">가스보일러</td>
+<td>1994 이전</td>
+<td>6.0</td>
+<td>-0.32</td>
+</tr>
+<tr>
+<td>1994 이후</td>
+<td>4.5</td>
+<td>-0.40</td>
+</tr>
+<!-- 콤비보일러 -->
+<tr>
+<td rowspan="2">콤비보일러</td>
+<td>1994 이후</td>
+<td>\( q_{B,70℃} = 0.022 \)</td>
+<td></td>
+</tr>
+<tr>
+<td>1994 이후</td>
+<td>\( q_{B,70℃} = 0.012 \)</td>
+<td></td>
+</tr>
+<!-- 연료분사식 보일러 (기름/가스) -->
+<tr>
+<td rowspan="2">연료분사식 보일러 (기름/가스)</td>
+<td>1994 이전</td>
+<td>7.0</td>
+<td>-0.37</td>
+</tr>
+<tr>
+<td>1994 이후</td>
+<td>4.25</td>
+<td>-0.40</td>
+</tr>
+<!-- 콘덴싱보일러 (기름/가스) -->
+<tr>
+<td rowspan="2">콘덴싱보일러 (기름/가스)</td>
+<td>1994 이전</td>
+<td>7.0</td>
+<td>-0.37</td>
+</tr>
+<tr>
+<td>1994 이후</td>
+<td>4.0</td>
+<td>-0.40</td>
+</tr>
+<!-- 콤비보일러 (11kW, 18kW 및 24kW) -->
+<tr>
+<td rowspan="2">콤비보일러 (11kW, 18kW 및 24kW)</td>
+<td>1994 이전</td>
+<td>\( q_{B,70℃} = 0.022 \)</td>
+<td></td>
+</tr>
+<tr>
+<td>1994 이후</td>
+<td>\( q_{B,70℃} = 0.012 \)</td>
+<td></td>
+</tr>
+</table>
+</html>
 <ul>
 <li>
 <p>보일러 운전을 위한 보조에너지 (<span class="arithmatex">\(P_{aux,100}, P_{aux,SB}\)</span>)는 보일러 정격 출력의 함수로 주어집니다. </p>
@@ -1929,37 +2069,29 @@ $$</li>
 <div class="arithmatex">\[
 P_{aux,SB} = 0.015 \tag{3.4-20}
 \]</div>
-<p>표준 보일러의 경우:
-* 대기압식 가스 보일러:
-$$
-P_{aux,100} = \frac{0.148 \cdot (\dot{Q}<em aux_100="aux,100">{N}) + 40}{1000} \tag{3.4-21}
-$$
-* 강제 급배기식 보일러(기름/가스):
-$$
-P</em>
-$$} = \frac{45 \cdot (\dot{Q}_{N})^{0.48}}{1000} \tag{3.4-22</p>
-<p>저온 보일러의 경우:
-* 대기압식 가스 보일러:
+<p>표준 보일러의 경우:<br/>
+• 대기압식 가스 보일러:  </p>
+<div align="center">$$
+P_{aux,100} = \frac{0.148 \cdot (\dot{Q}_{N}) + 40}{1000} \tag{3.4-21}
+$$</div>
+<p>• 강제 급배기식 보일러(기름/가스):  </p>
+<div align="center">$$
+P_{aux,100} = \frac{45 \cdot (\dot{Q}_{N})^{0.48}}{1000} \tag{3.4-22}
+$$</div>
+<p>저온 보일러의 경우:<br/>
+• 대기압식 가스 보일러:
 $$
 P_{aux,100} = \frac{0.148 \cdot (\dot{Q}_{N}) + 40}{1000} \tag{3.4-23}
 $$</p>
-<ul>
-<li>
-<p>강제 급배기식 보일러(기름/가스):
+<p>• 강제 급배기식 보일러(기름/가스):
 $$
 P_{aux,100} = \frac{45 \cdot (\dot{Q}_{N})^{0.48}}{1000} \tag{3.4-24}
 $$</p>
-</li>
-<li>
-<p>콘덴싱 보일러(기름/가스):
+<p>• 콘덴싱 보일러(기름/가스):
 $$
 P_{aux,100} = \frac{45 \cdot (\dot{Q}_{N})^{0.48}}{1000} \tag{3.4-25}
 $$</p>
-</li>
-<li>
-<p>전기적 제어 보일러의 경우, <span class="arithmatex">\(P_{aux,SB} = 0.02 kW\)</span> 입니다.</p>
-</li>
-</ul>
+<p>• 전기적 제어 보일러의 경우, <span class="arithmatex">\(P_{aux,SB} = 0.02 kW\)</span> 입니다.</p>
 <h3 id="344">3.4.4. 직접 가열식 저장 탱크 (가스)<a class="headerlink" href="#344" title="Permanent link">¶</a></h3>
 <p>가스로 직접 가열되는 저장 탱크의 경우, 열 손실은 보일러처럼 계산되며, 대기 열 손실은 3.3.6.5. 에서 계산됩니다. 정격 출력 효율 <span class="arithmatex">\(\eta_{100\%}\)</span> 는 82 %로 가정합니다 (DIN EN 89). 
 $$
@@ -2002,7 +2134,7 @@ $$</p>
 <span class="md-icon" title="마지막 업데이트">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 11월 22일 14:06:30 UTC">2025년 11월 22일</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 11월 23일 07:39:59 UTC">2025년 11월 23일</span>
 </span>
 </aside>
 </article>
