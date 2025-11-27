@@ -1,0 +1,1644 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://verycoldplay.github.io/eco2_guide_center/1.%20ECO2%20Logic%20Guide/Energy_use/Heating_system_2.html" rel="canonical"/>
+<link href="Heating_system_1.html" rel="prev"/>
+<link href="Cooling_system.html" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.15" name="generator"/>
+<title>1. 난방 에너지소요량 (2) - ECO2 Guide Center</title>
+<link href="../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../assets/pretendard.css" rel="stylesheet"/>
+<link href="../../assets/custom.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#1-energy-use-for-heating-system-2">
+          콘텐츠로 이동
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="상단/헤더" class="md-header__inner md-grid">
+<a aria-label="ECO2 Guide Center" class="md-header__button md-logo" data-md-component="logo" href="../../index.html" title="ECO2 Guide Center">
+<img alt="logo" src="../../assets/ECO2_icon.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ECO2 Guide Center
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              1. 난방 에너지소요량 (2)
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="검색" class="md-search__options">
+<button aria-label="지우기" class="md-search__icon md-icon" tabindex="-1" title="지우기" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            검색 초기화
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="네비게이션" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ECO2 Guide Center" class="md-nav__button md-logo" data-md-component="logo" href="../../index.html" title="ECO2 Guide Center">
+<img alt="logo" src="../../assets/ECO2_icon.png"/>
+</a>
+    ECO2 Guide Center
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../index.html">
+<span class="md-ellipsis">
+    Welcome
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    ECO2 Logic Guide
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            ECO2 Logic Guide
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    개요
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            개요
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../a/index.html">
+<span class="md-ellipsis">
+    계산 절차
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../a/Monthly_method.html">
+<span class="md-ellipsis">
+    월별 분석방식(YE)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../a/Zoning.html">
+<span class="md-ellipsis">
+    건물 조닝(SY)
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    에너지요구량
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            에너지요구량
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Energy_demand/Heat_gain_loss.html">
+<span class="md-ellipsis">
+    1. 열획득과 열손실
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Energy_demand/Cooling_heating_energy_demand.html">
+<span class="md-ellipsis">
+    2. 냉방 및 난방 에너지요구량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Energy_demand/Value.html">
+<span class="md-ellipsis">
+    3. 개별 값 설정(YE)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Energy_demand/Lighting_energy_demand.html">
+<span class="md-ellipsis">
+    4. 조명 에너지요구량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Energy_demand/Hot_water.html">
+<span class="md-ellipsis">
+    5. 급탕 에너지요구량
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    공조처리
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            공조처리
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../HVAC/Integration_1.html">
+<span class="md-ellipsis">
+    공조처리 (1)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../HVAC/Integration_2.html">
+<span class="md-ellipsis">
+    공조처리 (2)
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+<span class="md-ellipsis">
+    에너지소요량
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_4">
+<span class="md-nav__icon md-icon"></span>
+            에너지소요량
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="Heating_system_1.html">
+<span class="md-ellipsis">
+    1. 난방 에너지소요량 (1)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    1. 난방 에너지소요량 (2)
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="Heating_system_2.html">
+<span class="md-ellipsis">
+    1. 난방 에너지소요량 (2)
+    
+  </span>
+</a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nomenclature">
+<span class="md-ellipsis">
+      Nomenclature
+    </span>
+</a>
+<nav aria-label="Nomenclature" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#symbols">
+<span class="md-ellipsis">
+      Symbols
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#subscripts">
+<span class="md-ellipsis">
+      Subscripts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#145">
+<span class="md-ellipsis">
+      1.4.5. 저장 과정 열손실
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#146-heat-output">
+<span class="md-ellipsis">
+      1.4.6. 열 생산기기(보일러)의 에너지 공급량(Heat output)
+    </span>
+</a>
+<nav aria-label="1.4.6. 열 생산기기(보일러)의 에너지 공급량(Heat output)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1461">
+<span class="md-ellipsis">
+      1.4.6.1. 난방 보일러
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#147-decentralized-fuel-fired-systems">
+<span class="md-ellipsis">
+      1.4.7. 분산형 연료 연소식 시스템 (Decentralized fuel-fired systems)
+    </span>
+</a>
+<nav aria-label="1.4.7. 분산형 연료 연소식 시스템 (Decentralized fuel-fired systems)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1471">
+<span class="md-ellipsis">
+      1.4.7.1. 실내 가스히터
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1472">
+<span class="md-ellipsis">
+      1.4.7.2. 증발버너 기름연소난로
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1473">
+<span class="md-ellipsis">
+      1.4.7.3. 홀 난방기
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1474">
+<span class="md-ellipsis">
+      1.4.7.4. 전기 보일러
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1475">
+<span class="md-ellipsis">
+      1.4.7.5. 원/근거리 지역난방
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#15-hvac-heating-coil-energy-need">
+<span class="md-ellipsis">
+      1.5. HVAC 가열 유닛(Heating coil) 에너지 요구량 (Energy need)
+    </span>
+</a>
+<nav aria-label="1.5. HVAC 가열 유닛(Heating coil) 에너지 요구량 (Energy need)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#151-q_vhce">
+<span class="md-ellipsis">
+      1.5.1. 전달 과정 열손실 (\(Q_{vh,ce}\))
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#152-q_vhd">
+<span class="md-ellipsis">
+      1.5.2. 분배 과정에서의 손실 (\(Q_{vh,d}\))
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#153">
+<span class="md-ellipsis">
+      1.5.3. 누기율
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#154-hvac-vartheta_hop">
+<span class="md-ellipsis">
+      1.5.4. HVAC 가열유닛 온수 시스템 온도 (\(\vartheta_{h^{*},op}\))
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#155-hvac-t_hopmth">
+<span class="md-ellipsis">
+      1.5.5. HVAC 가열유닛 운전시간 (\(t_{h^{*},op,mth}\))
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="Cooling_system.html">
+<span class="md-ellipsis">
+    2. 냉방 에너지소요량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="Hot_water_system.html">
+<span class="md-ellipsis">
+    3. 급탕 에너지소요량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="Lighting_system.html">
+<span class="md-ellipsis">
+    4. 조명 에너지소요량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="Ventilation_Humidification_system.html">
+<span class="md-ellipsis">
+    5. 환기 &amp; 가습 에너지소요량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="CHP.html">
+<span class="md-ellipsis">
+    6. 열병합 에너지소요량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="Primary_energy_demand.html">
+<span class="md-ellipsis">
+    7. 1차에너지소요량 계산
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="Annex_A_Table.html">
+<span class="md-ellipsis">
+    Annex A Table
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+<span class="md-ellipsis">
+    신재생에너지
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_5">
+<span class="md-nav__icon md-icon"></span>
+            신재생에너지
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Renewable_energy_generation/S_thermal.html">
+<span class="md-ellipsis">
+    1. 태양열 에너지생산량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Renewable_energy_generation/PV.html">
+<span class="md-ellipsis">
+    2. 태양광 에너지생산량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Renewable_energy_generation/GH_thermal.html">
+<span class="md-ellipsis">
+    3. 지열 및 수열 에너지생산량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Renewable_energy_generation/Wind.html">
+<span class="md-ellipsis">
+    4. 풍력 에너지생산량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Renewable_energy_generation/Cell.html">
+<span class="md-ellipsis">
+    5. 연료전지
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    ECO2 User Guide
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            ECO2 User Guide
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/index.html">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/00_main_page.html">
+<span class="md-ellipsis">
+    Program Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/01_building_info.html">
+<span class="md-ellipsis">
+    Building Info
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/02_input_zone.html">
+<span class="md-ellipsis">
+    입력존
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/03_input_surface.html">
+<span class="md-ellipsis">
+    입력면
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/04_hvac_processing.html">
+<span class="md-ellipsis">
+    공조처리
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/05_heating_equip.html">
+<span class="md-ellipsis">
+    난방기기
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/06_heating_supply.html">
+<span class="md-ellipsis">
+    난방공급시스템
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/07_heating_distribution.html">
+<span class="md-ellipsis">
+    난방분배시스템
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/08_cooling_equip.html">
+<span class="md-ellipsis">
+    Cooling Equipment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/09_cooling_distribution.html">
+<span class="md-ellipsis">
+    냉방분배시스템
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/10_renewable_chp.html">
+<span class="md-ellipsis">
+    신재생 및 열병합
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/11_thermal_transmittance.html">
+<span class="md-ellipsis">
+    열관류율
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/12_montly_energy_use.html">
+<span class="md-ellipsis">
+    월별 에너지 사용량
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    ECO2 Assessment Guide
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            ECO2 Assessment Guide
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3.%20ECO2%20Assessment%20Guide/index.html">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Reference
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../4.%20Reference/Logic_Equations.html">
+<span class="md-ellipsis">
+    Logic Equations (수식 모음)
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nomenclature">
+<span class="md-ellipsis">
+      Nomenclature
+    </span>
+</a>
+<nav aria-label="Nomenclature" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#symbols">
+<span class="md-ellipsis">
+      Symbols
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#subscripts">
+<span class="md-ellipsis">
+      Subscripts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#145">
+<span class="md-ellipsis">
+      1.4.5. 저장 과정 열손실
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#146-heat-output">
+<span class="md-ellipsis">
+      1.4.6. 열 생산기기(보일러)의 에너지 공급량(Heat output)
+    </span>
+</a>
+<nav aria-label="1.4.6. 열 생산기기(보일러)의 에너지 공급량(Heat output)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1461">
+<span class="md-ellipsis">
+      1.4.6.1. 난방 보일러
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#147-decentralized-fuel-fired-systems">
+<span class="md-ellipsis">
+      1.4.7. 분산형 연료 연소식 시스템 (Decentralized fuel-fired systems)
+    </span>
+</a>
+<nav aria-label="1.4.7. 분산형 연료 연소식 시스템 (Decentralized fuel-fired systems)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1471">
+<span class="md-ellipsis">
+      1.4.7.1. 실내 가스히터
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1472">
+<span class="md-ellipsis">
+      1.4.7.2. 증발버너 기름연소난로
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1473">
+<span class="md-ellipsis">
+      1.4.7.3. 홀 난방기
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1474">
+<span class="md-ellipsis">
+      1.4.7.4. 전기 보일러
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1475">
+<span class="md-ellipsis">
+      1.4.7.5. 원/근거리 지역난방
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#15-hvac-heating-coil-energy-need">
+<span class="md-ellipsis">
+      1.5. HVAC 가열 유닛(Heating coil) 에너지 요구량 (Energy need)
+    </span>
+</a>
+<nav aria-label="1.5. HVAC 가열 유닛(Heating coil) 에너지 요구량 (Energy need)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#151-q_vhce">
+<span class="md-ellipsis">
+      1.5.1. 전달 과정 열손실 (\(Q_{vh,ce}\))
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#152-q_vhd">
+<span class="md-ellipsis">
+      1.5.2. 분배 과정에서의 손실 (\(Q_{vh,d}\))
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#153">
+<span class="md-ellipsis">
+      1.5.3. 누기율
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#154-hvac-vartheta_hop">
+<span class="md-ellipsis">
+      1.5.4. HVAC 가열유닛 온수 시스템 온도 (\(\vartheta_{h^{*},op}\))
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#155-hvac-t_hopmth">
+<span class="md-ellipsis">
+      1.5.5. HVAC 가열유닛 운전시간 (\(t_{h^{*},op,mth}\))
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<div style="text-align: right; font-size: 0.9em; color: #666; margin-bottom: -1em;">
+</div>
+<h1 id="1-energy-use-for-heating-system-2"><strong>1. 난방 에너지소요량 (Energy use for heating system) (2)</strong><a class="headerlink" href="#1-energy-use-for-heating-system-2" title="Permanent link">¶</a></h1>
+<h2 id="nomenclature"><strong>Nomenclature</strong><a class="headerlink" href="#nomenclature" title="Permanent link">¶</a></h2>
+<h3 id="symbols"><strong>Symbols</strong><a class="headerlink" href="#symbols" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>$$A_c$$</td><td>집열면적 / Collector area</td><td>$$m^{2}$$</td></tr>
+<tr><td>$$b$$</td><td>계수 / Coefficient</td><td>$$-$$</td></tr>
+<tr><td>$$B$$</td><td>가로 넓이 / Width</td><td>$$m^{2}$$</td></tr>
+<tr><td>$$C$$</td><td>비열 / Specific heat capacity</td><td>$$kWh/(kg\cdot K)$$</td></tr>
+<tr><td>$$C$$</td><td>상수 / Constant</td><td>$$-$$</td></tr>
+<tr><td>$$d$$</td><td>연별/월별 일수 / Days per year/month</td><td>$$d/a,\, d/mth$$</td></tr>
+<tr><td>$$e$$</td><td>소비지수 / Expenditure factor</td><td>$$-$$</td></tr>
+<tr><td>$$f$$</td><td>계수 / Factor</td><td>$$-$$</td></tr>
+<tr><td>$$FC$$</td><td>부하계수 / Load factor</td><td>$$-$$</td></tr>
+<tr><td>$$h$$</td><td>높이 / Height</td><td>$$m$$</td></tr>
+<tr><td>$$IAM$$</td><td>입사수정계수 / Incidence angle modifier</td><td>$$-$$</td></tr>
+<tr><td>$$k$$</td><td>계수 / Coefficient</td><td>$$-$$</td></tr>
+<tr><td>$$L$$</td><td>길이 / Length</td><td>$$m$$</td></tr>
+<tr><td>$$n$$</td><td>횟수 / Number</td><td>$$-$$</td></tr>
+<tr><td>$$p$$</td><td>압력 / Pressure</td><td>$$kPa$$</td></tr>
+<tr><td>$$P$$</td><td>출력 / Power, energy output</td><td>$$W,\,kW$$</td></tr>
+<tr><td>$$PE$$</td><td>전력 소비 / Power input, consumption</td><td>$$W,\,kW$$</td></tr>
+<tr><td>$$q$$</td><td>손실 / Loss</td><td>$$-$$</td></tr>
+<tr><td>$$Q$$</td><td>에너지 / Energy</td><td>$$kWh/mth$$</td></tr>
+<tr><td>$$R$$</td><td>열손실율 / Heat loss rate</td><td>$$-$$</td></tr>
+<tr><td>$$SPF$$</td><td>가동지수 / Seasonal performance factor</td><td>$$-$$</td></tr>
+<tr><td>$$t$$</td><td>시간 / Time</td><td>$$h/d,\,h/mth,\,h/a$$</td></tr>
+<tr><td>$$U$$</td><td>열관류율 / Heat transfer coefficient</td><td>$$W/(m\cdot K)$$</td></tr>
+<tr><td>$$UA$$</td><td>열손실율 / Heat loss rate</td><td>$$W/K$$</td></tr>
+<tr><td>$$V$$</td><td>부피 / Volume</td><td>$$m^{3}$$</td></tr>
+<tr><td>$$\dot{V}$$</td><td>유량 / Volume flow rate</td><td>$$m^{3}/h$$</td></tr>
+<tr><td>$$W$$</td><td>보조에너지 / Auxiliary energy</td><td>$$kWh/mth$$</td></tr>
+<tr><td>$$Z$$</td><td>일일 가동시간 / Daily operating hours</td><td>$$h/day$$</td></tr>
+<tr><td>$$\alpha$$</td><td>시간 비율 / Time component</td><td>$$-$$</td></tr>
+<tr><td>$$\beta$$</td><td>부하율 / Part load ratio</td><td>$$-$$</td></tr>
+<tr><td>$$\eta$$</td><td>효율 / Efficiency</td><td>$$-$$</td></tr>
+<tr><td>$$\Theta$$</td><td>에너지 / Energy</td><td>$$W,\,kW$$</td></tr>
+<tr><td>$$\vartheta$$</td><td>온도 / Temperature</td><td>$$°C$$</td></tr>
+<tr><td>$$\rho$$</td><td>밀도 / Density</td><td>$$kg/l$$</td></tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="subscripts"><strong>Subscripts</strong><a class="headerlink" href="#subscripts" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Subscript</th>
+<th>Meaning</th>
+<th>Subscript</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>$$a$$</td><td>연간, 년 / Annual, Year</td><td>$$C$$</td><td>실내온도제어 / Indoor temperature control</td></tr>
+<tr><td>$$A$$</td><td>연결, 해석 / Connection, Analysis</td><td>$$ce$$</td><td>전달 / Transfer</td></tr>
+<tr><td>$$Abgl$$</td><td>상쇄 / Compensation</td><td>$$combi$$</td><td>난방과 급탕의 조합 / Heating &amp; DHW combination</td></tr>
+<tr><td>$$App$$</td><td>기기 / Apparatus, Appliance</td><td>$$d$$</td><td>분배 / Distribution</td></tr>
+<tr><td>$$aux$$</td><td>보조에너지 / Auxiliary energy</td><td>$$DS$$</td><td>지역난방 기계실 / District heating station</td></tr>
+<tr><td>$$b$$</td><td>요구량 / Demand, Required</td><td>$$e$$</td><td>전기, 유효, 외부 / Electric, Effective, Outdoor</td></tr>
+<tr><td>$$B$$</td><td>대기모드, 구성요소 / Standby-, Component</td><td>$$ex$$</td><td>배기 / Exhaust</td></tr>
+<tr><td>$$Betrieb$$</td><td>가동 / Operation</td><td>$$f$$</td><td>2차 에너지, 팩터 / Final energy, Factor</td></tr>
+<tr><td>$$bin$$</td><td>등급 / Bin</td><td>$$FBH$$</td><td>바닥난방 / Floor heating</td></tr>
+<tr><td>$$Bio$$</td><td>바이오매스 / Biomass</td><td>$$fl$$</td><td>전부하 / Full load</td></tr>
+<tr><td>$$bp$$</td><td>이가 점 / Bivalent point</td><td>$$G$$</td><td>건물/존 / Building/Zone</td></tr>
+<tr><td>$$bu$$</td><td>재열 / Reheating</td><td>$$ges$$</td><td>전체, 총 / Total, Gross</td></tr>
+<tr><td>$$Grenz$$</td><td>경계 / Boundary</td><td>$$rd$$</td><td>회수 / Recovery</td></tr>
+<tr><td>$$GZ$$</td><td>기본사이클 / Basic cycle</td><td>$$reg$$</td><td>재생 가능한 / Regenerative</td></tr>
+<tr><td>$$h$$</td><td>난방 / Heating</td><td>$$rl$$</td><td>회수 가능한 / Recoverable</td></tr>
+<tr><td>$$h$$</td><td>난방공조</td><td>$$H$$</td><td>난방시스템 / Heating system</td></tr>
+<tr><td>$$rL$$</td><td>분석-운전시간 / Analysis operating time</td><td>$$HK$$</td><td>난방사이클 / Heating circuit</td></tr>
+<tr><td>$$RL$$</td><td>환수 / Return</td><td>$$hours$$</td><td>시간 / Hours</td></tr>
+<tr><td>$$rv$$</td><td>주택공조시스템 / Residential ventilation system</td><td>$$Hs/Hi$$</td><td>고위발열/저위발열 / Gross/Net calorific value</td></tr>
+<tr><td>$$RV$$</td><td>역류방지 / Backflow prevention</td><td>$$hydr$$</td><td>수압적 / Hydraulic</td></tr>
+<tr><td>$$s$$</td><td>저장기, 방사, 높은 / Storage, Radiation, High</td><td>$$i$$</td><td>내부 / Internal</td></tr>
+<tr><td>$$S$$</td><td>지관 / Branch pipe</td><td>$$SB$$</td><td>Standby-</td></tr>
+<tr><td>$$in$$</td><td>수용 / Input</td><td>$$Sch$$</td><td>연결 / Connection</td></tr>
+<tr><td>$$int$$</td><td>간헐적 / Intermittent</td><td>$$sek$$</td><td>2차 / Secondary</td></tr>
+<tr><td>$$intern$$</td><td>내부의 / Internal</td><td>$$sin$$</td><td>순수한 난방가동 / Pure heating operation</td></tr>
+<tr><td>$$Itc$$</td><td>정지포인트 / Intersection point</td><td>$$SL$$</td><td>관통하는 배관관</td></tr>
+<tr><td>$$K$$</td><td>복합기기 / Combined unit</td><td>$$slr$$</td><td>솔라시설의 부하율 / Solar system load ratio</td></tr>
+<tr><td>$$k$$</td><td>냉수, 보일러 / Cold water, Boiler</td><td>$$sol$$</td><td>솔라 / Solar</td></tr>
+<tr><td>$$km$$</td><td>평균 보일러(온도) / Mean boiler temperature</td><td>$$soll$$</td><td>요구, 이용 / Required, Setpoint</td></tr>
+<tr><td>$$L$$</td><td>공기온도프로필, 운전 시간 / Air temp. profile, Op. time</td><td>$$sys$$</td><td>시스템 / System</td></tr>
+<tr><td>$$loss$$</td><td>손실 / Loss</td><td>$$T$$</td><td>일일 / Daily</td></tr>
+<tr><td>$$lower$$</td><td>낮은 / Lower</td><td>$$Test$$</td><td>테스트조건 / Test condition</td></tr>
+<tr><td>$$m$$</td><td>평균 / Mean, Average</td><td>$$TH$$</td><td>항온밸브 / Thermostatic valve</td></tr>
+<tr><td>$$max$$</td><td>최대 / Maximum</td><td>$$upper$$</td><td>위의 / Upper</td></tr>
+<tr><td>$$mot$$</td><td>모터 / Motor</td><td>$$v$$</td><td>손실 / Loss</td></tr>
+<tr><td>$$vh$$</td><td>난방공조시스템</td><td>$$mth$$</td><td>월별 / Monthly</td></tr>
+<tr><td>$$V$$</td><td>주관 / Main pipe</td><td>$$n$$</td><td>정격, 지수 / Nominal, Index</td></tr>
+<tr><td>$$VL$$</td><td>공급 / Supply</td><td>$$N$$</td><td>야간 감소/정지 / Night setback/off</td></tr>
+<tr><td>$$w$$</td><td>급탕 / DHW</td><td>$$NA$$</td><td>기울기, 야간 / Slope, Night</td></tr>
+<tr><td>$$W$$</td><td>열 / Heat</td><td></td><td></td></tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="145"><strong>1.4.5. 저장 과정 열손실</strong><a class="headerlink" href="#145" title="Permanent link">¶</a></h3>
+<ul>
+<li>저장 열손실 (<span class="arithmatex">\(Q_{h,s}\)</span>) 저장 탱크의 열 손실은 아래와 같이 정의합니다.   </li>
+</ul>
+<div align="center">
+$$
+Q_{h,s} = f_{\text{verdindung}} \cdot \left( \frac{\theta_{h,s} - \theta_i}{45} \right) \cdot d_{h,\text{mth}} \cdot q_{B,S}  \tag{1.4.5-1}
+$$
+</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(f_{verdindung}\)</span>는 열 생산기기와 저장 탱크 간 연결 배관으로 인한 손실 계수입니다.<br/>
+• <span class="arithmatex">\(\vartheta_{h,s}\)</span>는 평균 저장 탱크 온도입니다. [°C]<br/>
+• <span class="arithmatex">\(\vartheta_{i}\)</span>는 평균 외기온도 입니다. [°C]<br/>
+• <span class="arithmatex">\(d_{h,mth}\)</span>는 월별 난방 일 수 입니다. [d]<br/>
+• <span class="arithmatex">\(q_{B,S}\)</span>는 대기 열 손실입니다. [kWh/d]  </p>
+</blockquote>
+<p>열 생산기기 - 저장탱크 연결 배관 열 손실</p>
+<ul>
+<li>열 생산기기와 저장 탱크 위치가 동일할 때: <span class="arithmatex">\( f_{\text{verbindung}} = 1.2 \)</span> </li>
+<li>열 생산기기와 저장 탱크 위치가 다를 때: #.4.4의 배관손실처럼 계산</li>
+</ul>
+<p>대기 열 손실일일 열 손실</p>
+<div align="center">
+$$
+q_{B,S} = 0.4 + 0.14 \cdot V^{0.45}  \tag{1.4.5-2}
+$$
+</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(V\)</span>는 저장 탱크 용량입니다. [L]  </p>
+</blockquote>
+<ul>
+<li>비제어적 열획득: 축열조가 난방 중인 존 내에 설치된 경우, 이 손실은 해당 존의 비제어적 열획득으로 고려됩니다.    </li>
+</ul>
+<div align="center">$$
+Q_{I,h,s} = Q_{h,s}  \tag{1.4.5-3}$$
+</div>
+<ul>
+<li>저장 탱크용 펌프 보조에너지 (<span class="arithmatex">\( Q_{h,s,aux} \)</span>) 축열조 운전을 위한 별도의 펌프가 있는 경우, 펌프의 보조에너지 소비량은 아래와 같습니다.  </li>
+</ul>
+<div align="center">$$
+Q_{h,s,aux} = \left( \frac{P_{\text{Pump}}}{1000 W/kW} \right) \cdot t_P  \tag{1.4.5-4} $$
+</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(P_{Pumpe}\)</span>는 펌프의 정격 전력 소비입니다. [W]<br/>
+• <span class="arithmatex">\(t_{P}\)</span>는 펌프의 운전 시간입니다. (해당 월 기준) [h]  </p>
+</blockquote>
+<div align="center">$$
+t_{P} = \beta_{h,s}\cdot 24 [h/d]\cdot d_{h,mth} \text{ (열 생산기기와 동시 가동된다고 가정할 경우)}  \tag{1.4.5-5}$$</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(\beta_{h,s}\)</span>는 열 저장 부하율 입니다.<br/>
+• <span class="arithmatex">\(d_{h,mth}\)</span>는 월별 난방 일 수 입니다. [d]  </p>
+</blockquote>
+<h3 id="146-heat-output"><strong>1.4.6. 열 생산기기(보일러)의 에너지 공급량(Heat output)</strong><a class="headerlink" href="#146-heat-output" title="Permanent link">¶</a></h3>
+<ul>
+<li>난방 시스템에 태양열 시스템이나 공조 시설 등으로부터 열이 공급되면, 난방 시스템에서 요구하는 추가 열량을 보일러와 같은 열 생산기기로 공급해야 합니다. 이를 생산기기 잔여 열 공급량 (<span class="arithmatex">\(Q_{h}^{*}\)</span>) 이라고 정의하고 아래와 같이 계산합니다.     </li>
+</ul>
+<div align="center">$$
+Q^*_h = Q_{h,\text{outg}} - Q_{h,\text{sol}} - Q_{rv,h,\text{outg}}  \tag{1.4.6-1}
+$$
+</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(Q_{h,outg}\)</span>는 열 저장 부하율 입니다.<br/>
+• <span class="arithmatex">\(Q_{h,sol}\)</span>는 월별 난방 일 수 입니다. [d]<br/>
+• <span class="arithmatex">\(Q_{rv,h,outg}\)</span>는 월별 난방 일 수 입니다. [d]  </p>
+</blockquote>
+<ul>
+<li>보일러가 여러 대 적용된 경우, 공급되는 열량은 차례대로 계산합니다.  </li>
+<li>난방과 급탕이 하나의 보일러로 공급될 경우, 난방 운전시간에서 급탕을 위한 가동시간을 차감합니다.  </li>
+<li>난방/급탕/공조를 위해 요구되는 보일러의 최대 성능은 동시 가동할 경우 모든 보일러 성능의 합 또는 순차 가동의 최대 보일러 성능으로부터 정합니다.   </li>
+</ul>
+<div align="center">$$
+\dot{Q}_N = \max \left( \sum \dot{Q}_{N,\text{gleichzeitig}}, \dot{Q}_{\text{V orrang}} \right)  \tag{1.4.6-2}
+$$
+</div>
+<h4 id="1461"><strong>1.4.6.1. 난방 보일러</strong><a class="headerlink" href="#1461" title="Permanent link">¶</a></h4>
+<p>난방 열 생산 과정의 열손실 (<span class="arithmatex">\(Q_{h,g}\)</span>) 은 보일러 종류에 따라 계산됩니다.
+보일러의 정격 열 출력 (<span class="arithmatex">\(\dot{Q}_{N}\)</span>)은 각 보일러의 부하율 (<span class="arithmatex">\(\beta_{h,i}\)</span>)이 1 이하가 되도록 설계됩니다.
+단일/동시/순차 가동 시 보일러의 부하율은 아래와 같습니다.
+각 보일러는 평균 열 출력에 따라 순차적으로 가동하며, 
+* 단일 보일러 부하율 (<span class="arithmatex">\( \beta_h \)</span>):   </p>
+<div align="center">
+$$
+\beta_h = \frac{ \dot{Q}_{d,in} }{ \dot{Q}_N }  \tag{1.4.6.1-1}
+$$
+</div>
+<ul>
+<li>다수 보일러 동시 가동 시 부하율 (<span class="arithmatex">\(\beta_{h,i}\)</span>):<br/>
+각 보일러의 부하율은 평균 열 출력과 각 보일러의 정격 열 출력의 합의 비 입니다.  </li>
+</ul>
+<div align="center">
+$$\beta_{h,i}=\frac{\dot{Q}_{d,in}}{\sum\dot{Q}_{N,j}}\tag{1.4.6.1-2}$$</div>
+<ul>
+<li>다수 보일러 순차 가동 시 n번째로 가동되는 보일러의 부하율 (<span class="arithmatex">\(\beta_{h,n}\)</span>):  </li>
+</ul>
+<p>보일러의 정격 출력은 각 보일러가 가동되는 순서에 따라 단계별로 합산됩니다. 각 단계 이후 보일러의 출력의 합이 요구량 미만일 경우, 보일러는 최대 부하 가동을 유지합니다. 추가된 보일러의 출력 합이 요구량을 초과할 경우에만, 마지막 n 번째에 가동되는 보일러가 부분 부하로 가동합니다.  </p>
+<div align="center">
+$$\beta_{h,n}=\frac{\dot{Q}_{d,in}-\sum\dot{Q}_{N,n-1}}{\dot{Q}_{N,n}}\quad(\dot{Q}_{d,in} \lt \sum\dot{Q}_{N,n} \text{ 일 경우}) \tag{1.4.6.1-3}$$</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(\beta_{h}\)</span>: 보일러의 부하율<br/>
+• <span class="arithmatex">\(\dot{Q}_{d,in}\)</span>: 열 분배망으로의 평균 열 공급량 [kW]<br/>
+• <span class="arithmatex">\(\dot{Q}_{N,n}\)</span>: 보일러의 정격 열 공급량 [kW]  </p>
+</blockquote>
+<ul>
+<li>연료장전식 난방 보일러의 열 생산과정에서 종합 열 생산손실 (<span class="arithmatex">\( Q_{h,g} \)</span>) 및 보조에너지 요구량(<span class="arithmatex">\( Q_{h,g,aux} \)</span>):</li>
+</ul>
+<p>보일러의 열 생산과정에서 발생하는 종합 열 생산손실 (<span class="arithmatex">\( Q_{h,g} \)</span>)과 보조에너지 요구량 (<span class="arithmatex">\( Q_{h,g,aux} \)</span>)은 보일러의 정격출력 (<span class="arithmatex">\( \dot{Q}_N \)</span>), 정격 운전 효율(<span class="arithmatex">\( \eta_{K,100\%} \)</span>), 부분 부하 효율 (<span class="arithmatex">\( \eta_{K,30\%} \)</span>), 대기 손실 (<span class="arithmatex">\( q_{B,70} \)</span>), 보조 전력 소비 (<span class="arithmatex">\( P_{aux} \)</span>) 등으로부터 계산됩니다. 이러한 수치들은 제품 사양 값으로 적용됩니다.</p>
+<p>종합 열 생산손실 (<span class="arithmatex">\(Q_{h,g}\)</span>):</p>
+<div align="center">
+$$
+Q_{h,g} = \sum \left( Q_{h,g,v,i} \cdot d_{h,rB} \right)  \tag{1.4.6.1-4}
+$$
+</div>
+<ul>
+<li><span class="arithmatex">\( 0 &lt; \beta_{h,i} \leq \beta_{K,pl} \)</span> 일 경우:   </li>
+</ul>
+<div align="center">$$
+Q_{h,g,v,i} = \left( \left( \frac{ \beta_{h,i} }{ \beta_{K,pl} } \cdot \dot{Q}_{v,g,pl} - \dot{Q}_{B,h} \right) + \dot{Q}_{B,h} \right) \cdot (t_{h,rL} - t_{w,100\%})  \tag{1.4.6.1-5}$$
+</div>
+<ul>
+<li><span class="arithmatex">\( \beta_{K,pl} &lt; \beta_{h,i} &lt; 1.0 \)</span> 일 경우:   </li>
+</ul>
+<div align="center">$$
+Q_{h,g,v,i} = \frac{ \beta_{h,i} - \beta_{K,pl} }{ 1 - \beta_{K,pl} } \cdot (\dot{Q}_{V,g,100\%} - \dot{Q}_{V,g,pl}) \cdot (t_{h,rL} - t_{w,100\%})  \tag{1.4.6.1-6}$$
+</div>
+<p>급탕 가열을 위한 보일러의 정격 출력 시 일일 운전 시간 (<span class="arithmatex">\(t_{w,100\%}\)</span>):</p>
+<div align="center">$$
+t_{w,100\%}=\frac{Q_{w,outg}}{\dot{Q}_{N}\cdot d_{Nutz,mth}} \tag{1.4.6.1-7}$$</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(Q_{h,g}:\)</span> 난방 시스템의 종합 열 생산 손실 (해당 월 기준) [kWh]<br/>
+• <span class="arithmatex">\(Q_{h,g,v,i}:\)</span> 각 보일러의 열 손실 [kWh/d]<br/>
+• <span class="arithmatex">\(d_{h,rB}:\)</span> 설계 가동 일 수 (해당 월 기준) [d]<br/>
+• <span class="arithmatex">\(\beta_{h,i}:\)</span> 보일러의 부하율<br/>
+• <span class="arithmatex">\(\dot{Q}_{V,g,pl}:\)</span> 부분 부하 시 보일러의 열 출력 손실 [kW]<br/>
+• <span class="arithmatex">\(\dot{Q}_{B,h}:\)</span> 대기 모드 시 보일러의 열 출력 손실 [kW]<br/>
+• <span class="arithmatex">\(t_{h,rL,T}:\)</span> 일일 설계 운전 시간 [h]<br/>
+• <span class="arithmatex">\(t_{w,100\%}\)</span> : 급탕 가열을 위한 보일러의 정격 출력 시 일일 운전 시간 [h]  (3. 급탕 에너지소요량 참조)
+• <span class="arithmatex">\(Q_{w,outg}\)</span> : 급탕용 열 생산기기의 열 출력 용량 (해당 월 기준) [kWh]<br/>
+• <span class="arithmatex">\(d_{Nutz,mth}\)</span> : 급탕용 사용일 수 (해당 월 기준) [d]  </p>
+</blockquote>
+<ul>
+<li>
+<p>평균 열 출력 (<span class="arithmatex">\( \dot{Q}_{d,in} \)</span>): 평균 열 출력 (<span class="arithmatex">\( \dot{Q}_{d,in} \)</span>)은 난방, 난방/급탕, 난방/급탕/공조 3가지로 구분되며 아래와 같이 계산합니다.  </p>
+</li>
+<li>
+<p>난방 또는 난방/급탕 시:   </p>
+</li>
+</ul>
+<div align="center">$$
+\dot{Q}_{d,in} = \frac{ Q_{h,outg} }{ d_{h,rB} \cdot (t_{h,r,L,T} - t_{w,100\%}) }  \tag{1.4.6.1-8}
+$$
+</div>
+<ul>
+<li>난방/급탕/공조 시:</li>
+</ul>
+<div align="center">$$\dot{Q}_{d,in}=\sum(\frac{Q_{h,outg}}{t_{Betrieb,K}-t_{w,100\%}}\cdot d_{Nutz,mth})\tag{1.4.6.1-9}$$</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(\sum{Q_{h,outg}}:\)</span> 총 열 공급량 [kWh]<br/>
+• <span class="arithmatex">\(t_{Betrieb,K}:\)</span> 월별 생산기기 가동 시간 [h]  </p>
+</blockquote>
+<ul>
+<li>
+<p>보일러의 일일 열 손실: 보일러의 일일 열 손실은 대기(정지) 상태, 부분 부하 상태, 그리고 최대 부하(100%) 운전 상태에서의 손실로 구분됩니다.</p>
+</li>
+<li>
+<p>대기 상태 손실 (<span class="arithmatex">\( \dot{Q}_{B,h}\)</span>):</p>
+</li>
+</ul>
+<div align="center">$$\dot{Q}_{B,h}=q_{B,\theta}\cdot(\frac{\dot{Q}_{N}}{\eta_{K,100\%}})\cdot f_{Hs/Hi}\tag{1.4.6.1-10}$$</div>
+<div align="center">$$q_{B,\theta}=q_{B,70}\cdot\frac{\theta_{HK,m}-\theta_{i}}{70-20 [°C]}\tag{1.4.6.1-11}$$</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(q_{B,\vartheta}:\)</span> 평균 보일러 온도에서 대기 손실 계수 [<span class="arithmatex">\(-\)</span>]<br/>
+• <span class="arithmatex">\(\dot{Q}_{N}:\)</span> 보일러의 정격 출력 [kW]<br/>
+• <span class="arithmatex">\(\eta_{k,100\%}:\)</span> 최대 부하 시 보일러 효율<br/>
+• <span class="arithmatex">\(f_{Hs/Hi}:\)</span> 사용된 연료의 고위-저위발열량 비<br/>
+• <span class="arithmatex">\(\vartheta_{HK,m}:\)</span> 평균 보일러 온도 [°C]<br/>
+• <span class="arithmatex">\(\vartheta_{i}:\)</span> 외기 온도 [°C]  </p>
+</blockquote>
+<ul>
+<li>최대 부하 시 손실 (<span class="arithmatex">\(dot{Q}_{V,g,100\%}\)</span>):  </li>
+</ul>
+<div align="center">$$
+\dot{Q}_{V,g,100\%} = \frac{ f_{Hs/Hi} - \eta_{K,100\%,Betrieb} }{ \eta_{K,100\%,Betrieb} } \cdot \dot{Q}_N  \tag{1.4.6.1-12}
+$$
+</div>
+<ul>
+<li>부분 부하 시 손실 (<span class="arithmatex">\(\dot{Q}_{V,g,pl\%}\)</span>):  </li>
+</ul>
+<div align="center">$$\dot{Q}_{V,g,pl}=\frac{f_{Hs/Hi}-\eta_{K,pl\%,Betrieb}}{\eta_{K,pl\%,Betrieb}}\cdot\beta_{K,pl}\cdot\dot{Q}_{N}\tag{1.4.6.1-13}$$</div>
+<ul>
+<li>
+<p>보일러의 평균 운전 온도 (<span class="arithmatex">\(\vartheta_{HK,m}\)</span>) (콘덴싱 보일러의 경우, 평균 회수 온도 <span class="arithmatex">\(\vartheta_{RL,m}\)</span> 사용)가 Table 1.4.6.1-14 의 테스트 온도와 다르면 보일러 효율은 바뀐 온도 조건에 맞춰야 합니다.</p>
+</li>
+<li>
+<p>최대  부하 시 보일러 운전 효율 (<span class="arithmatex">\(\eta_{K,100\%,Betrieb}\)</span>):  </p>
+</li>
+</ul>
+<div align="center">
+$$
+\eta_{K,100\%,Betrieb}=\eta_{K,100\%}+G\cdot(\theta_{g,test,100}-\theta_{HK,m})  \tag{1.4.6.1-14}$$
+</div>
+<ul>
+<li>부분 부하 시 보일러 운전 효율 (<span class="arithmatex">\(\eta_{K,pl\%,Betrieb}\)</span>):</li>
+</ul>
+<div align="center">
+$$
+\eta_{K,\text{pl}\%,\text{Betrieb}} = \eta_{K,\text{pl}\%} + H \cdot (\theta_{g,\text{test},\text{pl}} - \theta_{HK,m})  \tag{1.4.6.1-15}
+$$
+</div>
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<title>보일러 온도 및 온도 보정계수</title>
+<style>
+    body {
+      font-family: Pretendard, Arial, sans-serif;
+      margin: 40px;
+    }
+    h5 {
+      text-align: center;
+      margin-top: 40px;
+    }
+    table {
+      margin: auto;
+      border-collapse: collapse;
+      width: 70%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 6px 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #f9f9f9;
+    }
+  </style>
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body>
+<!-- Table 1 -->
+<h5>&lt;Table 1.4.6.1-16. 보일러 온도&gt;</h5>
+<table>
+<tr>
+<th>보일러 유형</th>
+<th>\(\theta_{g,\text{test,100}}\)<br/>(부하 100%) (°C)</th>
+<th>\(\theta_{g,\text{test,pl}}\)<br/>(부분 부하) (°C)</th>
+</tr>
+<tr>
+<th colspan="3">가스 / 기름</th>
+</tr>
+<tr>
+<td>표준</td>
+<td>70</td>
+<td>50</td>
+</tr>
+<tr>
+<td>저온</td>
+<td>70</td>
+<td>40</td>
+</tr>
+<tr>
+<td>콘덴싱</td>
+<td>70</td>
+<td>30</td>
+</tr>
+</table>
+<!-- Table 2 -->
+<h5>&lt;Table 1.4.6.1-17. 온도 보정계수&gt;</h5>
+<table>
+<tr>
+<th>보일러 유형</th>
+<th>계수 G</th>
+<th>계수 H</th>
+</tr>
+<tr>
+<td>표준 보일러</td>
+<td>0</td>
+<td>0.0004</td>
+</tr>
+<tr>
+<td>저온보일러</td>
+<td>0.0004</td>
+<td>0.0004</td>
+</tr>
+<tr>
+<td>가스 콘덴싱 보일러</td>
+<td>0.002</td>
+<td>0.002</td>
+</tr>
+<tr>
+<td>기름 콘덴싱 보일러</td>
+<td>0</td>
+<td>0.0004</td>
+</tr>
+</table>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
+<ul>
+<li>존으로의 비제어적 열 유입 (<span class="arithmatex">\(Q_{I,h,g}\)</span>): 열 생산기기가 설치된 존의 비제어적 열획득은 기기의 저장 열 손실 계수 (<span class="arithmatex">\(q_{s,\vartheta}\)</span>)로 계산됩니다.  </li>
+</ul>
+<div align="center">$$
+Q_{I,h,g} = q_{s,θ} \cdot \frac{ \dot{Q}_N }{ \eta_{K,100\%} } \cdot (t_{h,rL,T} - t_{w,100\%}) \cdot d_{h,rB}  \tag{1.4.6.1-18}
+$$
+</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(q_{s,\vartheta}=0.5\cdot q_{B,\vartheta}\)</span> (가스보일러)<br>
+• <span class="arithmatex">\(q_{s,\vartheta}=0.75\cdot q_{B,\vartheta}\)</span> (그 외 모든 보일러)<br>
+• <span class="arithmatex">\(q_{B,\vartheta}:\)</span> 평균 보일러 온도에서 대기 손실 계수 [<span class="arithmatex">\(-\)</span>]<br/>
+• <span class="arithmatex">\(t_{h,rL,T}:\)</span> 일일 설계 운전 시간 [h]<br/>
+• <span class="arithmatex">\(t_{w,100\%}\)</span> : 급탕 가열을 위한 보일러의 정격 출력 시 일일 운전 시간 [h]  </br></br></p>
+</blockquote>
+<ul>
+<li>난방 보조에너지 (<span class="arithmatex">\( Q_{h,g,aux} \)</span>): 보일러의 난방 보조에너지는 급수-환수 온도 차 <span class="arithmatex">\(20^{\circ}C\)</span> 일 때 유량 및 평균 부하율 (<span class="arithmatex">\(\beta_{h,i}\)</span>)를 기준으로 최대 부하/부분 부하/대기 모드에서 측정된 보일러의 보조 전력소비 (<span class="arithmatex">\(P_{aux}\)</span>) 을 기반으로 산정합니다.  </li>
+</ul>
+<div align="center">$$Q_{h,g,aux}=\sum(P_{h,g,aux,i}\cdot(t_{h,rL}-t_{w,100\%}\cdot\frac{d_{mth}\cdot d_{Nutz,a}}{365 [d]})+P_{aux,SB}\cdot(24\cdot d_{mth}-t_{h,rL})\tag{1.4.6.1-19}$$</div>
+<ul>
+<li><span class="arithmatex">\(0\le\beta_{h,i}\le\beta_{K,pl}\)</span>:</li>
+</ul>
+<div align="center">$$P_{h,g,aux,i}=(\frac{\beta_{h,i}}{\beta_{K,pl}})\cdot(P_{aux,pl,i}-P_{aux,SB})+P_{aux,SB}  \tag{1.4.6.1-20}$$</div>
+<ul>
+<li><span class="arithmatex">\(\beta_{K,pl}\le\beta_{h,i}\le1.0\)</span>:</li>
+</ul>
+<div align="center">$$P_{h,g,aux,i}=\frac{\beta_{h,i}-\beta_{K,pl}}{1-\beta_{K,pl}}\cdot(P_{aux,100}-P_{aux,pl})+P_{aux,pl}  \tag{1.4.6.1-21}$$</div>
+<blockquote>
+<p>Where, </p>
+<p>• <span class="arithmatex">\(Q_{h,g,aux}:\)</span> 난방 열 생산 보조에너지 [kWh]<br/>
+• <span class="arithmatex">\(P_{h,g,aux,i}:\)</span> 보일러의 운전 중 보조 에너지 소비 [kW]<br/>
+• <span class="arithmatex">\(P_{aux,SB}:\)</span> 보일러의 대기모드 보조 에너지 소비 [kW]<br/>
+• <span class="arithmatex">\(P_{aux,100}:\)</span> 보일러의 최대 부하 보조 에너지 소비 [kW]<br/>
+• <span class="arithmatex">\(P_{aux,pl}:\)</span> 보일러의 부분 부하 보조에너지 소비 [kW]<br/>
+• <span class="arithmatex">\(\beta_{h,i}:\)</span> 보일러의 평균 부하율<br/>
+• <span class="arithmatex">\(\beta_{K,pl}:\)</span> 보일러의 부분 부하 시 부하율<br/>
+• <span class="arithmatex">\(t_{h,rL}:\)</span> 월별 설계 운전 시간 [h]<br/>
+• <span class="arithmatex">\(t_{w,100\%}\)</span> : 급탕 가열을 위한 보일러의 정격 출력 시 일일 운전 시간 [h]<br/>
+• <span class="arithmatex">\(d_{mth}:\)</span> 월별 일 수 (해당 월 기준) [<span class="arithmatex">\(-\)</span>]<br/>
+• <span class="arithmatex">\(d_{Nutz,a}:\)</span> 연간 사용일 수 [d]  </p>
+</blockquote>
+<ul>
+<li><strong>다양한 보일러의 보조 전력소비 (<span class="arithmatex">\(P_{aux}\)</span>) [kW]</strong></li>
+<li><strong>표준-난방 보일러</strong></li>
+<li>가스 보일러:   </li>
+</ul>
+<div align="center">$$
+P_{aux,100} = P_{aux,p} = \frac{0.148 \cdot \dot{Q}_N + 40}{1000}  \tag{1.4.6.1-22}$$
+</div>
+<ul>
+<li>분무식 보일러 (가스/기름):   </li>
+</ul>
+<div align="center">$$
+P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48}  \tag{1.4.6.1-23}$$
+</div>
+<div align="center">$$
+P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}  \tag{1.4.6.1-24}$$
+</div>
+<ul>
+<li><strong>저온 보일러</strong></li>
+<li>가스 보일러:  </li>
+</ul>
+<div align="center">$$
+P_{aux,100} = P_{aux,pl} = \frac{0.148 \cdot \dot{Q}_N + 40}{1000}  \tag{1.4.6.1-25}$$
+</div>
+<ul>
+<li>분무식 보일러 (가스/기름):   </li>
+</ul>
+<div align="center">$$
+P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48}  \tag{1.4.6.1-26}$$
+</div>
+<div align="center">$$
+P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}  \tag{1.4.6.1-27}$$
+</div>
+<ul>
+<li><strong>콘덴싱 보일러:</strong> </li>
+</ul>
+<div align="center">$$P_{aux,100} = 0.045 \cdot \dot{Q}_N^{0.48}  \tag{1.4.6.1-28}$$
+</div>
+<div align="center">$$P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}  \tag{1.4.6.1-29}$$
+</div>
+<h3 id="147-decentralized-fuel-fired-systems"><strong>1.4.7. 분산형 연료 연소식 시스템 (Decentralized fuel-fired systems)</strong><a class="headerlink" href="#147-decentralized-fuel-fired-systems" title="Permanent link">¶</a></h3>
+<ul>
+<li>분산형의 경우 에너지 공급, 제어 및 배출, 분배 및 생산에 필요한 에너지들은 하나의 계수로 고려되어 열 생산기기의 에너지 소요량 (<span class="arithmatex">\(Q_{h,f}\)</span>)을 계산합니다.</li>
+</ul>
+<h4 id="1471"><strong>1.4.7.1. 실내 가스히터</strong><a class="headerlink" href="#1471" title="Permanent link">¶</a></h4>
+<ul>
+<li>굴뚝 연계식 (1985년 이전):</li>
+</ul>
+<div align="center">$$Q_{h,f}=1.4\cdot Q_{h,b} \text{ (월간)}\tag{1.4.7.1-1}$$</div>
+<ul>
+<li>굴뚝 연계식 (1985년 이후):</li>
+</ul>
+<div align="center">$$Q_{h,f}=1.34\cdot Q_{h,b} \text{ (월간)}\tag{1.4.7.1-2}$$</div>
+<ul>
+<li>외벽-기기 (1985년 이전):</li>
+</ul>
+<div align="center">$$Q_{h,f}=1.47\cdot Q_{h,b} \text{ (월간)}\tag{1.4.7.1-3}$$</div>
+<ul>
+<li>외벽-기기 (1985년 이후):</li>
+</ul>
+<div align="center">$$Q_{h,f}=1.40\cdot Q_{h,b} \text{ (월간)}\tag{1.4.7.1-4}$$</div>
+<h4 id="1472"><strong>1.4.7.2. 증발버너 기름연소난로</strong><a class="headerlink" href="#1472" title="Permanent link">¶</a></h4>
+<ul>
+<li>1985년 이전:</li>
+</ul>
+<div align="center">$$Q_{h,f}=1.4\cdot Q_{h,b} \text{ (월간)}\tag{1.4.7.2-1}$$</div>
+<ul>
+<li>1985년 이후:</li>
+</ul>
+<div align="center">$$Q_{h,f}=1.34\cdot Q_{h,b} \text{ (월간)}\tag{1.4.7.2-2}$$</div>
+<h4 id="1473"><strong>1.4.7.3. 홀 난방기</strong><a class="headerlink" href="#1473" title="Permanent link">¶</a></h4>
+<ul>
+<li>복사열 파이프 (radiant tube heater), 분산형 대류 공기 난방기 (decentralized convection air heater):</li>
+</ul>
+<div align="center">$$Q_{h,f}=(1-f)\cdot Q_{h,b}\tag{1.4.7.3-1}$$</div>
+<center>
+<div><strong>Table 1.4.7.3-2. 홀 난방기 효율 계수 f</strong></div>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../_tables/1.4.7.3_2.png"><img alt="이용 효율" src="../../_tables/1.4.7.3_2.png" style="max-width: 80%;"/></a>
+</center>
+<ul>
+<li>복사열 히터의 열 생산손실 (<span class="arithmatex">\(Q_{h,g}\)</span>) [kWh]:</li>
+</ul>
+<div align="center">$$Q_{h,g}=V_{abluft,spez}\cdot C_{p,Abluft}\cdot(\theta_{Abluft}-\theta_{Au\beta en})\cdot t_{h,rL}\tag{1.4.7.3-3}$$</div>
+<ul>
+<li>복사열 히터의 보조에너지 (<span class="arithmatex">\(Q_{h,g,aux}\)</span>): 벽 또는 천정에 설치된 팬의 전력 소비량 (해당 월 기준) [kWh]</li>
+</ul>
+<div align="center">$$Q_{h,g,aux} = 0.0006 \cdot Q_{h,b}\tag{1.4.7.3-4}$$</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(V_{Abluft,spez}:\)</span> 단위 연소 공기 요구량 <span class="arithmatex">\(= 10\,m^{3}\)</span> (열 부하 1 kWh 당)<br/>
+• <span class="arithmatex">\(c_{p,Abluft}:\)</span> 공기의 등압 비열 <span class="arithmatex">\(=0.361\,Wh/m^{3}\cdot K\)</span><br/>
+• <span class="arithmatex">\(\vartheta_{Abluft}:\)</span> 배출 공기 온도 <span class="arithmatex">\(=18\,^{\circ} C\)</span><br/>
+• <span class="arithmatex">\(\vartheta_{e}:\)</span> 평균 월간 외기 온도 [<span class="arithmatex">\(^{\circ} C\)</span>]<br/>
+• <span class="arithmatex">\(t_{h,rL}:\)</span> 월별 설계 운전 시간 [h]  </p>
+</blockquote>
+<h4 id="1474"><strong>1.4.7.4. 전기 보일러</strong><a class="headerlink" href="#1474" title="Permanent link">¶</a></h4>
+<ul>
+<li>개별 생산식의 저장 및 생산 열 손실:</li>
+</ul>
+<div align="center">$$Q_{h,s}+Q_{h,g}=0.11\cdot Q_{h,outg} \text{ (월간) [kWh]}\tag{1.4.7.4-2}$$</div>
+<ul>
+<li>통합 생산식의 저장 및 생산 열 손실:</li>
+</ul>
+<div align="center">$$Q_{h,s}+Q_{h,g}=0.09\cdot Q_{h,outg} \text{ (월간) [kWh]}\tag{1.4.7.4-3}$$ </div>
+<h4 id="1475"><strong>1.4.7.5. 원/근거리 지역난방</strong><a class="headerlink" href="#1475" title="Permanent link">¶</a></h4>
+<ul>
+<li>지역난방 시 건물 기계실에서의 연간 열 생산손실 (<span class="arithmatex">\(Q_{h,g,DS}\)</span>): </li>
+</ul>
+<div align="center">$$Q_{h,g,DS}=H_{DS}\cdot(\theta_{DS}-\theta_{i})\tag{1.4.7.5-1}$$</div>
+<p>수식 (1.4.7.5-2)는 단위를 제외하고 값만 계산합니다.  </p>
+<div align="center">$$H_{DS}=B_{DS}\cdot\Phi_{DS}^{1/3}\tag{1.4.7.5-2}$$
+$$\theta_{DS}=D_{DS}\cdot\theta_{prim,DS}+(1-D_{DS})\cdot\theta_{sek,DS}\tag{1.4.7.5-3}$$</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(Q_{h,g,DS}:\)</span> 지역난방 시 기계실에서의 연간 열 생산 손실 [kWh/a]<br/>
+• <span class="arithmatex">\(H_{DS}\)</span>: 지역난방 계수 <span class="arithmatex">\([kWh/K\cdot a]\)</span><br/>
+• <span class="arithmatex">\(B_{DS}\)</span>: 기계실 단열 등급 및 지역난방 유형에 따른 계수<br/>
+• <span class="arithmatex">\(\Phi_{DS}\)</span>: 기계실의 정격 출력 (<span class="arithmatex">\(=\dot{Q}_{N})\)</span> <span class="arithmatex">\([kW]\)</span><br/>
+• <span class="arithmatex">\(D_{DS}\)</span>: 1차 측 온도 및 지역난방 유형에 따른 계수<br/>
+• <span class="arithmatex">\(\theta_{prim,DS}\)</span>: 지역난방 1차(primary) 측 평균 온도 <span class="arithmatex">\([^{\circ}C]\)</span><br/>
+• <span class="arithmatex">\(\theta_{sek,DS}\)</span>: 지역난방 2차(secondary) 측 평균 온도 <span class="arithmatex">\([^{\circ}C]\)</span> </p>
+</blockquote>
+<center>
+<div><strong>Table 1.4.7.5-4. 지역난방 1차 측 온도 및 지역난방 유형에 따른 계수 \(D_{DS}\)</strong></div>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../_tables/1.4.7.5_4.png"><img alt="\(D_{DS}\)" src="../../_tables/1.4.7.5_4.png" style="max-width: 80%;"/></a>
+</center>
+<center>
+<div><strong>기계실 단열 등급 및 지역난방 유형에 따른 계수 \(B_{DS}\)</strong></div>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../_tables/1.4.7.5_5.png"><img alt="\(B_{DS}\)" src="../../_tables/1.4.7.5_5.png" style="max-width: 80%;"/></a>
+</center>
+<p>원칙적으로 월별로 고려가 가능하지만 ECO2에서는 계산 기간을 연 단위로, 연간 변하지 않는 열손실을 적용해 계산합니다. 지역난방 열이 건물에 중계되는 과정에서 발생하는 보조에너지는 건물 외부에서 소비되는 에너지이므로 무시됩니다. 기계실에서 건물 난방 시스템에 대한 공급온도 제어를 하면 이에 대한 보조에너지는 월간 <span class="arithmatex">\(Q_{h,g,aux}=10\,kWh\)</span> 를 적용합니다.  </p>
+<hr/>
+<h2 id="15-hvac-heating-coil-energy-need"><strong>1.5. HVAC 가열 유닛(Heating coil) 에너지 요구량 (Energy need)</strong><a class="headerlink" href="#15-hvac-heating-coil-energy-need" title="Permanent link">¶</a></h2>
+<p>공조시스템(HVAC)의 가열유닛 (heating coil)에 필요한 에너지 요구량 (<span class="arithmatex">\(Q_{h^{*},b}\)</span>)은 에너지요구량. 2. 냉방 및 난방 에너지요구량에서 계산된 공조 가열 에너지요구량(<span class="arithmatex">\(Q_{vh,b}\)</span>)에 전달 및 분배 과정에서 발생하는 손실을 더하여 산정됩니다.</p>
+<div align="center">$$
+Q_{h^{*},b}=Q_{vh,b}+Q_{vh,ce}+Q_{vh,d}\tag{1.5-1}$$</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(Q_{h^{*},b}:\)</span> 가열유닛의 에너지 요구량 <span class="arithmatex">\([kWh]\)</span><br/>
+• <span class="arithmatex">\(Q_{vh,b}:\)</span> 공조 가열 에너지요구량 <span class="arithmatex">\([kWh]\)</span><br/>
+• <span class="arithmatex">\(Q_{vh,ce}:\)</span> 공조 가열 전달 과정 열 손실 <span class="arithmatex">\([kWh]\)</span><br/>
+• <span class="arithmatex">\(Q_{vh,d}:\)</span> 공조 가열 분배 과정 열 손실 <span class="arithmatex">\([kWh]\)</span> </p>
+</blockquote>
+<h3 id="151-q_vhce"><strong>1.5.1. 전달 과정 열손실 (<span class="arithmatex">\(Q_{vh,ce}\)</span>)</strong><a class="headerlink" href="#151-q_vhce" title="Permanent link">¶</a></h3>
+<p>공조시스템에서 존으로 열을 전달하는 과정의 손실이며, 별도의 기준이 없는 경우 전달 효율 (<span class="arithmatex">\(\eta_{vh,ce}\)</span>)은 1로 가정합니다.</p>
+<div align="center">$$
+Q_{vh,ce}=(1-\eta_{vh,ce})\cdot Q_{vh,b}\tag{1.5.1-1}$$</div>
+<h3 id="152-q_vhd"><strong>1.5.2. 분배 과정에서의 손실 (<span class="arithmatex">\(Q_{vh,d}\)</span>)</strong><a class="headerlink" href="#152-q_vhd" title="Permanent link">¶</a></h3>
+<ul>
+<li>건물 내부 배관: 건물 전체 에너지 균형 관점에서 손실을 0으로 고려합니다.</li>
+</ul>
+<div align="center">$$Q_{vh,d}=0\tag{1.5.2-1}$$</div>
+<ul>
+<li>건물 외부 배관: 외부에 설치된 배관의 표면적 (<span class="arithmatex">\(A_{K,A}\)</span>)과 가동 시간 (<span class="arithmatex">\(t_{h^{*},op,mth}\)</span>)을 기준으로 열손실을 계산합니다. 배관 단열재의 열전도율은 <span class="arithmatex">\(0.04\,W/m\cdot K\)</span>, 두께는 <span class="arithmatex">\(50\,mm\)</span>를 가정합니다.</li>
+</ul>
+<div align="center">$$Q_{vh,d}=f_{vh,d}\cdot A_{K,A}\cdot\frac{t_{h^{*},op,mth}}{1000}\tag{1.5.2-2}$$</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(f_{vh,d}:\)</span> 공기 분배에 대한 열 손실 계수 (난방 시 표준값: <span class="arithmatex">\(16\, W/m^{2}\)</span>)<br/>
+• <span class="arithmatex">\(A_{K,A}:\)</span> 건물 외부에 설치된 배관의 외피 면적 <span class="arithmatex">\([m^{2}]\)</span><br/>
+• <span class="arithmatex">\(t_{h^{*},op,mth}:\)</span> HVAC 난방 시스템의 요구 운전 시간 (해당 월 기준) [h]  </p>
+</blockquote>
+<h3 id="153"><strong>1.5.3. 누기율</strong><a class="headerlink" href="#153" title="Permanent link">¶</a></h3>
+<p>덕트 누기에 의한 열손실은 무시합니다.</p>
+<h3 id="154-hvac-vartheta_hop"><strong>1.5.4. HVAC 가열유닛 온수 시스템 온도 (<span class="arithmatex">\(\vartheta_{h^{*},op}\)</span>)</strong><a class="headerlink" href="#154-hvac-vartheta_hop" title="Permanent link">¶</a></h3>
+<p>공조기 가열유닛의 예열(preheating) 및 재열(reheating)을 위한 온수 공급 온도 (<span class="arithmatex">\(\vartheta_{h^{*},op}\)</span>)는 설계상 월별 평균값을 확정해야 합니다.
+설계 값이 없는 경우, <span class="arithmatex">\(\vartheta_{h^{*},op}=70/55\,°C\)</span>를 표준값으로 사용합니다.</p>
+<h3 id="155-hvac-t_hopmth"><strong>1.5.5. HVAC 가열유닛 운전시간 (<span class="arithmatex">\(t_{h^{*},op,mth}\)</span>)</strong><a class="headerlink" href="#155-hvac-t_hopmth" title="Permanent link">¶</a></h3>
+<ul>
+<li>HVAC 가열유닛의 월별 운전시간 (<span class="arithmatex">\(t_{h^{*},op,mth}\)</span>)은 가열유닛의 연간 운전시간 (<span class="arithmatex">\(t_{H}\)</span>)으로부터 계산됩니다.</li>
+</ul>
+<div align="center">$$
+t_{h^{*},op,mth}=t_{H}\cdot(\frac{b_{vh,mth}}{b_{vh,a}})\tag{1.5.5-1}$$</div>
+<ul>
+<li><span class="arithmatex">\(t_{h^{*},op,mth} \gt t_{RLT-Betrieb,mth}\)</span>일 경우: <span class="arithmatex">\(t_{h^{*},op,mth}=t_{RLT-Betrieb,mth}\)</span></li>
+<li>
+<p><span class="arithmatex">\(t_{h^{*},op,mth} \lt 0.1\cdot t_{RLT-Betrieb,mth}$ 일 경우: $t_{h^{*},op,mth}=0.1\cdot t_{RLT-Betrieb,mth}\)</span> </p>
+</li>
+<li>
+<p>월간 완전 이용 시간 (<span class="arithmatex">\(b_{vh,mth}\)</span>):</p>
+</li>
+</ul>
+<div align="center">$$
+b_{vh,mth}=\frac{Q_{vh,b}}{\dot{Q}_{H,max}}\tag{1.5.5-2}$$</div>
+<ul>
+<li>연간 총 이용시간 (<span class="arithmatex">\(b_{vh,a}\)</span>):</li>
+</ul>
+<div align="center">$$b_{vh,a}=\sum_{1}^{12}b_{vh,mth}\tag{1.5.5-3}$$</div>
+<ul>
+<li>가열유닛 연간 운전시간(<span class="arithmatex">\(t_{H}\)</span>):</li>
+</ul>
+<div align="center">$$t_{H}=t_{H,r}\cdot t_{V,mech}\cdot d_{V,mech}\tag{1.5.5-4}$$</div>
+<ul>
+<li>월간 HVAC 운전시간(<span class="arithmatex">\(t_{RLT-Betrieb,mth}\)</span>):</li>
+</ul>
+<div align="center">$$t_{RLT-Betrieb,mth}=\frac{d_{mth}}{365}\cdot d_{op,a}\cdot t_{h^{*},op}\tag{1.5.5-5}$$</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(t_{h^{*},op,mth}:\)</span> HVAC 가열유닛의 월별 운전시간 [h]<br/>
+• <span class="arithmatex">\(t_{H}:\)</span> 가열유닛 연간 운전시간 [h]<br/>
+• <span class="arithmatex">\(t_{RLT-Betrieb,mth}:\)</span> 월간 HVAC 운전시간 [h]<br/>
+• <span class="arithmatex">\(d_{op,a}:\)</span> 연간 가동 일 수 (용도프로필 참고) [d] <br/>
+• <span class="arithmatex">\(t_{h^{*},op}:\)</span> HVAC 가열유닛의 일일 가동 시간 (용도프로필 참고) [h]<br/>
+• <span class="arithmatex">\(b_{vh}:\)</span> 최대부하 운전 가동 시간 (Full utilization hours) (월간, 연간) [h]<br/>
+• <span class="arithmatex">\(Q_{vh,b}:\)</span> 공조 가열 에너지요구량 <span class="arithmatex">\([kWh]\)</span><br/>
+• <span class="arithmatex">\(\dot{Q}_{H,max}:\)</span> 최대 HVAC 가열 출력 <span class="arithmatex">\([kW]\)</span><br/>
+• <span class="arithmatex">\(Q_{vh,d}:\)</span> 공조 가열 분배 과정 열 손실 <span class="arithmatex">\([kWh]\)</span> </p>
+</blockquote>
+<ul>
+<li>운전시간의 정확한 산정법이 나와있지 않아 추후 논의 필요</li>
+</ul>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="마지막 업데이트">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 11월 27일 06:43:03 UTC">2025년 11월 27일</span>
+</span>
+</aside>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.tabs.sticky", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+<script src="../../assets/polyfill.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script>
+<script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+<script src="../../assets/mathjax-config.js"></script>
+<script src="../../assets/mathjax-linker.js"></script>
+<script src="../../assets/mermaid-init.js"></script>
+<script src="../../assets/mermaid-font-fix.js"></script>
+<script src="../../assets/cache-buster.js"></script>
+<script src="../../assets/breadcrumb.js"></script>
+<script src="../../assets/scroll-to-top.js"></script>
+</body>
+</html>
