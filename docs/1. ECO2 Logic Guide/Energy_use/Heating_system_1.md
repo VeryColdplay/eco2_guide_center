@@ -1,0 +1,1282 @@
+# **1. 난방 에너지소요량 (Energy use for heating system) (1)**
+
+## **Nomenclature**
+
+### **Symbols**
+
+<table>
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>Meaning</th>
+      <th>Unit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>$$A_c$$</td><td>집열면적 / Collector area</td><td>$$m^{2}$$</td></tr>
+    <tr><td>$$b$$</td><td>계수 / Coefficient</td><td>$$-$$</td></tr>
+    <tr><td>$$B$$</td><td>가로 넓이 / Width</td><td>$$m^{2}$$</td></tr>
+    <tr><td>$$C$$</td><td>비열 / Specific heat capacity</td><td>$$kWh/(kg\cdot K)$$</td></tr>
+    <tr><td>$$C$$</td><td>상수 / Constant</td><td>$$-$$</td></tr>
+    <tr><td>$$d$$</td><td>연별/월별 일수 / Days per year/month</td><td>$$d/a,\, d/mth$$</td></tr>
+    <tr><td>$$e$$</td><td>소비지수 / Expenditure factor</td><td>$$-$$</td></tr>
+    <tr><td>$$f$$</td><td>계수 / Factor</td><td>$$-$$</td></tr>
+    <tr><td>$$FC$$</td><td>부하계수 / Load factor</td><td>$$-$$</td></tr>
+    <tr><td>$$h$$</td><td>높이 / Height</td><td>$$m$$</td></tr>
+    <tr><td>$$IAM$$</td><td>입사수정계수 / Incidence angle modifier</td><td>$$-$$</td></tr>
+    <tr><td>$$k$$</td><td>계수 / Coefficient</td><td>$$-$$</td></tr>
+    <tr><td>$$L$$</td><td>길이 / Length</td><td>$$m$$</td></tr>
+    <tr><td>$$n$$</td><td>횟수 / Number</td><td>$$-$$</td></tr>
+    <tr><td>$$p$$</td><td>압력 / Pressure</td><td>$$kPa$$</td></tr>
+    <tr><td>$$P$$</td><td>출력 / Power, energy output</td><td>$$W,\,kW$$</td></tr>
+    <tr><td>$$PE$$</td><td>전력 소비 / Power input, consumption</td><td>$$W,\,kW$$</td></tr>
+    <tr><td>$$q$$</td><td>손실 / Loss</td><td>$$-$$</td></tr>
+    <tr><td>$$Q$$</td><td>에너지 / Energy</td><td>$$kWh/mth$$</td></tr>
+    <tr><td>$$R$$</td><td>열손실율 / Heat loss rate</td><td>$$-$$</td></tr>
+    <tr><td>$$SPF$$</td><td>가동지수 / Seasonal performance factor</td><td>$$-$$</td></tr>
+    <tr><td>$$t$$</td><td>시간 / Time</td><td>$$h/d,\,h/mth,\,h/a$$</td></tr>
+    <tr><td>$$U$$</td><td>열관류율 / Heat transfer coefficient</td><td>$$W/(m\cdot K)$$</td></tr>
+    <tr><td>$$UA$$</td><td>열손실율 / Heat loss rate</td><td>$$W/K$$</td></tr>
+    <tr><td>$$V$$</td><td>부피 / Volume</td><td>$$m^{3}$$</td></tr>
+    <tr><td>$$\dot{V}$$</td><td>유량 / Volume flow rate</td><td>$$m^{3}/h$$</td></tr>
+    <tr><td>$$W$$</td><td>보조에너지 / Auxiliary energy</td><td>$$kWh/mth$$</td></tr>
+    <tr><td>$$Z$$</td><td>일일 가동시간 / Daily operating hours</td><td>$$h/day$$</td></tr>
+    <tr><td>$$\alpha$$</td><td>시간 비율 / Time component</td><td>$$-$$</td></tr>
+    <tr><td>$$\beta$$</td><td>부하율 / Part load ratio</td><td>$$-$$</td></tr>
+    <tr><td>$$\eta$$</td><td>효율 / Efficiency</td><td>$$-$$</td></tr>
+    <tr><td>$$\Theta$$</td><td>에너지 / Energy</td><td>$$W,\,kW$$</td></tr>
+    <tr><td>$$\vartheta$$</td><td>온도 / Temperature</td><td>$$°C$$</td></tr>
+    <tr><td>$$\rho$$</td><td>밀도 / Density</td><td>$$kg/l$$</td></tr>
+  </tbody>
+</table>
+
+---
+
+### **Subscripts**
+
+<table>
+  <thead>
+    <tr>
+      <th>Subscript</th>
+      <th>Meaning</th>
+      <th>Subscript</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>$$a$$</td><td>연간, 년 / Annual, Year</td><td>$$C$$</td><td>실내온도제어 / Indoor temperature control</td></tr>
+    <tr><td>$$A$$</td><td>연결, 해석 / Connection, Analysis</td><td>$$ce$$</td><td>전달 / Transfer</td></tr>
+    <tr><td>$$Abgl$$</td><td>상쇄 / Compensation</td><td>$$combi$$</td><td>난방과 급탕의 조합 / Heating & DHW combination</td></tr>
+    <tr><td>$$App$$</td><td>기기 / Apparatus, Appliance</td><td>$$d$$</td><td>분배 / Distribution</td></tr>
+    <tr><td>$$aux$$</td><td>보조에너지 / Auxiliary energy</td><td>$$DS$$</td><td>지역난방 기계실 / District heating station</td></tr>
+    <tr><td>$$b$$</td><td>요구량 / Demand, Required</td><td>$$e$$</td><td>전기, 유효, 외부 / Electric, Effective, Outdoor</td></tr>
+    <tr><td>$$B$$</td><td>대기모드, 구성요소 / Standby-, Component</td><td>$$ex$$</td><td>배기 / Exhaust</td></tr>
+    <tr><td>$$Betrieb$$</td><td>가동 / Operation</td><td>$$f$$</td><td>2차 에너지, 팩터 / Final energy, Factor</td></tr>
+    <tr><td>$$bin$$</td><td>등급 / Bin</td><td>$$FBH$$</td><td>바닥난방 / Floor heating</td></tr>
+    <tr><td>$$Bio$$</td><td>바이오매스 / Biomass</td><td>$$fl$$</td><td>전부하 / Full load</td></tr>
+    <tr><td>$$bp$$</td><td>이가 점 / Bivalent point</td><td>$$G$$</td><td>건물/존 / Building/Zone</td></tr>
+    <tr><td>$$bu$$</td><td>재열 / Reheating</td><td>$$ges$$</td><td>전체, 총 / Total, Gross</td></tr>
+    <tr><td>$$Grenz$$</td><td>경계 / Boundary</td><td>$$rd$$</td><td>회수 / Recovery</td></tr>
+    <tr><td>$$GZ$$</td><td>기본사이클 / Basic cycle</td><td>$$reg$$</td><td>재생 가능한 / Regenerative</td></tr>
+    <tr><td>$$h$$</td><td>난방 / Heating</td><td>$$rl$$</td><td>회수 가능한 / Recoverable</td></tr>
+    <tr><td>$$h$$</td><td>난방공조</td><td>$$H$$</td><td>난방시스템 / Heating system</td></tr>
+    <tr><td>$$rL$$</td><td>분석-운전시간 / Analysis operating time</td><td>$$HK$$</td><td>난방사이클 / Heating circuit</td></tr>
+    <tr><td>$$RL$$</td><td>환수 / Return</td><td>$$hours$$</td><td>시간 / Hours</td></tr>
+    <tr><td>$$rv$$</td><td>주택공조시스템 / Residential ventilation system</td><td>$$Hs/Hi$$</td><td>고위발열/저위발열 / Gross/Net calorific value</td></tr>
+    <tr><td>$$RV$$</td><td>역류방지 / Backflow prevention</td><td>$$hydr$$</td><td>수압적 / Hydraulic</td></tr>
+    <tr><td>$$s$$</td><td>저장기, 방사, 높은 / Storage, Radiation, High</td><td>$$i$$</td><td>내부 / Internal</td></tr>
+    <tr><td>$$S$$</td><td>지관 / Branch pipe</td><td>$$SB$$</td><td>Standby-</td></tr>
+    <tr><td>$$in$$</td><td>수용 / Input</td><td>$$Sch$$</td><td>연결 / Connection</td></tr>
+    <tr><td>$$int$$</td><td>간헐적 / Intermittent</td><td>$$sek$$</td><td>2차 / Secondary</td></tr>
+    <tr><td>$$intern$$</td><td>내부의 / Internal</td><td>$$sin$$</td><td>순수한 난방가동 / Pure heating operation</td></tr>
+    <tr><td>$$Itc$$</td><td>정지포인트 / Intersection point</td><td>$$SL$$</td><td>관통하는 배관관</td></tr>
+    <tr><td>$$K$$</td><td>복합기기 / Combined unit</td><td>$$slr$$</td><td>솔라시설의 부하율 / Solar system load ratio</td></tr>
+    <tr><td>$$k$$</td><td>냉수, 보일러 / Cold water, Boiler</td><td>$$sol$$</td><td>솔라 / Solar</td></tr>
+    <tr><td>$$km$$</td><td>평균 보일러(온도) / Mean boiler temperature</td><td>$$soll$$</td><td>요구, 이용 / Required, Setpoint</td></tr>
+    <tr><td>$$L$$</td><td>공기온도프로필, 운전 시간 / Air temp. profile, Op. time</td><td>$$sys$$</td><td>시스템 / System</td></tr>
+    <tr><td>$$loss$$</td><td>손실 / Loss</td><td>$$T$$</td><td>일일 / Daily</td></tr>
+    <tr><td>$$lower$$</td><td>낮은 / Lower</td><td>$$Test$$</td><td>테스트조건 / Test condition</td></tr>
+    <tr><td>$$m$$</td><td>평균 / Mean, Average</td><td>$$TH$$</td><td>항온밸브 / Thermostatic valve</td></tr>
+    <tr><td>$$max$$</td><td>최대 / Maximum</td><td>$$upper$$</td><td>위의 / Upper</td></tr>
+    <tr><td>$$mot$$</td><td>모터 / Motor</td><td>$$v$$</td><td>손실 / Loss</td></tr>
+    <tr><td>$$vh$$</td><td>난방공조시스템</td><td>$$mth$$</td><td>월별 / Monthly</td></tr>
+    <tr><td>$$V$$</td><td>주관 / Main pipe</td><td>$$n$$</td><td>정격, 지수 / Nominal, Index</td></tr>
+    <tr><td>$$VL$$</td><td>공급 / Supply</td><td>$$N$$</td><td>야간 감소/정지 / Night setback/off</td></tr>
+    <tr><td>$$w$$</td><td>급탕 / DHW</td><td>$$NA$$</td><td>기울기, 야간 / Slope, Night</td></tr>
+    <tr><td>$$W$$</td><td>열 / Heat</td><td></td><td></td></tr>
+  </tbody>
+</table>
+
+
+---  
+
+
+## **1.1. 개요**
+
+본 절은 난방 시스템의 각 단계(전달, 분배, 저장, 생산)에서 산출된 손실 (loss), 소요량 (energy use), 보조에너지 (auxiliary energy)를 종합하여, 최종적으로 열 생산기기(보일러, 히트펌프 등)가 공급해야 하는 에너지 소요량을 산정하는 방법을 기술합니다.
+
+   <center>
+         <img src="../../_images/1.1_1.png" style="max-width: 50%;" alt="제 2.1장에서 다루는 범위">
+         <div><strong>Figure 1.1-1. 공조처리의 제 1장에서 다루는 범위</strong></div>
+   </center>
+
+열 생산기기의 에너지 소요량 산정을 위해 건물의 난방 에너지 요구량 ($Q_{h,b}$)에 각 과정에서 발생하는 모든 열손실을 더하여 열 생산기기가 실제로 감당해야 할 열 에너지 공급량($Q_{h,outg}$)을 결정합니다.
+
+또한, 이 과정에서 소비되는 모든 보조에너지 공급량, 신재생에너지 시스템에 의한 열획득도 합산합니다.
+
+### **1.1.1. 입력 변수**
+
+### **1.1.2. 출력 변수**
+
+### 
+
+Table # 입력 변수
+
+| Symbol | Meaning | Unit |
+| :---- | :---- | :---- |
+| | | |
+
+Table # 출력 변수
+
+| Symbol | Meaning | Unit |
+| :---- | :---- | :---- |
+| | | |
+
+---
+
+## **1.2. 생산기기 열에너지 공급량(heat output)**
+
+열 생산기기가 공급해야 하는 총 열 공급량 ($Q_{h,outg}$)은 최종적으로 실내에 공급되어야 하는 순수 난방에너지 요구량(Energy need) ($Q_{h,b}$)과 열이 사용자에게 도달하기까지의 과정, 즉 전달 ($Q_{h,ce}$) 분배 ($Q_{h,d}$) 저장 ($Q_{h,s}$) 단계에서 발생하는 모든 열손실의 합으로 계산됩니다.
+
+$$Q_{h,outg}=Q_{h,b}+Q_{h,ce}+Q_{h,d}+Q_{h,s}\tag{1.2-1}$$
+
+열 생산기기가 공조시스템의 가열유닛(Heating coil)에 열을 공급하는 경우, $Q_{h,b}$ 대신 공조기 가열에 필요한 열량 $Q_{h,b}$ 를 사용합니다.
+
+$$Q_{h,outg}=Q_{h,b}+Q_{h,ce}+Q_{h,d}+Q_{h,s}\tag{1.2-2}$$
+
+열 생산기기가 흡수식 냉동기에 열을 공급하는 경우, 냉동기 구동에 필요한 열량 $Q_{c,f}$ 를 사용합니다.
+
+$$Q_{h,outg}=Q_{c,f}+Q_{h,d}+Q_{h,s}\tag{1.2-3}$$
+
+열 생산기기로부터 열이 공급되는 과정이 다수인 경우, 각각의 과정의 $Q_{h,outg}$ 를 합산합니다.
+
+
+
+> Where,
+>
+> • $Q_{h,outg}$ 는 난방 시스템의 에너지 공급량 (Energy output)입니다. [kWh]  
+> • $Q_{h,b}$ 는 존의 에너지 요구량 (Energy demand)입니다. [kWh]  
+> • $Q_{h,ah}$ 는 공조기(AHU)의 열출력입니다. [kWh]  
+> • $Q_{c,f}$ 는 냉동기 에너지 공급량입니다. (해당 월 기준) [kWh]  
+> • $Q_{h,ce}$ 는 난방 시스템의 제어 및 방출 열 손실로 주변 환경(예: 방, 구역, 지하실)으로의 손실입니다. (해당 월 기준) [kWh]  
+> • $Q_{h,d}$ 는 난방 시스템의 주변 환경(예: 실, 구역, 지하실)으로의 분배 열 손실입니다. (해당 월 기준) [kWh]  
+> • $Q_{h,s}$ 는 난방 시스템의 주변 환경으로의 저장 열 손실입니다. (해당 월 기준) [kWh]
+
+
+### **1.2.1. 최종 난방 에너지 소요량 (Energy use)**
+
+건물이 실제로 요구하는 최종 난방 에너지 소요량 ($Q_{h,f}$)은 생산기기의 열에너지 공급량 ($Q_{h,outg}$)과 공급 과정의 열 손실량($Q_{h,g}$)을 더한 값에서, 태양열 등 신재생에너지로 공급된 열량 ($Q_{h,reg}$)을 차감하여 계산됩니다.
+
+$$Q_{h,f}=Q_{h,outg}+Q_{h,g}-Q_{h,reg}\tag{1.2.1-1}$$
+
+$$Q_{h,reg}=Q_{h,sol}+Q_{h,in}\tag{1.2.1-2}$$
+
+> Where,
+>
+> • $Q_{h,f}$ 는 열 발생기의 공급 에너지입니다. [kWh]  
+> • $Q_{h,outg}$ 는 난방 시스템의 에너지 공급량 (Energy output)입니다. [kWh]  
+> • $Q_{h,g}$ 는 설치 공간으로의 난방 시스템 생산 열 손실입니다. (해당 월 기준) [kWh]  
+> • $Q_{h,reg}$ 는 신재생 에너지 생산량입니다. (해당 월 기준) [kWh]  
+> • $Q_{h,in}$ 는 주변 열 유입 (히트펌프 난방의 저온부 열 유입)입니다. (해당 월 기준) [kWh]  
+> • $Q_{h,sol}$ 는 태양열 에너지입니다. (해당 월 기준) [kWh]
+
+
+### **1.2.2. 보조에너지 (Auxiliary Energy)**
+
+난방 시스템에서 보조에너지 ($Q_{h,aux}$)는 열 전달, 분배, 저장, 생산의 각 단계에서 소요되는 모든 보조에너지의 합으로 산출되며 최종 에너지 소요량에 포함됩니다.
+
+$$Q_{h,aux}=Q_{h,ce,aux}+Q_{h,d,aux}+Q_{h,s,aux}+Q_{h,g,aux}\tag{1.2.2-1}$$
+
+> Where,
+>
+> • $Q_{h,aux}$ 는 난방 시스템의 보조 에너지입니다. [kWh]  
+> • $Q_{h,ce,aux}$ 는 난방 시스템 제어 및 배출을 위한 보조 에너지입니다. (해당 월 기준) [kWh]  
+> • $Q_{h,d,aux}$ 는 난방 시스템 분배를 위한 보조 에너지입니다. (해당 월 기준) [kWh]  
+> • $Q_{h,s,aux}$ 는 난방 시스템 저장용 보조 에너지입니다. (해당 월 기준) [kWh]  
+> • $Q_{h,g,aux}$ 는 난방 시스템 발생용 보조 에너지입니다. (해당 월 기준) [kWh]
+
+
+### **1.2.3. 비제어적 열획득(Heat gain)**
+
+난방 시스템의 전달, 분배, 저장, 생산 과정에서 열에너지의 일부는 제어되지 않고 난방 중인 실내 공간으로 유입되어 열획득으로 작용할 수 있다. 이 비제어적 열획득 ($Q_{I,h}$)은 열에너지 소요량을 계산할 때 고려되어야 합니다.
+
+$$Q_{I,h}=Q_{I,h,d}+Q_{I,h,s}+Q_{I,h,g} \tag{1.2.3-1}$$
+
+> Where,
+>
+> • $Q_{I,h}$ 는 난방 시스템으로 인한 존의 비제어적 내부 열 획득량입니다. (해당 월 기준) [kWh]  
+> • $Q_{I,h,d}$ 는 분배로 인한 존의 비제어적 내부 열 획득량입니다. (해당 월 기준) [kWh]  
+> • $Q_{I,h,s}$ 는 저장으로 인한 존의 비제어적 내부 열 획득량입니다. (해당 월 기준) [kWh]  
+> • $Q_{I,h,g}$ 는 생산으로 인한 존의 비제어적 내부 열 획득량입니다. (해당 월 기준) [kWh]
+
+
+---
+
+## **1.3. 각 프로세스의 기준 조건 설정**
+
+기본적으로 일일 난방이용시간 $t_{h,Nutz}=0$ 이면, 부하율 $\beta_{j}=0$ 입니다.
+
+만약 \# 장. 난방 에너지 요구량의 공조난방 시스템에서 요구사항이 있을 경우, \# 장에서 산정된 $t_{h,Nutz}$ 를 따르도록 합니다.
+ 
+
+    
+
+### 1.3.1. 평균 부하율(Part load level)
+
+평균 부하율(\( \beta_{i} \))은 시스템의 최대 공급 능력 대비 실제 평균 부하가 어느 정도인지를 나타내는 무차원 변수입니다.    각 단계(전달, 분배, 저장, 생산)마다 열손실이 존재하므로, 각 단계의 부하율을 개별적으로 계산합니다.   
+
+- 열 전달 부하율 \( \beta_{h,ce} \)
+
+<div align="center">
+$$
+\beta_{h,ce} = \frac{Q_{h,b}}{\dot{Q}_{h,\max} \cdot t_h} \tag{1.3.1-1}
+$$
+</div>
+
+- 열 분배 부하율 \( \beta_{h,d} \)
+
+<div align="center">
+$$
+\beta_{h,d} = \frac{Q_{h,b} + Q_{h,ce}}{\dot{Q}_{h,max} \cdot t_h} \tag{1.3.1-2}
+$$
+</div>
+
+- 열 저장 부하율 \( \beta_{h,s} \)
+
+<div align="center">
+$$
+\beta_{h,s} = \frac{Q_{h,b} + Q_{h,ce} + Q_{h,d}}{\dot{Q}_{h,max} \cdot t_h}  \tag{1.3.1-3}
+$$
+</div>
+
+- 열 생산 부하율 \( \beta_{h,g} \)
+
+<div align="center">
+$$
+\beta_{h,g} = \frac{Q_{h,b} + Q_{h,ce} + Q_{h,d} + Q_{h,s}}{\dot{Q}_{h,max} \cdot t_h} \tag{1.3.1-4}
+$$
+</div>
+
+> Where,
+>
+> • $Q_{h,b}$: 월별 난방 에너지 요구량 [kWh]  
+> • $\dot{Q}_{h,max}$: 최대 난방 출력 [kW]  
+> • $t_{h}$: 월별 난방 시간 [h]
+
+    
+
+### **1.3.2. 온도 기반 제어**
+
+온도에 따라 자동 조절되는 난방 시스템에서, 개별 프로세스(전달, 분배, 저장, 생산)의 온도는 시스템의 설계 조건에서 평균 부하율과 평균 온도차에 의해 정해집니다. 온도 $\theta_{HK,m(\beta_{j})}$ 를 산정합니다.   
+
+- 평균 난방 사이클 온도(\( \theta_{HK,m} \))
+
+<div align="center">
+$$
+\theta_{HK,m}(\beta_i) = 0.5 \cdot ( \theta_{VL,m}(\beta_i) + \theta_{RL,m}(\beta_i) ) \tag{1.3.2-1}
+$$
+</div>
+
+- 평균 온도차(\( \Delta \theta_{HK,m}(\beta_i) \))
+
+<div align="center">
+$$
+\Delta \theta_{HK,m}(\beta_i) = \theta_{VL,m}(\beta_i) - \theta_{RL,m}(\beta_i) \tag{1.3.2-2}
+$$
+</div>
+
+
+- 평균 공급 온도(\(\theta_{VL,m}\))
+
+<div align="center">
+$$
+\theta_{VL,m}(\beta_i) = (\theta_{VA} - \theta_{i,h,\text{soll}}) \cdot \beta_i^{\frac{1}{n}} + \theta_{i,h,\text{soll}} \tag{1.3.2-3}
+$$
+</div>
+
+
+- 평균 환수 온도(\( \theta_{RL,m} \))
+
+<div align="center">
+$$
+\theta_{RL,m}(\beta_i) = ( \theta_{RA} - \theta_{i,h,soll} ) \cdot \beta_i^{\frac{1}{n}} + \theta_{i,h,soll} \tag{1.3.2-4}
+$$
+</div>
+
+> Where,
+>
+> • $\beta_{i}$: 2.1.3.1에서 계산된 각 프로세스의 평균 부하율  
+> • $\theta_{VA}$: 난방 시스템의 설계 조건 공급 온도 [°C]  
+> • $\theta_{RA}$: 난방 시스템의 설계 조건 환수 온도 [°C]  
+> • $n$: 방열지수 (라디에이터 = 1.33, 바닥 난방 =1.1)  
+> • $\theta_{i,h,soll}$: 난방 시스템 가동 시간 동안의 실내 온도 [°C]
+
+    
+
+- 작동 유체(Working fluid)의 평균 초과 온도 \( \Delta \theta_A \)
+
+<div align="center">
+$$
+\Delta \theta_A = ( \theta_{VA} + \theta_{RA} ) / 2 - \theta_{i,h,soll} \tag{1.3.2-5}
+$$
+</div>
+
+* 혼합기(mixer)가 설치된 정온 보일러의 경우, 전달과 분배 과정에서 초과 온도 값을 적용합니다.
+* 혼합기가 없는 정온 보일러의 평균 온도 $=70^{\circ}C$ 로 가정합니다.
+
+* 건물이 리모델링 되었을 경우, 설계 온도는 조정할 수 있습니다. 새로운 자세한 설계가 수립되지 않은 경우, Table 1.3.2-6. 의 설계 온도를 사용하도록 합니다. 중간 값일 경우, 한 단계 높은 온도 쌍을 선택하도록 합니다.
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>설계 온도</title>
+   <style>
+      table {
+         border-collapse: collapse;
+         width: 80%;
+         font-size: 14px;
+         text-align: center;
+         margin: 0 auto; /* 표를 가운데 배치 */
+      }
+      th, td {
+         border: 1px solid black;
+         padding: 6px 10px;
+      }
+   </style>
+</head>
+
+<p><strong>&lt;Table 1.3.2-6. 설계온도&gt;</strong></p>
+
+<table>
+   <tr>
+      <th rowspan="2">기존 설계 온도</th>
+      <th colspan="3">새 설계 온도에서 Q̇<sub>N,neu</sub> / Q̇<sub>N,alt</sub></th>
+   </tr>
+   <tr>
+      <th>70/55 ℃</th>
+      <th>55/45 ℃</th>
+      <th>35/28 ℃</th>
+   </tr>
+   <tr>
+      <td>90/70 ℃</td>
+      <td>63.8 %</td>
+      <td>40.6 %</td>
+      <td>11.3 %</td>
+   </tr>
+   <tr>
+      <td>70/55 ℃</td>
+      <td>-</td>
+      <td>63.7 %</td>
+      <td>17.8 %</td>
+   </tr>
+   <tr>
+      <td>55/45 ℃</td>
+      <td>-</td>
+      <td>-</td>
+      <td>27.9 %</td>
+   </tr>
+</table>
+
+</html>
+
+
+
+> Where,
+>
+> • $\dot{Q}_{N,neu}$는 새로운 보일러의 정격 열출력 입니다. [kW]  
+> • $\dot{Q}_{N,alt}$는 기존 보일러의 정격 열출력 입니다. [kW]
+
+
+- 축열조가 없는 열 생산기기의 경우 평균 공급/환수 온도는   
+<div align="center"> $$
+\theta_{HK,m}(\beta_i) = 0.5 \cdot \left( \theta_{VL,m}(\beta_i) + \theta_{RL,m}(\beta_i) \right)  \tag{1.3.2-7}
+$$
+</div>
+식으로 구합니다.   
+
+* 상이한 난방 배관망이 설치된 경우, 최대 온도는 열 생산기기가 충족해야 하는 요구 사항에 따릅니다.
+* 정온 보일러와 바이오매스 보일러는 평균 온도를 $70^{\circ}C$ 로 가정합니다.
+* 콘덴싱 보일러의 효율 계산에서 환수 온도가 고려되어야 합니다.
+* 저온 및 콘덴싱 보일러에서 준비 손실은 평균 난방 배관망 온도에 관련됩니다. 
+
+
+    
+
+### **1.3.3. 보일러 정격 출력(Rated output) 산정**
+
+* 보일러 정격출력 ($\dot{Q}_{N,h}$) 보일러의 정격 출력을 산정하기 위해 첫 번째로 모든 연결된 열 소비기기의 최대 수요가 결정되어야 합니다. 동시 발생하는 수요에 따라 보일러의 정격 출력은 가장 큰 단일 수요 또는 동시 발생하는 수요의 합 중에서 결정됩니다.    
+
+- 난방 시스템의 보일러 정격 출력(\(\dot{Q}_{N,h}\)):   
+
+<div align="center">
+$$
+\dot{Q}_{N,h} = 1.3 \cdot \dot{Q}_{h,max}  \tag{1.3.3-1}
+$$
+</div>
+
+이미 열 생산기기가 설치된 기존 건물의 경우, 정격 출력은 설치된 기기의 값을 이용합니다. 설치된 기기 값을 알 수 없는 경우, 아래 식을 사용합니다. (1994년 이전 설치 시)
+
+<div align="center">
+$$
+\dot{Q}_{N,h} = 2.5 \cdot \dot{Q}_{h,\text{max}}  \tag{1.3.3-2}
+$$
+</div>
+
+> Where,  
+>
+> • $\dot{Q}_{h,max}$: 건물의 최대 열 부하 [kW]  
+
+* 동시 열 부하(난방, 급탕, 공조 등) 발생 시: 동시에 난방, 급탕, 환기, 공조 등의 여러 가지의 열 부하가 발생할 경우, 보일러의 최대 정격 출력은 동시에 요구되는 출력의 합 또는 우선 순위에 따른 순차 운전에서 요구되는 가장 큰 출력으로 결정됩니다.
+
+<div align="center">
+$$
+\dot{Q}_N = \max\left( \sum \dot{Q}_{N,\text{gleichzeitig}} , \dot{Q}_{\text{Vorrang}} \right)  \tag{1.3.3-3}
+$$
+</div>
+
+> Where,  
+>
+> • $\sum \dot{Q}_{N,gleichzeitig}$는 동시에 요구되는 출력의 합입니다. [kW]    
+> • $\dot{Q}_{Vorrang}$는 우선 순위에 따른 순차 운전에서 요구되는 가장 큰 출력 입니다. [kW]  
+
+    
+
+### **1.3.4. 운전 시간**
+
+건물 난방/급탕 요구량(\# 절)에서 야간감소/정지 또는 주말감소/정지가 고려되었다면, 보일러 운전에서도 동일하게 고려해야 합니다.
+
+* 난방 시스템의 운전 시간 설계: 분배 배관망 및 열 생산 과정의 열 손실 계산을 위해 야간이나 주말의 운전 감소/정지, 온도 저하, 지속 운전 방식을 고려하는 일일 운전 시간이 사용됩니다.  
+
+* 일일 설계 운전시간 \( t_{h,rL,T} \) 
+<div align="center">   
+   $$
+   t_{h,rL,T} = 24 - f_{L,NA} \cdot (24 - t_{h,op})  \tag{1.3.4-1}
+   $$
+</div>
+
+> Where,  
+>
+> • $f_{L,NA}$: 야간감소/정지에 대한 운전시간계수  
+> • $t_{h,op}$: 일일 난방 시간 [h]
+
+* 지속 운전: \( f_{L,NA} = 0 \)   
+* 야간 정지: \( f_{L,NA} = 1 \)   
+* 야간 감소:  
+<div align="center"> 
+   $$
+   f_{L,NA} = 1 - \frac{\theta_{NA,Grenz} - \theta_e}{\theta_{NA,Grenz} - \theta_{e,min}}  \tag{1.3.4-2}
+   $$
+</div>
+
+> Where,  
+>
+> • $\theta_{NA,Grenz}$: 야간 감소 한계 온도 $=10 ^{\circ}C$  
+> • $\theta_{e}$: 월 평균 외기 온도 [°C]  
+> • $\theta_{e,min}$: 일평균 설계 온도 [°C]  
+
+* 월별 설계 운전일 \( d_{h,rB} \)   
+<div align="center"> 
+   $$
+   d_{h,rB} = d_{mth} \cdot \left( \frac{365 - f_{L,WA} \cdot (365 - d_{Nutz,A})}{365} \right)  \tag{1.3.4-3}$$
+   $$
+</div> 
+
+> Where,  
+>
+> • $d_{mth}$: 월별 일수 (e.g. 3월 \- 31일, 4월 \- 30일)  
+> • $d_{Nutz,A}$: 연간 이용 일수기간 [d]  
+> • $f_{L,WA}$: 주말 운전 감소/정지 계수  
+
+* 지속 운전: \( f_{L,WA} = 0 \)   
+* 주말 정지: \( f_{L,WA} = 1 \)   
+* 주말 감소:    
+<div align="center"> 
+$$
+f_{L,WA} = 1 - \frac{\theta_{WA,Grenz} - \theta_e}{\theta_{WA,Grenz} - \theta_{e,min}}  \tag{1.3.4-4}
+$$
+</div> 
+
+> Where,  
+>
+> • $\theta_{WA,Grenz}$: 주말 감소 한계 온도 $=15^{\circ}C$  
+
+* 월별 계산 난방 운전시간 \( t_{h,rL} \)   
+
+<div align="center">
+$$
+t_{h,rL} = t_{h,rL,T} \cdot d_{h,rB}  \tag{1.3.4-5}
+$$
+</div>
+
+> Where,  
+>
+> • $t_{h,rL,T}$는 일일 설계 운전시간입니다. [h]  
+> • $d_{h,rB}$는 월별 설계 운전 일입니다. [d]  
+
+* 상이한 난방 배관망 운전 또는 난방 시스템 이외의 열 생산기기가 존재하거나 배관망에 다른 열 수요를 갖는 에너지원(냉동기, 공조장치, 온수 등)이 연결되어 있는 경우, 가장 오랜 시간 수요가 발생하는 에너지원의 운전시간을 적용합니다.
+
+* 월별 난방일 수 \( d_{h,mth}(d) \):   
+<div align="center">
+$$
+d_{h,mth} = \frac{t_{h}^*}{24}  \tag{1.3.4-6}
+$$
+</div>
+
+> Where,  
+>
+> • $t_{h}$는 월별 난방시간입니다. (용도프로필 참고) [h]
+
+* 월별 이용일 수 \( d_{Nutz,mth}(d) \):   
+<div align="center">
+$$
+d_{Nutz,mth} = \frac{d_{Nutz,A}}{365} \cdot d_{mth}  \tag{1.3.4-7}
+$$
+</div>
+
+> Where,  
+>
+> • $d_{Nutz,A}$는 연간 사용일 수 입니다. [d]  
+> • $d_{mth}$는 월별 일 수 입니다. [d]  
+
+* 일년 단위 산정치의 월별 분배: 난방 시스템 구성요소 중 에너지 요구량이 존 별 대차대조에 영향을 미치지 않는 요소(순환 펌프 등)는 일 년 단위로 계산하여도 무방합니다다 하다. 에너지 요구량을 월별로 비교해야 하는 경우, 일 년 요구량인 $W_{h,d,e,a}$ 로부터 월별 요구량 $W_{h,d,e,M}$ 를 계산합니다.   
+
+<div align="center">
+$$
+W_{h,d,e,M} = W_{h,d,e,a} \cdot \frac{ \beta_{h,d,M} \cdot t_{\text{Nutz,mth}} }{ \beta_{h,d,a} \cdot t_{h,op} \cdot d_{\text{Nutz,a}} }  \tag{1.3.4-8}
+$$
+</div>
+
+---  
+
+## **1.4. 열 손실 및 보조에너지 계산**
+
+### **1.4.1. 전달 과정의 열 손실**
+
+* 실내 난방 에너지 전달 과정의 열 손실($Q_{h,ce}$)과 열 전달 총 이용효율 ($\eta_{h,ce}$)은 아래와 같이 정의합니다.
+<div align="center"> $$
+Q_{h,ce} = \left( \frac{f_{Radiant} \cdot f_{int} \cdot f_{hydr}}{\eta_{h,ce}} - 1 \right) \cdot Q_{h,b}  \tag{1.4.1-1}
+$$
+</div>
+
+> Where,  
+>
+> • $Q_{h,ce}$는 난방 시스템의 제어 및 방출 열 손실로 주변 환경(예: 방, 구역, 지하실)으로의 손실입니다. (해당 월 기준) [kWh]  
+> • $f_{radiant}$는 복사 영향 계수입니다.  
+> • $f_{int}$는 간헐 운전 (특정 시간에 각 존의 온도 개별적으로 조절) 계수입니다.  
+> • $f_{hydr}$는 수력학적 균형 (hydraulic balance) 계수 입니다.  
+> • $\eta_{h,ce}$ 는 열 방출 총 이용 효율 입니다.  
+> • $Q_{h,b}$는 존의 에너지 요구량(Energy demand)입니다. [kWh]  
+
+* \( \eta_{h,\text{ce}} \): 실내 열전달 총 효율   
+
+<div align="center"> $$
+\eta_{h,\text{ce}} = \dfrac{1}{4 - (\eta_L + \eta_C + \eta_B)}  \tag{1.4.1-2}
+$$
+</div>
+
+> Where,  
+>
+> • $\eta_{L}$: 실내 공기온도의 수직 분포에 대한 효율  
+> • $\eta_{C}$: 실내 온도제어에 대한 효율  
+> • $\eta_{B}$: 외피 열손실에 대한 효율  
+>
+> 일반적인 상황에서 \(f_{Radiant}\)(\(h > 4m\) 인 대형 홀 공간에서 중요)와 \(f_{int}\)(실내 온도감소 고려)는 1로 설정합니다.    
+
+* 연간 열 손실 (\(Q_{h,ce,a}\)) 은 월별 계산한 열 손실의 합과 같습니다. 
+<div align="center">
+$$
+Q_{h,ce,a} = \sum Q_{h,ce}  \tag{1.4.1-3}
+$$
+</div>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>라디에이터 이용 효율</title>
+   <style>
+      table {
+         border-collapse: collapse;
+         font-size: 14px;
+         margin: 0 auto; /* 표 자체 가운데 정렬 */
+      }
+      th, td {
+         border: 1px solid black;
+         padding: 6px;
+         text-align: center;
+      }
+   </style>
+</head>
+
+<p>&lt;Table 1.4.1-4. 라디에이터의 부분 이용 효율 (실 높이 ≤ 4m)&gt;</p>
+
+<table>
+   <tr>
+      <th rowspan="2" colspan="2">매개변수</th>
+      <th colspan="4">이용 효율</th>
+   </tr>
+   <tr>
+      <th colspan="2"><i>&eta;<sub>L</sub></i></th>
+      <th><i>&eta;<sub>C</sub></i></th>
+      <th><i>&eta;<sub>B</sub></i></th>
+   </tr>
+   <tr>
+      <td rowspan="2">실내온도제어</td>
+      <td>제어 없음, 중앙에서 공급온도 제어</td>
+      <td colspan="2"></td>
+      <td>0.8</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>P-제어기 (2 K)</td>
+      <td colspan="2"></td>
+      <td>0.93</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td rowspan="2">초과온도 (θ<sub>i</sub> = 20℃)</td>
+      <td rowspan="2">42.5 K (예로 70/55)</td>
+      <td>&eta;<sub>L1</sub></td>
+      <td>&eta;<sub>L2</sub></td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>0.93</td>
+      <td></td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td rowspan="1">외부 벽체를 통한 열손실<br>(GF = 유리면)</td>
+      <td></td>
+      <td></td>
+      <td>0.95</td>
+      <td></td>
+      <td>1</td>
+   </tr>
+</table>
+
+</html>
+
+* 초과 온도와 외부 벽체를 통한 열손실이 복합적으로 영향을 미치는 경우, 평균 효율을 사용합니다. 
+
+* 예시) 외벽 측에 위치한 라디에이터, 초과 온도 42.5K, P-제어기 (2K)일 때  
+
+<div align="center">
+$$
+\eta_L = \frac{\eta_{L1} + \eta_{L2}}{2} = \frac{0.93 + 0.95}{2} = 0.94  \tag{1.4.1-5}
+$$
+</div>  
+  
+<div align="center">
+$$
+\eta_C = 0.93  \tag{1.4.1-6}
+$$
+</div>  
+  
+<div align="center">
+$$
+\eta_B = 1  \tag{1.4.1-7}
+$$
+</div>  
+  
+<div align="center">
+$$
+\eta_{h,\text{ce}} = \frac{1}{4 - (\eta_L + \eta_C + \eta_B)} = \frac{1}{4 - (0.94 + 0.93 + 1)} = \frac{1}{1.13} = 0.88  \tag{1.4.1-8}
+$$
+</div>  
+
+* 간헐 운전 계수: \(f_{int}\) = 0.97 (지속 운전의 경우, \(f_{int}\) = 1)   
+* 복사 영향 계수: \(f_{Radiant}\) = 1.0   
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>물 기반 난방 시스템의 효율</title>
+   <style>
+      table {
+         border-collapse: collapse;
+         font-size: 14px;
+         margin: 0 auto; /* 표 자체 가운데 정렬 */
+      }
+      th, td {
+         border: 1px solid black;
+         padding: 6px;
+         text-align: center;
+      }
+   </style>
+</head>
+
+<p>&lt;Table 1.4.1-9. 물 기반 난방 시스템의 효율 (실 높이 ≤ 4m)&gt;</p>
+
+<table>
+   <tr>
+      <th rowspan="2" colspan="2">매개변수</th>
+      <th colspan="4">부분이용 효율</th>
+   </tr>
+   <tr>
+      <th><i>&eta;<sub>L</sub></i></th>
+      <th><i>&eta;<sub>C</sub></i></th>
+      <th colspan="2"><i>&eta;<sub>B</sub></i></th>
+   </tr>
+   <tr>
+      <td rowspan="3">실내온도제어</td>
+      <td>열 매체: 물<br>제어 없음 (중앙 공급온도 제어)</td>
+      <td></td>
+      <td>0.78</td>
+      <td colspan="2"></td>
+   </tr>
+   <tr>
+      <td>PI-제어기</td>
+      <td></td>
+      <td>0.95</td>
+      <td colspan="2"></td>
+   </tr>
+   <tr>
+      <td>전기 난방<br>PI 제어기</td>
+      <td></td>
+      <td>0.93</td>
+      <td colspan="2"></td>
+   </tr>
+   <tr>
+      <td rowspan="4">시스템</td>
+      <td>바닥난방</td>
+      <td></td>
+      <td></td>
+      <td>&eta;<sub>B1</sub></td>
+      <td>&eta;<sub>B2</sub></td>
+   </tr>
+   <tr>
+      <td>습식</td>
+      <td>1</td>
+      <td></td>
+      <td>0.93</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>건식</td>
+      <td>1</td>
+      <td></td>
+      <td>0.96</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>건식 + 얇은 층</td>
+      <td>1</td>
+      <td></td>
+      <td>0.98</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td rowspan="1">설치 면을 통한 열 손실</td>
+      <td>최소 단열된 바닥 난방</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>0.95</td>
+   </tr>
+</table>
+</html>
+
+* 시스템과 설치 면을 통한 열 손실이 영향을 미치는 경우, 평균을 사용합니다.
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>공기 난방에 대한 이용 효율</title>
+   <style>
+      table {
+         border-collapse: collapse;
+         font-size: 14px;
+         margin: 0 auto; /* 표 자체 가운데 정렬 */
+      }
+      th, td {
+         border: 1px solid black;
+         padding: 6px;
+         text-align: center;
+      }
+   </style>
+</head>
+
+<p>&lt;Table 1.4.1-10. 공기 난방에 대한 이용 효율 (공조 장치) (실 높이 ≤ 4m)&gt;</p>
+
+<table>
+   <tr>
+      <th rowspan="2">시스템 구성</th>
+      <th rowspan="2">제어 매개변수</th>
+      <th colspan="2"><i>&eta;<sub>h,ce</sub></i></th>
+   </tr>
+   <tr>
+      <th>낮은 등급 제어<br>(On/Off)</th>
+      <th>높은 등급 제어<br>(P 제어)</th>
+   </tr>
+   <tr>
+      <td rowspan="3">급기 가열 백업<br>(추가 가열 유닛)</td>
+      <td>실내온도</td>
+      <td>0.82</td>
+      <td>0.87</td>
+   </tr>
+      <tr>
+      <td>실내온도<br>(급기 온도 다단 제어)</td>
+      <td>0.88</td>
+      <td>0.90</td>
+   </tr>
+   </tr>
+      <tr>
+      <td>배기 온도</td>
+      <td>0.81</td>
+      <td>0.85</td>
+   </tr>
+   <tr>
+      <td rowspan="1">순환 공기 가열<br>(인덕션 유닛, 팬코일 유닛)</td>
+      <td>실내온도</td>
+      <td>0.89</td>
+      <td>0.93</td>
+   </tr>
+   
+</table>
+</html>
+
+* 실 높이 4m 이상 공간에 대한 이용 효율 (대형 홀 건물): 아래 표
+
+<center>
+     <div><strong>Table 1.4.1-11. 4m ≤ 실 높이 ≤ 10m 공간에 대한 이용 효율</strong></div>
+     <img src="../../_tables/1.4.1_11.png" style="max-width: 80%;" alt="4m ≤ 실 높이 ≤ 10m 공간에 대한 이용 효율">
+</center>
+
+
+### **1.4.2. 열 전달 보조에너지**
+
+* 존으로 열을 전달하는 과정에서 제어기기, 팬, 펌프 등의 전력 소비를 보조에너지로 정의하며 보조에너지 소요량 ($Q_{h,ce,aux}$)은 아래와 같이 계산합니다. 
+
+<div align="center">$$
+Q_{h,ce,aux} = Q_C + Q_{V,P}  \tag{1.4.2-1}
+$$
+</div>
+
+> Where,  
+>
+> • $Q_{C}$ = 제어기기의 보조에너지 [kWh]  
+> • $Q_{V,P}$ = 팬, 펌프 등의 보조에너지 [kWh]  
+> 
+<div align="center">$$
+Q_C = P_C \cdot d_{mth} \cdot \frac{24 h/d}{1000 W/kW}  \tag{1.4.2-2}$$
+</div>  
+
+> Where,  
+>
+> • $P_{C}$ = 제어기기의 정격 전력 [W]  
+> 
+
+<div align="center">$$
+Q_{V,P} = (P_V \cdot n_V + P_P \cdot n_P) \cdot \frac{t_{h,rL}}{1000 W/kW}  \tag{1.4.2-3}$$
+</div>  
+
+> Where,  
+>
+> • \( n_V \) = 팬 개수  
+> • \( n_P \) = 펌프 개수  
+> • \( P_V \) = 팬 정격 전력 소비 [W]  
+> • \( P_P \) = 펌프의 정격 전력 소비 [W]  
+> • \( t_{h,rL} \) = 월별 계산 난방 운전시간 [h]  
+
+* 펌프의 정격 전력 소비 데이터가 없는 경우: (ECO2에서는 입력값으로 주어짐)  
+
+<div align="center">$$
+P_P = 50 \cdot \dot{Q}_{LH}^{0.08}  \tag{1.4.2-4}$$
+</div>
+
+> Where,  
+>
+> • \( \dot{Q}_{LH} \) = 공기가열 유닛(Heating coil)의 정격 전력 소비  
+
+* 제어기기, 팬, 펌프의 정격 전력 소비는 제품 사양을 참조하거나 아래 표의 값을 사용합니다.  
+* 팬/펌프의 운전 시간은 난방 시스템과 같다고 가정합니다.  
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>제어기기의 보조에너지 표준 값</title>
+   <style>
+      table {
+         border-collapse: collapse;
+         font-size: 14px;
+         margin: 0 auto; /* 표 자체 가운데 정렬 */
+      }
+      th, td {
+         border: 1px solid black;
+         padding: 6px;
+         text-align: center;
+      }
+   </style>
+</head>
+
+<p>&lt;Table 1.4.2-5. 제어기기의 보조에너지 표준 값&gt;</p>
+
+<table>
+   <tr>
+      <th colspan="2">매개변수</th>
+      <th>전력 (W) (구동 시)</th>
+   </tr>
+   <tr>
+      <td rowspan="3">P<sub>C</sub></td>
+      <td>전기모터 구동식 전기적 제어</td>
+      <td>0.1</td>
+   </tr>
+   <tr>
+      <td>전기열 구동식 전기적 제어</td>
+      <td>0.1</td>
+   </tr>
+   <tr>
+      <td>전자기 구동식 전기적 제어</td>
+      <td>0.1</td>
+   </tr>
+
+</table>
+
+<head>
+   <meta charset="UTF-8">
+   <title>급기 팬의 보조 에너지 표준 값</title>
+   <style>
+      table {
+         border-collapse: collapse;
+         font-size: 14px;
+         margin: 0 auto; /* 표 자체 가운데 정렬 */
+      }
+      th, td {
+         border: 1px solid black;
+         padding: 6px;
+         text-align: center;
+      }
+   </style>
+</head>
+
+<p>&lt;Table 1.4.2-6. 급기 팬의 보조 에너지 표준 값 (실 높이 ≤ 4m)&gt;</p>
+
+<table>
+   <tr>
+      <th colspan="2">매개변수</th>
+      <th>전력</th>
+   </tr>
+   <tr>
+      <td rowspan="4">P<sub>V</sub></td>
+      <td>팬 코일 유닛</td>
+      <td>10</td>
+   </tr>
+   <tr>
+      <td>전기 가열식 팬 코일 유닛</td>
+      <td>10</td>
+   </tr>
+   <tr>
+      <td>동적 방열식 축열 난방</td>
+      <td>12</td>
+   </tr>
+   <tr>
+      <td>지속 및 동적 방열식 축열 난방</td>
+      <td>12</td>
+   </tr>
+</table>
+
+<head>
+   <meta charset="UTF-8">
+   <title>Table 1.4.2-7. 팬 코일 유닛의 용량에 따른 성능 실례</title>
+   <style>
+      table {
+         border-collapse: collapse;
+         font-size: 14px;
+         margin: 0 auto; /* 표 자체 가운데 정렬 */
+      }
+      th, td {
+         border: 1px solid black;
+         padding: 6px;
+         text-align: center;
+      }
+   </style>
+</head>
+
+<p>&lt;Table 1.4.2-7. 팬 코일 유닛의 용량에 따른 성능 실례&gt;</p>
+
+<table>
+   <tr>
+      <th>구분</th>
+      <th>FC-200</th>
+      <th>FC-300</th>
+      <th>FC-400</th>
+      <th>FC-600</th>
+      <th>FC-800</th>
+   </tr>
+   <tr>
+      <td>P<sub>V</sub> (W)</td>
+      <td>25</td>
+      <td>35</td>
+      <td>45</td>
+      <td>65</td>
+      <td>90</td>
+   </tr>
+
+</table>
+</html>
+
+    
+### **1.4.3. 중앙 온수 난방 분배 배관망의 열 손실**
+
+* 중앙 온수 난방 시스템의 분배 과정에서 배관망의 열 손실 ($Q_{h,d}$)은 열 생산기기에서 생산된 온수가 각 존까지 배관망을 따라 이동하는 동안 주변으로의 열 손실입니다.
+
+<div align="center">
+$$
+Q_{h,d} = \sum \left[ U_i \cdot (\theta_{HK,m} - \theta_i) \cdot L_i \cdot t_{h,rL,i} \right]  \tag{1.4.3-1}
+$$
+</div>
+
+> Where,  
+>
+> • $U_{i}$ = 열관류율입니다. [$W/m\cdot K$]  
+> • $\vartheta_{HK,m}$는 평균 열매체 온도 입니다. [°C]  
+> • $\vartheta_i$는 복사 영향 계수입니다.  
+> • $t_{h,rL}$는 월별 설계 운전 시간입니다. [h]  
+
+공조난방 시스템에서 가열 유닛이 가열되는 경우, 평균 열매체 온도 (\(θ_{h}\))와 공조 시스템 운전 시간(\(t_{h,op}\))를 사용합니다.
+
+난방 시스템에 의해 흡수식 냉동기가 가열되는 경우, 평균 열매체 온도 (\(θ_{r,Nutz}\))와 시스템 운전시간(\(t_{c,op}\))를 사용합니다.
+
+* 비제어적 열획득(\(Q_{I,h,d}\)): 배관망이 존을 통과할 경우, 통과한 구간 $i$의 배관망에서 발생하는 열 손실은 존의 에너지 요구량 분석에서 비제어적 열 획득에 포함됩니다.
+
+<div align="center">$$
+Q_{I,h,d,i} = Q_{h,d,i}  \tag{1.4.3-2}$$
+</div>
+
+* 배관 길이(L) 산정: 배관 길이는 기본적으로 배관 도면을 바탕으로 산정합니다.
+* 배관망 주변 온도는 2.1.2.4에서 설정한 값을 적용하며, 없을 경우 아래 표에서 채택합니다.
+* 배관망은 V, S, A,의 3가지 범위로 구분해 구성합니다.
+* V는 생산기기로부터 주관까지의 수평 분배, S는 지관, A는 실내 방열기까지의 차단 가능한 말단 배관을 의미합니다.
+* \(L_{G}\), \(B_{G}\), \(h_{G}\), \(n_{G}\)는 각각 건물의 가장 긴 세로 길이, 넓이, 층 수, 층 높이입니다.
+   
+<center>
+    <div><strong>Table 1.4.3-3. 배관망에 대한 표준값</strong></div>
+    <img src="../../_tables/1.4.3_3.png" style="max-width: 100%;" alt="배관망에 대한 표준값">
+</center>
+
+| **이중배관 난방** | | | | | |
+| 외부에 놓인 지관의 경우 배관길이 | L | m | $2\cdot L_{G}+0.01625\cdot L_{G}\cdot B_{G}^{2}$ | $0.025\cdot L_{G}\cdot B_{G}\cdot h_{G}\cdot n_{G}$ | $0.55\cdot L_{G}\cdot B_{G}\cdot n_{G}$ |
+| 내부에 놓인 지관의 경우 배관길이 | L | m | $2\cdot L_{G}+0.0325\cdot L_{G}\cdot B_{G}+6$ | $0.025\cdot L_{G}\cdot B_{G}\cdot h_{G}\cdot n_{G}$ | $0.55\cdot L_{G}\cdot B_{G}\cdot n_{G}$ |
+| **단일배관 난방** | | | | | |
+| 내부에 놓인 지관의 경우 배관길이 | L | m | $2\cdot L_{G}+0.0325\cdot L_{G}\cdot B_{G}+6$ | $0.025\cdot L_{G}\cdot B_{G}\cdot h_{G}\cdot n_{G}+ 2\cdot(L_{G}+B_{G})\cdot n_{G}$ | $0.1\cdot L_{G}\cdot B_{G}\cdot n_{G}$ |
+
+* 배관 열관류율(U): 배관의 단열재 사양에 따라 결정되며, 정보가 없는 경우 건물의 준공 연도와 배관 위치를 기준으로 아래 표의 표준값을 사용합니다.
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>배관의 열관류율 표</title>
+   <style>
+      table {
+         border-collapse: collapse;
+         margin: auto;
+         width: 90%;
+      }
+      th, td {
+         border: 1px solid black;
+         padding: 6px 10px;
+         text-align: center;
+         vertical-align: middle;
+      }
+      th {
+         background-color: #f5f5f5;
+      }
+   </style>
+</head>
+
+<h5>&lt;Table 1.4.3-4. 배관의 열관류율 \( U_i \) 표준값&gt;</h5>
+
+<table>
+   <tr>
+      <th rowspan="2">건물 준공연도</th>
+      <th rowspan="1">분배</th>
+      <th colspan="2">외부 설치된 수직배관</th>
+      <th colspan="2">내부 설치된 수직 배관</th>
+   </tr>
+   <tr>
+      <td>V</td><td>S</td><td>A</td><td>S</td><td>A</td>
+   </tr>
+   <tr>
+      <td>1995 이후</td>
+      <td>0.2</td><td>0.255</td><td>0.255</td><td>0.255</td><td>0.255</td>
+   </tr>
+   <tr>
+      <td>1980~1995</td>
+      <td>0.2</td><td>0.4</td><td>0.4</td><td>0.3</td><td>0.4</td>
+   </tr>
+   <tr>
+      <td>1980 이전</td>
+      <td>0.4</td><td>0.4</td><td>0.4</td><td>0.4</td><td>0.4</td>
+   </tr>
+
+   <tr><th colspan="6">비단열 배관</th></tr>
+
+   <tr>
+      <td>\( A_{NGF} \leq 200 \, \text{m}^2 \)</td>
+      <td>1</td><td>1</td><td>1</td><td>1</td><td>1</td>
+   </tr>
+   <tr>
+      <td>\( 200 \, \text{m}^2 \lt A_{NGF} \leq 500 \, \text{m}^2 \)</td>
+      <td>2</td><td>2</td><td>2</td><td>2</td><td>2</td>
+   </tr>
+   <tr>
+      <td>\( A_{NGF} > 500 \, \text{m}^2 \)</td>
+      <td>3</td><td>3</td><td>3</td><td>3</td><td>3</td>
+   </tr>
+   <tr>
+      <td>외벽 내 설치</td>
+      <td></td><td></td>
+      <td>전체 열공급 / <br>실내 이용 가능한 열공급</td>
+      <td></td><td></td>
+   </tr>
+    <tr>
+      <td>외벽 비단열</td>
+      <td></td><td></td>
+      <td>1.35/0.8</td>
+      <td></td><td></td>
+   </tr>
+    <tr>
+      <td>외벽</td>
+      <td></td><td></td>
+      <td>1/0.9</td>
+      <td></td><td></td>
+   </tr>
+    <tr>
+      <td>외부단열</td>
+      <td></td><td></td>
+      <td></td>
+      <td></td><td></td>
+   </tr>
+   <tr>
+      <td>\( \text{외벽 } U = 0.4 \, \text{W/m}^2\cdot \text{K} \)</td>
+      <td></td><td></td>
+      <td>0.785/0.55</td>
+      <td></td><td></td>
+   </tr>
+</table>
+
+</html>
+
+    
+### **1.4.4. 배관망 순환펌프 보조에너지**
+
+* 분배 배관망 보조에너지 ($Q_{h,d,aux}$) 산정: 순환 펌프의 에너지 소비량은 분배 배관망의 필요 수력학적 에너지 요구량과 히트펌프 운전에 대한 소비지수를 근거로 산정합니다.
+
+<div align="center">$$
+Q_{h,d,aux} = W_{h,d,hydr} \cdot e_{h,d,aux}  \tag{1.4.4-1}$$
+</div>
+
+> Where,  
+>
+> • $W_{h,d,hydr}$ = 수력학적 에너지 요구량  
+> • $e_{h,d,aux}$ = 히트펌프 운전에 대한 소비지수  
+> 
+<div align="center">$$
+W_{h,d,hydr} = \frac{P_{\text{pump}}}{1000} \cdot \beta_{h,d} \cdot t_h  \tag{1.4.4-2}$$
+</div>
+
+<div align="center">$$
+e_{h,d,aux} = C_{P1} + C_{P2} \cdot \beta_{h,d}^{-1}  \tag{1.4.4-3}$$
+</div>
+
+* ECO2에서는 펌프의 정격 성능($P_{pump}$)을 입력값으로 받아 분배 배관망 보조에너지를 산정합니다.
+
+<div align="center">$$
+Q_{h,d,aux} = \frac{P_{\text{pump}}}{1000} \cdot \beta_{h,d} \cdot t_h \cdot \left( C_{P1} + C_{P2} \cdot \beta_{h,d}^{-1} \right)  \tag{1.4.4-4}$$
+</div>
+
+> Where,  
+>
+> • $W_{h,d,hydr}$는 수력학적 에너지 요구량입니다. (해당 월 기준) [kWh]  
+> • $e_{h,d,aux}$는 순환펌프 운전에 대한 소비지수입니다.  
+> • $P_{pump}$는 펌프의 정격 성능입니다. [W]  
+> • $\beta_{h,d}$는 평균 분배 부하율입니다.  
+> • $t_{h}$는 해당 월의 난방 운전시간입니다. [h]  
+> • $\vartheta_{HK,m}$는 평균 열매체 온도 입니다. [°C]  
+> • $\vartheta_i$는 복사 영향 계수입니다.  
+> • $t_{h,rL}$는 월별 설계 운전 시간입니다. [h]  
+> • $C_{P1}, C_{P2}$는 보조에너지 계산을 위한 상수입니다. (**Table 1.4.4-5**)  
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>펌프 제어 계수 표</title>
+   <style>
+      table {
+         border-collapse: collapse;
+         margin: auto;
+         width: 70%;
+      }
+      th, td {
+         border: 1px solid black;
+         padding: 6px 10px;
+         text-align: center;
+         vertical-align: middle;
+      }
+      th {
+         background-color: #f5f5f5;
+      }
+   </style>
+</head>
+
+<h5>&lt;Table 1.4.4-5. 펌프 제어에 따른 \( C_{P1}, C_{P2} \)&gt;</h5>
+
+<table>
+   <tr>
+      <th>펌프 제어</th>
+      <th>\( C_{P1} \)</th>
+      <th>\( C_{P2} \)</th>
+   </tr>
+   <tr>
+      <td>제어 안함</td>
+      <td>0.25</td>
+      <td>0.75</td>
+   </tr>
+   <tr>
+      <td>\( \Delta p_{\text{const}} \)</td>
+      <td>0.75</td>
+      <td>0.25</td>
+   </tr>
+   <tr>
+      <td>\( \Delta p_{\text{variable}} \)</td>
+      <td>0.9</td>
+      <td>0.1</td>
+   </tr>
+</table>
+</html>
+
+* 간헐적 운전 시 펌프 보조에너지: 시스템이 야간/주말에 감소/정지 같은 간헐적 운전할 경우 펌프 에너지 소비량 또한 시간 비율을 반영해야 합니다.   
+
+<div align="center">
+$$
+Q_{h,d,aux} = W_{h,d,aux} \cdot e_{h,d,aux} \cdot \frac{1.03 \cdot t_{h,rL} + f_{P,A} \cdot (t_h - t_{h,rL})}{t_h}  \tag{1.4.4-6}
+$$
+</div> 
+
+> Where,  
+>
+> • $Q_{h,d,aux}$는 펌프의 전기 에너지 소요량입니다. (해당 월 기준) [kWh]  
+> • $W_{h,d,hydr}$는 펌프 수력학적 에너지 요구량입니다. (해당 월 기준) [kWh]  
+> • $e_{h,d,aux}$는 순환펌프 운전에 대한 소비지수입니다.  
+> • $t_{h,rL}$는 월별 설계 난방 운전시간입니다. [h]  
+> • $f_{P,A}$는 펌프 감소/정지 운전 보정 계수입니다.  
+> • $t_{h}$는 해당 월의 난방 운전시간입니다. [h]  
