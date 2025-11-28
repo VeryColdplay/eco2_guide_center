@@ -1334,7 +1334,7 @@ Q_{h,s,aux} = \left( \frac{P_{\text{Pump}}}{1000 W/kW} \right) \cdot t_P  \tag{1
 > • $t_{P}$는 펌프의 운전 시간입니다. (해당 월 기준) [h]  
 
 <div align="center">$$
-t_{P} = \beta_{h,s}\cdot 24 [h/d]\cdot d_{h,mth} \text{ (열 생산기기와 동시 가동된다고 가정할 경우)}  \tag{1.4.5-5}$$
+t_{P} = \beta_{h,s}\cdot 24 [h/d]\cdot d_{h,mth} \text{ (열 생산기기와 동시 가동된다고 가정할 경우)}  \tag{1.4.5-5}$$</div>
 
 > Where,  
 >
@@ -1676,10 +1676,10 @@ P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}  \tag{1.4.6.1-27}$$
 </div>
 
 
-#### **1.4.7. 분산형 연료 연소식 시스템 (Decentralized fuel-fired systems)**
+### **1.4.7. 분산형 연료 연소식 시스템 (Decentralized fuel-fired systems)**
 * 분산형의 경우 에너지 공급, 제어 및 배출, 분배 및 생산에 필요한 에너지들은 하나의 계수로 고려되어 열 생산기기의 에너지 소요량 ($Q_{h,f}$)을 계산합니다.
 
-##### **1.4.7.1. 실내 가스히터**
+#### **1.4.7.1. 실내 가스히터**
 
 * 굴뚝 연계식 (1985년 이전):
 <div align="center">$$Q_{h,f}=1.4\cdot Q_{h,b} \text{ (월간)}\tag{1.4.7.1-1}$$</div>
@@ -1690,14 +1690,14 @@ P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}  \tag{1.4.6.1-27}$$
 * 외벽-기기 (1985년 이후):
 <div align="center">$$Q_{h,f}=1.40\cdot Q_{h,b} \text{ (월간)}\tag{1.4.7.1-4}$$</div>
 
-##### **1.4.7.2. 증발버너 기름연소난로**
+#### **1.4.7.2. 증발버너 기름연소난로**
 
 * 1985년 이전:
 <div align="center">$$Q_{h,f}=1.4\cdot Q_{h,b} \text{ (월간)}\tag{1.4.7.2-1}$$</div>
 * 1985년 이후:
 <div align="center">$$Q_{h,f}=1.34\cdot Q_{h,b} \text{ (월간)}\tag{1.4.7.2-2}$$</div>
 
-##### **1.4.7.3. 홀 난방기**
+#### **1.4.7.3. 홀 난방기**
 
 * 복사열 파이프 (radiant tube heater), 분산형 대류 공기 난방기 (decentralized convection air heater):
 <div align="center">$$Q_{h,f}=(1-f)\cdot Q_{h,b}\tag{1.4.7.3-1}$$</div>
@@ -1721,7 +1721,7 @@ P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}  \tag{1.4.6.1-27}$$
 > • $\vartheta_{e}:$ 평균 월간 외기 온도 [$^{\circ} C$]  
 > • $t_{h,rL}:$ 월별 설계 운전 시간 [h]  
 
-##### **1.4.7.4. 전기 보일러**
+#### **1.4.7.4. 전기 보일러**
 
 * 개별 생산식의 저장 및 생산 열 손실:
 <div align="center">$$Q_{h,s}+Q_{h,g}=0.11\cdot Q_{h,outg} \text{ (월간) [kWh]}\tag{1.4.7.4-2}$$</div>
@@ -1729,7 +1729,7 @@ P_{aux,pl} = 0.015 \cdot \dot{Q}_N^{0.48}  \tag{1.4.6.1-27}$$
 <div align="center">$$Q_{h,s}+Q_{h,g}=0.09\cdot Q_{h,outg} \text{ (월간) [kWh]}\tag{1.4.7.4-3}$$ </div>
      
 
-##### **1.4.7.5. 원/근거리 지역난방**
+#### **1.4.7.5. 원/근거리 지역난방**
 
 * 지역난방 시 건물 기계실에서의 연간 열 생산손실 ($Q_{h,g,DS}$): 
 <div align="center">$$Q_{h,g,DS}=H_{DS}\cdot(\theta_{DS}-\theta_{i})\tag{1.4.7.5-1}$$</div>  
@@ -1739,13 +1739,13 @@ $$\theta_{DS}=D_{DS}\cdot\theta_{prim,DS}+(1-D_{DS})\cdot\theta_{sek,DS}\tag{1.4
 
 > Where,  
 >
-> • $Q_{h,g,DS}:$ 지역난방 시 기계실에서의 연간 열 생산 손실 [kWh/a]
-> • $H_{DS}$: 지역난방 계수 $[kWh/K\cdot a]$
-> • $B_{DS}$: 기계실 단열 등급 및 지역난방 유형에 따른 계수
-> • $\Phi_{DS}$: 기계실의 정격 출력 ($=\dot{Q}_{N})$ $[kW]$
-> • $D_{DS}$: 1차 측 온도 및 지역난방 유형에 따른 계수
-> • $\theta_{prim,DS}$: 지역난방 1차(primary) 측 평균 온도 $[^{\circ}C]$
-> • $\theta_{sek,DS}$: 지역난방 2차(secondary) 측 평균 온도 $[^{\circ}C]$
+> • $Q_{h,g,DS}:$ 지역난방 시 기계실에서의 연간 열 생산 손실 [kWh/a]  
+> • $H_{DS}$: 지역난방 계수 $[kWh/K\cdot a]$  
+> • $B_{DS}$: 기계실 단열 등급 및 지역난방 유형에 따른 계수  
+> • $\Phi_{DS}$: 기계실의 정격 출력 ($=\dot{Q}_{N})$ $[kW]$  
+> • $D_{DS}$: 1차 측 온도 및 지역난방 유형에 따른 계수  
+> • $\theta_{prim,DS}$: 지역난방 1차(primary) 측 평균 온도 $[^{\circ}C]$  
+> • $\theta_{sek,DS}$: 지역난방 2차(secondary) 측 평균 온도 $[^{\circ}C]$  
 
 
 <center>

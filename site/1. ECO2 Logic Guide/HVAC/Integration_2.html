@@ -1,0 +1,1157 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://verycoldplay.github.io/eco2_guide_center/1.%20ECO2%20Logic%20Guide/HVAC/Integration_2.html" rel="canonical"/>
+<link href="Integration_1.html" rel="prev"/>
+<link href="../Energy_use/Heating_system_1.html" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.15" name="generator"/>
+<title>공조처리 (2) - ECO2 Guide Center</title>
+<link href="../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../assets/pretendard.css" rel="stylesheet"/>
+<link href="../../assets/custom.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#1-2">
+          콘텐츠로 이동
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="상단/헤더" class="md-header__inner md-grid">
+<a aria-label="ECO2 Guide Center" class="md-header__button md-logo" data-md-component="logo" href="../../index.html" title="ECO2 Guide Center">
+<img alt="logo" src="../../assets/ECO2_icon.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ECO2 Guide Center
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              공조처리 (2)
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="검색" class="md-search__options">
+<button aria-label="지우기" class="md-search__icon md-icon" tabindex="-1" title="지우기" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            검색 초기화
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="네비게이션" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ECO2 Guide Center" class="md-nav__button md-logo" data-md-component="logo" href="../../index.html" title="ECO2 Guide Center">
+<img alt="logo" src="../../assets/ECO2_icon.png"/>
+</a>
+    ECO2 Guide Center
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../index.html">
+<span class="md-ellipsis">
+    Welcome
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    ECO2 Logic Guide
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            ECO2 Logic Guide
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    개요
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            개요
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../a/index.html">
+<span class="md-ellipsis">
+    계산 절차
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../a/Monthly_method.html">
+<span class="md-ellipsis">
+    월별 분석방식(YE)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../a/Zoning.html">
+<span class="md-ellipsis">
+    건물 조닝(SY)
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    에너지요구량
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            에너지요구량
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Energy_demand/Heat_gain_loss.html">
+<span class="md-ellipsis">
+    1. 열획득과 열손실
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Energy_demand/Cooling_heating_energy_demand.html">
+<span class="md-ellipsis">
+    2. 냉방 및 난방 에너지요구량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Energy_demand/Value.html">
+<span class="md-ellipsis">
+    3. 개별 값 설정(YE)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Energy_demand/Lighting_energy_demand.html">
+<span class="md-ellipsis">
+    4. 조명 에너지요구량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Energy_demand/Hot_water.html">
+<span class="md-ellipsis">
+    5. 급탕 에너지요구량
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    공조처리
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            공조처리
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="Integration_1.html">
+<span class="md-ellipsis">
+    공조처리 (1)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    공조처리 (2)
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="Integration_2.html">
+<span class="md-ellipsis">
+    공조처리 (2)
+    
+  </span>
+</a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nomenclature">
+<span class="md-ellipsis">
+      Nomenclature
+    </span>
+</a>
+<nav aria-label="Nomenclature" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#symbols">
+<span class="md-ellipsis">
+      Symbols
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#subscripts">
+<span class="md-ellipsis">
+      Subscripts
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+<span class="md-ellipsis">
+    에너지소요량
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_4">
+<span class="md-nav__icon md-icon"></span>
+            에너지소요량
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Energy_use/Heating_system_1.html">
+<span class="md-ellipsis">
+    1. 난방 에너지소요량 (1)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Energy_use/Heating_system_2.html">
+<span class="md-ellipsis">
+    1. 난방 에너지소요량 (2)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Energy_use/Cooling_system.html">
+<span class="md-ellipsis">
+    2. 냉방 에너지소요량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Energy_use/Hot_water_system.html">
+<span class="md-ellipsis">
+    3. 급탕 에너지소요량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Energy_use/Lighting_system.html">
+<span class="md-ellipsis">
+    4. 조명 에너지소요량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Energy_use/Ventilation_Humidification_system.html">
+<span class="md-ellipsis">
+    5. 환기 &amp; 가습 에너지소요량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Energy_use/CHP.html">
+<span class="md-ellipsis">
+    6. 열병합 에너지소요량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Energy_use/Primary_energy_demand.html">
+<span class="md-ellipsis">
+    7. 1차에너지소요량 계산
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Energy_use/Annex_A_Table.html">
+<span class="md-ellipsis">
+    Annex A Table
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+<span class="md-ellipsis">
+    신재생에너지
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_5">
+<span class="md-nav__icon md-icon"></span>
+            신재생에너지
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Renewable_energy_generation/S_thermal.html">
+<span class="md-ellipsis">
+    1. 태양열 에너지생산량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Renewable_energy_generation/PV.html">
+<span class="md-ellipsis">
+    2. 태양광 에너지생산량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Renewable_energy_generation/GH_thermal.html">
+<span class="md-ellipsis">
+    3. 지열 및 수열 에너지생산량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Renewable_energy_generation/Wind.html">
+<span class="md-ellipsis">
+    4. 풍력 에너지생산량
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Renewable_energy_generation/Cell.html">
+<span class="md-ellipsis">
+    5. 연료전지
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    ECO2 User Guide
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            ECO2 User Guide
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/index.html">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/00_main_page.html">
+<span class="md-ellipsis">
+    Program Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/01_building_info.html">
+<span class="md-ellipsis">
+    Building Info
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/02_input_zone.html">
+<span class="md-ellipsis">
+    입력존
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/03_input_surface.html">
+<span class="md-ellipsis">
+    입력면
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/04_hvac_processing.html">
+<span class="md-ellipsis">
+    공조처리
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/05_heating_equip.html">
+<span class="md-ellipsis">
+    난방기기
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/06_heating_supply.html">
+<span class="md-ellipsis">
+    난방공급시스템
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/07_heating_distribution.html">
+<span class="md-ellipsis">
+    난방분배시스템
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/08_cooling_equip.html">
+<span class="md-ellipsis">
+    Cooling Equipment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/09_cooling_distribution.html">
+<span class="md-ellipsis">
+    냉방분배시스템
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/10_renewable_chp.html">
+<span class="md-ellipsis">
+    신재생 및 열병합
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/11_thermal_transmittance.html">
+<span class="md-ellipsis">
+    열관류율
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20ECO2%20User%20Guide/12_montly_energy_use.html">
+<span class="md-ellipsis">
+    월별 에너지 사용량
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    ECO2 Assessment Guide
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            ECO2 Assessment Guide
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3.%20ECO2%20Assessment%20Guide/index.html">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Reference
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../4.%20Reference/Logic_Equations.html">
+<span class="md-ellipsis">
+    Logic Equations (수식 모음)
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nomenclature">
+<span class="md-ellipsis">
+      Nomenclature
+    </span>
+</a>
+<nav aria-label="Nomenclature" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#symbols">
+<span class="md-ellipsis">
+      Symbols
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#subscripts">
+<span class="md-ellipsis">
+      Subscripts
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<div style="text-align: right; font-size: 0.9em; color: #666; margin-bottom: -1em;">
+</div>
+<h1 id="1-2">1. 공조 처리(2)<a class="headerlink" href="#1-2" title="Permanent link">¶</a></h1>
+<h2 id="nomenclature">Nomenclature<a class="headerlink" href="#nomenclature" title="Permanent link">¶</a></h2>
+<h3 id="symbols">Symbols<a class="headerlink" href="#symbols" title="Permanent link">¶</a></h3>
+<table class="nomenclature">
+<thead style="background:#f5f7fa;">
+<tr><th>Symbol</th><th>Description</th><th>Unit</th></tr>
+</thead>
+<tbody>
+<tr><td>\(c_{p,L}\)</td><td>공기 비열 (Specific heat of air)</td><td>kJ/kg·K</td></tr>
+<tr><td>d</td><td>일수 (Days)</td><td>d</td></tr>
+<tr><td>\(f_p\)</td><td>압력상관비계수 (Pressure ratio factor)</td><td>-</td></tr>
+<tr><td>h</td><td>엔탈피 (Enthalpy)</td><td>kJ/kg</td></tr>
+<tr><td>P</td><td>(팬) 소비전력 (Power consumption)</td><td>W</td></tr>
+<tr><td>p</td><td>압력 (Pressure)</td><td>Pa</td></tr>
+<tr><td>\(p_{S}\)</td><td>포화증기압 (Saturation vapor pressure)</td><td>Pa</td></tr>
+<tr><td>Q</td><td>에너지 (Energy)</td><td>kWh</td></tr>
+<tr><td>q</td><td>환산된 에너지요구량 (Calculated energy need per volume)</td><td>kWh/(m³/h)</td></tr>
+<tr><td>R</td><td>기기저항 (Flow resistance)</td><td>-</td></tr>
+<tr><td>t</td><td>시간 (Time)</td><td>h</td></tr>
+<tr><td>u</td><td>리턴공기 혼합비율 (Recirculated-air fraction)</td><td>-</td></tr>
+<tr><td>x</td><td>절대습도 (Humidity ratio)</td><td>g/kg</td></tr>
+<tr><td>\(\Delta\)</td><td>차이 (Difference)</td><td>-</td></tr>
+<tr><td>\(\dot{m}\)</td><td>질량유량 (Mass flow rate)</td><td>kg/s</td></tr>
+<tr><td>\(\dot{Q}\)</td><td>성능, 부하, 출력 (Power, Load, Output)</td><td>kW</td></tr>
+<tr><td>\(\dot{V}\)</td><td>풍량 (Volume flow rate)</td><td>m³/h</td></tr>
+<tr><td>\(\eta\)</td><td>(시스템) 총 효율 (Total efficiency)</td><td>-</td></tr>
+<tr><td>\(\Phi\)</td><td>열회수율 (Heat recovery rate)</td><td>-</td></tr>
+<tr><td>\(\rho_L\)</td><td>공기 밀도 (Density of air)</td><td>kg/m³</td></tr>
+<tr><td>\(\Phi_{WRG}\)</td><td>열회수율 (Heat recovery index)</td><td>-</td></tr>
+<tr><td>\(\vartheta\)</td><td>온도 (Temperature)</td><td>°C</td></tr>
+</tbody>
+</table>
+<h3 id="subscripts">Subscripts<a class="headerlink" href="#subscripts" title="Permanent link">¶</a></h3>
+<table class="nomenclature">
+<thead style="background:#f5f7fa;">
+<tr>
+<th>Subscript</th><th>Description</th><th>Subscript</th><th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>*</td><td>설계 조건 (Design point)</td><td>AB, ABL</td><td>배기 (Exhaust air)</td></tr>
+<tr><td>AU, AUL</td><td>외기 (Outdoor air)</td><td>b</td><td>요구량 (Energy need)</td></tr>
+<tr><td>B</td><td>(가습) (Humidifying)</td><td>c</td><td>냉방 (Cooling)</td></tr>
+<tr><td>C</td><td>냉열 (Cooling)</td><td>E</td><td>(전기) 에너지 (Electrical energy)</td></tr>
+<tr><td>g</td><td>(조닝) 경계 (Boundary for zoning)</td><td>H</td><td>가열 (Heating)</td></tr>
+<tr><td>i</td><td>실내 (Indoor)</td><td>j</td><td>부분부하 상태 (Partial load state)</td></tr>
+<tr><td>konst</td><td>고정 (Constant)</td><td>L</td><td>공기 (Air)</td></tr>
+<tr><td>m</td><td>월별 (Monthly)</td><td>max</td><td>최대 (Maximum)</td></tr>
+<tr><td>mech</td><td>기계환기 (Mechanical ventilation)</td><td>o</td><td>상위 (Upper)</td></tr>
+<tr><td>op</td><td>주중 (Weekday / Operation)</td><td>RA</td><td>실내공기 (Room air)</td></tr>
+<tr><td>So</td><td>여름 (Summer)</td><td>soll</td><td>설정 (Setpoint)</td></tr>
+<tr><td>st</td><td>증기 (Steam, humidification)</td><td>t</td><td>(엔탈피 임계값, 온도 기반) (Temperature-based)</td></tr>
+<tr><td>u</td><td>하위경계 (Lower bound)</td><td>V</td><td>환기, 송풍 (Ventilation, Fan)</td></tr>
+<tr><td>W</td><td>수증기 (Water vapor)</td><td>we</td><td>주말 (Weekend)</td></tr>
+<tr><td>Wi</td><td>겨울 (Winter)</td><td>WRG</td><td>열회수기 (Heat recovery unit)</td></tr>
+<tr><td>x</td><td>(엔탈피 임계값, 습도 기반) (Humidity-based)</td><td>ZU, ZUL</td><td>급기 (Supply air)</td></tr>
+</tbody>
+</table>
+<hr/>
+<h1 id="3">3. 공조기에서 가열, 냉각, 가습, 제습을 위한 에너지요구량<a class="headerlink" href="#3" title="Permanent link">¶</a></h1>
+<h2 id="31">3.1. 공조처리<a class="headerlink" href="#31" title="Permanent link">¶</a></h2>
+<p>공조처리는 3단계로 구성됩니다. 먼저 1단계에서, 습공기선도 조닝을 수행합니다. 2단계에서, 기상 데이터 분석을 하여, 각 습공기선도 존에 대한 평균 외기 조건과 연간 시간을 계산합니다. 3단계에서 풍량과 엔탈피/절대습도 차로 에너지요구량을 계산합니다.</p>
+<center>
+<div><strong>Figure 3.1-1. 공조처리에 필요한 요구량의 계산 절차</strong></div>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://verycoldplay.github.io/eco2_guide_center/_images/3.1_1.png"><img alt="공조 시스템에 유형에 따른 급기 온도 차 표준값" src="https://verycoldplay.github.io/eco2_guide_center/_images/3.1_1.png" style="max-width: 80%;"/></a>
+</center>
+<center>
+<div><strong>Figure 3.1-2. CAV 시스템의 개요</strong></div>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://verycoldplay.github.io/eco2_guide_center/_images/3.1_2.png"><img alt="공조 시스템에 유형에 따른 급기 온도 차 표준값" src="https://verycoldplay.github.io/eco2_guide_center/_images/3.1_2.png" style="max-width: 80%;"/></a>
+</center>
+<ul>
+<li>Figure 3.1-3.은 AU1(공조기)에서의 공기 상태변화를 h-x diagram에 예시적으로 나타낸 것입니다.</li>
+</ul>
+<center>
+<div><strong>Figure 3.1-3. AU1(열회수 및 리턴공기 혼합 후의 공기상태)의 상태변화</strong></div>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://verycoldplay.github.io/eco2_guide_center/_images/3.1_3.png"><img alt="공조 시스템에 유형에 따른 급기 온도 차 표준값" src="https://verycoldplay.github.io/eco2_guide_center/_images/3.1_3.png" style="max-width: 80%;"/></a>
+</center>
+<h3 id="311-h-x-diagram">3.1.1. 습공기선도 (h-x diagram) 조닝<a class="headerlink" href="#311-h-x-diagram" title="Permanent link">¶</a></h3>
+<ul>
+<li>실내공기의 상태는 습공기 선도에 따라서 아래 두 식으로 제시됩니다.
+$$
+\vartheta_{RA,u} \leq \vartheta_{RA} \leq \vartheta_{RA,o} \tag{3.1-1}
+$$</li>
+</ul>
+<div class="arithmatex">\[
+x_{RA,u} \leq x_{RA} \leq x_{RA,o} \tag{3.1-2}
+\]</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(\vartheta_{RA,u}:\)</span> 실내온도의 하한선 [<span class="arithmatex">\(^\circ C\)</span>]<br/>
+• <span class="arithmatex">\(\vartheta_{RA,o}:\)</span> 실내온도의 상한선 [<span class="arithmatex">\(^\circ C\)</span>]<br/>
+• <span class="arithmatex">\(\vartheta_{RA}:\)</span> 실내온도 [<span class="arithmatex">\(^\circ C\)</span>]<br/>
+• <span class="arithmatex">\(x_{RA,u}:\)</span> 실내 절대습도의 하한선 [g/kg]<br/>
+• <span class="arithmatex">\(x_{RA,o}:\)</span> 실내 절대습도의 상한선 [g/kg]<br/>
+• <span class="arithmatex">\(x_{RA}:\)</span> 실내 절대습도 [g/kg]  </p>
+</blockquote>
+<ul>
+<li>다양한 HVAC 시스템 유형과 가동 모드를 비교하기 위해서는 실내 공기 온도를 고려해야 합니다. HVAC과 천장 복사 패널의 경우처럼 서로 다른 복사 효과를 가진 시스템들의 경우, 복사 효과가 고려되어야 합니다.</li>
+<li>
+<p>복사 효과가 없는 시스템의 추가적인 에너지 비용은 실내 공기 온도를 <span class="arithmatex">\(\Delta\theta_{L}\)</span> 만큼 난방 시 상향, 냉방 시 하향하는 방식으로 고려가 가능합니다. </p>
+</li>
+<li>
+<p>실내 엔탈피 및 습도 밸런스로부터 실내로 공급되는 급기 절대습도 및 엔탈피 상태에 대한 아래 제한 조건이 결정됩니다.</p>
+</li>
+</ul>
+<div align="center">$$
+x_{ZU,u} = x_{RA,u} + \frac{\dot{m}_{11,W}}{\dot{m}_{11,L}} &lt; x_{ZU} &lt; x_{RA,o} + \frac{\dot{m}_{11,W}}{\dot{m}_{11,L}} = x_{ZU,o} \tag{3.1-3}
+$$</div>
+<div class="arithmatex">\[
+\vartheta_{ZU,u} = \vartheta_{RA,u} + \frac{\dot{Q}_{12}}{\dot{m}_{12,L} c_{p,L}} &lt; \vartheta_{ZU} &lt; \vartheta_{RA,o} + \frac{\dot{Q}_{12}}{\dot{m}_{12,L} c_{p,L}} = \vartheta_{ZU,o} \tag{3.1-4}
+\]</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(\dot{m}_{11,W}:\)</span> 공조 처리에 필요한 수증기 질량유량 [kg/h]<br/>
+• <span class="arithmatex">\(\dot{m}_{11,L}:\)</span> 공조 처리에 필요한 공기의 질량유량 [kg/h]<br/>
+• <span class="arithmatex">\(\dot{m}_{12,L}:\)</span> 송풍에 필요한 공기의 질량유량 [kg/h]<br/>
+• <span class="arithmatex">\(x_{ZU,u} :\)</span> 급기 절대습도의 하한선 [g/kg]<br/>
+• <span class="arithmatex">\(x_{ZU,o} :\)</span> 급기 절대습도의 상한선 [g/kg]<br/>
+• <span class="arithmatex">\(\dot{Q}_{12} :\)</span> 송풍에 필요한 에너지 [W]<br/>
+• <span class="arithmatex">\(\vartheta_{ZU,u} :\)</span> 급기온도의 하한선 [<span class="arithmatex">\(^\circ C\)</span>]<br/>
+• <span class="arithmatex">\(\vartheta_{ZU,o}:\)</span> 급기온도의 상한선 [<span class="arithmatex">\(^\circ C\)</span>]<br/>
+• <span class="arithmatex">\(\vartheta_{ZU}:\)</span> 급기온도 [<span class="arithmatex">\(^\circ C\)</span>]  </p>
+</blockquote>
+<ul>
+<li>
+<p>공조기의 가습 및 제습 여부는 아래 조건에 따라 결정됩니다.</p>
+<ul>
+<li>
+<p>가습 조건:<br/>
+<div align="center">$$
+    x_{AU} &lt; \frac{x_{ZU,u} - u \cdot x_{AB,u}}{1 - u} = x_{g,u} \tag{3.1-5}
+    $$</div></p>
+</li>
+<li>
+<p>제습 조건:<br/>
+<div align="center">$$
+    x_{AU} &gt; \frac{x_{ZU,o} - u \cdot x_{AB,o}}{1 - u} = x_{g,o} \tag{3.1-6}
+    $$</div></p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(x_{AU}:\)</span> 외기의 절대습도 [g/kg]<br/>
+• <span class="arithmatex">\(u:\)</span> 재순환 공기 비율<br/>
+• <span class="arithmatex">\(x_{AB,u}:\)</span> 배기 절대습도의 하한선 [g/kg]<br/>
+• <span class="arithmatex">\(x_{AB,o}:\)</span> 배기 절대습도의 상한선 [g/kg]<br/>
+• <span class="arithmatex">\(x_{g,u}:\)</span> 습공기선도의 조닝을 위한 절대습도의 하한선 [g/kg]<br/>
+• <span class="arithmatex">\(x_{g,o}:\)</span> 습공기선도의 조닝을 위한 절대습도의 상한선 [g/kg]  </p>
+</blockquote>
+<ul>
+<li>
+<p>공기가 가습 이전에 가열되거나 냉각되는 경우, 가습 범위에 대해 아래의 수식을 사용합니다.</p>
+</li>
+<li>
+<p>가열:</p>
+<div class="arithmatex">\[
+h_{AU} - c_{p,L} \cdot \Phi \cdot \vartheta_{AU}
+&lt;
+\frac{h_B - u \cdot h_{AB,u}}{1 - u}
+- c_{p,L} \cdot \Phi \cdot \vartheta_{AB,u}
+= h_{g,u} \tag{3.1-7}
+\]</div>
+</li>
+<li>
+<p>냉각:</p>
+<div class="arithmatex">\[
+h_{AU} - c_{p,L} \cdot \Phi \cdot \vartheta_{AU}
+&gt;
+\frac{h_B - u \cdot h_{AB,o}}{1 - u}
+- c_{p,L} \cdot \Phi \cdot \vartheta_{AB,o}
+= h_{g,o} \tag{3.1-8}
+\]</div>
+</li>
+</ul>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(h_{AU}:\)</span> 외기의 엔탈피 [kJ/kg]<br/>
+• <span class="arithmatex">\(\phi:\)</span> 열회수 효율<br/>
+• <span class="arithmatex">\(\vartheta_{AB,u}:\)</span> 배기 온도의 하한선 [<span class="arithmatex">\(^\circ C\)</span>]<br/>
+• <span class="arithmatex">\(h_{AB,u}:\)</span> 배기 엔탈피 [kJ/kg]<br/>
+• <span class="arithmatex">\(h_{B}:\)</span> 급기 절대습도 하한선이 이슬점일 때 엔탈피 [kJ/kg]<br/>
+• <span class="arithmatex">\(x_{g,u}:\)</span> 습공기선도 조닝을 위한 엔탈피 한계값 [kJ/kg]  </p>
+</blockquote>
+<h2 id="32">3.2 공조처리에 필요한 에너지요구량<a class="headerlink" href="#32" title="Permanent link">¶</a></h2>
+<p>에너지 특성치는 <span class="arithmatex">\(1\ m^{3}/h\)</span>로 정규화된 급기 풍량을 기준으로 결정됩니다. 실제 설계 풍량에 대한 에너지요구량 계산을 위해 실제 급기 풍량을 곱하여 실제 값을 계산합니다.
+$$
+Q_{V,i,m} = q_{i,m} \cdot \dot{V}_{mech,m} \tag{3.2-1}
+$$</p>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(Q_{V,i,m} :\)</span> 공조 가열/냉각/가습을 위한 월별 에너지요구량 [kWh]<br/>
+• <span class="arithmatex">\(q_{i,m}:\)</span> 공조 가열/냉각/가습에 대한 월별 에너지요구량 특성치 [Wh/(m³/h)]<br/>
+• <span class="arithmatex">\(\dot{V}_{mech,m}:\)</span> 월별 평균 급기 풍량 [m³/h]  </p>
+</blockquote>
+<h2 id="33">3.3 공조처리를 위한 최대 출력 계산<a class="headerlink" href="#33" title="Permanent link">¶</a></h2>
+<p>가열, 냉각, 가습의 최대 출력 계산은 공조 에너지소요량 계산 시 기기 부하 산정을 위해 필요하며, 기기 선정 시의 안전율은 고려하지 않습니다.</p>
+<h3 id="331">3.3.1 외기 및 배기공기의 상태값<a class="headerlink" href="#331" title="Permanent link">¶</a></h3>
+<p>최대 성능 계산을 위해 특성치 방법 기반 배기 조건 표와 기기 용량 산정시 사용되는 외기 조건 표를 사용합니다.</p>
+<center>
+<div><strong>Table 3.3-1. 존의 배기 조건에 대한 설계 변수</strong></div>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://verycoldplay.github.io/eco2_guide_center/_tables/3.3.1_1.png"><img alt="공조 시스템에 유형에 따른 급기 온도 차 표준값" src="https://verycoldplay.github.io/eco2_guide_center/_tables/3.3.1_1.png" style="max-width: 80%;"/></a>
+</center>
+<center>
+<div><strong>Table 3.3-2. 설계 조건에서 외기 상태</strong></div>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://verycoldplay.github.io/eco2_guide_center/_tables/3.3.1_2.png"><img alt="공조 시스템에 유형에 따른 급기 온도 차 표준값" src="https://verycoldplay.github.io/eco2_guide_center/_tables/3.3.1_2.png" style="max-width: 80%;"/></a>
+</center>
+<h3 id="332">3.3.2 급기 엔탈피의 계산<a class="headerlink" href="#332" title="Permanent link">¶</a></h3>
+<p>여름철 습공기의 상태를 정하기 위해 포화 증기압 근사 계산식을 사용합니다.
+$$
+ps(\vartheta) = e^{23.621 - \frac{4065}{\vartheta + 236.2506}} \qquad 0.01^\circ C \leq \vartheta \leq 80^\circ C\ \tag{3.3-1}
+$$</p>
+<p>급기 엔탈피: 습도 요구 조건(없음, 편차 허용, 편차 없음)과 계절(겨울/여름)에 따라 다른 공식을 적용하여 계산합니다.  </p>
+<ul>
+<li>
+<p>습도 요구 없는 공조기의 급기 엔탈피:  </p>
+<ul>
+<li>
+<p>겨울 설계조건:  </p>
+<div class="arithmatex">\[ h_{ZUL,Wi} = 1.01\,\vartheta_{ZUL,Wi} + 0.001\,(2501 + 1.86\,\vartheta_{ZUL,Wi}) \tag{3.3-2} \]</div>
+</li>
+<li>
+<p>여름 설계조건:  </p>
+</li>
+</ul>
+</li>
+</ul>
+<div align="center">$$
+h_{ZUL,So} = 1.01\,\vartheta_{ZUL,So} + 0.012\left(2501 + 1.86\,\vartheta_{ZUL,So}\right) \qquad p_{S}(\vartheta_{ZUL,So}) &gt; 1892\,\mathrm{Pa} \tag{3.3-3}
+$$</div>
+<div align="center">$$
+h_{ZUL,So} = 1.01\,\vartheta_{ZUL,So} + x_{ZUL,So}\left(2501 + 1.86\,\vartheta_{ZUL,So}\right) \qquad p_{S}(\vartheta_{ZUL,So}) \leq 1892\,\mathrm{Pa} \tag{3.3-4}
+$$</div>
+<ul>
+<li>
+<p>편차 허용된 습도 요구가 있는 공조기의 급기 엔탈피:</p>
+<ul>
+<li>
+<p>겨울 설계조건:
+    $$ h_{ZUL,Wi} = 1.01\,\vartheta_{ZUL,Wi} + 0.006\,(2501 + 1.86\,\vartheta_{ZUL,Wi}) \tag{3.3-5} $$</p>
+</li>
+<li>
+<p>여름 설계조건:
+    $$
+    h_{ZUL,Wi} = 1.01\,\vartheta_{ZUL,Wi} + 0.001\left(2501 + 1.86\,\vartheta_{ZUL,Wi}\right) \tag{3.3-6}
+    $$</p>
+<div class="arithmatex">\[
+h_{ZUL,So} = 1.01\,\vartheta_{ZUL,So} + 0.008\left(2501 + 1.86\,\vartheta_{ZUL,So}\right) \qquad p_{S}(\vartheta_{ZUL,So}) &gt; 1269\,\mathrm{Pa} \tag{3.3-7}
+\]</div>
+<div class="arithmatex">\[
+h_{ZUL,So} = 1.01\,\vartheta_{ZUL,So} + x_{ZUL,So}\left(2501 + 1.86\,\vartheta_{ZUL,So}\right) \qquad p_{S}(\vartheta_{ZUL,So}) \leq 1269\,\mathrm{Pa} \tag{3.3-8}
+\]</div>
+<div class="arithmatex">\[
+h_{ZUL,So,x} = 44.1\,\mathrm{kJ}/\mathrm{kg} \tag{3.3-9}
+\]</div>
+<div class="arithmatex">\[
+h_{ZUL,So} = \min\left(h_{ZUL,So,t}\; ;\; h_{ZUL,So,x}\right) \tag{3.3-10}
+\]</div>
+</li>
+</ul>
+</li>
+<li>
+<p>편차 허용되지 않은 습도 요구가 있는 공조기의 급기 엔탈피:</p>
+<ul>
+<li>
+<p>겨울 설계조건:<br/>
+    $$ h_{ZUL,Wi} = 1.01\,\vartheta_{ZUL,Wi} + 0.008\,(2501 + 1.86\,\vartheta_{ZUL,Wi}) \tag{3.3-11}$$</p>
+</li>
+<li>
+<p>여름 설계조건:<br/>
+<div align="center">$$
+    h_{ZUL,So} = 1.01\,\vartheta_{ZUL,So} + 0.008\left(2501 + 1.86\,\vartheta_{ZUL,So}\right) \qquad p_{S}(\vartheta_{ZUL,So}) &gt; 1892\,\mathrm{Pa} \tag{3.3-12}
+    $$</div></p>
+<p><div align="center">$$
+h_{ZUL,So} = 1.01\,\vartheta_{ZUL,So} + x_{ZUL,So}\left(2501 + 1.86\,\vartheta_{ZUL,So}\right) \qquad p_{S}(\vartheta_{ZUL,So}) \leq 1892\,\mathrm{Pa} \tag{3.3-13}
+$$</div></p>
+<p><div align="center">$$
+h_{ZUL,So,x} = 31.6\,\mathrm{kJ}/\mathrm{kg} \tag{3.3-14}
+$$</div></p>
+<p><div align="center">$$
+h_{ZUL,So} = \min\left(h_{ZUL,So,t}\; ;\; h_{ZUL,So,x}\right) \tag{3.3-15}
+$$</div></p>
+</li>
+</ul>
+</li>
+<li>
+<p>절대습도의 근사식은 아래와 같습니다.  </p>
+</li>
+</ul>
+<div align="center">$$
+x_{ZUL,So} = \frac{0.5911}{\dfrac{100000}{ps(\vartheta_{ZUL,So})} - 0.95} \tag{3.3-16}
+$$</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(\vartheta:\)</span> 공기 온도 [<span class="arithmatex">\(^{\circ}C\)</span>]<br/>
+• <span class="arithmatex">\(P_{S}:\)</span> 수증기 포화증기압 [Pa]<br/>
+• <span class="arithmatex">\(h:\)</span> 엔탈피 [kJ/kg]<br/>
+• <span class="arithmatex">\(x:\)</span> 절대습도 [kg/kg]<br/>
+• 아래첨자:<br/>
+   -   <span class="arithmatex">\(ZUL:\)</span> 급기 조건<br/>
+   -   <span class="arithmatex">\(So:\)</span> 여름 설계조건<br/>
+   -   <span class="arithmatex">\(Wi:\)</span> 겨울 설계조건<br/>
+   -   <span class="arithmatex">\(t:\)</span> 온도 요구값<br/>
+   -   <span class="arithmatex">\(x:\)</span> 절대습도 요구값  </p>
+</blockquote>
+<h3 id="333">3.3.3 최대 가열 출력<a class="headerlink" href="#333" title="Permanent link">¶</a></h3>
+<p>최대 가열 출력은 열회수기로 절감되는 열량을 고려하여 계산합니다.</p>
+<ul>
+<li>
+<p>열 회수량:  </p>
+<ul>
+<li>열 회수기 없음:<br/>
+    $$ \Delta h_{WRG} = 0 \tag{3.3-17} $$</li>
+<li>현열 회수:<br/>
+    $$ \Delta h_{WRG} = \Phi_{WRG} \cdot c_{p,L} ( \vartheta_{ABL,Wi} - \vartheta_{AUL,Wi} ) \tag{3.3-18} $$</li>
+<li>전열 회수:<br/>
+    $$ \Delta h_{WRG} = \Phi_{WRG} \cdot ( h_{ABL,Wi} - h_{AUL,Wi} ) \tag{3.3-19} $$</li>
+</ul>
+</li>
+<li>
+<p>최대 가열 출력:</p>
+</li>
+<li>
+<p>증기 가습이 없는 기기:</p>
+<div class="arithmatex">\[
+\dot{Q}_H^{*} = \dot{V}^{*} \cdot \rho_L \cdot
+\left( h_{ZUL,Wi} - h_{AUL,Wi} - \Delta h_{WRG} \right) \tag{3.3-20}
+\]</div>
+</li>
+<li>
+<p>증기 가습이 있는 기기:</p>
+<div class="arithmatex">\[
+\dot{Q}_H^{*} = \dot{V}^{*} \cdot \rho_L \cdot
+\left( c_{p,L} \left( \vartheta_{ZUL,Wi} - \vartheta_{AUL,Wi} \right)
+- \Delta h_{WRG} \right) \tag{3.3-21}
+\]</div>
+</li>
+</ul>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(\vartheta:\)</span> 공기 온도 [<span class="arithmatex">\(^{\circ}C\)</span>]<br/>
+• <span class="arithmatex">\(\dot{Q}_H^{*}:\)</span> 최대 가열 출력 [kW]<br/>
+• <span class="arithmatex">\(\Phi_{WRG}:\)</span> 열회수 계수<br/>
+• <span class="arithmatex">\(\dot{V}^{*}:\)</span> 설계 급기 풍량 [m³/h]<br/>
+• <span class="arithmatex">\(h:\)</span> 엔탈피 [kJ/kg]<br/>
+• <span class="arithmatex">\(\Delta h_{WRG}:\)</span> 열회수로 인한 엔탈피 차 [kJ/kg]  </p>
+</blockquote>
+<h3 id="334">3.3.4 최대 냉각 출력<a class="headerlink" href="#334" title="Permanent link">¶</a></h3>
+<p>최대 냉각 출력은 최대 가열 출력과 같은 방식으로 냉열 회수 부분을 차감하여 계산합니다.</p>
+<ul>
+<li>
+<p>냉열 회수량:  </p>
+<ul>
+<li>
+<p>열 회수 없음/현열 회수만:<br/>
+<div align="center">$$
+    \Delta h_{WRG} = 0 \tag{3.3-22}
+    $$</div></p>
+</li>
+<li>
+<p>현열 회수:<br/>
+<div align="center">$$
+    \Delta h_{WRG} = \Phi_{WRG} \cdot c_{p,L} \cdot ( \vartheta_{AUL,So} - \vartheta_{ABL,So} ) \tag{3.3-23}
+    $$</div></p>
+</li>
+<li>
+<p>전열 회수:<br/>
+<div align="center">$$
+    \Delta h_{WRG} = \Phi_{WRG} \cdot \left( h_{AUL,So} - h_{ABL,So} \right) \tag{3.3-24}
+    $$</div></p>
+</li>
+</ul>
+</li>
+<li>
+<p>최대 냉각 출력:  </p>
+</li>
+</ul>
+<div align="center">$$
+\dot{Q}_C^* = \dot{V}^* \cdot \rho_L \left( h_{AUL,So} - h_{ZUL,So} - \Delta h_{WRG} \right) \tag{3.3-25}
+$$</div>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(\vartheta:\)</span> 공기 온도 [<span class="arithmatex">\(^{\circ}C\)</span>]<br/>
+• <span class="arithmatex">\(\dot{Q}_C^{*}:\)</span> 최대 냉열 출력 [kW]<br/>
+• <span class="arithmatex">\(\Phi_{WRG}:\)</span> 열회수 계수<br/>
+• <span class="arithmatex">\(\dot{V}^{*}:\)</span> 설계 급기 풍량 [m³/h]<br/>
+• <span class="arithmatex">\(h:\)</span> 엔탈피 [kJ/kg]<br/>
+• <span class="arithmatex">\(\Delta h_{WRG}:\)</span> 열회수로 인한 엔탈피 차 [kJ/kg]  </p>
+</blockquote>
+<h3 id="335">3.3.5 최대 가습 출력<a class="headerlink" href="#335" title="Permanent link">¶</a></h3>
+<p>최대 가습 출력은 습도 회수 부분을 차감하여 계산합니다.</p>
+<ul>
+<li>
+<p>수증기 회수량:</p>
+<ul>
+<li>열 회수 없음/현열 회수만:
+  $$ \Delta h_{WRG} = 0 \tag{3.3-26} $$</li>
+<li>전열 회수:
+  $$ \Delta h_{WRG} = 2501 \cdot \Phi_{WRG} \cdot ( x_{ABL,Wi} - x_{AUL,Wi} ) \tag{3.3-27} $$</li>
+</ul>
+</li>
+<li>
+<p>최대 가습 출력 (<span class="arithmatex">\(dot{Q}^*_{st}\)</span>):
+<br/>
+<div align="center">$$ \dot{Q}^*_{st} = \dot{V}^* \cdot \rho_L ( h_{ZUL,wi} - h_{AUL,wi} - \Delta h_{WRG} ) \tag{3.3-28} $$</div>
+</p>
+</li>
+</ul>
+<blockquote>
+<p>Where,  </p>
+<p>• <span class="arithmatex">\(\dot{Q}^*_{st}:\)</span> 증기 생산을 위한 최대 출력 [kW]<br/>
+• <span class="arithmatex">\(\Phi_{WRG}:\)</span> 열회수 계수<br/>
+• <span class="arithmatex">\(\dot{V}^{*}:\)</span> 설계 급기 풍량 [m³/h]<br/>
+• <span class="arithmatex">\(h:\)</span> 엔탈피 [kJ/kg]<br/>
+• <span class="arithmatex">\(\Delta h_{WRG}:\)</span> 열회수로 인한 엔탈피 차 [kJ/kg]  </p>
+</blockquote>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="마지막 업데이트">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 11월 27일 06:43:03 UTC">2025년 11월 27일</span>
+</span>
+</aside>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.tabs.sticky", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+<script src="../../assets/polyfill.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script>
+<script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+<script src="../../assets/mathjax-config.js"></script>
+<script src="../../assets/mathjax-linker.js"></script>
+<script src="../../assets/mermaid-init.js"></script>
+<script src="../../assets/mermaid-font-fix.js"></script>
+<script src="../../assets/cache-buster.js"></script>
+<script src="../../assets/breadcrumb.js"></script>
+<script src="../../assets/scroll-to-top.js"></script>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

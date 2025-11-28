@@ -454,26 +454,28 @@ $$
 > • $x_{g,u}:$ 습공기선도의 조닝을 위한 절대습도의 하한선 [g/kg]  
 > • $x_{g,o}:$ 습공기선도의 조닝을 위한 절대습도의 상한선 [g/kg]  
 
-* 공기가 가습 이전에 가열되거나 냉각되는 경우, 가습 범위에 대해 아래의 수식을 사용합니다. 
-    *   가열:  
-        <div align="center">$$
-        h_{AU} - c_{p,L} \cdot \Phi \cdot \vartheta_{AU}
-        <
-        \frac{h_B - u \cdot h_{AB,u}}{1 - u}
-        - c_{p,L} \cdot \Phi \cdot \vartheta_{AB,u}
-        = h_{g,u} \tag{3.1-7}
-        $$</div>
+* 공기가 가습 이전에 가열되거나 냉각되는 경우, 가습 범위에 대해 아래의 수식을 사용합니다.
 
+  * 가열:
 
-  
-    *   냉각:  
-      <div align="center">$$
-      h_{AU} - c_{p,L} \cdot \Phi \cdot \vartheta_{AU}
-      >
-      \frac{h_B - u \cdot h_{AB,o}}{1 - u}
-      - c_{p,L} \cdot \Phi \cdot \vartheta_{AB,o}
-      = h_{g,o} \tag{3.1-8}
-      $$</div>
+    $$
+    h_{AU} - c_{p,L} \cdot \Phi \cdot \vartheta_{AU}
+    <
+    \frac{h_B - u \cdot h_{AB,u}}{1 - u}
+    - c_{p,L} \cdot \Phi \cdot \vartheta_{AB,u}
+    = h_{g,u} \tag{3.1-7}
+    $$
+
+  * 냉각:
+
+    $$
+    h_{AU} - c_{p,L} \cdot \Phi \cdot \vartheta_{AU}
+    >
+    \frac{h_B - u \cdot h_{AB,o}}{1 - u}
+    - c_{p,L} \cdot \Phi \cdot \vartheta_{AB,o}
+    = h_{g,o} \tag{3.1-8}
+    $$
+
 
 
 > Where,  
@@ -620,14 +622,22 @@ $$</div>
     *   전열 회수:  
         $$ \Delta h_{WRG} = \Phi_{WRG} \cdot ( h_{ABL,Wi} - h_{AUL,Wi} ) \tag{3.3-19} $$
 
-* 최대 가열 출력:  
-    *   증기 가습이 없는 기기:  
-        <div align="center">$$
-        \dot{Q}_H^* = \dot{V}^* \cdot \rho_L \cdot \left( h_{ZUL,Wi} - h_{AUL,Wi} - \Delta h_{WRG} \right) \tag{3.3-20}
-        $$</div>
 
-    *   증기 가습이 있는 기기:  
-        <div align="center">$$\dot{Q}_H^* = \dot{V}^* \cdot \rho_L \cdot \left( c_{p,L} \left( \vartheta_{ZUL,Wi} - \vartheta_{AUL,Wi} \right) - \Delta h_{WRG} \right) \tag{3.3-21}$$</div>
+* 최대 가열 출력:
+  * 증기 가습이 없는 기기:
+
+    $$
+    \dot{Q}_H^{*} = \dot{V}^{*} \cdot \rho_L \cdot
+    \left( h_{ZUL,Wi} - h_{AUL,Wi} - \Delta h_{WRG} \right) \tag{3.3-20}
+    $$
+
+  * 증기 가습이 있는 기기:
+
+    $$
+    \dot{Q}_H^{*} = \dot{V}^{*} \cdot \rho_L \cdot
+    \left( c_{p,L} \left( \vartheta_{ZUL,Wi} - \vartheta_{AUL,Wi} \right)
+    - \Delta h_{WRG} \right) \tag{3.3-21}
+    $$
 
 
 
@@ -688,7 +698,7 @@ $$</div>
     * 전열 회수:
       $$ \Delta h_{WRG} = 2501 \cdot \Phi_{WRG} \cdot ( x_{ABL,Wi} - x_{AUL,Wi} ) \tag{3.3-27} $$
 
-* 최대 가습 출력 ($dot{Q}^*_{st}$)*:
+* 최대 가습 출력 ($dot{Q}^*_{st}$):
   <div align="center">$$ \dot{Q}^*_{st} = \dot{V}^* \cdot \rho_L ( h_{ZUL,wi} - h_{AUL,wi} - \Delta h_{WRG} ) \tag{3.3-28} $$</div>
 
 > Where,  
